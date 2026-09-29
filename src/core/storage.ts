@@ -18,7 +18,7 @@ export function loadProfile(now: Date = new Date()): Profile {
     const data = JSON.parse(raw) as Partial<Profile>;
     if (data.version !== 1) return fresh;
     // Eksik alanları varsayılanlarla tamamla (eski kayıtlar için).
-    return {
+    const merged = {
       ...fresh,
       ...data,
       settings: { ...fresh.settings, ...data.settings },
@@ -28,10 +28,32 @@ export function loadProfile(now: Date = new Date()): Profile {
       stats: { ...fresh.stats, ...data.stats },
       review: Array.isArray(data.review) ? data.review : [],
       learned: data.learned ?? {},
+      campaign: { ...fresh.campaign, ...data.campaign },
     } as Profile;
+    return data.campaign ? merged : migrateToCampaign(merged);
   } catch {
     return fresh;
   }
+}
+
+/**
+ * Bölüm sisteminden önceki kaydı aktarır (yalnızca bir kez: `campaign` alanı
+ * yoksa). Kural:
+ * - Eski sürümler tamamlanan bulmaca sayısını tutmadığı için bölüm tahmin
+ *   edilmez: oyuncu Bölüm 1, 0 bulmacadan başlar.
+ * - Jeton, haklar, seri, tekrar listesi, öğrenilen kelimeler ve seviye korunur.
+ * - Oyuncu eskiden seviyeyi elle seçtiyse (Kolay/Orta/Zor), uyarlamalı zorluk
+ *   o seviyeden devam eder; seçim artık oyuncuya sorulmaz.
+ */
+export function migrateToCampaign(p: Profile): Profile {
+  const mode = p.settings.difficultyMode;
+  const adaptive = mode === 'adaptive' ? p.adaptive : { ...p.adaptive, difficulty: mode };
+  return {
+    ...p,
+    campaign: { puzzlesDone: 0 },
+    adaptive,
+    settings: { ...p.settings, difficultyMode: 'adaptive' },
+  };
 }
 
 export function saveProfile(profile: Profile): boolean {

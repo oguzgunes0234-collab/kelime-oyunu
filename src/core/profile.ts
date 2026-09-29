@@ -1,4 +1,5 @@
 import { initialAdaptive, recordRound, roundQuality, type AdaptiveState } from './adaptive';
+import { initialCampaign, type CampaignState } from './campaign';
 import { initialDaily, recordCorrect, rollDay, type DailyState } from './daily';
 import { COINS_CLEAN_BONUS, COINS_PER_CHARGE, COINS_PER_CORRECT, DAILY_GOAL_REWARD, INITIAL_INVENTORY } from './economy';
 import { directionKey } from './pack';
@@ -38,6 +39,8 @@ export interface Profile {
    * bir kez görür (atlayabilir).
    */
   puzzleTutorialStep: number;
+  /** Ana oyun ilerlemesi (bölümler). Eski kayıtlarda yoktur; bkz. storage.ts aktarım kuralı. */
+  campaign: CampaignState;
   inventory: Inventory;
   coins: number;
   totalScore: number;
@@ -55,6 +58,7 @@ export function defaultProfile(now: Date): Profile {
     settings: { direction: { source: 'tr', target: 'en' }, difficultyMode: 'adaptive', dailyGoal: 10, theme: 'auto' },
     tutorialDone: false,
     puzzleTutorialStep: 0,
+    campaign: initialCampaign(),
     inventory: { ...INITIAL_INVENTORY },
     coins: 0,
     totalScore: 0,

@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { chapterInfo } from '../../core/campaign';
 import { DAILY_PUZZLE_GOAL, currentStreak, goalDoneToday } from '../../core/daily';
 import { languageInfo } from '../../core/languages';
 import { displayWord } from '../../core/normalize';
@@ -20,6 +21,7 @@ interface Props {
 export function PuzzleResult({ puzzle, outcome, profile, onAgain, onHome, onReview }: Props) {
   // Telefonda sonuç en üstten başlasın (bulmaca ekranı kaydırılmış olabilir).
   useEffect(() => window.scrollTo(0, 0), []);
+  const chapter = chapterInfo(profile.campaign);
   const src = languageInfo(puzzle.direction.source);
   const tgt = languageInfo(puzzle.direction.target);
   const total = outcome.results.length;
@@ -56,6 +58,17 @@ export function PuzzleResult({ puzzle, outcome, profile, onAgain, onHome, onRevi
         </div>
       </div>
 
+      {outcome.chapterCompleted !== null ? (
+        <p className="info-line good">
+          Bölüm {outcome.chapterCompleted} tamamlandı! Sırada Bölüm {outcome.chapterCompleted + 1}.
+        </p>
+      ) : outcome.campaignCounted ? (
+        <p className="info-line">
+          Bölüm {chapter.chapter}: {chapter.done}/{chapter.size} bulmaca
+        </p>
+      ) : (
+        !puzzle.topic && <p className="info-line">Bölümde ilerlemek için bulmacanın tüm kelimelerini çöz (yardım serbest).</p>
+      )}
       {outcome.goalReached && <p className="info-line good">Günlük hedef tamamlandı! Jeton ve her araçtan hediye hak kazandın.</p>}
       {outcome.usedRestDay && <p className="info-line">Dün ara verdin; haftalık dinlenme günün kullanıldı, serin sürüyor.</p>}
       {outcome.levelChange === 'up' && outcome.difficultyAfter && (
@@ -133,7 +146,7 @@ export function PuzzleResult({ puzzle, outcome, profile, onAgain, onHome, onRevi
 
       <div className="stack">
         <button type="button" className="btn btn-primary btn-block" onClick={onAgain}>
-          Yeni bulmaca
+          {puzzle.topic ? 'Yeni konu bulmacası' : 'Sıradaki bulmaca'}
         </button>
         {profile.review.length > 0 && (
           <button type="button" className="btn btn-secondary btn-block" onClick={onReview}>

@@ -33,6 +33,11 @@ export interface Entry {
   terms: Record<LangCode, Term>;
   /** Anlam ipucu, arayüz diline göre. Cevabı doğrudan içermemeli. */
   hint?: Record<LangCode, string>;
+  /**
+   * İçeriği bir kişi kontrol etti (çeviri, seviye, örnekler). Konu modları
+   * yalnızca işaretli kelimelerle açılır (bkz. core/topics.ts).
+   */
+  reviewed?: boolean;
 }
 
 export interface WordPack {

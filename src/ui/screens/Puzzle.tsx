@@ -26,6 +26,8 @@ import {
 } from '../../core/puzzle';
 import { loadPuzzle, savePuzzle } from '../../core/storage';
 import { TUTORIAL_DIRECTION, TUTORIAL_LENGTH, TUTORIAL_STEPS, tutorialCrossword, type TutorialSkill } from '../../core/tutorial';
+import { TOPIC_GRID, TOPIC_MODES, topicEntryIds } from '../../core/topics';
+import { chapterInfo } from '../../core/campaign';
 import type { Difficulty, Direction, WordPack } from '../../core/types';
 import { ChevronLeftIcon, ChevronRightIcon, ClueArrow, CloseIcon, CoinIcon, QuestionIcon, TOOL_ICONS } from '../components/Icons';
 import { Keyboard } from '../components/Keyboard';
@@ -48,6 +50,10 @@ interface Props {
   onOpenReview: () => void;
   /** Bulmaca eğitiminin adımı (0 = T1); null ise normal bulmaca. */
   tutorialStep: number | null;
+  /** Ana kampanyada yeni bulmacanın ızgarası (bölüme göre). */
+  gridSize: { rows: number; cols: number };
+  /** Konu modu kimliği; null ise ana kampanya. */
+  topic: string | null;
   /** Eğitim adımı bitti; bir sonrakine (ya da eğitim bittiyse normal bulmacaya) geç. */
   onTutorialAdvance: (next: number) => void;
   onTutorialSkip: () => void;
@@ -91,15 +97,21 @@ function gridSizeParam(): { rows: number; cols: number } | undefined {
   return n >= 6 && n <= 9 ? { rows: n, cols: n } : undefined;
 }
 
-/** Eğitim adımı, kayıtlı yarım bulmaca (bu yön için) ya da yeni bulmaca. */
+/** Eğitim adımı, konu bulmacası, kayıtlı yarım bulmaca (bu yön için) ya da yeni kampanya bulmacası. */
 function initialPuzzle(props: Props): PuzzleState {
   if (props.tutorialStep !== null) {
     const s = puzzleFromCrossword(tutorialCrossword(props.tutorialStep, props.pack), TUTORIAL_DIRECTION, 'easy');
     return selectWord(s, TUTORIAL_STEPS[props.tutorialStep].startWord);
   }
+  if (props.topic) {
+    // Konu bulmacası kaydedilmez ve kampanyanın yarım bulmacasına dokunmaz.
+    const mode = TOPIC_MODES.find((m) => m.id === props.topic)!;
+    const topic = { id: mode.id, entryIds: topicEntryIds(mode, props.pack) };
+    return newPuzzle(props.pack, props.profile, props.direction, props.difficulty, undefined, TOPIC_GRID, topic);
+  }
   const saved = loadPuzzle();
-  if (saved && saved.direction.source === props.direction.source && saved.direction.target === props.direction.target) return saved;
-  return newPuzzle(props.pack, props.profile, props.direction, props.difficulty, undefined, gridSizeParam());
+  if (saved && !saved.topic && saved.direction.source === props.direction.source && saved.direction.target === props.direction.target) return saved;
+  return newPuzzle(props.pack, props.profile, props.direction, props.difficulty, undefined, gridSizeParam() ?? props.gridSize);
 }
 
 export function hasSavedPuzzle(direction: Direction): boolean {
@@ -129,8 +141,8 @@ export function Puzzle(props: Props) {
 
   useEffect(() => () => window.clearTimeout(timer.current), []);
   useEffect(() => {
-    // Eğitim bulmacası kaydedilmez: yarım kalmış normal bulmacanın üzerine yazmasın.
-    if (!tutorial && puzzle.status === 'playing') savePuzzle(puzzle);
+    // Eğitim ve konu bulmacası kaydedilmez: yarım kalmış kampanya bulmacasının üzerine yazmasın.
+    if (!tutorial && !puzzle.topic && puzzle.status === 'playing') savePuzzle(puzzle);
   }, [puzzle, tutorial]);
 
   function closeTip(id?: TipId) {
@@ -167,7 +179,7 @@ export function Puzzle(props: Props) {
       timer.current = window.setTimeout(() => setDialog({ kind: 'tutorialDone' }), reducedMotion() ? 0 : 900);
       return;
     }
-    savePuzzle(null);
+    if (!done.topic) savePuzzle(null);
     const res = applyPuzzle(base, done, pack, props.adaptive, new Date());
     saveProfile(res.profile);
     setOutcome(res.outcome);
@@ -424,7 +436,9 @@ export function Puzzle(props: Props) {
             <span>
               {tutorial
                 ? `${props.tutorialStep! + 1}/${TUTORIAL_LENGTH} · ${step!.title}`
-                : `${props.adaptive ? 'Uyarlamalı · ' : ''}${DIFFICULTY_LABEL[puzzle.difficulty]}`}
+                : puzzle.topic
+                  ? `Konu: ${TOPIC_MODES.find((m) => m.id === puzzle.topic)?.name ?? puzzle.topic}`
+                  : `Bölüm ${chapterInfo(profile.campaign).chapter} · ${DIFFICULTY_LABEL[puzzle.difficulty]}`}
             </span>
             <span aria-label={`${total} kelimeden ${solved} tanesi çözüldü`}>
               {solved}/{total}

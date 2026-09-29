@@ -1,49 +1,51 @@
-import { DAILY_PUZZLE_GOAL, currentStreak, goalDoneToday, puzzlesToday } from '../../core/daily';
-import { TOOL_ORDER } from '../../core/economy';
+import { chapterInfo } from '../../core/campaign';
+import { DAILY_PUZZLE_GOAL, currentStreak, goalDoneToday } from '../../core/daily';
 import { languageInfo } from '../../core/languages';
-import { DIFFICULTY_CEFR_LABEL, DIFFICULTY_LABEL } from '../../core/pack';
+import { DIFFICULTY_LABEL } from '../../core/pack';
 import type { Profile } from '../../core/profile';
-import { remainingFresh } from '../../core/select';
-import type { DifficultyMode, WordPack } from '../../core/types';
-import { BagIcon, BookIcon, CoinIcon, FlameIcon, GearIcon, GridIcon, LettersIcon, QuestionIcon, SwapIcon, TOOL_ICONS } from '../components/Icons';
+import { topicStatuses } from '../../core/topics';
+import type { WordPack } from '../../core/types';
+import { BagIcon, BookIcon, CheckIcon, CoinIcon, FlameIcon, GearIcon, GridIcon, LettersIcon, SwapIcon } from '../components/Icons';
 
 interface Props {
   pack: WordPack;
   profile: Profile;
   setProfile: (p: Profile) => void;
-  /** Ana oyun: çengel bulmaca. */
+  /** Ana oyun: bölümlü çengel bulmaca. */
   onPuzzle: () => void;
-  /** Bu yön için yarım kalmış bir bulmaca var mı. */
+  /** Bu yön için yarım kalmış bir ana oyun bulmacası var mı. */
   puzzleSaved: boolean;
-  /** Bulmaca eğitimi henüz bitmedi (bir sonraki "Bulmaca çöz" eğitimi açar). */
+  /** Bulmaca eğitimi henüz bitmedi (ana düğme eğitimi açar). */
   tutorialPending: boolean;
-  /** İkinci mod: harf taşlarıyla 10 kelimelik hızlı tur. */
+  /** Hızlı tur: harf taşlarıyla 10 kelime. */
   onPlay: () => void;
+  onTopics: () => void;
   onReview: () => void;
   onSettings: () => void;
   onStore: () => void;
-  onHowTo: () => void;
 }
 
-const MODES: DifficultyMode[] = ['easy', 'medium', 'hard', 'adaptive'];
-
-export function Home({ pack, profile, setProfile, onPuzzle, puzzleSaved, tutorialPending, onPlay, onReview, onSettings, onStore, onHowTo }: Props) {
-  const { direction, difficultyMode } = profile.settings;
+/**
+ * Ana sayfa. Öncelik sırası: bölüm ve ilerleme → tek ana eylem → hızlı tur ve
+ * konu modları → yön → tekrar listesi / haklar. Zorluk seçimi yok: kelime
+ * seviyesini uyarlamalı zorluk, bulmaca boyunu bölüm belirler.
+ */
+export function Home({ pack, profile, setProfile, onPuzzle, puzzleSaved, tutorialPending, onPlay, onTopics, onReview, onSettings, onStore }: Props) {
+  const { direction } = profile.settings;
   const src = languageInfo(direction.source);
   const tgt = languageInfo(direction.target);
   const now = new Date();
-  // Günlük hedef: bir bulmacayı tamamlamak (bkz. core/daily.ts).
-  const done = goalDoneToday(profile.daily, now);
-  const today = done ? Math.max(DAILY_PUZZLE_GOAL, puzzlesToday(profile.daily, now)) : puzzlesToday(profile.daily, now);
-  const goal = DAILY_PUZZLE_GOAL;
+  const { chapter, done, size } = chapterInfo(profile.campaign);
+  const goalDone = goalDoneToday(profile.daily, now);
   const streak = currentStreak(profile.daily, now);
-  const pct = done ? 1 : Math.min(1, today / goal);
-  const effective = difficultyMode === 'adaptive' ? profile.adaptive.difficulty : difficultyMode;
-  const fresh = remainingFresh(pack, profile, direction, effective);
+  const topics = topicStatuses(pack);
+  const openTopics = topics.filter((t) => t.enabled).length;
 
-  function update(settings: Partial<Profile['settings']>) {
-    setProfile({ ...profile, settings: { ...profile.settings, ...settings } });
-  }
+  const action = tutorialPending
+    ? { label: 'Başla', sub: '5 kısa eğitim bulmacasıyla başlar; istediğin an atlayabilirsin.' }
+    : puzzleSaved
+      ? { label: 'Devam et', sub: 'Yarım kalan bulmacan kaldığı yerde bekliyor.' }
+      : { label: profile.campaign.puzzlesDone > 0 ? 'Sıradaki bulmaca' : 'Başla', sub: `${src.name} ipucu, ${tgt.name} cevap` };
 
   return (
     <div className="page home">
@@ -65,135 +67,73 @@ export function Home({ pack, profile, setProfile, onPuzzle, puzzleSaved, tutoria
         </div>
       </header>
 
-      <section className="daily-card" aria-label="Günlük hedef ve seri">
-        <div
-          className="ring"
-          style={{ ['--pct' as string]: pct }}
-          role="img"
-          aria-label={`Bugün ${Math.min(today, goal)} / ${goal} bulmaca`}
-        >
-          <span>
-            <strong>{Math.min(today, goal)}</strong>/{goal}
+      <section className="campaign-card" aria-labelledby="chapter-title">
+        <div className="campaign-top">
+          <h2 id="chapter-title">Bölüm {chapter}</h2>
+          <span className="campaign-count">
+            {done}/{size} bulmaca
           </span>
         </div>
-        <div className="daily-text">
-          <p className="daily-title">{done ? 'Bugünkü hedef tamam!' : 'Günlük hedef: 1 bulmaca'}</p>
-          <p className="muted">
-            {done
-              ? 'İstersen oynamaya devam et; baskı yok.'
-              : 'Bir bulmacanın tüm kelimelerini çöz. Yardım serbest, yanlışlar hiçbir şey eksiltmez.'}
-          </p>
-          <p className="streak">
-            <FlameIcon width={18} height={18} />
-            {streak.streak > 0 ? (
-              <span>
-                {streak.streak} günlük seri
-                {streak.restDayNeeded && ' · bugün oynarsan dinlenme günün devreye girer'}
-              </span>
-            ) : (
-              <span>Hedefi tamamladığın gün yeni bir seri başlar</span>
-            )}
-          </p>
-        </div>
-      </section>
-
-      <section className="setup" aria-labelledby="dir-title">
-        <h2 id="dir-title" className="section-title">
-          Oyun yönü
-        </h2>
-        <div className="direction">
-          <span className="dir-lang">
-            {src.name}
-          </span>
-          <button
-            type="button"
-            className="swap-btn"
-            onClick={() => update({ direction: { source: direction.target, target: direction.source } })}
-            aria-label={`Yönü çevir (şu an ${src.name} → ${tgt.name})`}
-          >
-            <SwapIcon />
-          </button>
-          <span className="dir-lang">{tgt.name}</span>
-        </div>
-        <p className="muted center small">
-          {src.name} kelime gösterilir, {tgt.name} karşılığını kurarsın.
-        </p>
-
-        <h2 className="section-title" id="level-title">
-          Seviye
-        </h2>
-        <div className="levels" role="radiogroup" aria-labelledby="level-title">
-          {MODES.map((m) => (
-            <button
-              key={m}
-              type="button"
-              role="radio"
-              aria-checked={difficultyMode === m}
-              className={`level${difficultyMode === m ? ' selected' : ''}`}
-              onClick={() => update({ difficultyMode: m })}
-            >
-              <strong>{m === 'adaptive' ? 'Uyarlamalı' : DIFFICULTY_LABEL[m]}</strong>
-              <small>
-                {m === 'adaptive'
-                  ? `Performansına göre · şu an ${DIFFICULTY_LABEL[profile.adaptive.difficulty]}`
-                  : DIFFICULTY_CEFR_LABEL[m]}
-              </small>
-            </button>
+        <div className="chapter-steps" role="progressbar" aria-label={`Bölüm ${chapter} ilerlemesi`} aria-valuemin={0} aria-valuemax={size} aria-valuenow={done}>
+          {Array.from({ length: size }, (_, i) => (
+            <span key={i} className={i < done ? 'on' : ''} />
           ))}
         </div>
-
-        <button type="button" className="btn btn-primary btn-block btn-big play-puzzle" onClick={onPuzzle}>
-          <GridIcon width={26} height={26} />
-          {puzzleSaved ? 'Bulmacaya devam et' : 'Bulmaca çöz'}
-        </button>
-        <p className="muted center small">
-          {puzzleSaved
-            ? 'Yarım kalan bulmacan kaldığı yerde bekliyor.'
-            : tutorialPending
-              ? '5 kısa eğitim bulmacasıyla başlar; istediğin an atlayabilirsin.'
-              : `${src.name} ipuçlu, ${tgt.name} cevaplı çengel bulmaca · henüz bilmediğin ${fresh} kelime var`}
+        <p className="campaign-meta">
+          <span className={`daily-chip${goalDone ? ' done' : ''}`}>
+            {goalDone ? <CheckIcon width={14} height={14} /> : null}
+            {goalDone ? 'Bugünkü hedef tamam' : `Bugünkü hedef: 0/${DAILY_PUZZLE_GOAL} bulmaca`}
+          </span>
+          <span className="streak-chip" aria-label={`${streak.streak} günlük seri`}>
+            <FlameIcon width={15} height={15} /> {streak.streak}
+          </span>
         </p>
-        <button type="button" className="btn btn-secondary btn-block play-quick" onClick={onPlay}>
-          <LettersIcon width={22} height={22} />
-          Hızlı kelime turu
-          <small>10 kelime, harf taşlarıyla</small>
+        <button type="button" className="btn btn-primary btn-block btn-big play-puzzle" onClick={onPuzzle}>
+          <GridIcon width={24} height={24} />
+          {action.label}
         </button>
+        <p className="muted small center">{action.sub}</p>
       </section>
 
-      <nav className="home-grid" aria-label="Diğer bölümler">
-        <button type="button" className="tile-link" onClick={onReview}>
-          <BookIcon />
-          <span>Tekrar listesi</span>
+      <div className="mode-row">
+        <button type="button" className="mode-card" onClick={onPlay}>
+          <LettersIcon width={24} height={24} />
+          <strong>Hızlı tur</strong>
+          <small>10 kelime, harf taşlarıyla</small>
+        </button>
+        <button type="button" className="mode-card" onClick={onTopics}>
+          <BookIcon width={24} height={24} />
+          <strong>Konu modları</strong>
+          <small>{openTopics > 0 ? `${openTopics} mod açık` : 'Hazırlanıyor'}</small>
+        </button>
+      </div>
+
+      <section className="direction-row" aria-label="Oyun yönü">
+        <span className="dir-lang">{src.name}</span>
+        <button
+          type="button"
+          className="swap-btn"
+          onClick={() => setProfile({ ...profile, settings: { ...profile.settings, direction: { source: direction.target, target: direction.source } } })}
+          aria-label={`Yönü çevir (şu an ${src.name} → ${tgt.name})`}
+        >
+          <SwapIcon />
+        </button>
+        <span className="dir-lang">{tgt.name}</span>
+      </section>
+
+      <nav className="home-links" aria-label="Diğer bölümler">
+        <button type="button" className="link-btn" onClick={onReview}>
+          <BookIcon width={18} height={18} />
+          Tekrar listesi
           {profile.review.length > 0 && <span className="count">{profile.review.length}</span>}
         </button>
-        <button type="button" className="tile-link" onClick={onStore}>
-          <BagIcon />
-          <span>Hak ve paketler</span>
-          <span className="mini-tools" aria-label={`Kalan haklar: ${TOOL_ORDER.map((t) => profile.inventory[t]).join(', ')}`}>
-            {TOOL_ORDER.map((t) => {
-              const I = TOOL_ICONS[t];
-              return (
-                <span key={t} aria-hidden="true">
-                  <I width={12} height={12} />
-                  {profile.inventory[t]}
-                </span>
-              );
-            })}
-          </span>
-        </button>
-        <button type="button" className="tile-link" onClick={onHowTo}>
-          <QuestionIcon />
-          <span>Hızlı tur eğitimi</span>
+        <button type="button" className="link-btn" onClick={onStore}>
+          <BagIcon width={18} height={18} />
+          Hak ve paketler
         </button>
       </nav>
 
-      <footer className="home-foot">
-        <p>
-          {pack.name}: {pack.entries.length} elle seçilmiş kelime. Kapsamlı bir sözlük değildir; seviyeler yaklaşık CEFR tahminidir.
-        </p>
-        <p>İlerlemen yalnızca bu cihazda, tarayıcında saklanır. Hesap gerekmez.</p>
-      </footer>
+      <p className="home-level muted small center">Kelime seviyesi otomatik ayarlanır · şu an {DIFFICULTY_LABEL[profile.adaptive.difficulty]}</p>
     </div>
   );
 }
-

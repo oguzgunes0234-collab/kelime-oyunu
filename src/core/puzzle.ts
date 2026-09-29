@@ -1,6 +1,7 @@
 import { buildCrossword, crosswordAnswer, GRID_COLS, GRID_ROWS, wordCells, type Candidate, type Crossword } from './crossword';
 import { directionKey, entriesFor, toQuestion } from './pack';
 import { average, recordPuzzle, roundQuality } from './adaptive';
+import { initialCampaign, recordCampaignPuzzle } from './campaign';
 import { recordPuzzleDone } from './daily';
 import { DAILY_GOAL_REWARD } from './economy';
 import { applyWord, grantDailyReward, type Profile } from './profile';
@@ -39,19 +40,35 @@ export interface PuzzleState {
   /** Her değişiklikte artar; arayüz olayları buna göre bir kez gösterir. */
   seq: number;
   event: PuzzleEvent | null;
+  /**
+   * Konu modu kimliği (ör. "saglik"); ana kampanya bulmacasında yok. Konu
+   * bulmacası bölüm ilerlemesini ve uyarlamalı zorluğu değiştirmez.
+   */
+  topic?: string;
 }
 
 export const cellKey = (r: number, c: number) => `${r},${c}`;
 
-/** Bulmacada kullanılacak adaylar, öncelik sırasıyla gruplanmış. */
-export function puzzleCandidates(pack: WordPack, profile: Profile, direction: Direction, difficulty: Difficulty): Candidate[][] {
+/**
+ * Bulmacada kullanılacak adaylar, öncelik sırasıyla gruplanmış. `only`
+ * verilirse (konu modu) yalnızca o kelimeler kullanılır: seviye süzgeci ve
+ * seviye dışı dolgu yoktur, çünkü oyuncu seçtiği konunun kelimelerini bekler.
+ */
+export function puzzleCandidates(
+  pack: WordPack,
+  profile: Profile,
+  direction: Direction,
+  difficulty: Difficulty,
+  only?: Set<string>,
+): Candidate[][] {
   const dir = directionKey(direction);
   const learned = new Set(profile.learned[dir] ?? []);
   const review = new Set(profile.review.filter((r) => r.dir === dir).map((r) => r.entryId));
   const maxLen = Math.max(GRID_ROWS, GRID_COLS) - 1;
-  const inLevel = new Set(entriesFor(pack, difficulty).map((e) => e.id));
+  const inLevel = only ?? new Set(entriesFor(pack, difficulty).map((e) => e.id));
   const groups: Candidate[][] = [[], [], [], []];
   for (const entry of pack.entries) {
+    if (only && !only.has(entry.id)) continue;
     const a = crosswordAnswer(entry, direction.target, maxLen);
     const src = entry.terms[direction.source];
     if (!a || !src) continue;
@@ -70,9 +87,11 @@ export function newPuzzle(
   difficulty: Difficulty,
   rng?: Rng,
   size?: { rows: number; cols: number },
+  topic?: { id: string; entryIds: Set<string> },
 ): PuzzleState {
-  const cw = buildCrossword(puzzleCandidates(pack, profile, direction, difficulty), { rng, ...size });
-  return puzzleFromCrossword(cw, direction, difficulty);
+  const cw = buildCrossword(puzzleCandidates(pack, profile, direction, difficulty, topic?.entryIds), { rng, ...size });
+  const s = puzzleFromCrossword(cw, direction, difficulty);
+  return topic ? { ...s, topic: topic.id } : s;
 }
 
 /** Hazır bir ızgaradan (ör. elle yazılmış eğitim bulmacası) oyun durumu kurar. */
@@ -319,9 +338,16 @@ export interface PuzzleOutcome {
   difficultyAfter: Difficulty | null;
   addedToReview: number;
   removedFromReview: number;
+  /** Ana kampanyada tamamlanan bulmaca sayıldı mı (konu modunda ve erken bitirmede hayır). */
+  campaignCounted: boolean;
+  /** Bu bulmacayla biten bölümün numarası; bölüm bitmediyse null. */
+  chapterCompleted: number | null;
 }
 
-/** Biten bulmacanın tüm kelimelerini sırayla profile işler. */
+/**
+ * Biten bulmacanın tüm kelimelerini sırayla profile işler. Konu modu
+ * bulmacası (state.topic) bölüm ilerlemesini ve uyarlamalı zorluğu değiştirmez.
+ */
 export function applyPuzzle(
   profile: Profile,
   state: PuzzleState,
@@ -340,7 +366,10 @@ export function applyPuzzle(
     difficultyAfter: null,
     addedToReview: 0,
     removedFromReview: 0,
+    campaignCounted: false,
+    chapterCompleted: null,
   };
+  const campaign = !state.topic;
   let p = profile;
   for (const r of results) {
     // Kelimeler tek tek zorluğu etkilemez; bulmaca aşağıda bir kez değerlendirilir.
@@ -353,8 +382,17 @@ export function applyPuzzle(
     if (o.removedFromReview) outcome.removedFromReview++;
   }
 
-  // Günlük hedef: bulmacanın tüm kelimeleri çözüldüyse (yardımla da olur).
-  if (results.length > 0 && results.every((r) => r.status === 'correct')) {
+  // Tamamlandı: tüm kelimeler çözüldü (yardımla da olur). Erken "Bitir" sayılmaz.
+  const completed = results.length > 0 && results.every((r) => r.status === 'correct');
+  if (completed && campaign) {
+    const c = recordCampaignPuzzle(p.campaign ?? initialCampaign());
+    p = { ...p, campaign: c.state };
+    outcome.campaignCounted = true;
+    outcome.chapterCompleted = c.chapterCompleted;
+  }
+
+  // Günlük hedef: ana oyunda da konu modunda da tamamlanan bulmaca sayılır.
+  if (completed) {
     const daily = recordPuzzleDone(p.daily, now);
     p = { ...p, daily: daily.state };
     outcome.goalReached = daily.goalReached;
@@ -365,8 +403,8 @@ export function applyPuzzle(
     }
   }
 
-  // Uyarlamalı zorluk: bulmaca başına tek karar, en fazla bir kademe.
-  if (adaptive && results.length > 0) {
+  // Uyarlamalı zorluk: bulmaca başına tek karar, en fazla bir kademe; yalnızca ana oyunda.
+  if (adaptive && campaign && results.length > 0) {
     const res = recordPuzzle(p.adaptive, puzzleQuality(results));
     p = { ...p, adaptive: res.state };
     outcome.levelChange = res.change;

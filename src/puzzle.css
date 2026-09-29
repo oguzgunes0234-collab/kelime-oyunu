@@ -32,6 +32,190 @@
   --cw-cell-bg: #3b3448;
 }
 
+/* ---------- Ana sayfa: bölüm, ana eylem, modlar ---------- */
+
+.home {
+  gap: 12px;
+}
+.campaign-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.campaign-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+.campaign-top h2 {
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+.campaign-count {
+  font-weight: 800;
+  color: var(--muted);
+}
+.chapter-steps {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 6px;
+}
+.chapter-steps span {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+.chapter-steps span.on {
+  background: var(--accent);
+  box-shadow: none;
+}
+.campaign-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.daily-chip,
+.streak-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.daily-chip {
+  color: var(--muted);
+}
+.daily-chip.done {
+  color: var(--good);
+}
+.streak-chip svg {
+  color: var(--primary);
+}
+
+.mode-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.mode-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  min-height: 88px;
+  padding: 12px;
+  border: none;
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  text-align: left;
+  cursor: pointer;
+}
+.mode-card svg {
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+.mode-card strong {
+  font-size: 1rem;
+}
+.mode-card small {
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.25;
+}
+
+.direction-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.direction-row .swap-btn {
+  width: 44px;
+  height: 44px;
+}
+
+.home-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 8px 10px;
+  border: 2px solid var(--line);
+  border-radius: 12px;
+  background: transparent;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.link-btn svg {
+  color: var(--primary);
+  flex: none;
+}
+.link-btn .count {
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: var(--primary-ink);
+  font-size: 0.75rem;
+  display: grid;
+  place-items: center;
+}
+
+/* Konu modları sayfası */
+.topic-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.topic-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 64px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.topic-list li.is-locked {
+  box-shadow: inset 0 0 0 2px var(--line);
+  background: transparent;
+}
+.topic-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.topic-text small {
+  color: var(--muted);
+}
+
 /* ---------- Ana sayfa düğmeleri ---------- */
 
 .play-puzzle svg,

@@ -309,7 +309,7 @@ export function Game(props: Props) {
       ? 'Tekrar çalışması'
       : tutorial
         ? 'Örnek tur'
-        : `${config.difficultyMode === 'adaptive' ? 'Uyarlamalı · ' : ''}${DIFFICULTY_LABEL[difficulty]}`;
+        : `Hızlı tur · ${DIFFICULTY_LABEL[difficulty]}`;
 
   return (
     <div className={`game ${round.status !== 'playing' ? `is-${round.status}` : ''}`}>

@@ -43,7 +43,7 @@ export function Exhausted({ config, difficulty, played, reviewCount, onRepeat, o
           </button>
         )}
         <button type="button" className="btn btn-ghost btn-block" onClick={onHome}>
-          Başka seviye seç
+          Ana sayfa
         </button>
       </div>
     </div>
