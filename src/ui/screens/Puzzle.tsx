@@ -12,6 +12,7 @@ import {
   finishPuzzle,
   isLocked,
   newPuzzle,
+  puzzleFromCrossword,
   revealLetter,
   selectWord,
   selectedCell,
@@ -24,6 +25,7 @@ import {
   type PuzzleState,
 } from '../../core/puzzle';
 import { loadPuzzle, savePuzzle } from '../../core/storage';
+import { TUTORIAL_DIRECTION, TUTORIAL_LENGTH, TUTORIAL_STEPS, tutorialCrossword, type TutorialSkill } from '../../core/tutorial';
 import type { Difficulty, Direction, WordPack } from '../../core/types';
 import { ChevronLeftIcon, ChevronRightIcon, ClueArrow, CloseIcon, CoinIcon, QuestionIcon, TOOL_ICONS } from '../components/Icons';
 import { Keyboard } from '../components/Keyboard';
@@ -44,10 +46,30 @@ interface Props {
   onNewPuzzle: () => void;
   onOpenStore: () => void;
   onOpenReview: () => void;
+  /** Bulmaca eğitiminin adımı (0 = T1); null ise normal bulmaca. */
+  tutorialStep: number | null;
+  /** Eğitim adımı bitti; bir sonrakine (ya da eğitim bittiyse normal bulmacaya) geç. */
+  onTutorialAdvance: (next: number) => void;
+  onTutorialSkip: () => void;
+  onReplayTutorial: () => void;
 }
 
-type Dialog = { kind: 'toolEmpty'; tool: PuzzleToolId } | { kind: 'quit' } | { kind: 'intro' } | null;
+type Dialog = { kind: 'toolEmpty'; tool: PuzzleToolId } | { kind: 'quit' } | { kind: 'help' } | { kind: 'tutorialDone' } | null;
 type Note = { text: string; tone: 'good' | 'bad' | 'info'; seq: number } | null;
+
+/**
+ * Eğitimde gerektiği anda çıkan kısa açıklamalar. Her biri tek cümle ve
+ * "Anladım" ile kapanır; ilgili eylem yapılınca kendiliğinden kaybolur.
+ */
+type TipId = TutorialSkill | 'wrong';
+const TIPS: Record<TipId, string> = {
+  basics: 'Pembe kutu ipucu: Türkçe bir kelime. Ok, İngilizcesini hangi yöne yazacağını gösterir. Alttaki klavyeyle yaz.',
+  crossing: 'İki kelime bir kareyi paylaşıyor. ↓ aşağı yaz demek. Birini çözmek diğerine harf verir.',
+  switch: 'Parlayan kare iki kelimenin başı. Ona bir kez daha dokun: yazma yönü değişir.',
+  bent: 'Kırık ok: ↳ cevap ipucunun altından başlar, sağa gider. ↴ yanından başlar, aşağı iner.',
+  tools: 'Takılırsan: Anlam kelimenin anlamını, Harf aç bir harfi gösterir. Eğitimde ücretsiz, bir dene.',
+  wrong: 'Bir harf yanlış. Kareye dokunup düzelt; hiçbir şey kaybetmezsin.',
+};
 
 const reducedMotion = () => typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -60,11 +82,24 @@ function buzz(pattern: number | number[]) {
   }
 }
 
-/** Kayıtlı yarım bulmaca bu yön için varsa onu, yoksa yenisini açar. */
+/**
+ * Prototip denemesi için: adreste ?izgara=6 ya da ?izgara=7 varsa yeni
+ * bulmacalar 6×6 / 7×7 kurulur (küçük ekran kontrolü). Normal oyunda yok sayılır.
+ */
+function gridSizeParam(): { rows: number; cols: number } | undefined {
+  const n = Number(new URLSearchParams(window.location.search).get('izgara'));
+  return n >= 6 && n <= 9 ? { rows: n, cols: n } : undefined;
+}
+
+/** Eğitim adımı, kayıtlı yarım bulmaca (bu yön için) ya da yeni bulmaca. */
 function initialPuzzle(props: Props): PuzzleState {
+  if (props.tutorialStep !== null) {
+    const s = puzzleFromCrossword(tutorialCrossword(props.tutorialStep, props.pack), TUTORIAL_DIRECTION, 'easy');
+    return selectWord(s, TUTORIAL_STEPS[props.tutorialStep].startWord);
+  }
   const saved = loadPuzzle();
   if (saved && saved.direction.source === props.direction.source && saved.direction.target === props.direction.target) return saved;
-  return newPuzzle(props.pack, props.profile, props.direction, props.difficulty);
+  return newPuzzle(props.pack, props.profile, props.direction, props.difficulty, undefined, gridSizeParam());
 }
 
 export function hasSavedPuzzle(direction: Direction): boolean {
@@ -77,19 +112,39 @@ export function Puzzle(props: Props) {
   const [puzzle, setPuzzle] = useState<PuzzleState>(() => initialPuzzle(props));
   const [outcome, setOutcome] = useState<PuzzleOutcome | null>(null);
   const [showResult, setShowResult] = useState(false);
-  const [dialog, setDialog] = useState<Dialog>(() => (profile.puzzleIntroDone ? null : { kind: 'intro' }));
+  const [dialog, setDialog] = useState<Dialog>(null);
   const [note, setNote] = useState<Note>(null);
   const noteSeq = useRef(0);
   const timer = useRef<number>();
 
+  const tutorial = props.tutorialStep !== null;
+  const step = tutorial ? TUTORIAL_STEPS[props.tutorialStep!] : null;
+  // Eğitimde açık açıklama: adımın becerisiyle başlar; ilk yanlışta "wrong" araya girer.
+  const [tip, setTip] = useState<TipId | null>(step?.skill ?? null);
+  const wrongTipShown = useRef(false);
+
   // Anlık değerler: art arda gelen tuşlar React yeniden çizmeden işlense de harf kaybolmasın.
-  const live = useRef({ puzzle, profile });
-  live.current = { puzzle, profile };
+  const live = useRef({ puzzle, profile, tip });
+  live.current = { puzzle, profile, tip };
 
   useEffect(() => () => window.clearTimeout(timer.current), []);
   useEffect(() => {
-    if (puzzle.status === 'playing') savePuzzle(puzzle);
-  }, [puzzle]);
+    // Eğitim bulmacası kaydedilmez: yarım kalmış normal bulmacanın üzerine yazmasın.
+    if (!tutorial && puzzle.status === 'playing') savePuzzle(puzzle);
+  }, [puzzle, tutorial]);
+
+  function closeTip(id?: TipId) {
+    if (id && live.current.tip !== id) return;
+    live.current.tip = null;
+    setTip(null);
+  }
+
+  // T3: iki kelimenin başladığı ortak kare (yön değiştirme bu karede öğretilir).
+  const switchCell = useMemo(() => {
+    if (step?.skill !== 'switch') return null;
+    const starts = puzzle.cw.words.map((w) => cellKey(w.row, w.col));
+    return starts.find((k, i) => starts.indexOf(k) !== i) ?? null;
+  }, [step, puzzle.cw]);
 
   function say(text: string | null, tone: 'good' | 'bad' | 'info' = 'info') {
     noteSeq.current += 1;
@@ -102,6 +157,13 @@ export function Puzzle(props: Props) {
   }
 
   function finish(done: PuzzleState, base: Profile) {
+    window.clearTimeout(timer.current);
+    if (tutorial) {
+      // Eğitim profili değiştirmez (jeton, hedef, tekrar listesi); yalnızca adım ilerler.
+      closeTip();
+      timer.current = window.setTimeout(() => setDialog({ kind: 'tutorialDone' }), reducedMotion() ? 0 : 900);
+      return;
+    }
     savePuzzle(null);
     const res = applyPuzzle(base, done, pack, props.adaptive, new Date());
     saveProfile(res.profile);
@@ -130,8 +192,23 @@ export function Puzzle(props: Props) {
       } else if (e.kind === 'reveal') say('Harf açıldı.');
       else if (e.kind === 'meaning') say('Anlam ipucu üstte.');
       else if (e.kind === 'complete') {
-        say('Bulmaca tamam!', 'good');
+        say(tutorial ? 'Tamam!' : 'Bulmaca tamam!', 'good');
         buzz([30, 50, 30, 50, 60]);
+      }
+      if (tutorial) {
+        // Açıklamalar, öğrettikleri şey olunca kendiliğinden kapanır.
+        if (e.kind === 'solved') {
+          closeTip('crossing');
+          closeTip('bent');
+          closeTip('wrong');
+        }
+        if ((e.kind === 'reveal' || e.kind === 'meaning') && live.current.tip === 'tools') closeTip('tools');
+        if (e.kind === 'wrong' && !wrongTipShown.current) {
+          // İlk yanlışta düzeltmeyi anlat; o an başka açıklama açıksa onu bekletme.
+          wrongTipShown.current = true;
+          live.current.tip = 'wrong';
+          setTip('wrong');
+        }
       }
     }
     if (prev.status === 'playing' && next.status === 'done') finish(next, base);
@@ -139,7 +216,19 @@ export function Puzzle(props: Props) {
   }
 
   function onLetter(letter: string) {
+    closeTip('basics');
     commit(typeLetter(live.current.puzzle, letter));
+  }
+
+  /** Kareye dokunma; T3'te ortak karede yön değişince açıklama kapanır. */
+  function onCell(r: number, c: number) {
+    const prev = live.current.puzzle;
+    const next = tapCell(prev, r, c);
+    if (switchCell === cellKey(r, c) && next.sel.word !== prev.sel.word && selectedCell(prev).join() === [r, c].join()) {
+      if (live.current.tip === 'switch') say('Yön değişti!', 'good');
+      closeTip('switch');
+    }
+    commit(next);
   }
   function onBackspace() {
     commit(backspace(live.current.puzzle));
@@ -158,7 +247,7 @@ export function Puzzle(props: Props) {
   function onTool(tool: PuzzleToolId) {
     const { puzzle: p, profile: pr } = live.current;
     if (p.status !== 'playing') return;
-    if (pr.inventory[tool] <= 0) {
+    if (!tutorial && pr.inventory[tool] <= 0) {
       setDialog({ kind: 'toolEmpty', tool });
       return;
     }
@@ -171,10 +260,11 @@ export function Puzzle(props: Props) {
             ? 'Bu kelimenin anlam ipucu zaten açık.'
             : 'Bu kelime için anlam ipucu yok.'
           : 'Bu kelimede açılacak harf kalmadı.';
-      say(`${why} Hak harcanmadı.`);
+      say(tutorial ? why : `${why} Hak harcanmadı.`);
       return;
     }
-    commit(res.state, consumeCharge(pr, tool));
+    // Eğitimde araçlar ücretsiz: hak harcanmaz.
+    commit(res.state, tutorial ? pr : consumeCharge(pr, tool));
   }
 
   // Fiziksel klavye: harf yaz, ⌫ sil, Tab / Enter sıradaki kelime, oklar kare seç.
@@ -268,6 +358,7 @@ export function Puzzle(props: Props) {
           wrongCells?.has(key) ? 'flash-wrong' : '',
           solvedCells?.has(key) ? 'flash-solved' : '',
           puzzle.status === 'done' && !locked ? 'missed' : '',
+          tip === 'switch' && switchCell === key ? 'coach-pulse' : '',
         ]
           .filter(Boolean)
           .join(' ');
@@ -278,7 +369,7 @@ export function Puzzle(props: Props) {
             key={key + (wrongCells?.has(key) || solvedCells?.has(key) ? `-${puzzle.seq}` : '')}
             type="button"
             className={cls}
-            onClick={() => commit(tapCell(live.current.puzzle, r, c))}
+            onClick={() => onCell(r, c)}
             aria-label={`${letter.words.map((w) => cw.words[w].clue).join(' / ')} kelimesinin karesi${typed ? `, yazılan ${displayLetter(typed, tgt.code)}` : ', boş'}${locked ? ', çözüldü' : ''}`}
           >
             {shown ? displayLetter(shown, tgt.code) : ''}
@@ -314,14 +405,21 @@ export function Puzzle(props: Props) {
   return (
     <div className="cw-page">
       <header className="game-top">
-        <button type="button" className="icon-btn" onClick={() => setDialog({ kind: 'quit' })} aria-label="Bulmacadan çık">
+        <button
+          type="button"
+          className="icon-btn"
+          // Eğitimden çıkınca adım kaybolmaz; kaldığı adımdan devam eder.
+          onClick={() => (tutorial ? props.onExit() : setDialog({ kind: 'quit' }))}
+          aria-label={tutorial ? 'Eğitimden çık' : 'Bulmacadan çık'}
+        >
           <CloseIcon />
         </button>
         <div className="game-progress">
           <div className="progress-label">
             <span>
-              {props.adaptive ? 'Uyarlamalı · ' : ''}
-              {DIFFICULTY_LABEL[puzzle.difficulty]}
+              {tutorial
+                ? `Eğitim ${props.tutorialStep! + 1}/${TUTORIAL_LENGTH} · ${step!.title}`
+                : `${props.adaptive ? 'Uyarlamalı · ' : ''}${DIFFICULTY_LABEL[puzzle.difficulty]}`}
             </span>
             <span aria-label={`${total} kelimeden ${solved} tanesi çözüldü`}>
               {solved}/{total}
@@ -332,13 +430,21 @@ export function Puzzle(props: Props) {
           </div>
         </div>
         <div className="game-stats">
-          <span className="stat coin" aria-label={`${profile.coins} jeton`}>
-            <CoinIcon width={16} height={16} />
-            <strong>{profile.coins}</strong>
-          </span>
-          <button type="button" className="icon-btn small" onClick={() => setDialog({ kind: 'intro' })} aria-label="Nasıl oynanır">
-            <QuestionIcon width={20} height={20} />
-          </button>
+          {tutorial ? (
+            <button type="button" className="btn btn-ghost btn-small" onClick={props.onTutorialSkip}>
+              Eğitimi atla
+            </button>
+          ) : (
+            <>
+              <span className="stat coin" aria-label={`${profile.coins} jeton`}>
+                <CoinIcon width={16} height={16} />
+                <strong>{profile.coins}</strong>
+              </span>
+              <button type="button" className="icon-btn small" onClick={() => setDialog({ kind: 'help' })} aria-label="Nasıl oynanır">
+                <QuestionIcon width={20} height={20} />
+              </button>
+            </>
+          )}
         </div>
       </header>
 
@@ -380,6 +486,14 @@ export function Puzzle(props: Props) {
             {note.text}
           </p>
         )}
+        {tip && puzzle.status === 'playing' && (
+          <div className="cw-coach" role="note" key={tip}>
+            <p>{TIPS[tip]}</p>
+            <button type="button" className="btn btn-secondary btn-small" onClick={() => closeTip()}>
+              Anladım
+            </button>
+          </div>
+        )}
       </div>
       <p className="sr-only" role="status" aria-live="polite">
         {note?.text ?? ''}
@@ -394,38 +508,56 @@ export function Puzzle(props: Props) {
             <button
               key={tool}
               type="button"
-              className={`cw-tool tool-${tool}${count === 0 ? ' is-empty' : ''}`}
+              className={`cw-tool tool-${tool}${!tutorial && count === 0 ? ' is-empty' : ''}${tip === 'tools' ? ' coach-pulse' : ''}`}
               onClick={() => onTool(tool)}
-              aria-label={`${info.name}: ${info.does} Kalan hak: ${count}. Bedel: ${info.cost}.`}
+              aria-label={`${info.name}: ${info.does} ${tutorial ? 'Eğitimde ücretsiz.' : `Kalan hak: ${count}. Bedel: ${info.cost}.`}`}
             >
               <span className="tool-circle small">
                 <Icon width={20} height={20} />
               </span>
               <span>{info.name}</span>
               <span className="cw-tool-count" aria-hidden="true">
-                {count}
+                {tutorial ? '∞' : count}
               </span>
             </button>
           );
         })}
-        <button type="button" className="btn btn-ghost btn-small cw-finish" onClick={() => setDialog({ kind: 'quit' })}>
-          Bitir
-        </button>
+        {!tutorial && (
+          <button type="button" className="btn btn-ghost btn-small cw-finish" onClick={() => setDialog({ kind: 'quit' })}>
+            Bitir
+          </button>
+        )}
       </div>
 
       <Keyboard lang={tgt.code} onLetter={onLetter} onBackspace={onBackspace} disabled={puzzle.status !== 'playing'} />
 
-      {dialog?.kind === 'intro' && (
-        <Sheet
-          title="Çengel bulmaca"
-          onClose={() => {
-            setDialog(null);
-            if (!profile.puzzleIntroDone) saveProfile({ ...live.current.profile, puzzleIntroDone: true });
-          }}
-        >
+      {dialog?.kind === 'tutorialDone' && step && (
+        <Sheet title={props.tutorialStep! + 1 < TUTORIAL_LENGTH ? `${step.title}: tamam` : 'Eğitim bitti'}>
+          {props.tutorialStep! + 1 < TUTORIAL_LENGTH ? (
+            <p>
+              Sıradaki: <strong>{TUTORIAL_STEPS[props.tutorialStep! + 1].title}</strong> ({props.tutorialStep! + 2}/{TUTORIAL_LENGTH})
+            </p>
+          ) : (
+            <p>Artık gerçek bulmacalara hazırsın. Yanlış yazmak hiçbir şey eksiltmez.</p>
+          )}
+          <div className="stack">
+            <button type="button" className="btn btn-primary btn-block" onClick={() => props.onTutorialAdvance(props.tutorialStep! + 1)}>
+              {props.tutorialStep! + 1 < TUTORIAL_LENGTH ? 'Devam' : 'İlk bulmacaya başla'}
+            </button>
+            {props.tutorialStep! + 1 < TUTORIAL_LENGTH && (
+              <button type="button" className="btn btn-ghost btn-block" onClick={props.onTutorialSkip}>
+                Eğitimi atla
+              </button>
+            )}
+          </div>
+        </Sheet>
+      )}
+
+      {dialog?.kind === 'help' && (
+        <Sheet title="Nasıl oynanır" onClose={() => setDialog(null)}>
           <ul className="cw-intro">
             <li>
-              Renkli kutular ipucudur: {src.name} bir kelime. Karşılığını {tgt.name} olarak okun gösterdiği yöne yaz.
+              Pembe kutular ipucudur: {src.name} bir kelime. Karşılığını {tgt.name} olarak okun gösterdiği yöne yaz.
             </li>
             <li className="cw-intro-arrows">
               <span>
@@ -448,16 +580,15 @@ export function Puzzle(props: Props) {
               tekrar listene eklenir.
             </li>
           </ul>
-          <button
-            type="button"
-            className="btn btn-primary btn-block"
-            onClick={() => {
-              setDialog(null);
-              if (!profile.puzzleIntroDone) saveProfile({ ...live.current.profile, puzzleIntroDone: true });
-            }}
-          >
-            Başla
-          </button>
+          <div className="stack">
+            <button type="button" className="btn btn-primary btn-block" onClick={() => setDialog(null)}>
+              Bulmacaya dön
+            </button>
+            <button type="button" className="btn btn-secondary btn-block" onClick={props.onReplayTutorial}>
+              Eğitimi baştan oynat
+            </button>
+            <p className="muted small center">Bu bulmaca kaldığı yerde bekler.</p>
+          </div>
         </Sheet>
       )}
 

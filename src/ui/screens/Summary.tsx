@@ -1,4 +1,4 @@
-import { currentStreak } from '../../core/daily';
+import { DAILY_PUZZLE_GOAL, currentStreak, goalDoneToday } from '../../core/daily';
 import type { Profile } from '../../core/profile';
 import { sessionScore, type Session } from '../../core/session';
 import { CheckIcon, CrossIcon, FlameIcon } from '../components/Icons';
@@ -35,10 +35,8 @@ export function Summary({ session, profile, onHome, onAgain, onReview }: Props) 
           <span>puan</span>
         </div>
         <div className="big-stat">
-          <strong>
-            {Math.min(profile.daily.todayCorrect, profile.daily.goal)}/{profile.daily.goal}
-          </strong>
-          <span>günlük hedef</span>
+          <strong>{goalDoneToday(profile.daily, new Date()) ? '✓' : `0/${DAILY_PUZZLE_GOAL}`}</strong>
+          <span>günlük hedef (bulmaca)</span>
         </div>
         <div className="big-stat">
           <strong>

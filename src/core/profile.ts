@@ -32,8 +32,12 @@ export interface Profile {
   version: 1;
   settings: Settings;
   tutorialDone: boolean;
-  /** Bulmacanın "nasıl oynanır" kartı gösterildi mi. */
-  puzzleIntroDone: boolean;
+  /**
+   * Bulmaca eğitiminde (T1–T5) kaç adım bitti; atlanınca adım sayısına eşitlenir.
+   * Eski kayıtlarda yoktur; 0 ile tamamlanır, yani mevcut oyuncular da eğitimi
+   * bir kez görür (atlayabilir).
+   */
+  puzzleTutorialStep: number;
   inventory: Inventory;
   coins: number;
   totalScore: number;
@@ -50,7 +54,7 @@ export function defaultProfile(now: Date): Profile {
     version: 1,
     settings: { direction: { source: 'tr', target: 'en' }, difficultyMode: 'adaptive', dailyGoal: 10, theme: 'auto' },
     tutorialDone: false,
-    puzzleIntroDone: false,
+    puzzleTutorialStep: 0,
     inventory: { ...INITIAL_INVENTORY },
     coins: 0,
     totalScore: 0,
@@ -143,16 +147,8 @@ export function applyWord(
     outcome.coinsEarned = COINS_PER_CORRECT + (clean ? COINS_CLEAN_BONUS : 0);
     const learned = p.learned[dir] ?? [];
     if (!learned.includes(id)) p.learned = { ...p.learned, [dir]: [...learned, id] };
-    const daily = recordCorrect(p.daily, now);
-    p.daily = daily.state;
-    outcome.goalReached = daily.goalReached;
-    outcome.usedRestDay = daily.usedRestDay;
-    if (daily.goalReached) {
-      outcome.coinsEarned += DAILY_GOAL_REWARD.coins;
-      const inv = { ...p.inventory };
-      (Object.keys(DAILY_GOAL_REWARD.tools) as ToolId[]).forEach((t) => (inv[t] += DAILY_GOAL_REWARD.tools[t]));
-      p.inventory = inv;
-    }
+    // Günlük hedef artık bulmaca tamamlamaktır (bkz. applyPuzzle); kelime yalnızca sayılır.
+    p.daily = recordCorrect(p.daily, now);
     p.coins += outcome.coinsEarned;
   }
 
@@ -182,6 +178,13 @@ export function applyWord(
   }
 
   return { profile: p, outcome };
+}
+
+/** Günlük hedef ödülü (günde bir kez): jeton ve her araçtan hediye hak. Miktarlar economy.ts'de. */
+export function grantDailyReward(profile: Profile): Profile {
+  const inventory = { ...profile.inventory };
+  (Object.keys(DAILY_GOAL_REWARD.tools) as ToolId[]).forEach((t) => (inventory[t] += DAILY_GOAL_REWARD.tools[t]));
+  return { ...profile, coins: profile.coins + DAILY_GOAL_REWARD.coins, inventory };
 }
 
 export function consumeCharge(profile: Profile, tool: ToolId): Profile {

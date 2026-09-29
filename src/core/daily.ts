@@ -2,13 +2,24 @@
  * Günlük hedef ve seri. Cezalandırmayan tasarım:
  * - Bir gün kaçırılırsa haftada bir "dinlenme günü" otomatik devreye girer, seri sürer.
  * - Seri yine de biterse puan, jeton ya da hak kaybı olmaz; arayüz "yeni seri" der.
- * - Hedef yalnızca doğru cevapları sayar; yanlış cevap hiçbir şeyi azaltmaz.
+ * - Yanlış cevap hiçbir şeyi azaltmaz.
  */
 
+/**
+ * Günlük hedef: bir bulmacayı tamamlamak (tüm kelimeleri çözmek; yardım
+ * serbest). Eskiden hedef "günde N doğru kelime" idi; bulmaca başına ~11 kelime
+ * olduğundan tek bulmaca hedefi anlamsızca bitiriyordu.
+ */
+export const DAILY_PUZZLE_GOAL = 1;
+
 export interface DailyState {
+  /** Eski "günde N kelime" hedefi. Kayıt uyumu için duruyor; hedef hesabında kullanılmaz. */
   goal: number;
   day: string;
+  /** Bugün doğru bilinen kelime sayısı (yalnızca istatistik). */
   todayCorrect: number;
+  /** Bugün tamamlanan bulmaca sayısı. Eski kayıtlarda yoktur; 0 ile tamamlanır. */
+  todayPuzzles: number;
   streak: number;
   bestStreak: number;
   lastGoalDay: string | null;
@@ -38,13 +49,34 @@ function shiftDay(day: string, delta: number): string {
 }
 
 export function initialDaily(now: Date, goal = 10): DailyState {
-  return { goal, day: dayKey(now), todayCorrect: 0, streak: 0, bestStreak: 0, lastGoalDay: null, restDays: [], goalDays: 0 };
+  return {
+    goal,
+    day: dayKey(now),
+    todayCorrect: 0,
+    todayPuzzles: 0,
+    streak: 0,
+    bestStreak: 0,
+    lastGoalDay: null,
+    restDays: [],
+    goalDays: 0,
+  };
 }
 
-/** Gün değiştiyse sayacı sıfırlar. */
+/** Gün değiştiyse sayaçları sıfırlar. */
 export function rollDay(state: DailyState, now: Date): DailyState {
   const today = dayKey(now);
-  return state.day === today ? state : { ...state, day: today, todayCorrect: 0 };
+  return state.day === today ? state : { ...state, day: today, todayCorrect: 0, todayPuzzles: 0 };
+}
+
+/** Bugünün hedefi tamam mı (eski kelime hedefiyle bugün tamamlanmış olabilir). */
+export function goalDoneToday(state: DailyState, now: Date): boolean {
+  const today = dayKey(now);
+  return state.lastGoalDay === today || (state.day === today && (state.todayPuzzles ?? 0) >= DAILY_PUZZLE_GOAL);
+}
+
+/** Bugün tamamlanan bulmaca sayısı (gösterim için). */
+export function puzzlesToday(state: DailyState, now: Date): number {
+  return state.day === dayKey(now) ? (state.todayPuzzles ?? 0) : 0;
 }
 
 function restDayAvailable(state: DailyState, today: string): boolean {
@@ -60,12 +92,19 @@ export function currentStreak(state: DailyState, now: Date): { streak: number; r
   return { streak: 0, restDayNeeded: false };
 }
 
-export function recordCorrect(state: DailyState, now: Date): { state: DailyState; goalReached: boolean; usedRestDay: boolean } {
+/** Doğru bilinen bir kelimeyi sayar. Yalnızca istatistiktir; hedefi etkilemez. */
+export function recordCorrect(state: DailyState, now: Date): DailyState {
+  const s = rollDay(state, now);
+  return { ...s, todayCorrect: s.todayCorrect + 1 };
+}
+
+/** Tamamlanan bir bulmacayı sayar; hedef bugün ilk kez tamamlanırsa seriyi ilerletir. */
+export function recordPuzzleDone(state: DailyState, now: Date): { state: DailyState; goalReached: boolean; usedRestDay: boolean } {
   const s = rollDay(state, now);
   const today = s.day;
-  const todayCorrect = s.todayCorrect + 1;
-  if (todayCorrect < s.goal || s.lastGoalDay === today) {
-    return { state: { ...s, todayCorrect }, goalReached: false, usedRestDay: false };
+  const todayPuzzles = (s.todayPuzzles ?? 0) + 1;
+  if (todayPuzzles < DAILY_PUZZLE_GOAL || s.lastGoalDay === today) {
+    return { state: { ...s, todayPuzzles }, goalReached: false, usedRestDay: false };
   }
   let streak = 1;
   let usedRestDay = false;
@@ -82,7 +121,7 @@ export function recordCorrect(state: DailyState, now: Date): { state: DailyState
   return {
     state: {
       ...s,
-      todayCorrect,
+      todayPuzzles,
       streak,
       bestStreak: Math.max(s.bestStreak, streak),
       lastGoalDay: today,

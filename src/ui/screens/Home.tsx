@@ -1,4 +1,4 @@
-import { currentStreak, dayKey } from '../../core/daily';
+import { DAILY_PUZZLE_GOAL, currentStreak, goalDoneToday, puzzlesToday } from '../../core/daily';
 import { TOOL_ORDER } from '../../core/economy';
 import { languageInfo } from '../../core/languages';
 import { DIFFICULTY_CEFR_LABEL, DIFFICULTY_LABEL } from '../../core/pack';
@@ -15,6 +15,8 @@ interface Props {
   onPuzzle: () => void;
   /** Bu yön için yarım kalmış bir bulmaca var mı. */
   puzzleSaved: boolean;
+  /** Bulmaca eğitimi henüz bitmedi (bir sonraki "Bulmaca çöz" eğitimi açar). */
+  tutorialPending: boolean;
   /** İkinci mod: harf taşlarıyla 10 kelimelik hızlı tur. */
   onPlay: () => void;
   onReview: () => void;
@@ -25,15 +27,17 @@ interface Props {
 
 const MODES: DifficultyMode[] = ['easy', 'medium', 'hard', 'adaptive'];
 
-export function Home({ pack, profile, setProfile, onPuzzle, puzzleSaved, onPlay, onReview, onSettings, onStore, onHowTo }: Props) {
+export function Home({ pack, profile, setProfile, onPuzzle, puzzleSaved, tutorialPending, onPlay, onReview, onSettings, onStore, onHowTo }: Props) {
   const { direction, difficultyMode } = profile.settings;
   const src = languageInfo(direction.source);
   const tgt = languageInfo(direction.target);
   const now = new Date();
-  const today = profile.daily.day === dayKey(now) ? profile.daily.todayCorrect : 0;
-  const goal = profile.daily.goal;
+  // Günlük hedef: bir bulmacayı tamamlamak (bkz. core/daily.ts).
+  const done = goalDoneToday(profile.daily, now);
+  const today = done ? Math.max(DAILY_PUZZLE_GOAL, puzzlesToday(profile.daily, now)) : puzzlesToday(profile.daily, now);
+  const goal = DAILY_PUZZLE_GOAL;
   const streak = currentStreak(profile.daily, now);
-  const pct = Math.min(1, today / goal);
+  const pct = done ? 1 : Math.min(1, today / goal);
   const effective = difficultyMode === 'adaptive' ? profile.adaptive.difficulty : difficultyMode;
   const fresh = remainingFresh(pack, profile, direction, effective);
 
@@ -66,18 +70,18 @@ export function Home({ pack, profile, setProfile, onPuzzle, puzzleSaved, onPlay,
           className="ring"
           style={{ ['--pct' as string]: pct }}
           role="img"
-          aria-label={`Bugün ${today} / ${goal} kelime`}
+          aria-label={`Bugün ${Math.min(today, goal)} / ${goal} bulmaca`}
         >
           <span>
             <strong>{Math.min(today, goal)}</strong>/{goal}
           </span>
         </div>
         <div className="daily-text">
-          <p className="daily-title">{today >= goal ? 'Bugünkü hedef tamam!' : 'Günlük hedef'}</p>
+          <p className="daily-title">{done ? 'Bugünkü hedef tamam!' : 'Günlük hedef: 1 bulmaca'}</p>
           <p className="muted">
-            {today >= goal
+            {done
               ? 'İstersen oynamaya devam et; baskı yok.'
-              : `${goal - today} doğru kelime daha. Yanlışlar hiçbir şey eksiltmez.`}
+              : 'Bir bulmacanın tüm kelimelerini çöz. Yardım serbest, yanlışlar hiçbir şey eksiltmez.'}
           </p>
           <p className="streak">
             <FlameIcon width={18} height={18} />
@@ -145,7 +149,9 @@ export function Home({ pack, profile, setProfile, onPuzzle, puzzleSaved, onPlay,
         <p className="muted center small">
           {puzzleSaved
             ? 'Yarım kalan bulmacan kaldığı yerde bekliyor.'
-            : `${src.name} ipuçlu, ${tgt.name} cevaplı çengel bulmaca · henüz bilmediğin ${fresh} kelime var`}
+            : tutorialPending
+              ? '5 kısa eğitim bulmacasıyla başlar; istediğin an atlayabilirsin.'
+              : `${src.name} ipuçlu, ${tgt.name} cevaplı çengel bulmaca · henüz bilmediğin ${fresh} kelime var`}
         </p>
         <button type="button" className="btn btn-secondary btn-block play-quick" onClick={onPlay}>
           <LettersIcon width={22} height={22} />

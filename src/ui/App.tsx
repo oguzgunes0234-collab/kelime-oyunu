@@ -3,6 +3,7 @@ import type { SessionConfig } from '../core/session';
 import { PACK } from '../data/packs';
 import { Game } from './screens/Game';
 import { Home } from './screens/Home';
+import { TUTORIAL_LENGTH } from '../core/tutorial';
 import { hasSavedPuzzle, Puzzle } from './screens/Puzzle';
 import { Review } from './screens/Review';
 import { Settings } from './screens/Settings';
@@ -12,7 +13,8 @@ import { useProfile } from './useProfile';
 type Screen =
   | { name: 'home' }
   | { name: 'game'; config: SessionConfig; key: number }
-  | { name: 'puzzle'; key: number }
+  /** tutorialStep: bulmaca eğitiminin adımı (0 = T1) ya da null (normal bulmaca). */
+  | { name: 'puzzle'; key: number; tutorialStep: number | null }
   | { name: 'review' }
   | { name: 'settings' };
 
@@ -40,8 +42,14 @@ export function App() {
   const tutorial = () => play({ mode: 'tutorial', direction: profile.settings.direction, difficultyMode: 'easy' });
   // Harf taşı turunu ilk kez açan oyuncu önce örnek turu görür.
   const playQuick = () => (profile.tutorialDone ? playNormal() : tutorial());
-  const playPuzzle = () => setScreen({ name: 'puzzle', key: Date.now() });
-  const { difficultyMode } = profile.settings;
+  const { difficultyMode, direction } = profile.settings;
+  const puzzleSaved = hasSavedPuzzle(direction);
+  // Eğitim bitmediyse "Bulmaca çöz" eğitimi açar. Yarım kalmış bir bulmaca varsa
+  // önce o sürer (eğitim "?" → "Eğitimi baştan oynat" ile her zaman açılabilir).
+  const tutorialPending = profile.puzzleTutorialStep < TUTORIAL_LENGTH && !puzzleSaved;
+  const openPuzzle = (tutorialStep: number | null) => setScreen({ name: 'puzzle', key: Date.now(), tutorialStep });
+  const playPuzzle = () => openPuzzle(tutorialPending ? profile.puzzleTutorialStep : null);
+  const setTutorialStep = (step: number) => setProfile({ ...profile, puzzleTutorialStep: step });
 
   return (
     <div className="app">
@@ -53,7 +61,8 @@ export function App() {
             profile={profile}
             setProfile={setProfile}
             onPuzzle={playPuzzle}
-            puzzleSaved={hasSavedPuzzle(profile.settings.direction)}
+            puzzleSaved={puzzleSaved}
+            tutorialPending={tutorialPending}
             onPlay={playQuick}
             onReview={() => setScreen({ name: 'review' })}
             onSettings={() => setScreen({ name: 'settings' })}
@@ -72,9 +81,19 @@ export function App() {
             adaptive={difficultyMode === 'adaptive'}
             paused={storeOpen}
             onExit={home}
-            onNewPuzzle={playPuzzle}
+            onNewPuzzle={() => openPuzzle(null)}
             onOpenStore={() => setStoreOpen(true)}
             onOpenReview={() => setScreen({ name: 'review' })}
+            tutorialStep={screen.tutorialStep}
+            onTutorialAdvance={(next) => {
+              setTutorialStep(Math.max(profile.puzzleTutorialStep, next));
+              openPuzzle(next < TUTORIAL_LENGTH ? next : null);
+            }}
+            onTutorialSkip={() => {
+              setTutorialStep(TUTORIAL_LENGTH);
+              openPuzzle(null);
+            }}
+            onReplayTutorial={() => openPuzzle(0)}
           />
         )}
         {screen.name === 'game' && (
@@ -117,6 +136,7 @@ export function App() {
             setProfile={setProfile}
             onBack={home}
             onReplayTutorial={tutorial}
+            onReplayPuzzleTutorial={() => openPuzzle(0)}
             onReset={() => {
               reset();
               home();

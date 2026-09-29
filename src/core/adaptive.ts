@@ -13,15 +13,34 @@ export const DOWN_THRESHOLD = 0.4;
 
 const ORDER: Difficulty[] = ['easy', 'medium', 'hard'];
 
+/**
+ * Bulmacada karar birimi tek kelime değil, biten bulmacadır. Eskiden her kelime
+ * ayrı tur sayılıyordu; 10 kelimelik tek bir bulmaca seviyeyi iki kademe
+ * birden (Kolay → Zor) değiştirebiliyordu.
+ */
+export const PUZZLE_WINDOW = 3;
+export const MIN_PUZZLES_BEFORE_CHANGE = 2;
+
 export interface AdaptiveState {
   difficulty: Difficulty;
-  /** Son turların başarı puanları (0–1). */
+  /** Hızlı turun son sonuçları (0–1), kelime başına. */
   recent: number[];
   roundsSinceChange: number;
+  /**
+   * Son bulmacaların başarısı (0–1), bulmaca başına. Eski kayıtlarda yoktur;
+   * yüklenirken varsayılan (boş) değerle tamamlanır.
+   */
+  puzzleRecent: number[];
+  puzzlesSinceChange: number;
 }
 
 export function initialAdaptive(difficulty: Difficulty = 'easy'): AdaptiveState {
-  return { difficulty, recent: [], roundsSinceChange: 0 };
+  return { difficulty, recent: [], roundsSinceChange: 0, puzzleRecent: [], puzzlesSinceChange: 0 };
+}
+
+/** Seviye değişince iki pencere de sıfırlanır: yeni seviyede baştan ölçülür. */
+function changed(difficulty: Difficulty): AdaptiveState {
+  return initialAdaptive(difficulty);
 }
 
 /** Tur kalitesi: yardımsız ilk denemede doğru 1; yardımla ya da yanlış denemeyle doğru daha az; pas/yanlış 0. */
@@ -46,12 +65,27 @@ export function recordRound(
   const idx = ORDER.indexOf(state.difficulty);
   if (roundsSinceChange >= MIN_ROUNDS_BEFORE_CHANGE && recent.length >= MIN_ROUNDS_BEFORE_CHANGE) {
     const avg = average(recent);
-    if (avg >= UP_THRESHOLD && idx < ORDER.length - 1) {
-      return { state: { difficulty: ORDER[idx + 1], recent: [], roundsSinceChange: 0 }, change: 'up' };
-    }
-    if (avg <= DOWN_THRESHOLD && idx > 0) {
-      return { state: { difficulty: ORDER[idx - 1], recent: [], roundsSinceChange: 0 }, change: 'down' };
-    }
+    if (avg >= UP_THRESHOLD && idx < ORDER.length - 1) return { state: changed(ORDER[idx + 1]), change: 'up' };
+    if (avg <= DOWN_THRESHOLD && idx > 0) return { state: changed(ORDER[idx - 1]), change: 'down' };
   }
   return { state: { ...state, recent, roundsSinceChange }, change: null };
+}
+
+/**
+ * Biten bir bulmacayı kaydeder. Tek çağrıda seviye en fazla bir kademe değişir
+ * ve en az MIN_PUZZLES_BEFORE_CHANGE bulmaca görülmeden değişmez.
+ */
+export function recordPuzzle(
+  state: AdaptiveState,
+  quality: number,
+): { state: AdaptiveState; change: 'up' | 'down' | null } {
+  const puzzleRecent = [...(state.puzzleRecent ?? []), quality].slice(-PUZZLE_WINDOW);
+  const puzzlesSinceChange = (state.puzzlesSinceChange ?? 0) + 1;
+  const idx = ORDER.indexOf(state.difficulty);
+  if (puzzlesSinceChange >= MIN_PUZZLES_BEFORE_CHANGE && puzzleRecent.length >= MIN_PUZZLES_BEFORE_CHANGE) {
+    const avg = average(puzzleRecent);
+    if (avg >= UP_THRESHOLD && idx < ORDER.length - 1) return { state: changed(ORDER[idx + 1]), change: 'up' };
+    if (avg <= DOWN_THRESHOLD && idx > 0) return { state: changed(ORDER[idx - 1]), change: 'down' };
+  }
+  return { state: { ...state, puzzleRecent, puzzlesSinceChange }, change: null };
 }

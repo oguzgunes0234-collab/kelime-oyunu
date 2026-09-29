@@ -68,7 +68,7 @@ export function wordCells(w: Pick<CwWord, 'row' | 'col' | 'dir' | 'letters'>): [
 }
 
 /** Okun türüne göre ipucu karesinin konumu. */
-function clueFor(row: number, col: number, arrow: Arrow): [number, number] {
+export function clueFor(row: number, col: number, arrow: Arrow): [number, number] {
   if (arrow === 'right' || arrow === 'right-down') return [row, col - 1];
   return [row - 1, col];
 }

@@ -10,17 +10,17 @@ interface Props {
   setProfile: (p: Profile) => void;
   onBack: () => void;
   onReplayTutorial: () => void;
+  onReplayPuzzleTutorial: () => void;
   onReset: () => void;
 }
 
-const GOALS = [5, 10, 15, 20];
 const THEMES: { id: ThemeSetting; label: string }[] = [
   { id: 'auto', label: 'Cihaza göre' },
   { id: 'light', label: 'Açık' },
   { id: 'dark', label: 'Koyu' },
 ];
 
-export function Settings({ pack, profile, setProfile, onBack, onReplayTutorial, onReset }: Props) {
+export function Settings({ pack, profile, setProfile, onBack, onReplayTutorial, onReplayPuzzleTutorial, onReset }: Props) {
   const [confirm, setConfirm] = useState(false);
   const s = profile.settings;
 
@@ -34,24 +34,9 @@ export function Settings({ pack, profile, setProfile, onBack, onReplayTutorial, 
       </header>
 
       <section className="setting">
-        <h2 id="goal-label">Günlük hedef</h2>
-        <p className="muted small">Günde kaç doğru kelime? Hedefi kaçırmak hiçbir şey eksiltmez.</p>
-        <div className="seg" role="radiogroup" aria-labelledby="goal-label">
-          {GOALS.map((g) => (
-            <button
-              key={g}
-              type="button"
-              role="radio"
-              aria-checked={profile.daily.goal === g}
-              className={profile.daily.goal === g ? 'selected' : ''}
-              onClick={() =>
-                setProfile({ ...profile, settings: { ...s, dailyGoal: g }, daily: { ...profile.daily, goal: g } })
-              }
-            >
-              {g}
-            </button>
-          ))}
-        </div>
+        <h2>Günlük hedef</h2>
+        <p className="small">Günde bir bulmacayı tamamla: tüm kelimelerini çöz (Anlam ve Harf aç serbest).</p>
+        <p className="muted small">Hedefi kaçırmak hiçbir şey eksiltmez; haftada bir kaçırılan gün seriyi bozmaz.</p>
       </section>
 
       <section className="setting">
@@ -74,8 +59,11 @@ export function Settings({ pack, profile, setProfile, onBack, onReplayTutorial, 
 
       <section className="setting">
         <h2>Nasıl oynanır</h2>
-        <button type="button" className="btn btn-secondary" onClick={onReplayTutorial}>
-          Örnek turu yeniden oyna
+        <button type="button" className="btn btn-secondary" onClick={onReplayPuzzleTutorial}>
+          Bulmaca eğitimini yeniden oyna
+        </button>
+        <button type="button" className="btn btn-ghost" onClick={onReplayTutorial}>
+          Hızlı tur örneğini yeniden oyna
         </button>
       </section>
 

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { currentStreak } from '../../core/daily';
+import { DAILY_PUZZLE_GOAL, currentStreak, goalDoneToday } from '../../core/daily';
 import { languageInfo } from '../../core/languages';
 import { displayWord } from '../../core/normalize';
 import { DIFFICULTY_LABEL, POS_LABEL } from '../../core/pack';
@@ -52,9 +52,7 @@ export function PuzzleResult({ puzzle, outcome, profile, onAgain, onHome, onRevi
           <strong>
             <FlameIcon width={20} height={20} /> {streak.streak}
           </strong>
-          <span>
-            günlük seri · {Math.min(profile.daily.todayCorrect, profile.daily.goal)}/{profile.daily.goal}
-          </span>
+          <span>günlük seri · {goalDoneToday(profile.daily, new Date()) ? 'bugün tamam' : `0/${DAILY_PUZZLE_GOAL} bulmaca`}</span>
         </div>
       </div>
 

@@ -1,6 +1,9 @@
 import { buildCrossword, crosswordAnswer, GRID_COLS, GRID_ROWS, wordCells, type Candidate, type Crossword } from './crossword';
 import { directionKey, entriesFor, toQuestion } from './pack';
-import { applyWord, type Profile } from './profile';
+import { average, recordPuzzle, roundQuality } from './adaptive';
+import { recordPuzzleDone } from './daily';
+import { DAILY_GOAL_REWARD } from './economy';
+import { applyWord, grantDailyReward, type Profile } from './profile';
 import type { Rng } from './rng';
 import { scoreWord, type ScoreBreakdown } from './scoring';
 import type { Difficulty, Direction, Question, WordPack } from './types';
@@ -60,8 +63,20 @@ export function puzzleCandidates(pack: WordPack, profile: Profile, direction: Di
   return groups;
 }
 
-export function newPuzzle(pack: WordPack, profile: Profile, direction: Direction, difficulty: Difficulty, rng?: Rng): PuzzleState {
-  const cw = buildCrossword(puzzleCandidates(pack, profile, direction, difficulty), { rng });
+export function newPuzzle(
+  pack: WordPack,
+  profile: Profile,
+  direction: Direction,
+  difficulty: Difficulty,
+  rng?: Rng,
+  size?: { rows: number; cols: number },
+): PuzzleState {
+  const cw = buildCrossword(puzzleCandidates(pack, profile, direction, difficulty), { rng, ...size });
+  return puzzleFromCrossword(cw, direction, difficulty);
+}
+
+/** Hazır bir ızgaradan (ör. elle yazılmış eğitim bulmacası) oyun durumu kurar. */
+export function puzzleFromCrossword(cw: Crossword, direction: Direction, difficulty: Difficulty): PuzzleState {
   const n = cw.words.length;
   const base: PuzzleState = {
     cw,
@@ -326,21 +341,46 @@ export function applyPuzzle(
   };
   let p = profile;
   for (const r of results) {
-    const res = applyWord(p, r, { mode: 'normal', adaptive }, now);
+    // Kelimeler tek tek zorluğu etkilemez; bulmaca aşağıda bir kez değerlendirilir.
+    const res = applyWord(p, r, { mode: 'normal', adaptive: false }, now);
     p = res.profile;
     const o = res.outcome;
     outcome.coinsEarned += o.coinsEarned;
     outcome.scoreTotal += o.score.total;
-    outcome.goalReached ||= o.goalReached;
-    outcome.usedRestDay ||= o.usedRestDay;
-    if (o.levelChange) {
-      outcome.levelChange = o.levelChange;
-      outcome.difficultyAfter = o.difficultyAfter;
-    }
     if (o.addedToReview) outcome.addedToReview++;
     if (o.removedFromReview) outcome.removedFromReview++;
   }
+
+  // Günlük hedef: bulmacanın tüm kelimeleri çözüldüyse (yardımla da olur).
+  if (results.length > 0 && results.every((r) => r.status === 'correct')) {
+    const daily = recordPuzzleDone(p.daily, now);
+    p = { ...p, daily: daily.state };
+    outcome.goalReached = daily.goalReached;
+    outcome.usedRestDay = daily.usedRestDay;
+    if (daily.goalReached) {
+      p = grantDailyReward(p);
+      outcome.coinsEarned += DAILY_GOAL_REWARD.coins;
+    }
+  }
+
+  // Uyarlamalı zorluk: bulmaca başına tek karar, en fazla bir kademe.
+  if (adaptive && results.length > 0) {
+    const res = recordPuzzle(p.adaptive, puzzleQuality(results));
+    p = { ...p, adaptive: res.state };
+    outcome.levelChange = res.change;
+    outcome.difficultyAfter = res.change ? res.state.difficulty : null;
+  }
   return { profile: p, outcome };
+}
+
+/**
+ * Bulmacanın başarısı (0–1): kelimelerin kalitelerinin ortalaması. Kelime
+ * kalitesi hızlı turdakiyle aynı ölçüdür (yardım ve yanlış deneme düşürür,
+ * çözülmeyen kelime 0).
+ */
+export function puzzleQuality(results: Pick<WordResult, 'status' | 'helped' | 'wrongAttempts'>[]): number {
+  if (results.length === 0) return 0;
+  return average(results.map((r) => roundQuality(r.status, r.helped, r.wrongAttempts)));
 }
 
 export interface WordResult {

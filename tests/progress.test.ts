@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { MIN_ROUNDS_BEFORE_CHANGE, initialAdaptive, recordRound, roundQuality } from '../src/core/adaptive';
-import { currentStreak, initialDaily, recordCorrect } from '../src/core/daily';
+import { currentStreak, goalDoneToday, initialDaily, recordCorrect, recordPuzzleDone } from '../src/core/daily';
 import { COINS_PER_CHARGE } from '../src/core/economy';
 import { toQuestion } from '../src/core/pack';
 import { applyRound, buyChargeWithCoins, consumeCharge, defaultProfile } from '../src/core/profile';
@@ -46,32 +46,49 @@ describe('uyarlamalı zorluk', () => {
 });
 
 describe('günlük hedef ve seri', () => {
-  it('hedef tamamlanınca seri başlar ve ardışık günlerde artar', () => {
-    let s = initialDaily(day(1), 2);
-    s = recordCorrect(s, day(1)).state;
-    const r = recordCorrect(s, day(1));
+  it('hedef bir bulmacayı tamamlamaktır; seri ardışık günlerde artar', () => {
+    let s = initialDaily(day(1));
+    const r = recordPuzzleDone(s, day(1));
     expect(r.goalReached).toBe(true);
     expect(r.state.streak).toBe(1);
-    s = recordCorrect(recordCorrect(r.state, day(2)).state, day(2)).state;
+    expect(recordPuzzleDone(r.state, day(1)).goalReached).toBe(false); // aynı gün ikinci kez ödül yok
+    s = recordPuzzleDone(r.state, day(2)).state;
     expect(s.streak).toBe(2);
   });
 
+  it('doğru kelimeler yalnızca sayılır, hedefi tamamlamaz', () => {
+    let s = initialDaily(day(1));
+    for (let i = 0; i < 30; i++) s = recordCorrect(s, day(1));
+    expect(s.todayCorrect).toBe(30);
+    expect(goalDoneToday(s, day(1))).toBe(false);
+    expect(s.streak).toBe(0);
+  });
+
   it('bir gün kaçırılırsa dinlenme günü seriyi korur', () => {
-    let s = initialDaily(day(1), 1);
-    s = recordCorrect(s, day(1)).state;
+    let s = initialDaily(day(1));
+    s = recordPuzzleDone(s, day(1)).state;
     expect(currentStreak(s, day(3))).toEqual({ streak: 1, restDayNeeded: true });
-    const r = recordCorrect(s, day(3));
+    const r = recordPuzzleDone(s, day(3));
     expect(r.usedRestDay).toBe(true);
     expect(r.state.streak).toBe(2);
   });
 
   it('uzun aradan sonra seri sessizce yeniden başlar; en iyi seri korunur', () => {
-    let s = initialDaily(day(1), 1);
-    s = recordCorrect(s, day(1)).state;
-    s = recordCorrect(s, day(2)).state;
-    s = recordCorrect(s, day(10)).state;
+    let s = initialDaily(day(1));
+    s = recordPuzzleDone(s, day(1)).state;
+    s = recordPuzzleDone(s, day(2)).state;
+    s = recordPuzzleDone(s, day(10)).state;
     expect(s.streak).toBe(1);
     expect(s.bestStreak).toBe(2);
+  });
+
+  it('eski kelime hedefiyle bugün tamamlanmış gün, bulmacayla ikinci kez ödül vermez', () => {
+    const old = { ...initialDaily(day(1)), lastGoalDay: '2026-09-01', streak: 3, todayCorrect: 10 };
+    delete (old as Partial<typeof old>).todayPuzzles; // eski kayıtta bu alan yoktu
+    expect(goalDoneToday(old, day(1))).toBe(true);
+    const r = recordPuzzleDone(old, day(1));
+    expect(r.goalReached).toBe(false);
+    expect(r.state.streak).toBe(3);
   });
 });
 
