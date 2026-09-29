@@ -25,7 +25,7 @@ export function ToolInfo({ inventory, onClose }: { inventory: Inventory; onClose
       </ul>
       <div className="note">
         <p>
-          <strong>Temizle</strong> ve <strong>Pas geç</strong> her zaman ücretsizdir. Haklar bitse de oyun sürer.
+          Cevaptaki bir harfe <strong>dokunup geri almak</strong> ve <strong>Pas geç</strong> her zaman ücretsizdir. Haklar bitse de oyun sürer.
         </p>
         <p>
           Hak kazanmak için oyna: doğru cevap +{COINS_PER_CORRECT} jeton, yardımsız ilk denemede +{COINS_CLEAN_BONUS} jeton daha. Günlük

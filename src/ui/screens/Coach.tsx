@@ -40,7 +40,7 @@ export function Coach({ step, question, onNext, onSkip }: Props) {
     },
     finish: {
       title: 'Kelimeyi tamamla',
-      body: 'Kalan harfleri yerleştir. Yanlış yaparsan “Temizle” ücretsizdir; 3 deneme hakkın var.',
+      body: 'Kalan harfleri yerleştir. Yanlış bir harfe dokunursan geri alırsın; 3 deneme hakkın var.',
     },
   };
   const c = content[step];

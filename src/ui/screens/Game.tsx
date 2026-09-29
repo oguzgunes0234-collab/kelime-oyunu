@@ -9,10 +9,13 @@ import {
   answerLetters,
   applyTool,
   canUseTool,
-  clearAnswer,
   correctPrefix,
+  filledCount,
+  nextSlot,
   placeLetter,
   placeTile,
+  placedWord,
+  removeAt,
   skipRound,
   slotCount,
   type RoundEvent,
@@ -64,7 +67,7 @@ function describe(event: RoundEvent | null): Omit<NonNullable<Note>, 'seq'> | nu
     case 'wrong':
       return {
         tone: 'bad',
-        text: `Bu cevap olmadı. ${event.attemptsLeft} deneme hakkın kaldı — Temizle ya da Geri al ile düzelt.`,
+        text: `Bu cevap olmadı. ${event.attemptsLeft} deneme hakkın kaldı — yanlış harfe dokunup geri al.`,
       };
     case 'correct':
       return { tone: 'good', text: 'Doğru!' };
@@ -74,8 +77,8 @@ function describe(event: RoundEvent | null): Omit<NonNullable<Note>, 'seq'> | nu
       return { tone: 'info', text: 'Taşlar karıştırıldı.' };
     case 'undo':
       return { tone: 'info', text: 'Son harf geri alındı.' };
-    case 'clear':
-      return { tone: 'info', text: 'Cevap alanı temizlendi.' };
+    case 'removed':
+      return { tone: 'info', text: `${event.position + 1}. harf geri alındı.` };
     case 'magnet':
       return {
         tone: 'info',
@@ -166,7 +169,7 @@ export function Game(props: Props) {
     if (next.seq !== prev.seq) say(describe(next.event));
     if (tutorial) {
       const step = live.current.coach;
-      if (step === 'tap' && next.placed.length > 0) moveCoach('tools');
+      if (step === 'tap' && filledCount(next) > 0) moveCoach('tools');
       if (step === 'tools' && next.event?.kind === 'magnet') moveCoach('finish');
     }
     if (prev.status === 'playing' && next.status !== 'playing') finish(next, base);
@@ -193,9 +196,10 @@ export function Game(props: Props) {
     commit(res.state, tutorial ? p : consumeCharge(p, tool));
   }
 
-  function onClear() {
+  /** Cevap alanındaki bir harfe dokunmak onu taşlara geri gönderir (ücretsiz, denetim yok). */
+  function onSlot(position: number) {
     const r = live.current.round;
-    if (r) commit(clearAnswer(r));
+    if (r) commit(removeAt(r, position));
   }
 
   function onSkip() {
@@ -230,7 +234,7 @@ export function Game(props: Props) {
     } else setPhase('summary');
   }
 
-  // Klavye: harf yaz, ⌫ geri al (hak harcar), Esc temizle (ücretsiz).
+  // Donanım klavyesi (ör. tablete bağlı): harf yaz, ⌫ geri al (hak harcar).
   const keyHandler = useRef<(e: KeyboardEvent) => void>();
   keyHandler.current = (e: KeyboardEvent) => {
     const r = live.current.round;
@@ -241,10 +245,6 @@ export function Game(props: Props) {
     if (e.key === 'Backspace') {
       e.preventDefault();
       onTool('undo');
-      return;
-    }
-    if (e.key === 'Escape') {
-      onClear();
       return;
     }
     const letter = keyToLetter(e.key, r.question.target);
@@ -377,20 +377,27 @@ export function Game(props: Props) {
           key={shake ? `shake-${round.seq}` : 'slots'}
           className={`slots${shake ? ' shake' : ''}${round.status === 'correct' ? ' is-correct' : ''}`}
           role="group"
-          aria-label={`Cevap alanı, ${slots} harf. Şu ana kadar: ${round.placed.length ? displayWord(round.placed.map((id) => round.tiles[id].letter).join(''), q.target) : 'boş'}`}
+          aria-label={`Cevap alanı, ${slots} harf. Şu ana kadar: ${filledCount(round) ? displayWord(placedWord(round), q.target) : 'boş'}. Bir harfi geri almak için ona dokun.`}
           lang={q.target}
           style={{ ['--slots' as string]: slots }}
         >
           {letters.map((_, i) => {
             const id = round.placed[i];
-            const filled = id !== undefined;
+            const cls = `slot${id !== null ? ' filled' : ''}${i === nextSlot(round) && round.status === 'playing' ? ' next' : ''}`;
+            if (id === null) return <span key={i} className={cls} />;
+            const letter = displayLetter(round.tiles[id].letter, q.target);
+            // Dolu kutuya dokunmak harfi taşlara geri gönderir; denetim yapılmaz.
             return (
-              <span
+              <button
                 key={i}
-                className={`slot${filled ? ' filled' : ''}${i === round.placed.length && round.status === 'playing' ? ' next' : ''}`}
+                type="button"
+                className={cls}
+                onClick={() => onSlot(i)}
+                disabled={round.status !== 'playing'}
+                aria-label={`${i + 1}. harf ${letter}. Geri almak için dokun.`}
               >
-                {filled ? displayLetter(round.tiles[id].letter, q.target) : ''}
-              </span>
+                {letter}
+              </button>
             );
           })}
         </div>
@@ -435,9 +442,7 @@ export function Game(props: Props) {
         </div>
 
         <div className="round-actions">
-          <button type="button" className="btn btn-ghost" onClick={onClear} disabled={round.status !== 'playing' || round.placed.length === 0}>
-            Temizle <small>ücretsiz</small>
-          </button>
+          {filledCount(round) > 0 && round.status === 'playing' && <p className="slot-help">Harfe dokun, geri alırsın.</p>}
           <button type="button" className="btn btn-ghost" onClick={onSkip} disabled={round.status !== 'playing'}>
             Pas geç
           </button>
