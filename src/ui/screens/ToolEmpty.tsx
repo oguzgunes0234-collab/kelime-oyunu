@@ -9,19 +9,23 @@ interface Props {
   setProfile: (p: Profile) => void;
   onClose: () => void;
   onOpenStore: () => void;
+  /** Bulmacada aracın adı farklıdır (ör. Mıknatıs hakkı → "Harf aç"). */
+  name?: string;
+  /** Hangi eylemlerin her zaman ücretsiz olduğunu anlatan cümle. */
+  freeNote?: string;
 }
 
 /**
  * Hak bitince açılan bilgi penceresi. Oyunu durdurmaz, ödeme ekranına
  * yönlendirmez; paketler yalnızca oyuncu açıkça isterse görünür.
  */
-export function ToolEmpty({ tool, profile, setProfile, onClose, onOpenStore }: Props) {
-  const info = TOOL_INFO[tool];
+export function ToolEmpty({ tool, profile, setProfile, onClose, onOpenStore, name, freeNote }: Props) {
+  const info = { ...TOOL_INFO[tool], name: name ?? TOOL_INFO[tool].name };
   const canBuy = profile.coins >= COINS_PER_CHARGE;
 
   return (
     <Sheet title={`${info.name} hakkın kalmadı`} onClose={onClose}>
-      <p>Oyuna araçsız devam edebilirsin; hiçbir tur buna bağlı değil. Temizle ve Pas geç her zaman ücretsiz.</p>
+      <p>Oyuna araçsız devam edebilirsin; hiçbir tur buna bağlı değil. {freeNote ?? 'Temizle ve Pas geç her zaman ücretsiz.'}</p>
       <div className="note">
         <p>
           <strong>Oynayarak kazan:</strong> doğru cevap +{COINS_PER_CORRECT} jeton, yardımsız ilk denemede +{COINS_CLEAN_BONUS}. Günlük

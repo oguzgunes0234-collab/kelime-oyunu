@@ -442,7 +442,6 @@ export function Game(props: Props) {
             Pas geç
           </button>
         </div>
-        <p className="kbd-help">Klavye: harfleri yaz · ⌫ Geri al (1 hak) · Esc Temizle</p>
       </main>
 
       <ToolBar

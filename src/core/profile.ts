@@ -4,7 +4,7 @@ import { COINS_CLEAN_BONUS, COINS_PER_CHARGE, COINS_PER_CORRECT, DAILY_GOAL_REWA
 import { directionKey } from './pack';
 import { wasHelped, type RoundState } from './round';
 import { scoreRound, type ScoreBreakdown } from './scoring';
-import type { Difficulty, DifficultyMode, Direction, Inventory, ToolId } from './types';
+import type { Difficulty, DifficultyMode, Direction, Inventory, Question, ToolId } from './types';
 
 /** Oyuncunun tarayıcıda saklanan tüm verisi. Hesap yok; yalnızca bu cihaz. */
 
@@ -32,6 +32,8 @@ export interface Profile {
   version: 1;
   settings: Settings;
   tutorialDone: boolean;
+  /** Bulmacanın "nasıl oynanır" kartı gösterildi mi. */
+  puzzleIntroDone: boolean;
   inventory: Inventory;
   coins: number;
   totalScore: number;
@@ -48,6 +50,7 @@ export function defaultProfile(now: Date): Profile {
     version: 1,
     settings: { direction: { source: 'tr', target: 'en' }, difficultyMode: 'adaptive', dailyGoal: 10, theme: 'auto' },
     tutorialDone: false,
+    puzzleIntroDone: false,
     inventory: { ...INITIAL_INVENTORY },
     coins: 0,
     totalScore: 0,
@@ -78,6 +81,15 @@ function reviewIndex(profile: Profile, dir: string, entryId: string): number {
   return profile.review.findIndex((r) => r.dir === dir && r.entryId === entryId);
 }
 
+/** Bir kelimenin sonucu: harf taşı turundan ya da bulmacadaki bir kelimeden. */
+export interface WordOutcomeInput {
+  question: Question;
+  status: RoundState['status'];
+  helped: boolean;
+  wrongAttempts: number;
+  score: ScoreBreakdown;
+}
+
 /**
  * Biten bir turun sonucunu profile işler. Saf işlevdir: yeni profil ve
  * arayüzün göstereceği özet döner. Eğitim turu profili değiştirmez.
@@ -88,10 +100,24 @@ export function applyRound(
   ctx: { mode: SessionMode; adaptive: boolean },
   now: Date,
 ): { profile: Profile; outcome: RoundOutcome } {
-  const helped = wasHelped(round);
-  const score = scoreRound(round);
+  return applyWord(
+    profile,
+    { question: round.question, status: round.status, helped: wasHelped(round), wrongAttempts: round.wrongAttempts, score: scoreRound(round) },
+    ctx,
+    now,
+  );
+}
+
+/** Tek bir kelimenin sonucunu profile işler (jeton, günlük hedef, tekrar listesi, uyarlamalı zorluk). */
+export function applyWord(
+  profile: Profile,
+  word: WordOutcomeInput,
+  ctx: { mode: SessionMode; adaptive: boolean },
+  now: Date,
+): { profile: Profile; outcome: RoundOutcome } {
+  const { helped, score } = word;
   const outcome: RoundOutcome = {
-    status: round.status,
+    status: word.status,
     score,
     coinsEarned: 0,
     helped,
@@ -102,13 +128,13 @@ export function applyRound(
     levelChange: null,
     difficultyAfter: null,
   };
-  if (ctx.mode === 'tutorial' || round.status === 'playing') return { profile, outcome };
+  if (ctx.mode === 'tutorial' || word.status === 'playing') return { profile, outcome };
 
-  const dir = directionKey({ source: round.question.source, target: round.question.target });
-  const id = round.question.entryId;
+  const dir = directionKey({ source: word.question.source, target: word.question.target });
+  const id = word.question.entryId;
   let p: Profile = { ...profile, daily: rollDay(profile.daily, now) };
-  const correct = round.status === 'correct';
-  const clean = correct && !helped && round.wrongAttempts === 0;
+  const correct = word.status === 'correct';
+  const clean = correct && !helped && word.wrongAttempts === 0;
 
   p.stats = { rounds: p.stats.rounds + 1, correct: p.stats.correct + (correct ? 1 : 0) };
   p.totalScore += score.total;
@@ -132,7 +158,7 @@ export function applyRound(
 
   // Tekrar listesi
   const idx = reviewIndex(p, dir, id);
-  const reason: ReviewReason | null = round.status === 'failed' ? 'wrong' : round.status === 'skipped' ? 'skipped' : helped ? 'helped' : null;
+  const reason: ReviewReason | null = word.status === 'failed' ? 'wrong' : word.status === 'skipped' ? 'skipped' : helped ? 'helped' : null;
   if (reason) {
     const review = p.review.slice();
     if (idx >= 0) {
@@ -149,7 +175,7 @@ export function applyRound(
   }
 
   if (ctx.adaptive && ctx.mode === 'normal') {
-    const res = recordRound(p.adaptive, roundQuality(correct ? 'correct' : round.status === 'failed' ? 'failed' : 'skipped', helped, round.wrongAttempts));
+    const res = recordRound(p.adaptive, roundQuality(correct ? 'correct' : word.status === 'failed' ? 'failed' : 'skipped', helped, word.wrongAttempts));
     p.adaptive = res.state;
     outcome.levelChange = res.change;
     outcome.difficultyAfter = res.state.difficulty;

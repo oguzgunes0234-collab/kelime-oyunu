@@ -126,3 +126,51 @@ export const CheckIcon = (p: P) => (
 );
 
 export const CrossIcon = CloseIcon;
+
+export const BackspaceIcon = (p: P) => (
+  <svg {...base(p)}>
+    <path d="M9 5h11v14H9l-6-7 6-7Z" />
+    <path d="m12.5 9.5 5 5M17.5 9.5l-5 5" />
+  </svg>
+);
+
+export const GridIcon = (p: P) => (
+  <svg {...base(p)}>
+    <rect x="3.5" y="3.5" width="17" height="17" rx="2" />
+    <path d="M3.5 9.5h17M3.5 15h17M9.5 3.5v17M15 3.5v17" />
+  </svg>
+);
+
+export const LettersIcon = (p: P) => (
+  <svg {...base(p)}>
+    <rect x="3" y="7" width="8" height="10" rx="2" />
+    <rect x="13" y="7" width="8" height="10" rx="2" />
+    <path d="M5.5 14.5 7 9.5l1.5 5M6 13h2M15.5 9.5h1.8a1.3 1.3 0 0 1 0 2.5h-1.8Zm0 2.5h2a1.3 1.3 0 0 1 0 2.5h-2Z" />
+  </svg>
+);
+
+export const ChevronLeftIcon = BackIcon;
+
+export const ChevronRightIcon = (p: P) => (
+  <svg {...base(p)}>
+    <path d="m9 5 7 7-7 7" />
+  </svg>
+);
+
+/**
+ * Çengel bulmaca okları: cevabın ipucu karesine göre nereden başlayıp hangi
+ * yöne gittiğini gösterir. Dolgulu, küçük ve kalın; minik karede okunur.
+ */
+export function ClueArrow({ arrow, ...p }: P & { arrow: 'right' | 'down' | 'down-right' | 'right-down' }) {
+  const d = {
+    right: 'M2 8h9M8 4.5 11.5 8 8 11.5',
+    down: 'M8 2v9M4.5 8 8 11.5 11.5 8',
+    'down-right': 'M4 2v6.5h7.5M8.5 5 12 8.5 8.5 12',
+    'right-down': 'M2 4h6.5v7.5M5 8.5 8.5 12 12 8.5',
+  }[arrow];
+  return (
+    <svg width={12} height={12} viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth={2.4} strokeLinecap="round" strokeLinejoin="round" aria-hidden focusable={false} {...p}>
+      <path d={d} />
+    </svg>
+  );
+}

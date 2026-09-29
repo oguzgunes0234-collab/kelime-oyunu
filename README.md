@@ -1,17 +1,47 @@
 # Kelime Köprüsü
 
-Türkçe ↔ İngilizce kelime öğrenmek için mobil öncelikli bir harf taşı bulmacası.
-Oyuncuya bir kelime gösterilir; karşılığını karışık harf taşlarına dokunarak kurar.
-Her turdan sonra anlam, kelime türü, örnek cümle ve yaklaşık seviye gösterilir.
+Türkçe ↔ İngilizce kelime öğreten, **yalnızca telefon için** tasarlanmış bir
+çengel bulmaca oyunu.
 
-Bu klasör depodaki hisse takip uygulamasından **tamamen bağımsızdır**: kendi
-`package.json`'ı vardır, `frontend/` ya da `backend/` ile kod paylaşmaz. Kök
-`.dockerignore` yalnızca `backend/`'i imaja aldığından Fly.io dağıtımına da girmez.
+- **Ana oyun — çengel bulmaca:** Izgaranın içindeki pembe kutular ipucudur
+  (kaynak dilde bir kelime); oku, cevabın hangi kareden başlayıp hangi yöne
+  yazılacağını gösterir. Cevaplar hedef dildedir ve birbirini keser.
+- **İkinci mod — hızlı kelime turu:** 10 kelime; karşılığı karışık harf
+  taşlarına dokunarak kurulur.
+
+Her iki modda da jeton, günlük hedef, seri, tekrar listesi ve uyarlamalı
+zorluk ortaktır. Her kelimeden sonra (bulmacada bulmaca sonunda) anlam, tür,
+örnek cümle ve yaklaşık seviye gösterilir.
+
+## Çengel bulmaca
+
+- **Üretici (`core/crossword.ts`):** Kelime paketinden 9 satır × 8 sütunluk
+  ızgaraya birbirini kesen ~9–12 kelime yerleştirir (ölçülen ortalama ~11).
+  Her bulmaca yenidir; üretim ~15 ms sürer. Kural: yatay ya da dikey, iki ve
+  daha uzun her harf dizisi tam olarak bir cevaptır. Oklar: sağa, aşağı,
+  alttan sağa (↳), yandan aşağı (↴). Karede tek ipucu olur; iki ipucu telefonda
+  okunmayacak kadar küçülüyordu.
+- **Kelime seçimi:** önce tekrar listesindekiler, sonra henüz bilinmeyenler,
+  sonra bilinenler; ızgarayı doldurmak için en son seviye dışı kelimeler.
+- **Oynanış (`core/puzzle.ts`, saf işlevler):** kareye ya da ipucuna dokun,
+  ekran klavyesiyle yaz (Türkçe yönünde Türkçe Q düzeni). Kelime dolunca
+  denetlenir: doğruysa yeşile döner ve kilitlenir, yanlışsa sarsılır (hata
+  sayılır, hiçbir şey eksilmez). Kesişen kareye tekrar dokunmak yön değiştirir.
+- **Araçlar:** *Anlam* (İpucu hakkı, −2 puan) seçili kelimenin anlamını
+  gösterir; *Harf aç* (Mıknatıs hakkı, −4 puan) seçili kareyi açar. Harf aç ile
+  tamamlanan kelime hata sayılmaz ama yardımlı sayılır.
+- **Bitiş:** tüm kelimeler çözülünce ya da oyuncu "Bitir" deyince; çözülmeyen
+  ve yardımla çözülen kelimeler tekrar listesine eklenir.
+- **Yarım bulmaca** `localStorage`'da (`kelime-oyunu:bulmaca:v1`) saklanır;
+  sayfa kapansa da kaldığı yerden devam eder.
+- **Telefon düzeni:** ekran tam telefon yüksekliğindedir; ızgara kalan boşluğa
+  göre (container query) ölçeklenir, böylece 320×568'den büyük her ekranda
+  ipucu çubuğu, ızgara, araçlar ve klavye birlikte görünür. Android'de doğru,
+  yanlış ve bitişte kısa titreşim olur (iPhone Safari desteklemez).
 
 ## Çalıştırma
 
 ```bash
-cd kelime-oyunu
 npm install
 npm run dev        # http://localhost:5174 (telefondan aynı ağdaki IP ile de açılır)
 npm test           # oyun mantığı birim testleri (Vitest)
@@ -69,7 +99,9 @@ kelime-oyunu/
 │   │   ├── normalize.ts   cevap normalleştirme ve karşılaştırma
 │   │   ├── pack.ts        paket doğrulama, soru üretimi, zorluk ↔ CEFR
 │   │   ├── tiles.ts       harf taşları ve şaşırtmaca harfler
-│   │   ├── round.ts       tek turun durumu ve araçlar (saf reducer)
+│   │   ├── crossword.ts   çengel bulmaca üretici ve kural denetimi
+│   │   ├── puzzle.ts      bulmacanın durumu, yazma/silme/araçlar, sonuçların profile işlenmesi
+│   │   ├── round.ts       hızlı turun durumu ve araçlar (saf reducer)
 │   │   ├── scoring.ts     puanlama
 │   │   ├── economy.ts     haklar, jetonlar, bedeller (tüm denge sayıları)
 │   │   ├── adaptive.ts    uyarlamalı zorluk

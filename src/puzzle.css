@@ -1,0 +1,579 @@
+/* Çengel bulmaca: ipucu kareleri kitaptaki gibi pembe, oklar kırmızı.
+   Kare boyutu ekranın hem genişliğine hem yüksekliğine göre ayarlanır:
+   küçük telefonda da ızgara ve klavye aynı anda sığar. */
+
+:root {
+  --clue-bg: #fbdde2;
+  --clue-ink: #5b1a28;
+  --clue-arrow: #c0263a;
+  --cell-line: #d9bfa0;
+  --word-bg: #fff1c9;
+  --cursor-bg: #ffd27a;
+  --cw-cell-bg: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --clue-bg: #4a2a36;
+    --clue-ink: #ffd9e0;
+    --clue-arrow: #ff8fa6;
+    --cell-line: #5b5068;
+    --word-bg: #4a4128;
+    --cursor-bg: #7a5a1c;
+    --cw-cell-bg: #3b3448;
+  }
+}
+:root[data-theme='dark'] {
+  --clue-bg: #4a2a36;
+  --clue-ink: #ffd9e0;
+  --clue-arrow: #ff8fa6;
+  --cell-line: #5b5068;
+  --word-bg: #4a4128;
+  --cursor-bg: #7a5a1c;
+  --cw-cell-bg: #3b3448;
+}
+
+/* ---------- Ana sayfa düğmeleri ---------- */
+
+.play-puzzle svg,
+.play-quick svg {
+  flex: none;
+}
+.play-quick {
+  flex-wrap: wrap;
+}
+.play-quick small {
+  width: 100%;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* ---------- Bulmaca ekranı ---------- */
+
+/* Ekran tam telefon yüksekliğinde; ızgara kalan boşluğa göre ölçeklenir.
+   Böylece her telefon boyunda ipucu, ızgara, araçlar ve klavye birlikte görünür. */
+.cw-page {
+  height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.cw-page > * {
+  flex: none;
+}
+.cw-board {
+  flex: 1 1 auto;
+  min-height: 0;
+  position: relative;
+  container-type: size;
+  display: grid;
+  place-items: center;
+  margin: 0 12px;
+}
+.icon-btn.small {
+  width: 36px;
+  height: 36px;
+}
+
+.cw-cluebar {
+  margin: 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 4px;
+  min-height: 60px;
+  border-radius: 14px;
+  background: var(--clue-bg);
+  color: var(--clue-ink);
+  box-shadow: var(--shadow);
+}
+.cw-cluebar.is-solved {
+  background: var(--good-bg);
+  color: var(--text);
+}
+.cw-nav {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: inherit;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.cw-clue-main {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+}
+.cw-clue-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+.cw-clue-line strong {
+  font-weight: 900;
+}
+.cw-cluebar .cw-arrow {
+  color: var(--clue-arrow);
+}
+.cw-len {
+  font-size: 0.8rem;
+  font-weight: 700;
+  opacity: 0.75;
+}
+.cw-clue-sub {
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0.85;
+}
+.cw-clue-sub.good {
+  color: var(--good);
+  opacity: 1;
+}
+.cw-clue-hint {
+  margin-top: 4px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: var(--t-hint-bg);
+  color: var(--text);
+  font-size: 0.88rem;
+  text-align: left;
+  animation: fade-in 200ms ease;
+}
+
+.cw-grid {
+  --cell: min(
+    calc((100cqw - (var(--cols) - 1) * 2px) / var(--cols)),
+    calc((100cqh - (var(--rows) - 1) * 2px) / var(--rows)),
+    54px
+  );
+  display: grid;
+  grid-template-columns: repeat(var(--cols), var(--cell));
+  grid-auto-rows: var(--cell);
+  gap: 2px;
+  justify-content: center;
+}
+
+/* Geri bildirim ızgaranın üstünde kısa bir bildirim: yer kaplamaz. */
+.cw-toast {
+  position: absolute;
+  left: 50%;
+  top: 4px;
+  transform: translateX(-50%);
+  max-width: 100%;
+  z-index: 2;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: var(--shadow);
+  pointer-events: none;
+  animation: cw-toast 1.6s ease forwards;
+}
+.cw-toast.note-good {
+  background: var(--good-bg);
+  color: var(--good);
+}
+.cw-toast.note-bad {
+  background: var(--bad-bg);
+  color: var(--bad);
+}
+.cw-toast.note-info {
+  background: var(--surface);
+  color: var(--text);
+}
+@keyframes cw-toast {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -6px);
+  }
+  8%,
+  80% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* Boş kareler neredeyse görünmez: bulmacanın şekli bir bakışta anlaşılsın. */
+.cw-void {
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--line) 18%, transparent);
+}
+
+/* Telefonda uzun basınca metin seçimi ve iOS menüsü açılmasın. */
+.cw-page {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+/* Harf kareleri */
+.cw-cell {
+  padding: 0;
+  border: 1.5px solid var(--cell-line);
+  border-radius: 5px;
+  background: var(--cw-cell-bg);
+  color: var(--text);
+  font-size: calc(var(--cell) * 0.56);
+  font-weight: 900;
+  line-height: 1;
+  cursor: pointer;
+  touch-action: manipulation;
+  display: grid;
+  place-items: center;
+}
+.cw-cell.in-word {
+  background: var(--word-bg);
+  border-color: var(--accent);
+}
+.cw-cell.cursor {
+  background: var(--cursor-bg);
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 2px var(--primary);
+}
+.cw-cell.solved {
+  color: var(--good);
+  background: var(--good-bg);
+  border-color: color-mix(in srgb, var(--good) 45%, transparent);
+}
+.cw-cell.solved.cursor,
+.cw-cell.solved.in-word {
+  box-shadow: inset 0 0 0 2px var(--good);
+}
+.cw-cell.revealed {
+  text-decoration: underline;
+  text-decoration-color: var(--t-hint);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+.cw-cell.flash-wrong {
+  animation: cw-wrong 600ms ease;
+}
+.cw-cell.flash-solved {
+  animation: bounce 380ms ease-out both;
+}
+.cw-cell.missed {
+  color: var(--bad);
+  background: var(--bad-bg);
+  border-color: color-mix(in srgb, var(--bad) 40%, transparent);
+}
+
+/* İpucu kareleri */
+.cw-clue {
+  padding: 1px;
+  border: none;
+  border-radius: 5px;
+  background: var(--clue-bg);
+  color: var(--clue-ink);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  touch-action: manipulation;
+}
+.cw-clue-part {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 0 1px;
+}
+.cw-clue.two .cw-clue-part + .cw-clue-part {
+  border-top: 1px solid color-mix(in srgb, var(--clue-ink) 25%, transparent);
+}
+.cw-clue-text {
+  font-size: max(8.5px, calc(var(--cell) * 0.235));
+  font-weight: 800;
+  line-height: 1.05;
+  text-align: center;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.cw-clue.two .cw-clue-text {
+  -webkit-line-clamp: 2;
+  font-size: max(6.5px, calc(var(--cell) * 0.17));
+}
+.cw-clue .cw-arrow {
+  color: var(--clue-arrow);
+  width: calc(var(--cell) * 0.24);
+  height: calc(var(--cell) * 0.24);
+  flex: none;
+}
+.cw-clue.two .cw-arrow {
+  width: calc(var(--cell) * 0.19);
+  height: calc(var(--cell) * 0.19);
+}
+.cw-clue-part.selected {
+  background: var(--primary);
+  color: var(--primary-ink);
+}
+.cw-clue-part.selected .cw-arrow {
+  color: var(--primary-ink);
+}
+.cw-clue-part.done {
+  opacity: 0.55;
+}
+.cw-grid.is-done .cw-clue-part.done {
+  opacity: 1;
+}
+
+/* Araçlar */
+.cw-tools {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 12px;
+}
+.cw-tool {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px 4px 4px;
+  min-height: 44px;
+  border-radius: 999px;
+  border: 2px solid var(--line);
+  background: var(--surface);
+  font-weight: 800;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.cw-tool .tool-circle.small {
+  width: 34px;
+  height: 34px;
+}
+.cw-tool {
+  white-space: nowrap;
+}
+.cw-tool-count {
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--text);
+  color: var(--bg);
+  font-size: 0.78rem;
+  display: grid;
+  place-items: center;
+}
+.cw-tool.is-empty .tool-circle {
+  filter: grayscale(0.85);
+  opacity: 0.7;
+}
+.cw-tool.is-empty .cw-tool-count {
+  background: var(--muted);
+}
+.cw-finish {
+  margin-left: auto;
+}
+
+/* ---------- Ekran klavyesi ---------- */
+
+.kb {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px 4px max(8px, env(safe-area-inset-bottom));
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid var(--line);
+}
+.kb-row {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+.kb-key {
+  flex: 0 0 calc((100% - (var(--kb-cols) - 1) * 4px) / var(--kb-cols));
+  height: 46px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 2px 0 var(--line);
+  font-size: 1.15rem;
+  font-weight: 800;
+  cursor: pointer;
+  touch-action: manipulation;
+  display: grid;
+  place-items: center;
+}
+.kb-key:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: none;
+  background: var(--surface-2);
+}
+.kb-key:disabled {
+  opacity: 0.5;
+}
+.kb-wide {
+  flex-basis: calc(1.6 * (100% - (var(--kb-cols) - 1) * 4px) / var(--kb-cols));
+  background: var(--surface-2);
+}
+
+@media (max-height: 700px) {
+  .kb-key {
+    height: 40px;
+  }
+  .cw-cluebar {
+    min-height: 50px;
+    padding: 4px;
+  }
+  .cw-clue-line {
+    font-size: 1.05rem;
+  }
+  .cw-page .game-top {
+    padding-top: max(8px, env(safe-area-inset-top));
+    padding-bottom: 2px;
+  }
+  .cw-tool {
+    min-height: 40px;
+  }
+  .cw-tool .tool-circle.small {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Çok küçük telefonlar (ör. 320×568): klavye ve araçlar sıkışır, ızgaraya yer kalır. */
+@media (max-height: 600px) {
+  .kb {
+    gap: 5px;
+    padding-top: 5px;
+  }
+  .kb-key {
+    height: 36px;
+    font-size: 1.05rem;
+  }
+  .cw-cluebar {
+    min-height: 44px;
+  }
+  .cw-page {
+    gap: 4px;
+  }
+}
+@media (max-width: 359px) {
+  .cw-tools {
+    gap: 6px;
+    padding: 0 8px;
+  }
+  .cw-tool {
+    font-size: 0.8rem;
+    padding-right: 8px;
+    gap: 4px;
+  }
+  .cw-tool .tool-circle.small {
+    width: 28px;
+    height: 28px;
+  }
+  .cw-board {
+    margin: 0 6px;
+  }
+  .cw-clue-text {
+    font-size: 7.5px;
+  }
+}
+
+/* ---------- Tanıtım ve sonuç ---------- */
+
+.cw-intro {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cw-intro-arrows {
+  list-style: none;
+  margin-left: -20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.cw-intro-arrows span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: var(--clue-bg);
+  color: var(--clue-ink);
+}
+.cw-intro-arrows svg {
+  color: var(--clue-arrow);
+}
+
+.cw-results {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cw-results li {
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.cw-results summary {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  list-style: none;
+}
+.cw-results summary::-webkit-details-marker {
+  display: none;
+}
+.cw-result-body {
+  padding: 0 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cw-result-body .q-meta {
+  justify-content: flex-start;
+}
+
+@keyframes cw-wrong {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-4px);
+    background: var(--bad-bg);
+    border-color: var(--bad);
+  }
+  50% {
+    transform: translateX(3px);
+    background: var(--bad-bg);
+    border-color: var(--bad);
+  }
+  80% {
+    transform: translateX(-2px);
+  }
+}

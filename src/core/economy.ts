@@ -27,6 +27,25 @@ export const DAILY_GOAL_REWARD: { coins: number; tools: Inventory } = {
 
 export const TOOL_ORDER: ToolId[] = ['shuffle', 'magnet', 'hint', 'undo'];
 
+/**
+ * Bulmacadaki iki araç, harf taşı oyunuyla aynı hakları kullanır:
+ * Harf aç → Mıknatıs hakkı, Anlam → İpucu hakkı. Ayrı bir ekonomi yok.
+ */
+export type PuzzleToolId = Extract<ToolId, 'magnet' | 'hint'>;
+export const PUZZLE_TOOL_ORDER: PuzzleToolId[] = ['hint', 'magnet'];
+export const PUZZLE_TOOL_INFO: Record<PuzzleToolId, { name: string; does: string; cost: string }> = {
+  hint: {
+    name: 'Anlam',
+    does: 'Seçili kelimenin anlam ipucunu gösterir (kelime başına bir kez).',
+    cost: `1 İpucu hakkı · −${MEANING_HINT_COST} puan`,
+  },
+  magnet: {
+    name: 'Harf aç',
+    does: 'Seçili kareye doğru harfi yazar; kare doğruysa kelimedeki ilk boş ya da yanlış kareyi açar.',
+    cost: `1 Mıknatıs hakkı · −${TOOL_POINT_COST.magnet} puan`,
+  },
+};
+
 export const TOOL_INFO: Record<ToolId, { name: string; does: string; cost: string }> = {
   shuffle: {
     name: 'Karıştır',

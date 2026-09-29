@@ -5,12 +5,17 @@ import { DIFFICULTY_CEFR_LABEL, DIFFICULTY_LABEL } from '../../core/pack';
 import type { Profile } from '../../core/profile';
 import { remainingFresh } from '../../core/select';
 import type { DifficultyMode, WordPack } from '../../core/types';
-import { BagIcon, BookIcon, CoinIcon, FlameIcon, GearIcon, QuestionIcon, SwapIcon, TOOL_ICONS } from '../components/Icons';
+import { BagIcon, BookIcon, CoinIcon, FlameIcon, GearIcon, GridIcon, LettersIcon, QuestionIcon, SwapIcon, TOOL_ICONS } from '../components/Icons';
 
 interface Props {
   pack: WordPack;
   profile: Profile;
   setProfile: (p: Profile) => void;
+  /** Ana oyun: çengel bulmaca. */
+  onPuzzle: () => void;
+  /** Bu yön için yarım kalmış bir bulmaca var mı. */
+  puzzleSaved: boolean;
+  /** İkinci mod: harf taşlarıyla 10 kelimelik hızlı tur. */
   onPlay: () => void;
   onReview: () => void;
   onSettings: () => void;
@@ -20,7 +25,7 @@ interface Props {
 
 const MODES: DifficultyMode[] = ['easy', 'medium', 'hard', 'adaptive'];
 
-export function Home({ pack, profile, setProfile, onPlay, onReview, onSettings, onStore, onHowTo }: Props) {
+export function Home({ pack, profile, setProfile, onPuzzle, puzzleSaved, onPlay, onReview, onSettings, onStore, onHowTo }: Props) {
   const { direction, difficultyMode } = profile.settings;
   const src = languageInfo(direction.source);
   const tgt = languageInfo(direction.target);
@@ -133,12 +138,20 @@ export function Home({ pack, profile, setProfile, onPlay, onReview, onSettings, 
           ))}
         </div>
 
-        <button type="button" className="btn btn-primary btn-block btn-big" onClick={onPlay}>
-          Oyna
+        <button type="button" className="btn btn-primary btn-block btn-big play-puzzle" onClick={onPuzzle}>
+          <GridIcon width={26} height={26} />
+          {puzzleSaved ? 'Bulmacaya devam et' : 'Bulmaca çöz'}
         </button>
         <p className="muted center small">
-          10 kelimelik tur · bu havuzda henüz bilmediğin {fresh} kelime var
+          {puzzleSaved
+            ? 'Yarım kalan bulmacan kaldığı yerde bekliyor.'
+            : `${src.name} ipuçlu, ${tgt.name} cevaplı çengel bulmaca · henüz bilmediğin ${fresh} kelime var`}
         </p>
+        <button type="button" className="btn btn-secondary btn-block play-quick" onClick={onPlay}>
+          <LettersIcon width={22} height={22} />
+          Hızlı kelime turu
+          <small>10 kelime, harf taşlarıyla</small>
+        </button>
       </section>
 
       <nav className="home-grid" aria-label="Diğer bölümler">
@@ -164,7 +177,7 @@ export function Home({ pack, profile, setProfile, onPlay, onReview, onSettings, 
         </button>
         <button type="button" className="tile-link" onClick={onHowTo}>
           <QuestionIcon />
-          <span>Nasıl oynanır</span>
+          <span>Hızlı tur eğitimi</span>
         </button>
       </nav>
 

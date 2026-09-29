@@ -1,0 +1,508 @@
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { wordCells } from '../../core/crossword';
+import { PUZZLE_TOOL_INFO, PUZZLE_TOOL_ORDER, type PuzzleToolId } from '../../core/economy';
+import { languageInfo } from '../../core/languages';
+import { displayLetter, displayWord, keyToLetter } from '../../core/normalize';
+import { DIFFICULTY_LABEL } from '../../core/pack';
+import { consumeCharge, type Profile } from '../../core/profile';
+import {
+  applyPuzzle,
+  backspace,
+  cellKey,
+  finishPuzzle,
+  isLocked,
+  newPuzzle,
+  revealLetter,
+  selectWord,
+  selectedCell,
+  showMeaning,
+  solvedCount,
+  tapCell,
+  tapClue,
+  typeLetter,
+  type PuzzleOutcome,
+  type PuzzleState,
+} from '../../core/puzzle';
+import { loadPuzzle, savePuzzle } from '../../core/storage';
+import type { Difficulty, Direction, WordPack } from '../../core/types';
+import { ChevronLeftIcon, ChevronRightIcon, ClueArrow, CloseIcon, CoinIcon, QuestionIcon, TOOL_ICONS } from '../components/Icons';
+import { Keyboard } from '../components/Keyboard';
+import { Sheet } from '../components/Sheet';
+import { PuzzleResult } from './PuzzleResult';
+import { ToolEmpty } from './ToolEmpty';
+
+interface Props {
+  pack: WordPack;
+  profile: Profile;
+  setProfile: (p: Profile) => void;
+  direction: Direction;
+  difficulty: Difficulty;
+  adaptive: boolean;
+  /** Üstte başka bir katman (mağaza) açıkken klavye girdisi yok sayılır. */
+  paused?: boolean;
+  onExit: () => void;
+  onNewPuzzle: () => void;
+  onOpenStore: () => void;
+  onOpenReview: () => void;
+}
+
+type Dialog = { kind: 'toolEmpty'; tool: PuzzleToolId } | { kind: 'quit' } | { kind: 'intro' } | null;
+type Note = { text: string; tone: 'good' | 'bad' | 'info'; seq: number } | null;
+
+const reducedMotion = () => typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/** Kısa titreşim (Android). iPhone Safari desteklemez; orada sessizce hiçbir şey olmaz. */
+function buzz(pattern: number | number[]) {
+  try {
+    if (!reducedMotion()) navigator.vibrate?.(pattern);
+  } catch {
+    /* desteklenmiyor */
+  }
+}
+
+/** Kayıtlı yarım bulmaca bu yön için varsa onu, yoksa yenisini açar. */
+function initialPuzzle(props: Props): PuzzleState {
+  const saved = loadPuzzle();
+  if (saved && saved.direction.source === props.direction.source && saved.direction.target === props.direction.target) return saved;
+  return newPuzzle(props.pack, props.profile, props.direction, props.difficulty);
+}
+
+export function hasSavedPuzzle(direction: Direction): boolean {
+  const s = loadPuzzle();
+  return !!s && s.direction.source === direction.source && s.direction.target === direction.target;
+}
+
+export function Puzzle(props: Props) {
+  const { pack, profile, setProfile } = props;
+  const [puzzle, setPuzzle] = useState<PuzzleState>(() => initialPuzzle(props));
+  const [outcome, setOutcome] = useState<PuzzleOutcome | null>(null);
+  const [showResult, setShowResult] = useState(false);
+  const [dialog, setDialog] = useState<Dialog>(() => (profile.puzzleIntroDone ? null : { kind: 'intro' }));
+  const [note, setNote] = useState<Note>(null);
+  const noteSeq = useRef(0);
+  const timer = useRef<number>();
+
+  // Anlık değerler: art arda gelen tuşlar React yeniden çizmeden işlense de harf kaybolmasın.
+  const live = useRef({ puzzle, profile });
+  live.current = { puzzle, profile };
+
+  useEffect(() => () => window.clearTimeout(timer.current), []);
+  useEffect(() => {
+    if (puzzle.status === 'playing') savePuzzle(puzzle);
+  }, [puzzle]);
+
+  function say(text: string | null, tone: 'good' | 'bad' | 'info' = 'info') {
+    noteSeq.current += 1;
+    setNote(text ? { text, tone, seq: noteSeq.current } : null);
+  }
+
+  function saveProfile(p: Profile) {
+    live.current.profile = p;
+    setProfile(p);
+  }
+
+  function finish(done: PuzzleState, base: Profile) {
+    savePuzzle(null);
+    const res = applyPuzzle(base, done, pack, props.adaptive, new Date());
+    saveProfile(res.profile);
+    setOutcome(res.outcome);
+    window.clearTimeout(timer.current);
+    // Son kelimenin kutlaması kısa bir an görünsün.
+    const wait = done.event?.kind === 'complete' && !reducedMotion() ? 900 : 0;
+    timer.current = window.setTimeout(() => setShowResult(true), wait);
+  }
+
+  function commit(next: PuzzleState, base: Profile = live.current.profile) {
+    const prev = live.current.puzzle;
+    if (next === prev) return;
+    live.current.puzzle = next;
+    setPuzzle(next);
+    if (next.seq !== prev.seq && next.event) {
+      const e = next.event;
+      const w = 'word' in e ? next.cw.words[e.word] : null;
+      const tgt = next.direction.target;
+      if (e.kind === 'solved' && w) {
+        say(`Doğru! ${w.clue} → ${displayWord(w.answer, tgt)}`, 'good');
+        buzz(25);
+      } else if (e.kind === 'wrong' && w) {
+        say(`${w.clue}: yanlış harf var`, 'bad');
+        buzz([40, 60, 40]);
+      } else if (e.kind === 'reveal') say('Harf açıldı.');
+      else if (e.kind === 'meaning') say('Anlam ipucu üstte.');
+      else if (e.kind === 'complete') {
+        say('Bulmaca tamam!', 'good');
+        buzz([30, 50, 30, 50, 60]);
+      }
+    }
+    if (prev.status === 'playing' && next.status === 'done') finish(next, base);
+    else if (base !== live.current.profile) saveProfile(base);
+  }
+
+  function onLetter(letter: string) {
+    commit(typeLetter(live.current.puzzle, letter));
+  }
+  function onBackspace() {
+    commit(backspace(live.current.puzzle));
+  }
+  function moveWord(delta: number) {
+    const p = live.current.puzzle;
+    const n = p.cw.words.length;
+    let w = p.sel.word;
+    for (let k = 0; k < n; k++) {
+      w = (w + delta + n) % n;
+      if (!p.solved[w]) break;
+    }
+    commit(selectWord(p, w));
+  }
+
+  function onTool(tool: PuzzleToolId) {
+    const { puzzle: p, profile: pr } = live.current;
+    if (p.status !== 'playing') return;
+    if (pr.inventory[tool] <= 0) {
+      setDialog({ kind: 'toolEmpty', tool });
+      return;
+    }
+    const entry = pack.entries.find((e) => e.id === p.cw.words[p.sel.word].entryId);
+    const res = tool === 'hint' ? showMeaning(p, !!entry?.hint?.tr) : revealLetter(p);
+    if (!res.applied) {
+      const why =
+        tool === 'hint'
+          ? p.meaningShown[p.sel.word]
+            ? 'Bu kelimenin anlam ipucu zaten açık.'
+            : 'Bu kelime için anlam ipucu yok.'
+          : 'Bu kelimede açılacak harf kalmadı.';
+      say(`${why} Hak harcanmadı.`);
+      return;
+    }
+    commit(res.state, consumeCharge(pr, tool));
+  }
+
+  // Fiziksel klavye: harf yaz, ⌫ sil, Tab / Enter sıradaki kelime, oklar kare seç.
+  const keyHandler = useRef<(e: KeyboardEvent) => void>();
+  keyHandler.current = (e: KeyboardEvent) => {
+    const p = live.current.puzzle;
+    if (props.paused || dialog || showResult || p.status !== 'playing') return;
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
+    if (e.key === 'Backspace') {
+      e.preventDefault();
+      onBackspace();
+      return;
+    }
+    if (e.key === 'Tab' || e.key === 'Enter') {
+      e.preventDefault();
+      moveWord(e.shiftKey ? -1 : 1);
+      return;
+    }
+    const letter = keyToLetter(e.key, p.direction.target);
+    if (letter && languageInfo(p.direction.target).alphabet.includes(letter)) {
+      e.preventDefault();
+      onLetter(letter);
+    }
+  };
+  useEffect(() => {
+    const h = (e: KeyboardEvent) => keyHandler.current?.(e);
+    window.addEventListener('keydown', h);
+    return () => window.removeEventListener('keydown', h);
+  }, []);
+
+  const { cw } = puzzle;
+  const src = languageInfo(puzzle.direction.source);
+  const tgt = languageInfo(puzzle.direction.target);
+  const selWord = cw.words[puzzle.sel.word];
+  const selEntry = pack.entries.find((e) => e.id === selWord?.entryId);
+  const [cr, cc] = selectedCell(puzzle);
+
+  // Kare haritası: harf kareleri ve ipucu kareleri.
+  const layout = useMemo(() => {
+    const letters = new Map<string, { letter: string; words: number[] }>();
+    const clues = new Map<string, number[]>();
+    cw.words.forEach((w, i) => {
+      wordCells(w).forEach(([r, c], k) => {
+        const key = cellKey(r, c);
+        const cell = letters.get(key) ?? { letter: w.letters[k], words: [] };
+        cell.words.push(i);
+        letters.set(key, cell);
+      });
+      const ck = cellKey(w.clueRow, w.clueCol);
+      clues.set(ck, [...(clues.get(ck) ?? []), i]);
+    });
+    return { letters, clues };
+  }, [cw]);
+
+  const selCells = new Set(wordCells(selWord).map(([r, c]) => cellKey(r, c)));
+  const flashWrong = puzzle.event?.kind === 'wrong' ? puzzle.event.word : -1;
+  const flashSolved = puzzle.event?.kind === 'solved' ? puzzle.event.word : -1;
+  const wrongCells = flashWrong >= 0 ? new Set(wordCells(cw.words[flashWrong]).map(([r, c]) => cellKey(r, c))) : null;
+  const solvedCells = flashSolved >= 0 ? new Set(wordCells(cw.words[flashSolved]).map(([r, c]) => cellKey(r, c))) : null;
+  const solved = solvedCount(puzzle);
+  const total = cw.words.length;
+
+  if (showResult && outcome) {
+    return (
+      <PuzzleResult
+        puzzle={puzzle}
+        outcome={outcome}
+        profile={profile}
+        onAgain={props.onNewPuzzle}
+        onHome={props.onExit}
+        onReview={props.onOpenReview}
+      />
+    );
+  }
+
+  const cells = [];
+  for (let r = 0; r < cw.rows; r++) {
+    for (let c = 0; c < cw.cols; c++) {
+      const key = cellKey(r, c);
+      const letter = layout.letters.get(key);
+      const clueWords = layout.clues.get(key);
+      if (letter) {
+        const typed = puzzle.fill[key];
+        const locked = isLocked(puzzle, r, c);
+        const cls = [
+          'cw-cell',
+          selCells.has(key) ? 'in-word' : '',
+          r === cr && c === cc && puzzle.status === 'playing' ? 'cursor' : '',
+          locked ? 'solved' : '',
+          puzzle.revealed.includes(key) ? 'revealed' : '',
+          wrongCells?.has(key) ? 'flash-wrong' : '',
+          solvedCells?.has(key) ? 'flash-solved' : '',
+          puzzle.status === 'done' && !locked ? 'missed' : '',
+        ]
+          .filter(Boolean)
+          .join(' ');
+        // Bulmaca bitince çözülmeyen kareler doğru harfle gösterilir.
+        const shown = puzzle.status === 'done' && !locked ? letter.letter : typed;
+        cells.push(
+          <button
+            key={key + (wrongCells?.has(key) || solvedCells?.has(key) ? `-${puzzle.seq}` : '')}
+            type="button"
+            className={cls}
+            onClick={() => commit(tapCell(live.current.puzzle, r, c))}
+            aria-label={`${letter.words.map((w) => cw.words[w].clue).join(' / ')} kelimesinin karesi${typed ? `, yazılan ${displayLetter(typed, tgt.code)}` : ', boş'}${locked ? ', çözüldü' : ''}`}
+          >
+            {shown ? displayLetter(shown, tgt.code) : ''}
+          </button>,
+        );
+      } else if (clueWords) {
+        cells.push(
+          <button
+            key={key}
+            type="button"
+            className={`cw-clue${clueWords.length > 1 ? ' two' : ''}`}
+            onClick={() => commit(tapClue(live.current.puzzle, r, c))}
+            aria-label={clueWords.map((w) => `İpucu: ${cw.words[w].clue}`).join('; ')}
+          >
+            {clueWords.map((w) => (
+              <span
+                key={w}
+                className={`cw-clue-part${w === puzzle.sel.word ? ' selected' : ''}${puzzle.solved[w] ? ' done' : ''}`}
+                lang={src.code}
+              >
+                <span className="cw-clue-text">{cw.words[w].clue}</span>
+                <ClueArrow arrow={cw.words[w].arrow} className="cw-arrow" />
+              </span>
+            ))}
+          </button>,
+        );
+      } else {
+        cells.push(<span key={key} className="cw-void" aria-hidden="true" />);
+      }
+    }
+  }
+
+  return (
+    <div className="cw-page">
+      <header className="game-top">
+        <button type="button" className="icon-btn" onClick={() => setDialog({ kind: 'quit' })} aria-label="Bulmacadan çık">
+          <CloseIcon />
+        </button>
+        <div className="game-progress">
+          <div className="progress-label">
+            <span>
+              {props.adaptive ? 'Uyarlamalı · ' : ''}
+              {DIFFICULTY_LABEL[puzzle.difficulty]}
+            </span>
+            <span aria-label={`${total} kelimeden ${solved} tanesi çözüldü`}>
+              {solved}/{total}
+            </span>
+          </div>
+          <div className="progress-bar" role="progressbar" aria-label="Çözülen kelimeler" aria-valuemin={0} aria-valuemax={total} aria-valuenow={solved}>
+            <span style={{ width: `${(solved / total) * 100}%` }} />
+          </div>
+        </div>
+        <div className="game-stats">
+          <span className="stat coin" aria-label={`${profile.coins} jeton`}>
+            <CoinIcon width={16} height={16} />
+            <strong>{profile.coins}</strong>
+          </span>
+          <button type="button" className="icon-btn small" onClick={() => setDialog({ kind: 'intro' })} aria-label="Nasıl oynanır">
+            <QuestionIcon width={20} height={20} />
+          </button>
+        </div>
+      </header>
+
+      <section className={`cw-cluebar${puzzle.solved[puzzle.sel.word] ? ' is-solved' : ''}`} aria-live="polite">
+        <button type="button" className="cw-nav" onClick={() => moveWord(-1)} aria-label="Önceki kelime">
+          <ChevronLeftIcon width={20} height={20} />
+        </button>
+        <div className="cw-clue-main">
+          <p className="cw-clue-line">
+            <strong lang={src.code}>{selWord.clue}</strong>
+            <ClueArrow arrow={selWord.arrow} width={14} height={14} className="cw-arrow" />
+            <span className="cw-len">{selWord.letters.length} harf</span>
+          </p>
+          {selEntry?.terms[src.code]?.context && <p className="cw-clue-sub">({selEntry.terms[src.code].context})</p>}
+          {puzzle.meaningShown[puzzle.sel.word] && selEntry?.hint?.tr && <p className="cw-clue-hint">{selEntry.hint.tr}</p>}
+          {puzzle.solved[puzzle.sel.word] && (
+            <p className="cw-clue-sub good">
+              Çözüldü: <span lang={tgt.code}>{displayWord(selWord.answer, tgt.code)}</span>
+            </p>
+          )}
+        </div>
+        <button type="button" className="cw-nav" onClick={() => moveWord(1)} aria-label="Sonraki kelime">
+          <ChevronRightIcon width={20} height={20} />
+        </button>
+      </section>
+
+      <div className="cw-board">
+        <div
+          className={`cw-grid${puzzle.status === 'done' ? ' is-done' : ''}`}
+          style={{ ['--cols' as string]: cw.cols, ['--rows' as string]: cw.rows }}
+          lang={tgt.code}
+          role="group"
+          aria-label={`${src.name} ipuçlu, ${tgt.name} cevaplı çengel bulmaca`}
+        >
+          {cells}
+        </div>
+        {note && (
+          <p className={`cw-toast note-${note.tone}`} key={note.seq} aria-hidden="true">
+            {note.text}
+          </p>
+        )}
+      </div>
+      <p className="sr-only" role="status" aria-live="polite">
+        {note?.text ?? ''}
+      </p>
+
+      <div className="cw-tools" role="toolbar" aria-label="Yardım araçları">
+        {PUZZLE_TOOL_ORDER.map((tool) => {
+          const Icon = TOOL_ICONS[tool];
+          const info = PUZZLE_TOOL_INFO[tool];
+          const count = profile.inventory[tool];
+          return (
+            <button
+              key={tool}
+              type="button"
+              className={`cw-tool tool-${tool}${count === 0 ? ' is-empty' : ''}`}
+              onClick={() => onTool(tool)}
+              aria-label={`${info.name}: ${info.does} Kalan hak: ${count}. Bedel: ${info.cost}.`}
+            >
+              <span className="tool-circle small">
+                <Icon width={20} height={20} />
+              </span>
+              <span>{info.name}</span>
+              <span className="cw-tool-count" aria-hidden="true">
+                {count}
+              </span>
+            </button>
+          );
+        })}
+        <button type="button" className="btn btn-ghost btn-small cw-finish" onClick={() => setDialog({ kind: 'quit' })}>
+          Bitir
+        </button>
+      </div>
+
+      <Keyboard lang={tgt.code} onLetter={onLetter} onBackspace={onBackspace} disabled={puzzle.status !== 'playing'} />
+
+      {dialog?.kind === 'intro' && (
+        <Sheet
+          title="Çengel bulmaca"
+          onClose={() => {
+            setDialog(null);
+            if (!profile.puzzleIntroDone) saveProfile({ ...live.current.profile, puzzleIntroDone: true });
+          }}
+        >
+          <ul className="cw-intro">
+            <li>
+              Renkli kutular ipucudur: {src.name} bir kelime. Karşılığını {tgt.name} olarak okun gösterdiği yöne yaz.
+            </li>
+            <li className="cw-intro-arrows">
+              <span>
+                <ClueArrow arrow="right" /> sağa
+              </span>
+              <span>
+                <ClueArrow arrow="down" /> aşağı
+              </span>
+              <span>
+                <ClueArrow arrow="down-right" /> alttan sağa
+              </span>
+              <span>
+                <ClueArrow arrow="right-down" /> yandan aşağı
+              </span>
+            </li>
+            <li>Bir kareye ya da ipucuna dokun, sonra alttaki klavyeyle yaz. Kesişen kareye tekrar dokunursan yön değişir.</li>
+            <li>Kelimeler birbirini keser: bildiğin kelimenin harfleri diğerlerine ipucu olur.</li>
+            <li>
+              Takılırsan <strong>Anlam</strong> ya da <strong>Harf aç</strong> kullan. Yanlış yazmak hiçbir şey eksiltmez; çözemediğin kelimeler
+              tekrar listene eklenir.
+            </li>
+          </ul>
+          <button
+            type="button"
+            className="btn btn-primary btn-block"
+            onClick={() => {
+              setDialog(null);
+              if (!profile.puzzleIntroDone) saveProfile({ ...live.current.profile, puzzleIntroDone: true });
+            }}
+          >
+            Başla
+          </button>
+        </Sheet>
+      )}
+
+      {dialog?.kind === 'toolEmpty' && (
+        <ToolEmpty
+          tool={dialog.tool}
+          name={PUZZLE_TOOL_INFO[dialog.tool].name}
+          freeNote="Yazmak, silmek ve kelimeler arasında gezinmek her zaman ücretsiz."
+          profile={profile}
+          setProfile={saveProfile}
+          onClose={() => setDialog(null)}
+          onOpenStore={() => {
+            setDialog(null);
+            props.onOpenStore();
+          }}
+        />
+      )}
+
+      {dialog?.kind === 'quit' && (
+        <Sheet title="Bulmacayı bitir?" onClose={() => setDialog(null)}>
+          <p>
+            {total} kelimeden {solved} tanesini çözdün. Bitirirsen çözemediklerin cevaplarıyla gösterilir ve tekrar listene eklenir; kazandığın
+            puan ve jetonlar korunur.
+          </p>
+          <p className="muted small">Sonra devam etmek istersen “Ana sayfaya dön” de; bulmaca kaldığı yerde bekler.</p>
+          <div className="stack">
+            <button type="button" className="btn btn-primary btn-block" onClick={() => setDialog(null)}>
+              Çözmeye devam et
+            </button>
+            <button
+              type="button"
+              className="btn btn-secondary btn-block"
+              onClick={() => {
+                setDialog(null);
+                commit(finishPuzzle(live.current.puzzle));
+              }}
+            >
+              Bitir ve cevapları gör
+            </button>
+            <button type="button" className="btn btn-ghost btn-block" onClick={props.onExit}>
+              Ana sayfaya dön
+            </button>
+          </div>
+        </Sheet>
+      )}
+    </div>
+  );
+}
