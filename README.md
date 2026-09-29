@@ -19,6 +19,12 @@ npm run build      # dist/ klasörüne üretim çıktısı + service worker
 npm run preview    # derlenmiş sürümü http://localhost:4174 adresinde sun
 ```
 
+**Windows'ta telefonda açmak için:** `TELEFONDA-AC.bat` dosyasına çift tıkla.
+Paketleri kurar, derler, Tailscale varsa oyunu `https://<makine>.<tailnet>.ts.net:8443`
+adresinden açar (hisse uygulamasının Tailscale adresine dokunmaz) ve telefonda
+açılacak adresleri yazar. Kapatmak için pencerede Ctrl+C; Tailscale
+yönlendirmesini kaldırmak için `tailscale serve --https=8443 off`.
+
 Derlenmiş `dist/` klasörü herhangi bir statik barındırmaya (alt klasör dahil)
 konabilir; yollar görelidir. Service worker yalnızca derlenmiş sürümde üretilir;
 ilk açılıştan sonra oyun çevrimdışı da açılır. PWA olarak ana ekrana eklenebilir
