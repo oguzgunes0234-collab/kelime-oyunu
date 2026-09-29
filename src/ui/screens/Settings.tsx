@@ -1,0 +1,122 @@
+import { useState } from 'react';
+import type { Profile, ThemeSetting } from '../../core/profile';
+import type { WordPack } from '../../core/types';
+import { BackIcon } from '../components/Icons';
+import { Sheet } from '../components/Sheet';
+
+interface Props {
+  pack: WordPack;
+  profile: Profile;
+  setProfile: (p: Profile) => void;
+  onBack: () => void;
+  onReplayTutorial: () => void;
+  onReset: () => void;
+}
+
+const GOALS = [5, 10, 15, 20];
+const THEMES: { id: ThemeSetting; label: string }[] = [
+  { id: 'auto', label: 'Cihaza göre' },
+  { id: 'light', label: 'Açık' },
+  { id: 'dark', label: 'Koyu' },
+];
+
+export function Settings({ pack, profile, setProfile, onBack, onReplayTutorial, onReset }: Props) {
+  const [confirm, setConfirm] = useState(false);
+  const s = profile.settings;
+
+  return (
+    <div className="page settings">
+      <header className="page-bar">
+        <button type="button" className="icon-btn" onClick={onBack} aria-label="Geri">
+          <BackIcon />
+        </button>
+        <h1>Ayarlar</h1>
+      </header>
+
+      <section className="setting">
+        <h2 id="goal-label">Günlük hedef</h2>
+        <p className="muted small">Günde kaç doğru kelime? Hedefi kaçırmak hiçbir şey eksiltmez.</p>
+        <div className="seg" role="radiogroup" aria-labelledby="goal-label">
+          {GOALS.map((g) => (
+            <button
+              key={g}
+              type="button"
+              role="radio"
+              aria-checked={profile.daily.goal === g}
+              className={profile.daily.goal === g ? 'selected' : ''}
+              onClick={() =>
+                setProfile({ ...profile, settings: { ...s, dailyGoal: g }, daily: { ...profile.daily, goal: g } })
+              }
+            >
+              {g}
+            </button>
+          ))}
+        </div>
+      </section>
+
+      <section className="setting">
+        <h2 id="theme-label">Görünüm</h2>
+        <div className="seg" role="radiogroup" aria-labelledby="theme-label">
+          {THEMES.map((t) => (
+            <button
+              key={t.id}
+              type="button"
+              role="radio"
+              aria-checked={s.theme === t.id}
+              className={s.theme === t.id ? 'selected' : ''}
+              onClick={() => setProfile({ ...profile, settings: { ...s, theme: t.id } })}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
+      </section>
+
+      <section className="setting">
+        <h2>Nasıl oynanır</h2>
+        <button type="button" className="btn btn-secondary" onClick={onReplayTutorial}>
+          Örnek turu yeniden oyna
+        </button>
+      </section>
+
+      <section className="setting">
+        <h2>Kelime paketi</h2>
+        <p className="small">
+          <strong>{pack.name}</strong> · {pack.entries.length} kelime · Türkçe ↔ İngilizce
+        </p>
+        <p className="muted small">{pack.description}</p>
+      </section>
+
+      <section className="setting">
+        <h2>Verilerin</h2>
+        <p className="muted small">
+          İlerleme, ayarlar, jetonlar ve tekrar listesi yalnızca bu tarayıcıda saklanır. Tarayıcı verilerini silersen bunlar da silinir.
+        </p>
+        <button type="button" className="btn btn-danger" onClick={() => setConfirm(true)}>
+          İlerlemeyi sıfırla
+        </button>
+      </section>
+
+      {confirm && (
+        <Sheet title="İlerleme sıfırlansın mı?" onClose={() => setConfirm(false)}>
+          <p>Puanlar, jetonlar, haklar, seri ve tekrar listesi silinir. Bu işlem geri alınamaz.</p>
+          <div className="btn-row">
+            <button type="button" className="btn btn-secondary" onClick={() => setConfirm(false)}>
+              Vazgeç
+            </button>
+            <button
+              type="button"
+              className="btn btn-danger"
+              onClick={() => {
+                setConfirm(false);
+                onReset();
+              }}
+            >
+              Sıfırla
+            </button>
+          </div>
+        </Sheet>
+      )}
+    </div>
+  );
+}

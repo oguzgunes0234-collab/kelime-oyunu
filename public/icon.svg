@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#ff8a3d"/>
+  <path d="M84 330c52-86 292-86 344 0" fill="none" stroke="#fff6e9" stroke-width="22" stroke-linecap="round"/>
+  <g font-family="Arial Rounded MT Bold, Nunito, Arial, sans-serif" font-weight="800" font-size="150" text-anchor="middle">
+    <rect x="86" y="120" width="150" height="150" rx="30" fill="#fff6e9" transform="rotate(-6 161 195)"/>
+    <text x="161" y="248" fill="#7a2e0e" transform="rotate(-6 161 195)">K</text>
+    <rect x="276" y="120" width="150" height="150" rx="30" fill="#fff6e9" transform="rotate(6 351 195)"/>
+    <text x="351" y="248" fill="#1f6f6b" transform="rotate(6 351 195)">W</text>
+  </g>
+  <circle cx="256" cy="398" r="20" fill="#fff6e9"/>
+</svg>

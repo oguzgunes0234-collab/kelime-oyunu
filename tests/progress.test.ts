@@ -1,0 +1,142 @@
+import { describe, expect, it } from 'vitest';
+import { MIN_ROUNDS_BEFORE_CHANGE, initialAdaptive, recordRound, roundQuality } from '../src/core/adaptive';
+import { currentStreak, initialDaily, recordCorrect } from '../src/core/daily';
+import { COINS_PER_CHARGE } from '../src/core/economy';
+import { toQuestion } from '../src/core/pack';
+import { applyRound, buyChargeWithCoins, consumeCharge, defaultProfile } from '../src/core/profile';
+import { seededRng } from '../src/core/rng';
+import { applyTool, createRound, placeLetter, skipRound } from '../src/core/round';
+import { pickEntry } from '../src/core/select';
+import { nextRound, startSession } from '../src/core/session';
+import type { Entry, WordPack } from '../src/core/types';
+import packJson from '../src/data/pack-tr-en.json';
+
+const pack = packJson as WordPack;
+const day = (d: number) => new Date(2026, 8, d, 12);
+
+describe('uyarlamalı zorluk', () => {
+  it('tek iyi yanıtla seviye değişmez', () => {
+    const r = recordRound(initialAdaptive('easy'), 1);
+    expect(r.change).toBeNull();
+  });
+
+  it('son turlar iyiyse yükselir, kötüyse düşer; değişince pencere sıfırlanır', () => {
+    let s = initialAdaptive('easy');
+    let change = null;
+    for (let i = 0; i < MIN_ROUNDS_BEFORE_CHANGE; i++) ({ state: s, change } = recordRound(s, 1));
+    expect(change).toBe('up');
+    expect(s.difficulty).toBe('medium');
+    for (let i = 0; i < MIN_ROUNDS_BEFORE_CHANGE; i++) ({ state: s, change } = recordRound(s, 0));
+    expect(change).toBe('down');
+    expect(s.difficulty).toBe('easy');
+  });
+
+  it('karışık performansta seviye sabit kalır', () => {
+    let s = initialAdaptive('medium');
+    const seq = [1, 0, 1, 0.6, 0, 1, 0.6, 0];
+    for (const q of seq) s = recordRound(s, q).state;
+    expect(s.difficulty).toBe('medium');
+  });
+
+  it('yardım ve yanlış deneme kaliteyi düşürür', () => {
+    expect(roundQuality('correct', false, 0)).toBe(1);
+    expect(roundQuality('correct', true, 0)).toBeLessThan(1);
+    expect(roundQuality('skipped', false, 0)).toBe(0);
+  });
+});
+
+describe('günlük hedef ve seri', () => {
+  it('hedef tamamlanınca seri başlar ve ardışık günlerde artar', () => {
+    let s = initialDaily(day(1), 2);
+    s = recordCorrect(s, day(1)).state;
+    const r = recordCorrect(s, day(1));
+    expect(r.goalReached).toBe(true);
+    expect(r.state.streak).toBe(1);
+    s = recordCorrect(recordCorrect(r.state, day(2)).state, day(2)).state;
+    expect(s.streak).toBe(2);
+  });
+
+  it('bir gün kaçırılırsa dinlenme günü seriyi korur', () => {
+    let s = initialDaily(day(1), 1);
+    s = recordCorrect(s, day(1)).state;
+    expect(currentStreak(s, day(3))).toEqual({ streak: 1, restDayNeeded: true });
+    const r = recordCorrect(s, day(3));
+    expect(r.usedRestDay).toBe(true);
+    expect(r.state.streak).toBe(2);
+  });
+
+  it('uzun aradan sonra seri sessizce yeniden başlar; en iyi seri korunur', () => {
+    let s = initialDaily(day(1), 1);
+    s = recordCorrect(s, day(1)).state;
+    s = recordCorrect(s, day(2)).state;
+    s = recordCorrect(s, day(10)).state;
+    expect(s.streak).toBe(1);
+    expect(s.bestStreak).toBe(2);
+  });
+});
+
+describe('profil', () => {
+  const elma = pack.entries.find((e) => e.id === 'elma') as Entry;
+  const q = toQuestion(elma, { source: 'tr', target: 'en' });
+
+  it('pas geçilen kelime tekrar listesine eklenir, temiz doğru cevapla çıkar', () => {
+    let p = defaultProfile(day(1));
+    let r = applyRound(p, skipRound(createRound(q, 'easy', seededRng(1))), { mode: 'normal', adaptive: true }, day(1));
+    expect(r.outcome.addedToReview).toBe('skipped');
+    expect(r.profile.review).toHaveLength(1);
+    let s = createRound(q, 'easy', seededRng(1));
+    for (const ch of 'apple') s = placeLetter(s, ch);
+    r = applyRound(r.profile, s, { mode: 'review', adaptive: false }, day(1));
+    expect(r.outcome.removedFromReview).toBe(true);
+    expect(r.profile.review).toHaveLength(0);
+  });
+
+  it('yardım kullanılan doğru cevap da tekrar listesine girer', () => {
+    let s = createRound(q, 'easy', seededRng(1));
+    for (let i = 0; i < 5; i++) s = applyTool(s, 'magnet').state;
+    const r = applyRound(defaultProfile(day(1)), s, { mode: 'normal', adaptive: true }, day(1));
+    expect(r.outcome.status).toBe('correct');
+    expect(r.outcome.addedToReview).toBe('helped');
+  });
+
+  it('eğitim turu profili değiştirmez', () => {
+    const p = defaultProfile(day(1));
+    const r = applyRound(p, skipRound(createRound(q, 'easy')), { mode: 'tutorial', adaptive: true }, day(1));
+    expect(r.profile).toBe(p);
+  });
+
+  it('hak sıfırın altına düşmez; jetonla hak alınabilir', () => {
+    let p = defaultProfile(day(1));
+    for (let i = 0; i < 20; i++) p = consumeCharge(p, 'magnet');
+    expect(p.inventory.magnet).toBe(0);
+    expect(buyChargeWithCoins(p, 'magnet')).toBeNull();
+    p = { ...p, coins: COINS_PER_CHARGE };
+    expect(buyChargeWithCoins(p, 'magnet')?.inventory.magnet).toBe(1);
+  });
+});
+
+describe('kelime seçimi', () => {
+  it('bilinen kelimeler bitince havuz tükenir; tekrar izniyle devam eder', () => {
+    const p = defaultProfile(day(1));
+    const all = pack.entries.filter((e) => ['B1', 'B2'].includes(e.level)).map((e) => e.id);
+    const learned = { ...p, learned: { 'tr>en': all } };
+    const opts = { direction: { source: 'tr', target: 'en' }, difficulty: 'hard' as const, exclude: new Set<string>(), rng: seededRng(4) };
+    expect(pickEntry(pack, learned, { ...opts, allowRepeats: false })).toBeNull();
+    expect(pickEntry(pack, learned, { ...opts, allowRepeats: true })).not.toBeNull();
+  });
+
+  it('oturum içinde aynı kelime tekrar sorulmaz', () => {
+    const p = defaultProfile(day(1));
+    let session = startSession({ mode: 'normal', direction: { source: 'en', target: 'tr' }, difficultyMode: 'easy' }, p);
+    const seen = new Set<string>();
+    const rng = seededRng(9);
+    for (let i = 0; i < 10; i++) {
+      const n = nextRound(session, pack, p, rng);
+      if (n.kind !== 'round') throw new Error(n.kind);
+      expect(seen.has(n.round.question.entryId)).toBe(false);
+      seen.add(n.round.question.entryId);
+      session = { ...session, asked: [...session.asked, `en>tr:${n.round.question.entryId}`], rounds: [...session.rounds, { question: n.round.question, outcome: {} as never }] };
+    }
+    expect(nextRound(session, pack, p, rng).kind).toBe('finished');
+  });
+});

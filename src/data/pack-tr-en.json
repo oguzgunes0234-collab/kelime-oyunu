@@ -1,0 +1,2889 @@
+{
+ "id": "tr-en-baslangic",
+ "version": 1,
+ "name": "Başlangıç paketi",
+ "languages": [
+  "tr",
+  "en"
+ ],
+ "description": "Elle seçilmiş, günlük hayattan kelimeler. Kapsamlı bir sözlük değildir; seviyeler yaklaşık CEFR tahminidir.",
+ "entries": [
+  {
+   "id": "elma",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "elma",
+     "example": "Her sabah bir elma yerim."
+    },
+    "en": {
+     "text": "apple",
+     "example": "I eat an apple every morning."
+    }
+   },
+   "hint": {
+    "tr": "Ağaçta yetişen, kırmızı ya da yeşil olabilen bir meyve."
+   }
+  },
+  {
+   "id": "su",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "su",
+     "example": "Bir bardak su lütfen."
+    },
+    "en": {
+     "text": "water",
+     "example": "A glass of water, please."
+    }
+   },
+   "hint": {
+    "tr": "Renksiz ve kokusuz; içmeden yaşayamayız."
+   }
+  },
+  {
+   "id": "ekmek",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "ekmek",
+     "example": "Fırından taze ekmek aldım."
+    },
+    "en": {
+     "text": "bread",
+     "example": "I bought fresh bread from the bakery."
+    }
+   },
+   "hint": {
+    "tr": "Fırında pişen, un ve mayadan yapılan temel yiyecek."
+   }
+  },
+  {
+   "id": "sut",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "süt",
+     "example": "Kahveme biraz süt koyar mısın?"
+    },
+    "en": {
+     "text": "milk",
+     "example": "Could you put some milk in my coffee?"
+    }
+   },
+   "hint": {
+    "tr": "İnekten elde edilen beyaz içecek."
+   }
+  },
+  {
+   "id": "balik",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "hayvanlar",
+   "terms": {
+    "tr": {
+     "text": "balık",
+     "example": "Akşam yemeğinde balık yedik."
+    },
+    "en": {
+     "text": "fish",
+     "example": "We had fish for dinner."
+    }
+   },
+   "hint": {
+    "tr": "Suda yaşayan, solungaçla nefes alan hayvan."
+   }
+  },
+  {
+   "id": "ev",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "ev",
+     "example": "Evimiz okula yakın."
+    },
+    "en": {
+     "text": "house",
+     "alternatives": [
+      "home"
+     ],
+     "example": "Our house is near the school."
+    }
+   },
+   "hint": {
+    "tr": "İçinde yaşadığımız bina."
+   }
+  },
+  {
+   "id": "kapi",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "kapı",
+     "example": "Lütfen kapıyı kapat."
+    },
+    "en": {
+     "text": "door",
+     "example": "Please close the door."
+    }
+   },
+   "hint": {
+    "tr": "Bir odaya girip çıkmak için açıp kapattığımız bölüm."
+   }
+  },
+  {
+   "id": "pencere",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "pencere",
+     "example": "Pencereyi açabilir misin?"
+    },
+    "en": {
+     "text": "window",
+     "example": "Can you open the window?"
+    }
+   },
+   "hint": {
+    "tr": "Duvardaki, ışık ve hava almaya yarayan camlı açıklık."
+   }
+  },
+  {
+   "id": "masa",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "masa",
+     "example": "Anahtarlar masanın üstünde."
+    },
+    "en": {
+     "text": "table",
+     "alternatives": [
+      "desk"
+     ],
+     "example": "The keys are on the table."
+    }
+   },
+   "hint": {
+    "tr": "Üzerinde yemek yenen ya da çalışılan, ayaklı eşya."
+   }
+  },
+  {
+   "id": "sandalye",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "sandalye",
+     "example": "Bu sandalye çok rahat."
+    },
+    "en": {
+     "text": "chair",
+     "example": "This chair is very comfortable."
+    }
+   },
+   "hint": {
+    "tr": "Üzerine oturduğumuz, arkalıklı eşya."
+   }
+  },
+  {
+   "id": "yatak",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "yatak",
+     "example": "Yatağımı her sabah toplarım."
+    },
+    "en": {
+     "text": "bed",
+     "example": "I make my bed every morning."
+    }
+   },
+   "hint": {
+    "tr": "Üzerinde uyuduğumuz eşya."
+   }
+  },
+  {
+   "id": "kedi",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "hayvanlar",
+   "terms": {
+    "tr": {
+     "text": "kedi",
+     "example": "Kedi kanepede uyuyor."
+    },
+    "en": {
+     "text": "cat",
+     "example": "The cat is sleeping on the sofa."
+    }
+   },
+   "hint": {
+    "tr": "Miyavlayan evcil hayvan."
+   }
+  },
+  {
+   "id": "kopek",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "hayvanlar",
+   "terms": {
+    "tr": {
+     "text": "köpek",
+     "example": "Köpeğimi her akşam yürüyüşe çıkarırım."
+    },
+    "en": {
+     "text": "dog",
+     "example": "I walk my dog every evening."
+    }
+   },
+   "hint": {
+    "tr": "Havlayan, sadık evcil hayvan."
+   }
+  },
+  {
+   "id": "kus",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "hayvanlar",
+   "terms": {
+    "tr": {
+     "text": "kuş",
+     "example": "Pencerenin önünde bir kuş ötüyor."
+    },
+    "en": {
+     "text": "bird",
+     "example": "A bird is singing outside the window."
+    }
+   },
+   "hint": {
+    "tr": "Kanatları ve tüyleri olan, çoğu uçabilen hayvan."
+   }
+  },
+  {
+   "id": "kitap",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "kitap",
+     "example": "Bu kitap çok ilginç."
+    },
+    "en": {
+     "text": "book",
+     "example": "This book is very interesting."
+    }
+   },
+   "hint": {
+    "tr": "Sayfalardan oluşan, okuduğumuz basılı eser."
+   }
+  },
+  {
+   "id": "okul",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "okul",
+     "example": "Okul saat sekizde başlıyor."
+    },
+    "en": {
+     "text": "school",
+     "example": "School starts at eight o'clock."
+    }
+   },
+   "hint": {
+    "tr": "Öğrencilerin ders gördüğü yer."
+   }
+  },
+  {
+   "id": "anne",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "anne",
+     "alternatives": [
+      "ana"
+     ],
+     "example": "Annem çok güzel yemek yapar."
+    },
+    "en": {
+     "text": "mother",
+     "alternatives": [
+      "mom",
+      "mum"
+     ],
+     "example": "My mother is a great cook."
+    }
+   },
+   "hint": {
+    "tr": "Seni dünyaya getiren kadın."
+   }
+  },
+  {
+   "id": "baba",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "baba",
+     "example": "Babam bir hastanede çalışıyor."
+    },
+    "en": {
+     "text": "father",
+     "alternatives": [
+      "dad"
+     ],
+     "example": "My father works at a hospital."
+    }
+   },
+   "hint": {
+    "tr": "Ailedeki erkek ebeveyn."
+   }
+  },
+  {
+   "id": "arkadas",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "arkadaş",
+     "example": "Arkadaşım yarın bize gelecek."
+    },
+    "en": {
+     "text": "friend",
+     "example": "My friend is coming to visit tomorrow."
+    }
+   },
+   "hint": {
+    "tr": "Birlikte vakit geçirmeyi sevdiğin, yakın hissettiğin kişi."
+   }
+  },
+  {
+   "id": "araba",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "şehir",
+   "terms": {
+    "tr": {
+     "text": "araba",
+     "alternatives": [
+      "otomobil"
+     ],
+     "example": "Araba garajda."
+    },
+    "en": {
+     "text": "car",
+     "alternatives": [
+      "automobile"
+     ],
+     "example": "The car is in the garage."
+    }
+   },
+   "hint": {
+    "tr": "Dört tekerlekli, motorlu taşıt."
+   }
+  },
+  {
+   "id": "otobus",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "şehir",
+   "terms": {
+    "tr": {
+     "text": "otobüs",
+     "example": "Otobüs durağında bekliyorum."
+    },
+    "en": {
+     "text": "bus",
+     "example": "I'm waiting at the bus stop."
+    }
+   },
+   "hint": {
+    "tr": "Çok sayıda yolcu taşıyan büyük taşıt."
+   }
+  },
+  {
+   "id": "yol",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "şehir",
+   "terms": {
+    "tr": {
+     "text": "yol",
+     "example": "Bu yol denize çıkıyor."
+    },
+    "en": {
+     "text": "road",
+     "alternatives": [
+      "way",
+      "path"
+     ],
+     "example": "This road leads to the sea."
+    }
+   },
+   "hint": {
+    "tr": "Araçların ve yayaların ilerlediği uzun şerit."
+   }
+  },
+  {
+   "id": "sehir",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "şehir",
+   "terms": {
+    "tr": {
+     "text": "şehir",
+     "alternatives": [
+      "kent"
+     ],
+     "example": "İstanbul çok kalabalık bir şehir."
+    },
+    "en": {
+     "text": "city",
+     "example": "Istanbul is a very crowded city."
+    }
+   },
+   "hint": {
+    "tr": "Çok sayıda insanın yaşadığı büyük yerleşim yeri."
+   }
+  },
+  {
+   "id": "para",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "para",
+     "example": "Cüzdanımda hiç para yok."
+    },
+    "en": {
+     "text": "money",
+     "example": "I have no money in my wallet."
+    }
+   },
+   "hint": {
+    "tr": "Alışverişte ödeme yapmak için kullandığımız şey."
+   }
+  },
+  {
+   "id": "is",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "iş",
+     "example": "Yeni bir iş buldum."
+    },
+    "en": {
+     "text": "job",
+     "alternatives": [
+      "work"
+     ],
+     "example": "I found a new job."
+    }
+   },
+   "hint": {
+    "tr": "Para kazanmak için yaptığın düzenli uğraş."
+   }
+  },
+  {
+   "id": "zaman",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "zaman",
+     "alternatives": [
+      "vakit"
+     ],
+     "example": "Hiç boş zamanım yok."
+    },
+    "en": {
+     "text": "time",
+     "example": "I have no free time."
+    }
+   },
+   "hint": {
+    "tr": "Geçmişi, şimdiyi ve geleceği kapsayan akış."
+   }
+  },
+  {
+   "id": "gun",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "gün",
+     "example": "Güzel bir gün geçirdik."
+    },
+    "en": {
+     "text": "day",
+     "example": "We had a nice day."
+    }
+   },
+   "hint": {
+    "tr": "Yirmi dört saatlik süre."
+   }
+  },
+  {
+   "id": "gece",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "gece",
+     "example": "Gece geç saatte eve döndük."
+    },
+    "en": {
+     "text": "night",
+     "example": "We came home late at night."
+    }
+   },
+   "hint": {
+    "tr": "Güneş battıktan sonraki karanlık zaman."
+   }
+  },
+  {
+   "id": "sabah",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "sabah",
+     "example": "Sabah erken kalkarım."
+    },
+    "en": {
+     "text": "morning",
+     "example": "I get up early in the morning."
+    }
+   },
+   "hint": {
+    "tr": "Günün ilk saatleri."
+   }
+  },
+  {
+   "id": "gunes",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "güneş",
+     "example": "Güneş doğudan doğar."
+    },
+    "en": {
+     "text": "sun",
+     "example": "The sun rises in the east."
+    }
+   },
+   "hint": {
+    "tr": "Gündüz gökyüzünde parlayan, bize ısı veren yıldız."
+   }
+  },
+  {
+   "id": "ay",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "ay",
+     "context": "gökyüzündeki",
+     "example": "Bu gece ay çok parlak."
+    },
+    "en": {
+     "text": "moon",
+     "example": "The moon is very bright tonight."
+    }
+   },
+   "hint": {
+    "tr": "Geceleri görünen, Dünya'nın uydusu."
+   }
+  },
+  {
+   "id": "yildiz",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "yıldız",
+     "example": "Gökyüzünde binlerce yıldız var."
+    },
+    "en": {
+     "text": "star",
+     "example": "There are thousands of stars in the sky."
+    }
+   },
+   "hint": {
+    "tr": "Geceleri gökyüzünde parıldayan küçük ışık noktaları."
+   }
+  },
+  {
+   "id": "deniz",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "deniz",
+     "example": "Yazın denizde yüzeriz."
+    },
+    "en": {
+     "text": "sea",
+     "example": "We swim in the sea in summer."
+    }
+   },
+   "hint": {
+    "tr": "Tuzlu, geniş su kütlesi; kıyısında yüzülür."
+   }
+  },
+  {
+   "id": "agac",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "ağaç",
+     "example": "Bahçemizde büyük bir ağaç var."
+    },
+    "en": {
+     "text": "tree",
+     "example": "There is a big tree in our garden."
+    }
+   },
+   "hint": {
+    "tr": "Gövdesi, dalları ve yaprakları olan uzun bitki."
+   }
+  },
+  {
+   "id": "cicek",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "çiçek",
+     "example": "Anneme çiçek aldım."
+    },
+    "en": {
+     "text": "flower",
+     "example": "I bought flowers for my mother."
+    }
+   },
+   "hint": {
+    "tr": "Renkli, çoğu zaman güzel kokan bitki parçası."
+   }
+  },
+  {
+   "id": "yagmur",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "hava",
+   "terms": {
+    "tr": {
+     "text": "yağmur",
+     "example": "Dışarıda yağmur yağıyor."
+    },
+    "en": {
+     "text": "rain",
+     "example": "It is raining outside."
+    }
+   },
+   "hint": {
+    "tr": "Bulutlardan damla damla düşen su."
+   }
+  },
+  {
+   "id": "kar",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "hava",
+   "terms": {
+    "tr": {
+     "text": "kar",
+     "example": "Kışın dağlara kar yağar."
+    },
+    "en": {
+     "text": "snow",
+     "example": "It snows in the mountains in winter."
+    }
+   },
+   "hint": {
+    "tr": "Kışın gökten yağan beyaz, soğuk taneler."
+   }
+  },
+  {
+   "id": "el",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "vücut",
+   "terms": {
+    "tr": {
+     "text": "el",
+     "example": "Yemekten önce ellerini yıka."
+    },
+    "en": {
+     "text": "hand",
+     "example": "Wash your hands before eating."
+    }
+   },
+   "hint": {
+    "tr": "Kolun ucundaki, parmaklı organ."
+   }
+  },
+  {
+   "id": "goz",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "vücut",
+   "terms": {
+    "tr": {
+     "text": "göz",
+     "example": "Gözlerin çok güzel."
+    },
+    "en": {
+     "text": "eye",
+     "example": "Your eyes are very beautiful."
+    }
+   },
+   "hint": {
+    "tr": "Görmemizi sağlayan organ."
+   }
+  },
+  {
+   "id": "bas",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "vücut",
+   "terms": {
+    "tr": {
+     "text": "baş",
+     "alternatives": [
+      "kafa"
+     ],
+     "example": "Başım ağrıyor."
+    },
+    "en": {
+     "text": "head",
+     "example": "My head hurts."
+    }
+   },
+   "hint": {
+    "tr": "Vücudun en üst bölümü; beyin buradadır."
+   }
+  },
+  {
+   "id": "renk",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "renkler",
+   "terms": {
+    "tr": {
+     "text": "renk",
+     "example": "En sevdiğin renk ne?"
+    },
+    "en": {
+     "text": "colour",
+     "alternatives": [
+      "color"
+     ],
+     "example": "What is your favourite colour?"
+    }
+   },
+   "hint": {
+    "tr": "Kırmızı, mavi ve sarı bunlardan bazılarıdır."
+   }
+  },
+  {
+   "id": "kirmizi",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "renkler",
+   "terms": {
+    "tr": {
+     "text": "kırmızı",
+     "example": "Kırmızı bir elbise giydi."
+    },
+    "en": {
+     "text": "red",
+     "example": "She wore a red dress."
+    }
+   },
+   "hint": {
+    "tr": "Domatesin ve çileğin rengi."
+   }
+  },
+  {
+   "id": "mavi",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "renkler",
+   "terms": {
+    "tr": {
+     "text": "mavi",
+     "example": "Gökyüzü bugün çok mavi."
+    },
+    "en": {
+     "text": "blue",
+     "example": "The sky is very blue today."
+    }
+   },
+   "hint": {
+    "tr": "Açık havada gökyüzünün rengi."
+   }
+  },
+  {
+   "id": "yesil",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "renkler",
+   "terms": {
+    "tr": {
+     "text": "yeşil",
+     "example": "Yeşil elmayı severim."
+    },
+    "en": {
+     "text": "green",
+     "example": "I like green apples."
+    }
+   },
+   "hint": {
+    "tr": "Çimenin ve yaprakların rengi."
+   }
+  },
+  {
+   "id": "buyuk",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "büyük",
+     "alternatives": [
+      "iri"
+     ],
+     "example": "Büyük bir şehirde yaşıyoruz."
+    },
+    "en": {
+     "text": "big",
+     "alternatives": [
+      "large"
+     ],
+     "example": "We live in a big city."
+    }
+   },
+   "hint": {
+    "tr": "Boyutu fazla olan; küçüğün zıttı."
+   }
+  },
+  {
+   "id": "kucuk",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "küçük",
+     "alternatives": [
+      "ufak"
+     ],
+     "example": "Küçük bir kedimiz var."
+    },
+    "en": {
+     "text": "small",
+     "alternatives": [
+      "little"
+     ],
+     "example": "We have a small cat."
+    }
+   },
+   "hint": {
+    "tr": "Boyutu az olan; büyüğün zıttı."
+   }
+  },
+  {
+   "id": "sicak",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "hava",
+   "terms": {
+    "tr": {
+     "text": "sıcak",
+     "example": "Çay çok sıcak, dikkat et."
+    },
+    "en": {
+     "text": "hot",
+     "alternatives": [
+      "warm"
+     ],
+     "example": "The tea is very hot, be careful."
+    }
+   },
+   "hint": {
+    "tr": "Soğuğun zıttı; yazın hava böyledir."
+   }
+  },
+  {
+   "id": "soguk",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "hava",
+   "terms": {
+    "tr": {
+     "text": "soğuk",
+     "example": "Bugün hava çok soğuk."
+    },
+    "en": {
+     "text": "cold",
+     "example": "It is very cold today."
+    }
+   },
+   "hint": {
+    "tr": "Sıcağın zıttı; kışın hava böyledir."
+   }
+  },
+  {
+   "id": "ac",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "aç",
+     "context": "karnı boş",
+     "example": "Çok açım, yemek yiyelim mi?"
+    },
+    "en": {
+     "text": "hungry",
+     "example": "I'm very hungry, shall we eat?"
+    }
+   },
+   "hint": {
+    "tr": "Yemek yemeye ihtiyaç duyan; tokun zıttı."
+   }
+  },
+  {
+   "id": "mutlu",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "mutlu",
+     "example": "Bugün çok mutluyum."
+    },
+    "en": {
+     "text": "happy",
+     "example": "I am very happy today."
+    }
+   },
+   "hint": {
+    "tr": "Sevinçli, keyifli; üzgünün zıttı."
+   }
+  },
+  {
+   "id": "uzgun",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "üzgün",
+     "example": "Neden üzgünsün?"
+    },
+    "en": {
+     "text": "sad",
+     "example": "Why are you sad?"
+    }
+   },
+   "hint": {
+    "tr": "Keyifsiz, kederli; mutlunun zıttı."
+   }
+  },
+  {
+   "id": "yemek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "yemek",
+     "context": "fiil",
+     "example": "Akşam balık yemek istiyorum."
+    },
+    "en": {
+     "text": "eat",
+     "example": "I want to eat fish tonight."
+    }
+   },
+   "hint": {
+    "tr": "Besini ağızda çiğneyip yutmak."
+   }
+  },
+  {
+   "id": "icmek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "içmek",
+     "example": "Sabahları kahve içmeyi severim."
+    },
+    "en": {
+     "text": "drink",
+     "example": "I like to drink coffee in the morning."
+    }
+   },
+   "hint": {
+    "tr": "Sıvı bir şeyi yudumlayarak yutmak."
+   }
+  },
+  {
+   "id": "uyumak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "uyumak",
+     "example": "Bebek şimdi uyuyor."
+    },
+    "en": {
+     "text": "sleep",
+     "example": "The baby is sleeping now."
+    }
+   },
+   "hint": {
+    "tr": "Yorulunca yatakta gözlerini kapatıp dinlenmek."
+   }
+  },
+  {
+   "id": "gitmek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "gitmek",
+     "example": "Yarın markete gideceğim."
+    },
+    "en": {
+     "text": "go",
+     "example": "I will go to the market tomorrow."
+    }
+   },
+   "hint": {
+    "tr": "Bir yerden başka bir yere doğru hareket etmek."
+   }
+  },
+  {
+   "id": "gelmek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "gelmek",
+     "example": "Buraya gel, sana bir şey göstereceğim."
+    },
+    "en": {
+     "text": "come",
+     "example": "Come here, I'll show you something."
+    }
+   },
+   "hint": {
+    "tr": "Konuşanın bulunduğu yere doğru hareket etmek."
+   }
+  },
+  {
+   "id": "okumak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "okumak",
+     "example": "Her gece yatmadan önce okurum."
+    },
+    "en": {
+     "text": "read",
+     "example": "I read every night before bed."
+    }
+   },
+   "hint": {
+    "tr": "Yazılı bir metne bakıp anlamak."
+   }
+  },
+  {
+   "id": "yazmak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "yazmak",
+     "example": "Arkadaşıma bir mektup yazdım."
+    },
+    "en": {
+     "text": "write",
+     "example": "I wrote a letter to my friend."
+    }
+   },
+   "hint": {
+    "tr": "Kalemle ya da klavyeyle harfleri art arda dizmek."
+   }
+  },
+  {
+   "id": "sinav",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "sınav",
+     "example": "Yarın matematik sınavım var."
+    },
+    "en": {
+     "text": "exam",
+     "alternatives": [
+      "test",
+      "examination"
+     ],
+     "example": "I have a maths exam tomorrow."
+    }
+   },
+   "hint": {
+    "tr": "Öğrendiklerini ölçmek için yapılan yazılı ya da sözlü deneme."
+   }
+  },
+  {
+   "id": "odev",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "ödev",
+     "example": "Ödevini bitirdin mi?"
+    },
+    "en": {
+     "text": "homework",
+     "alternatives": [
+      "assignment"
+     ],
+     "example": "Have you finished your homework?"
+    }
+   },
+   "hint": {
+    "tr": "Öğretmenin evde yapılmak üzere verdiği çalışma."
+   }
+  },
+  {
+   "id": "hastane",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "hastane",
+     "example": "Dedem hastanede yatıyor."
+    },
+    "en": {
+     "text": "hospital",
+     "example": "My grandfather is in hospital."
+    }
+   },
+   "hint": {
+    "tr": "Hastaların tedavi edildiği büyük sağlık kurumu."
+   }
+  },
+  {
+   "id": "ilac",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "ilaç",
+     "example": "Bu ilacı günde iki kez iç."
+    },
+    "en": {
+     "text": "medicine",
+     "alternatives": [
+      "medication"
+     ],
+     "example": "Take this medicine twice a day."
+    }
+   },
+   "hint": {
+    "tr": "Hastalığı iyileştirmek için alınan madde."
+   }
+  },
+  {
+   "id": "doktor",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "doktor",
+     "alternatives": [
+      "hekim"
+     ],
+     "example": "Doktora gitmen gerek."
+    },
+    "en": {
+     "text": "doctor",
+     "example": "You need to see a doctor."
+    }
+   },
+   "hint": {
+    "tr": "Hastaları muayene edip tedavi eden kişi."
+   }
+  },
+  {
+   "id": "hava",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "hava",
+   "terms": {
+    "tr": {
+     "text": "hava",
+     "context": "yağmurlu, güneşli…",
+     "example": "Bugün hava çok güzel."
+    },
+    "en": {
+     "text": "weather",
+     "example": "The weather is lovely today."
+    }
+   },
+   "hint": {
+    "tr": "Yağmurlu, güneşli ya da rüzgârlı olabilen dış ortam durumu."
+   }
+  },
+  {
+   "id": "ruzgar",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "hava",
+   "terms": {
+    "tr": {
+     "text": "rüzgâr",
+     "alternatives": [
+      "rüzgar"
+     ],
+     "example": "Rüzgâr çok sert esiyor."
+    },
+    "en": {
+     "text": "wind",
+     "example": "The wind is blowing very hard."
+    }
+   },
+   "hint": {
+    "tr": "Havanın hareket etmesiyle oluşan akım."
+   }
+  },
+  {
+   "id": "ulke",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "ülke",
+     "alternatives": [
+      "memleket"
+     ],
+     "example": "Hangi ülkeden geliyorsun?"
+    },
+    "en": {
+     "text": "country",
+     "example": "Which country are you from?"
+    }
+   },
+   "hint": {
+    "tr": "Kendi sınırları ve devleti olan toprak parçası."
+   }
+  },
+  {
+   "id": "pazar",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "pazar",
+     "context": "alışveriş yeri",
+     "example": "Cumartesi pazardan sebze aldık."
+    },
+    "en": {
+     "text": "market",
+     "example": "We bought vegetables at the market on Saturday."
+    }
+   },
+   "hint": {
+    "tr": "Tezgâhlarda meyve ve sebze satılan açık alan."
+   }
+  },
+  {
+   "id": "fiyat",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "fiyat",
+     "example": "Bu ceketin fiyatı ne kadar?"
+    },
+    "en": {
+     "text": "price",
+     "example": "What is the price of this jacket?"
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi almak için ödemen gereken miktar."
+   }
+  },
+  {
+   "id": "ucuz",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "ucuz",
+     "example": "Bu ayakkabılar çok ucuz."
+    },
+    "en": {
+     "text": "cheap",
+     "example": "These shoes are very cheap."
+    }
+   },
+   "hint": {
+    "tr": "Fiyatı düşük; pahalının zıttı."
+   }
+  },
+  {
+   "id": "pahali",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "pahalı",
+     "example": "Bu restoran biraz pahalı."
+    },
+    "en": {
+     "text": "expensive",
+     "example": "This restaurant is a bit expensive."
+    }
+   },
+   "hint": {
+    "tr": "Fiyatı yüksek; ucuzun zıttı."
+   }
+  },
+  {
+   "id": "bilet",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "bilet",
+     "example": "İki bilet lütfen."
+    },
+    "en": {
+     "text": "ticket",
+     "example": "Two tickets, please."
+    }
+   },
+   "hint": {
+    "tr": "Otobüse, uçağa ya da sinemaya girmek için aldığın belge."
+   }
+  },
+  {
+   "id": "havalimani",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "havalimanı",
+     "alternatives": [
+      "havaalanı"
+     ],
+     "example": "Havalimanına taksiyle gittik."
+    },
+    "en": {
+     "text": "airport",
+     "example": "We went to the airport by taxi."
+    }
+   },
+   "hint": {
+    "tr": "Uçakların inip kalktığı yer."
+   }
+  },
+  {
+   "id": "bavul",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "bavul",
+     "alternatives": [
+      "valiz"
+     ],
+     "example": "Bavulumu henüz hazırlamadım."
+    },
+    "en": {
+     "text": "suitcase",
+     "example": "I haven't packed my suitcase yet."
+    }
+   },
+   "hint": {
+    "tr": "Yolculukta eşyaları koyduğumuz, taşınabilir büyük çanta."
+   }
+  },
+  {
+   "id": "anahtar",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "anahtar",
+     "example": "Anahtarımı kaybettim."
+    },
+    "en": {
+     "text": "key",
+     "example": "I lost my key."
+    }
+   },
+   "hint": {
+    "tr": "Kilidi açmaya yarayan küçük metal alet."
+   }
+  },
+  {
+   "id": "mutfak",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "mutfak",
+     "example": "Annem mutfakta çay demliyor."
+    },
+    "en": {
+     "text": "kitchen",
+     "example": "My mother is making tea in the kitchen."
+    }
+   },
+   "hint": {
+    "tr": "Evde yemek pişirilen oda."
+   }
+  },
+  {
+   "id": "komsu",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "komşu",
+     "example": "Komşumuz çok yardımsever."
+    },
+    "en": {
+     "text": "neighbour",
+     "alternatives": [
+      "neighbor"
+     ],
+     "example": "Our neighbour is very helpful."
+    }
+   },
+   "hint": {
+    "tr": "Yanındaki ya da yakınındaki evde oturan kişi."
+   }
+  },
+  {
+   "id": "sebze",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "sebze",
+     "example": "Her gün sebze yemeliyiz."
+    },
+    "en": {
+     "text": "vegetable",
+     "example": "We should eat vegetables every day."
+    }
+   },
+   "hint": {
+    "tr": "Havuç, patates, ıspanak gibi bitkisel besinler."
+   }
+  },
+  {
+   "id": "yardim",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "yardım",
+     "example": "Yardımın için teşekkürler."
+    },
+    "en": {
+     "text": "help",
+     "example": "Thanks for your help."
+    }
+   },
+   "hint": {
+    "tr": "Birinin işini kolaylaştırmak için verilen destek."
+   }
+  },
+  {
+   "id": "cevap",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "cevap",
+     "alternatives": [
+      "yanıt"
+     ],
+     "example": "Cevabı biliyor musun?"
+    },
+    "en": {
+     "text": "answer",
+     "alternatives": [
+      "reply"
+     ],
+     "example": "Do you know the answer?"
+    }
+   },
+   "hint": {
+    "tr": "Bir soruya karşılık olarak söylenen söz."
+   }
+  },
+  {
+   "id": "sorun",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "sorun",
+     "alternatives": [
+      "problem",
+      "mesele"
+     ],
+     "example": "Hiç sorun değil."
+    },
+    "en": {
+     "text": "problem",
+     "alternatives": [
+      "issue"
+     ],
+     "example": "It's no problem at all."
+    }
+   },
+   "hint": {
+    "tr": "Çözülmesi gereken zor durum."
+   }
+  },
+  {
+   "id": "sormak",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "sormak",
+     "example": "Öğretmene bir soru sordum."
+    },
+    "en": {
+     "text": "ask",
+     "example": "I asked the teacher a question."
+    }
+   },
+   "hint": {
+    "tr": "Bilmediğin bir şeyi öğrenmek için birine danışmak."
+   }
+  },
+  {
+   "id": "soylemek",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "söylemek",
+     "alternatives": [
+      "demek"
+     ],
+     "example": "Ne söylediğini duymadım."
+    },
+    "en": {
+     "text": "say",
+     "alternatives": [
+      "tell"
+     ],
+     "example": "I didn't hear what you said."
+    }
+   },
+   "hint": {
+    "tr": "Bir düşünceyi sözle dile getirmek."
+   }
+  },
+  {
+   "id": "anlamak",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "anlamak",
+     "alternatives": [
+      "kavramak"
+     ],
+     "example": "Bu soruyu anlamadım."
+    },
+    "en": {
+     "text": "understand",
+     "example": "I didn't understand this question."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin ne demek olduğunu zihninde çözmek."
+   }
+  },
+  {
+   "id": "hatirlamak",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "hatırlamak",
+     "example": "Onun adını hatırlamıyorum."
+    },
+    "en": {
+     "text": "remember",
+     "alternatives": [
+      "recall"
+     ],
+     "example": "I can't remember her name."
+    }
+   },
+   "hint": {
+    "tr": "Geçmişte öğrendiğin ya da yaşadığın bir şeyi yeniden aklına getirmek."
+   }
+  },
+  {
+   "id": "unutmak",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "unutmak",
+     "example": "Şemsiyemi evde unuttum."
+    },
+    "en": {
+     "text": "forget",
+     "example": "I forgot my umbrella at home."
+    }
+   },
+   "hint": {
+    "tr": "Aklındaki bir şeyi artık aklına getirememek."
+   }
+  },
+  {
+   "id": "yorgun",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "yorgun",
+     "example": "Uzun bir günün ardından çok yorgunum."
+    },
+    "en": {
+     "text": "tired",
+     "example": "I'm very tired after a long day."
+    }
+   },
+   "hint": {
+    "tr": "Çok çalıştıktan sonra dinlenmeye ihtiyaç duyan."
+   }
+  },
+  {
+   "id": "kolay",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "kolay",
+     "example": "Bu soru çok kolay."
+    },
+    "en": {
+     "text": "easy",
+     "example": "This question is very easy."
+    }
+   },
+   "hint": {
+    "tr": "Yapması zahmetsiz; zorun zıttı."
+   }
+  },
+  {
+   "id": "zor",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "zor",
+     "alternatives": [
+      "güç"
+     ],
+     "example": "Türkçe öğrenmek zor mu?"
+    },
+    "en": {
+     "text": "difficult",
+     "alternatives": [
+      "hard"
+     ],
+     "example": "Is it difficult to learn Turkish?"
+    }
+   },
+   "hint": {
+    "tr": "Yapması çaba isteyen; kolayın zıttı."
+   }
+  },
+  {
+   "id": "sessiz",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "sessiz",
+     "example": "Kütüphanede sessiz olmalısın."
+    },
+    "en": {
+     "text": "quiet",
+     "alternatives": [
+      "silent"
+     ],
+     "example": "You must be quiet in the library."
+    }
+   },
+   "hint": {
+    "tr": "Ses çıkarmayan; gürültülünün zıttı."
+   }
+  },
+  {
+   "id": "yakinda",
+   "pos": "adverb",
+   "level": "A2",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "yakında",
+     "example": "Yakında görüşürüz."
+    },
+    "en": {
+     "text": "soon",
+     "example": "See you soon."
+    }
+   },
+   "hint": {
+    "tr": "Az bir süre sonra."
+   }
+  },
+  {
+   "id": "saglik",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "sağlık",
+     "example": "Sağlık her şeyden önemli."
+    },
+    "en": {
+     "text": "health",
+     "example": "Health is more important than anything."
+    }
+   },
+   "hint": {
+    "tr": "Hastalıktan uzak, iyi durumda olma hâli."
+   }
+  },
+  {
+   "id": "zincir",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "zincir",
+     "example": "Bisikletin zinciri koptu."
+    },
+    "en": {
+     "text": "chain",
+     "example": "The bike chain broke."
+    }
+   },
+   "hint": {
+    "tr": "Birbirine geçmiş metal halkalardan oluşan dizi."
+   }
+  },
+  {
+   "id": "yasaklamak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "yasaklamak",
+     "example": "Belediye parkta sigara içmeyi yasakladı."
+    },
+    "en": {
+     "text": "ban",
+     "alternatives": [
+      "forbid",
+      "prohibit"
+     ],
+     "example": "The council banned smoking in the park."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin yapılmasına izin vermemek."
+   }
+  },
+  {
+   "id": "deneyim",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "deneyim",
+     "alternatives": [
+      "tecrübe"
+     ],
+     "example": "Bu işte çok deneyimi var."
+    },
+    "en": {
+     "text": "experience",
+     "example": "She has a lot of experience in this job."
+    }
+   },
+   "hint": {
+    "tr": "Yaşayarak ya da yaparak edinilen bilgi ve beceri."
+   }
+  },
+  {
+   "id": "karar",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "karar",
+     "example": "Zor bir karar verdim."
+    },
+    "en": {
+     "text": "decision",
+     "example": "I made a difficult decision."
+    }
+   },
+   "hint": {
+    "tr": "Seçenekler arasından birini seçmenin sonucu."
+   }
+  },
+  {
+   "id": "amac",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "amaç",
+     "alternatives": [
+      "hedef",
+      "gaye"
+     ],
+     "example": "Amacım İngilizcemi geliştirmek."
+    },
+    "en": {
+     "text": "goal",
+     "alternatives": [
+      "aim",
+      "purpose"
+     ],
+     "example": "My goal is to improve my English."
+    }
+   },
+   "hint": {
+    "tr": "Ulaşmak istediğin sonuç."
+   }
+  },
+  {
+   "id": "toplanti",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "toplantı",
+     "example": "Toplantı saat üçte başlayacak."
+    },
+    "en": {
+     "text": "meeting",
+     "example": "The meeting will start at three."
+    }
+   },
+   "hint": {
+    "tr": "Bir konuyu konuşmak için bir araya gelme."
+   }
+  },
+  {
+   "id": "maas",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "maaş",
+     "example": "Maaşım ayın başında yatıyor."
+    },
+    "en": {
+     "text": "salary",
+     "alternatives": [
+      "wage",
+      "pay"
+     ],
+     "example": "My salary is paid at the start of the month."
+    }
+   },
+   "hint": {
+    "tr": "Çalışana düzenli olarak ödenen ücret."
+   }
+  },
+  {
+   "id": "basari",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "başarı",
+     "example": "Başarının sırrı çok çalışmak."
+    },
+    "en": {
+     "text": "success",
+     "example": "The secret of success is hard work."
+    }
+   },
+   "hint": {
+    "tr": "İstenen sonuca ulaşma."
+   }
+  },
+  {
+   "id": "cozum",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "çözüm",
+     "example": "Bu soruna bir çözüm bulmalıyız."
+    },
+    "en": {
+     "text": "solution",
+     "example": "We must find a solution to this problem."
+    }
+   },
+   "hint": {
+    "tr": "Bir sorunu ortadan kaldıran yol."
+   }
+  },
+  {
+   "id": "tavsiye",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "tavsiye",
+     "alternatives": [
+      "öneri",
+      "öğüt"
+     ],
+     "example": "Sana bir tavsiye vereyim."
+    },
+    "en": {
+     "text": "advice",
+     "example": "Let me give you some advice."
+    }
+   },
+   "hint": {
+    "tr": "Birine ne yapması gerektiği konusunda söylenen görüş."
+   }
+  },
+  {
+   "id": "sikayet",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "şikâyet",
+     "alternatives": [
+      "şikayet"
+     ],
+     "example": "Otelin hizmetiyle ilgili bir şikâyetim var."
+    },
+    "en": {
+     "text": "complaint",
+     "example": "I have a complaint about the hotel's service."
+    }
+   },
+   "hint": {
+    "tr": "Memnun olmadığın bir durumu dile getirme."
+   }
+  },
+  {
+   "id": "gurultu",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "şehir",
+   "terms": {
+    "tr": {
+     "text": "gürültü",
+     "example": "Dışarıdaki gürültü yüzünden uyuyamadım."
+    },
+    "en": {
+     "text": "noise",
+     "example": "I couldn't sleep because of the noise outside."
+    }
+   },
+   "hint": {
+    "tr": "Rahatsız eden, düzensiz ve yüksek ses."
+   }
+  },
+  {
+   "id": "yetenek",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "yetenek",
+     "example": "Müzik için büyük bir yeteneği var."
+    },
+    "en": {
+     "text": "talent",
+     "alternatives": [
+      "ability",
+      "skill",
+      "gift"
+     ],
+     "example": "She has a great talent for music."
+    }
+   },
+   "hint": {
+    "tr": "Bir işi doğuştan iyi yapabilme gücü."
+   }
+  },
+  {
+   "id": "ani",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "anı",
+     "alternatives": [
+      "hatıra"
+     ],
+     "example": "Çocukluğumdan güzel anılarım var."
+    },
+    "en": {
+     "text": "memory",
+     "context": "hatıra anlamında",
+     "example": "I have happy memories of my childhood."
+    }
+   },
+   "hint": {
+    "tr": "Geçmişte yaşanan ve akılda kalan olay."
+   }
+  },
+  {
+   "id": "guven",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "güven",
+     "example": "Aramızdaki güven çok önemli."
+    },
+    "en": {
+     "text": "trust",
+     "alternatives": [
+      "confidence"
+     ],
+     "example": "The trust between us is very important."
+    }
+   },
+   "hint": {
+    "tr": "Birine ya da bir şeye inanıp dayanma duygusu."
+   }
+  },
+  {
+   "id": "cesur",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "cesur",
+     "alternatives": [
+      "yürekli"
+     ],
+     "example": "Cesur bir itfaiyeci çocuğu kurtardı."
+    },
+    "en": {
+     "text": "brave",
+     "alternatives": [
+      "courageous"
+     ],
+     "example": "A brave firefighter saved the child."
+    }
+   },
+   "hint": {
+    "tr": "Korkusuz, tehlikeden kaçmayan."
+   }
+  },
+  {
+   "id": "sabirli",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "sabırlı",
+     "example": "Öğretmenimiz çok sabırlı."
+    },
+    "en": {
+     "text": "patient",
+     "context": "sıfat",
+     "example": "Our teacher is very patient."
+    }
+   },
+   "hint": {
+    "tr": "Beklemeye ve zorluklara katlanabilen."
+   }
+  },
+  {
+   "id": "kiskanc",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "kıskanç",
+     "example": "Kıskanç olmayı bırak."
+    },
+    "en": {
+     "text": "jealous",
+     "example": "Stop being jealous."
+    }
+   },
+   "hint": {
+    "tr": "Başkasının sahip olduğu şeyi çekemeyen."
+   }
+  },
+  {
+   "id": "durust",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "dürüst",
+     "example": "Bana karşı her zaman dürüst ol."
+    },
+    "en": {
+     "text": "honest",
+     "example": "Always be honest with me."
+    }
+   },
+   "hint": {
+    "tr": "Doğruyu söyleyen, hile yapmayan."
+   }
+  },
+  {
+   "id": "tehlikeli",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "tehlikeli",
+     "example": "Bu yolda hızlı gitmek tehlikeli."
+    },
+    "en": {
+     "text": "dangerous",
+     "example": "Driving fast on this road is dangerous."
+    }
+   },
+   "hint": {
+    "tr": "Zarar görme ihtimali yüksek olan."
+   }
+  },
+  {
+   "id": "ozgur",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "özgür",
+     "alternatives": [
+      "hür"
+     ],
+     "example": "Kuşlar gökyüzünde özgür."
+    },
+    "en": {
+     "text": "free",
+     "context": "özgür anlamında",
+     "example": "Birds are free in the sky."
+    }
+   },
+   "hint": {
+    "tr": "Kimsenin baskısı altında olmayan."
+   }
+  },
+  {
+   "id": "kiralamak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "kiralamak",
+     "example": "Tatilde bir araba kiraladık."
+    },
+    "en": {
+     "text": "rent",
+     "alternatives": [
+      "hire"
+     ],
+     "example": "We rented a car on holiday."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi para karşılığı belli bir süre kullanmak."
+   }
+  },
+  {
+   "id": "tasinmak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "taşınmak",
+     "example": "Geçen ay yeni bir eve taşındık."
+    },
+    "en": {
+     "text": "move",
+     "context": "ev değiştirmek anlamında",
+     "example": "We moved to a new house last month."
+    }
+   },
+   "hint": {
+    "tr": "Oturduğun evi değiştirip başka bir yere yerleşmek."
+   }
+  },
+  {
+   "id": "kaybetmek",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "kaybetmek",
+     "alternatives": [
+      "yitirmek"
+     ],
+     "example": "Maçı kaybettik."
+    },
+    "en": {
+     "text": "lose",
+     "example": "We lost the match."
+    }
+   },
+   "hint": {
+    "tr": "Elindeki bir şeyi artık bulamamak ya da yarışmada yenilmek."
+   }
+  },
+  {
+   "id": "kazanmak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "kazanmak",
+     "example": "Takımımız maçı kazandı."
+    },
+    "en": {
+     "text": "win",
+     "alternatives": [
+      "earn"
+     ],
+     "example": "Our team won the match."
+    }
+   },
+   "hint": {
+    "tr": "Yarışmada birinci olmak ya da emeğinin karşılığını almak."
+   }
+  },
+  {
+   "id": "genellikle",
+   "pos": "adverb",
+   "level": "B1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "genellikle",
+     "alternatives": [
+      "çoğunlukla"
+     ],
+     "example": "Genellikle otobüsle işe giderim."
+    },
+    "en": {
+     "text": "usually",
+     "alternatives": [
+      "generally"
+     ],
+     "example": "I usually go to work by bus."
+    }
+   },
+   "hint": {
+    "tr": "Çoğu zaman, sık sık."
+   }
+  },
+  {
+   "id": "aniden",
+   "pos": "adverb",
+   "level": "B1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "aniden",
+     "alternatives": [
+      "birden",
+      "birdenbire"
+     ],
+     "example": "Işıklar aniden söndü."
+    },
+    "en": {
+     "text": "suddenly",
+     "example": "The lights suddenly went out."
+    }
+   },
+   "hint": {
+    "tr": "Beklenmedik bir anda."
+   }
+  },
+  {
+   "id": "tutarli",
+   "pos": "adjective",
+   "level": "B2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "tutarlı",
+     "example": "Kararlarında tutarlı olmalısın."
+    },
+    "en": {
+     "text": "consistent",
+     "example": "You should be consistent in your decisions."
+    }
+   },
+   "hint": {
+    "tr": "Kendi içinde çelişki olmayan, hep aynı çizgide giden."
+   }
+  },
+  {
+   "id": "onyargi",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "önyargı",
+     "example": "Önyargılarımızdan kurtulmalıyız."
+    },
+    "en": {
+     "text": "prejudice",
+     "alternatives": [
+      "bias"
+     ],
+     "example": "We should get rid of our prejudices."
+    }
+   },
+   "hint": {
+    "tr": "Bir kişi ya da şey hakkında, tanımadan oluşturulan olumsuz düşünce."
+   }
+  },
+  {
+   "id": "ertelemek",
+   "pos": "verb",
+   "level": "B2",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "ertelemek",
+     "example": "Toplantıyı gelecek haftaya erteledik."
+    },
+    "en": {
+     "text": "postpone",
+     "alternatives": [
+      "delay",
+      "put off"
+     ],
+     "example": "We postponed the meeting until next week."
+    }
+   },
+   "hint": {
+    "tr": "Bir işi daha sonraki bir zamana bırakmak."
+   }
+  },
+  {
+   "id": "kanit",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "kanıt",
+     "alternatives": [
+      "delil"
+     ],
+     "example": "Polis yeterli kanıt bulamadı."
+    },
+    "en": {
+     "text": "evidence",
+     "alternatives": [
+      "proof"
+     ],
+     "example": "The police couldn't find enough evidence."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin doğru olduğunu gösteren bilgi ya da belge."
+   }
+  },
+  {
+   "id": "varsayim",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "varsayım",
+     "example": "Bu sadece bir varsayım."
+    },
+    "en": {
+     "text": "assumption",
+     "example": "This is just an assumption."
+    }
+   },
+   "hint": {
+    "tr": "Doğruluğu kanıtlanmadan kabul edilen düşünce."
+   }
+  },
+  {
+   "id": "belirsiz",
+   "pos": "adjective",
+   "level": "B2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "belirsiz",
+     "example": "Projenin geleceği hâlâ belirsiz."
+    },
+    "en": {
+     "text": "uncertain",
+     "alternatives": [
+      "unclear",
+      "vague"
+     ],
+     "example": "The future of the project is still uncertain."
+    }
+   },
+   "hint": {
+    "tr": "Açık ve kesin olmayan."
+   }
+  },
+  {
+   "id": "kacinilmaz",
+   "pos": "adjective",
+   "level": "B2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "kaçınılmaz",
+     "example": "Değişim kaçınılmaz."
+    },
+    "en": {
+     "text": "inevitable",
+     "example": "Change is inevitable."
+    }
+   },
+   "hint": {
+    "tr": "Önüne geçilemeyen, mutlaka olacak."
+   }
+  },
+  {
+   "id": "abartmak",
+   "pos": "verb",
+   "level": "B2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "abartmak",
+     "example": "Bence biraz abartıyorsun."
+    },
+    "en": {
+     "text": "exaggerate",
+     "example": "I think you're exaggerating a bit."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi olduğundan büyük göstermek."
+   }
+  },
+  {
+   "id": "etkilemek",
+   "pos": "verb",
+   "level": "B2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "etkilemek",
+     "example": "Hava durumu ruh hâlimizi etkiler."
+    },
+    "en": {
+     "text": "affect",
+     "alternatives": [
+      "influence",
+      "impress"
+     ],
+     "example": "The weather affects our mood."
+    }
+   },
+   "hint": {
+    "tr": "Bir şey ya da kişi üzerinde değişiklik yaratmak."
+   }
+  },
+  {
+   "id": "yaygin",
+   "pos": "adjective",
+   "level": "B2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "yaygın",
+     "example": "Bu hastalık çocuklarda yaygın."
+    },
+    "en": {
+     "text": "common",
+     "alternatives": [
+      "widespread"
+     ],
+     "example": "This illness is common in children."
+    }
+   },
+   "hint": {
+    "tr": "Pek çok yerde ya da kişide görülen."
+   }
+  },
+  {
+   "id": "zarar",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "zarar",
+     "alternatives": [
+      "hasar"
+     ],
+     "example": "Fırtına evlere büyük zarar verdi."
+    },
+    "en": {
+     "text": "damage",
+     "alternatives": [
+      "harm"
+     ],
+     "example": "The storm caused great damage to the houses."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin bozulması ya da kötü etkilenmesi."
+   }
+  },
+  {
+   "id": "israrci",
+   "pos": "adjective",
+   "level": "B2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "ısrarcı",
+     "example": "Satıcı çok ısrarcıydı."
+    },
+    "en": {
+     "text": "persistent",
+     "alternatives": [
+      "insistent",
+      "pushy"
+     ],
+     "example": "The salesperson was very persistent."
+    }
+   },
+   "hint": {
+    "tr": "Bir isteğinden kolay kolay vazgeçmeyen."
+   }
+  },
+  {
+   "id": "suphe",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "şüphe",
+     "alternatives": [
+      "kuşku"
+     ],
+     "example": "Bu konuda hiç şüphem yok."
+    },
+    "en": {
+     "text": "doubt",
+     "alternatives": [
+      "suspicion"
+     ],
+     "example": "I have no doubt about it."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin doğruluğundan emin olamama hâli."
+   }
+  },
+  {
+   "id": "tartismak",
+   "pos": "verb",
+   "level": "B2",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "tartışmak",
+     "example": "Bu konuyu yarın tartışalım."
+    },
+    "en": {
+     "text": "discuss",
+     "alternatives": [
+      "argue",
+      "debate"
+     ],
+     "example": "Let's discuss this topic tomorrow."
+    }
+   },
+   "hint": {
+    "tr": "Bir konu hakkında farklı görüşleri karşılıklı konuşmak."
+   }
+  },
+  {
+   "id": "verimli",
+   "pos": "adjective",
+   "level": "B2",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "verimli",
+     "example": "Yeni sistem çok daha verimli."
+    },
+    "en": {
+     "text": "efficient",
+     "alternatives": [
+      "productive"
+     ],
+     "example": "The new system is much more efficient."
+    }
+   },
+   "hint": {
+    "tr": "Az emekle çok sonuç veren."
+   }
+  },
+  {
+   "id": "elestirmek",
+   "pos": "verb",
+   "level": "B2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "eleştirmek",
+     "example": "Filmi sert bir dille eleştirdi."
+    },
+    "en": {
+     "text": "criticise",
+     "alternatives": [
+      "criticize"
+     ],
+     "example": "She criticised the film harshly."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin kusurlarını ve iyi yanlarını değerlendirmek."
+   }
+  },
+  {
+   "id": "azaltmak",
+   "pos": "verb",
+   "level": "B2",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "azaltmak",
+     "example": "Şeker tüketimimi azaltmaya çalışıyorum."
+    },
+    "en": {
+     "text": "reduce",
+     "alternatives": [
+      "decrease",
+      "cut"
+     ],
+     "example": "I'm trying to reduce my sugar intake."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin miktarını düşürmek."
+   }
+  },
+  {
+   "id": "artirmak",
+   "pos": "verb",
+   "level": "B2",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "artırmak",
+     "alternatives": [
+      "arttırmak"
+     ],
+     "example": "Şirket fiyatları artırdı."
+    },
+    "en": {
+     "text": "increase",
+     "alternatives": [
+      "raise"
+     ],
+     "example": "The company increased its prices."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin miktarını yükseltmek."
+   }
+  },
+  {
+   "id": "iyimser",
+   "pos": "adjective",
+   "level": "B2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "iyimser",
+     "example": "Geleceğe karşı iyimserim."
+    },
+    "en": {
+     "text": "optimistic",
+     "example": "I'm optimistic about the future."
+    }
+   },
+   "hint": {
+    "tr": "Olayların iyi yanını gören, umutlu."
+   }
+  },
+  {
+   "id": "ayrinti",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "ayrıntı",
+     "alternatives": [
+      "detay"
+     ],
+     "example": "Her ayrıntıyı kontrol ettik."
+    },
+    "en": {
+     "text": "detail",
+     "example": "We checked every detail."
+    }
+   },
+   "hint": {
+    "tr": "Bir bütünü oluşturan küçük parça ya da bilgi."
+   }
+  }
+ ]
+}
