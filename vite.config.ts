@@ -56,7 +56,9 @@ export default defineConfig({
   // Göreli taban: uygulama bir alt klasörden de sunulabilsin.
   base: './',
   plugins: [react(), serviceWorker()],
-  server: { port: 5174 },
-  preview: { port: 4174 },
+  // Vite yalnızca localhost ve IP adreslerine izin verir. Telefondan Tailscale
+  // adresiyle (<makine>.<tailnet>.ts.net) açılabilmesi için o alan adı da izinli.
+  server: { port: 5174, allowedHosts: ['.ts.net'] },
+  preview: { port: 4174, allowedHosts: ['.ts.net'] },
   test: { environment: 'node', include: ['tests/**/*.test.ts'] },
 });
