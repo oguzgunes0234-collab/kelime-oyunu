@@ -63,7 +63,7 @@ type Note = { text: string; tone: 'good' | 'bad' | 'info'; seq: number } | null;
  */
 type TipId = TutorialSkill | 'wrong';
 const TIPS: Record<TipId, string> = {
-  basics: 'Pembe kutu ipucu: Türkçe bir kelime. Ok, İngilizcesini hangi yöne yazacağını gösterir. Alttaki klavyeyle yaz.',
+  basics: 'Oklu kutu ipucudur: Türkçe bir kelime. Ok, İngilizcesini hangi yöne yazacağını gösterir. Alttaki klavyeyle yaz.',
   crossing: 'İki kelime bir kareyi paylaşıyor. ↓ aşağı yaz demek. Birini çözmek diğerine harf verir.',
   switch: 'Parlayan kare iki kelimenin başı. Ona bir kez daha dokun: yazma yönü değişir.',
   bent: 'Kırık ok: ↳ cevap ipucunun altından başlar, sağa gider. ↴ yanından başlar, aşağı iner.',
@@ -160,6 +160,9 @@ export function Puzzle(props: Props) {
     window.clearTimeout(timer.current);
     if (tutorial) {
       // Eğitim profili değiştirmez (jeton, hedef, tekrar listesi); yalnızca adım ilerler.
+      // Adım, "Devam"a basılmadan da kaydedilir: uygulama kapanırsa aynı adım tekrar oynatılmaz.
+      const doneStep = props.tutorialStep! + 1;
+      if (base.puzzleTutorialStep < doneStep) saveProfile({ ...base, puzzleTutorialStep: doneStep });
       closeTip();
       timer.current = window.setTimeout(() => setDialog({ kind: 'tutorialDone' }), reducedMotion() ? 0 : 900);
       return;
@@ -199,8 +202,10 @@ export function Puzzle(props: Props) {
         // Açıklamalar, öğrettikleri şey olunca kendiliğinden kapanır.
         if (e.kind === 'solved') {
           closeTip('crossing');
-          closeTip('bent');
           closeTip('wrong');
+          // Kırık ok açıklaması iki türü de anlatır: ikisi de çözülünce kapanır.
+          const bent = next.cw.words.map((w, i) => (w.arrow === 'down-right' || w.arrow === 'right-down' ? i : -1)).filter((i) => i >= 0);
+          if (bent.every((i) => next.solved[i])) closeTip('bent');
         }
         if ((e.kind === 'reveal' || e.kind === 'meaning') && live.current.tip === 'tools') closeTip('tools');
         if (e.kind === 'wrong' && !wrongTipShown.current) {
@@ -418,7 +423,7 @@ export function Puzzle(props: Props) {
           <div className="progress-label">
             <span>
               {tutorial
-                ? `Eğitim ${props.tutorialStep! + 1}/${TUTORIAL_LENGTH} · ${step!.title}`
+                ? `${props.tutorialStep! + 1}/${TUTORIAL_LENGTH} · ${step!.title}`
                 : `${props.adaptive ? 'Uyarlamalı · ' : ''}${DIFFICULTY_LABEL[puzzle.difficulty]}`}
             </span>
             <span aria-label={`${total} kelimeden ${solved} tanesi çözüldü`}>
@@ -486,15 +491,16 @@ export function Puzzle(props: Props) {
             {note.text}
           </p>
         )}
-        {tip && puzzle.status === 'playing' && (
-          <div className="cw-coach" role="note" key={tip}>
-            <p>{TIPS[tip]}</p>
-            <button type="button" className="btn btn-secondary btn-small" onClick={() => closeTip()}>
-              Anladım
-            </button>
-          </div>
-        )}
       </div>
+      {/* Açıklama ızgaranın altında kendi yerinde durur: kareleri örtmez, ızgara onun için küçülür. */}
+      {tip && puzzle.status === 'playing' && (
+        <div className="cw-coach" role="note" key={tip}>
+          <p>{TIPS[tip]}</p>
+          <button type="button" className="btn btn-secondary btn-small" onClick={() => closeTip()}>
+            Anladım
+          </button>
+        </div>
+      )}
       <p className="sr-only" role="status" aria-live="polite">
         {note?.text ?? ''}
       </p>
@@ -557,7 +563,7 @@ export function Puzzle(props: Props) {
         <Sheet title="Nasıl oynanır" onClose={() => setDialog(null)}>
           <ul className="cw-intro">
             <li>
-              Pembe kutular ipucudur: {src.name} bir kelime. Karşılığını {tgt.name} olarak okun gösterdiği yöne yaz.
+              Oklu kutular ipucudur: {src.name} bir kelime. Karşılığını {tgt.name} olarak okun gösterdiği yöne yaz.
             </li>
             <li className="cw-intro-arrows">
               <span>

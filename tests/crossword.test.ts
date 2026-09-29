@@ -176,6 +176,18 @@ describe('bulmaca oynanışı', () => {
     expect(s.wrong[0]).toBe(0);
   });
 
+  it('Anlam’dan hemen sonra Harf aç da imleci sıradaki boş kareye taşır', () => {
+    let s = selectWord(fresh(), 0);
+    s = showMeaning(s, true).state;
+    const res = revealLetter(s);
+    expect(res.state.event?.kind).toBe('reveal');
+    expect(res.state.sel.index).toBe(1);
+    const w = s.cw.words[0];
+    const after = typeLetter(res.state, w.letters[1]);
+    expect(after.fill[cellKey(...wordCells(w)[0])]).toBe(w.letters[0]);
+    expect(after.fill[cellKey(...wordCells(w)[1])]).toBe(w.letters[1]);
+  });
+
   it('anlam ipucu kelime başına bir kez açılır', () => {
     let s = selectWord(fresh(), 0);
     const first = showMeaning(s, true);

@@ -271,6 +271,8 @@ export function revealLetter(state: PuzzleState): { state: PuzzleState; applied:
     fill: { ...state.fill, [k]: correctLetter(state, r, c) },
     revealed: [...state.revealed, k],
     sel: { ...state.sel, index: i },
+    // Önceki olay (ör. Anlam) taşınırsa aşağıdaki kontrol onu yeni olay sanıp imleci ilerletmiyordu.
+    event: null,
   };
   const touched = wordsAt(s, r, c).filter((w) => !s.solved[w]);
   s = { ...s, lettersRevealed: s.lettersRevealed.map((v, w) => (touched.includes(w) ? v + 1 : v)) };

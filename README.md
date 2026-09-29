@@ -65,8 +65,11 @@ ilk açılıştan sonra oyun çevrimdışı da açılır. PWA olarak ana ekrana 
 - **İki yön:** Türkçe → İngilizce ve İngilizce → Türkçe.
 - **Seviyeler:** Kolay (≈ A1–A2), Orta (≈ A2–B1), Zor (≈ B1–B2). Zorlaştıkça
   taşlara şaşırtmaca harfler eklenir.
-- **Uyarlamalı mod:** Son 6 turun ortalamasına bakar; seviye en az 5 tur
-  oynanmadan değişmez. Ortalama ≥ 0,8 ise yükselir, ≤ 0,4 ise düşer.
+- **Uyarlamalı mod:** Ortalama ≥ 0,8 ise seviye bir kademe yükselir, ≤ 0,4
+  ise bir kademe düşer; tek seferde asla iki kademe değişmez. Hızlı turda
+  birim kelimedir (son 6 tur, en az 5 tur). Bulmacada birim biten bulmacadır
+  (son 3 bulmaca, en az 2 bulmaca); bulmacanın başarısı kelimelerin
+  kalitelerinin ortalamasıdır (yardım ve yanlış deneme düşürür, çözülmeyen 0).
 - **Dört araç** (alt çubuk, kalan hak rozetle): Karıştır, Mıknatıs, İpucu,
   Geri al. Her aracın ne yaptığı ve bedeli `?` düğmesinde yazar. Hak bitince
   oyun durmaz; bilgi penceresi jetonla hak almayı ya da araçsız devam etmeyi
@@ -77,11 +80,23 @@ ilk açılıştan sonra oyun çevrimdışı da açılır. PWA olarak ana ekrana 
   seviye, iki dilde örnek cümle, puan dökümü.
 - **Tekrar listesi:** yanlış, pas geçilen ya da yardımla (Mıknatıs/İpucu)
   çözülen kelimeler eklenir; yardımsız ilk denemede doğru bilinince çıkar.
-- **Günlük hedef ve seri:** yalnızca doğru cevaplar sayılır, yanlışlar hiçbir
-  şey eksiltmez. Haftada bir kaçırılan gün otomatik "dinlenme günü" sayılır.
-  Seri biterse puan/jeton/hak kaybı olmaz.
-- **İlk açılışta örnek tur:** gerçek kontrollerle bir kelime çözdürür;
-  eğitimde hak harcanmaz, ilerleme kaydedilmez. Ayarlar'dan yeniden oynanabilir.
+- **Günlük hedef ve seri:** hedef günde bir bulmacayı tamamlamaktır (tüm
+  kelimeleri çöz; Anlam ve Harf aç serbest). Erken "Bitir" hedefi tamamlamaz;
+  hızlı tur hedefe sayılmaz. Doğru kelimeler yalnızca istatistik olarak
+  sayılır. Yanlışlar hiçbir şey eksiltmez. Haftada bir kaçırılan gün otomatik
+  "dinlenme günü" sayılır. Seri biterse puan/jeton/hak kaybı olmaz.
+- **Bulmaca eğitimi (T1–T5, `core/tutorial.ts`):** "Bulmaca çöz" ilk kez
+  açılınca mevcut paketten elle yazılmış beş küçük bulmaca (1×4 … 5×7) gelir;
+  her biri tek beceri öğretir: ipucu ve ok · ortak kare · ortak karede yön
+  değiştirme · kırık oklar (↳ ↴) · Anlam ve Harf aç. Açıklamalar tek cümle,
+  gerektiği anda çıkar, "Anladım" ile ya da öğrettiği şey yapılınca kapanır;
+  ilk yanlış kelimede düzeltme anlatılır. "Eğitimi atla" her adımda var.
+  Eğitim profili değiştirmez (jeton, hedef, tekrar listesi), araçlar
+  ücretsizdir ve yarım kalmış normal bulmacanın üzerine yazmaz. Adım,
+  bitince kaydedilir. Yarım bulmacası olan oyuncuda önce o sürer; eğitim
+  "?" → "Eğitimi baştan oynat" ya da Ayarlar'dan açılır.
+- **Hızlı tur örneği:** gerçek kontrollerle bir kelime çözdürür; hak
+  harcanmaz, ilerleme kaydedilmez. Ayarlar'dan yeniden oynanabilir.
 - **Kayıt:** hesap yok; tüm ilerleme `localStorage`'da
   (`kelime-oyunu:profil:v1`). Depolama kapalıysa oyun yine çalışır.
 - **Erişilebilirlik:** klavye (harf yaz, ⌫ Geri al, Esc Temizle, Enter

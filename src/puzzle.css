@@ -164,11 +164,7 @@
 /* Eğitim açıklaması: ızgaranın altında tek cümle ve "Anladım". Hızlı turdaki
    eğitim balonuyla aynı dil (turkuaz çerçeve). */
 .cw-coach {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 4px;
-  z-index: 3;
+  margin: 0 12px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -519,7 +515,8 @@
     margin: 0 6px;
   }
   .cw-clue-text {
-    font-size: 7.5px;
+    /* Küçük karede en az 7,5 px; eğitimdeki büyük karelerde kareyle büyür. */
+    font-size: max(7.5px, calc(var(--cell) * 0.22));
   }
 }
 
