@@ -74,17 +74,23 @@ ilk açılıştan sonra oyun çevrimdışı da açılır. PWA olarak ana ekrana 
 ## Özellikler
 
 - **İki yön:** Türkçe → İngilizce ve İngilizce → Türkçe.
-- **Seviyeler:** Kolay (≈ A1–A2), Orta (≈ A2–B1), Zor (≈ B1–B2). Zorlaştıkça
-  taşlara şaşırtmaca harfler eklenir.
+- **Seviyeler:** Kolay (≈ A1–A2), Orta (≈ A2–B1), Zor (≈ B1–B2), Uzman
+  (≈ B2–C1). Zorlaştıkça taşlara şaşırtmaca harfler eklenir.
 - **Uyarlamalı mod:** Ortalama ≥ 0,8 ise seviye bir kademe yükselir, ≤ 0,4
   ise bir kademe düşer; tek seferde asla iki kademe değişmez. Hızlı turda
   birim kelimedir (son 6 tur, en az 5 tur). Bulmacada birim biten bulmacadır
   (son 3 bulmaca, en az 2 bulmaca); bulmacanın başarısı kelimelerin
   kalitelerinin ortalamasıdır (yardım ve yanlış deneme düşürür, çözülmeyen 0).
+  Yükselme bölüm tavanını aşmaz (Bölüm 1–2 en çok Orta, 3–5 en çok Zor, 6+
+  Uzman; `chapterMaxDifficulty`); düşme her zaman serbesttir, zorlanan oyuncu
+  bir basamak aşağıda pekiştirir.
 - **Dört araç** (alt çubuk, kalan hak rozetle): Karıştır, Mıknatıs, İpucu,
-  Geri al. Her aracın ne yaptığı ve bedeli `?` düğmesinde yazar. Hak bitince
-  oyun durmaz; bilgi penceresi jetonla hak almayı ya da araçsız devam etmeyi
-  önerir. Paket ekranı yalnızca oyuncu açıkça isterse açılır.
+  Geri al. Her aracın ne yaptığı ve bedeli `?` düğmesinde yazar. Hakkı biten
+  araç rozetinde "+" görünür. Hak bitince oyun durmaz; pencere yalnızca
+  oyuncu o araca dokununca açılır (yanlış cevapta ya da takılınca kendiliğinden
+  açılmaz). Jeton yetiyorsa önce "+1 hak al", yetmiyorsa önce "Araçsız devam
+  et" ve jetonun nasıl kazanılacağı gösterilir; "Hak ve paketler" her iki
+  durumda da görünür.
 - **Ücretsiz eylemler:** Temizle ve Pas geç her zaman ücretsizdir. Tam bir
   yanlış cevap 3 deneme hakkından birini harcar.
 - **Tur sonu:** doğru cevap, diğer kabul edilen karşılıklar, anlam, tür,
@@ -109,16 +115,17 @@ ilk açılıştan sonra oyun çevrimdışı da açılır. PWA olarak ana ekrana 
 - **Hızlı tur örneği:** gerçek kontrollerle bir kelime çözdürür; hak
   harcanmaz, ilerleme kaydedilmez. Ayarlar'dan yeniden oynanabilir.
 - **Bölümler (`core/campaign.ts`):** 5 bulmaca = 1 bölüm; yalnızca tüm
-  kelimeleri çözülen ana oyun bulmacası sayılır. Bölüm yalnızca ızgara boyunu
-  belirler (Bölüm 1: 7×7, sonrası 9×8); kelime seviyesini uyarlamalı zorluk
-  belirler ve oyuncuya seçtirilmez. Ana sayfada bölüm yolu (biten ✓, sıradaki
+  kelimeleri çözülen ana oyun bulmacası sayılır. Bölüm ızgara boyunu (Bölüm 1:
+  7×7, sonrası 9×8) ve zorluğun çıkabileceği tavanı belirler; kelime seviyesini
+  tavanın altında uyarlamalı zorluk belirler ve oyuncuya seçtirilmez. Ana sayfada bölüm yolu (biten ✓, sıradaki
   vurgulu, kilitli kesik çizgi), sonuç ekranında küçük yol, bölüm bitince
   "Bölüm N tamamlandı" ekranı (yeni ödül ya da para birimi yok). Eski kayıtlar
   Bölüm 1'den başlar (tamamlanan bulmaca sayısı eskiden tutulmuyordu); diğer
   veriler korunur, elle seçilmiş seviye uyarlamalı seviyeye aktarılır.
 - **Konu modları (`core/topics.ts`):** Seyahat ve şehir, Yemek ve restoran,
   Alışveriş ve para, Ev ve aile, İş ve ofis, Sağlık, Bilim ve teknoloji,
-  Hukuk. Bir mod, pakette o konudan en az 60 kelime olunca açılır; eksik mod
+  Hukuk, Geçmiş zaman (düzensiz fiiller: "gitti" ↔ went; çözülünce
+  "Düzensiz fiil: go → went" notu görünür). Bir mod, pakette o konudan en az 60 kelime olunca açılır; eksik mod
   kaç kelime kaldığıyla "Hazırlanıyor" görünür. Konu bulmacası 7×7 ızgarada
   oynanır, bölümü ve zorluğu değiştirmez, günlük hedefe sayılır.
 - **Hak ve paketler:** araç hakları tek tek ya da paket halinde jetonla
@@ -171,7 +178,7 @@ kelime-oyunu/
 
 ## Kelime verisi
 
-`src/data/pack-tr-en.json` **824 kelimelik** pakettir. Kapsamlı ya da
+`src/data/pack-tr-en.json` **863 kelimelik** pakettir. Kapsamlı ya da
 doğrulanmış bir sözlük değildir; seviyeler yaklaşık CEFR tahminidir.
 
 - İlk 138 kelime elle yazıldı (`check` alanı yok).

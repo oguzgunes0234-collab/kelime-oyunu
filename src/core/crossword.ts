@@ -219,12 +219,15 @@ function attempt(cands: Candidate[], rows: number, cols: number, maxWords: numbe
   grid.place(first, 'across', row, col, 'right');
 
   const usedAnswers = new Set([first.letters.join('')]);
+  // Aynı görünen ipucu (ör. "ay" hem month hem moon) bir bulmacada bir kez:
+  // ayırt edici açıklama yalnızca ipucu çubuğunda görünür, karede görünmez.
+  const usedClues = new Set([first.clue]);
   let progress = true;
   while (progress && grid.words.length < maxWords) {
     progress = false;
     for (let i = 0; i < pool.length && grid.words.length < maxWords; i++) {
       const cand = pool[i];
-      if (usedAnswers.has(cand.letters.join(''))) continue;
+      if (usedAnswers.has(cand.letters.join('')) || usedClues.has(cand.clue)) continue;
       const options = placementsFor(grid, cand);
       if (options.length === 0) continue;
       // Çok kesişen yerleşim tercih edilir; eşitlikte rastgele.
@@ -233,6 +236,7 @@ function attempt(cands: Candidate[], rows: number, cols: number, maxWords: numbe
       const p = top[Math.floor(rng() * top.length)];
       grid.place(cand, p.dir, p.row, p.col, p.arrow);
       usedAnswers.add(cand.letters.join(''));
+      usedClues.add(cand.clue);
       pool.splice(i, 1);
       i--;
       progress = true;

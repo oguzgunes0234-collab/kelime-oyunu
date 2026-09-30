@@ -1,5 +1,5 @@
 import { initialAdaptive, recordRound, roundQuality, type AdaptiveState } from './adaptive';
-import { initialCampaign, type CampaignState } from './campaign';
+import { chapterInfo, chapterMaxDifficulty, initialCampaign, type CampaignState } from './campaign';
 import { recordSrs, type SrsState } from './srs';
 import { initialDaily, recordCorrect, rollDay, type DailyState } from './daily';
 import { COINS_CLEAN_BONUS, COINS_PER_CHARGE, COINS_PER_CORRECT, DAILY_GOAL_REWARD, INITIAL_INVENTORY, type ToolPack } from './economy';
@@ -182,7 +182,8 @@ export function applyWord(
   p.srs = recordSrs(p.srs ?? {}, dir, id, clean ? 'clean' : correct ? 'correct' : 'miss', now);
 
   if (ctx.adaptive && ctx.mode === 'normal') {
-    const res = recordRound(p.adaptive, roundQuality(correct ? 'correct' : word.status === 'failed' ? 'failed' : 'skipped', helped, word.wrongAttempts));
+    const max = chapterMaxDifficulty(chapterInfo(p.campaign ?? initialCampaign()).chapter);
+    const res = recordRound(p.adaptive, roundQuality(correct ? 'correct' : word.status === 'failed' ? 'failed' : 'skipped', helped, word.wrongAttempts), max);
     p.adaptive = res.state;
     outcome.levelChange = res.change;
     outcome.difficultyAfter = res.state.difficulty;

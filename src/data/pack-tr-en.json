@@ -111,6 +111,7 @@
    "terms": {
     "tr": {
      "text": "ev",
+     "context": "bina",
      "example": "Evimiz okula yakın."
     },
     "en": {
@@ -437,6 +438,7 @@
    "terms": {
     "tr": {
      "text": "yol",
+     "context": "araç yolu",
      "example": "Bu yol denize çıkıyor."
     },
     "en": {
@@ -621,7 +623,7 @@
    "terms": {
     "tr": {
      "text": "ay",
-     "context": "gökyüzündeki",
+     "context": "gökyüzü",
      "example": "Bu gece ay çok parlak."
     },
     "en": {
@@ -736,6 +738,7 @@
    "terms": {
     "tr": {
      "text": "kar",
+     "context": "yağış",
      "example": "Kışın dağlara kar yağar."
     },
     "en": {
@@ -1024,6 +1027,7 @@
    "terms": {
     "tr": {
      "text": "üzgün",
+     "context": "duygu",
      "example": "Neden üzgünsün?"
     },
     "en": {
@@ -1285,7 +1289,7 @@
    "terms": {
     "tr": {
      "text": "hava",
-     "context": "yağmurlu, güneşli…",
+     "context": "yağmur, güneş",
      "example": "Bugün hava çok güzel."
     },
     "en": {
@@ -2737,6 +2741,7 @@
    "terms": {
     "tr": {
      "text": "tartışmak",
+     "context": "konuşarak",
      "example": "Bu konuyu yarın tartışalım."
     },
     "en": {
@@ -3043,6 +3048,7 @@
    "terms": {
     "tr": {
      "text": "almak",
+     "context": "eline",
      "example": "Yanına bir şemsiye al."
     },
     "en": {
@@ -3130,6 +3136,7 @@
    "terms": {
     "tr": {
      "text": "aramak",
+     "context": "telefonla",
      "example": "Lütfen bu akşam beni ara."
     },
     "en": {
@@ -3527,6 +3534,7 @@
    "terms": {
     "tr": {
      "text": "çalışmak",
+     "context": "iş",
      "example": "Bir bankada çalışıyorum."
     },
     "en": {
@@ -3593,6 +3601,7 @@
    "terms": {
     "tr": {
      "text": "olmak",
+     "context": "dönüşmek",
      "example": "Doktor olmak istiyorum."
     },
     "en": {
@@ -3855,6 +3864,7 @@
    "terms": {
     "tr": {
      "text": "son",
+     "context": "bitiş",
      "example": "Bu hikâyenin sonu."
     },
     "en": {
@@ -3879,6 +3889,7 @@
      "alternatives": [
       "surat"
      ],
+     "context": "vücut",
      "example": "Yüzünü yıka."
     },
     "en": {
@@ -4863,6 +4874,7 @@
    "terms": {
     "tr": {
      "text": "dönmek",
+     "context": "yön değiştirmek",
      "example": "Bankadan sola dön."
     },
     "en": {
@@ -4884,6 +4896,7 @@
    "terms": {
     "tr": {
      "text": "beklemek",
+     "context": "bir süre",
      "example": "Beni burada bekle."
     },
     "en": {
@@ -6135,6 +6148,7 @@
    "terms": {
     "tr": {
      "text": "kız",
+     "context": "çocuk",
      "example": "Kız benim kardeşim."
     },
     "en": {
@@ -6246,6 +6260,7 @@
    "terms": {
     "tr": {
      "text": "tarih",
+     "context": "geçmiş",
      "example": "Tarih derslerini severim."
     },
     "en": {
@@ -7939,6 +7954,7 @@
    "terms": {
     "tr": {
      "text": "ses",
+     "context": "her türlü",
      "example": "Garip bir ses duydum."
     },
     "en": {
@@ -8390,6 +8406,7 @@
      "alternatives": [
       "seyretmek"
      ],
+     "context": "seyretmek",
      "example": "Pazar günü film izleriz."
     },
     "en": {
@@ -9201,6 +9218,7 @@
       "abi",
       "ağabey"
      ],
+     "context": "erkek",
      "example": "Kardeşim on yaşında."
     },
     "en": {
@@ -9600,6 +9618,7 @@
    "terms": {
     "tr": {
      "text": "çift",
+     "context": "iki kişi",
      "example": "Onlar mutlu bir çift."
     },
     "en": {
@@ -12968,6 +12987,7 @@
    "terms": {
     "tr": {
      "text": "yedi",
+     "context": "sayı",
      "example": "Bir haftada yedi gün var."
     },
     "en": {
@@ -13450,6 +13470,7 @@
    "terms": {
     "tr": {
      "text": "şeker",
+     "context": "toz",
      "example": "Çayıma şeker koymayın lütfen."
     },
     "en": {
@@ -13858,6 +13879,7 @@
    "terms": {
     "tr": {
      "text": "tatlı",
+     "context": "tat",
      "example": "Bu pasta çok tatlı."
     },
     "en": {
@@ -14839,6 +14861,7 @@
      "alternatives": [
       "kar"
      ],
+     "context": "kazanç",
      "example": "Şirket büyük kâr elde etti."
     },
     "en": {
@@ -16288,6 +16311,7 @@
    "terms": {
     "tr": {
      "text": "ücret",
+     "context": "iş karşılığı",
      "example": "Ücret çok düşük."
     },
     "en": {
@@ -17863,6 +17887,867 @@
    },
    "hint": {
     "tr": "Kanuna aykırı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "sivi",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "sıvı",
+     "example": "Su bir sıvıdır."
+    },
+    "en": {
+     "text": "liquid",
+     "example": "Water is a liquid."
+    }
+   },
+   "hint": {
+    "tr": "Akabilen, konduğu kabın şeklini alan madde."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "agirlik",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "ağırlık",
+     "example": "Bu kutunun ağırlığı ne?"
+    },
+    "en": {
+     "text": "weight",
+     "example": "What is the weight of this box?"
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin ne kadar ağır olduğu."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kutle",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "kütle",
+     "example": "Kütle kilogramla ölçülür."
+    },
+    "en": {
+     "text": "mass",
+     "example": "Mass is measured in kilograms."
+    }
+   },
+   "hint": {
+    "tr": "Bir cisimdeki madde miktarı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "evren",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "evren",
+     "example": "Evren çok büyük."
+    },
+    "en": {
+     "text": "universe",
+     "example": "The universe is very big."
+    }
+   },
+   "hint": {
+    "tr": "Gezegenler ve yıldızlar dahil var olan her şey."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kuram",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "kuram",
+     "alternatives": [
+      "teori"
+     ],
+     "example": "Einstein'ın kuramı bilimi değiştirdi."
+    },
+    "en": {
+     "text": "theory",
+     "example": "Einstein's theory changed science."
+    }
+   },
+   "hint": {
+    "tr": "Bir olayı açıklamaya çalışan düşünce sistemi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kimyager",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "kimyager",
+     "example": "Kimyager bir laboratuvarda çalışıyor."
+    },
+    "en": {
+     "text": "chemist",
+     "example": "The chemist works in a lab."
+    }
+   },
+   "hint": {
+    "tr": "Maddeleri inceleyen bilim insanı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "aci-angle",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "açı",
+     "example": "Bu açı 90 derece."
+    },
+    "en": {
+     "text": "angle",
+     "example": "This angle is 90 degrees."
+    }
+   },
+   "hint": {
+    "tr": "İki çizginin arasındaki açıklık."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "daire",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "daire",
+     "alternatives": [
+      "çember"
+     ],
+     "example": "Bir daire çiz."
+    },
+    "en": {
+     "text": "circle",
+     "example": "Draw a circle."
+    }
+   },
+   "hint": {
+    "tr": "Tam yuvarlak şekil."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ucgen",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "üçgen",
+     "example": "Üçgenin üç kenarı vardır."
+    },
+    "en": {
+     "text": "triangle",
+     "example": "A triangle has three sides."
+    }
+   },
+   "hint": {
+    "tr": "Üç kenarlı şekil."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "tiklamak",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "tıklamak",
+     "example": "Bağlantıya tıkla."
+    },
+    "en": {
+     "text": "click",
+     "example": "Click on the link."
+    }
+   },
+   "hint": {
+    "tr": "Fareyle bir şeye basmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "sarmak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "sarmak",
+     "alternatives": [
+      "paketlemek"
+     ],
+     "example": "Bunu benim için sarar mısınız?"
+    },
+    "en": {
+     "text": "wrap",
+     "example": "Can you wrap it for me?"
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi kâğıt ya da kumaşla örtmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "deger",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "değer",
+     "example": "Bu yüzüğün değeri ne?"
+    },
+    "en": {
+     "text": "value",
+     "example": "What is the value of this ring?"
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin ne kadar para ettiği."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "masraf",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "masraf",
+     "alternatives": [
+      "gider"
+     ],
+     "example": "Gezi büyük bir masraftı."
+    },
+    "en": {
+     "text": "expense",
+     "example": "The trip was a big expense."
+    }
+   },
+   "hint": {
+    "tr": "Harcanan para."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "gelir",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "gelir",
+     "example": "Geliri düşük."
+    },
+    "en": {
+     "text": "income",
+     "example": "His income is low."
+    }
+   },
+   "hint": {
+    "tr": "Kazanılan para."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ay-month",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "ay",
+     "context": "takvim",
+     "example": "Gelecek ay Roma'ya gideceğim."
+    },
+    "en": {
+     "text": "month",
+     "example": "Next month I will visit Rome."
+    }
+   },
+   "hint": {
+    "tr": "Yılın on iki bölümünden biri; otuz gün kadar."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yuz-hundred",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "yüz",
+     "context": "sayı",
+     "example": "Burada yüz kişi var."
+    },
+    "en": {
+     "text": "hundred",
+     "example": "There are a hundred people here."
+    }
+   },
+   "hint": {
+    "tr": "Doksan dokuzdan sonra gelen sayı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "hava-air",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "hava",
+     "context": "soluduğumuz",
+     "example": "Temiz havaya ihtiyacımız var."
+    },
+    "en": {
+     "text": "air",
+     "example": "We need fresh air."
+    }
+   },
+   "hint": {
+    "tr": "Soluduğumuz, dünyayı saran gaz."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yol-way",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "yol",
+     "alternatives": [
+      "yöntem"
+     ],
+     "context": "yöntem",
+     "example": "Öğrenmenin en iyi yolu bu."
+    },
+    "en": {
+     "text": "way",
+     "example": "This is the best way to learn."
+    }
+   },
+   "hint": {
+    "tr": "Bir işi yapma biçimi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ev-home",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "ev",
+     "alternatives": [
+      "yuva"
+     ],
+     "context": "yuva",
+     "example": "Eve gitmek istiyorum."
+    },
+    "en": {
+     "text": "home",
+     "example": "I want to go home."
+    }
+   },
+   "hint": {
+    "tr": "Kişinin yaşadığı ve ait hissettiği yer."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "son-last",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "son",
+     "alternatives": [
+      "sonuncu"
+     ],
+     "context": "en sondaki",
+     "example": "Bu son otobüs."
+    },
+    "en": {
+     "text": "last",
+     "example": "This is the last bus."
+    }
+   },
+   "hint": {
+    "tr": "Sıranın en arkasında olan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "calismak-study",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "çalışmak",
+     "context": "ders",
+     "example": "Her gün İngilizce çalışıyorum."
+    },
+    "en": {
+     "text": "study",
+     "example": "I study English every day."
+    }
+   },
+   "hint": {
+    "tr": "Öğrenmek için ders üzerinde uğraşmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "beklemek-expect",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "beklemek",
+     "context": "olacağını düşünerek",
+     "example": "Bugün bir mektup bekliyorum."
+    },
+    "en": {
+     "text": "expect",
+     "example": "I expect a letter today."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin olacağını düşünmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "donmek-return",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "dönmek",
+     "context": "geri gelmek",
+     "example": "Gelecek hafta döneceğim."
+    },
+    "en": {
+     "text": "return",
+     "example": "I will return next week."
+    }
+   },
+   "hint": {
+    "tr": "Gidilen yerden geri gelmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ses-voice",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "vücut",
+   "terms": {
+    "tr": {
+     "text": "ses",
+     "context": "konuşan kişinin",
+     "example": "Güzel bir sesi var."
+    },
+    "en": {
+     "text": "voice",
+     "example": "She has a beautiful voice."
+    }
+   },
+   "hint": {
+    "tr": "İnsanın konuşurken ya da şarkı söylerken ağzından çıkan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "uzgun-sorry",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "üzgün",
+     "context": "özür dilerken",
+     "example": "Geç kaldığım için üzgünüm."
+    },
+    "en": {
+     "text": "sorry",
+     "example": "I am sorry for being late."
+    }
+   },
+   "hint": {
+    "tr": "Özür dilerken ya da başkası için kederli olan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "tarih-date",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "tarih",
+     "context": "gün",
+     "example": "Bugünün tarihi ne?"
+    },
+    "en": {
+     "text": "date",
+     "example": "What is the date today?"
+    }
+   },
+   "hint": {
+    "tr": "Takvimde belli bir gün."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "almak-receive",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "almak",
+     "context": "sana gönderileni",
+     "example": "E-postamı aldın mı?"
+    },
+    "en": {
+     "text": "receive",
+     "example": "Did you receive my email?"
+    }
+   },
+   "hint": {
+    "tr": "Gönderilen bir şeye sahip olmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "olmak-happen",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "olmak",
+     "context": "meydana gelmek",
+     "example": "Yarın ne olacak?"
+    },
+    "en": {
+     "text": "happen",
+     "example": "What will happen tomorrow?"
+    }
+   },
+   "hint": {
+    "tr": "Bir olayın gerçekleşmesi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "tartismak-argue",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "tartışmak",
+     "context": "kavga ederek",
+     "example": "Annemle babam çok tartışır."
+    },
+    "en": {
+     "text": "argue",
+     "example": "My parents argue a lot."
+    }
+   },
+   "hint": {
+    "tr": "Öfkeyle karşılıklı itiraz etmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "cift-pair",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "çift",
+     "context": "eşya",
+     "example": "Yeni bir çift ayakkabıya ihtiyacım var."
+    },
+    "en": {
+     "text": "pair",
+     "example": "I need a new pair of shoes."
+    }
+   },
+   "hint": {
+    "tr": "Birlikte kullanılan iki eş parça."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ucret-fee",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "ücret",
+     "context": "hizmet bedeli",
+     "example": "Giriş ücreti on avro."
+    },
+    "en": {
+     "text": "fee",
+     "example": "The entry fee is ten euros."
+    }
+   },
+   "hint": {
+    "tr": "Bir hizmet için ödenen para."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "seker-candy",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "şeker",
+     "alternatives": [
+      "şekerleme"
+     ],
+     "context": "yiyecek",
+     "example": "Çocuklar şekeri sever."
+    },
+    "en": {
+     "text": "candy",
+     "example": "The children love candy."
+    }
+   },
+   "hint": {
+    "tr": "Renkli, küçük tatlı yiyecek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "sesli",
+   "pos": "adverb",
+   "level": "B2",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "sesli",
+     "example": "Metni sesli oku."
+    },
+    "en": {
+     "text": "aloud",
+     "example": "Read the text aloud."
+    }
+   },
+   "hint": {
+    "tr": "Başkalarının duyabileceği biçimde."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ok",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "ok",
+     "example": "Oku takip et."
+    },
+    "en": {
+     "text": "arrow",
+     "example": "Follow the arrow."
+    }
+   },
+   "hint": {
+    "tr": "Yay ile atılan uçlu çubuk; yön gösteren işaret."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "cali",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "çalı",
+     "example": "Çalıda bir kuş var."
+    },
+    "en": {
+     "text": "bush",
+     "example": "A bird is in the bush."
+    }
+   },
+   "hint": {
+    "tr": "Kısa, dallı, sık bitki."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "alkislamak",
+   "pos": "verb",
+   "level": "B2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "alkışlamak",
+     "example": "Herkes alkışlamaya başladı."
+    },
+    "en": {
+     "text": "clap",
+     "example": "Everyone began to clap."
+    }
+   },
+   "hint": {
+    "tr": "Elleri birbirine vurarak ses çıkarmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "sevmemek",
+   "pos": "verb",
+   "level": "B2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "sevmemek",
+     "example": "Soğuk havayı sevmem."
+    },
+    "en": {
+     "text": "dislike",
+     "example": "I dislike cold weather."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyden hoşlanmamak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "sadik",
+   "pos": "adjective",
+   "level": "B2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "sadık",
+     "example": "Köpek sahibine sadık."
+    },
+    "en": {
+     "text": "faithful",
+     "example": "The dog is faithful to its owner."
+    }
+   },
+   "hint": {
+    "tr": "Bağlılığından vazgeçmeyen."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kivircik",
+   "pos": "adjective",
+   "level": "B2",
+   "topic": "vücut",
+   "terms": {
+    "tr": {
+     "text": "kıvırcık",
+     "example": "Kıvırcık saçları var."
+    },
+    "en": {
+     "text": "curly",
+     "example": "She has curly hair."
+    }
+   },
+   "hint": {
+    "tr": "Halka halka kıvrılmış."
    },
    "reviewed": false,
    "check": "crosscheck"

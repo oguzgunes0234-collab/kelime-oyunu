@@ -108,7 +108,7 @@ describe('eski kaydın bölüm sistemine aktarımı', () => {
 describe('konu modları', () => {
   it('bir mod, paketteki konu kelimesi eşiğe ulaşınca açık görünür', () => {
     const st = topicStatuses(pack);
-    expect(st).toHaveLength(8);
+    expect(st).toHaveLength(9);
     for (const s of st) {
       expect(s.total).toBe(pack.entries.filter((e) => s.mode.packTopics.includes(e.topic)).length);
       expect(s.enabled).toBe(s.total >= MIN_TOPIC_WORDS);

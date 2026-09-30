@@ -6,7 +6,7 @@ knife|bıçak||noun|A1|yiyecek|Be careful with that knife.|O bıçağa dikkat et
 spoon|kaşık||noun|A1|yiyecek|I need a spoon for my soup.|Çorbam için bir kaşığa ihtiyacım var.|Çorba gibi sıvı yemekleri almaya yarayan araç.
 bowl|kase|çanak|noun|A2|yiyecek|She ate a bowl of rice.|Bir kase pilav yedi.|Derin, yuvarlak küçük kap.
 bottle|şişe||noun|A1|yiyecek|Buy a bottle of water.|Bir şişe su al.|Sıvı konan dar ağızlı kap.
-sugar|şeker||noun|A1|yiyecek|No sugar in my tea, please.|Çayıma şeker koymayın lütfen.|Yiyeceklere tatlılık veren beyaz toz.
+sugar|şeker||noun|A1|yiyecek|No sugar in my tea, please.|Çayıma şeker koymayın lütfen.|Yiyeceklere tatlılık veren beyaz toz.||toz
 salt|tuz||noun|A1|yiyecek|Pass me the salt, please.|Tuzu uzatır mısın?|Denizden de elde edilen, yemeğe tat veren beyaz tanecikler.
 pepper|biber||noun|A2|yiyecek|Add some black pepper.|Biraz karabiber ekle.|Acı ya da tatlı olabilen sebze; kurusu baharattır.
 butter|tereyağı|tereyağ|noun|A1|yiyecek|I like bread with butter.|Tereyağlı ekmeği severim.|Sütten yapılan sarı, yumuşak yağ.
@@ -37,7 +37,7 @@ jam|reçel||noun|A2|yiyecek|I like bread with jam.|Reçelli ekmeği severim.|Mey
 tea|çay||noun|A1|yiyecek|Would you like some tea?|Biraz çay ister misin?|İnce belli bardakta içilen sıcak içecek.
 coffee|kahve||noun|A1|yiyecek|I drink coffee every morning.|Her sabah kahve içerim.|Çekirdekleri kavrulup öğütülen sıcak içecek.
 wine|şarap||noun|B1|yiyecek|They drank red wine.|Kırmızı şarap içtiler.|Üzümden yapılan alkollü içecek.
-sweet|tatlı||adjective|A1|yiyecek|This cake is too sweet.|Bu pasta çok tatlı.|Şeker gibi tadı olan.
+sweet|tatlı||adjective|A1|yiyecek|This cake is too sweet.|Bu pasta çok tatlı.|Şeker gibi tadı olan.||tat
 sour|ekşi||adjective|A2|yiyecek|This apple is sour.|Bu elma ekşi.|Limon gibi tadı olan.
 bitter|acı||adjective|B1|yiyecek|This coffee is bitter.|Bu kahve acı.|Tadı keskin ve hoş olmayan.
 salty|tuzlu||adjective|A2|yiyecek|The soup is too salty.|Çorba çok tuzlu.|İçinde fazla tuz olan.
@@ -68,8 +68,6 @@ swallow|yutmak||verb|B1|yiyecek|Swallow the pill with water.|Hapı suyla yut.|A�
 pour|dökmek||verb|B1|yiyecek|Pour the milk into the glass.|Sütü bardağa dök.|Bir sıvıyı kaptan akıtmak.
 slice|dilim||noun|A2|yiyecek|Can I have a slice of cake?|Bir dilim pasta alabilir miyim?|Kesilmiş ince parça.
 snack|-|Türkçesi 10 harften uzun (atıştırmalık)
-dessert|-|tatlı (sweet) ile çakışır
-candy|-|şeker (sugar) ile çakışır
 dish|-|tabak (plate) ve yemek (eat) ile çakışır
 beer|-|Türkçesi neredeyse aynı (bira)
 lemon|-|Türkçesi neredeyse aynı (limon)
@@ -127,7 +125,7 @@ baker|fırıncı||noun|A2|alışveriş|The baker gets up early.|Fırıncı erken
 grocer|bakkal||noun|B1|alışveriş|The grocer sells fruit and milk.|Bakkal meyve ve süt satar.|Mahallede gıda ve gündelik ihtiyaç satan kişi.
 tax|vergi||noun|B1|iş|Everyone must pay tax.|Herkes vergi ödemeli.|Devlete ödenen zorunlu para.
 budget|bütçe||noun|B1|iş|We are on a tight budget.|Bütçemiz kısıtlı.|Harcanacak paranın planı.
-profit|kâr|kar|noun|B1|iş|The company made a big profit.|Şirket büyük kâr elde etti.|Satıştan maliyet çıkınca kalan para.
+profit|kâr|kar|noun|B1|iş|The company made a big profit.|Şirket büyük kâr elde etti.|Satıştan maliyet çıkınca kalan para.||kazanç
 coin|-|Türkçesi iki kelime (madeni para)
 purse|-|çanta (bag) ile çakışır
 discount|-|indirim (sale) ile çakışır

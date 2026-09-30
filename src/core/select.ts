@@ -44,7 +44,7 @@ export function remainingFresh(pack: WordPack, profile: Profile, direction: Dire
   return entriesFor(pack, difficulty).filter((e) => !learned.has(e.id)).length;
 }
 
-const LEVEL_DIFFICULTY: Record<Cefr, Difficulty> = { A1: 'easy', A2: 'easy', B1: 'medium', B2: 'hard' };
+const LEVEL_DIFFICULTY: Record<Cefr, Difficulty> = { A1: 'easy', A2: 'easy', B1: 'medium', B2: 'hard', C1: 'expert' };
 
 export function difficultyForLevel(level: Cefr): Difficulty {
   return LEVEL_DIFFICULTY[level];

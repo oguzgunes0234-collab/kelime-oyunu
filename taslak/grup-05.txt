@@ -35,7 +35,5 @@ value|değer||noun|B1|alışveriş|What is the value of this ring?|Bu yüzüğü
 expense|masraf|gider|noun|B2|alışveriş|The trip was a big expense.|Gezi büyük bir masraftı.|Harcanan para.
 income|gelir||noun|B1|alışveriş|His income is low.|Geliri düşük.|Kazanılan para.
 gift|-|hediye (present) ile çakışır
-pair|-|çift (couple) ile çakışır
-fee|-|ücret (wage) ile çakışır
 loan|-|Türkçesi bağlama göre değişir (kredi, borç)
 lend|-|Türkçesi iki kelime (ödünç vermek)

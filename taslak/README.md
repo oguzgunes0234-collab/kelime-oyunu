@@ -1,13 +1,52 @@
 # Taslak kelimeler
 
-Bu klasördeki kelimeler **oyunda kullanılmaz**. Oyuna yalnızca inceleme
-sayfasında onaylanan kelimeler `reviewed: true` işaretiyle
-`src/data/pack-tr-en.json` dosyasına eklenir.
+Bu klasördeki taslaklar kendiliğinden oyuna girmez. `pakete-ekle.mjs`
+yalnızca şunları `src/data/pack-tr-en.json` dosyasına ekler:
+
+- kişinin inceleme sayfasında onayladıkları (`check: "human"`),
+- Türkçe karşılığı ikinci kaynakla uyuşanlar (`check: "crosscheck"`),
+- oyun sahibinin açıkça toplu onayladığı gruplar (şu an yalnızca 1 ve 2;
+  `check: "bulk"`).
+
+Geri kalanlar kişinin kararını bekler.
 
 - `adaylar.txt`: aday İngilizce kelimeler, en yaygından aza doğru sıralı.
 - `grup-NN.txt`: Claude'un yazdığı taslak çeviriler, örnekler ve tanımlar.
 - `donustur.mjs`: taslakları denetleyip `taslak.json` üretir.
+- `pakete-ekle.mjs`: kurallara göre pakete ekler (tekrar çalıştırılabilir).
 - `inceleme.html` + `inceleme-sayfasi.mjs`: telefonda inceleme sayfası.
+- `denetim-dosyasi.mjs`: dış denetçi (ör. ChatGPT) için CSV üretir.
+
+## Gruplar ve kaynakları
+
+İngilizce kelime SEÇİMİ her grupta aşağıdaki telifsiz listelerden gelir.
+Türkçe karşılıklar, örnek cümleler ve tanımlar Claude'un taslağıdır.
+
+| Grup | İçerik | Kelime seçiminin kaynağı |
+|---|---|---|
+| 01–02 | En yaygın genel kelimeler | 12dicts 2+2+3frq sınıf ≤ 12 ∩ 3esl (`adaylar.txt`) |
+| 03–05 | Konu modları (yemek, alışveriş, ev, seyahat, iş, sağlık, bilim ve teknoloji, hukuk) | 12dicts 2+2+3frq tüm sınıflar ∩ 3esl, konuya göre elle seçildi |
+| 06 | Geri kazanılan çakışan kelimeler (ör. "ay (takvim)") | 01–02'de çakışma yüzünden elenenler |
+| 07 | Düzensiz fiillerin geçmiş zamanı (went, ate…) | Temel fiiller 12dicts'te; geçmiş zaman biçimleri İngilizce dilbilgisinin genel bilgisidir, bir listeden alınmadı |
+| 08 | B2/C1 kelimeler | 12dicts 2+2+3frq sınıf 13–14 ∩ 3esl |
+
+**İkinci kaynak (`ikinci-gorus.json`, repoya girmez):** Oyun sahibinin
+ChatGPT'den aldığı bir Word dosyası. Belgenin kendisi, çevirilerin
+"Oxford3000_Vocab" adlı bir GitHub deposundan alındığını ve kelime seçiminin
+yeniden dağıtım izninin doğrulanmadığını yazıyor. Bu yüzden oradan hiçbir
+kelime ALINMADI; yalnızca bizim taslaklarımızın Türkçe karşılığının onunkiyle
+aynı olup olmadığına bakılır. Uyuşma, kelimenin kişi onayı olmadan oyuna
+girmesine izin verir. Bu karşılaştırmanın bile kullanılmasını istemiyorsanız
+dosyayı silip `pakete-ekle.mjs`'i yeniden çalıştırmak yeterli; o zaman
+yalnızca kişi onaylı ve toplu onaylı kelimeler kalır.
+
+## Ayırt edici açıklama (çakışan Türkçe karşılıklar)
+
+Aynı Türkçe kelime (ör. "ay") birden çok kayıtta ancak hepsinde farklı bir
+`terms.tr.context` varsa kabul edilir: "ay (takvim)" = month, "ay (gökyüzü)"
+= moon. Açıklama ipucu çubuğunda görünür; bulmaca üreticisi aynı görünen
+ipucunu bir bulmacaya iki kez koymaz. Eş anlamlılar (large/big, fast/quick)
+açıklamayla güvenilir biçimde ayrılamadığı için geri kazanılmadı.
 
 ## Aday listesi nasıl çıkarıldı
 

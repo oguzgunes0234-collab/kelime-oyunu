@@ -11,7 +11,14 @@ export const MIN_ROUNDS_BEFORE_CHANGE = 5;
 export const UP_THRESHOLD = 0.8;
 export const DOWN_THRESHOLD = 0.4;
 
-const ORDER: Difficulty[] = ['easy', 'medium', 'hard'];
+/** Kolay → Orta → Zor → Uzman. Yükselme ve düşme her seferinde bir basamak. */
+export const DIFFICULTY_ORDER: Difficulty[] = ['easy', 'medium', 'hard', 'expert'];
+const ORDER = DIFFICULTY_ORDER;
+
+/** Tavan: bölüm ilerledikçe açılan en yüksek basamak (bkz. campaign.ts). */
+function topIndex(max: Difficulty): number {
+  return ORDER.indexOf(max);
+}
 
 /**
  * Bulmacada karar birimi tek kelime değil, biten bulmacadır. Eskiden her kelime
@@ -59,13 +66,14 @@ export function average(values: number[]): number {
 export function recordRound(
   state: AdaptiveState,
   quality: number,
+  max: Difficulty = 'expert',
 ): { state: AdaptiveState; change: 'up' | 'down' | null } {
   const recent = [...state.recent, quality].slice(-WINDOW);
   const roundsSinceChange = state.roundsSinceChange + 1;
   const idx = ORDER.indexOf(state.difficulty);
   if (roundsSinceChange >= MIN_ROUNDS_BEFORE_CHANGE && recent.length >= MIN_ROUNDS_BEFORE_CHANGE) {
     const avg = average(recent);
-    if (avg >= UP_THRESHOLD && idx < ORDER.length - 1) return { state: changed(ORDER[idx + 1]), change: 'up' };
+    if (avg >= UP_THRESHOLD && idx < topIndex(max)) return { state: changed(ORDER[idx + 1]), change: 'up' };
     if (avg <= DOWN_THRESHOLD && idx > 0) return { state: changed(ORDER[idx - 1]), change: 'down' };
   }
   return { state: { ...state, recent, roundsSinceChange }, change: null };
@@ -73,18 +81,21 @@ export function recordRound(
 
 /**
  * Biten bir bulmacayı kaydeder. Tek çağrıda seviye en fazla bir kademe değişir
- * ve en az MIN_PUZZLES_BEFORE_CHANGE bulmaca görülmeden değişmez.
+ * ve en az MIN_PUZZLES_BEFORE_CHANGE bulmaca görülmeden değişmez. `max`
+ * (bölüm tavanı) üstüne çıkmaz; düşme her zaman serbesttir: zorlanan oyuncu
+ * bir basamak aşağıda pekiştirir.
  */
 export function recordPuzzle(
   state: AdaptiveState,
   quality: number,
+  max: Difficulty = 'expert',
 ): { state: AdaptiveState; change: 'up' | 'down' | null } {
   const puzzleRecent = [...(state.puzzleRecent ?? []), quality].slice(-PUZZLE_WINDOW);
   const puzzlesSinceChange = (state.puzzlesSinceChange ?? 0) + 1;
   const idx = ORDER.indexOf(state.difficulty);
   if (puzzlesSinceChange >= MIN_PUZZLES_BEFORE_CHANGE && puzzleRecent.length >= MIN_PUZZLES_BEFORE_CHANGE) {
     const avg = average(puzzleRecent);
-    if (avg >= UP_THRESHOLD && idx < ORDER.length - 1) return { state: changed(ORDER[idx + 1]), change: 'up' };
+    if (avg >= UP_THRESHOLD && idx < topIndex(max)) return { state: changed(ORDER[idx + 1]), change: 'up' };
     if (avg <= DOWN_THRESHOLD && idx > 0) return { state: changed(ORDER[idx - 1]), change: 'down' };
   }
   return { state: { ...state, puzzleRecent, puzzlesSinceChange }, change: null };

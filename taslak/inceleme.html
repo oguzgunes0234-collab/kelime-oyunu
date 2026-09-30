@@ -61,6 +61,7 @@
   .pair .arrow { color: var(--arrow); font-size: 1.3rem; }
   .pair .tr { font-size: 1.9rem; font-weight: 700; }
   .alts { font-size: .92rem; }
+  .pair .ctx { font-family: var(--sans); font-size: 1rem; }
   .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
   .chip { font-size: .75rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; background: var(--surface); color: var(--clue-ink); border-radius: 99px; padding: 2px 9px; }
   .body { padding: 14px 16px; display: flex; flex-direction: column; gap: 12px; }
@@ -190,7 +191,8 @@ function renderCard() {
   const canWrite = !!db && !saving;
   const head = `
     <div class="head">
-      <div class="pair"><span class="en" lang="en">${esc(d.en)}</span><span class="arrow" aria-hidden="true">→</span><span class="tr">${esc(d.tr)}</span></div>
+      <div class="pair"><span class="en" lang="en">${esc(d.en)}</span><span class="arrow" aria-hidden="true">→</span><span class="tr">${esc(d.tr)}</span>${raw.ctx ? `<span class="ctx">(${esc(raw.ctx)})</span>` : ''}</div>
+      ${raw.grammar ? `<div class="alts">${esc(raw.grammar)}</div>` : ''}
       ${d.alts ? `<div class="alts">Kabul edilen diğer cevaplar: ${esc(d.alts)}</div>` : ''}
       <div class="chips"><span class="chip">${d.level}</span><span class="chip">${POS_TR[d.pos] ?? d.pos}</span><span class="chip">${esc(d.topic)}</span>${d.oneWay ? '<span class="chip" title="Türkçesi 8 harften uzun">yalnız TR → EN</span>' : ''}${raw.game === 'crosscheck' && !dec ? '<span class="chip">oyunda · senin onayını bekliyor</span>' : ''}</div>
     </div>`;

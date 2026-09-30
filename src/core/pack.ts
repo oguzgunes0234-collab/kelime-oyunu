@@ -6,18 +6,21 @@ export const DIFFICULTY_LEVELS: Record<Difficulty, Cefr[]> = {
   easy: ['A1', 'A2'],
   medium: ['A2', 'B1'],
   hard: ['B1', 'B2'],
+  expert: ['B2', 'C1'],
 };
 
 export const DIFFICULTY_LABEL: Record<Difficulty, string> = {
   easy: 'Kolay',
   medium: 'Orta',
   hard: 'Zor',
+  expert: 'Uzman',
 };
 
 export const DIFFICULTY_CEFR_LABEL: Record<Difficulty, string> = {
   easy: '≈ A1–A2',
   medium: '≈ A2–B1',
   hard: '≈ B1–B2',
+  expert: '≈ B2–C1',
 };
 
 export const POS_LABEL: Record<string, string> = {

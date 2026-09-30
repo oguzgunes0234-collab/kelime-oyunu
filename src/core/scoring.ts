@@ -2,7 +2,7 @@ import { MEANING_HINT_COST, TOOL_POINT_COST, WRONG_ATTEMPT_COST } from './econom
 import { answerLetters, type RoundState } from './round';
 import type { Cefr } from './types';
 
-export const LEVEL_BASE: Record<Cefr, number> = { A1: 10, A2: 14, B1: 18, B2: 22 };
+export const LEVEL_BASE: Record<Cefr, number> = { A1: 10, A2: 14, B1: 18, B2: 22, C1: 26 };
 export const FIRST_TRY_BONUS = 5;
 /** Doğru cevap, ne kadar yardım alınırsa alınsın en az bu kadar puan getirir. */
 export const MIN_CORRECT_SCORE = 2;

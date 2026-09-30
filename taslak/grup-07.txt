@@ -1,0 +1,67 @@
+went|gitti||verb|A1|dilbilgisi|She went to school yesterday.|Dün okula gitti.|Gitmek fiilinin geçmiş zaman hâli.|||go/gitmek|Düzensiz fiil: go → went
+came|geldi||verb|A1|dilbilgisi|He came home late.|Eve geç geldi.|Gelmek fiilinin geçmiş zaman hâli.|||come/gelmek|Düzensiz fiil: come → came
+saw|gördü||verb|A1|dilbilgisi|She saw a bird in the garden.|Bahçede bir kuş gördü.|Görmek fiilinin geçmiş zaman hâli.|||see/görmek|Düzensiz fiil: see → saw
+ate|yedi||verb|A1|dilbilgisi|He ate an apple.|Bir elma yedi.|Yemek fiilinin geçmiş zaman hâli.|||eat/yemek|Düzensiz fiil: eat → ate
+drank|içti||verb|A2|dilbilgisi|She drank a glass of milk.|Bir bardak süt içti.|Içmek fiilinin geçmiş zaman hâli.|||drink/içmek|Düzensiz fiil: drink → drank
+took|aldı||verb|A1|dilbilgisi|He took my pen.|Kalemimi aldı.|Almak fiilinin geçmiş zaman hâli.|||take/almak|Düzensiz fiil: take → took
+bought|aldı||verb|A1|dilbilgisi|She bought a new phone.|Yeni bir telefon aldı.|Satın almak fiilinin geçmiş zaman hâli.|||buy/satın almak|Düzensiz fiil: buy → bought
+gave|verdi||verb|A1|dilbilgisi|She gave me a book.|Bana bir kitap verdi.|Vermek fiilinin geçmiş zaman hâli.|||give/vermek|Düzensiz fiil: give → gave
+made|yaptı||verb|A1|dilbilgisi|He made a cake.|Bir pasta yaptı.|Yapmak fiilinin geçmiş zaman hâli.|||make/yapmak|Düzensiz fiil: make → made
+knew|bildi||verb|A2|dilbilgisi|She knew the answer.|Cevabı bildi.|Bilmek fiilinin geçmiş zaman hâli.|||know/bilmek|Düzensiz fiil: know → knew
+thought|düşündü||verb|A2|dilbilgisi|He thought about his family.|Ailesini düşündü.|Düşünmek fiilinin geçmiş zaman hâli.|||think/düşünmek|Düzensiz fiil: think → thought
+found|buldu||verb|A1|dilbilgisi|She found her keys.|Anahtarlarını buldu.|Bulmak fiilinin geçmiş zaman hâli.|||find/bulmak|Düzensiz fiil: find → found
+told|anlattı||verb|A2|dilbilgisi|He told us a story.|Bize bir hikâye anlattı.|Anlatmak fiilinin geçmiş zaman hâli.|||tell/anlatmak|Düzensiz fiil: tell → told
+said|dedi||verb|A1|dilbilgisi|She said yes.|Evet dedi.|Demek fiilinin geçmiş zaman hâli.|||say/demek|Düzensiz fiil: say → said
+sang|söyledi||verb|A2|dilbilgisi|She sang a song for us.|Bize bir şarkı söyledi.|Şarkı söylemek fiilinin geçmiş zaman hâli.|||sing/şarkı söylemek|Düzensiz fiil: sing → sang
+brought|getirdi||verb|A2|dilbilgisi|He brought some bread.|Biraz ekmek getirdi.|Getirmek fiilinin geçmiş zaman hâli.|||bring/getirmek|Düzensiz fiil: bring → brought
+wrote|yazdı||verb|A1|dilbilgisi|She wrote a letter.|Bir mektup yazdı.|Yazmak fiilinin geçmiş zaman hâli.|||write/yazmak|Düzensiz fiil: write → wrote
+spoke|konuştu||verb|A2|dilbilgisi|He spoke to the teacher.|Öğretmenle konuştu.|Konuşmak fiilinin geçmiş zaman hâli.|||speak/konuşmak|Düzensiz fiil: speak → spoke
+ran|koştu||verb|A1|dilbilgisi|She ran to the bus.|Otobüse koştu.|Koşmak fiilinin geçmiş zaman hâli.|||run/koşmak|Düzensiz fiil: run → ran
+swam|yüzdü||verb|A2|dilbilgisi|He swam in the sea.|Denizde yüzdü.|Yüzmek fiilinin geçmiş zaman hâli.|||swim/yüzmek|Düzensiz fiil: swim → swam
+sat|oturdu||verb|A1|dilbilgisi|She sat on the sofa.|Kanepeye oturdu.|Oturmak fiilinin geçmiş zaman hâli.|||sit/oturmak|Düzensiz fiil: sit → sat
+slept|uyudu||verb|A1|dilbilgisi|He slept for ten hours.|On saat uyudu.|Uyumak fiilinin geçmiş zaman hâli.|||sleep/uyumak|Düzensiz fiil: sleep → slept
+woke|uyandı||verb|A2|dilbilgisi|She woke up early.|Erken uyandı.|Uyanmak fiilinin geçmiş zaman hâli.|||wake/uyanmak|Düzensiz fiil: wake → woke
+drove|sürdü||verb|A2|dilbilgisi|He drove to Izmir.|İzmir'e araba sürdü.|Sürmek fiilinin geçmiş zaman hâli.|||drive/sürmek|Düzensiz fiil: drive → drove
+flew|uçtu||verb|A2|dilbilgisi|The bird flew over the house.|Kuş evin üstünden uçtu.|Uçmak fiilinin geçmiş zaman hâli.|||fly/uçmak|Düzensiz fiil: fly → flew
+fell|düştü||verb|A2|dilbilgisi|She fell off her bike.|Bisikletten düştü.|Düşmek fiilinin geçmiş zaman hâli.|||fall/düşmek|Düzensiz fiil: fall → fell
+felt|hissetti||verb|A2|dilbilgisi|He felt tired.|Yorgun hissetti.|Hissetmek fiilinin geçmiş zaman hâli.|||feel/hissetmek|Düzensiz fiil: feel → felt
+forgot|unuttu||verb|A2|dilbilgisi|She forgot my name.|Adımı unuttu.|Unutmak fiilinin geçmiş zaman hâli.|||forget/unutmak|Düzensiz fiil: forget → forgot
+lost|kaybetti||verb|A2|dilbilgisi|He lost his wallet.|Cüzdanını kaybetti.|Kaybetmek fiilinin geçmiş zaman hâli.|||lose/kaybetmek|Düzensiz fiil: lose → lost
+won|kazandı||verb|A2|dilbilgisi|Our team won the game.|Takımımız maçı kazandı.|Kazanmak fiilinin geçmiş zaman hâli.|||win/kazanmak|Düzensiz fiil: win → won
+met|tanıştı|buluştu|verb|A2|dilbilgisi|She met a new friend.|Yeni bir arkadaşla tanıştı.|Tanışmak fiilinin geçmiş zaman hâli.|||meet/tanışmak|Düzensiz fiil: meet → met
+paid|ödedi||verb|A2|dilbilgisi|He paid the bill.|Hesabı ödedi.|Ödemek fiilinin geçmiş zaman hâli.|||pay/ödemek|Düzensiz fiil: pay → paid
+sent|gönderdi|yolladı|verb|A2|dilbilgisi|She sent me a message.|Bana bir mesaj gönderdi.|Göndermek fiilinin geçmiş zaman hâli.|||send/göndermek|Düzensiz fiil: send → sent
+sold|sattı||verb|A2|dilbilgisi|He sold his car.|Arabasını sattı.|Satmak fiilinin geçmiş zaman hâli.|||sell/satmak|Düzensiz fiil: sell → sold
+taught|öğretti||verb|B1|dilbilgisi|She taught English for years.|Yıllarca İngilizce öğretti.|Öğretmek fiilinin geçmiş zaman hâli.|||teach/öğretmek|Düzensiz fiil: teach → taught
+caught|yakaladı||verb|B1|dilbilgisi|He caught the ball.|Topu yakaladı.|Yakalamak fiilinin geçmiş zaman hâli.|||catch/yakalamak|Düzensiz fiil: catch → caught
+broke|kırdı||verb|A2|dilbilgisi|She broke a glass.|Bir bardak kırdı.|Kırmak fiilinin geçmiş zaman hâli.|||break/kırmak|Düzensiz fiil: break → broke
+began|başladı||verb|A2|dilbilgisi|The film began at eight.|Film sekizde başladı.|Başlamak fiilinin geçmiş zaman hâli.|||begin/başlamak|Düzensiz fiil: begin → began
+left|ayrıldı||verb|A2|dilbilgisi|He left at six.|Saat altıda ayrıldı.|Ayrılmak fiilinin geçmiş zaman hâli.|||leave/ayrılmak|Düzensiz fiil: leave → left
+kept|sakladı||verb|B1|dilbilgisi|She kept the letter.|Mektubu sakladı.|Saklamak fiilinin geçmiş zaman hâli.|||keep/saklamak|Düzensiz fiil: keep → kept
+held|tuttu||verb|B1|dilbilgisi|He held my hand.|Elimi tuttu.|Tutmak fiilinin geçmiş zaman hâli.|||hold/tutmak|Düzensiz fiil: hold → held
+heard|duydu||verb|A2|dilbilgisi|She heard a noise.|Bir ses duydu.|Duymak fiilinin geçmiş zaman hâli.|||hear/duymak|Düzensiz fiil: hear → heard
+understood|anladı||verb|A2|dilbilgisi|He understood the question.|Soruyu anladı.|Anlamak fiilinin geçmiş zaman hâli.|||understand/anlamak|Düzensiz fiil: understand → understood
+chose|seçti||verb|B1|dilbilgisi|She chose the red dress.|Kırmızı elbiseyi seçti.|Seçmek fiilinin geçmiş zaman hâli.|||choose/seçmek|Düzensiz fiil: choose → chose
+grew|büyüdü||verb|B1|dilbilgisi|He grew up in Bursa.|Bursa'da büyüdü.|Büyümek fiilinin geçmiş zaman hâli.|||grow/büyümek|Düzensiz fiil: grow → grew
+drew|çizdi||verb|B1|dilbilgisi|She drew a cat.|Bir kedi çizdi.|Çizmek fiilinin geçmiş zaman hâli.|||draw/çizmek|Düzensiz fiil: draw → drew
+threw|attı|fırlattı|verb|B1|dilbilgisi|He threw the ball.|Topu attı.|Atmak fiilinin geçmiş zaman hâli.|||throw/atmak|Düzensiz fiil: throw → threw
+rode|bindi||verb|B1|dilbilgisi|She rode a horse.|Ata bindi.|Binmek fiilinin geçmiş zaman hâli.|||ride/binmek|Düzensiz fiil: ride → rode
+hid|gizledi||verb|B1|dilbilgisi|He hid the money.|Parayı gizledi.|Gizlemek fiilinin geçmiş zaman hâli.|||hide/gizlemek|Düzensiz fiil: hide → hid
+bit|ısırdı||verb|B1|dilbilgisi|The dog bit him.|Köpek onu ısırdı.|Isırmak fiilinin geçmiş zaman hâli.|||bite/ısırmak|Düzensiz fiil: bite → bit
+spent|harcadı||verb|B1|dilbilgisi|She spent all her money.|Bütün parasını harcadı.|Harcamak fiilinin geçmiş zaman hâli.|||spend/harcamak|Düzensiz fiil: spend → spent
+stole|çaldı||verb|B1|dilbilgisi|Someone stole my bike.|Biri bisikletimi çaldı.|Çalmak fiilinin geçmiş zaman hâli.|||steal/çalmak|Düzensiz fiil: steal → stole
+shook|salladı||verb|B1|dilbilgisi|He shook the bottle.|Şişeyi salladı.|Sallamak fiilinin geçmiş zaman hâli.|||shake/sallamak|Düzensiz fiil: shake → shook
+wore|giydi||verb|B1|dilbilgisi|She wore a blue dress.|Mavi bir elbise giydi.|Giymek fiilinin geçmiş zaman hâli.|||wear/giymek|Düzensiz fiil: wear → wore
+fed|besledi||verb|B1|dilbilgisi|He fed the cat.|Kediyi besledi.|Beslemek fiilinin geçmiş zaman hâli.|||feed/beslemek|Düzensiz fiil: feed → fed
+swept|süpürdü||verb|B1|dilbilgisi|She swept the floor.|Yeri süpürdü.|Süpürmek fiilinin geçmiş zaman hâli.|||sweep/süpürmek|Düzensiz fiil: sweep → swept
+froze|dondu||verb|B1|dilbilgisi|The lake froze last winter.|Göl geçen kış dondu.|Donmak fiilinin geçmiş zaman hâli.|||freeze/donmak|Düzensiz fiil: freeze → froze
+blew|esti||verb|B1|dilbilgisi|The wind blew hard.|Rüzgâr sert esti.|Esmek fiilinin geçmiş zaman hâli.|||blow/esmek|Düzensiz fiil: blow → blew
+dug|kazdı||verb|B1|dilbilgisi|The dog dug a hole.|Köpek bir çukur kazdı.|Kazmak fiilinin geçmiş zaman hâli.|||dig/kazmak|Düzensiz fiil: dig → dug
+fought|dövüştü||verb|B1|dilbilgisi|The two cats fought.|İki kedi dövüştü.|Dövüşmek fiilinin geçmiş zaman hâli.|||fight/dövüşmek|Düzensiz fiil: fight → fought
+hung|astı||verb|B1|dilbilgisi|She hung the picture on the wall.|Resmi duvara astı.|Asmak fiilinin geçmiş zaman hâli.|||hang/asmak|Düzensiz fiil: hang → hung
+tore|yırttı||verb|B2|dilbilgisi|He tore the paper.|Kâğıdı yırttı.|Yırtmak fiilinin geçmiş zaman hâli.|||tear/yırtmak|Düzensiz fiil: tear → tore
+sank|battı||verb|B2|dilbilgisi|The ship sank in the storm.|Gemi fırtınada battı.|Batmak fiilinin geçmiş zaman hâli.|||sink/batmak|Düzensiz fiil: sink → sank
+led|yönetti||verb|B1|dilbilgisi|She led the team.|Takımı yönetti.|Yönetmek fiilinin geçmiş zaman hâli.|||lead/yönetmek|Düzensiz fiil: lead → led
+forgave|affetti||verb|B1|dilbilgisi|He forgave his friend.|Arkadaşını affetti.|Affetmek fiilinin geçmiş zaman hâli.|||forgive/affetmek|Düzensiz fiil: forgive → forgave
+bent|eğdi||verb|B2|dilbilgisi|She bent the wire.|Teli eğdi.|Eğmek fiilinin geçmiş zaman hâli.|||bend/eğmek|Düzensiz fiil: bend → bent
+fled|kaçtı||verb|B2|dilbilgisi|The thief fled.|Hırsız kaçtı.|Kaçmak fiilinin geçmiş zaman hâli.|||flee/kaçmak|Düzensiz fiil: flee → fled

@@ -1,0 +1,132 @@
+absurd|saçma||adjective|C1|soyut|That is an absurd idea.|Bu saçma bir fikir.|Mantığa hiç uymayan, gülünç.
+ache|sızı||noun|B2|sağlık|I have an ache in my back.|Sırtımda bir sızı var.|Sürekli, hafif ve yayılan acı.
+adjacent|bitişik||adjective|C1|şehir|The shop is adjacent to the bank.|Dükkân bankanın bitişiğinde.|Hemen yanında olan, yan yana.
+adverse|olumsuz||adjective|C1|soyut|The drug had an adverse effect.|İlacın olumsuz bir etkisi oldu.|İstenmeyen, zararlı sonuç doğuran.
+agony|ıstırap|ızdırap|noun|C1|duygular|He was in agony after the fall.|Düşüşten sonra ıstırap içindeydi.|Çok şiddetli acı.
+aloud|sesli||adverb|B2|okul|Read the text aloud.|Metni sesli oku.|Başkalarının duyabileceği biçimde.
+altitude|rakım||noun|C1|seyahat|The plane flew at a high altitude.|Uçak yüksek bir rakımda uçtu.|Deniz seviyesine göre yükseklik.
+analogy|benzetme||noun|C1|okul|He used an analogy to explain it.|Bunu açıklamak için bir benzetme kullandı.|İki şey arasındaki benzerliğe dayanan açıklama.
+appetite|iştah||noun|B2|yiyecek|I have no appetite today.|Bugün hiç iştahım yok.|Yemek yeme isteği.
+applause|alkış||noun|B2|günlük|The singer got loud applause.|Şarkıcı büyük bir alkış aldı.|Beğeniyi göstermek için el çırpma.
+arrogant|kibirli||adjective|B2|duygular|He is rich but arrogant.|Zengin ama kibirli.|Kendini başkalarından üstün gören.
+arrow|ok||noun|B1|günlük|Follow the arrow.|Oku takip et.|Yay ile atılan uçlu çubuk; yön gösteren işaret.
+artery|atardamar||noun|C1|vücut|The heart pumps blood into the artery.|Kalp kanı atardamara pompalar.|Kanı kalpten vücuda taşıyan damar.
+ashamed|mahcup||adjective|B2|duygular|I felt ashamed of my words.|Sözlerimden dolayı mahcup oldum.|Yaptığı bir şeyden dolayı utanan.
+autonomy|özerklik||noun|C1|hukuk|The region wants more autonomy.|Bölge daha fazla özerklik istiyor.|Kendi kendini yönetme hakkı.
+axis|eksen||noun|C1|teknoloji|The earth turns on its axis.|Dünya kendi ekseni etrafında döner.|Bir cismin çevresinde döndüğü hayali çizgi.
+bald|kel||adjective|B2|vücut|My uncle is bald.|Amcam kel.|Başında saç olmayan.
+banner|pankart|afiş|noun|B2|şehir|They carried a big banner.|Büyük bir pankart taşıdılar.|Üzerinde yazı olan uzun kumaş.
+betrayal|ihanet||noun|C1|duygular|His betrayal hurt me.|Onun ihaneti beni yaraladı.|Güveni kötüye kullanma.
+bizarre|tuhaf||adjective|C1|duygular|That was a bizarre dream.|Tuhaf bir rüyaydı.|Çok garip, alışılmadık.
+bleak|kasvetli||adjective|C1|duygular|The future looks bleak.|Gelecek kasvetli görünüyor.|Umut vermeyen, iç karartıcı.
+blush|kızarmak||verb|B2|duygular|She will blush if you say that.|Bunu söylersen kızarır.|Utanınca yüzü kırmızı olmak.
+brow|kaş||noun|B2|vücut|He raised his brow.|Kaşını kaldırdı.|Gözün üstündeki kıllı kavis.
+bundle|deste|demet|noun|B2|günlük|She held a bundle of letters.|Elinde bir deste mektup vardı.|Birbirine bağlanmış şeylerin topu.
+bush|çalı||noun|B2|doğa|A bird is in the bush.|Çalıda bir kuş var.|Kısa, dallı, sık bitki.
+calf|buzağı||noun|B2|hayvanlar|The calf is next to its mother.|Buzağı annesinin yanında.|İneğin yavrusu.
+cellar|mahzen||noun|B2|ev|We keep wine in the cellar.|Şarabı mahzende tutuyoruz.|Evin altındaki serin depo.
+cemetery|mezarlık||noun|B2|şehir|The old cemetery is quiet.|Eski mezarlık sessiz.|Ölülerin gömüldüğü yer.
+cereal|tahıl||noun|B2|yiyecek|Wheat is a cereal.|Buğday bir tahıldır.|Buğday, arpa gibi taneli bitki.
+chick|civciv||noun|B2|hayvanlar|The chick follows the hen.|Civciv tavuğu takip ediyor.|Tavuğun yeni çıkmış yavrusu.
+clap|alkışlamak||verb|B2|günlük|Everyone began to clap.|Herkes alkışlamaya başladı.|Elleri birbirine vurarak ses çıkarmak.
+clarity|netlik||noun|C1|soyut|I like the clarity of his writing.|Yazısının netliğini seviyorum.|Açık ve kolay anlaşılır olma.
+claw|pençe||noun|B2|hayvanlar|The cat hurt me with a claw.|Kedi beni bir pençesiyle yaraladı.|Hayvanların ayağındaki sivri tırnak.
+clown|palyaço||noun|B2|günlük|The clown made the kids laugh.|Palyaço çocukları güldürdü.|Sirkte insanları güldüren kişi.
+coarse|kaba||adjective|C1|günlük|This fabric is coarse.|Bu kumaş kaba.|Pürüzlü, ince olmayan.
+coffin|tabut||noun|B2|günlük|They carried the coffin.|Tabutu taşıdılar.|Ölünün konduğu uzun sandık.
+compel|zorlamak||verb|C1|hukuk|No one can compel you to sign.|Kimse seni imzalamaya zorlayamaz.|Birini istemediği bir şeyi yapmak zorunda bırakmak.
+composer|besteci||noun|B2|günlük|Mozart was a great composer.|Mozart büyük bir besteciydi.|Müzik eseri yazan kişi.
+conquer|fethetmek||verb|C1|hukuk|They wanted to conquer the city.|Şehri fethetmek istediler.|Bir yeri savaşla ele geçirmek.
+contempt|küçümseme||noun|C1|duygular|She looked at him with contempt.|Ona küçümsemeyle baktı.|Birini değersiz görme duygusu.
+copper|bakır||noun|B2|teknoloji|The wire is made of copper.|Tel bakırdan yapılmış.|Kızıl renkli, elektriği iyi ileten metal.
+coral|mercan||noun|B2|doğa|The coral is under the sea.|Mercan denizin altında.|Sıcak denizlerde yaşayan renkli, sert canlı.
+corpse|ceset||noun|C1|hukuk|The police found a corpse.|Polis bir ceset buldu.|Ölmüş bir insanın bedeni.
+corrupt|yozlaşmış|rüşvetçi|adjective|C1|hukuk|The corrupt officer took money.|Yozlaşmış memur para aldı.|Çıkarı için dürüstlüğünü kaybetmiş.
+cozy|sıcacık||adjective|B2|ev|The room is warm and cozy.|Oda sıcak ve sıcacık.|Rahat, huzur veren ve ılık.|cosy
+crab|yengeç||noun|B2|yiyecek|We ate crab at the beach.|Plajda yengeç yedik.|Yan yan yürüyen, kıskaçlı deniz hayvanı.
+cradle|beşik||noun|B2|aile|The baby sleeps in a cradle.|Bebek beşikte uyuyor.|Bebeklerin sallanarak uyutulduğu yatak.
+crane|vinç||noun|B2|teknoloji|A crane lifted the stones.|Bir vinç taşları kaldırdı.|Ağır yükleri kaldıran büyük makine.
+creator|yaratıcı||noun|B2|soyut|Who is the creator of this game?|Bu oyunun yaratıcısı kim?|Bir şeyi ortaya koyan kişi.
+crude|ham||adjective|C1|iş|The price of crude oil went up.|Ham petrolün fiyatı arttı.|İşlenmemiş, doğal halinde olan.
+crust|kabuk||noun|B2|yiyecek|I don't eat the crust of the bread.|Ekmeğin kabuğunu yemem.|Bir şeyin sert dış katmanı.
+cushion|minder||noun|B2|ev|Put a cushion on the chair.|Sandalyeye bir minder koy.|Oturmak için yumuşak yastık.
+cynical|alaycı||adjective|C1|duygular|He is cynical about politics.|Siyaset konusunda alaycı.|İnsanların iyi niyetine inanmayan.
+darken|kararmak||verb|B2|doğa|The sky began to darken.|Gökyüzü kararmaya başladı.|Işığı azalıp koyulaşmak.
+debris|enkaz||noun|C1|doğa|The street was full of debris.|Sokak enkazla doluydu.|Yıkılan bir şeyden kalan parçalar.
+decay|çürümek||verb|B2|sağlık|Sugar makes your teeth decay.|Şeker dişlerini çürütür.|Bozulup dağılmak.
+decisive|kararlı||adjective|B2|duygular|She is a decisive leader.|O kararlı bir lider.|Çabuk ve net karar veren.
+decree|kararname||noun|C1|hukuk|The president signed a decree.|Cumhurbaşkanı bir kararname imzaladı.|Yetkili makamın yayımladığı resmî emir.
+defect|kusur||noun|B2|iş|The car has a defect.|Arabanın bir kusuru var.|Bir şeydeki eksik ya da bozuk yer.
+denial|inkâr|inkar|noun|C1|duygular|He is in denial.|İnkâr ediyor.|Bir gerçeği kabul etmeme.
+descent|iniş||noun|B2|seyahat|The plane began its descent.|Uçak inişe başladı.|Yukarıdan aşağıya doğru hareket.
+despair|umutsuzluk||noun|B2|duygular|She cried in despair.|Umutsuzluk içinde ağladı.|Hiç umudu kalmama durumu.
+destiny|kader||noun|B2|soyut|He believes in destiny.|Kadere inanıyor.|Olacakların önceden belirlendiğine inanılan yazgı.
+deter|caydırmak||verb|C1|hukuk|High fines deter crime.|Yüksek cezalar suçu caydırır.|Birini bir şeyi yapmaktan vazgeçirmek.
+devotion|bağlılık||noun|C1|duygular|Her devotion to her family is strong.|Ailesine bağlılığı güçlü.|Birine ya da bir şeye derin sevgiyle bağlı olma.
+diameter|çap||noun|C1|teknoloji|The circle has a diameter of ten centimetres.|Dairenin çapı on santimetre.|Bir dairenin merkezinden geçen en uzun çizgi.
+dice|zar||noun|B2|günlük|Roll the dice.|Zarı at.|Üzerinde nokta olan, oyunda atılan küp.
+digest|sindirmek||verb|B2|sağlık|It is hard to digest meat at night.|Geceleri eti sindirmek zordur.|Yiyeceği midede işlemek.
+dislike|sevmemek||verb|B2|duygular|I dislike cold weather.|Soğuk havayı sevmem.|Bir şeyden hoşlanmamak.
+disrupt|aksatmak||verb|C1|iş|The strike will disrupt flights.|Grev uçuşları aksatacak.|Bir işin düzenli gitmesini bozmak.
+distort|çarpıtmak||verb|C1|soyut|Don't distort my words.|Sözlerimi çarpıtma.|Bir şeyi gerçeğe aykırı biçimde göstermek.
+ditch|hendek||noun|B2|doğa|The car fell into a ditch.|Araba bir hendeğe düştü.|Yol kenarında kazılmış uzun çukur.
+dolphin|yunus||noun|B2|hayvanlar|A dolphin swam next to our boat.|Teknemizin yanında bir yunus yüzdü.|Denizde yaşayan, zeki memeli hayvan.
+dome|kubbe||noun|B2|şehir|The mosque has a big dome.|Caminin büyük bir kubbesi var.|Binanın yarım küre biçimindeki çatısı.
+dragon|ejderha||noun|B2|günlük|The story has a dragon.|Hikâyede bir ejderha var.|Masallarda ateş püsküren dev yaratık.
+drip|damlamak||verb|B2|ev|Water will drip from the roof.|Çatıdan su damlayacak.|Bir sıvının damla damla düşmesi.
+drought|kuraklık||noun|B2|doğa|The drought killed the crops.|Kuraklık ekinleri öldürdü.|Uzun süre yağmur yağmaması.
+durable|dayanıklı||adjective|B2|alışveriş|These shoes are very durable.|Bu ayakkabılar çok dayanıklı.|Kolay bozulmayan, uzun süre kullanılabilen.
+duration|süre||noun|B2|zaman|What is the duration of the course?|Kursun süresi ne?|Bir şeyin başından sonuna kadar geçen zaman.
+dwarf|cüce||noun|B2|günlük|The dwarf lived in the forest.|Cüce ormanda yaşıyordu.|Boyu çok kısa kalmış kişi; masal yaratığı.
+dwelling|konut||noun|C1|ev|This dwelling has three rooms.|Bu konutun üç odası var.|İnsanların içinde yaşadığı yapı.
+eclipse|tutulma||noun|C1|teknoloji|We watched the eclipse of the sun.|Güneş tutulmasını izledik.|Ay ya da güneşin bir süre görünmez olması.
+emit|yaymak||verb|C1|teknoloji|Cars emit gas.|Arabalar gaz yayar.|Işık, ısı ya da gaz salmak.
+emperor|imparator||noun|B2|hukuk|The emperor lived in a palace.|İmparator bir sarayda yaşardı.|İmparatorluğu yöneten hükümdar.
+enlarge|büyütmek||verb|B2|teknoloji|Can you enlarge this photo?|Bu fotoğrafı büyütebilir misin?|Bir şeyi daha büyük hale getirmek.
+envy|kıskançlık|haset|noun|B2|duygular|She felt envy when she saw his car.|Arabasını görünce kıskançlık duydu.|Başkasının sahip olduğunu isteme duygusu.
+epic|destan||noun|C1|okul|We read an old epic in class.|Derste eski bir destan okuduk.|Kahramanlık olaylarını anlatan uzun şiir.
+epidemic|salgın||noun|B2|sağlık|The epidemic spread quickly.|Salgın hızla yayıldı.|Kısa sürede çok kişiye bulaşan hastalık.
+equality|eşitlik||noun|B2|hukuk|They fight for equality.|Eşitlik için mücadele ediyorlar.|Herkesin aynı haklara sahip olması.
+erosion|aşınma||noun|C1|doğa|Wind causes erosion.|Rüzgâr aşınmaya yol açar.|Toprağın ya da kayanın zamanla yıpranması.
+erupt|patlamak||verb|C1|doğa|The volcano may erupt again.|Yanardağ yeniden patlayabilir.|Bir yanardağın ateş ve lav püskürtmesi.
+eternal|sonsuz|ebedi|adjective|B2|soyut|They promised eternal love.|Sonsuz aşk sözü verdiler.|Hiç bitmeyen.
+evacuate|boşaltmak||verb|C1|hukuk|They had to evacuate the building.|Binayı boşaltmak zorunda kaldılar.|Tehlike yüzünden insanları bir yerden çıkarmak.
+exile|sürgün||noun|C1|hukuk|The poet lived in exile.|Şair sürgünde yaşadı.|Ülkesinden zorla uzaklaştırılma.
+expel|kovmak||verb|C1|okul|The school may expel him.|Okul onu kovabilir.|Birini bir yerden zorla çıkarmak.
+explorer|kâşif|kaşif|noun|B2|seyahat|The explorer found a new island.|Kâşif yeni bir ada buldu.|Bilinmeyen yerleri araştıran gezgin.
+faithful|sadık||adjective|B2|duygular|The dog is faithful to its owner.|Köpek sahibine sadık.|Bağlılığından vazgeçmeyen.
+fatigue|yorgunluk||noun|B2|sağlık|He was weak from fatigue.|Yorgunluktan halsizdi.|Çok çalışmaktan gelen bitkinlik.
+feast|ziyafet||noun|B2|yiyecek|They had a feast for the wedding.|Düğün için ziyafet verdiler.|Bol yemekli büyük sofra.
+ferry|vapur|feribot|noun|B2|seyahat|We took the ferry to the island.|Adaya vapurla gittik.|Yolcuları karşı kıyıya taşıyan gemi.
+flock|sürü||noun|B2|hayvanlar|A flock of birds flew over us.|Üstümüzden bir kuş sürüsü uçtu.|Bir arada dolaşan hayvan topluluğu.
+flourish|gelişmek||verb|C1|iş|The business began to flourish.|İşler gelişmeye başladı.|Hızla büyüyüp başarılı olmak.
+foam|köpük||noun|B2|ev|There is too much foam in the sink.|Lavaboda çok fazla köpük var.|Sıvının yüzeyindeki küçük hava kabarcıkları.
+fountain|çeşme||noun|B2|şehir|We drank water from the fountain.|Çeşmeden su içtik.|Suyun aktığı yapı.
+fraction|kesir||noun|B2|okul|One half is a fraction.|Yarım bir kesirdir.|Bir bütünün parçasını gösteren sayı.
+amnesty|af||noun|C1|hukuk|The prisoners hoped for an amnesty.|Mahkumlar af bekliyordu.|Suçluların cezasının devlet tarafından bağışlanması.
+anthem|marş||noun|B2|hukuk|We sang the national anthem.|İstiklal Marşı'nı söyledik.|Bir ülkeyi temsil eden resmî şarkı.
+asylum|iltica|sığınma|noun|C1|hukuk|He asked for asylum.|İltica talebinde bulundu.|Başka bir ülkeye sığınma hakkı.
+bandage|sargı||noun|B2|sağlık|The nurse put a bandage on my arm.|Hemşire koluma sargı sardı.|Yarayı örten bez şerit.
+barefoot|yalınayak||adverb|B2|günlük|The kids ran barefoot on the grass.|Çocuklar çimlerde yalınayak koştu.|Ayakkabısız, çıplak ayakla.
+bathtub|küvet||noun|B2|ev|She is in the bathtub.|Küvette.|İçinde yıkanılan büyük kap.
+beetle|böcek||noun|B2|hayvanlar|A black beetle is on the leaf.|Yaprağın üstünde siyah bir böcek var.|Sert kanatlı küçük hayvan.
+beverage|içecek||noun|B2|yiyecek|Tea is a popular beverage.|Çay sevilen bir içecektir.|İçilen sıvı.
+blizzard|tipi||noun|C1|hava|We were caught in a blizzard.|Tipiye yakalandık.|Rüzgârlı, yoğun kar fırtınası.
+braid|örgü||noun|B2|vücut|She has a long braid.|Uzun bir örgüsü var.|Saçın üç tutamla örülmüş hali.
+brag|övünmek||verb|C1|duygular|He likes to brag about his car.|Arabasıyla övünmeyi sever.|Kendi başarısını abartarak anlatmak.
+cabbage|lahana||noun|B2|yiyecek|My grandma cooks cabbage soup.|Büyükannem lahana çorbası pişirir.|Yaprakları iç içe büyük sebze.
+camel|deve||noun|B2|hayvanlar|We rode a camel in the desert.|Çölde deveye bindik.|Hörgüçlü, çölde yaşayan hayvan.
+celery|kereviz||noun|B2|yiyecek|Add celery to the soup.|Çorbaya kereviz ekle.|Kökü ya da sapı yenen sebze.
+chalk|tebeşir||noun|B2|okul|The teacher wrote with chalk.|Öğretmen tebeşirle yazdı.|Kara tahtaya yazmaya yarayan beyaz çubuk.
+chess|satranç||noun|B2|günlük|Do you play chess?|Satranç oynar mısın?|Şah ve vezirle oynanan strateji oyunu.
+chestnut|kestane||noun|B2|yiyecek|I bought a chestnut from the seller.|Satıcıdan bir kestane aldım.|Kabuğu kahverengi, kışın közlenen meyve.
+chimney|baca||noun|B2|ev|Smoke came out of the chimney.|Bacadan duman çıktı.|Evin dumanını dışarı veren boru.
+clumsy|sakar||adjective|B2|duygular|I am so clumsy today.|Bugün çok sakarım.|Sık sık bir şeyleri düşüren ya da kıran.
+compass|pusula||noun|B2|seyahat|Use the compass to find north.|Kuzeyi bulmak için pusulayı kullan.|Yönü gösteren alet.
+coward|korkak||noun|B2|duygular|Don't be a coward.|Korkak olma.|Cesareti olmayan kişi.
+crumb|kırıntı||noun|B2|yiyecek|There is a crumb on your shirt.|Gömleğinde bir kırıntı var.|Ekmekten dökülen küçük parça.
+cucumber|salatalık||noun|B2|yiyecek|Cut the cucumber.|Salatalığı kes.|Yeşil kabuklu, sulu sebze.
+curly|kıvırcık||adjective|B2|vücut|She has curly hair.|Kıvırcık saçları var.|Halka halka kıvrılmış.
+dagger|hançer||noun|C1|hukuk|He hid a dagger in his coat.|Paltosunda bir hançer sakladı.|Kısa, iki yüzü keskin bıçak.
+dialect|lehçe|ağız|noun|C1|okul|They speak a local dialect.|Yerel bir lehçe konuşuyorlar.|Bir dilin bölgesel söyleyiş biçimi.
+disgrace|rezalet||noun|C1|duygular|This is a disgrace!|Bu bir rezalet!|Utanç verici durum.

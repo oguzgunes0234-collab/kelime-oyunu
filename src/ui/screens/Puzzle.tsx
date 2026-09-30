@@ -517,6 +517,7 @@ export function Puzzle(props: Props) {
               )}
             </p>
           )}
+          {puzzle.solved[puzzle.sel.word] && selEntry?.grammar && <p className="cw-clue-sub">{selEntry.grammar.note}</p>}
         </div>
         <button type="button" className="cw-nav" onClick={() => moveWord(1)} aria-label="Sonraki kelime">
           <ChevronRightIcon width={20} height={20} />
@@ -563,14 +564,16 @@ export function Puzzle(props: Props) {
               type="button"
               className={`cw-tool tool-${tool}${!tutorial && count === 0 ? ' is-empty' : ''}${tip === 'tools' ? ' coach-pulse' : ''}`}
               onClick={() => onTool(tool)}
-              aria-label={`${info.name}: ${info.does} ${tutorial ? 'Eğitimde ücretsiz.' : `Kalan hak: ${count}. Bedel: ${info.cost}.`}`}
+              aria-label={`${info.name}: ${info.does} ${
+                tutorial ? 'Eğitimde ücretsiz.' : count === 0 ? 'Hakkın kalmadı; dokununca seçenekler açılır.' : `Kalan hak: ${count}. Bedel: ${info.cost}.`
+              }`}
             >
               <span className="tool-circle small">
                 <Icon width={20} height={20} />
               </span>
               <span>{info.name}</span>
               <span className="cw-tool-count" aria-hidden="true">
-                {tutorial ? '∞' : count}
+                {tutorial ? '∞' : count === 0 ? '+' : count}
               </span>
             </button>
           );

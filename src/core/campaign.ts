@@ -1,17 +1,17 @@
+import type { Difficulty } from './types';
+
 /**
  * Kampanya (bölümler): oyuncunun ana oyundaki ilerlemesi. Uyarlamalı zorluktan
  * bilerek ayrıdır:
  *
- * - Bölüm, tamamlanan bulmaca sayısından hesaplanır ve yalnızca bulmacanın
- *   BOYUNU belirler (Bölüm 1 küçük ızgara, sonrası normal ızgara).
- * - Kelimelerin SEVİYESİNİ (Kolay/Orta/Zor) uyarlamalı zorluk belirler
- *   (core/adaptive.ts). Bölüm atlamak seviyeyi değiştirmez; seviye düşmek
- *   bölümü geri almaz. İkisi farklı şeyi yönettiği için çelişmez.
+ * - Bölüm, tamamlanan bulmaca sayısından hesaplanır. Bulmacanın BOYUNU
+ *   (chapterGrid) ve zorluğun çıkabileceği TAVANI (chapterMaxDifficulty)
+ *   belirler.
+ * - Kelimelerin SEVİYESİNİ (Kolay/Orta/Zor/Uzman) tavanın altında uyarlamalı
+ *   zorluk belirler (core/adaptive.ts): iyi oynayan yükselir, zorlanan bir
+ *   basamak düşer. Seviye düşmek bölümü geri almaz.
  *
- * Bölüm boyu (5 bulmaca) mevcut içeriğe göre seçildi: kolay havuz (91 kelime)
- * 9×8 bulmacalarda ~15 bulmacada yeni kelime bitiriyor (ölçüldü), yani ~3 bölüm.
- * Kampanya bir sonla tasarlanmadı; bölüm numarası artmaya devam eder, ama
- * kelime paketi büyümeden ileri bölümler çoğunlukla bilinen kelimeleri tekrar eder.
+ * Kampanya bir sonla tasarlanmadı; bölüm numarası artmaya devam eder.
  */
 
 export const CHAPTER_SIZE = 5;
@@ -48,9 +48,26 @@ export function pathNodes(info: Pick<ChapterInfo, 'done' | 'size'>): PathNodeSta
   return Array.from({ length: info.size }, (_, i) => (i < info.done ? 'done' : i === info.done ? 'current' : 'locked'));
 }
 
-/** Bölümün ızgara boyu: Bölüm 1 eğitimden sonra yumuşak geçiş (7×7), sonrası 9×8. */
+/**
+ * Bölümün ızgara boyu: Bölüm 1 eğitimden sonra yumuşak geçiş (7×7), sonrası 9×8.
+ * İleri bölümlerde daha çok kelime denendi (en çok 14): 9×8 ızgara zaten
+ * 11–12 kelimede doluyor, kelime ve kesişim sayısı değişmedi (ölçüldü).
+ * Izgarayı büyütmek telefonda kareleri okunamayacak kadar küçültüyor; ileri
+ * bölümlerde zorlaşma kelime seviyesinden gelir (chapterMaxDifficulty).
+ */
 export function chapterGrid(chapter: number): { rows: number; cols: number } {
   return chapter <= 1 ? { rows: 7, cols: 7 } : { rows: 9, cols: 8 };
+}
+
+/**
+ * Bölümün zorluk tavanı: uyarlamalı zorluk bu basamağın üstüne çıkmaz.
+ * Bölüm 1–2 en çok Orta, 3–5 en çok Zor, 6+ Uzman (B2–C1). Tavan yalnızca
+ * yükselmeyi sınırlar; oyuncu zorlanınca yine bir basamak düşer.
+ */
+export function chapterMaxDifficulty(chapter: number): Difficulty {
+  if (chapter <= 2) return 'medium';
+  if (chapter <= 5) return 'hard';
+  return 'expert';
 }
 
 /** Tamamlanan bir ana oyun bulmacasını sayar; bölüm biterse biten bölümün numarasını döner. */

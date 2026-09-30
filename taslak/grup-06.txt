@@ -1,0 +1,24 @@
+month|ay||noun|A1|zaman|Next month I will visit Rome.|Gelecek ay Roma'ya gideceğim.|Yılın on iki bölümünden biri; otuz gün kadar.||takvim
+hundred|yüz||noun|A1|günlük|There are a hundred people here.|Burada yüz kişi var.|Doksan dokuzdan sonra gelen sayı.||sayı
+air|hava||noun|A1|doğa|We need fresh air.|Temiz havaya ihtiyacımız var.|Soluduğumuz, dünyayı saran gaz.||soluduğumuz
+way|yol|yöntem|noun|A1|günlük|This is the best way to learn.|Öğrenmenin en iyi yolu bu.|Bir işi yapma biçimi.||yöntem
+home|ev|yuva|noun|A1|ev|I want to go home.|Eve gitmek istiyorum.|Kişinin yaşadığı ve ait hissettiği yer.||yuva
+last|son|sonuncu|adjective|A1|zaman|This is the last bus.|Bu son otobüs.|Sıranın en arkasında olan.||en sondaki
+study|çalışmak||verb|A1|okul|I study English every day.|Her gün İngilizce çalışıyorum.|Öğrenmek için ders üzerinde uğraşmak.||ders
+expect|beklemek||verb|B1|günlük|I expect a letter today.|Bugün bir mektup bekliyorum.|Bir şeyin olacağını düşünmek.||olacağını düşünerek
+follow|izlemek||verb|A2|günlük|Follow me.|Beni izle.|Birinin arkasından gitmek.||arkasından gitmek
+return|dönmek||verb|A2|seyahat|I will return next week.|Gelecek hafta döneceğim.|Gidilen yerden geri gelmek.||geri gelmek
+voice|ses||noun|A2|vücut|She has a beautiful voice.|Güzel bir sesi var.|İnsanın konuşurken ya da şarkı söylerken ağzından çıkan.||konuşan kişinin
+sorry|üzgün||adjective|A1|duygular|I am sorry for being late.|Geç kaldığım için üzgünüm.|Özür dilerken ya da başkası için kederli olan.||özür dilerken
+date|tarih||noun|A2|zaman|What is the date today?|Bugünün tarihi ne?|Takvimde belli bir gün.||gün
+daughter|kız||noun|A1|aile|Their daughter is a doctor.|Kızları doktor.|Anne ve babaya göre evlat; oğul değil.||evlat
+sister|kardeş|abla|noun|A1|aile|My sister is older than me.|Kardeşim benden büyük.|Aynı anne babadan olan kadın.||kız
+search|aramak||verb|A2|teknoloji|Search for the word online.|Kelimeyi internette ara.|Bir şeyi bulmak için bakmak.||bulmak için
+receive|almak||verb|B1|günlük|Did you receive my email?|E-postamı aldın mı?|Gönderilen bir şeye sahip olmak.||sana gönderileni
+buy|almak||verb|A1|alışveriş|I want to buy a new phone.|Yeni bir telefon almak istiyorum.|Para vererek bir şeye sahip olmak.||para vererek
+happen|olmak||verb|A2|günlük|What will happen tomorrow?|Yarın ne olacak?|Bir olayın gerçekleşmesi.||meydana gelmek
+argue|tartışmak||verb|B1|duygular|My parents argue a lot.|Annemle babam çok tartışır.|Öfkeyle karşılıklı itiraz etmek.||kavga ederek
+pair|çift||noun|A2|alışveriş|I need a new pair of shoes.|Yeni bir çift ayakkabıya ihtiyacım var.|Birlikte kullanılan iki eş parça.||eşya
+fee|ücret||noun|B1|alışveriş|The entry fee is ten euros.|Giriş ücreti on avro.|Bir hizmet için ödenen para.||hizmet bedeli
+dessert|tatlı||noun|A2|yiyecek|What is for dessert?|Tatlı olarak ne var?|Yemekten sonra yenen şekerli yiyecek.||yemek sonu
+candy|şeker|şekerleme|noun|A2|yiyecek|The children love candy.|Çocuklar şekeri sever.|Renkli, küçük tatlı yiyecek.||yiyecek

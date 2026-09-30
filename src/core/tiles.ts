@@ -12,7 +12,7 @@ export interface Tile {
 }
 
 /** Zorluğa göre eklenen şaşırtmaca harf sayısı. */
-export const DECOYS: Record<Difficulty, number> = { easy: 0, medium: 2, hard: 3 };
+export const DECOYS: Record<Difficulty, number> = { easy: 0, medium: 2, hard: 3, expert: 4 };
 
 export function buildTiles(answer: string, lang: LangCode, difficulty: Difficulty, rng: Rng = Math.random): Tile[] {
   const letters = lettersOf(answer, lang);

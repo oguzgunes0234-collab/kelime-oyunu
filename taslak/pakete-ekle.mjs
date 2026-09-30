@@ -39,7 +39,18 @@ const split = (s) => (s ?? '').split(',').map((x) => x.trim()).filter(Boolean);
 
 // Taban: elle yazılmış girdiler. Önceki çalıştırmada eklenenler (check alanı olanlar) silinir.
 const base = pack.entries.filter((e) => !e.check);
-const baseTr = new Set(base.map((e) => lower(e.terms.tr.text)));
+
+/**
+ * Aynı Türkçe kelime birden çok kayıtta ancak hepsinde farklı bir ayırt edici
+ * açıklama (terms.tr.context) varsa kabul edilir: "ay (takvim)" / "ay (gökyüzü)".
+ */
+function trClash(tr, ctx, others) {
+  const same = others.filter((o) => lower(o.terms.tr.text) === lower(tr));
+  if (!same.length) return null;
+  if (!ctx) return `Türkçe karşılık pakette zaten var (${same[0].terms.en.text}); ayırt edici açıklama yok`;
+  const bad = same.find((o) => !o.terms.tr.context || lower(o.terms.tr.context) === lower(ctx));
+  return bad ? `"${tr}" ${bad.terms.en.text} ile ayırt edilemiyor` : null;
+}
 
 const added = [];
 const report = { human: 0, crosscheck: 0, bulk: 0, dropped: 0, waiting: 0, rejected: [] };
@@ -71,10 +82,11 @@ for (const d of drafts) {
   const hw = words(hint);
   const leak = [tr, ...trAlts, en.text].find((w) => hw.has(lower(w)));
   if (leak) { report.rejected.push(`${en.text} → ${tr}: tanımda "${leak}" geçiyor`); continue; }
-  if (baseTr.has(lower(tr)) || added.some((a) => lower(a.terms.tr.text) === lower(tr))) {
-    report.rejected.push(`${en.text} → ${tr}: Türkçe karşılık pakette zaten var`);
-    continue;
-  }
+  const g = d.grammar;
+  // Çekimli biçimde açıklama dilbilgisidir: "geçmiş zaman · gitmek".
+  const trCtx = g ? `geçmiş zaman · ${g.base.tr}` : d.terms.tr.context;
+  const clash = trClash(tr, trCtx, [...base, ...added]);
+  if (clash) { report.rejected.push(`${en.text} → ${tr}: ${clash}`); continue; }
 
   added.push({
     id: d.id,
@@ -82,10 +94,16 @@ for (const d of drafts) {
     level: e.level ?? d.level,
     topic: d.topic,
     terms: {
-      tr: { text: tr, ...(trAlts.length ? { alternatives: trAlts } : {}), example: e.exTr ?? d.terms.tr.example },
-      en: { text: en.text, ...(en.alternatives?.length ? { alternatives: en.alternatives } : {}), example: e.exEn ?? en.example },
+      tr: { text: tr, ...(trAlts.length ? { alternatives: trAlts } : {}), ...(trCtx ? { context: trCtx } : {}), example: e.exTr ?? d.terms.tr.example },
+      en: {
+        text: en.text,
+        ...(en.alternatives?.length ? { alternatives: en.alternatives } : {}),
+        ...(g ? { context: `geçmiş zaman · ${g.base.en}` } : {}),
+        example: e.exEn ?? en.example,
+      },
     },
     hint: { tr: hint },
+    ...(g ? { grammar: g } : {}),
     reviewed: check === 'human',
     check,
   });

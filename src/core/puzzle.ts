@@ -1,7 +1,7 @@
 import { buildCrossword, crosswordAnswer, GRID_COLS, GRID_ROWS, wordCells, type Candidate, type Crossword } from './crossword';
 import { directionKey, entriesFor, toQuestion } from './pack';
 import { average, recordPuzzle, roundQuality } from './adaptive';
-import { initialCampaign, recordCampaignPuzzle } from './campaign';
+import { chapterInfo, chapterMaxDifficulty, initialCampaign, recordCampaignPuzzle } from './campaign';
 import { pickClue } from './clues';
 import { isDue } from './srs';
 import { recordPuzzleDone } from './daily';
@@ -462,7 +462,8 @@ export function applyPuzzle(
 
   // Uyarlamalı zorluk: bulmaca başına tek karar, en fazla bir kademe; yalnızca ana oyunda.
   if (adaptive && campaign && results.length > 0) {
-    const res = recordPuzzle(p.adaptive, puzzleQuality(results));
+    const max = chapterMaxDifficulty(chapterInfo(p.campaign ?? initialCampaign()).chapter);
+    const res = recordPuzzle(p.adaptive, puzzleQuality(results), max);
     p = { ...p, adaptive: res.state };
     outcome.levelChange = res.change;
     outcome.difficultyAfter = res.change ? res.state.difficulty : null;

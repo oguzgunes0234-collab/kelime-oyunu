@@ -51,7 +51,7 @@ lazy|tembel||adjective|A2|iş|Don't be lazy.|Tembel olma.|Çalışmayı sevmeyen
 expert|uzman||noun|B1|iş|She is an expert in finance.|O finans uzmanı.|Bir konuyu çok iyi bilen kişi.
 shift|vardiya||noun|B1|iş|I work the night shift.|Gece vardiyasında çalışıyorum.|İşyerinde sırayla çalışılan zaman dilimi.
 union|sendika||noun|B2|iş|He joined the union.|Sendikaya katıldı.|İşçilerin haklarını koruyan örgüt.
-wage|ücret||noun|B1|iş|The wage is too low.|Ücret çok düşük.|Yapılan iş için ödenen para.
+wage|ücret||noun|B1|iş|The wage is too low.|Ücret çok düşük.|Yapılan iş için ödenen para.||iş karşılığı
 stamp|pul||noun|A2|iş|Put a stamp on the letter.|Mektuba pul yapıştır.|Zarfa yapıştırılan, posta ücretini gösteren kâğıt.
 envelope|zarf||noun|A2|iş|Put the letter in the envelope.|Mektubu zarfa koy.|Mektubun konduğu kâğıt kılıf.
 calendar|takvim||noun|A2|iş|Check the calendar.|Takvime bak.|Günleri ve ayları gösteren çizelge.

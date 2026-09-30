@@ -9,7 +9,7 @@
 export type LangCode = string;
 
 /** Yaklaşık CEFR düzeyi. Doğrulanmış bir sınıflandırma değildir. */
-export type Cefr = 'A1' | 'A2' | 'B1' | 'B2';
+export type Cefr = 'A1' | 'A2' | 'B1' | 'B2' | 'C1';
 
 export type PartOfSpeech = 'noun' | 'verb' | 'adjective' | 'adverb';
 
@@ -47,6 +47,19 @@ export interface Entry {
    * Bkz. taslak/pakete-ekle.mjs.
    */
   check?: 'human' | 'crosscheck' | 'bulk';
+  /**
+   * Çekimli biçim (ör. went = go'nun geçmiş zamanı). Terimler çekimli
+   * biçimlerdir ("gitti" ↔ "went"); temel hâl ve açıklama dilbilgisi öğretir.
+   */
+  grammar?: GrammarInfo;
+}
+
+export interface GrammarInfo {
+  form: 'past';
+  /** Temel hâl, dile göre: { en: 'go', tr: 'gitmek' }. */
+  base: Record<LangCode, string>;
+  /** Kısa dilbilgisi açıklaması (arayüz dilinde). */
+  note: string;
 }
 
 export interface WordPack {
@@ -63,7 +76,7 @@ export interface Direction {
   target: LangCode;
 }
 
-export type Difficulty = 'easy' | 'medium' | 'hard';
+export type Difficulty = 'easy' | 'medium' | 'hard' | 'expert';
 export type DifficultyMode = Difficulty | 'adaptive';
 
 /** Bir girdiden belirli bir yön için türetilen soru. */

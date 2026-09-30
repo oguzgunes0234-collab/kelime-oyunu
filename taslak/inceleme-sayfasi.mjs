@@ -31,6 +31,8 @@ const data = entries.map((e) => ({
   oneWay: !!e.draft.oneWay,
   cross: e.draft.cross ?? null,
   game: inGame.get(e.id) ?? null,
+  ctx: e.terms.tr.context ?? '',
+  grammar: e.grammar ? `${e.grammar.note} · temel hâl: ${e.grammar.base.en} / ${e.grammar.base.tr}` : '',
 }));
 const groups = [...new Set(data.map((d) => d.g))];
 

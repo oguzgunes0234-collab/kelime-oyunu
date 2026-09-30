@@ -19,7 +19,6 @@ animal|hayvan||noun|A1|hayvanlar|The cat is my favourite animal.|Kedi en sevdiğ
 anyway|-|zaten (already) ile çakışır
 apply|başvurmak||verb|B1|iş|I want to apply for the job.|O işe başvurmak istiyorum.|Bir iş ya da yer için resmî istekte bulunmak.
 approach|yaklaşım||noun|B2|soyut|We need a new approach.|Yeni bir yaklaşıma ihtiyacımız var.|Bir konuyu ele alma biçimi.
-argue|-|tartışmak (discuss) ile çakışır
 army|ordu||noun|B1|hukuk|He joined the army.|Orduya katıldı.|Bir ülkenin silahlı kara kuvvetleri.
 arrive|varmak||verb|A1|seyahat|We arrive in Paris at nine.|Paris'e dokuzda varıyoruz.|Gidilen yere ulaşmak.
 article|makale||noun|B1|okul|I read an article about bees.|Arılar hakkında bir makale okudum.|Gazete ya da dergide yayımlanan yazı.
@@ -43,7 +42,7 @@ block|-|anlam çok
 blood|kan||noun|A2|sağlık|He lost a lot of blood.|Çok kan kaybetti.|Damarlarda dolaşan kırmızı sıvı.
 board|tahta||noun|A2|okul|Write it on the board.|Tahtaya yaz.|Sınıfta üzerine yazı yazılan düz yüzey.
 box|kutu||noun|A1|ev|Put the toys in the box.|Oyuncakları kutuya koy.|Eşya koymak için kapaklı kap.
-brother|kardeş|abi,ağabey|noun|A1|aile|My brother is ten years old.|Kardeşim on yaşında.|Aynı anne babadan olan erkek.
+brother|kardeş|abi,ağabey|noun|A1|aile|My brother is ten years old.|Kardeşim on yaşında.|Aynı anne babadan olan erkek.||erkek
 build|-|Türkçesi iki kelime (inşa etmek); yapmak (make) ile çakışır
 campaign|-|Türkçesi neredeyse aynı (kampanya)
 card|-|Türkçesi neredeyse aynı (kart)
@@ -73,7 +72,7 @@ cool|serin||adjective|A2|hava|It is cool in the evening.|Akşam hava serin.|Hafi
 council|meclis|konsey|noun|B2|hukuk|The city council meets on Monday.|Belediye meclisi pazartesi toplanıyor.|Bir yeri yönetmek için seçilmiş kişilerin kurulu.
 count|saymak||verb|A1|okul|Can you count to ten?|Ona kadar sayabilir misin?|Sayıları sırayla söylemek.
 county|-|ABD/İngiltere yönetim birimi; Türkçe karşılığı yok
-couple|çift||noun|A2|aile|They are a happy couple.|Onlar mutlu bir çift.|Birlikte olan iki kişi.
+couple|çift||noun|A2|aile|They are a happy couple.|Onlar mutlu bir çift.|Birlikte olan iki kişi.||iki kişi
 crime|suç||noun|B1|hukuk|Crime is rising in the city.|Şehirde suç artıyor.|Kanuna aykırı davranış.
 cry|ağlamak||verb|A1|duygular|The baby started to cry.|Bebek ağlamaya başladı.|Gözlerinden yaş akıtmak.
 culture|-|Türkçesi neredeyse aynı (kültür)
@@ -83,8 +82,6 @@ dad|-|baba (father) ile çakışır
 dance|-|Türkçesi neredeyse aynı (dans)
 dark|karanlık||adjective|A1|doğa|It is dark outside.|Dışarısı karanlık.|Işığı olmayan.
 data|veri||noun|B1|teknoloji|The data is on my computer.|Veri bilgisayarımda.|İncelenmek için toplanan bilgi.
-date|-|tarih (history) ile çakışır; anlam çok
-daughter|-|kız (girl) ile çakışır
 dead|ölü||adjective|B1|sağlık|The plant is dead.|Bitki ölü.|Hayatı sona ermiş.
 decade|-|Türkçesi iki kelime (on yıl)
 deep|derin||adjective|A2|doğa|The lake is very deep.|Göl çok derin.|Dibi yüzeyden çok aşağıda olan.
@@ -155,7 +152,6 @@ hell|-|argo kullanımı çok
 hide|gizlemek|saklamak|verb|B1|günlük|Hide the money.|Parayı gizle.|Bir şeyi başkaları görmesin diye örtmek.
 hotel|-|Türkçesi neredeyse aynı (otel)
 huge|kocaman|devasa|adjective|B1|günlük|They live in a huge house.|Kocaman bir evde yaşıyorlar.|Çok çok büyük.
-hundred|-|yüz (face) ile çakışır
 hurt|incitmek||verb|B1|sağlık|Don't hurt the cat.|Kediyi incitme.|Birine acı vermek.
 husband|koca|eş|noun|A1|aile|Her husband is a teacher.|Kocası öğretmen.|Evli bir kadının hayat arkadaşı.
 identify|-|Türkçesi tek kelimeyle net değil
@@ -262,7 +258,6 @@ race|yarış||noun|A2|günlük|He won the race.|Yarışı kazandı.|Kimin daha h
 range|-|anlam çok
 ready|hazır||adjective|A1|günlük|Are you ready?|Hazır mısın?|Bir şeye başlamak için her şeyi tamam olan.
 realize|-|Türkçesi iki kelime (fark etmek)
-receive|-|almak (take) ile çakışır
 regard|-|tek karşılığı yok
 region|-|bölge (area) ile çakışır
 relate|-|tek karşılığı yok
@@ -288,7 +283,6 @@ save|kurtarmak|biriktirmek|verb|B1|günlük|The doctor tried to save him.|Doktor
 scene|sahne||noun|B1|günlük|This is my favourite scene in the film.|Bu filmdeki en sevdiğim sahne.|Film ya da oyunun bir bölümü.
 science|bilim||noun|A1|teknoloji|I love science.|Bilimi severim.|Doğayı ve evreni deneyle inceleyen bilgi alanı.
 score|puan|skor|noun|A2|günlük|What is the score?|Puan kaç?|Bir oyunda ya da sınavda alınan sayı.
-search|-|aramak (call) ile çakışır
 season|mevsim||noun|A1|hava|Summer is my favourite season.|Yaz en sevdiğim mevsim.|Yılın dört bölümünden biri.
 seat|koltuk|yer|noun|A2|seyahat|Is this seat free?|Bu koltuk boş mu?|Otobüste ya da sinemada oturmak için yapılmış eşya.
 secret|sır||noun|A2|duygular|Can you keep a secret?|Sır tutabilir misin?|Başkalarından gizlenen bilgi.
@@ -298,7 +292,7 @@ seek|-|aramak (call) ile çakışır
 separate|ayrı||adjective|B1|günlük|We have separate rooms.|Ayrı odalarımız var.|Birbirinden bağımsız.
 series|dizi||noun|B1|günlük|I am watching a new series.|Yeni bir dizi izliyorum.|Bölümler halinde yayımlanan program.
 serious|ciddi||adjective|B1|duygular|This is a serious problem.|Bu ciddi bir sorun.|Önemli, şakası olmayan.
-seven|yedi||noun|A1|günlük|There are seven days in a week.|Bir haftada yedi gün var.|Altıdan sonra gelen sayı.
+seven|yedi||noun|A1|günlük|There are seven days in a week.|Bir haftada yedi gün var.|Altıdan sonra gelen sayı.||sayı
 sex|-|oyun için uygun değil
 shake|sallamak||verb|B1|günlük|Shake the bottle.|Şişeyi salla.|Bir şeyi hızla ileri geri oynatmak.
 shape|şekil|biçim|noun|A2|okul|What shape is it?|Bu ne şekil?|Bir şeyin dış görünüşü.
@@ -307,7 +301,6 @@ shop|dükkân|mağaza,dükkan|noun|A1|alışveriş|The shop opens at nine.|Dükk
 short|kısa||adjective|A1|günlük|My hair is short.|Saçım kısa.|Boyu ya da süresi az olan.
 similar|benzer||adjective|B1|soyut|Our bags are similar.|Çantalarımız benzer.|Birbirine yakın özellikler taşıyan.
 single|bekâr|bekar,tek|adjective|B1|aile|Is he married or single?|Evli mi bekâr mı?|Evli olmayan.
-sister|-|kardeş (brother) ile çakışır
 site|-|anlam çok
 size|beden|boyut|noun|A2|alışveriş|What size do you need?|Hangi bedene ihtiyacın var?|Giysi ya da ayakkabının ölçüsü.
 skill|beceri||noun|B1|iş|Cooking is a useful skill.|Yemek yapmak yararlı bir beceri.|Bir işi iyi yapabilme yeteneği.
