@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { DIFFICULTY_LABEL } from '../../core/pack';
 import type { Profile, ThemeSetting } from '../../core/profile';
 import type { WordPack } from '../../core/types';
 import { BackIcon } from '../components/Icons';
@@ -32,6 +33,14 @@ export function Settings({ pack, profile, setProfile, onBack, onReplayTutorial, 
         </button>
         <h1>Ayarlar</h1>
       </header>
+
+      <section className="setting">
+        <h2>Kelime seviyesi</h2>
+        <p className="small">
+          Otomatik ayarlanır · şu an <strong>{DIFFICULTY_LABEL[profile.adaptive.difficulty]}</strong>
+        </p>
+        <p className="muted small">Son bulmacalardaki başarına göre bir kademe yükselir ya da düşer; seçmen gerekmez.</p>
+      </section>
 
       <section className="setting">
         <h2>Günlük hedef</h2>

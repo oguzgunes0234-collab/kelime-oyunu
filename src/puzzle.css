@@ -215,6 +215,38 @@
 
 .home {
   gap: 12px;
+  /* Ana sayfa her zaman ekranı doldurur: artan yükseklik bölüm yoluna gider,
+     alt kısımda boşluk kalmaz; modlar ve bağlantılar ekranın altına oturur. */
+  min-height: 100dvh;
+}
+.home .campaign-card {
+  flex: 1 0 auto;
+}
+@media (min-height: 801px) {
+  .home .campaign-card .chapter-path {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  /* Düğümler arasındaki boşluk ekrana göre açılır. Yolun en küçük hali kısa
+     tutulur ki 375×812 gibi ekranlarda sayfa taşmasın; artan yer boşluğa gider.
+     Düğümler dokunulan düğme değil, yalnızca gösterge. */
+  .home .chapter-path.layout-auto .path-nodes {
+    flex: 1 1 auto;
+    /* Uçlara yaslı: kesik çizgi tam ilk ve son düğüm arasında kalır. */
+    justify-content: space-between;
+    gap: 4px;
+  }
+  .home .chapter-path.layout-auto .path-node span {
+    width: 34px;
+    height: 34px;
+    font-size: 0.95rem;
+  }
+  .home .chapter-path.layout-auto .path-node.is-current span {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
 }
 .campaign-card {
   display: flex;

@@ -1,7 +1,6 @@
 import { chapterInfo } from '../../core/campaign';
 import { DAILY_PUZZLE_GOAL, currentStreak, goalDoneToday } from '../../core/daily';
 import { languageInfo } from '../../core/languages';
-import { DIFFICULTY_LABEL } from '../../core/pack';
 import type { Profile } from '../../core/profile';
 import { topicStatuses } from '../../core/topics';
 import type { WordPack } from '../../core/types';
@@ -129,8 +128,6 @@ export function Home({ pack, profile, setProfile, onPuzzle, puzzleSaved, tutoria
           Hak ve paketler
         </button>
       </nav>
-
-      <p className="home-level muted small center">Kelime seviyesi otomatik ayarlanır · şu an {DIFFICULTY_LABEL[profile.adaptive.difficulty]}</p>
     </div>
   );
 }
