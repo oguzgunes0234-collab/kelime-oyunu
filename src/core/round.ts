@@ -53,7 +53,7 @@ export function createRound(question: Question, difficulty: Difficulty, rng: Rng
     order: scrambledOrder(tiles, rng),
     placed: Array(lettersOf(question.answer, question.target).length).fill(null),
     wrongAttempts: 0,
-    used: { shuffle: 0, magnet: 0, hint: 0, undo: 0 },
+    used: { shuffle: 0, magnet: 0, hint: 0, undo: 0, synonym: 0, sentence: 0 },
     meaningHintShown: false,
     letterHints: 0,
     highlight: null,
@@ -173,6 +173,9 @@ export function canUseTool(state: RoundState, tool: ToolId): boolean {
     case 'magnet':
     case 'hint':
       return correctPrefix(state) < slotCount(state);
+    default:
+      // Eş anlamlı ve Cümle yalnızca bulmacada; hızlı turda yok.
+      return false;
   }
 }
 
@@ -253,5 +256,7 @@ export function applyTool(state: RoundState, tool: ToolId, rng: Rng = Math.rando
         applied: true,
       };
     }
+    default:
+      return { state, applied: false };
   }
 }

@@ -5,7 +5,7 @@ import {
   COINS_PER_CORRECT,
   DAILY_GOAL_REWARD,
   TOOL_INFO,
-  TOOL_ORDER,
+  STORE_TOOL_ORDER,
   TOOL_PACKS,
   type ToolPack,
 } from '../../core/economy';
@@ -21,7 +21,7 @@ interface Props {
 
 /** "5 Mıknatıs · 5 İpucu" gibi okunur içerik. */
 function packContents(p: ToolPack): string {
-  return (TOOL_ORDER.filter((t) => p.tools[t]) as ToolId[]).map((t) => `${p.tools[t]} ${TOOL_INFO[t].name}`).join(' · ');
+  return (STORE_TOOL_ORDER.filter((t) => p.tools[t]) as ToolId[]).map((t) => `${p.tools[t]} ${TOOL_INFO[t].name}`).join(' · ');
 }
 
 export function Store({ profile, setProfile, onClose }: Props) {
@@ -54,7 +54,7 @@ export function Store({ profile, setProfile, onClose }: Props) {
         </ul>
         <p className="muted small">Oyunun tamamı satın alma yapmadan oynanabilir. Araçlar isteğe bağlıdır.</p>
         <ul className="charge-list">
-          {TOOL_ORDER.map((tool) => {
+          {STORE_TOOL_ORDER.map((tool) => {
             const Icon = TOOL_ICONS[tool];
             return (
               <li key={tool}>

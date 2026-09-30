@@ -107,6 +107,9 @@ const IDLE_TEXT: Record<ToolId, string> = {
   undo: 'Geri alınacak harf yok. Hak harcanmadı.',
   magnet: 'Cevap zaten doğru ilerliyor. Hak harcanmadı.',
   hint: 'Cevap zaten doğru ilerliyor. Hak harcanmadı.',
+  // Bulmaca jokerleri hızlı turda yok (araç çubuğunda görünmez).
+  synonym: 'Bu joker yalnızca bulmacada kullanılır. Hak harcanmadı.',
+  sentence: 'Bu joker yalnızca bulmacada kullanılır. Hak harcanmadı.',
 };
 
 export function Game(props: Props) {

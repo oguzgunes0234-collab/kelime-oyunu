@@ -85,7 +85,8 @@ export function buildPractice(pack: WordPack, direction: Direction, results: Wor
       letters: lettersOf(r.answer, direction.target),
       choices,
       correctChoice: choices.indexOf(meaning),
-      cloze: clozeFor(entry, direction.target),
+      // Pekiştirmede kaynak cümle de görünür: kısa örnek de belirsiz kalmaz.
+      cloze: clozeFor(entry, direction.target, 0),
       prompt: src.context ? `${src.text} (${src.context})` : src.text,
       sourceExample: src.example,
     });

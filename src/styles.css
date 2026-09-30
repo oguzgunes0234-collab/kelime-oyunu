@@ -927,6 +927,17 @@ div.note {
   color: var(--t-undo);
   background: var(--t-undo-bg);
 }
+/* Bulmaca jokerleri: hızlı turun renklerini paylaşır (o araçlar bulmacada yok). */
+.tool-synonym .tool-circle,
+.tool-circle.tool-synonym {
+  color: var(--t-shuffle);
+  background: var(--t-shuffle-bg);
+}
+.tool-sentence .tool-circle,
+.tool-circle.tool-sentence {
+  color: var(--t-undo);
+  background: var(--t-undo-bg);
+}
 .tool-badge {
   position: absolute;
   top: -6px;

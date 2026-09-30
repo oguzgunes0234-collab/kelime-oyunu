@@ -98,5 +98,6 @@ export interface Question {
   meaningHint?: string;
 }
 
-export type ToolId = 'shuffle' | 'magnet' | 'hint' | 'undo';
+/** shuffle/undo yalnız hızlı turda; synonym (Eş anlamlı) ve sentence (Cümle) yalnız bulmacada. */
+export type ToolId = 'shuffle' | 'magnet' | 'hint' | 'undo' | 'synonym' | 'sentence';
 export type Inventory = Record<ToolId, number>;

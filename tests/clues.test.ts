@@ -30,17 +30,22 @@ describe('cümle ipucu (cloze)', () => {
   });
 
   it('büyük harfle başlayan cevabı da bulur, cümlenin geri kalanını korur', () => {
-    expect(clozeFor(entry({ example: 'Cats like milk.', alternatives: ['cats'] }), 'en')).toBe(`${CLOZE_BLANK} like milk.`);
-    expect(clozeFor(entry({ example: 'Cat food is here.' }), 'en')).toBe(`${CLOZE_BLANK} food is here.`);
+    expect(clozeFor(entry({ example: 'Cats like milk.', alternatives: ['cats'] }), 'en', 0)).toBe(`${CLOZE_BLANK} like milk.`);
+    expect(clozeFor(entry({ example: 'Cat food is here for you.' }), 'en')).toBe(`${CLOZE_BLANK} food is here for you.`);
+  });
+
+  it('kısa cümle (5 kelimeden az) ipucu olmaz: "The table is ___." belirsiz', () => {
+    expect(clozeFor(entry({ example: 'The cat is black.' }), 'en')).toBeNull();
+    expect(clozeFor(entry({ example: 'The cat is black.' }), 'en', 0)).toBe(`The ${CLOZE_BLANK} is black.`);
   });
 
   it('kelimenin parçasını boşaltmaz; bulamazsa null döner', () => {
-    expect(clozeFor(entry({ example: 'The catalog is new.' }), 'en')).toBeNull();
+    expect(clozeFor(entry({ example: 'The catalog is new.' }), 'en', 0)).toBeNull();
     expect(clozeFor(entry({}), 'en')).toBeNull();
   });
 
   it('Türkçe çekimli hali eşleşmez (ör. "kediler")', () => {
-    expect(clozeFor(entry({}, { example: 'Kediler süt sever.' }), 'tr')).toBeNull();
+    expect(clozeFor(entry({}, { example: 'Kediler süt sever.' }), 'tr', 0)).toBeNull();
   });
 });
 

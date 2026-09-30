@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { clueFullText, clueLabel, wordCells } from '../../core/crossword';
-import { CLUE_KIND_LABEL } from '../../core/clues';
+import { CLUE_KIND_LABEL, sentenceFor, synonymsFor } from '../../core/clues';
 import { PUZZLE_TOOL_INFO, PUZZLE_TOOL_ORDER, type PuzzleToolId } from '../../core/economy';
 import { languageInfo } from '../../core/languages';
 import { displayLetter, displayWord, keyToLetter } from '../../core/normalize';
@@ -18,6 +18,8 @@ import {
   selectWord,
   selectedCell,
   showMeaning,
+  showExtra,
+  extraShown,
   solvedCount,
   tapCell,
   tapClue,
@@ -221,6 +223,8 @@ export function Puzzle(props: Props) {
         sfx.wrong();
       } else if (e.kind === 'reveal') say('Harf açıldı.');
       else if (e.kind === 'meaning') say('Anlam ipucu üstte.');
+      else if (e.kind === 'sentence') say('Örnek cümle üstte.');
+      else if (e.kind === 'synonym') say('Eş anlamlılar üstte.');
       else if (e.kind === 'complete') {
         say(tutorial ? 'Tamam!' : 'Bulmaca tamam!', 'good');
         buzz([30, 50, 30, 50, 60]);
@@ -284,19 +288,40 @@ export function Puzzle(props: Props) {
       setDialog({ kind: 'toolEmpty', tool });
       return;
     }
-    const entry = pack.entries.find((e) => e.id === p.cw.words[p.sel.word].entryId);
+    const word = p.cw.words[p.sel.word];
+    const entry = pack.entries.find((e) => e.id === word.entryId);
     // Tanım ipucunda anlam zaten ekranda: Anlam aracı yeni bir şey göstermez.
-    const hasMeaning = !!entry?.hint?.tr && p.cw.words[p.sel.word].clueKind !== 'definition';
-    const res = tool === 'hint' ? showMeaning(p, hasMeaning) : revealLetter(p);
+    const hasMeaning = !!entry?.hint?.tr && word.clueKind !== 'definition';
+    // Cümle ipucunda cümle zaten ekranda: Cümle jokeri yeni bir şey göstermez.
+    const hasSentence = !!entry && word.clueKind !== 'cloze' && !!sentenceFor(entry, p.direction);
+    const hasSynonym = !!entry && synonymsFor(entry, p.direction.target, word.answer).length > 0;
+    const res =
+      tool === 'hint'
+        ? showMeaning(p, hasMeaning)
+        : tool === 'sentence'
+          ? showExtra(p, 'sentence', hasSentence)
+          : tool === 'synonym'
+            ? showExtra(p, 'synonym', hasSynonym)
+            : revealLetter(p);
     if (!res.applied) {
       const why =
         tool === 'hint'
           ? p.meaningShown[p.sel.word]
             ? 'Bu kelimenin anlam ipucu zaten açık.'
-            : p.cw.words[p.sel.word].clueKind === 'definition'
+            : word.clueKind === 'definition'
               ? 'İpucu zaten kelimenin tanımı.'
               : 'Bu kelime için anlam ipucu yok.'
-          : 'Bu kelimede açılacak harf kalmadı.';
+          : tool === 'sentence'
+            ? extraShown(p, 'sentence', p.sel.word)
+              ? 'Cümle zaten açık.'
+              : word.clueKind === 'cloze'
+                ? 'İpucu zaten bir cümle.'
+                : 'Bu kelime için uygun örnek cümle yok.'
+            : tool === 'synonym'
+              ? extraShown(p, 'synonym', p.sel.word)
+                ? 'Eş anlamlılar zaten açık.'
+                : 'Bu kelimenin kayıtlı eş anlamlısı yok.'
+              : 'Bu kelimede açılacak harf kalmadı.';
       say(tutorial ? why : `${why} Hak harcanmadı.`);
       return;
     }
@@ -538,10 +563,34 @@ export function Puzzle(props: Props) {
               <p className="cw-clue-long" lang={selKind === 'cloze' ? tgt.code : 'tr'}>
                 {clueFullText(selWord)}
               </p>
+              {/* Cümle ipucunda kaynak dildeki karşılığı da görünür: boşluk tek anlama iner. */}
+              {selKind === 'cloze' && selEntry?.terms[src.code]?.example && (
+                <p className="cw-clue-trans" lang={src.code}>
+                  {selEntry.terms[src.code].example}
+                </p>
+              )}
             </>
           )}
           {selKind === 'translation' && selEntry?.terms[src.code]?.context && <p className="cw-clue-sub">({selEntry.terms[src.code].context})</p>}
           {puzzle.meaningShown[puzzle.sel.word] && selEntry?.hint?.tr && selKind !== 'definition' && <p className="cw-clue-hint">{selEntry.hint.tr}</p>}
+          {selEntry && extraShown(puzzle, 'synonym', puzzle.sel.word) && (
+            <p className="cw-clue-hint">
+              Aynı anlamda: <span lang={tgt.code}>{synonymsFor(selEntry, tgt.code, selWord.answer).join(', ')}</span>
+              <small> · ızgaradaki kelime bunlardan farklı</small>
+            </p>
+          )}
+          {selEntry && extraShown(puzzle, 'sentence', puzzle.sel.word) && sentenceFor(selEntry, puzzle.direction) && (
+            <>
+              <p className="cw-clue-hint" lang={tgt.code}>
+                {sentenceFor(selEntry, puzzle.direction)!.cloze}
+              </p>
+              {sentenceFor(selEntry, puzzle.direction)!.translation && (
+                <p className="cw-clue-trans" lang={src.code}>
+                  {sentenceFor(selEntry, puzzle.direction)!.translation}
+                </p>
+              )}
+            </>
+          )}
           {puzzle.solved[puzzle.sel.word] && (
             <p className="cw-clue-sub good">
               Çözüldü: <span lang={tgt.code}>{displayWord(selWord.answer, tgt.code)}</span>

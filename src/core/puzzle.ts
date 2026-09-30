@@ -21,6 +21,8 @@ export type PuzzleEvent =
   | { kind: 'wrong'; word: number }
   | { kind: 'reveal'; word: number }
   | { kind: 'meaning'; word: number }
+  | { kind: 'synonym'; word: number }
+  | { kind: 'sentence'; word: number }
   | { kind: 'complete' };
 
 export interface PuzzleState {
@@ -37,6 +39,12 @@ export interface PuzzleState {
   /** Kelimede Harf aç ile açılan harf sayısı. */
   lettersRevealed: number[];
   meaningShown: boolean[];
+  /**
+   * Eş anlamlı ve Cümle jokerleri gösterildi mi (kelime başına). Eski
+   * kayıtlarda yoktur; yoksa hiçbiri gösterilmemiş sayılır.
+   */
+  synonymShown?: boolean[];
+  sentenceShown?: boolean[];
   sel: { word: number; index: number };
   status: 'playing' | 'done';
   /** Her değişiklikte artar; arayüz olayları buna göre bir kez gösterir. */
@@ -164,6 +172,8 @@ export function puzzleFromCrossword(cw: Crossword, direction: Direction, difficu
     wrong: Array(n).fill(0),
     lettersRevealed: Array(n).fill(0),
     meaningShown: Array(n).fill(false),
+    synonymShown: Array(n).fill(false),
+    sentenceShown: Array(n).fill(false),
     sel: { word: 0, index: 0 },
     status: 'playing',
     seq: 0,
@@ -376,6 +386,25 @@ export function showMeaning(state: PuzzleState, hasHint: boolean): { state: Puzz
   };
 }
 
+/**
+ * Eş anlamlı ya da Cümle jokeri: seçili kelime için bir kez gösterilir.
+ * `available` false ise (ör. kayıtlı eş anlamlı yok) uygulanmaz, hak harcanmaz.
+ */
+export function showExtra(state: PuzzleState, kind: 'synonym' | 'sentence', available: boolean): { state: PuzzleState; applied: boolean } {
+  const w = state.sel.word;
+  const key = kind === 'synonym' ? 'synonymShown' : 'sentenceShown';
+  const shown = state[key] ?? state.cw.words.map(() => false);
+  if (state.status !== 'playing' || !available || shown[w] || state.solved[w]) return { state, applied: false };
+  return {
+    state: { ...state, [key]: shown.map((v, i) => v || i === w), event: { kind, word: w }, seq: state.seq + 1 },
+    applied: true,
+  };
+}
+
+export function extraShown(state: PuzzleState, kind: 'synonym' | 'sentence', word: number): boolean {
+  return !!(kind === 'synonym' ? state.synonymShown : state.sentenceShown)?.[word];
+}
+
 /** Oyuncu bulmacayı bitirir; çözülmeyen kelimeler cevaplarıyla gösterilir. */
 export function finishPuzzle(state: PuzzleState): PuzzleState {
   return state.status === 'done' ? state : { ...state, status: 'done', event: null, seq: state.seq + 1 };
@@ -504,13 +533,15 @@ export function wordResults(state: PuzzleState, pack: WordPack): WordResult[] {
       question,
       answer: w.answer,
       status: solved ? 'correct' : 'failed',
-      helped: state.lettersRevealed[i] > 0 || state.meaningShown[i],
+      helped: state.lettersRevealed[i] > 0 || state.meaningShown[i] || extraShown(state, 'synonym', i) || extraShown(state, 'sentence', i),
       wrongAttempts: state.wrong[i],
       score: scoreWord(question.level, w.letters.length, {
         solved,
         wrong: state.wrong[i],
         lettersRevealed: state.lettersRevealed[i],
         meaning: state.meaningShown[i],
+        synonym: extraShown(state, 'synonym', i),
+        sentence: extraShown(state, 'sentence', i),
       }),
     });
   });

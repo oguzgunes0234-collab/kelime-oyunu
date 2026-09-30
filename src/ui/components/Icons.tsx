@@ -47,11 +47,29 @@ export const UndoIcon = (p: P) => (
   </svg>
 );
 
+/** Eş anlamlı: iki eşit çizgi arasında çift yönlü ok (aynı anlam). */
+export const SynonymIcon = (p: P) => (
+  <svg {...base(p)}>
+    <path d="M4 9h16M4 15h16" />
+    <path d="M7 6 4 9l3 3M17 12l3 3-3 3" />
+  </svg>
+);
+
+/** Cümle: satırlar ve boşluk çizgisi. */
+export const SentenceIcon = (p: P) => (
+  <svg {...base(p)}>
+    <path d="M4 6h16M4 11h6M15 11h5M4 16h11" />
+    <path d="M11 13h3" strokeDasharray="1.5 1.5" />
+  </svg>
+);
+
 export const TOOL_ICONS: Record<ToolId, (p: P) => JSX.Element> = {
   shuffle: ShuffleIcon,
   magnet: MagnetIcon,
   hint: HintIcon,
   undo: UndoIcon,
+  synonym: SynonymIcon,
+  sentence: SentenceIcon,
 };
 
 export const CloseIcon = (p: P) => (

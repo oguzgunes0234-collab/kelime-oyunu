@@ -174,7 +174,7 @@ enemy|düşman||noun|B1|hukuk|He is not my enemy.|O benim düşmanım değil.|Bi
 soldier|asker||noun|A2|hukuk|The soldier is at the border.|Asker sınırda.|Orduda görev yapan kişi.
 defend|savunmak||verb|B1|hukuk|The lawyer will defend him.|Avukat onu savunacak.|Birini ya da bir şeyi saldırıya karşı korumak.
 danger|tehlike||noun|B1|hukuk|You are in danger.|Tehlikedesin.|Zarar görme olasılığı.
-license|ehliyet|lisans|noun|B1|hukuk|Do you have a driving license?|Ehliyetin var mı?|Araç kullanma izni veren belge.|licence
+license|ruhsat|lisans,ehliyet|noun|B1|hukuk|You need a license to open a restaurant.|Restoran açmak için ruhsat gerekir.|Bir işi yapmaya izin veren resmî belge.|licence
 document|belge||noun|B1|hukuk|Sign this document.|Bu belgeyi imzala.|Resmî bilgi içeren yazılı kâğıt.
 prisoner|mahkum|mahkûm|noun|B2|hukuk|The prisoner escaped.|Mahkum kaçtı.|Hapishanede tutulan kişi.
 guard|bekçi|gardiyan|noun|B1|hukuk|The guard is at the gate.|Bekçi kapıda.|Bir yeri koruyan kişi.

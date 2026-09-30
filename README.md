@@ -128,6 +128,15 @@ ilk açılıştan sonra oyun çevrimdışı da açılır. PWA olarak ana ekrana 
   "Düzensiz fiil: go → went" notu görünür). Bir mod, pakette o konudan en az 60 kelime olunca açılır; eksik mod
   kaç kelime kaldığıyla "Hazırlanıyor" görünür. Konu bulmacası 7×7 ızgarada
   oynanır, bölümü ve zorluğu değiştirmez, günlük hedefe sayılır.
+- **Bulmaca jokerleri:** Anlam (tanım), Cümle (kelimeyi boşluklu örnek
+  cümlede gösterir, altında çevirisi), Eş anlamlı (cevap dilinde aynı anlama
+  gelen kabul edilen karşılıklar; ör. amaç için "hedef, gaye"; aynı kelimenin
+  şapkalı/şapkasız yazımı sayılmaz), Harf aç. Her biri kelime başına bir kez;
+  uygun değilse (eş anlamlı ya da örnek yok) uygulanmaz, hak harcanmaz.
+  Kullanılan kelime yardımlı sayılır ve puandan düşer. Cümle ve Eş anlamlı
+  hakları yeni oyuncuda 3'er, günlük hedefte +1'er; mağazada jetonla alınır.
+- **Cümle ipucu:** 5 kelimeden kısa örnekler ipucu olarak seçilmez ("The
+  table is ___." belirsiz); ipucunun altında kaynak dildeki çevirisi görünür.
 - **Pekiştirme (`core/practice.ts`, `screens/Practice.tsx`):** bulmaca
   sonunda, zorlanılan (çözülemeyen, yardımla çözülen ya da yanlış denemesi
   olan) en çok 5 kelime için isteğe bağlı kısa tur. Her kelimede önce anlam

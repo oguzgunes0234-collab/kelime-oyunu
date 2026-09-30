@@ -21,7 +21,7 @@ export interface ScoreBreakdown {
 export function scoreWord(
   level: Cefr,
   length: number,
-  w: { solved: boolean; wrong: number; lettersRevealed: number; meaning: boolean },
+  w: { solved: boolean; wrong: number; lettersRevealed: number; meaning: boolean; synonym?: boolean; sentence?: boolean },
 ): ScoreBreakdown {
   if (!w.solved) return { lines: [], total: 0 };
   const lines: ScoreLine[] = [{ label: `Kelime (${level})`, points: LEVEL_BASE[level] }];
@@ -30,6 +30,8 @@ export function scoreWord(
   else lines.push({ label: `${w.wrong} yanlış deneme`, points: -WRONG_ATTEMPT_COST * w.wrong });
   if (w.lettersRevealed > 0) lines.push({ label: `Harf aç ×${w.lettersRevealed}`, points: -TOOL_POINT_COST.magnet * w.lettersRevealed });
   if (w.meaning) lines.push({ label: 'Anlam ipucu', points: -MEANING_HINT_COST });
+  if (w.sentence) lines.push({ label: 'Cümle jokeri', points: -TOOL_POINT_COST.sentence });
+  if (w.synonym) lines.push({ label: 'Eş anlamlı jokeri', points: -TOOL_POINT_COST.synonym });
   const raw = lines.reduce((sum, l) => sum + l.points, 0);
   return { lines, total: Math.max(MIN_CORRECT_SCORE, raw) };
 }

@@ -17715,28 +17715,29 @@
    "check": "crosscheck"
   },
   {
-   "id": "ehliyet",
+   "id": "ruhsat",
    "pos": "noun",
    "level": "B1",
    "topic": "hukuk",
    "terms": {
     "tr": {
-     "text": "ehliyet",
+     "text": "ruhsat",
      "alternatives": [
-      "lisans"
+      "lisans",
+      "ehliyet"
      ],
-     "example": "Ehliyetin var mı?"
+     "example": "Restoran açmak için ruhsat gerekir."
     },
     "en": {
      "text": "license",
      "alternatives": [
       "licence"
      ],
-     "example": "Do you have a driving license?"
+     "example": "You need a license to open a restaurant."
     }
    },
    "hint": {
-    "tr": "Araç kullanma izni veren belge."
+    "tr": "Bir işi yapmaya izin veren resmî belge."
    },
    "reviewed": false,
    "check": "crosscheck"
