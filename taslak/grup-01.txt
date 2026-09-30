@@ -151,7 +151,7 @@ concern|kaygı|endişe|noun|B1|duygular|There is concern about the prices.|Fiyat
 consider|-|Türkçesi tek kelime değil (göz önünde bulundurmak)
 continue|-|sürmek (drive) ile çakışır; Türkçesi iki kelime (devam etmek)
 control|denetim|kontrol|noun|B1|iş|The police have control of the area.|Bölgenin denetimi polisin elinde.|Bir şeyi yönetebilme gücü.
-cost|maliyet|bedel|noun|B1|iş|The cost of the trip is high.|Gezinin maliyeti yüksek.|Bir şey için ödenmesi gereken para.
+cost|maliyet|bedel|noun|B1|alışveriş|The cost of the trip is high.|Gezinin maliyeti yüksek.|Bir şey için ödenmesi gereken para.
 court|mahkeme||noun|B1|hukuk|The case is in court.|Dava mahkemede.|Davaların görüldüğü yer.
 cover|örtmek|kapamak|verb|B1|ev|Cover the food.|Yemeğin üstünü ört.|Bir şeyin üstüne bir şey koyup gizlemek.
 create|yaratmak|oluşturmak|verb|B1|soyut|Artists create new things.|Sanatçılar yeni şeyler yaratır.|Var olmayan bir şeyi ortaya koymak.
@@ -242,7 +242,7 @@ parent|ebeveyn||noun|B1|aile|Every parent loves their child.|Her ebeveyn çocuğ
 party|parti||noun|A1|günlük|We are having a party tonight.|Bu akşam parti veriyoruz.|Eğlenmek için yapılan toplantı.
 pass|geçmek||verb|A2|okul|I hope I pass the exam.|Umarım sınavı geçerim.|Bir sınavda başarılı olmak.
 past|geçmiş||noun|A2|zaman|Forget the past.|Geçmişi unut.|Geride kalmış zaman.
-pay|ödemek||verb|A1|iş|I will pay the bill.|Hesabı ben ödeyeceğim.|Bir şey için para vermek.
+pay|ödemek||verb|A1|alışveriş|I will pay the bill.|Hesabı ben ödeyeceğim.|Bir şey için para vermek.
 percent|yüzde||noun|B1|iş|Ten percent of the students are absent.|Öğrencilerin yüzde onu yok.|Bir bütünün yüz parçasından kaçı olduğunu gösteren oran.
 perhaps|-|maybe (belki) ile çakışır
 person|kişi|insan|noun|A1|günlük|She is a kind person.|O nazik bir kişi.|Tek bir birey.
@@ -272,7 +272,7 @@ research|araştırma||noun|B1|okul|She does research on cancer.|Kanser üzerine 
 rest|dinlenmek||verb|A2|sağlık|You need to rest.|Dinlenmen gerek.|Yorgunluğu gidermek için çalışmayı bırakmak.
 result|sonuç||noun|A2|okul|The exam result is good.|Sınav sonucu iyi.|Bir işin sonunda ortaya çıkan durum.
 return|-|dönmek (turn) ile çakışır
-sell|satmak||verb|A1|iş|They sell fruit at the market.|Pazarda meyve satıyorlar.|Para karşılığında bir şeyi vermek.
+sell|satmak||verb|A1|alışveriş|They sell fruit at the market.|Pazarda meyve satıyorlar.|Para karşılığında bir şeyi vermek.
 send|göndermek|yollamak|verb|A1|günlük|Send me a message.|Bana bir mesaj gönder.|Bir şeyi birine ulaştırmak.
 sense|duyu|his|noun|B1|vücut|Smell is one sense.|Koku alma bir duyudur.|Görme, işitme gibi algılama yeteneği.
 serve|-|anlam çok (servis etmek / hizmet etmek)
@@ -289,7 +289,7 @@ son|oğul||noun|A1|aile|Their son is five years old.|Oğulları beş yaşında.|
 sorry|-|üzgün (sad) ile çakışır
 sound|ses||noun|A1|günlük|I heard a strange sound.|Garip bir ses duydum.|Kulakla duyulan titreşim.
 speak|-|konuşmak (talk) ile çakışır
-spend|harcamak||verb|A2|iş|Don't spend all your money.|Bütün paranı harcama.|Parayı ya da zamanı kullanmak.
+spend|harcamak||verb|A2|alışveriş|Don't spend all your money.|Bütün paranı harcama.|Parayı ya da zamanı kullanmak.
 stand|-|Türkçesi iki kelime (ayakta durmak)
 stay|kalmak||verb|A1|seyahat|We stay at a hotel.|Bir otelde kalıyoruz.|Bir yerde bir süre bulunmak.
 step|adım||noun|A2|günlük|Take one step forward.|Bir adım öne çık.|Yürürken ayağı bir kez ileri atma.

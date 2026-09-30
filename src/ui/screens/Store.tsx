@@ -1,8 +1,17 @@
 import { useState } from 'react';
-import { COINS_CLEAN_BONUS, COINS_PER_CHARGE, COINS_PER_CORRECT, DAILY_GOAL_REWARD, TOOL_INFO, TOOL_ORDER } from '../../core/economy';
-import { buyChargeWithCoins, type Profile } from '../../core/profile';
+import {
+  COINS_CLEAN_BONUS,
+  COINS_PER_CHARGE,
+  COINS_PER_CORRECT,
+  DAILY_GOAL_REWARD,
+  TOOL_INFO,
+  TOOL_ORDER,
+  TOOL_PACKS,
+  type ToolPack,
+} from '../../core/economy';
+import { buyChargeWithCoins, buyPackWithCoins, type Profile } from '../../core/profile';
+import type { ToolId } from '../../core/types';
 import { BackIcon, CoinIcon, TOOL_ICONS } from '../components/Icons';
-import { Sheet } from '../components/Sheet';
 
 interface Props {
   profile: Profile;
@@ -10,19 +19,12 @@ interface Props {
   onClose: () => void;
 }
 
-/**
- * PROTOTİP paketler. Fiyatlar örnektir; "Satın al" hiçbir ödeme başlatmaz ve
- * hesaba hiçbir şey eklemez, yalnızca bunun prototip olduğunu açıklar.
- * İçerik ve fiyat önceden görünür; rastgele ödül yoktur.
- */
-const MOCK_PACKS = [
-  { id: 'small', name: 'Küçük yardım paketi', contents: '5 Mıknatıs · 5 İpucu', price: '₺19,99' },
-  { id: 'large', name: 'Büyük yardım paketi', contents: '15 Mıknatıs · 15 İpucu · 10 Karıştır · 10 Geri al', price: '₺49,99' },
-  { id: 'theme', name: 'Görsel tema: Gece Bahçesi', contents: 'Yalnızca görünüm değişir; oyuna avantaj sağlamaz', price: '₺14,99' },
-];
+/** "5 Mıknatıs · 5 İpucu" gibi okunur içerik. */
+function packContents(p: ToolPack): string {
+  return (TOOL_ORDER.filter((t) => p.tools[t]) as ToolId[]).map((t) => `${p.tools[t]} ${TOOL_INFO[t].name}`).join(' · ');
+}
 
 export function Store({ profile, setProfile, onClose }: Props) {
-  const [mock, setMock] = useState<(typeof MOCK_PACKS)[number] | null>(null);
   const [flash, setFlash] = useState<string | null>(null);
 
   return (
@@ -31,7 +33,7 @@ export function Store({ profile, setProfile, onClose }: Props) {
       role="dialog"
       aria-modal="true"
       aria-labelledby="store-title"
-      onKeyDown={(e) => e.key === 'Escape' && !mock && onClose()}
+      onKeyDown={(e) => e.key === 'Escape' && onClose()}
     >
       <header className="page-bar">
         <button type="button" className="icon-btn" onClick={onClose} aria-label="Kapat ve geri dön" autoFocus>
@@ -89,46 +91,35 @@ export function Store({ profile, setProfile, onClose }: Props) {
         </p>
       </section>
 
-      <section className="store-section mock">
-        <h2>
-          Paketler <span className="badge-proto">Prototip</span>
-        </h2>
-        <p className="proto-banner">
-          Bu bölüm yalnızca tasarım prototipidir. Gerçek ödeme yoktur: düğmeler para çekmez ve hesabına bir şey eklemez. Fiyatlar
-          örnektir.
-        </p>
+      <section className="store-section">
+        <h2>Paketler</h2>
+        <p className="muted small">Jetonla alınır; gerçek para yok. Tek tek almaktan daha ucuz.</p>
         <ul className="pack-list">
-          {MOCK_PACKS.map((p) => (
+          {TOOL_PACKS.map((p) => (
             <li key={p.id}>
               <div>
                 <strong>{p.name}</strong>
-                <p className="small">{p.contents}</p>
-                <p className="small muted">Örnek fiyat: {p.price} · içerik sabittir, rastgele ödül yok</p>
+                <p className="small">{packContents(p)}</p>
               </div>
-              <button type="button" className="btn btn-secondary btn-small" onClick={() => setMock(p)}>
-                İncele
+              <button
+                type="button"
+                className="btn btn-secondary btn-small"
+                disabled={profile.coins < p.coins}
+                onClick={() => {
+                  const next = buyPackWithCoins(profile, p);
+                  if (next) {
+                    setProfile(next);
+                    setFlash(`${p.name} alındı: ${packContents(p)}.`);
+                  }
+                }}
+                aria-label={`${p.coins} jetonla ${p.name} al`}
+              >
+                {p.coins} <CoinIcon width={14} height={14} />
               </button>
             </li>
           ))}
         </ul>
       </section>
-
-      {mock && (
-        <Sheet title={mock.name} onClose={() => setMock(null)}>
-          <p>
-            <strong>İçerik:</strong> {mock.contents}
-          </p>
-          <p>
-            <strong>Örnek fiyat:</strong> {mock.price}
-          </p>
-          <p className="proto-banner">
-            Bu bir prototip. Satın alma bu sürümde devre dışı; ödeme alınmaz ve hesabına hak eklenmez.
-          </p>
-          <button type="button" className="btn btn-primary btn-block" onClick={() => setMock(null)}>
-            Anladım, kapat
-          </button>
-        </Sheet>
-      )}
     </div>
   );
 }

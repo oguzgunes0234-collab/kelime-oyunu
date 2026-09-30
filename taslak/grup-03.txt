@@ -1,0 +1,178 @@
+waiter|garson||noun|A2|yiyecek|The waiter brought the menu.|Garson menüyü getirdi.|Restoranda yemek servisi yapan kişi.
+meal|öğün||noun|A2|yiyecek|Breakfast is my favourite meal.|Kahvaltı en sevdiğim öğün.|Gün içinde belli saatlerde yenen yemek.
+plate|tabak||noun|A1|yiyecek|Put the cake on the plate.|Keki tabağa koy.|Yemeğin konduğu düz, yuvarlak kap.
+fork|çatal||noun|A1|yiyecek|I eat pasta with a fork.|Makarnayı çatalla yerim.|Yemeği batırıp almaya yarayan dişli araç.
+knife|bıçak||noun|A1|yiyecek|Be careful with that knife.|O bıçağa dikkat et.|Kesmeye yarayan keskin araç.
+spoon|kaşık||noun|A1|yiyecek|I need a spoon for my soup.|Çorbam için bir kaşığa ihtiyacım var.|Çorba gibi sıvı yemekleri almaya yarayan araç.
+bowl|kase|çanak|noun|A2|yiyecek|She ate a bowl of rice.|Bir kase pilav yedi.|Derin, yuvarlak küçük kap.
+bottle|şişe||noun|A1|yiyecek|Buy a bottle of water.|Bir şişe su al.|Sıvı konan dar ağızlı kap.
+sugar|şeker||noun|A1|yiyecek|No sugar in my tea, please.|Çayıma şeker koymayın lütfen.|Yiyeceklere tatlılık veren beyaz toz.
+salt|tuz||noun|A1|yiyecek|Pass me the salt, please.|Tuzu uzatır mısın?|Denizden de elde edilen, yemeğe tat veren beyaz tanecikler.
+pepper|biber||noun|A2|yiyecek|Add some black pepper.|Biraz karabiber ekle.|Acı ya da tatlı olabilen sebze; kurusu baharattır.
+butter|tereyağı|tereyağ|noun|A1|yiyecek|I like bread with butter.|Tereyağlı ekmeği severim.|Sütten yapılan sarı, yumuşak yağ.
+cheese|peynir||noun|A1|yiyecek|I had cheese for breakfast.|Kahvaltıda peynir yedim.|Sütten yapılan, kahvaltıda sık yenen yiyecek.
+egg|yumurta||noun|A1|yiyecek|I eat an egg every morning.|Her sabah bir yumurta yerim.|Tavuğun bıraktığı kabuklu yiyecek.
+meat|et||noun|A1|yiyecek|I don't eat meat.|Et yemem.|Hayvanlardan elde edilen yiyecek.
+chicken|tavuk||noun|A1|yiyecek|We had chicken for dinner.|Akşam yemeğinde tavuk yedik.|Eti ve yumurtası için beslenen kümes hayvanı.
+rice|pirinç|pilav|noun|A1|yiyecek|Rice is cooked in water.|Pirinç suda pişirilir.|Suda pişirilen küçük beyaz taneler; Asya'da çok yenir.
+soup|çorba||noun|A1|yiyecek|This soup is too hot.|Bu çorba çok sıcak.|Kaşıkla içilen sıvı yemek.
+fruit|meyve||noun|A1|yiyecek|Eat more fruit.|Daha çok meyve ye.|Ağaçta ya da bitkide yetişen tatlı yiyecek; elma gibi.
+banana|muz||noun|A1|yiyecek|I ate a banana.|Bir muz yedim.|Sarı kabuklu, uzun, tatlı meyve.
+orange|portakal||noun|A1|yiyecek|I drink orange juice.|Portakal suyu içerim.|Turuncu renkli, sulu meyve.
+grape|üzüm||noun|A2|yiyecek|This grape is very sweet.|Bu üzüm çok tatlı.|Salkım halinde yetişen küçük meyve; şarabı da yapılır.
+cherry|kiraz||noun|A2|yiyecek|I love cherry season.|Kiraz mevsimini severim.|Yazın yetişen küçük, kırmızı meyve.
+peach|şeftali||noun|A2|yiyecek|This peach is soft and sweet.|Bu şeftali yumuşak ve tatlı.|Tüylü kabuklu, sulu yaz meyvesi.
+pear|armut||noun|A2|yiyecek|I ate a pear.|Bir armut yedim.|Alt kısmı geniş, üstü dar sulu meyve.
+potato|patates||noun|A1|yiyecek|I like baked potato.|Fırında patatesi severim.|Toprak altında yetişen, kızartması sevilen sebze.
+tomato|domates||noun|A1|yiyecek|Cut the tomato for the salad.|Salata için domatesi kes.|Kırmızı, sulu sebze; salçası yapılır.
+onion|soğan||noun|A1|yiyecek|Onion makes me cry.|Soğan beni ağlatır.|Doğrarken göz yaşartan sebze.
+garlic|sarımsak||noun|A2|yiyecek|This sauce has garlic in it.|Bu sosta sarımsak var.|Kokusu keskin, dişler halinde sebze.
+carrot|havuç||noun|A1|yiyecek|Give the carrot to the rabbit.|Havucu tavşana ver.|Turuncu renkli, uzun kök sebze.
+bean|fasulye||noun|A2|yiyecek|I cooked bean soup.|Fasulye çorbası pişirdim.|Kuru ya da taze yenen baklagil.
+corn|mısır||noun|A2|yiyecek|We ate corn at the beach.|Plajda mısır yedik.|Sarı taneli, koçan halinde yetişen bitki.
+cake|pasta|kek|noun|A1|yiyecek|She made a birthday cake.|Doğum günü pastası yaptı.|Doğum gününde yenen, kremalı tatlı.
+cookie|kurabiye||noun|A1|yiyecek|Can I have a cookie?|Bir kurabiye alabilir miyim?|Fırında pişen küçük, tatlı hamur işi.
+honey|bal||noun|A2|yiyecek|I put honey in my tea.|Çayıma bal koydum.|Arıların yaptığı tatlı, koyu sıvı.
+jam|reçel||noun|A2|yiyecek|I like bread with jam.|Reçelli ekmeği severim.|Meyveyle şekerin kaynatılmasıyla yapılan tatlı.
+tea|çay||noun|A1|yiyecek|Would you like some tea?|Biraz çay ister misin?|İnce belli bardakta içilen sıcak içecek.
+coffee|kahve||noun|A1|yiyecek|I drink coffee every morning.|Her sabah kahve içerim.|Çekirdekleri kavrulup öğütülen sıcak içecek.
+wine|şarap||noun|B1|yiyecek|They drank red wine.|Kırmızı şarap içtiler.|Üzümden yapılan alkollü içecek.
+sweet|tatlı||adjective|A1|yiyecek|This cake is too sweet.|Bu pasta çok tatlı.|Şeker gibi tadı olan.
+sour|ekşi||adjective|A2|yiyecek|This apple is sour.|Bu elma ekşi.|Limon gibi tadı olan.
+bitter|acı||adjective|B1|yiyecek|This coffee is bitter.|Bu kahve acı.|Tadı keskin ve hoş olmayan.
+salty|tuzlu||adjective|A2|yiyecek|The soup is too salty.|Çorba çok tuzlu.|İçinde fazla tuz olan.
+spicy|baharatlı||adjective|B1|yiyecek|Indian food is spicy.|Hint yemekleri baharatlı.|İçinde bol çeşni ve acı olan.
+fresh|taze||adjective|A2|yiyecek|The bread is fresh.|Ekmek taze.|Yeni yapılmış ya da toplanmış, bayat olmayan.
+raw|çiğ||adjective|B1|yiyecek|Don't eat raw meat.|Çiğ et yeme.|Pişmemiş.
+fry|kızartmak||verb|A2|yiyecek|Fry the eggs in butter.|Yumurtaları tereyağında kızart.|Kızgın yağda pişirmek.
+boil|kaynatmak||verb|A2|yiyecek|Boil the water first.|Önce suyu kaynat.|Bir sıvıyı fokurdayana kadar ısıtmak.
+cook|pişirmek||verb|A1|yiyecek|My dad likes to cook.|Babam yemek pişirmeyi sever.|Yiyeceği ateşte hazırlamak.
+taste|tat|lezzet|noun|A2|yiyecek|I love the taste of mango.|Mangonun tadını severim.|Dilde duyulan his; tatlı, tuzlu gibi.
+thirsty|susamış||adjective|A2|yiyecek|I am thirsty.|Susadım.|Su içmeye ihtiyacı olan.
+tip|bahşiş||noun|B1|yiyecek|We left a tip for the waiter.|Garsona bahşiş bıraktık.|Hizmet için verilen fazladan para.
+recipe|tarif||noun|B1|yiyecek|This is my grandmother's recipe.|Bu büyükannemin tarifi.|Bir yemeğin nasıl yapılacağını anlatan yazı.
+oven|fırın||noun|A2|yiyecek|Put the bread in the oven.|Ekmeği fırına koy.|İçinde yemek pişirilen kapalı ocak.
+pan|tava||noun|A2|yiyecek|Heat the pan first.|Önce tavayı ısıt.|Kızartma yapılan saplı, yayvan kap.
+pot|tencere||noun|A2|yiyecek|The soup is in the pot.|Çorba tencerede.|Yemek pişirilen derin kap.
+fridge|buzdolabı||noun|A2|yiyecek|The milk is in the fridge.|Süt buzdolabında.|Yiyecekleri soğuk tutan dolap.
+nut|fındık|ceviz|noun|A2|yiyecek|I found a nut in my cake.|Pastamda bir fındık buldum.|Sert kabuklu, yağlı küçük meyve.
+flour|un||noun|A2|yiyecek|You need flour to make bread.|Ekmek yapmak için un gerekir.|Buğdayın öğütülmesiyle elde edilen beyaz toz.
+steak|biftek||noun|B1|yiyecek|He ordered a steak.|Bir biftek sipariş etti.|Kalın dilim halinde pişirilen sığır eti.
+lamb|kuzu||noun|A2|yiyecek|We had lamb for dinner.|Akşam yemeğinde kuzu yedik.|Koyunun yavrusu; eti.
+tray|tepsi||noun|B1|yiyecek|She carried the cups on a tray.|Fincanları tepside taşıdı.|Yemek ya da bardak taşımaya yarayan düz kap.
+napkin|peçete||noun|B1|yiyecek|Can I have a napkin?|Bir peçete alabilir miyim?|Yemekte ağız ve el silmeye yarayan kâğıt.
+feed|beslemek||verb|A2|yiyecek|Did you feed the cat?|Kediyi besledin mi?|Birine ya da bir hayvana yiyecek vermek.
+bite|ısırmak||verb|A2|yiyecek|Don't bite your nails.|Tırnaklarını ısırma.|Dişlerle kesmek ya da sıkmak.
+chew|çiğnemek||verb|B1|yiyecek|Chew your food slowly.|Yemeğini yavaş çiğne.|Yiyeceği dişlerle ezmek.
+swallow|yutmak||verb|B1|yiyecek|Swallow the pill with water.|Hapı suyla yut.|Ağızdaki bir şeyi mideye göndermek.
+pour|dökmek||verb|B1|yiyecek|Pour the milk into the glass.|Sütü bardağa dök.|Bir sıvıyı kaptan akıtmak.
+slice|dilim||noun|A2|yiyecek|Can I have a slice of cake?|Bir dilim pasta alabilir miyim?|Kesilmiş ince parça.
+snack|-|Türkçesi 10 harften uzun (atıştırmalık)
+dessert|-|tatlı (sweet) ile çakışır
+candy|-|şeker (sugar) ile çakışır
+dish|-|tabak (plate) ve yemek (eat) ile çakışır
+beer|-|Türkçesi neredeyse aynı (bira)
+lemon|-|Türkçesi neredeyse aynı (limon)
+juice|-|Türkçesi iki kelime (meyve suyu)
+dinner|-|Türkçesi iki kelime (akşam yemeği)
+lunch|-|Türkçesi iki kelime (öğle yemeği)
+beef|-|Türkçesi iki kelime (dana eti)
+bake|-|Türkçesi iki kelime (fırında pişirmek)
+cash|nakit||noun|B1|alışveriş|Can I pay in cash?|Nakit ödeyebilir miyim?|Kâğıt ya da madeni para halindeki para.
+wallet|cüzdan||noun|A2|alışveriş|I lost my wallet.|Cüzdanımı kaybettim.|Para ve kart taşınan küçük kılıf.
+bag|çanta||noun|A1|alışveriş|My bag is very heavy.|Çantam çok ağır.|Eşya taşımak için kulplu kap.
+receipt|fiş|makbuz|noun|B1|alışveriş|Keep the receipt.|Fişi sakla.|Alışverişte ödenen parayı gösteren kâğıt.
+customer|müşteri||noun|A2|alışveriş|The customer is always right.|Müşteri her zaman haklıdır.|Bir dükkândan mal ya da hizmet alan kişi.
+shirt|gömlek||noun|A1|alışveriş|He is wearing a white shirt.|Beyaz bir gömlek giyiyor.|Düğmeli, yakalı üst giysi.
+shoe|ayakkabı||noun|A1|alışveriş|I lost one shoe.|Bir ayakkabımı kaybettim.|Ayağa giyilen, tabanı sert giysi.
+coat|palto|mont|noun|A1|alışveriş|Wear your coat, it is cold.|Paltonu giy, hava soğuk.|Kışın giyilen kalın dış giysi.
+jacket|ceket||noun|A1|alışveriş|This jacket is too small.|Bu ceket çok küçük.|Gömleğin üstüne giyilen kollu giysi.
+skirt|etek||noun|A2|alışveriş|She bought a long skirt.|Uzun bir etek aldı.|Belden aşağı giyilen kadın giysisi.
+sock|çorap||noun|A1|alışveriş|I can't find my other sock.|Diğer çorabımı bulamıyorum.|Ayakkabının içine giyilen ince giysi.
+hat|şapka||noun|A1|alışveriş|Wear a hat in the sun.|Güneşte şapka tak.|Başa giyilen örtü.
+glove|eldiven||noun|A2|alışveriş|I lost a glove.|Bir eldivenimi kaybettim.|Ellere giyilen kışlık giysi.
+scarf|atkı||noun|A2|alışveriş|My mother made me a scarf.|Annem bana bir atkı ördü.|Boyna sarılan uzun, yumuşak giysi.
+belt|kemer||noun|A2|alışveriş|This belt is made of leather.|Bu kemer deriden yapılmış.|Pantolonu belde tutan şerit.
+sweater|kazak||noun|A2|alışveriş|Put on a warm sweater.|Sıcak bir kazak giy.|Yünden örülmüş, kollu üst giysi.
+jeans|kot||noun|A1|alışveriş|I always wear jeans.|Hep kot giyerim.|Kalın mavi kumaştan pantolon.
+tie|kravat||noun|A2|alışveriş|He wears a tie to work.|İşe kravat takıyor.|Gömlek yakasına bağlanan uzun şerit.
+gold|altın||noun|A2|alışveriş|This ring is made of gold.|Bu yüzük altından.|Sarı renkli, değerli metal.
+silver|gümüş||noun|A2|alışveriş|She wears a silver necklace.|Gümüş bir kolye takıyor.|Beyazımsı renkli, değerli metal.
+clothes|giysi|kıyafet|noun|A1|alışveriş|I bought new clothes.|Yeni giysiler aldım.|Vücudu örtmek için giyilen şeyler.
+wear|giymek||verb|A1|alışveriş|What will you wear tonight?|Bu akşam ne giyeceksin?|Bir giysiyi üstüne geçirmek.
+owner|sahip||noun|B1|alışveriş|Who is the owner of this shop?|Bu dükkânın sahibi kim?|Bir şeyin kendisine ait olduğu kişi.
+rich|zengin||adjective|A1|alışveriş|He is very rich.|O çok zengin.|Çok parası olan.
+debt|borç||noun|B1|alışveriş|He paid all his debt.|Bütün borcunu ödedi.|Başkasına ödenmesi gereken para.
+buyer|alıcı||noun|B1|alışveriş|The buyer paid in cash.|Alıcı nakit ödedi.|Bir şeyi satın alan kişi.
+seller|satıcı||noun|B1|alışveriş|The seller was very friendly.|Satıcı çok güler yüzlüydü.|Bir şeyi satan kişi.
+basket|sepet||noun|A2|alışveriş|Put the apples in the basket.|Elmaları sepete koy.|Örgülü, kulplu taşıma kabı.
+total|toplam||noun|B1|alışveriş|What is the total?|Toplam ne kadar?|Hepsinin bir araya gelmesiyle bulunan sayı.
+pocket|cep||noun|A2|alışveriş|My keys are in my pocket.|Anahtarlarım cebimde.|Giysideki küçük torba.
+bargain|kelepir||noun|B2|alışveriş|Everyone loves a bargain.|Herkes kelepiri sever.|Değerinden çok ucuza alınan şey.
+toy|oyuncak||noun|A1|alışveriş|The child wants a new toy.|Çocuk yeni bir oyuncak istiyor.|Çocukların oynadığı eşya.
+jewelry|mücevher||noun|B1|alışveriş|She keeps her jewelry in a box.|Mücevherlerini bir kutuda saklıyor.|Takı olarak kullanılan değerli taşlar ve süsler.|jewellery
+necklace|kolye||noun|A2|alışveriş|He bought her a necklace.|Ona bir kolye aldı.|Boyna takılan süs.
+earring|küpe||noun|A2|alışveriş|She lost an earring.|Bir küpesini kaybetti.|Kulağa takılan süs.
+boot|çizme|bot|noun|A2|alışveriş|My left boot is wet.|Sol çizmem ıslak.|Bileği ya da dizi örten ayakkabı.
+cotton|pamuk||noun|B1|alışveriş|This shirt is made of cotton.|Bu gömlek pamuktan.|Kumaşı yapılan beyaz, yumuşak bitki lifi.
+wool|yün||noun|B1|alışveriş|The scarf is made of wool.|Atkı yünden yapılmış.|Koyun tüyünden elde edilen lif.
+silk|ipek||noun|B1|alışveriş|She wore a silk dress.|İpek bir elbise giydi.|Böceklerin ördüğü ince, parlak lif.
+button|düğme||noun|A2|alışveriş|A button fell off my shirt.|Gömleğimin bir düğmesi düştü.|Giysiyi kapatmaya ya da bir makineyi çalıştırmaya yarayan küçük parça.
+umbrella|şemsiye||noun|A1|alışveriş|Take an umbrella.|Bir şemsiye al.|Yağmurdan korunmak için açılan araç.
+refund|iade||noun|B2|alışveriş|I want a refund.|İade istiyorum.|Geri verilen ürünün parasının ödenmesi.
+wealth|servet||noun|B2|alışveriş|His wealth comes from oil.|Serveti petrolden geliyor.|Birinin sahip olduğu büyük para ve mal.
+poverty|yoksulluk||noun|B1|alışveriş|Many people live in poverty.|Birçok insan yoksulluk içinde yaşıyor.|Çok az parayla yaşama durumu.
+butcher|kasap||noun|A2|alışveriş|I bought meat from the butcher.|Kasaptan et aldım.|Et satan kişi ya da dükkân.
+baker|fırıncı||noun|A2|alışveriş|The baker gets up early.|Fırıncı erken kalkar.|Ekmek yapıp satan kişi.
+grocer|bakkal||noun|B1|alışveriş|The grocer sells fruit and milk.|Bakkal meyve ve süt satar.|Mahallede gıda ve gündelik ihtiyaç satan kişi.
+tax|vergi||noun|B1|iş|Everyone must pay tax.|Herkes vergi ödemeli.|Devlete ödenen zorunlu para.
+budget|bütçe||noun|B1|iş|We are on a tight budget.|Bütçemiz kısıtlı.|Harcanacak paranın planı.
+profit|kâr|kar|noun|B1|iş|The company made a big profit.|Şirket büyük kâr elde etti.|Satıştan maliyet çıkınca kalan para.
+coin|-|Türkçesi iki kelime (madeni para)
+purse|-|çanta (bag) ile çakışır
+discount|-|indirim (sale) ile çakışır
+store|-|dükkân (shop) ile çakışır
+brand|-|Türkçesi neredeyse aynı (marka)
+deliver|-|Türkçesi iki kelime (teslim etmek)
+bathroom|banyo||noun|A1|ev|The bathroom is upstairs.|Banyo üst katta.|Evde yıkanılan oda.
+garden|bahçe||noun|A1|ev|We grow tomatoes in the garden.|Bahçede domates yetiştiriyoruz.|Evin çevresinde çiçek ve ağaç dikilen alan.
+wall|duvar||noun|A1|ev|There is a clock on the wall.|Duvarda bir saat var.|Odaları birbirinden ayıran dikey yapı.
+roof|çatı||noun|A2|ev|The roof is old.|Çatı eski.|Evin en üstünü örten kısım.
+sofa|kanepe||noun|A2|ev|Sit on the sofa.|Kanepeye otur.|Birkaç kişinin oturabileceği yumuşak oturak.
+mirror|ayna||noun|A2|ev|Look in the mirror.|Aynaya bak.|Görüntüyü yansıtan parlak cam.
+carpet|halı||noun|A2|ev|The carpet is very old.|Halı çok eski.|Yere serilen dokuma örtü.
+curtain|perde||noun|A2|ev|Open the curtain, please.|Perdeyi aç lütfen.|Pencereye asılan kumaş.
+shelf|raf||noun|A2|ev|The books are on the shelf.|Kitaplar rafta.|Duvara takılan, eşya konan düz tahta.
+drawer|çekmece||noun|B1|ev|The keys are in the top drawer.|Anahtarlar üst çekmecede.|Dolapta ya da masada çekilerek açılan bölme.
+pillow|yastık||noun|A2|ev|I need a soft pillow.|Yumuşak bir yastığa ihtiyacım var.|Uyurken başın altına konan şey.
+blanket|battaniye||noun|A2|ev|It's cold, take a blanket.|Hava soğuk, bir battaniye al.|Üşümemek için örtünülen kalın örtü.
+towel|havlu||noun|A2|ev|Here is a clean towel.|İşte temiz bir havlu.|Islak vücudu kurulamaya yarayan kumaş.
+soap|sabun||noun|A1|ev|Wash your hands with soap.|Ellerini sabunla yıka.|Yıkanırken köpüren temizlik maddesi.
+brush|fırça||noun|A2|ev|Where is my hair brush?|Saç fırçam nerede?|Kılları olan, temizlemeye ya da taramaya yarayan araç.
+comb|tarak||noun|A2|ev|Use a comb for your hair.|Saçın için tarak kullan.|Saçı düzeltmeye yarayan dişli araç.
+fence|çit||noun|B1|ev|There is a fence around the garden.|Bahçenin çevresinde çit var.|Bir alanın çevresine dikilen engel.
+yard|avlu||noun|A2|ev|The children play in the yard.|Çocuklar avluda oynuyor.|Evin önündeki ya da arkasındaki açık alan.
+basement|bodrum||noun|B1|ev|We keep old things in the basement.|Eski eşyaları bodrumda tutuyoruz.|Evin toprak altındaki katı.
+ceiling|tavan||noun|B1|ev|There is a lamp on the ceiling.|Tavanda bir lamba var.|Odanın üstünü örten yüzey.
+sheet|çarşaf||noun|B1|ev|I changed the sheet on the bed.|Yataktaki çarşafı değiştirdim.|Yatağın üstüne serilen ince örtü.
+bucket|kova||noun|B1|ev|Fill the bucket with water.|Kovayı suyla doldur.|Kulplu, su taşımaya yarayan kap.
+broom|süpürge||noun|B1|ev|Where is the broom?|Süpürge nerede?|Yer süpürmeye yarayan uzun saplı fırça.
+candle|mum||noun|A2|ev|Light a candle.|Bir mum yak.|Fitili yakılarak ışık veren nesne.
+cupboard|dolap||noun|A2|ev|The cups are in the cupboard.|Fincanlar dolapta.|Kapaklı, raflı eşya koyma yeri.
+wash|yıkamak||verb|A1|ev|Wash the dishes, please.|Bulaşıkları yıka lütfen.|Suyla temizlemek.
+sweep|süpürmek||verb|B1|ev|Sweep the floor.|Yeri süpür.|Yeri fırçayla temizlemek.
+dust|toz||noun|B1|ev|There is dust on the table.|Masada toz var.|Eşyaların üstünde biriken ince kir.
+dirty|kirli||adjective|A1|ev|Your shoes are dirty.|Ayakkabıların kirli.|Temiz olmayan.
+tidy|düzenli||adjective|B1|ev|Keep your room tidy.|Odanı düzenli tut.|Her şeyi yerli yerinde olan.
+sink|-|Türkçesi neredeyse aynı (lavabo)
+uncle|amca|dayı|noun|A1|aile|My uncle lives in Ankara.|Amcam Ankara'da yaşıyor.|Babanın ya da annenin erkek kardeşi.
+aunt|teyze|hala|noun|A1|aile|My aunt is a teacher.|Teyzem öğretmen.|Annenin ya da babanın kız kardeşi.
+nephew|yeğen||noun|B1|aile|My nephew is five years old.|Yeğenim beş yaşında.|Kardeşin oğlu.
+grandson|torun||noun|A2|aile|Her grandson visits every Sunday.|Torunu her pazar ziyarete gelir.|Çocuğun çocuğu.
+grandma|büyükanne|nine,anneanne,babaanne|noun|A1|aile|My grandma makes great cookies.|Büyükannem harika kurabiyeler yapar.|Annenin ya da babanın annesi.
+grandpa|büyükbaba|dede|noun|A1|aile|My grandpa tells good stories.|Dedem güzel hikâyeler anlatır.|Annenin ya da babanın babası.
+twin|ikiz||noun|A2|aile|She has a twin sister.|İkiz bir kız kardeşi var.|Aynı anda doğmuş iki kardeşten biri.
+wedding|düğün||noun|A2|aile|Their wedding is in June.|Düğünleri haziranda.|Evlenme töreni ve kutlaması.
+birth|doğum||noun|B1|aile|What is your date of birth?|Doğum tarihin ne?|Bir bebeğin dünyaya gelmesi.
+divorce|boşanma||noun|B1|aile|Their divorce was difficult.|Boşanmaları zor oldu.|Evliliğin resmî olarak sona ermesi.
+cousin|-|Türkçesi neredeyse aynı (kuzen)

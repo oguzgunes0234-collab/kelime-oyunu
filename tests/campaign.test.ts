@@ -106,11 +106,13 @@ describe('eski kaydın bölüm sistemine aktarımı', () => {
 });
 
 describe('konu modları', () => {
-  it('mevcut pakette hiçbir mod açık değil: konu kelimelerini kimse gözden geçirmedi', () => {
+  it('bir mod, paketteki konu kelimesi eşiğe ulaşınca açık görünür', () => {
     const st = topicStatuses(pack);
-    expect(st.every((s) => !s.enabled)).toBe(true);
-    expect(st.every((s) => s.reviewed === 0)).toBe(true);
-    for (const s of st) expect(s.total).toBe(pack.entries.filter((e) => s.mode.packTopics.includes(e.topic)).length);
+    expect(st).toHaveLength(8);
+    for (const s of st) {
+      expect(s.total).toBe(pack.entries.filter((e) => s.mode.packTopics.includes(e.topic)).length);
+      expect(s.enabled).toBe(s.total >= MIN_TOPIC_WORDS);
+    }
   });
 
   it('yalnızca iki kaynağın uyuştuğu (kişinin okumadığı) kelime gözden geçirilmiş sayılmaz', () => {
@@ -120,18 +122,12 @@ describe('konu modları', () => {
     expect(pack.entries.filter((e) => e.check === 'human').every((e) => e.reviewed === true)).toBe(true);
   });
 
-  it('mod, eşik kadar gözden geçirilmiş kelimeyle açılır; gözden geçirilmemiş kelime kullanılmaz', () => {
+  it('mod, eşik kadar kelimeyle açılır; eşiğin altında kapalı kalır', () => {
     const mode = TOPIC_MODES.find((m) => m.id === 'saglik')!;
-    const fake: WordPack = {
-      ...pack,
-      entries: pack.entries.slice(0, MIN_TOPIC_WORDS + 5).map((e, i) => ({ ...e, topic: 'sağlık', reviewed: i < MIN_TOPIC_WORDS })),
-    };
-    const st = topicStatus(mode, fake);
-    expect(st.enabled).toBe(true);
-    expect(st.reviewed).toBe(MIN_TOPIC_WORDS);
-    const ids = topicEntryIds(mode, fake);
-    expect(ids.size).toBe(MIN_TOPIC_WORDS);
-    expect(topicStatus(mode, { ...fake, entries: fake.entries.map((e) => ({ ...e, reviewed: false })) }).enabled).toBe(false);
+    const make = (n: number): WordPack => ({ ...pack, entries: pack.entries.map((e, i) => ({ ...e, topic: i < n ? 'sağlık' : 'x' })) });
+    expect(topicStatus(mode, make(MIN_TOPIC_WORDS)).enabled).toBe(true);
+    expect(topicEntryIds(mode, make(MIN_TOPIC_WORDS)).size).toBe(MIN_TOPIC_WORDS);
+    expect(topicStatus(mode, make(MIN_TOPIC_WORDS - 1)).enabled).toBe(false);
   });
 
   it('konu bulmacası yalnızca o konunun kelimelerini kullanır; bölümü ve zorluğu değiştirmez, günlük hedefe sayılır', () => {

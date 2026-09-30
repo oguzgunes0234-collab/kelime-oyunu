@@ -6,11 +6,11 @@
 //      onay/düzeltme → reviewed: true, check: "human"; çıkar → eklenmez.
 //   2. Karar yoksa: ikinci kaynağın çevirisi aynıysa check: "crosscheck" ile
 //      eklenir (reviewed: false; örnek ve tanımı kişi okumadı). Farklıysa ya da
-//      ikinci kaynakta yoksa beklemede kalır; --toplu verilirse (oyun sahibi
-//      hepsini tek tek okumadan onayladı) check: "bulk" ile eklenir.
+//      ikinci kaynakta yoksa beklemede kalır; --toplu=1,2 verilirse o gruplar
+//      için (oyun sahibi tek tek okumadan onayladı) check: "bulk" ile eklenir.
 //   3. Paket kurallarına uymayan girdi eklenmez, rapor edilir.
 //
-// Çalıştırma: node taslak/pakete-ekle.mjs <karar klasörü> [--toplu]
+// Çalıştırma: node taslak/pakete-ekle.mjs <karar klasörü> [--toplu=1,2]
 //   (karar klasörü: inceleme sayfasından indirilen <id>.json dosyaları)
 
 import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
@@ -22,7 +22,8 @@ const packPath = join(dir, '../src/data/pack-tr-en.json');
 const pack = JSON.parse(readFileSync(packPath, 'utf8'));
 const { entries: drafts } = JSON.parse(readFileSync(join(dir, 'taslak.json'), 'utf8'));
 const decDir = process.argv[2];
-const bulk = process.argv.includes('--toplu');
+const bulkArg = process.argv.find((a) => a.startsWith('--toplu='));
+const bulkGroups = new Set(bulkArg ? bulkArg.slice('--toplu='.length).split(',').map(Number) : []);
 const decisions = {};
 if (decDir && existsSync(decDir)) {
   for (const f of readdirSync(decDir).filter((f) => f.endsWith('.json'))) {
@@ -48,7 +49,7 @@ for (const d of drafts) {
   if (dec?.s === 'drop') { report.dropped++; continue; }
   if (dec?.s === 'ok' || dec?.s === 'edit') check = 'human';
   else if (d.draft.cross?.same) check = 'crosscheck';
-  else if (bulk) check = 'bulk';
+  else if (bulkGroups.has(d.draft.group)) check = 'bulk';
   else { report.waiting++; continue; }
 
   const e = dec?.e ?? {};

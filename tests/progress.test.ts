@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import { MIN_ROUNDS_BEFORE_CHANGE, initialAdaptive, recordRound, roundQuality } from '../src/core/adaptive';
 import { currentStreak, goalDoneToday, initialDaily, recordCorrect, recordPuzzleDone } from '../src/core/daily';
-import { COINS_PER_CHARGE } from '../src/core/economy';
+import { COINS_PER_CHARGE, TOOL_PACKS } from '../src/core/economy';
 import { toQuestion } from '../src/core/pack';
-import { applyRound, buyChargeWithCoins, consumeCharge, defaultProfile } from '../src/core/profile';
+import { applyRound, buyChargeWithCoins, buyPackWithCoins, consumeCharge, defaultProfile } from '../src/core/profile';
 import { seededRng } from '../src/core/rng';
 import { applyTool, createRound, placeLetter, skipRound } from '../src/core/round';
 import { pickEntry } from '../src/core/select';
@@ -155,5 +155,24 @@ describe('kelime seçimi', () => {
       session = { ...session, asked: [...session.asked, `en>tr:${n.round.question.entryId}`], rounds: [...session.rounds, { question: n.round.question, outcome: {} as never }] };
     }
     expect(nextRound(session, pack, p, rng).kind).toBe('finished');
+  });
+});
+
+describe('jetonla paket', () => {
+  it('jeton yetince paketi ekler, yetmezse hiçbir şey değişmez', () => {
+    const pack = TOOL_PACKS[0];
+    const p = { ...defaultProfile(day(1)), coins: pack.coins };
+    const next = buyPackWithCoins(p, pack)!;
+    expect(next.coins).toBe(0);
+    expect(next.inventory.magnet).toBe(p.inventory.magnet + (pack.tools.magnet ?? 0));
+    expect(next.inventory.shuffle).toBe(p.inventory.shuffle + (pack.tools.shuffle ?? 0));
+    expect(buyPackWithCoins({ ...p, coins: pack.coins - 1 }, pack)).toBeNull();
+  });
+
+  it('paket tek tek almaktan ucuzdur', () => {
+    for (const pk of TOOL_PACKS) {
+      const n = Object.values(pk.tools).reduce((a, b) => a + (b ?? 0), 0);
+      expect(pk.coins).toBeLessThan(n * COINS_PER_CHARGE);
+    }
   });
 });

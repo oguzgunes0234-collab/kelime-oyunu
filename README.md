@@ -116,10 +116,13 @@ ilk açılıştan sonra oyun çevrimdışı da açılır. PWA olarak ana ekrana 
   "Bölüm N tamamlandı" ekranı (yeni ödül ya da para birimi yok). Eski kayıtlar
   Bölüm 1'den başlar (tamamlanan bulmaca sayısı eskiden tutulmuyordu); diğer
   veriler korunur, elle seçilmiş seviye uyarlamalı seviyeye aktarılır.
-- **Konu modları (`core/topics.ts`):** Sağlık, Teknoloji, Hukuk, Seyahat ve
-  şehir. Bir mod en az 60 gözden geçirilmiş (`reviewed: true`) kelimeyle
-  açılır; şu an hiçbiri açık değil ve "Hazırlanıyor" olarak görünür. Konu
-  bulmacası bölümü ve zorluğu değiştirmez, günlük hedefe sayılır.
+- **Konu modları (`core/topics.ts`):** Seyahat ve şehir, Yemek ve restoran,
+  Alışveriş ve para, Ev ve aile, İş ve ofis, Sağlık, Bilim ve teknoloji,
+  Hukuk. Bir mod, pakette o konudan en az 60 kelime olunca açılır; eksik mod
+  kaç kelime kaldığıyla "Hazırlanıyor" görünür. Konu bulmacası 7×7 ızgarada
+  oynanır, bölümü ve zorluğu değiştirmez, günlük hedefe sayılır.
+- **Hak ve paketler:** araç hakları tek tek ya da paket halinde jetonla
+  alınır; gerçek para yok. Paketler tek tek almaktan ucuzdur (`TOOL_PACKS`).
 - **Açılış ekranı:** `index.html` içinde; KELİME/KÖPRÜ mini çengel bulmaca
   logosu, yükleme çubuğu yok, ~0,7 sn sonra kaybolur.
 - **Hızlı turda harf geri alma:** cevaptaki bir harfe dokunmak onu taşlara
@@ -168,7 +171,7 @@ kelime-oyunu/
 
 ## Kelime verisi
 
-`src/data/pack-tr-en.json` **609 kelimelik** pakettir. Kapsamlı ya da
+`src/data/pack-tr-en.json` **824 kelimelik** pakettir. Kapsamlı ya da
 doğrulanmış bir sözlük değildir; seviyeler yaklaşık CEFR tahminidir.
 
 - İlk 138 kelime elle yazıldı (`check` alanı yok).
@@ -179,7 +182,6 @@ doğrulanmış bir sözlük değildir; seviyeler yaklaşık CEFR tahminidir.
   - `check: "crosscheck"`: Türkçe karşılığı ikinci bir kaynağınkiyle uyuştu;
     örnek cümle ve tanımı kişi okumadı.
   - `check: "bulk"`: oyun sahibi tek tek okumadan toplu onayladı.
-  - Konu modları yalnızca `reviewed: true` kelimeleri sayar.
 
 Paket **kavram tabanlıdır**: her girdi bir anlamdır ve her dildeki karşılığı
 `terms` altında durur. Aynı girdi iki yönde de soru üretir; kaynak dil, hedef

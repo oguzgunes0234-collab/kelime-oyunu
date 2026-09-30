@@ -28,6 +28,21 @@ export const DAILY_GOAL_REWARD: { coins: number; tools: Inventory } = {
 export const TOOL_ORDER: ToolId[] = ['shuffle', 'magnet', 'hint', 'undo'];
 
 /**
+ * Jetonla alınan araç paketleri. Gerçek para yok. İçerik önceden görünür,
+ * rastgele ödül yok; tek tek almaktan biraz ucuzdur (tek hak COINS_PER_CHARGE).
+ */
+export interface ToolPack {
+  id: string;
+  name: string;
+  tools: Partial<Inventory>;
+  coins: number;
+}
+export const TOOL_PACKS: ToolPack[] = [
+  { id: 'small', name: 'Küçük yardım paketi', tools: { magnet: 5, hint: 5 }, coins: 40 },
+  { id: 'large', name: 'Büyük yardım paketi', tools: { magnet: 15, hint: 15, shuffle: 10, undo: 10 }, coins: 180 },
+];
+
+/**
  * Bulmacadaki iki araç, harf taşı oyunuyla aynı hakları kullanır:
  * Harf aç → Mıknatıs hakkı, Anlam → İpucu hakkı. Ayrı bir ekonomi yok.
  */

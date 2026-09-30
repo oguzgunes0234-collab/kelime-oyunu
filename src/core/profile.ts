@@ -2,7 +2,7 @@ import { initialAdaptive, recordRound, roundQuality, type AdaptiveState } from '
 import { initialCampaign, type CampaignState } from './campaign';
 import { recordSrs, type SrsState } from './srs';
 import { initialDaily, recordCorrect, rollDay, type DailyState } from './daily';
-import { COINS_CLEAN_BONUS, COINS_PER_CHARGE, COINS_PER_CORRECT, DAILY_GOAL_REWARD, INITIAL_INVENTORY } from './economy';
+import { COINS_CLEAN_BONUS, COINS_PER_CHARGE, COINS_PER_CORRECT, DAILY_GOAL_REWARD, INITIAL_INVENTORY, type ToolPack } from './economy';
 import { directionKey } from './pack';
 import { wasHelped, type RoundState } from './round';
 import { scoreRound, type ScoreBreakdown } from './scoring';
@@ -209,6 +209,14 @@ export function buyChargeWithCoins(profile: Profile, tool: ToolId): Profile | nu
     coins: profile.coins - COINS_PER_CHARGE,
     inventory: { ...profile.inventory, [tool]: profile.inventory[tool] + 1 },
   };
+}
+
+/** Jetonla araç paketi alır; jeton yetmezse null. */
+export function buyPackWithCoins(profile: Profile, pack: ToolPack): Profile | null {
+  if (profile.coins < pack.coins) return null;
+  const inventory = { ...profile.inventory };
+  (Object.keys(pack.tools) as ToolId[]).forEach((t) => (inventory[t] += pack.tools[t] ?? 0));
+  return { ...profile, coins: profile.coins - pack.coins, inventory };
 }
 
 export function removeReview(profile: Profile, dir: string, entryId: string): Profile {

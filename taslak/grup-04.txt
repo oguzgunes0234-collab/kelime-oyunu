@@ -1,0 +1,190 @@
+journey|yolculuk||noun|A2|seyahat|The journey took six hours.|Yolculuk altı saat sürdü.|Bir yerden başka bir yere gitme.
+trip|gezi||noun|A2|seyahat|We went on a trip to Antalya.|Antalya'ya geziye gittik.|Kısa süreli yolculuk ya da tur.
+map|harita||noun|A1|seyahat|Look at the map.|Haritaya bak.|Bir yeri yukarıdan küçülterek gösteren çizim.
+luggage|bagaj|valiz|noun|B1|seyahat|Where is my luggage?|Bagajım nerede?|Yolculukta taşınan çanta ve bavullar.
+flight|uçuş||noun|A2|seyahat|Our flight is at ten.|Uçuşumuz saat onda.|Uçakla yapılan yolculuk.
+plane|uçak||noun|A1|seyahat|The plane is late.|Uçak rötarlı.|Havada giden kanatlı taşıt.
+ship|gemi||noun|A2|seyahat|The ship left the port.|Gemi limandan ayrıldı.|Denizde giden büyük taşıt.
+boat|tekne|kayık|noun|A2|seyahat|We took a boat to the island.|Adaya tekneyle gittik.|Suda giden küçük taşıt.
+port|liman||noun|B1|seyahat|The ship is in the port.|Gemi limanda.|Gemilerin yanaştığı yer.
+coast|kıyı|sahil|noun|B1|seyahat|We drove along the coast.|Kıyı boyunca araba sürdük.|Denizle karanın birleştiği yer.
+beach|plaj||noun|A1|seyahat|Let's go to the beach.|Plaja gidelim.|Denize girilen kumlu kıyı.
+guest|misafir|konuk|noun|A2|seyahat|The guest is waiting at the door.|Misafir kapıda bekliyor.|Bir eve ya da otele gelen kişi.
+bridge|köprü||noun|A2|şehir|We crossed the bridge.|Köprüden geçtik.|İki yakayı birbirine bağlayan yapı.
+tower|kule||noun|A2|şehir|Galata Tower is very old.|Galata Kulesi çok eski.|Yüksek ve dar yapı.
+castle|kale||noun|A2|seyahat|We visited an old castle.|Eski bir kaleyi gezdik.|Kalın duvarlı eski savunma yapısı.
+palace|saray||noun|B1|seyahat|The palace is open to visitors.|Saray ziyaretçilere açık.|Kralların ya da padişahların yaşadığı büyük yapı.
+square|meydan||noun|A2|şehir|Meet me in the main square.|Benimle ana meydanda buluş.|Şehirde çevresi yapılarla çevrili açık alan.
+corner|köşe||noun|A2|şehir|The bank is on the corner.|Banka köşede.|İki sokağın birleştiği nokta.
+delay|rötar|gecikme|noun|B1|seyahat|There is a delay of one hour.|Bir saatlik rötar var.|Planlanan zamandan sonra olma.
+west|batı||noun|A2|seyahat|The sun sets in the west.|Güneş batıdan batar.|Güneşin battığı yön.
+straight|düz|dümdüz|adverb|A2|şehir|Go straight on.|Düz git.|Sağa sola dönmeden.
+village|köy||noun|A1|seyahat|My grandparents live in a village.|Büyükannemler bir köyde yaşıyor.|Kırsalda küçük yerleşim yeri.
+capital|başkent||noun|A2|seyahat|Ankara is the capital of Turkey.|Ankara Türkiye'nin başkenti.|Bir ülkenin yönetim merkezi olan şehir.
+mountain|dağ||noun|A1|seyahat|We climbed the mountain.|Dağa tırmandık.|Çok yüksek kara parçası.
+lake|göl||noun|A1|seyahat|We swam in the lake.|Gölde yüzdük.|Karayla çevrili büyük su.
+desert|çöl||noun|A2|seyahat|It is very hot in the desert.|Çölde hava çok sıcak.|Kumlu, çok kurak geniş alan.
+forest|orman||noun|A1|seyahat|There are bears in the forest.|Ormanda ayılar var.|Ağaçlarla kaplı geniş alan.
+tent|çadır||noun|A2|seyahat|We slept in a tent.|Çadırda uyuduk.|Kumaştan yapılan, kurulup sökülen barınak.
+guide|rehber||noun|A2|seyahat|The guide showed us the museum.|Rehber bize müzeyi gezdirdi.|Turistlere yol gösteren kişi.
+visitor|ziyaretçi||noun|A2|seyahat|Every visitor gets a map.|Her ziyaretçi bir harita alır.|Bir yeri görmeye gelen kişi.
+holiday|tatil||noun|A1|seyahat|We are on holiday.|Tatildeyiz.|Çalışılmayan, dinlenilen gün ya da dönem.
+souvenir|hatıra|hediyelik|noun|B1|seyahat|I bought a souvenir for my mother.|Anneme bir hatıra aldım.|Gezilen yerden anı olarak alınan eşya.
+bike|bisiklet||noun|A1|seyahat|I ride my bike to school.|Okula bisikletle giderim.|İki tekerlekli, pedallı taşıt.
+fuel|yakıt||noun|B1|seyahat|The car is out of fuel.|Arabanın yakıtı bitti.|Arabayı çalıştıran benzin gibi madde.
+speed|hız||noun|B1|seyahat|Slow down, check your speed.|Yavaşla, hızına dikkat et.|Bir şeyin ne kadar çabuk gittiği.
+accident|kaza||noun|A2|seyahat|He had a car accident.|Araba kazası geçirdi.|İstenmeden olan kötü olay.
+abroad|yurtdışı||adverb|B1|seyahat|She lives abroad.|Yurtdışında yaşıyor.|Başka bir ülkede.
+passport|-|Türkçesi neredeyse aynı (pasaport)
+left|-|aday listesinde yok
+boss|patron||noun|A2|iş|My boss is very kind.|Patronum çok nazik.|Bir işyerinde en yetkili kişi.
+worker|işçi||noun|A2|iş|Every worker gets a break.|Her işçi mola alır.|Bedenen ya da fabrikada çalışan kişi.
+contract|sözleşme||noun|B1|iş|Read the contract before you sign.|İmzalamadan önce sözleşmeyi oku.|Tarafların uymayı kabul ettiği yazılı anlaşma.
+task|görev||noun|B1|iş|This task is easy.|Bu görev kolay.|Yapılması gereken iş.
+partner|ortak||noun|B1|iş|He is my business partner.|O benim iş ortağım.|Bir işi birlikte yürüten kişi.
+busy|meşgul||adjective|A1|iş|I am busy now.|Şu an meşgulüm.|Yapacak işi çok olan.
+file|dosya||noun|B1|iş|Put the papers in the file.|Kâğıtları dosyaya koy.|Belgelerin saklandığı klasör ya da kayıt.
+farm|çiftlik||noun|A2|iş|They live on a farm.|Bir çiftlikte yaşıyorlar.|Hayvan beslenen ve ekin ekilen yer.
+farmer|çiftçi||noun|A2|iş|The farmer grows wheat.|Çiftçi buğday yetiştiriyor.|Tarımla uğraşan kişi.
+strike|grev||noun|B2|iş|The workers are on strike.|İşçiler grevde.|İşçilerin hak için işi bırakması.
+lazy|tembel||adjective|A2|iş|Don't be lazy.|Tembel olma.|Çalışmayı sevmeyen.
+expert|uzman||noun|B1|iş|She is an expert in finance.|O finans uzmanı.|Bir konuyu çok iyi bilen kişi.
+shift|vardiya||noun|B1|iş|I work the night shift.|Gece vardiyasında çalışıyorum.|İşyerinde sırayla çalışılan zaman dilimi.
+union|sendika||noun|B2|iş|He joined the union.|Sendikaya katıldı.|İşçilerin haklarını koruyan örgüt.
+wage|ücret||noun|B1|iş|The wage is too low.|Ücret çok düşük.|Yapılan iş için ödenen para.
+stamp|pul||noun|A2|iş|Put a stamp on the letter.|Mektuba pul yapıştır.|Zarfa yapıştırılan, posta ücretini gösteren kâğıt.
+envelope|zarf||noun|A2|iş|Put the letter in the envelope.|Mektubu zarfa koy.|Mektubun konduğu kâğıt kılıf.
+calendar|takvim||noun|A2|iş|Check the calendar.|Takvime bak.|Günleri ve ayları gösteren çizelge.
+schedule|çizelge|program|noun|B1|iş|What is your schedule today?|Bugünkü çizelgen ne?|Ne zaman ne yapılacağını gösteren plan.
+goods|mal|ürünler|noun|B2|iş|The goods arrive by ship.|Mallar gemiyle geliyor.|Alınıp satılan eşyalar.
+staff|-|Türkçesi neredeyse aynı (personel)
+career|-|Türkçesi neredeyse aynı (kariyer)
+employ|-|Türkçesi iki kelime (işe almak)
+interview|-|aday listesinde yok
+nurse|hemşire||noun|A1|sağlık|The nurse gave me an injection.|Hemşire bana iğne yaptı.|Hastanede hastalara bakan sağlık çalışanı.
+sick|hasta||adjective|A1|sağlık|I feel sick.|Kendimi hasta hissediyorum.|Sağlığı bozuk olan.
+flu|grip||noun|A2|sağlık|I have the flu.|Gribim.|Ateş ve öksürük yapan bulaşıcı hastalık.
+cough|öksürük||noun|A2|sağlık|I have a bad cough.|Kötü bir öksürüğüm var.|Boğazdan sesle hava çıkarma.
+bone|kemik||noun|A2|sağlık|He broke a bone in his arm.|Kolunda bir kemik kırdı.|Vücudun iskeletini oluşturan sert parça.
+skin|deri|cilt|noun|A2|vücut|The sun is bad for your skin.|Güneş cildine zararlı.|Vücudu dışarıdan örten tabaka.
+tooth|diş||noun|A1|vücut|I have a bad tooth.|Bir dişim çürük.|Ağızda yiyeceği ısırmaya yarayan sert parça.
+dentist|dişçi||noun|A2|sağlık|I go to the dentist twice a year.|Yılda iki kez dişçiye giderim.|Diş hekimi.
+pill|hap||noun|A2|sağlık|Take one pill after dinner.|Akşam yemeğinden sonra bir hap al.|Yutulan küçük ilaç.
+healthy|sağlıklı||adjective|A1|sağlık|Eat healthy food.|Sağlıklı yiyecekler ye.|Hastalığı olmayan, iyi durumda.
+heal|iyileşmek||verb|B1|sağlık|The wound will heal soon.|Yara yakında iyileşir.|Hastalıktan ya da yaradan kurtulmak.
+fat|şişman||adjective|A2|sağlık|The cat is very fat.|Kedi çok şişman.|Kilosu fazla olan.
+thin|zayıf||adjective|A2|sağlık|He is very thin.|O çok zayıf.|Kilosu az olan.
+neck|boyun||noun|A2|vücut|My neck hurts.|Boynum ağrıyor.|Başı gövdeye bağlayan kısım.
+knee|diz||noun|A2|vücut|I hurt my knee.|Dizimi incittim.|Bacağın ortasındaki eklem.
+shoulder|omuz||noun|A2|vücut|My shoulder hurts.|Omzum ağrıyor.|Kolun gövdeye bağlandığı yer.
+finger|parmak||noun|A1|vücut|I cut my finger.|Parmağımı kestim.|Elin ucundaki beş uzantıdan biri.
+nose|burun||noun|A1|vücut|My nose is cold.|Burnum soğuk.|Yüzde koku almaya yarayan organ.
+ear|kulak||noun|A1|vücut|My ear hurts.|Kulağım ağrıyor.|Duymaya yarayan organ.
+lip|dudak||noun|A2|vücut|My lip is dry.|Dudağım kuru.|Ağzın çevresindeki yumuşak kenar.
+chest|göğüs||noun|B1|vücut|I have a pain in my chest.|Göğsümde bir ağrı var.|Boyunla karın arasındaki bölüm.
+stomach|mide||noun|A2|vücut|My stomach hurts.|Midem ağrıyor.|Yiyeceklerin sindirildiği organ.
+brain|beyin||noun|B1|vücut|The brain controls the body.|Beyin vücudu yönetir.|Kafatasının içinde düşünmeyi sağlayan organ.
+lung|akciğer||noun|B1|vücut|The doctor listened to my lung.|Doktor akciğerimi dinledi.|Nefes almayı sağlayan organ.
+breath|nefes||noun|B1|sağlık|Take a deep breath.|Derin bir nefes al.|Ciğerlere çekilen hava.
+alive|canlı|hayatta|adjective|B1|sağlık|The fish is still alive.|Balık hâlâ canlı.|Ölmemiş, yaşayan.
+germ|mikrop||noun|B2|sağlık|Wash your hands to kill every germ.|Mikropları öldürmek için ellerini yıka.|Hastalık yapan çok küçük canlı.
+surgery|ameliyat||noun|B1|sağlık|He needs surgery.|Ameliyat olması gerekiyor.|Doktorun vücudu açarak yaptığı tedavi.
+cure|çare|tedavi|noun|B2|sağlık|There is no cure for this disease.|Bu hastalığın çaresi yok.|Bir hastalığı ortadan kaldıran yol ya da ilaç.
+bleed|kanamak||verb|B1|sağlık|Your finger will bleed.|Parmağın kanayacak.|Vücuttan kan akmak.
+faint|bayılmak||verb|B2|sağlık|She felt she would faint.|Bayılacak gibi oldu.|Bir süre bilincini kaybetmek.
+blind|kör||adjective|B1|sağlık|The old dog is blind.|Yaşlı köpek kör.|Göremeyen.
+deaf|sağır||adjective|B1|sağlık|My grandfather is a little deaf.|Dedem biraz sağır.|İşitemeyen.
+pregnant|hamile||adjective|B1|sağlık|She is pregnant.|O hamile.|Karnında bebek taşıyan.
+wrist|bilek||noun|B1|vücut|I broke my wrist.|Bileğimi kırdım.|Eli kola bağlayan eklem.
+elbow|dirsek||noun|B1|vücut|I hit my elbow.|Dirseğimi çarptım.|Kolun ortasındaki eklem.
+thumb|başparmak||noun|B1|vücut|I cut my thumb.|Başparmağımı kestim.|Elin en kalın, kısa parmağı.
+heel|topuk||noun|B1|vücut|My heel hurts.|Topuğum ağrıyor.|Ayağın arka alt kısmı.
+hip|kalça||noun|B1|vücut|She broke her hip.|Kalçasını kırdı.|Bacağın gövdeye bağlandığı yer.
+liver|karaciğer||noun|B2|vücut|The liver cleans the blood.|Karaciğer kanı temizler.|Kanı temizleyen büyük iç organ.
+kidney|böbrek||noun|B2|vücut|He has a kidney problem.|Böbrek sorunu var.|Kandan idrar süzen iç organ.
+muscle|kas||noun|B1|vücut|I pulled a muscle in my leg.|Bacağımda bir kas çekildi.|Vücudu hareket ettiren lifli doku.
+nerve|sinir||noun|B2|vücut|A nerve in my back hurts.|Sırtımda bir sinir ağrıyor.|Beyinle vücut arasında sinyal taşıyan lif.
+sweat|ter||noun|B1|vücut|He was covered in sweat.|Ter içindeydi.|Sıcakta deriden çıkan tuzlu su.
+awake|uyanık||adjective|B1|sağlık|Are you awake?|Uyanık mısın?|Uyumayan.
+yawn|esnemek||verb|B1|sağlık|Don't yawn in class.|Derste esneme.|Yorgunlukla ağzı açıp derin nefes almak.
+screen|ekran||noun|A2|teknoloji|The screen is too bright.|Ekran çok parlak.|Bilgisayarda ya da telefonda görüntünün çıktığı yüzey.
+keyboard|klavye||noun|A2|teknoloji|My keyboard is broken.|Klavyem bozuk.|Harflere basarak yazı yazılan tuş takımı.
+mouse|fare||noun|A2|teknoloji|Click with the mouse.|Fareyle tıkla.|Bilgisayarda imleci yöneten el aleti; aynı zamanda küçük kemirgen.
+delete|silmek||verb|A2|teknoloji|Delete this photo.|Bu fotoğrafı sil.|Bir yazıyı ya da kaydı ortadan kaldırmak.
+battery|pil|batarya|noun|A2|teknoloji|My phone battery is low.|Telefonumun pili az.|Cihazlara elektrik veren küçük kutu.
+wire|tel|kablo|noun|B1|teknoloji|Don't touch that wire.|O tele dokunma.|İnce, uzun metal iplik.
+device|cihaz||noun|B1|teknoloji|Turn off every device.|Bütün cihazları kapat.|Belli bir işi yapan elektronik alet.
+update|güncelleme||noun|B1|teknoloji|There is a new update for your phone.|Telefonun için yeni bir güncelleme var.|Bir programın yeni ve düzeltilmiş sürümü.
+download|indirmek||verb|A2|teknoloji|Download the app.|Uygulamayı indir.|İnternetten cihaza dosya almak.
+printer|yazıcı||noun|A2|teknoloji|The printer is out of paper.|Yazıcının kâğıdı bitti.|Bilgisayardaki yazıyı kâğıda basan makine.
+user|kullanıcı||noun|B1|teknoloji|Every user has a password.|Her kullanıcının bir şifresi var.|Bir programı ya da cihazı kullanan kişi.
+password|şifre|parola|noun|A2|teknoloji|Don't share your password.|Şifreni paylaşma.|Hesaba girmek için gereken gizli söz.
+tool|alet|araç|noun|B1|teknoloji|I need a tool to fix it.|Bunu tamir etmek için bir alete ihtiyacım var.|Bir işi yapmaya yarayan el gereci.
+steel|çelik||noun|B1|teknoloji|The bridge is made of steel.|Köprü çelikten yapılmış.|Demirden yapılan çok sağlam metal.
+repair|onarmak||verb|B1|teknoloji|Can you repair my phone?|Telefonumu onarabilir misin?|Bozuk bir şeyi yeniden çalışır hale getirmek.
+touch|dokunmak||verb|A2|teknoloji|Touch the screen.|Ekrana dokun.|Parmakla bir şeye değmek.
+remote|kumanda||noun|B1|teknoloji|Where is the TV remote?|Televizyonun kumandası nerede?|Bir cihazı uzaktan yöneten alet.
+smart|akıllı||adjective|A2|teknoloji|She is very smart.|O çok akıllı.|Zekâsı yüksek.
+engineer|mühendis||noun|B1|teknoloji|My brother is an engineer.|Ağabeyim mühendis.|Makine, bina gibi şeyleri tasarlayan kişi.
+wheel|tekerlek||noun|A2|teknoloji|The front wheel is flat.|Ön tekerlek patlak.|Dönerek aracın gitmesini sağlayan yuvarlak parça.
+planet|gezegen||noun|B1|teknoloji|Mars is a red planet.|Mars kırmızı bir gezegen.|Güneşin çevresinde dönen büyük gök cismi.
+orbit|yörünge||noun|B2|teknoloji|The moon is in orbit around the earth.|Ay, Dünya'nın çevresinde yörüngede.|Bir gök cisminin çevresinde izlenen yol.
+gravity|yerçekimi||noun|B2|teknoloji|Gravity keeps us on the ground.|Yerçekimi bizi yerde tutar.|Cisimleri yere doğru çeken kuvvet.
+magnet|mıknatıs||noun|B1|teknoloji|A magnet pulls iron.|Mıknatıs demiri çeker.|Demiri kendine çeken taş ya da metal.
+inventor|mucit||noun|B2|teknoloji|Edison was a famous inventor.|Edison ünlü bir mucitti.|Yeni bir şey bulan kişi.
+discover|keşfetmek||verb|B1|teknoloji|Scientists discover new things.|Bilim insanları yeni şeyler keşfeder.|Bilinmeyen bir şeyi ilk kez bulmak.
+storage|depolama||noun|B2|teknoloji|My phone has little storage.|Telefonumun depolaması az.|Bilgi ya da eşya saklama alanı.
+server|sunucu||noun|B2|teknoloji|The server is down.|Sunucu çöktü.|Diğer bilgisayarlara hizmet veren bilgisayar.
+chat|sohbet||noun|A2|teknoloji|We had a nice chat.|Güzel bir sohbet ettik.|Karşılıklı rahat konuşma.
+connect|bağlamak||verb|B1|teknoloji|Connect the printer to the computer.|Yazıcıyı bilgisayara bağla.|İki şeyi birbirine eklemek.
+install|kurmak||verb|B1|teknoloji|Install the program.|Programı kur.|Bir yazılımı cihaza yüklemek.
+scroll|kaydırmak||verb|B1|teknoloji|Scroll down the page.|Sayfayı aşağı kaydır.|Ekrandaki içeriği yukarı ya da aşağı hareket ettirmek.
+text|metin||noun|B1|teknoloji|Read the text.|Metni oku.|Yazılı sözlerin bütünü.
+machine|-|Türkçesi neredeyse aynı (makine)
+engine|-|Türkçesi neredeyse aynı (motor)
+robot|-|Türkçesi aynı yazılıyor (robot)
+print|-|printer (yazıcı) ile aynı kök; ayrıca Türkçesi 10 harften uzun (yazdırmak değil, basmak ile karışır)
+fix|-|onarmak (repair) ile çakışır
+invent|-|Türkçesi iki kelime (icat etmek)
+upload|-|aday listesinde yok
+online|-|aday listesinde yok
+broken|-|aday listesinde yok
+prison|hapishane|cezaevi|noun|B1|hukuk|He spent two years in prison.|Hapishanede iki yıl geçirdi.|Suçluların tutulduğu yer.
+thief|hırsız||noun|B1|hukuk|The police caught the thief.|Polis hırsızı yakaladı.|Başkasının malını çalan kişi.
+steal|çalmak||verb|B1|hukuk|Someone will steal your bike.|Biri bisikletini çalacak.|Başkasının malını izinsiz almak.
+arrest|tutuklamak||verb|B1|hukuk|The police will arrest him.|Polis onu tutuklayacak.|Suç şüphesiyle birini gözaltına almak.
+guilty|suçlu||adjective|B1|hukuk|The court found him guilty.|Mahkeme onu suçlu buldu.|Suç işlediği kabul edilen.
+innocent|masum||adjective|B1|hukuk|I am innocent!|Ben masumum!|Suçu olmayan.
+witness|tanık||noun|B2|hukuk|The witness saw everything.|Tanık her şeyi gördü.|Bir olayı gören ve anlatan kişi.
+penalty|ceza||noun|B1|hukuk|The penalty is very high.|Ceza çok yüksek.|Kurala uymayana verilen yaptırım.
+vote|oy||noun|B1|hukuk|Every vote counts.|Her oy önemlidir.|Seçimde bir adaya verilen destek.
+citizen|vatandaş||noun|B1|hukuk|Every citizen has rights.|Her vatandaşın hakları vardır.|Bir ülkenin yasal üyesi olan kişi.
+justice|adalet||noun|B2|hukuk|We want justice.|Adalet istiyoruz.|Herkese hakkını verme.
+permit|izin|ruhsat|noun|B2|hukuk|You need a permit to build here.|Burada inşaat için izin gerekir.|Resmî kurumun verdiği yazılı onay.
+victim|kurban|mağdur|noun|B2|hukuk|The victim went to the police.|Mağdur polise gitti.|Bir suçtan zarar gören kişi.
+suspect|şüpheli||noun|B2|hukuk|The police caught the suspect.|Polis şüpheliyi yakaladı.|Suç işlediği düşünülen kişi.
+gang|çete||noun|B2|hukuk|The gang robbed a bank.|Çete bir banka soydu.|Birlikte suç işleyen grup.
+spy|casus||noun|B2|hukuk|He was a spy.|O bir casustu.|Gizli bilgi toplayan kişi.
+cheat|aldatmak|kopya|verb|B1|hukuk|Don't cheat in the exam.|Sınavda kopya çekme.|Hileyle kandırmak.
+king|kral||noun|A2|hukuk|The king lives in a palace.|Kral bir sarayda yaşar.|Bir ülkeyi yöneten hükümdar.
+queen|kraliçe||noun|A2|hukuk|The queen visited the city.|Kraliçe şehri ziyaret etti.|Kadın hükümdar ya da kralın eşi.
+freedom|özgürlük||noun|B1|hukuk|Freedom of speech is important.|İfade özgürlüğü önemlidir.|İstediğini yapabilme hakkı.
+slave|köle||noun|B2|hukuk|He lived like a slave.|Köle gibi yaşadı.|Özgürlüğü olmayan, başkasına ait kişi.
+enemy|düşman||noun|B1|hukuk|He is not my enemy.|O benim düşmanım değil.|Birine karşı olan kişi.
+soldier|asker||noun|A2|hukuk|The soldier is at the border.|Asker sınırda.|Orduda görev yapan kişi.
+defend|savunmak||verb|B1|hukuk|The lawyer will defend him.|Avukat onu savunacak.|Birini ya da bir şeyi saldırıya karşı korumak.
+danger|tehlike||noun|B1|hukuk|You are in danger.|Tehlikedesin.|Zarar görme olasılığı.
+license|ehliyet|lisans|noun|B1|hukuk|Do you have a driving license?|Ehliyetin var mı?|Araç kullanma izni veren belge.|licence
+document|belge||noun|B1|hukuk|Sign this document.|Bu belgeyi imzala.|Resmî bilgi içeren yazılı kâğıt.
+prisoner|mahkum|mahkûm|noun|B2|hukuk|The prisoner escaped.|Mahkum kaçtı.|Hapishanede tutulan kişi.
+guard|bekçi|gardiyan|noun|B1|hukuk|The guard is at the gate.|Bekçi kapıda.|Bir yeri koruyan kişi.
+oath|yemin||noun|B2|hukuk|He took an oath.|Yemin etti.|Bir şeyi yapacağına dair kutsal söz.
+debate|tartışma||noun|B1|hukuk|There was a debate on TV.|Televizyonda bir tartışma vardı.|Farklı görüşlerin karşılıklı konuşulması.
+threat|tehdit||noun|B2|hukuk|This is a threat to peace.|Bu barışa bir tehdit.|Zarar verileceği uyarısı.
+bribe|rüşvet||noun|B2|hukuk|He took a bribe.|Rüşvet aldı.|Birini kendi lehine çevirmek için verilen gizli para.
+flag|bayrak||noun|A2|hukuk|The flag is red and white.|Bayrak kırmızı beyaz.|Bir ülkeyi temsil eden renkli kumaş.
+crown|taç||noun|B1|hukuk|The queen wore a crown.|Kraliçe taç taktı.|Hükümdarların başına taktığı süs.
+throne|taht||noun|B2|hukuk|The king sat on his throne.|Kral tahtına oturdu.|Hükümdarın oturduğu süslü koltuk.
+treaty|antlaşma||noun|B2|hukuk|The two countries signed a treaty.|İki ülke bir antlaşma imzaladı.|Devletler arasında yapılan resmî anlaşma.
+illegal|yasadışı||adjective|B1|hukuk|Stealing is illegal.|Hırsızlık yasadışı.|Kanuna aykırı.
+kidnap|kaçırmak||verb|B2|hukuk|They tried to kidnap the child.|Çocuğu kaçırmaya çalıştılar.|Birini zorla alıp götürmek.

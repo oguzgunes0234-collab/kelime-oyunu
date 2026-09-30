@@ -1,0 +1,41 @@
+liquid|sıvı||noun|B1|teknoloji|Water is a liquid.|Su bir sıvıdır.|Akabilen, konduğu kabın şeklini alan madde.
+solid|katı||adjective|B1|teknoloji|Ice is solid.|Buz katıdır.|Şekli değişmeyen, akmayan.
+wave|dalga||noun|A2|teknoloji|Sound travels as a wave.|Ses dalga halinde yayılır.|Suda ya da havada kabarıp ilerleyen hareket.
+ray|ışın||noun|B2|teknoloji|A ray of light came through the window.|Pencereden bir ışık ışını girdi.|Bir kaynaktan çıkan ince ışık çizgisi.
+weight|ağırlık||noun|B1|teknoloji|What is the weight of this box?|Bu kutunun ağırlığı ne?|Bir şeyin ne kadar ağır olduğu.
+mass|kütle||noun|B2|teknoloji|Mass is measured in kilograms.|Kütle kilogramla ölçülür.|Bir cisimdeki madde miktarı.
+volume|hacim||noun|B2|teknoloji|What is the volume of this bottle?|Bu şişenin hacmi ne?|Bir şeyin kapladığı yer miktarı.
+universe|evren||noun|B1|teknoloji|The universe is very big.|Evren çok büyük.|Gezegenler ve yıldızlar dahil var olan her şey.
+theory|kuram|teori|noun|B2|teknoloji|Einstein's theory changed science.|Einstein'ın kuramı bilimi değiştirdi.|Bir olayı açıklamaya çalışan düşünce sistemi.
+chemist|kimyager||noun|B2|teknoloji|The chemist works in a lab.|Kimyager bir laboratuvarda çalışıyor.|Maddeleri inceleyen bilim insanı.
+equation|denklem||noun|B2|teknoloji|Solve this equation.|Bu denklemi çöz.|İki tarafı eşit olan matematik ifadesi.
+angle|açı||noun|B1|teknoloji|This angle is 90 degrees.|Bu açı 90 derece.|İki çizginin arasındaki açıklık.
+circle|daire|çember|noun|A2|teknoloji|Draw a circle.|Bir daire çiz.|Tam yuvarlak şekil.
+triangle|üçgen||noun|A2|teknoloji|A triangle has three sides.|Üçgenin üç kenarı vardır.|Üç kenarlı şekil.
+socket|priz||noun|B1|teknoloji|Put the plug in the socket.|Fişi prize tak.|Duvardaki elektrik girişi.
+bulb|ampul||noun|B1|teknoloji|The light bulb is broken.|Ampul bozuk.|Işık veren cam lamba.
+heater|ısıtıcı||noun|B1|teknoloji|Turn on the heater.|Isıtıcıyı aç.|Odayı ısıtan alet.
+click|tıklamak||verb|A2|teknoloji|Click on the link.|Bağlantıya tıkla.|Fareyle bir şeye basmak.
+browser|tarayıcı||noun|B1|teknoloji|Open your web browser.|İnternet tarayıcını aç.|İnternet sayfalarını açan program.
+folder|klasör||noun|A2|teknoloji|Save the file in this folder.|Dosyayı bu klasöre kaydet.|Dosyaların toplandığı bölme.
+backup|yedek||noun|B1|teknoloji|Make a backup of your files.|Dosyalarının yedeğini al.|Kaybolmasın diye saklanan kopya.
+scan|taramak||verb|B1|teknoloji|Scan the document.|Belgeyi tara.|Bir kâğıdı makineyle bilgisayara aktarmak.
+oxygen|-|Türkçesi neredeyse aynı (oksijen)
+metal|-|Türkçesi aynı yazılıyor (metal)
+atom|-|Türkçesi aynı yazılıyor (atom)
+digital|-|Türkçesi neredeyse aynı (dijital)
+signal|-|Türkçesi neredeyse aynı (sinyal)
+cable|-|Türkçesi neredeyse aynı (kablo)
+wrap|sarmak|paketlemek|verb|B1|alışveriş|Can you wrap it for me?|Bunu benim için sarar mısınız?|Bir şeyi kâğıt ya da kumaşla örtmek.
+slipper|terlik||noun|A2|alışveriş|Where is my other slipper?|Diğer terliğim nerede?|Evde giyilen hafif ayakkabı.
+vest|yelek||noun|B1|alışveriş|He wore a vest under his jacket.|Ceketinin altına yelek giydi.|Kolsuz üst giysi.
+tight|dar||adjective|B1|alışveriş|These shoes are too tight.|Bu ayakkabılar çok dar.|Bedene göre küçük gelen.
+loose|bol||adjective|B1|alışveriş|This shirt is loose.|Bu gömlek bol.|Bedene göre geniş gelen.
+value|değer||noun|B1|alışveriş|What is the value of this ring?|Bu yüzüğün değeri ne?|Bir şeyin ne kadar para ettiği.
+expense|masraf|gider|noun|B2|alışveriş|The trip was a big expense.|Gezi büyük bir masraftı.|Harcanan para.
+income|gelir||noun|B1|alışveriş|His income is low.|Geliri düşük.|Kazanılan para.
+gift|-|hediye (present) ile çakışır
+pair|-|çift (couple) ile çakışır
+fee|-|ücret (wage) ile çakışır
+loan|-|Türkçesi bağlama göre değişir (kredi, borç)
+lend|-|Türkçesi iki kelime (ödünç vermek)

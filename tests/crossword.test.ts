@@ -64,7 +64,7 @@ describe('bulmaca üretici', () => {
     const avg = counts.reduce((a, b) => a + b, 0) / counts.length;
     console.log(`bulmaca kelime sayısı: en az ${min}, ortalama ${avg.toFixed(1)}`);
     expect(min).toBeGreaterThanOrEqual(7);
-  });
+  }, 20_000); // 150 bulmaca üretir; tek bulmaca ~30 ms
 
   it('aynı cevap bir bulmacada iki kez yer almaz', () => {
     const cw = buildCrossword(puzzleCandidates(pack, defaultProfile(day(1)), TR_EN, 'easy'), { rng: seededRng(3) });

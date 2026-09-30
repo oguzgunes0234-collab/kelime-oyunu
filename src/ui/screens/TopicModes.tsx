@@ -9,8 +9,8 @@ interface Props {
 }
 
 /**
- * Konu modları. Yalnızca yeterli sayıda gözden geçirilmiş kelimesi olan mod
- * oynanabilir; diğerleri durumlarıyla birlikte "Hazırlanıyor" diye görünür.
+ * Konu modları. Yeterli kelimesi olan mod oynanabilir; eksik olan kaç kelime
+ * kaldığıyla birlikte "Hazırlanıyor" diye görünür.
  * Konu bulmacaları bölüm ilerlemesini değiştirmez.
  */
 export function TopicModes({ pack, onBack, onPlay }: Props) {
@@ -32,10 +32,10 @@ export function TopicModes({ pack, onBack, onPlay }: Props) {
             <div className="topic-text">
               <strong>{s.mode.name}</strong>
               {s.enabled ? (
-                <small>{s.reviewed} kelime</small>
+                <small>{s.total} kelime</small>
               ) : (
                 <small>
-                  Hazırlanıyor · {s.reviewed}/{MIN_TOPIC_WORDS} gözden geçirilmiş kelime
+                  Hazırlanıyor · {s.total}/{MIN_TOPIC_WORDS} kelime
                 </small>
               )}
             </div>
@@ -50,7 +50,7 @@ export function TopicModes({ pack, onBack, onPlay }: Props) {
         ))}
       </ul>
       <p className="muted small">
-        Bir mod, en az {MIN_TOPIC_WORDS} kelimesi gözden geçirilince açılır. Bu sayı, aynı kelimeler çabuk tekrar etmesin diye seçildi.
+        Bir mod en az {MIN_TOPIC_WORDS} kelimeyle açılır. Bu sayı, aynı kelimeler çabuk tekrar etmesin diye seçildi.
       </p>
     </div>
   );

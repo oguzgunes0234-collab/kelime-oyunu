@@ -4,7 +4,7 @@ young|genç||adjective|A1|aile|My sister is very young.|Kız kardeşim çok gen�
 ability|-|yetenek (talent) ile çakışır
 absolute|mutlak||adjective|B2|soyut|I have absolute trust in her.|Ona mutlak bir güvenim var.|Hiçbir sınırı ya da koşulu olmayan.
 accept|-|Türkçesi iki kelime (kabul etmek)
-account|hesap||noun|B1|iş|I opened a bank account.|Bir banka hesabı açtım.|Bankada paranın tutulduğu kayıt.
+account|hesap||noun|B1|alışveriş|I opened a bank account.|Bir banka hesabı açtım.|Bankada paranın tutulduğu kayıt.
 action|eylem|hareket|noun|B1|soyut|We need action, not words.|Söz değil, eylem gerekiyor.|Bir şey yapma, harekete geçme.
 activity|etkinlik|faaliyet|noun|A2|okul|Swimming is my favourite activity.|Yüzme en sevdiğim etkinlik.|Belli bir amaçla yapılan uğraş.
 address|-|Türkçesi aynı yazılıyor (adres)
@@ -37,7 +37,7 @@ beat|yenmek||verb|B1|günlük|Our team will beat them.|Takımımız onları yene
 beauty|güzellik||noun|B1|duygular|The beauty of the city amazed me.|Şehrin güzelliği beni şaşırttı.|Göze ve gönle hoş gelme hali.
 behavior|davranış||noun|B1|duygular|His behavior was strange.|Davranışı tuhaftı.|Birinin bir durumda nasıl hareket ettiği.|behaviour
 benefit|fayda|yarar|noun|B1|soyut|What is the benefit of this?|Bunun faydası ne?|Bir şeyden elde edilen iyi sonuç.
-bill|fatura|hesap|noun|A2|iş|I paid the electricity bill.|Elektrik faturasını ödedim.|Kullanılan hizmet için ödenecek parayı gösteren belge.
+bill|fatura|hesap|noun|A2|alışveriş|I paid the electricity bill.|Elektrik faturasını ödedim.|Kullanılan hizmet için ödenecek parayı gösteren belge.
 billion|milyar||noun|B1|iş|The project cost one billion dollars.|Proje bir milyar dolara mal oldu.|Bin milyon.
 block|-|anlam çok
 blood|kan||noun|A2|sağlık|He lost a lot of blood.|Çok kan kaybetti.|Damarlarda dolaşan kırmızı sıvı.
@@ -99,7 +99,7 @@ disease|hastalık||noun|B1|sağlık|This disease is very rare.|Bu hastalık çok
 district|ilçe|semt|noun|B1|şehir|We live in a quiet district.|Sessiz bir ilçede yaşıyoruz.|Bir şehrin ya da ilin bölümü.
 draw|çizmek||verb|A1|okul|Draw a house.|Bir ev çiz.|Kalemle resim yapmak.
 dream|rüya|hayal|noun|A2|duygular|I had a strange dream.|Garip bir rüya gördüm.|Uyurken görülen görüntüler.
-dress|elbise||noun|A1|günlük|She is wearing a red dress.|Kırmızı bir elbise giyiyor.|Kadınların giydiği tek parça giysi.
+dress|elbise||noun|A1|alışveriş|She is wearing a red dress.|Kırmızı bir elbise giyiyor.|Kadınların giydiği tek parça giysi.
 drop|düşürmek||verb|B1|günlük|Don't drop the glass.|Bardağı düşürme.|Elindeki bir şeyi kazayla bırakmak.
 drug|-|ilaç (medicine) ile çakışır; anlam çok
 earth|-|dünya (world) ile çakışır
@@ -141,7 +141,7 @@ forward|ileri||adverb|A2|günlük|Take one step forward.|Bir adım ileri at.|Ön
 fun|eğlence|keyif|noun|A1|günlük|We had a lot of fun.|Çok eğlendik.|Hoşça vakit geçirme.
 fund|-|Türkçesi neredeyse aynı (fon)
 gain|-|kazanmak (win) ile çakışır
-glass|bardak|cam|noun|A1|ev|A glass of water, please.|Bir bardak su lütfen.|Su içilen, içi görünen kap.
+glass|bardak|cam|noun|A1|yiyecek|A glass of water, please.|Bir bardak su lütfen.|Su içilen, içi görünen kap.
 growth|büyüme||noun|B2|iş|The company shows fast growth.|Şirket hızlı bir büyüme gösteriyor.|Boyut ya da miktarın artması.
 guess|-|Türkçesi iki kelime (tahmin etmek)
 gun|silah||noun|B1|hukuk|The police officer has a gun.|Polis memurunun silahı var.|Mermi atan araç.
@@ -237,7 +237,7 @@ picture|resim||noun|A1|okul|Look at this picture.|Bu resme bak.|Çizilmiş ya da
 piece|-|parça (part) ile çakışır
 plant|bitki||noun|A1|doğa|Water the plant.|Bitkiyi sula.|Topraktan beslenerek büyüyen canlı.
 player|oyuncu||noun|A2|günlük|He is a good player.|O iyi bir oyuncu.|Oyunda ya da maçta yer alan kişi.
-poor|fakir|yoksul|adjective|A2|günlük|They are very poor.|Çok fakirler.|Parası çok az olan.
+poor|fakir|yoksul|adjective|A2|alışveriş|They are very poor.|Çok fakirler.|Parası çok az olan.
 position|konum|pozisyon|noun|B1|günlük|What is our position on the map?|Haritadaki konumumuz ne?|Bir şeyin bulunduğu yer.
 positive|olumlu||adjective|B1|duygular|Stay positive.|Olumlu kal.|İyi yönleri gören.
 practice|alıştırma|pratik|noun|B1|okul|I need more practice.|Daha fazla alıştırmaya ihtiyacım var.|Bir beceriyi geliştirmek için tekrar tekrar yapma.
@@ -273,7 +273,7 @@ respect|saygı||noun|B1|duygular|Show respect to your teachers.|Öğretmenlerine
 response|yanıt|tepki|noun|B2|günlük|I am waiting for a response.|Bir yanıt bekliyorum.|Bir soruya ya da duruma verilen karşılık.
 review|-|anlam çok
 ride|binmek||verb|A2|seyahat|Can you ride a bike?|Bisiklete binebilir misin?|Bir taşıtın ya da hayvanın üstüne oturup gitmek.
-ring|yüzük||noun|A2|günlük|She has a gold ring.|Altın bir yüzüğü var.|Parmağa takılan halka biçiminde süs.
+ring|yüzük||noun|A2|alışveriş|She has a gold ring.|Altın bir yüzüğü var.|Parmağa takılan halka biçiminde süs.
 rise|yükselmek||verb|B1|doğa|Prices rise every year.|Fiyatlar her yıl yükselir.|Daha yukarı çıkmak.
 risk|-|Türkçesi aynı yazılıyor (risk)
 river|nehir|ırmak|noun|A1|doğa|The river is very long.|Nehir çok uzun.|Denize ya da göle akan büyük su.
@@ -283,10 +283,10 @@ roll|yuvarlamak||verb|B1|günlük|Roll the ball to me.|Topu bana yuvarla.|Bir ş
 round|yuvarlak||adjective|A2|günlük|The table is round.|Masa yuvarlak.|Daire biçiminde olan.
 rule|kural||noun|A2|okul|This is an important rule.|Bu önemli bir kural.|Uyulması gereken ilke.
 safe|güvenli||adjective|A2|günlük|This street is safe.|Bu sokak güvenli.|Tehlikesi olmayan.
-sale|indirim|satış|noun|B1|iş|The shoes are on sale.|Ayakkabılar indirimde.|Fiyatların düşürüldüğü dönem.
+sale|indirim|satış|noun|B1|alışveriş|The shoes are on sale.|Ayakkabılar indirimde.|Fiyatların düşürüldüğü dönem.
 save|kurtarmak|biriktirmek|verb|B1|günlük|The doctor tried to save him.|Doktor onu kurtarmaya çalıştı.|Birini tehlikeden çekip almak.
 scene|sahne||noun|B1|günlük|This is my favourite scene in the film.|Bu filmdeki en sevdiğim sahne.|Film ya da oyunun bir bölümü.
-science|bilim||noun|A1|okul|I love science.|Bilimi severim.|Doğayı ve evreni deneyle inceleyen bilgi alanı.
+science|bilim||noun|A1|teknoloji|I love science.|Bilimi severim.|Doğayı ve evreni deneyle inceleyen bilgi alanı.
 score|puan|skor|noun|A2|günlük|What is the score?|Puan kaç?|Bir oyunda ya da sınavda alınan sayı.
 search|-|aramak (call) ile çakışır
 season|mevsim||noun|A1|hava|Summer is my favourite season.|Yaz en sevdiğim mevsim.|Yılın dört bölümünden biri.
@@ -303,13 +303,13 @@ sex|-|oyun için uygun değil
 shake|sallamak||verb|B1|günlük|Shake the bottle.|Şişeyi salla.|Bir şeyi hızla ileri geri oynatmak.
 shape|şekil|biçim|noun|A2|okul|What shape is it?|Bu ne şekil?|Bir şeyin dış görünüşü.
 shoot|-|Türkçesi iki kelime (ateş etmek)
-shop|dükkân|mağaza,dükkan|noun|A1|şehir|The shop opens at nine.|Dükkân dokuzda açılıyor.|Bir şeylerin satıldığı yer.
+shop|dükkân|mağaza,dükkan|noun|A1|alışveriş|The shop opens at nine.|Dükkân dokuzda açılıyor.|Bir şeylerin satıldığı yer.
 short|kısa||adjective|A1|günlük|My hair is short.|Saçım kısa.|Boyu ya da süresi az olan.
 similar|benzer||adjective|B1|soyut|Our bags are similar.|Çantalarımız benzer.|Birbirine yakın özellikler taşıyan.
 single|bekâr|bekar,tek|adjective|B1|aile|Is he married or single?|Evli mi bekâr mı?|Evli olmayan.
 sister|-|kardeş (brother) ile çakışır
 site|-|anlam çok
-size|beden|boyut|noun|A2|günlük|What size do you need?|Hangi bedene ihtiyacın var?|Giysi ya da ayakkabının ölçüsü.
+size|beden|boyut|noun|A2|alışveriş|What size do you need?|Hangi bedene ihtiyacın var?|Giysi ya da ayakkabının ölçüsü.
 skill|beceri||noun|B1|iş|Cooking is a useful skill.|Yemek yapmak yararlı bir beceri.|Bir işi iyi yapabilme yeteneği.
 slow|yavaş||adjective|A1|günlük|The bus is very slow.|Otobüs çok yavaş.|Hızı az olan.
 smile|gülümsemek||verb|A2|duygular|Smile for the camera.|Kameraya gülümse.|Dudaklarını hafifçe açarak sevincini göstermek.
