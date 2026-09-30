@@ -67,6 +67,31 @@ export function Settings({ pack, profile, setProfile, onBack, onReplayTutorial, 
       </section>
 
       <section className="setting">
+        <h2>Ses</h2>
+        <div className="toggle-list">
+          <label className="toggle">
+            <input
+              type="checkbox"
+              role="switch"
+              checked={s.sound !== false}
+              onChange={(e) => setProfile({ ...profile, settings: { ...s, sound: e.target.checked } })}
+            />
+            <span>Ses efektleri</span>
+          </label>
+          <label className="toggle">
+            <input
+              type="checkbox"
+              role="switch"
+              checked={s.music === true}
+              onChange={(e) => setProfile({ ...profile, settings: { ...s, music: e.target.checked } })}
+            />
+            <span>Arka plan müziği</span>
+          </label>
+        </div>
+        <p className="muted small">Ses, uygulamada ilk dokunuşundan sonra başlar. Telefon sessizdeyse duyulmayabilir.</p>
+      </section>
+
+      <section className="setting">
         <h2>Nasıl oynanır</h2>
         <button type="button" className="btn btn-secondary" onClick={onReplayPuzzleTutorial}>
           Bulmaca eğitimini yeniden oyna

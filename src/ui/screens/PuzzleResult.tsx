@@ -5,6 +5,7 @@ import { DAILY_PUZZLE_GOAL, currentStreak, goalDoneToday } from '../../core/dail
 import { languageInfo } from '../../core/languages';
 import { displayWord } from '../../core/normalize';
 import { DIFFICULTY_LABEL, POS_LABEL } from '../../core/pack';
+import { PRACTICE_COINS_PER_WORD } from '../../core/economy';
 import type { Profile } from '../../core/profile';
 import type { PuzzleOutcome, PuzzleState } from '../../core/puzzle';
 import { CheckIcon, CoinIcon, CrossIcon, FlameIcon } from '../components/Icons';
@@ -16,10 +17,14 @@ interface Props {
   onAgain: () => void;
   onHome: () => void;
   onReview: () => void;
+  /** Zorlanılan kelime sayısı (0: pekiştirme düğmesi yok). */
+  practiceCount: number;
+  practiceDone: { coins: number; mastered: number; total: number } | null;
+  onPractice: () => void;
 }
 
 /** Bulmaca sonu: kelimelerin anlamları, örnek cümleler ve kazanılanlar. */
-export function PuzzleResult({ puzzle, outcome, profile, onAgain, onHome, onReview }: Props) {
+export function PuzzleResult({ puzzle, outcome, profile, onAgain, onHome, onReview, practiceCount, practiceDone, onPractice }: Props) {
   // Telefonda sonuç en üstten başlasın (bulmaca ekranı kaydırılmış olabilir).
   // Süslü parantez şart: scrollTo yeni Chrome'da Promise döndürüyor; React onu temizlik işlevi sanıp
   // ekran kapanırken çöküyordu ("n is not a function").
@@ -150,6 +155,27 @@ export function PuzzleResult({ puzzle, outcome, profile, onAgain, onHome, onRevi
       )}
       {outcome.removedFromReview > 0 && (
         <p className="info-line good">{outcome.removedFromReview} kelimeyi artık biliyorsun — tekrar listenden çıkarıldı.</p>
+      )}
+
+      {practiceDone ? (
+        <p className="info-line good">
+          Pekiştirme: {practiceDone.total} kelimeden {practiceDone.mastered} tanesini bildin
+          {practiceDone.coins > 0 ? ` · +${practiceDone.coins} jeton` : ''}.
+        </p>
+      ) : (
+        practiceCount > 0 && (
+          <div className="practice-offer paper">
+            <p>
+              <strong className="ink-title">Pekiştir</strong> · zorlandığın {practiceCount} kelimeyi cümle içinde bir kez daha çalış.
+            </p>
+            <p className="muted small">
+              İsteğe bağlı. Cevaba bakmadan bildiğin her kelime +{PRACTICE_COINS_PER_WORD} jeton; yanlış hiçbir şey eksiltmez.
+            </p>
+            <button type="button" className="btn btn-secondary btn-block" onClick={onPractice}>
+              Pekiştir ({practiceCount} kelime)
+            </button>
+          </div>
+        )
       )}
 
       <div className="stack">

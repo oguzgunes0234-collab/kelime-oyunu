@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { sfx } from '../sound';
 import { TOOL_ORDER } from '../../core/economy';
 import { languageInfo } from '../../core/languages';
 import { displayLetter, displayWord, keyToLetter } from '../../core/normalize';
@@ -166,7 +167,11 @@ export function Game(props: Props) {
     if (!prev || next === prev) return;
     live.current.round = next;
     setRound(next);
-    if (next.seq !== prev.seq) say(describe(next.event));
+    if (next.seq !== prev.seq) {
+      say(describe(next.event));
+      if (next.event?.kind === 'correct') sfx.correct();
+      else if (next.event?.kind === 'wrong' || next.event?.kind === 'failed') sfx.wrong();
+    }
     if (tutorial) {
       const step = live.current.coach;
       if (step === 'tap' && filledCount(next) > 0) moveCoach('tools');

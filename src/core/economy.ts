@@ -18,6 +18,8 @@ export const COINS_PER_CORRECT = 2;
 export const COINS_CLEAN_BONUS = 1;
 /** Jetonla bir araç hakkı almanın bedeli. */
 export const COINS_PER_CHARGE = 5;
+/** Pekiştirmede cevabı göstermeden anlamı ve cümleyi doğru yapılan kelime başına. */
+export const PRACTICE_COINS_PER_WORD = 2;
 
 /** Günlük hedef tamamlanınca verilen hediye (günde bir kez). */
 export const DAILY_GOAL_REWARD: { coins: number; tools: Inventory } = {

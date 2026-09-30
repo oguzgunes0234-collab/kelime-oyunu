@@ -11,6 +11,7 @@ import { Review } from './screens/Review';
 import { Settings } from './screens/Settings';
 import { Store } from './screens/Store';
 import { useProfile } from './useProfile';
+import { configureSound, installSoundUnlock } from './sound';
 
 type Screen =
   | { name: 'home' }
@@ -40,6 +41,14 @@ export function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [screen]);
+
+  // Ses: ilk dokunuşta açılır (tarayıcı kuralı); ayarlar değişince uygulanır.
+  useEffect(() => {
+    installSoundUnlock();
+  }, []);
+  useEffect(() => {
+    configureSound({ effects: profile.settings.sound !== false, music: profile.settings.music === true });
+  }, [profile.settings.sound, profile.settings.music]);
 
   const play = (config: SessionConfig) => setScreen({ name: 'game', config, key: Date.now() });
   // Zorluk oyuncuya seçtirilmez: kelime seviyesini hep uyarlamalı zorluk belirler.

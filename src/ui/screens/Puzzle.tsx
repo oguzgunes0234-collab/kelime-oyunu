@@ -35,6 +35,9 @@ import { Keyboard } from '../components/Keyboard';
 import { Sheet } from '../components/Sheet';
 import { ChapterComplete } from './ChapterComplete';
 import { PuzzleResult } from './PuzzleResult';
+import { Practice } from './Practice';
+import { applyPractice, buildPractice, type PracticeItem } from '../../core/practice';
+import { sfx } from '../sound';
 import { ToolEmpty } from './ToolEmpty';
 
 interface Props {
@@ -127,6 +130,10 @@ export function Puzzle(props: Props) {
   const [outcome, setOutcome] = useState<PuzzleOutcome | null>(null);
   const [showResult, setShowResult] = useState(false);
   const [showChapter, setShowChapter] = useState(false);
+  // Pekiştirme: bulmaca sonrası isteğe bağlı tur; bir kez oynanır.
+  const [practiceItems, setPracticeItems] = useState<PracticeItem[]>([]);
+  const [practice, setPractice] = useState<PracticeItem[] | null>(null);
+  const [practiceDone, setPracticeDone] = useState<{ coins: number; mastered: number; total: number } | null>(null);
   const [dialog, setDialog] = useState<Dialog>(null);
   const [note, setNote] = useState<Note>(null);
   const noteSeq = useRef(0);
@@ -186,6 +193,8 @@ export function Puzzle(props: Props) {
     const res = applyPuzzle(base, done, pack, props.adaptive, new Date());
     saveProfile(res.profile);
     setOutcome(res.outcome);
+    // Seçenekler bir kez karıştırılır: sonuç ekranı yeniden çizilince değişmesin.
+    setPracticeItems(buildPractice(pack, done.direction, res.outcome.results));
     window.clearTimeout(timer.current);
     // Son kelimenin kutlaması kısa bir an görünsün.
     const wait = done.event?.kind === 'complete' && !reducedMotion() ? 900 : 0;
@@ -204,14 +213,18 @@ export function Puzzle(props: Props) {
       if (e.kind === 'solved' && w) {
         say(`Doğru! ${w.clue} → ${displayWord(w.answer, tgt)}`, 'good');
         buzz(25);
+        // Son kelimede "bulmaca bitti" sesi çalar; ikisi üst üste binmesin.
+        if (next.status !== 'done') sfx.correct();
       } else if (e.kind === 'wrong' && w) {
         say(`${clueLabel(w)}: yanlış harf var`, 'bad');
         buzz([40, 60, 40]);
+        sfx.wrong();
       } else if (e.kind === 'reveal') say('Harf açıldı.');
       else if (e.kind === 'meaning') say('Anlam ipucu üstte.');
       else if (e.kind === 'complete') {
         say(tutorial ? 'Tamam!' : 'Bulmaca tamam!', 'good');
         buzz([30, 50, 30, 50, 60]);
+        sfx.complete();
       }
       if (tutorial) {
         // Açıklamalar, öğrettikleri şey olunca kendiliğinden kapanır.
@@ -356,9 +369,32 @@ export function Puzzle(props: Props) {
     return <ChapterComplete chapter={outcome.chapterCompleted} profile={profile} onNext={props.onNewPuzzle} onHome={props.onExit} />;
   }
 
+  if (showResult && outcome && practice) {
+    return (
+      <Practice
+        items={practice}
+        direction={puzzle.direction}
+        onDone={(results) => {
+          // Hiçbir kelime bitmeden çıkıldıysa teklif sonuç ekranında kalır.
+          if (!results.length) {
+            setPractice(null);
+            return;
+          }
+          const res = applyPractice(live.current.profile, results);
+          saveProfile(res.profile);
+          setPracticeDone({ coins: res.coins, mastered: res.mastered, total: results.length });
+          setPractice(null);
+        }}
+      />
+    );
+  }
+
   if (showResult && outcome) {
     return (
       <PuzzleResult
+        practiceCount={practiceDone ? 0 : practiceItems.length}
+        practiceDone={practiceDone}
+        onPractice={() => setPractice(practiceItems)}
         puzzle={puzzle}
         outcome={outcome}
         profile={profile}

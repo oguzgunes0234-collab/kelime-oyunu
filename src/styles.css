@@ -1651,3 +1651,132 @@ div.note {
     display: none;
   }
 }
+
+/* Ayarlar: aç/kapat anahtarları (ses efektleri, müzik). Dokunma alanı ≥ 44px. */
+.toggle-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.toggle input {
+  width: 22px;
+  height: 22px;
+  accent-color: var(--primary);
+  flex: none;
+}
+
+/* Pekiştirme (bulmaca sonrası): tek kart, büyük seçenekler, harf kutuları ve klavye. */
+.practice-offer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 16px;
+  border-radius: var(--radius);
+}
+.practice-offer p {
+  margin: 0;
+}
+.practice-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+.practice-card p {
+  margin: 0;
+}
+.practice-word {
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.practice-sentence {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.practice-choices {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.practice-choices .is-right {
+  background: var(--good-bg);
+  border-color: var(--good);
+  color: var(--good);
+}
+.practice-choices .is-wrong {
+  background: var(--bad-bg);
+  border-color: var(--bad);
+  color: var(--bad);
+}
+.practice-choices .is-dim {
+  opacity: 0.5;
+}
+.practice-slots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+.practice-slots.shake {
+  animation: shake 320ms ease;
+}
+.practice-slot {
+  width: 36px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--slot-line);
+  border-radius: 8px;
+  background: var(--slot-bg);
+  font-size: 1.3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.practice-slot.is-right {
+  border-color: var(--good);
+  background: var(--good-bg);
+}
+.practice-slot.is-wrong {
+  border-color: var(--bad);
+  background: var(--bad-bg);
+}
+.practice-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.practice-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+}
+.practice-list li.ok {
+  color: var(--good);
+}
+.practice-list li span {
+  color: var(--muted);
+  min-width: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .practice-slots.shake {
+    animation: none;
+  }
+}

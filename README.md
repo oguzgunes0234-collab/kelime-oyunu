@@ -128,6 +128,18 @@ ilk açılıştan sonra oyun çevrimdışı da açılır. PWA olarak ana ekrana 
   "Düzensiz fiil: go → went" notu görünür). Bir mod, pakette o konudan en az 60 kelime olunca açılır; eksik mod
   kaç kelime kaldığıyla "Hazırlanıyor" görünür. Konu bulmacası 7×7 ızgarada
   oynanır, bölümü ve zorluğu değiştirmez, günlük hedefe sayılır.
+- **Pekiştirme (`core/practice.ts`, `screens/Practice.tsx`):** bulmaca
+  sonunda, zorlanılan (çözülemeyen, yardımla çözülen ya da yanlış denemesi
+  olan) en çok 5 kelime için isteğe bağlı kısa tur. Her kelimede önce anlam
+  seçme (aynı sözcük türünden 3 çeldirici), sonra örnek cümlede boşluğa
+  kelimeyi yazma; örnek uygun değilse kaynak kelime sorulur. "Cevabı göster"
+  serbest. Cevaba bakmadan ikisini de doğru yapılan kelime başına +2 jeton;
+  hiçbir şey eksilmez, tekrar listesi ve aralıklı tekrar değişmez.
+- **Ses (`ui/sound.ts`):** kısa efektler (doğru kelime, yanlış harf, bulmaca
+  bitti) ve sakin bir arka plan müziği. Hepsi Web Audio ile kodda üretilir;
+  ses dosyası yok. Ayarlar'da ayrı ayrı kapatılır (efektler varsayılan açık,
+  müzik kapalı). Tarayıcı kuralı gereği ilk dokunuştan sonra başlar; sekme
+  arka plandayken müzik susar.
 - **Hak ve paketler:** araç hakları tek tek ya da paket halinde jetonla
   alınır; gerçek para yok. Paketler tek tek almaktan ucuzdur (`TOOL_PACKS`).
 - **Açılış ekranı:** `index.html` içinde; KELİME/KÖPRÜ mini çengel bulmaca

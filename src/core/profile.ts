@@ -17,6 +17,10 @@ export interface Settings {
   difficultyMode: DifficultyMode;
   dailyGoal: number;
   theme: ThemeSetting;
+  /** Kısa ses efektleri (doğru, yanlış, bulmaca bitti). Varsayılan açık. */
+  sound: boolean;
+  /** Arka plan müziği. Varsayılan kapalı: çoğu kişi sessiz ortamda oynar. */
+  music: boolean;
 }
 
 export type ReviewReason = 'wrong' | 'skipped' | 'helped';
@@ -58,7 +62,7 @@ export interface Profile {
 export function defaultProfile(now: Date): Profile {
   return {
     version: 1,
-    settings: { direction: { source: 'tr', target: 'en' }, difficultyMode: 'adaptive', dailyGoal: 10, theme: 'auto' },
+    settings: { direction: { source: 'tr', target: 'en' }, difficultyMode: 'adaptive', dailyGoal: 10, theme: 'auto', sound: true, music: false },
     tutorialDone: false,
     puzzleTutorialStep: 0,
     campaign: initialCampaign(),
