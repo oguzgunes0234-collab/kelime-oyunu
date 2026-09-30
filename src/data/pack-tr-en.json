@@ -2884,6 +2884,10392 @@
    "hint": {
     "tr": "Bir bütünü oluşturan küçük parça ya da bilgi."
    }
+  },
+  {
+   "id": "bilmek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "bilmek",
+     "example": "Cevabı biliyorum."
+    },
+    "en": {
+     "text": "know",
+     "example": "I know the answer."
+    }
+   },
+   "hint": {
+    "tr": "Bir şey hakkında bilgi sahibi olmak."
+   },
+   "reviewed": true,
+   "check": "human"
+  },
+  {
+   "id": "iyi",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "iyi",
+     "example": "Bu iyi bir kitap."
+    },
+    "en": {
+     "text": "good",
+     "example": "This is a good book."
+    }
+   },
+   "hint": {
+    "tr": "Beğenilen, kalitesi yüksek olan."
+   },
+   "reviewed": true,
+   "check": "human"
+  },
+  {
+   "id": "begenmek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "beğenmek",
+     "alternatives": [
+      "sevmek"
+     ],
+     "example": "Bu şarkıyı beğeniyorum."
+    },
+    "en": {
+     "text": "like",
+     "example": "I like this song."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi hoş bulmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "bakmak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "bakmak",
+     "example": "Gökyüzüne bak."
+    },
+    "en": {
+     "text": "look",
+     "example": "Look at the sky."
+    }
+   },
+   "hint": {
+    "tr": "Gözlerini bir şeye çevirmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yapmak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "yapmak",
+     "example": "Her sabah çay yaparım."
+    },
+    "en": {
+     "text": "make",
+     "example": "I make tea every morning."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi ortaya çıkarmak, üretmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "simdi",
+   "pos": "adverb",
+   "level": "A1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "şimdi",
+     "example": "Şimdi meşgulüm."
+    },
+    "en": {
+     "text": "now",
+     "example": "I am busy now."
+    }
+   },
+   "hint": {
+    "tr": "Şu anda, bu anda."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "gormek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "görmek",
+     "example": "Buradan denizi görebiliyorum."
+    },
+    "en": {
+     "text": "see",
+     "example": "I can see the sea from here."
+    }
+   },
+   "hint": {
+    "tr": "Gözle algılamak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "almak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "almak",
+     "example": "Yanına bir şemsiye al."
+    },
+    "en": {
+     "text": "take",
+     "example": "Take an umbrella with you."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi elle tutup kendine geçirmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "dusunmek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "düşünmek",
+     "example": "Her gün seni düşünüyorum."
+    },
+    "en": {
+     "text": "think",
+     "example": "I think about you every day."
+    }
+   },
+   "hint": {
+    "tr": "Zihnini bir konuya vermek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "istemek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "istemek",
+     "example": "Bir bardak su istiyorum."
+    },
+    "en": {
+     "text": "want",
+     "example": "I want a glass of water."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeye sahip olmayı dilemek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yil",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "yıl",
+     "alternatives": [
+      "sene"
+     ],
+     "example": "Bu yıl on yaşında."
+    },
+    "en": {
+     "text": "year",
+     "example": "She is ten years old this year."
+    }
+   },
+   "hint": {
+    "tr": "On iki aydan oluşan süre."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "aramak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "aramak",
+     "example": "Lütfen bu akşam beni ara."
+    },
+    "en": {
+     "text": "call",
+     "example": "Please call me tonight."
+    }
+   },
+   "hint": {
+    "tr": "Telefonla biriyle konuşmaya çalışmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "asagi",
+   "pos": "adverb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "aşağı",
+     "example": "Merdivenlerden aşağı in."
+    },
+    "en": {
+     "text": "down",
+     "example": "Go down the stairs."
+    }
+   },
+   "hint": {
+    "tr": "Daha alçak bir yere doğru."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "bulmak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "bulmak",
+     "example": "Anahtarlarımı bulamıyorum."
+    },
+    "en": {
+     "text": "find",
+     "example": "I can't find my keys."
+    }
+   },
+   "hint": {
+    "tr": "Aranan şeyle karşılaşmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ilk",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "ilk",
+     "alternatives": [
+      "birinci"
+     ],
+     "example": "Bu benim ilk ziyaretim."
+    },
+    "en": {
+     "text": "first",
+     "example": "This is my first visit."
+    }
+   },
+   "hint": {
+    "tr": "Sıralamada en başta olan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "vermek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "vermek",
+     "example": "Kitabı bana ver lütfen."
+    },
+    "en": {
+     "text": "give",
+     "example": "Give me the book, please."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi başkasına geçirmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "hayat",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "hayat",
+     "alternatives": [
+      "yaşam"
+     ],
+     "example": "Hayat güzel."
+    },
+    "en": {
+     "text": "life",
+     "example": "Life is beautiful."
+    }
+   },
+   "hint": {
+    "tr": "Doğumdan ölüme kadar geçen süre."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "adam",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "adam",
+     "example": "Dışarıda bir adam bekliyor."
+    },
+    "en": {
+     "text": "man",
+     "example": "A man is waiting outside."
+    }
+   },
+   "hint": {
+    "tr": "Yetişkin erkek kişi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ihtiyac",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "ihtiyaç",
+     "alternatives": [
+      "gereksinim"
+     ],
+     "example": "Daha fazla doktora ihtiyaç var."
+    },
+    "en": {
+     "text": "need",
+     "example": "There is a need for more doctors."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin gerekli olması durumu."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yeni",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "yeni",
+     "example": "Yeni bir telefon aldım."
+    },
+    "en": {
+     "text": "new",
+     "example": "I bought a new phone."
+    }
+   },
+   "hint": {
+    "tr": "Az önce yapılmış ya da alınmış."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "insanlar",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "insanlar",
+     "alternatives": [
+      "halk"
+     ],
+     "example": "Bu şehirde çok insan yaşıyor."
+    },
+    "en": {
+     "text": "people",
+     "example": "Many people live in this city."
+    }
+   },
+   "hint": {
+    "tr": "Kişilerin topluluğu."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "gercek",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "gerçek",
+     "example": "Bu gerçek bir elmas mı?"
+    },
+    "en": {
+     "text": "real",
+     "example": "Is this a real diamond?"
+    }
+   },
+   "hint": {
+    "tr": "Hayal ya da sahte olmayan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "hala",
+   "pos": "adverb",
+   "level": "A2",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "hâlâ",
+     "alternatives": [
+      "hala"
+     ],
+     "example": "Hâlâ yağmur yağıyor."
+    },
+    "en": {
+     "text": "still",
+     "example": "It is still raining."
+    }
+   },
+   "hint": {
+    "tr": "O ana kadar değişmeden, henüz."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "konusmak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "konuşmak",
+     "example": "Her akşam konuşuruz."
+    },
+    "en": {
+     "text": "talk",
+     "example": "We talk every evening."
+    }
+   },
+   "hint": {
+    "tr": "Sözle düşüncelerini anlatmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "anlatmak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "anlatmak",
+     "example": "Bana bir hikâye anlat."
+    },
+    "en": {
+     "text": "tell",
+     "example": "Tell me a story."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi sözle birine aktarmak."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "sey",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "şey",
+     "example": "Masadaki o şey ne?"
+    },
+    "en": {
+     "text": "thing",
+     "example": "What is that thing on the table?"
+    }
+   },
+   "hint": {
+    "tr": "Adı belirtilmeyen herhangi bir nesne."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "denemek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "denemek",
+     "example": "Bu keki dene."
+    },
+    "en": {
+     "text": "try",
+     "example": "Try this cake."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi yapmaya çalışmak ya da sınamak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "iki",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "iki",
+     "example": "İki erkek kardeşim var."
+    },
+    "en": {
+     "text": "two",
+     "example": "I have two brothers."
+    }
+   },
+   "hint": {
+    "tr": "Birden sonra gelen sayı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "neden",
+   "pos": "adverb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "neden",
+     "alternatives": [
+      "niçin",
+      "niye"
+     ],
+     "example": "Neden geç kaldın?"
+    },
+    "en": {
+     "text": "why",
+     "example": "Why are you late?"
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin sebebini sormak için kullanılır."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "calismak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "çalışmak",
+     "example": "Bir bankada çalışıyorum."
+    },
+    "en": {
+     "text": "work",
+     "example": "I work in a bank."
+    }
+   },
+   "hint": {
+    "tr": "Bir iş yapmak, emek harcamak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "daima",
+   "pos": "adverb",
+   "level": "A1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "daima",
+     "alternatives": [
+      "hep"
+     ],
+     "example": "O daima mutludur."
+    },
+    "en": {
+     "text": "always",
+     "example": "She is always happy."
+    }
+   },
+   "hint": {
+    "tr": "Her zaman, istisnasız."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kotu",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "kötü",
+     "example": "Bugün hava kötü."
+    },
+    "en": {
+     "text": "bad",
+     "example": "The weather is bad today."
+    }
+   },
+   "hint": {
+    "tr": "İyi olmayan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "olmak",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "olmak",
+     "example": "Doktor olmak istiyorum."
+    },
+    "en": {
+     "text": "become",
+     "example": "I want to become a doctor."
+    }
+   },
+   "hint": {
+    "tr": "Bir durumdan başka bir duruma geçmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "baslamak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "başlamak",
+     "example": "Film sekizde başlayacak."
+    },
+    "en": {
+     "text": "begin",
+     "example": "The film will begin at eight."
+    }
+   },
+   "hint": {
+    "tr": "Bir işin ilk adımını atmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "inanmak",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "inanmak",
+     "example": "Sana inanıyorum."
+    },
+    "en": {
+     "text": "believe",
+     "example": "I believe you."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin doğru olduğunu kabul etmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "getirmek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "getirmek",
+     "example": "Lütfen biraz ekmek getir."
+    },
+    "en": {
+     "text": "bring",
+     "example": "Please bring some bread."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi bulunulan yere taşımak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "bakim",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "bakım",
+     "alternatives": [
+      "özen"
+     ],
+     "example": "Bebeğin bakıma ihtiyacı var."
+    },
+    "en": {
+     "text": "care",
+     "example": "The baby needs care."
+    }
+   },
+   "hint": {
+    "tr": "Birinin ya da bir şeyin ihtiyaçlarıyla ilgilenme."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "vaka",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "vaka",
+     "alternatives": [
+      "dava",
+      "durum"
+     ],
+     "example": "Doktor bugün yeni bir vaka gördü."
+    },
+    "en": {
+     "text": "case",
+     "example": "The doctor saw a new case today."
+    }
+   },
+   "hint": {
+    "tr": "Hastalık, suç gibi tek tek ele alınan olay."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "degismek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "değişmek",
+     "example": "Hava çabuk değişebilir."
+    },
+    "en": {
+     "text": "change",
+     "example": "The weather can change quickly."
+    }
+   },
+   "hint": {
+    "tr": "Başka bir hale gelmek."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "cocuk",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "çocuk",
+     "example": "Çocuk bahçede oynuyor."
+    },
+    "en": {
+     "text": "child",
+     "example": "The child is playing in the garden."
+    }
+   },
+   "hint": {
+    "tr": "Henüz büyümemiş küçük insan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kapatmak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "kapatmak",
+     "example": "Pencereyi kapat lütfen."
+    },
+    "en": {
+     "text": "close",
+     "example": "Close the window, please."
+    }
+   },
+   "hint": {
+    "tr": "Açık olan bir şeyi kapalı hale getirmek."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "sirket",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "şirket",
+     "alternatives": [
+      "firma"
+     ],
+     "example": "Büyük bir şirkette çalışıyor."
+    },
+    "en": {
+     "text": "company",
+     "example": "She works for a big company."
+    }
+   },
+   "hint": {
+    "tr": "Ticaret yapan kuruluş."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kurs",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "kurs",
+     "example": "Bir İngilizce kursuna gidiyorum."
+    },
+    "en": {
+     "text": "course",
+     "example": "I am taking an English course."
+    }
+   },
+   "hint": {
+    "tr": "Belli bir konunun öğretildiği eğitim."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "erken",
+   "pos": "adverb",
+   "level": "A1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "erken",
+     "example": "Erken kalkarım."
+    },
+    "en": {
+     "text": "early",
+     "example": "I get up early."
+    }
+   },
+   "hint": {
+    "tr": "Beklenen zamandan önce."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "son",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "son",
+     "example": "Bu hikâyenin sonu."
+    },
+    "en": {
+     "text": "end",
+     "example": "This is the end of the story."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin bittiği yer ya da an."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yuz",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "vücut",
+   "terms": {
+    "tr": {
+     "text": "yüz",
+     "alternatives": [
+      "surat"
+     ],
+     "example": "Yüzünü yıka."
+    },
+    "en": {
+     "text": "face",
+     "example": "Wash your face."
+    }
+   },
+   "hint": {
+    "tr": "Başın gözlerin ve ağzın bulunduğu ön kısmı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "aile",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "aile",
+     "example": "Ailem İzmir'de yaşıyor."
+    },
+    "en": {
+     "text": "family",
+     "example": "My family lives in Izmir."
+    }
+   },
+   "hint": {
+    "tr": "Anne, baba ve çocuklardan oluşan topluluk."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "uzak",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "uzak",
+     "example": "İstasyon uzak değil."
+    },
+    "en": {
+     "text": "far",
+     "example": "The station is not far."
+    }
+   },
+   "hint": {
+    "tr": "Arada çok mesafe olan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "hissetmek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "hissetmek",
+     "example": "Bugün kendimi yorgun hissediyorum."
+    },
+    "en": {
+     "text": "feel",
+     "example": "I feel tired today."
+    }
+   },
+   "hint": {
+    "tr": "Bir duyguyu ya da durumu içinde yaşamak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "az",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "az",
+     "example": "Partiye az kişi geldi."
+    },
+    "en": {
+     "text": "few",
+     "example": "Few people came to the party."
+    }
+   },
+   "hint": {
+    "tr": "Sayıca çok olmayan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "harika",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "harika",
+     "alternatives": [
+      "muhteşem"
+     ],
+     "example": "Bu harika bir fikir!"
+    },
+    "en": {
+     "text": "great",
+     "example": "That is a great idea!"
+    }
+   },
+   "hint": {
+    "tr": "Çok iyi, çok beğenilen."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "grup",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "grup",
+     "alternatives": [
+      "topluluk"
+     ],
+     "example": "Bir grup öğrenci bekliyor."
+    },
+    "en": {
+     "text": "group",
+     "example": "A group of students is waiting."
+    }
+   },
+   "hint": {
+    "tr": "Bir araya gelmiş kişi ya da şeyler."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "duymak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "duymak",
+     "alternatives": [
+      "işitmek"
+     ],
+     "example": "Müzik duyuyorum."
+    },
+    "en": {
+     "text": "hear",
+     "example": "I can hear music."
+    }
+   },
+   "hint": {
+    "tr": "Sesleri kulakla algılamak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yuksek",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "yüksek",
+     "example": "Bu dağ çok yüksek."
+    },
+    "en": {
+     "text": "high",
+     "example": "This mountain is very high."
+    }
+   },
+   "hint": {
+    "tr": "Yerden çok yukarıda olan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "tutmak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "tutmak",
+     "example": "Elimi tut."
+    },
+    "en": {
+     "text": "hold",
+     "example": "Hold my hand."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi elde kavramak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "icermek",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "içermek",
+     "alternatives": [
+      "kapsamak"
+     ],
+     "example": "Fiyat kahvaltıyı içermiyor."
+    },
+    "en": {
+     "text": "include",
+     "example": "The price does not include breakfast."
+    }
+   },
+   "hint": {
+    "tr": "Bir bütünün parçası olarak barındırmak."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "ilgi",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "ilgi",
+     "example": "Müziğe ilgisi var."
+    },
+    "en": {
+     "text": "interest",
+     "example": "He has an interest in music."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi merak edip ona yönelme."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "saklamak",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "saklamak",
+     "alternatives": [
+      "korumak"
+     ],
+     "example": "Bu mektubu sakla."
+    },
+    "en": {
+     "text": "keep",
+     "example": "Keep this letter."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi elden çıkarmadan tutmak."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "gec",
+   "pos": "adverb",
+   "level": "A1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "geç",
+     "example": "Otobüs yine geç kaldı."
+    },
+    "en": {
+     "text": "late",
+     "example": "The bus is late again."
+    }
+   },
+   "hint": {
+    "tr": "Beklenen zamandan sonra."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ayrilmak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "ayrılmak",
+     "example": "Saat altıda ayrılıyoruz."
+    },
+    "en": {
+     "text": "leave",
+     "example": "We leave at six."
+    }
+   },
+   "hint": {
+    "tr": "Bir yerden gitmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yasamak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "yaşamak",
+     "example": "Ankara'da yaşıyorum."
+    },
+    "en": {
+     "text": "live",
+     "example": "I live in Ankara."
+    }
+   },
+   "hint": {
+    "tr": "Bir yerde oturmak, hayatını sürdürmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "uzun",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "uzun",
+     "example": "Uzun saçları var."
+    },
+    "en": {
+     "text": "long",
+     "example": "She has long hair."
+    }
+   },
+   "hint": {
+    "tr": "Boyu ya da süresi fazla olan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ask",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "aşk",
+     "alternatives": [
+      "sevgi"
+     ],
+     "example": "İhtiyacın olan tek şey aşk."
+    },
+    "en": {
+     "text": "love",
+     "example": "Love is all you need."
+    }
+   },
+   "hint": {
+    "tr": "Birine duyulan güçlü bağlılık ve tutku."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "belki",
+   "pos": "adverb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "belki",
+     "example": "Belki yağmur yağar."
+    },
+    "en": {
+     "text": "maybe",
+     "example": "Maybe it will rain."
+    }
+   },
+   "hint": {
+    "tr": "Olabilir ama kesin değil."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "isim",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "isim",
+     "alternatives": [
+      "ad"
+     ],
+     "example": "İsmin ne?"
+    },
+    "en": {
+     "text": "name",
+     "example": "What is your name?"
+    }
+   },
+   "hint": {
+    "tr": "Bir kişiyi ya da şeyi tanıtan söz."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "asla",
+   "pos": "adverb",
+   "level": "A1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "asla",
+     "alternatives": [
+      "hiç"
+     ],
+     "example": "Asla kahve içmem."
+    },
+    "en": {
+     "text": "never",
+     "example": "I never drink coffee."
+    }
+   },
+   "hint": {
+    "tr": "Hiçbir zaman."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "sonraki",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "sonraki",
+     "alternatives": [
+      "gelecek"
+     ],
+     "example": "Gelecek hafta görüşürüz."
+    },
+    "en": {
+     "text": "next",
+     "example": "See you next week."
+    }
+   },
+   "hint": {
+    "tr": "Sırada hemen ardından gelen."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "sayi",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "sayı",
+     "alternatives": [
+      "numara"
+     ],
+     "example": "Yedi benim şanslı sayım."
+    },
+    "en": {
+     "text": "number",
+     "example": "Seven is my lucky number."
+    }
+   },
+   "hint": {
+    "tr": "Miktarı gösteren işaret ya da değer."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "eski",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "eski",
+     "example": "Bu eski bir ev."
+    },
+    "en": {
+     "text": "old",
+     "example": "This is an old house."
+    }
+   },
+   "hint": {
+    "tr": "Uzun zaman önce yapılmış."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "acmak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "açmak",
+     "example": "Kapıyı aç lütfen."
+    },
+    "en": {
+     "text": "open",
+     "example": "Open the door, please."
+    }
+   },
+   "hint": {
+    "tr": "Kapalı olan bir şeyi açık hale getirmek."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "parca",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "parça",
+     "alternatives": [
+      "kısım"
+     ],
+     "example": "Bu hikâyenin sadece bir parçası."
+    },
+    "en": {
+     "text": "part",
+     "example": "This is only part of the story."
+    }
+   },
+   "hint": {
+    "tr": "Bir bütünü oluşturan bölüm."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yer",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "şehir",
+   "terms": {
+    "tr": {
+     "text": "yer",
+     "example": "Burası güzel bir yer."
+    },
+    "en": {
+     "text": "place",
+     "example": "This is a nice place."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin bulunduğu alan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "oynamak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "oynamak",
+     "example": "Çocuklar parkta oynar."
+    },
+    "en": {
+     "text": "play",
+     "example": "The children play in the park."
+    }
+   },
+   "hint": {
+    "tr": "Eğlenmek için oyuna katılmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "nokta",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "nokta",
+     "example": "Haritaya bir nokta çiz."
+    },
+    "en": {
+     "text": "point",
+     "example": "Draw a point on the map."
+    }
+   },
+   "hint": {
+    "tr": "Çok küçük yuvarlak işaret."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "guc",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "güç",
+     "alternatives": [
+      "kuvvet"
+     ],
+     "example": "Bilgi güçtür."
+    },
+    "en": {
+     "text": "power",
+     "example": "Knowledge is power."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi yapabilme yeteneği."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "koymak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "koymak",
+     "example": "Fincanı masaya koy."
+    },
+    "en": {
+     "text": "put",
+     "example": "Put the cup on the table."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi bir yere bırakmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "soru",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "soru",
+     "example": "Bir soru sorabilir miyim?"
+    },
+    "en": {
+     "text": "question",
+     "example": "Can I ask a question?"
+    }
+   },
+   "hint": {
+    "tr": "Cevap almak için sorulan söz."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "oda",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "oda",
+     "example": "Odam küçük."
+    },
+    "en": {
+     "text": "room",
+     "example": "My room is small."
+    }
+   },
+   "hint": {
+    "tr": "Evin duvarlarla ayrılmış bölümü."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kosmak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "koşmak",
+     "example": "Her sabah koşarım."
+    },
+    "en": {
+     "text": "run",
+     "example": "I run every morning."
+    }
+   },
+   "hint": {
+    "tr": "Hızlı adımlarla ilerlemek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ayni",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "aynı",
+     "example": "Aynı sokakta oturuyoruz."
+    },
+    "en": {
+     "text": "same",
+     "example": "We live in the same street."
+    }
+   },
+   "hint": {
+    "tr": "Başkası değil, tıpkı o."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "saniye",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "saniye",
+     "example": "Bir saniye bekle."
+    },
+    "en": {
+     "text": "second",
+     "example": "Wait a second."
+    }
+   },
+   "hint": {
+    "tr": "Dakikanın altmışta biri."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "gorunmek",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "görünmek",
+     "example": "Yorgun görünüyorsun."
+    },
+    "en": {
+     "text": "seem",
+     "example": "You seem tired."
+    }
+   },
+   "hint": {
+    "tr": "Bir izlenim uyandırmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "gostermek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "göstermek",
+     "example": "Bana fotoğraflarını göster."
+    },
+    "en": {
+     "text": "show",
+     "example": "Show me your photos."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi başkasının görmesini sağlamak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "devlet",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "devlet",
+     "example": "Okulların parasını devlet ödüyor."
+    },
+    "en": {
+     "text": "state",
+     "example": "The state pays for the schools."
+    }
+   },
+   "hint": {
+    "tr": "Bir ülkeyi yöneten örgütlü yapı."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "durmak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "şehir",
+   "terms": {
+    "tr": {
+     "text": "durmak",
+     "example": "Otobüs burada duracak."
+    },
+    "en": {
+     "text": "stop",
+     "example": "The bus will stop here."
+    }
+   },
+   "hint": {
+    "tr": "Hareket etmeyi bırakmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ogrenci",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "öğrenci",
+     "example": "O iyi bir öğrenci."
+    },
+    "en": {
+     "text": "student",
+     "example": "She is a good student."
+    }
+   },
+   "hint": {
+    "tr": "Okulda ders alan kişi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "emin",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "emin",
+     "example": "Emin misin?"
+    },
+    "en": {
+     "text": "sure",
+     "example": "Are you sure?"
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyden hiç şüphesi olmayan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "sistem",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "sistem",
+     "alternatives": [
+      "düzen"
+     ],
+     "example": "Bilgisayar sistemi çöktü."
+    },
+    "en": {
+     "text": "system",
+     "example": "The computer system is down."
+    }
+   },
+   "hint": {
+    "tr": "Birlikte çalışan parçaların bütünü."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "uc",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "üç",
+     "example": "Üç kedim var."
+    },
+    "en": {
+     "text": "three",
+     "example": "I have three cats."
+    }
+   },
+   "hint": {
+    "tr": "İkiden sonra gelen sayı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "bugun",
+   "pos": "adverb",
+   "level": "A1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "bugün",
+     "example": "Bugün pazartesi."
+    },
+    "en": {
+     "text": "today",
+     "example": "Today is Monday."
+    }
+   },
+   "hint": {
+    "tr": "İçinde bulunulan gün."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "donmek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "şehir",
+   "terms": {
+    "tr": {
+     "text": "dönmek",
+     "example": "Bankadan sola dön."
+    },
+    "en": {
+     "text": "turn",
+     "example": "Turn left at the bank."
+    }
+   },
+   "hint": {
+    "tr": "Yönünü değiştirmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "beklemek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "beklemek",
+     "example": "Beni burada bekle."
+    },
+    "en": {
+     "text": "wait",
+     "example": "Wait for me here."
+    }
+   },
+   "hint": {
+    "tr": "Birinin gelmesi için bir yerde kalmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "hafta",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "hafta",
+     "example": "Haftada bir yüzmeye giderim."
+    },
+    "en": {
+     "text": "week",
+     "example": "I go swimming once a week."
+    }
+   },
+   "hint": {
+    "tr": "Yedi günlük süre."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kadin",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "kadın",
+     "example": "O kadın benim teyzem."
+    },
+    "en": {
+     "text": "woman",
+     "example": "That woman is my aunt."
+    }
+   },
+   "hint": {
+    "tr": "Yetişkin kız kişi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "dunya",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "dünya",
+     "example": "Dünyayı gezmek istiyorum."
+    },
+    "en": {
+     "text": "world",
+     "example": "I want to travel around the world."
+    }
+   },
+   "hint": {
+    "tr": "Üzerinde yaşadığımız gezegen."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "davranmak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "davranmak",
+     "example": "Çabuk davranmalısın."
+    },
+    "en": {
+     "text": "act",
+     "example": "You must act quickly."
+    }
+   },
+   "hint": {
+    "tr": "Bir durumda bir şey yapmak."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "eklemek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "eklemek",
+     "example": "Biraz tuz ekle."
+    },
+    "en": {
+     "text": "add",
+     "example": "Add some salt."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin üstüne başka bir şey koymak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yas",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "yaş",
+     "example": "Yaşın kaç?"
+    },
+    "en": {
+     "text": "age",
+     "example": "What is your age?"
+    }
+   },
+   "hint": {
+    "tr": "Birinin doğduğundan beri geçen yıl."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "once",
+   "pos": "adverb",
+   "level": "A1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "önce",
+     "example": "Onu iki gün önce gördüm."
+    },
+    "en": {
+     "text": "ago",
+     "example": "I saw him two days ago."
+    }
+   },
+   "hint": {
+    "tr": "Şu andan geride kalan zamanda."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "neredeyse",
+   "pos": "adverb",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "neredeyse",
+     "alternatives": [
+      "hemen hemen"
+     ],
+     "example": "Saat neredeyse on."
+    },
+    "en": {
+     "text": "almost",
+     "example": "It is almost ten o'clock."
+    }
+   },
+   "hint": {
+    "tr": "Az kalsın, tam değil ama yakın."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "zaten",
+   "pos": "adverb",
+   "level": "A2",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "zaten",
+     "alternatives": [
+      "çoktan"
+     ],
+     "example": "Zaten yemek yedim."
+    },
+    "en": {
+     "text": "already",
+     "example": "I have already eaten."
+    }
+   },
+   "hint": {
+    "tr": "Beklenenden önce, o zamana kadar."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "belirmek",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "belirmek",
+     "alternatives": [
+      "görünmek"
+     ],
+     "example": "Pencerede bir yüz belirecek."
+    },
+    "en": {
+     "text": "appear",
+     "example": "A face will appear at the window."
+    }
+   },
+   "hint": {
+    "tr": "Birden görünür hale gelmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "bolge",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "şehir",
+   "terms": {
+    "tr": {
+     "text": "bölge",
+     "alternatives": [
+      "alan"
+     ],
+     "example": "Burası sessiz bir bölge."
+    },
+    "en": {
+     "text": "area",
+     "example": "This is a quiet area."
+    }
+   },
+   "hint": {
+    "tr": "Belli sınırları olan yer."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kol",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "vücut",
+   "terms": {
+    "tr": {
+     "text": "kol",
+     "example": "Kolum ağrıyor."
+    },
+    "en": {
+     "text": "arm",
+     "example": "My arm hurts."
+    }
+   },
+   "hint": {
+    "tr": "Omuzdan ele kadar uzanan organ."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "sanat",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "sanat",
+     "example": "Modern sanatı seviyorum."
+    },
+    "en": {
+     "text": "art",
+     "example": "I love modern art."
+    }
+   },
+   "hint": {
+    "tr": "Güzellik yaratma etkinliği; resim, müzik gibi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "bebek",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "bebek",
+     "example": "Bebek uyuyor."
+    },
+    "en": {
+     "text": "baby",
+     "example": "The baby is sleeping."
+    }
+   },
+   "hint": {
+    "tr": "Yeni doğmuş çok küçük çocuk."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "taban",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "taban",
+     "alternatives": [
+      "temel"
+     ],
+     "example": "Lambanın ağır bir tabanı var."
+    },
+    "en": {
+     "text": "base",
+     "example": "The lamp has a heavy base."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin en alttaki destek kısmı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "siyah",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "renkler",
+   "terms": {
+    "tr": {
+     "text": "siyah",
+     "alternatives": [
+      "kara"
+     ],
+     "example": "Siyah bir kedim var."
+    },
+    "en": {
+     "text": "black",
+     "example": "I have a black cat."
+    }
+   },
+   "hint": {
+    "tr": "Kömürün rengi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "vucut",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "vücut",
+   "terms": {
+    "tr": {
+     "text": "vücut",
+     "alternatives": [
+      "beden"
+     ],
+     "example": "Spor vücudun için iyidir."
+    },
+    "en": {
+     "text": "body",
+     "example": "Sport is good for your body."
+    }
+   },
+   "hint": {
+    "tr": "İnsanın ya da hayvanın bütün fiziksel yapısı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "oglan",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "oğlan",
+     "example": "Oğlan kitap okuyor."
+    },
+    "en": {
+     "text": "boy",
+     "example": "The boy is reading a book."
+    }
+   },
+   "hint": {
+    "tr": "Erkek çocuk."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kirmak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "kırmak",
+     "example": "Bardağı kırma."
+    },
+    "en": {
+     "text": "break",
+     "example": "Don't break the glass."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi parçalara ayırmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ticaret",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "ticaret",
+     "alternatives": [
+      "iş"
+     ],
+     "example": "Araba ticaretiyle uğraşıyor."
+    },
+    "en": {
+     "text": "business",
+     "example": "He is in the car business."
+    }
+   },
+   "hint": {
+    "tr": "Alım satım işleri."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "merkez",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "şehir",
+   "terms": {
+    "tr": {
+     "text": "merkez",
+     "alternatives": [
+      "orta"
+     ],
+     "example": "Otel şehir merkezinde."
+    },
+    "en": {
+     "text": "centre",
+     "alternatives": [
+      "center"
+     ],
+     "example": "The hotel is in the city centre."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin tam ortası."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kesin",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "kesin",
+     "example": "Bundan kesin eminim."
+    },
+    "en": {
+     "text": "certain",
+     "example": "I am certain of it."
+    }
+   },
+   "hint": {
+    "tr": "Hiç şüphe taşımayan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "sinif",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "sınıf",
+     "example": "Sınıfımda yirmi öğrenci var."
+    },
+    "en": {
+     "text": "class",
+     "example": "There are twenty students in my class."
+    }
+   },
+   "hint": {
+    "tr": "Birlikte ders gören öğrenci topluluğu."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "acik",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "açık",
+     "alternatives": [
+      "net"
+     ],
+     "example": "Bugün gökyüzü açık."
+    },
+    "en": {
+     "text": "clear",
+     "example": "The sky is clear today."
+    }
+   },
+   "hint": {
+    "tr": "Bulanık ya da kapalı olmayan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "universite",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "üniversite",
+     "alternatives": [
+      "kolej"
+     ],
+     "example": "Kardeşim üniversitede."
+    },
+    "en": {
+     "text": "college",
+     "example": "My brother is at college."
+    }
+   },
+   "hint": {
+    "tr": "Lise sonrası eğitim veren okul."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "tamamlamak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "tamamlamak",
+     "alternatives": [
+      "bitirmek"
+     ],
+     "example": "Lütfen formu tamamla."
+    },
+    "en": {
+     "text": "complete",
+     "example": "Complete the form, please."
+    }
+   },
+   "hint": {
+    "tr": "Eksiksiz hale getirmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kaygi",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "kaygı",
+     "alternatives": [
+      "endişe"
+     ],
+     "example": "Fiyatlar konusunda kaygı var."
+    },
+    "en": {
+     "text": "concern",
+     "example": "There is concern about the prices."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin kötü gideceği düşüncesi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "denetim",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "denetim",
+     "alternatives": [
+      "kontrol"
+     ],
+     "example": "Bölgenin denetimi polisin elinde."
+    },
+    "en": {
+     "text": "control",
+     "example": "The police have control of the area."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi yönetebilme gücü."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "maliyet",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "maliyet",
+     "alternatives": [
+      "bedel"
+     ],
+     "example": "Gezinin maliyeti yüksek."
+    },
+    "en": {
+     "text": "cost",
+     "example": "The cost of the trip is high."
+    }
+   },
+   "hint": {
+    "tr": "Bir şey için ödenmesi gereken para."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "mahkeme",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "mahkeme",
+     "example": "Dava mahkemede."
+    },
+    "en": {
+     "text": "court",
+     "example": "The case is in court."
+    }
+   },
+   "hint": {
+    "tr": "Davaların görüldüğü yer."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ortmek",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "örtmek",
+     "alternatives": [
+      "kapamak"
+     ],
+     "example": "Yemeğin üstünü ört."
+    },
+    "en": {
+     "text": "cover",
+     "example": "Cover the food."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin üstüne bir şey koyup gizlemek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yaratmak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "yaratmak",
+     "alternatives": [
+      "oluşturmak"
+     ],
+     "example": "Sanatçılar yeni şeyler yaratır."
+    },
+    "en": {
+     "text": "create",
+     "example": "Artists create new things."
+    }
+   },
+   "hint": {
+    "tr": "Var olmayan bir şeyi ortaya koymak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kesmek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "kesmek",
+     "example": "Ekmeği kes."
+    },
+    "en": {
+     "text": "cut",
+     "example": "Cut the bread."
+    }
+   },
+   "hint": {
+    "tr": "Keskin bir şeyle parçalara ayırmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "anlasma",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "anlaşma",
+     "alternatives": [
+      "pazarlık"
+     ],
+     "example": "Bir anlaşma yaptık."
+    },
+    "en": {
+     "text": "deal",
+     "example": "We made a deal."
+    }
+   },
+   "hint": {
+    "tr": "Tarafların uzlaştığı karar."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "olum",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "ölüm",
+     "example": "Onun ölümü bir şoktu."
+    },
+    "en": {
+     "text": "death",
+     "example": "His death was a shock."
+    }
+   },
+   "hint": {
+    "tr": "Hayatın sona ermesi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "tasarim",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "tasarım",
+     "example": "Bu arabanın tasarımını beğeniyorum."
+    },
+    "en": {
+     "text": "design",
+     "example": "I like the design of this car."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin biçimini önceden çizme."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "olmek",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "ölmek",
+     "example": "Bitkiler susuz ölür."
+    },
+    "en": {
+     "text": "die",
+     "example": "Plants die without water."
+    }
+   },
+   "hint": {
+    "tr": "Hayatı sona ermek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "surmek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "sürmek",
+     "example": "Araba sürebilir misin?"
+    },
+    "en": {
+     "text": "drive",
+     "example": "Can you drive a car?"
+    }
+   },
+   "hint": {
+    "tr": "Bir aracı kullanmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ekonomik",
+   "pos": "adjective",
+   "level": "B2",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "ekonomik",
+     "example": "Ülkenin ekonomik sorunları var."
+    },
+    "en": {
+     "text": "economic",
+     "example": "The country has economic problems."
+    }
+   },
+   "hint": {
+    "tr": "Para ve ticaretle ilgili."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "etki",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "etki",
+     "example": "İlacın güçlü bir etkisi var."
+    },
+    "en": {
+     "text": "effect",
+     "example": "The medicine has a strong effect."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin başka bir şeyde yarattığı değişiklik."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yeterli",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "yeterli",
+     "alternatives": [
+      "kâfi"
+     ],
+     "example": "Yeterli yiyeceğimiz var."
+    },
+    "en": {
+     "text": "enough",
+     "example": "We have enough food."
+    }
+   },
+   "hint": {
+    "tr": "İhtiyacı karşılayan miktarda."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "tam",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "tam",
+     "alternatives": [
+      "kesin"
+     ],
+     "example": "Tam saat kaç?"
+    },
+    "en": {
+     "text": "exact",
+     "example": "What is the exact time?"
+    }
+   },
+   "hint": {
+    "tr": "Hiç sapma olmadan doğru."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "dusmek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "düşmek",
+     "example": "Dikkat et, düşme."
+    },
+    "en": {
+     "text": "fall",
+     "example": "Be careful, don't fall."
+    }
+   },
+   "hint": {
+    "tr": "Yukarıdan aşağıya inmek, yere yıkılmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kavga",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "kavga",
+     "alternatives": [
+      "dövüş"
+     ],
+     "example": "Sokakta bir kavga vardı."
+    },
+    "en": {
+     "text": "fight",
+     "example": "There was a fight in the street."
+    }
+   },
+   "hint": {
+    "tr": "Kişilerin birbirine saldırması."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "rakam",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "rakam",
+     "alternatives": [
+      "şekil"
+     ],
+     "example": "Rakamı kutuya yaz."
+    },
+    "en": {
+     "text": "figure",
+     "example": "Write the figure in the box."
+    }
+   },
+   "hint": {
+    "tr": "Sayıyı gösteren işaret."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "bes",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "beş",
+     "example": "Beş kalemim var."
+    },
+    "en": {
+     "text": "five",
+     "example": "I have five pens."
+    }
+   },
+   "hint": {
+    "tr": "Dörtten sonra gelen sayı."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "yiyecek",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "yiyecek",
+     "alternatives": [
+      "gıda"
+     ],
+     "example": "Biraz yiyeceğe ihtiyacımız var."
+    },
+    "en": {
+     "text": "food",
+     "example": "We need some food."
+    }
+   },
+   "hint": {
+    "tr": "Yenen şeylerin genel adı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ayak",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "vücut",
+   "terms": {
+    "tr": {
+     "text": "ayak",
+     "example": "Ayağım ağrıyor."
+    },
+    "en": {
+     "text": "foot",
+     "example": "My foot hurts."
+    }
+   },
+   "hint": {
+    "tr": "Bacağın yere basan en alt kısmı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kuvvet",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "kuvvet",
+     "alternatives": [
+      "zor"
+     ],
+     "example": "Kapıyı açmak için kuvvet kullandılar."
+    },
+    "en": {
+     "text": "force",
+     "example": "They used force to open the door."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi hareket ettiren ya da değiştiren güç."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "dort",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "dört",
+     "example": "Masanın dört ayağı var."
+    },
+    "en": {
+     "text": "four",
+     "example": "The table has four legs."
+    }
+   },
+   "hint": {
+    "tr": "Üçten sonra gelen sayı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "on",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "ön",
+     "example": "Öne otur."
+    },
+    "en": {
+     "text": "front",
+     "example": "Sit at the front."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin yüzü dönük tarafı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "dolu",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "dolu",
+     "example": "Otobüs dolu."
+    },
+    "en": {
+     "text": "full",
+     "example": "The bus is full."
+    }
+   },
+   "hint": {
+    "tr": "İçinde boş yer kalmamış."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "gelecek",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "gelecek",
+     "example": "Geleceği kimse bilmez."
+    },
+    "en": {
+     "text": "future",
+     "example": "Nobody knows the future."
+    }
+   },
+   "hint": {
+    "tr": "Henüz gelmemiş zaman."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "oyun",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "oyun",
+     "example": "Bir oyun oynayalım."
+    },
+    "en": {
+     "text": "game",
+     "example": "Let's play a game."
+    }
+   },
+   "hint": {
+    "tr": "Kurallarıyla eğlence için yapılan etkinlik."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "genel",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "genel",
+     "example": "Bu genel bir kural."
+    },
+    "en": {
+     "text": "general",
+     "example": "This is a general rule."
+    }
+   },
+   "hint": {
+    "tr": "Çoğu durumu kapsayan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kiz",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "kız",
+     "example": "Kız benim kardeşim."
+    },
+    "en": {
+     "text": "girl",
+     "example": "The girl is my sister."
+    }
+   },
+   "hint": {
+    "tr": "Kadın cinsiyetindeki çocuk."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "buyumek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "büyümek",
+     "example": "Bitkiler güneşte büyür."
+    },
+    "en": {
+     "text": "grow",
+     "example": "Plants grow in the sun."
+    }
+   },
+   "hint": {
+    "tr": "Boyu ya da miktarı artmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yarim",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "yarım",
+     "alternatives": [
+      "yarı"
+     ],
+     "example": "Pastanın yarısını yedim."
+    },
+    "en": {
+     "text": "half",
+     "example": "I ate half of the cake."
+    }
+   },
+   "hint": {
+    "tr": "Bir bütünün iki eşit parçasından biri."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "sert",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "sert",
+     "example": "Bu yatak çok sert."
+    },
+    "en": {
+     "text": "hard",
+     "example": "This bed is too hard."
+    }
+   },
+   "hint": {
+    "tr": "Kolay bükülmeyen, yumuşak olmayan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kalp",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "vücut",
+   "terms": {
+    "tr": {
+     "text": "kalp",
+     "alternatives": [
+      "yürek"
+     ],
+     "example": "Kalbi hızlı atıyor."
+    },
+    "en": {
+     "text": "heart",
+     "example": "Her heart is beating fast."
+    }
+   },
+   "hint": {
+    "tr": "Kanı vücuda pompalayan organ."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "tarih",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "tarih",
+     "example": "Tarih derslerini severim."
+    },
+    "en": {
+     "text": "history",
+     "example": "I like history lessons."
+    }
+   },
+   "hint": {
+    "tr": "Geçmişte olan olayları inceleyen bilim."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "vurmak",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "vurmak",
+     "example": "Köpeğe vurma."
+    },
+    "en": {
+     "text": "hit",
+     "example": "Don't hit the dog."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeye sertçe dokunmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "umut",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "umut",
+     "example": "Hâlâ umut var."
+    },
+    "en": {
+     "text": "hope",
+     "example": "There is still hope."
+    }
+   },
+   "hint": {
+    "tr": "İyi bir şeyin olacağına güvenme."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "saat",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "saat",
+     "example": "Bir saat içinde dönerim."
+    },
+    "en": {
+     "text": "hour",
+     "example": "I will be back in an hour."
+    }
+   },
+   "hint": {
+    "tr": "Altmış dakikalık süre."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "insan",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "insan",
+     "example": "Her insanın suya ihtiyacı var."
+    },
+    "en": {
+     "text": "human",
+     "example": "Every human needs water."
+    }
+   },
+   "hint": {
+    "tr": "Düşünebilen, konuşabilen canlı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "fikir",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "fikir",
+     "example": "İyi bir fikrim var."
+    },
+    "en": {
+     "text": "idea",
+     "example": "I have a good idea."
+    }
+   },
+   "hint": {
+    "tr": "Akla gelen düşünce."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "konu",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "konu",
+     "alternatives": [
+      "mesele"
+     ],
+     "example": "Bu önemli bir konu."
+    },
+    "en": {
+     "text": "issue",
+     "example": "This is an important issue."
+    }
+   },
+   "hint": {
+    "tr": "Tartışılan ya da çözülmesi gereken şey."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "oldurmek",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "öldürmek",
+     "example": "Kedi fareyi öldürecek."
+    },
+    "en": {
+     "text": "kill",
+     "example": "The cat will kill the mouse."
+    }
+   },
+   "hint": {
+    "tr": "Bir canlının hayatına son vermek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "tur",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "tür",
+     "alternatives": [
+      "çeşit"
+     ],
+     "example": "Ne tür müzik seversin?"
+    },
+    "en": {
+     "text": "kind",
+     "example": "What kind of music do you like?"
+    }
+   },
+   "hint": {
+    "tr": "Ortak özellikleri olan şeylerin grubu."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kanun",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "kanun",
+     "alternatives": [
+      "yasa",
+      "hukuk"
+     ],
+     "example": "Herkes kanuna uymalı."
+    },
+    "en": {
+     "text": "law",
+     "example": "Everyone must obey the law."
+    }
+   },
+   "hint": {
+    "tr": "Devletin koyduğu, uyulması zorunlu kural."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yonetmek",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "yönetmek",
+     "alternatives": [
+      "önderlik"
+     ],
+     "example": "Takımı o yönetecek."
+    },
+    "en": {
+     "text": "lead",
+     "example": "She will lead the team."
+    }
+   },
+   "hint": {
+    "tr": "Bir grubun başında olup yol göstermek."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "ogrenmek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "öğrenmek",
+     "example": "İngilizce öğrenmek istiyorum."
+    },
+    "en": {
+     "text": "learn",
+     "example": "I want to learn English."
+    }
+   },
+   "hint": {
+    "tr": "Yeni bir bilgi ya da beceri edinmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "seviye",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "seviye",
+     "alternatives": [
+      "düzey"
+     ],
+     "example": "İngilizce seviyen ne?"
+    },
+    "en": {
+     "text": "level",
+     "example": "What is your English level?"
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin ulaştığı derece."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yalan",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "yalan",
+     "example": "Bu bir yalan!"
+    },
+    "en": {
+     "text": "lie",
+     "example": "That is a lie!"
+    }
+   },
+   "hint": {
+    "tr": "Gerçek olmayan, bile bile söylenen söz."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "isik",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "ışık",
+     "example": "Işığı aç."
+    },
+    "en": {
+     "text": "light",
+     "example": "Turn on the light."
+    }
+   },
+   "hint": {
+    "tr": "Görmeyi sağlayan aydınlık."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "cizgi",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "çizgi",
+     "alternatives": [
+      "sıra"
+     ],
+     "example": "Bir çizgi çiz."
+    },
+    "en": {
+     "text": "line",
+     "example": "Draw a line."
+    }
+   },
+   "hint": {
+    "tr": "Uzun ince iz."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "dinlemek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "dinlemek",
+     "example": "Beni dinle."
+    },
+    "en": {
+     "text": "listen",
+     "example": "Listen to me."
+    }
+   },
+   "hint": {
+    "tr": "Duymak için dikkat vermek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yerel",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "şehir",
+   "terms": {
+    "tr": {
+     "text": "yerel",
+     "example": "Yerel pazardan alışveriş yaparız."
+    },
+    "en": {
+     "text": "local",
+     "example": "We shop at the local market."
+    }
+   },
+   "hint": {
+    "tr": "Bir yere ya da bölgeye ait."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "alcak",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "alçak",
+     "alternatives": [
+      "düşük"
+     ],
+     "example": "Sandalye çok alçak."
+    },
+    "en": {
+     "text": "low",
+     "example": "The chair is too low."
+    }
+   },
+   "hint": {
+    "tr": "Yerden az yukarıda olan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "tanismak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "tanışmak",
+     "alternatives": [
+      "buluşmak"
+     ],
+     "example": "Tanıştığımıza memnun oldum."
+    },
+    "en": {
+     "text": "meet",
+     "example": "Nice to meet you."
+    }
+   },
+   "hint": {
+    "tr": "Biriyle ilk kez karşılaşıp bilgi edinmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "uye",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "üye",
+     "example": "Kulübün üyesiyim."
+    },
+    "en": {
+     "text": "member",
+     "example": "I am a member of the club."
+    }
+   },
+   "hint": {
+    "tr": "Bir topluluğa ait olan kişi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "milyon",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "milyon",
+     "example": "Şehirde bir milyon insan var."
+    },
+    "en": {
+     "text": "million",
+     "example": "The city has a million people."
+    }
+   },
+   "hint": {
+    "tr": "Bin kere bin."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "zihin",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "zihin",
+     "alternatives": [
+      "akıl"
+     ],
+     "example": "Zihnini açık tut."
+    },
+    "en": {
+     "text": "mind",
+     "example": "Keep your mind open."
+    }
+   },
+   "hint": {
+    "tr": "Düşünme ve anlama gücü."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "dakika",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "dakika",
+     "example": "Bir dakika bekle."
+    },
+    "en": {
+     "text": "minute",
+     "example": "Wait a minute."
+    }
+   },
+   "hint": {
+    "tr": "Altmış saniyelik süre."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "an",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "an",
+     "example": "Bir an bekle."
+    },
+    "en": {
+     "text": "moment",
+     "example": "Wait a moment."
+    }
+   },
+   "hint": {
+    "tr": "Çok kısa süre."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "muzik",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "müzik",
+     "example": "Her gün müzik dinlerim."
+    },
+    "en": {
+     "text": "music",
+     "example": "I listen to music every day."
+    }
+   },
+   "hint": {
+    "tr": "Seslerden oluşan sanat."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ulusal",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "ulusal",
+     "alternatives": [
+      "milli"
+     ],
+     "example": "Bugün ulusal bayram."
+    },
+    "en": {
+     "text": "national",
+     "example": "Today is a national holiday."
+    }
+   },
+   "hint": {
+    "tr": "Bütün ülkeyle ilgili."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yakin",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "şehir",
+   "terms": {
+    "tr": {
+     "text": "yakın",
+     "example": "Okul yakın."
+    },
+    "en": {
+     "text": "near",
+     "example": "The school is near."
+    }
+   },
+   "hint": {
+    "tr": "Arada az mesafe olan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "haber",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "haber",
+     "example": "Her akşam haberleri izlerim."
+    },
+    "en": {
+     "text": "news",
+     "example": "I watch the news every evening."
+    }
+   },
+   "hint": {
+    "tr": "Yeni olaylarla ilgili bilgi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "not",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "not",
+     "example": "Bir not yazdım."
+    },
+    "en": {
+     "text": "note",
+     "example": "I wrote a note."
+    }
+   },
+   "hint": {
+    "tr": "Unutmamak için yazılan kısa yazı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "teklif",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "teklif",
+     "alternatives": [
+      "öneri"
+     ],
+     "example": "Bir iş teklifi aldım."
+    },
+    "en": {
+     "text": "offer",
+     "example": "I got a job offer."
+    }
+   },
+   "hint": {
+    "tr": "Birine bir şey yapmayı ya da vermeyi sunma."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "ofis",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "ofis",
+     "alternatives": [
+      "büro"
+     ],
+     "example": "Ofisim üçüncü katta."
+    },
+    "en": {
+     "text": "office",
+     "example": "My office is on the third floor."
+    }
+   },
+   "hint": {
+    "tr": "Masa başı işlerin yapıldığı yer."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "resmi",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "resmi",
+     "alternatives": [
+      "resmî"
+     ],
+     "example": "Bu resmi bir belge."
+    },
+    "en": {
+     "text": "official",
+     "example": "This is an official document."
+    }
+   },
+   "hint": {
+    "tr": "Devlet ya da kurumla ilgili, onaylı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "sik",
+   "pos": "adverb",
+   "level": "A1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "sık",
+     "alternatives": [
+      "sıklıkla"
+     ],
+     "example": "Sık sık sinemaya giderim."
+    },
+    "en": {
+     "text": "often",
+     "example": "I often go to the cinema."
+    }
+   },
+   "hint": {
+    "tr": "Çok kez, aralıklarla."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "siparis",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "sipariş",
+     "alternatives": [
+      "düzen"
+     ],
+     "example": "Garson siparişimizi aldı."
+    },
+    "en": {
+     "text": "order",
+     "example": "The waiter took our order."
+    }
+   },
+   "hint": {
+    "tr": "Satın almak için yapılan istek."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "ebeveyn",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "ebeveyn",
+     "example": "Her ebeveyn çocuğunu sever."
+    },
+    "en": {
+     "text": "parent",
+     "example": "Every parent loves their child."
+    }
+   },
+   "hint": {
+    "tr": "Anne ya da baba."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "parti",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "parti",
+     "example": "Bu akşam parti veriyoruz."
+    },
+    "en": {
+     "text": "party",
+     "example": "We are having a party tonight."
+    }
+   },
+   "hint": {
+    "tr": "Eğlenmek için yapılan toplantı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "gecmek",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "geçmek",
+     "example": "Umarım sınavı geçerim."
+    },
+    "en": {
+     "text": "pass",
+     "example": "I hope I pass the exam."
+    }
+   },
+   "hint": {
+    "tr": "Bir sınavda başarılı olmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "gecmis",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "geçmiş",
+     "example": "Geçmişi unut."
+    },
+    "en": {
+     "text": "past",
+     "example": "Forget the past."
+    }
+   },
+   "hint": {
+    "tr": "Geride kalmış zaman."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "odemek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "ödemek",
+     "example": "Hesabı ben ödeyeceğim."
+    },
+    "en": {
+     "text": "pay",
+     "example": "I will pay the bill."
+    }
+   },
+   "hint": {
+    "tr": "Bir şey için para vermek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yuzde",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "yüzde",
+     "example": "Öğrencilerin yüzde onu yok."
+    },
+    "en": {
+     "text": "percent",
+     "example": "Ten percent of the students are absent."
+    }
+   },
+   "hint": {
+    "tr": "Bir bütünün yüz parçasından kaçı olduğunu gösteren oran."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kisi",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "kişi",
+     "alternatives": [
+      "insan"
+     ],
+     "example": "O nazik bir kişi."
+    },
+    "en": {
+     "text": "person",
+     "example": "She is a kind person."
+    }
+   },
+   "hint": {
+    "tr": "Tek bir birey."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "secmek",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "seçmek",
+     "example": "Bir kart seç."
+    },
+    "en": {
+     "text": "pick",
+     "example": "Pick a card."
+    }
+   },
+   "hint": {
+    "tr": "Birçok şey arasından birini almak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "lutfen",
+   "pos": "adverb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "lütfen",
+     "example": "Lütfen oturun."
+    },
+    "en": {
+     "text": "please",
+     "example": "Please sit down."
+    }
+   },
+   "hint": {
+    "tr": "Kibar bir istek yaparken kullanılır."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "polis",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "polis",
+     "example": "Polisi ara!"
+    },
+    "en": {
+     "text": "police",
+     "example": "Call the police!"
+    }
+   },
+   "hint": {
+    "tr": "Düzeni ve güvenliği sağlayan kurum."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "politika",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "politika",
+     "example": "Şirketin yeni bir politikası var."
+    },
+    "en": {
+     "text": "policy",
+     "example": "The company has a new policy."
+    }
+   },
+   "hint": {
+    "tr": "Bir kurumun izlediği yol ve kurallar."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "mumkun",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "mümkün",
+     "alternatives": [
+      "olası"
+     ],
+     "example": "Bu mümkün mü?"
+    },
+    "en": {
+     "text": "possible",
+     "example": "Is it possible?"
+    }
+   },
+   "hint": {
+    "tr": "Olabilecek, yapılabilecek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "hediye",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "hediye",
+     "alternatives": [
+      "armağan"
+     ],
+     "example": "Bu hediye senin için."
+    },
+    "en": {
+     "text": "present",
+     "example": "This present is for you."
+    }
+   },
+   "hint": {
+    "tr": "Doğum günü gibi özel günlerde birine verilen şey."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "muhtemel",
+   "pos": "adjective",
+   "level": "B2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "muhtemel",
+     "alternatives": [
+      "olası"
+     ],
+     "example": "Gelmesi muhtemel."
+    },
+    "en": {
+     "text": "probable",
+     "example": "It is probable that he will come."
+    }
+   },
+   "hint": {
+    "tr": "Olma ihtimali yüksek."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "surec",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "süreç",
+     "alternatives": [
+      "işlem"
+     ],
+     "example": "Öğrenmek yavaş bir süreçtir."
+    },
+    "en": {
+     "text": "process",
+     "example": "Learning is a slow process."
+    }
+   },
+   "hint": {
+    "tr": "Bir işin aşama aşama ilerleyişi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "saglamak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "sağlamak",
+     "example": "Otel havlu sağlayacak."
+    },
+    "en": {
+     "text": "provide",
+     "example": "The hotel will provide towels."
+    }
+   },
+   "hint": {
+    "tr": "Gerekeni vermek, temin etmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "halk",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "halk",
+     "alternatives": [
+      "kamu"
+     ],
+     "example": "Park halka açık."
+    },
+    "en": {
+     "text": "public",
+     "example": "The park is open to the public."
+    }
+   },
+   "hint": {
+    "tr": "Bir ülkedeki insanların tümü."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "cekmek",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "çekmek",
+     "example": "Kapıyı çek."
+    },
+    "en": {
+     "text": "pull",
+     "example": "Pull the door."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi kendine doğru hareket ettirmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "hizli",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "hızlı",
+     "alternatives": [
+      "çabuk"
+     ],
+     "example": "Hızlı bir öğle yemeğiydi."
+    },
+    "en": {
+     "text": "quick",
+     "example": "That was a quick lunch."
+    }
+   },
+   "hint": {
+    "tr": "Az zamanda olan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "oldukca",
+   "pos": "adverb",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "oldukça",
+     "alternatives": [
+      "epey"
+     ],
+     "example": "Bugün hava oldukça soğuk."
+    },
+    "en": {
+     "text": "quite",
+     "example": "It is quite cold today."
+    }
+   },
+   "hint": {
+    "tr": "Epeyce, bir hayli."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yukseltmek",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "yükseltmek",
+     "alternatives": [
+      "kaldırmak"
+     ],
+     "example": "Elini kaldır."
+    },
+    "en": {
+     "text": "raise",
+     "example": "Raise your hand."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi yukarı doğru çıkarmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "oran",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "oran",
+     "example": "Oran çok yüksek."
+    },
+    "en": {
+     "text": "rate",
+     "example": "The rate is very high."
+    }
+   },
+   "hint": {
+    "tr": "İki miktar arasındaki ilişki."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ulasmak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "ulaşmak",
+     "example": "Şehre öğlen ulaşacağız."
+    },
+    "en": {
+     "text": "reach",
+     "example": "We will reach the city at noon."
+    }
+   },
+   "hint": {
+    "tr": "Bir yere varmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "sebep",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "sebep",
+     "alternatives": [
+      "neden"
+     ],
+     "example": "Sebebi ne?"
+    },
+    "en": {
+     "text": "reason",
+     "example": "What is the reason?"
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin olmasına yol açan durum."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kayit",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "kayıt",
+     "alternatives": [
+      "rekor"
+     ],
+     "example": "Harcamalarının kaydını tut."
+    },
+    "en": {
+     "text": "record",
+     "example": "Keep a record of your spending."
+    }
+   },
+   "hint": {
+    "tr": "Bir bilginin yazılı ya da saklı hali."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "arastirma",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "araştırma",
+     "example": "Kanser üzerine araştırma yapıyor."
+    },
+    "en": {
+     "text": "research",
+     "example": "She does research on cancer."
+    }
+   },
+   "hint": {
+    "tr": "Bilgi edinmek için yapılan inceleme."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "dinlenmek",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "dinlenmek",
+     "example": "Dinlenmen gerek."
+    },
+    "en": {
+     "text": "rest",
+     "example": "You need to rest."
+    }
+   },
+   "hint": {
+    "tr": "Yorgunluğu gidermek için çalışmayı bırakmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "sonuc",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "sonuç",
+     "example": "Sınav sonucu iyi."
+    },
+    "en": {
+     "text": "result",
+     "example": "The exam result is good."
+    }
+   },
+   "hint": {
+    "tr": "Bir işin sonunda ortaya çıkan durum."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "satmak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "satmak",
+     "example": "Pazarda meyve satıyorlar."
+    },
+    "en": {
+     "text": "sell",
+     "example": "They sell fruit at the market."
+    }
+   },
+   "hint": {
+    "tr": "Para karşılığında bir şeyi vermek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "gondermek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "göndermek",
+     "alternatives": [
+      "yollamak"
+     ],
+     "example": "Bana bir mesaj gönder."
+    },
+    "en": {
+     "text": "send",
+     "example": "Send me a message."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi birine ulaştırmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "duyu",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "vücut",
+   "terms": {
+    "tr": {
+     "text": "duyu",
+     "alternatives": [
+      "his"
+     ],
+     "example": "Koku alma bir duyudur."
+    },
+    "en": {
+     "text": "sense",
+     "example": "Smell is one sense."
+    }
+   },
+   "hint": {
+    "tr": "Görme, işitme gibi algılama yeteneği."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "hizmet",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "hizmet",
+     "alternatives": [
+      "servis"
+     ],
+     "example": "Buradaki hizmet çok iyi."
+    },
+    "en": {
+     "text": "service",
+     "example": "The service here is very good."
+    }
+   },
+   "hint": {
+    "tr": "Başkası için yapılan iş."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "birkac",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "birkaç",
+     "example": "Burada birkaç arkadaşım var."
+    },
+    "en": {
+     "text": "several",
+     "example": "I have several friends here."
+    }
+   },
+   "hint": {
+    "tr": "İkiden fazla ama çok olmayan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "paylasmak",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "paylaşmak",
+     "example": "Oyuncaklarını paylaş."
+    },
+    "en": {
+     "text": "share",
+     "example": "Share your toys."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi başkalarıyla birlikte kullanmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yan",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "yan",
+     "alternatives": [
+      "taraf"
+     ],
+     "example": "Bu yandan yürü."
+    },
+    "en": {
+     "text": "side",
+     "example": "Walk on this side."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin sağ ya da sol kısmı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "tabela",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "şehir",
+   "terms": {
+    "tr": {
+     "text": "tabela",
+     "alternatives": [
+      "işaret"
+     ],
+     "example": "Tabelayı oku."
+    },
+    "en": {
+     "text": "sign",
+     "example": "Read the sign."
+    }
+   },
+   "hint": {
+    "tr": "Bilgi veren yazılı levha."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "basit",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "basit",
+     "example": "Kurallar basit."
+    },
+    "en": {
+     "text": "simple",
+     "example": "The rules are simple."
+    }
+   },
+   "hint": {
+    "tr": "Anlaması ya da yapması kolay."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "oturmak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "oturmak",
+     "example": "Sandalyeye otur."
+    },
+    "en": {
+     "text": "sit",
+     "example": "Sit on the chair."
+    }
+   },
+   "hint": {
+    "tr": "Kalçasının üstünde durmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "alti",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "altı",
+     "example": "Altıda kalkarım."
+    },
+    "en": {
+     "text": "six",
+     "example": "I get up at six."
+    }
+   },
+   "hint": {
+    "tr": "Beşten sonra gelen sayı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "sosyal",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "sosyal",
+     "alternatives": [
+      "toplumsal"
+     ],
+     "example": "O çok sosyal."
+    },
+    "en": {
+     "text": "social",
+     "example": "He is very social."
+    }
+   },
+   "hint": {
+    "tr": "Başkalarıyla birlikte olmayı seven."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ogul",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "oğul",
+     "example": "Oğulları beş yaşında."
+    },
+    "en": {
+     "text": "son",
+     "example": "Their son is five years old."
+    }
+   },
+   "hint": {
+    "tr": "Erkek evlat."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ses",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "ses",
+     "example": "Garip bir ses duydum."
+    },
+    "en": {
+     "text": "sound",
+     "example": "I heard a strange sound."
+    }
+   },
+   "hint": {
+    "tr": "Kulakla duyulan titreşim."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "harcamak",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "harcamak",
+     "example": "Bütün paranı harcama."
+    },
+    "en": {
+     "text": "spend",
+     "example": "Don't spend all your money."
+    }
+   },
+   "hint": {
+    "tr": "Parayı ya da zamanı kullanmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kalmak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "kalmak",
+     "example": "Bir otelde kalıyoruz."
+    },
+    "en": {
+     "text": "stay",
+     "example": "We stay at a hotel."
+    }
+   },
+   "hint": {
+    "tr": "Bir yerde bir süre bulunmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "adim",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "adım",
+     "example": "Bir adım öne çık."
+    },
+    "en": {
+     "text": "step",
+     "example": "Take one step forward."
+    }
+   },
+   "hint": {
+    "tr": "Yürürken ayağı bir kez ileri atma."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "hikaye",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "hikâye",
+     "alternatives": [
+      "öykü",
+      "hikaye"
+     ],
+     "example": "Bana bir hikâye anlat."
+    },
+    "en": {
+     "text": "story",
+     "example": "Tell me a story."
+    }
+   },
+   "hint": {
+    "tr": "Anlatılan olay dizisi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "sokak",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "şehir",
+   "terms": {
+    "tr": {
+     "text": "sokak",
+     "alternatives": [
+      "cadde"
+     ],
+     "example": "Bu sokakta yaşıyorum."
+    },
+    "en": {
+     "text": "street",
+     "example": "I live on this street."
+    }
+   },
+   "hint": {
+    "tr": "Şehirde evlerin arasındaki yol."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "guclu",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "güçlü",
+     "alternatives": [
+      "kuvvetli"
+     ],
+     "example": "O çok güçlü."
+    },
+    "en": {
+     "text": "strong",
+     "example": "He is very strong."
+    }
+   },
+   "hint": {
+    "tr": "Gücü fazla olan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "onermek",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "önermek",
+     "example": "Bir yürüyüş öneririm."
+    },
+    "en": {
+     "text": "suggest",
+     "example": "I suggest a walk."
+    }
+   },
+   "hint": {
+    "tr": "Bir fikri dikkate sunmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "destek",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "destek",
+     "example": "Desteğin için teşekkürler."
+    },
+    "en": {
+     "text": "support",
+     "example": "Thank you for your support."
+    }
+   },
+   "hint": {
+    "tr": "Birine yardım edip arkasında durma."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "ogretmen",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "öğretmen",
+     "example": "Öğretmenim çok nazik."
+    },
+    "en": {
+     "text": "teacher",
+     "example": "My teacher is very kind."
+    }
+   },
+   "hint": {
+    "tr": "Okulda ders veren kişi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "takim",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "takım",
+     "alternatives": [
+      "ekip"
+     ],
+     "example": "Takımımız maçı kazandı."
+    },
+    "en": {
+     "text": "team",
+     "example": "Our team won the game."
+    }
+   },
+   "hint": {
+    "tr": "Birlikte oynayan ya da çalışan grup."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "donem",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "dönem",
+     "alternatives": [
+      "terim"
+     ],
+     "example": "Yeni dönem eylülde başlıyor."
+    },
+    "en": {
+     "text": "term",
+     "example": "The new term starts in September."
+    }
+   },
+   "hint": {
+    "tr": "Okul yılının bölümlerinden biri."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "birlikte",
+   "pos": "adverb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "birlikte",
+     "alternatives": [
+      "beraber"
+     ],
+     "example": "Birlikte yaşıyoruz."
+    },
+    "en": {
+     "text": "together",
+     "example": "We live together."
+    }
+   },
+   "hint": {
+    "tr": "Bir arada, ayrı olmadan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "tepe",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "tepe",
+     "alternatives": [
+      "üst"
+     ],
+     "example": "Tepeye tırmandık."
+    },
+    "en": {
+     "text": "top",
+     "example": "We climbed to the top."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin en yüksek noktası."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kasaba",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "şehir",
+   "terms": {
+    "tr": {
+     "text": "kasaba",
+     "example": "Küçük bir kasabada yaşıyorum."
+    },
+    "en": {
+     "text": "town",
+     "example": "I live in a small town."
+    }
+   },
+   "hint": {
+    "tr": "Şehirden küçük yerleşim yeri."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "tren",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "tren",
+     "example": "Tren geç kaldı."
+    },
+    "en": {
+     "text": "train",
+     "example": "The train is late."
+    }
+   },
+   "hint": {
+    "tr": "Raylar üzerinde giden taşıt."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "dogru",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "doğru",
+     "alternatives": [
+      "gerçek"
+     ],
+     "example": "Bu doğru mu?"
+    },
+    "en": {
+     "text": "true",
+     "example": "Is it true?"
+    }
+   },
+   "hint": {
+    "tr": "Gerçeğe uygun olan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "manzara",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "manzara",
+     "alternatives": [
+      "görünüm"
+     ],
+     "example": "Otelden manzara harika."
+    },
+    "en": {
+     "text": "view",
+     "example": "The view from the hotel is great."
+    }
+   },
+   "hint": {
+    "tr": "Bir yerden görülen görüntü."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yurumek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "yürümek",
+     "example": "Okula yürürüm."
+    },
+    "en": {
+     "text": "walk",
+     "example": "I walk to school."
+    }
+   },
+   "hint": {
+    "tr": "Ayaklarla adım adım ilerlemek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "savas",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "savaş",
+     "example": "Savaş dört yıl sürdü."
+    },
+    "en": {
+     "text": "war",
+     "example": "The war lasted four years."
+    }
+   },
+   "hint": {
+    "tr": "Ülkeler arasındaki silahlı çatışma."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "izlemek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "izlemek",
+     "alternatives": [
+      "seyretmek"
+     ],
+     "example": "Pazar günü film izleriz."
+    },
+    "en": {
+     "text": "watch",
+     "example": "We watch films on Sunday."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeye bir süre bakmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "beyaz",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "renkler",
+   "terms": {
+    "tr": {
+     "text": "beyaz",
+     "alternatives": [
+      "ak"
+     ],
+     "example": "Kar beyazdır."
+    },
+    "en": {
+     "text": "white",
+     "example": "Snow is white."
+    }
+   },
+   "hint": {
+    "tr": "Karın ya da sütün rengi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "butun",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "bütün",
+     "alternatives": [
+      "tüm"
+     ],
+     "example": "Bütün pastayı yedim."
+    },
+    "en": {
+     "text": "whole",
+     "example": "I ate the whole cake."
+    }
+   },
+   "hint": {
+    "tr": "Eksiksiz, tamamı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "es",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "eş",
+     "alternatives": [
+      "karı"
+     ],
+     "example": "Bu benim eşim."
+    },
+    "en": {
+     "text": "wife",
+     "example": "This is my wife."
+    }
+   },
+   "hint": {
+    "tr": "Evli bir erkeğin hayat arkadaşı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kelime",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "kelime",
+     "alternatives": [
+      "sözcük"
+     ],
+     "example": "Bu kelime ne anlama geliyor?"
+    },
+    "en": {
+     "text": "word",
+     "example": "What does this word mean?"
+    }
+   },
+   "hint": {
+    "tr": "Anlamı olan ses ya da harf dizisi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "endise",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "endişe",
+     "example": "Para en büyük endişem."
+    },
+    "en": {
+     "text": "worry",
+     "example": "Money is my biggest worry."
+    }
+   },
+   "hint": {
+    "tr": "Kötü bir şey olacak diye duyulan huzursuzluk."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "yanlis",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "yanlış",
+     "example": "O cevap yanlış."
+    },
+    "en": {
+     "text": "wrong",
+     "example": "That answer is wrong."
+    }
+   },
+   "hint": {
+    "tr": "Doğru olmayan, hatalı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "genc",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "genç",
+     "example": "Kız kardeşim çok genç."
+    },
+    "en": {
+     "text": "young",
+     "example": "My sister is very young."
+    }
+   },
+   "hint": {
+    "tr": "Yaşı az olan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "mutlak",
+   "pos": "adjective",
+   "level": "B2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "mutlak",
+     "example": "Ona mutlak bir güvenim var."
+    },
+    "en": {
+     "text": "absolute",
+     "example": "I have absolute trust in her."
+    }
+   },
+   "hint": {
+    "tr": "Hiçbir sınırı ya da koşulu olmayan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "hesap",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "hesap",
+     "example": "Bir banka hesabı açtım."
+    },
+    "en": {
+     "text": "account",
+     "example": "I opened a bank account."
+    }
+   },
+   "hint": {
+    "tr": "Bankada paranın tutulduğu kayıt."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "eylem",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "eylem",
+     "alternatives": [
+      "hareket"
+     ],
+     "example": "Söz değil, eylem gerekiyor."
+    },
+    "en": {
+     "text": "action",
+     "example": "We need action, not words."
+    }
+   },
+   "hint": {
+    "tr": "Bir şey yapma, harekete geçme."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "etkinlik",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "etkinlik",
+     "alternatives": [
+      "faaliyet"
+     ],
+     "example": "Yüzme en sevdiğim etkinlik."
+    },
+    "en": {
+     "text": "activity",
+     "example": "Swimming is my favourite activity."
+    }
+   },
+   "hint": {
+    "tr": "Belli bir amaçla yapılan uğraş."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "yalniz",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "yalnız",
+     "example": "Yalnız yaşıyor."
+    },
+    "en": {
+     "text": "alone",
+     "example": "She lives alone."
+    }
+   },
+   "hint": {
+    "tr": "Yanında kimse olmayan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "miktar",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "miktar",
+     "example": "Az miktarda şeker ekle."
+    },
+    "en": {
+     "text": "amount",
+     "example": "Add a small amount of sugar."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin ne kadar olduğu."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "hayvan",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "hayvanlar",
+   "terms": {
+    "tr": {
+     "text": "hayvan",
+     "example": "Kedi en sevdiğim hayvan."
+    },
+    "en": {
+     "text": "animal",
+     "example": "The cat is my favourite animal."
+    }
+   },
+   "hint": {
+    "tr": "İnsan dışındaki, hareket eden ve nefes alan canlı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "basvurmak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "başvurmak",
+     "example": "O işe başvurmak istiyorum."
+    },
+    "en": {
+     "text": "apply",
+     "example": "I want to apply for the job."
+    }
+   },
+   "hint": {
+    "tr": "Bir iş ya da yer için resmî istekte bulunmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yaklasim",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "yaklaşım",
+     "example": "Yeni bir yaklaşıma ihtiyacımız var."
+    },
+    "en": {
+     "text": "approach",
+     "example": "We need a new approach."
+    }
+   },
+   "hint": {
+    "tr": "Bir konuyu ele alma biçimi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "ordu",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "ordu",
+     "example": "Orduya katıldı."
+    },
+    "en": {
+     "text": "army",
+     "example": "He joined the army."
+    }
+   },
+   "hint": {
+    "tr": "Bir ülkenin silahlı kara kuvvetleri."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "varmak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "varmak",
+     "example": "Paris'e dokuzda varıyoruz."
+    },
+    "en": {
+     "text": "arrive",
+     "example": "We arrive in Paris at nine."
+    }
+   },
+   "hint": {
+    "tr": "Gidilen yere ulaşmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "makale",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "makale",
+     "example": "Arılar hakkında bir makale okudum."
+    },
+    "en": {
+     "text": "article",
+     "example": "I read an article about bees."
+    }
+   },
+   "hint": {
+    "tr": "Gazete ya da dergide yayımlanan yazı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "sanatci",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "sanatçı",
+     "example": "O ünlü bir sanatçı."
+    },
+    "en": {
+     "text": "artist",
+     "example": "She is a famous artist."
+    }
+   },
+   "hint": {
+    "tr": "Resim, müzik gibi sanat eserleri yaratan kişi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "saldiri",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "saldırı",
+     "example": "Saldırı gece oldu."
+    },
+    "en": {
+     "text": "attack",
+     "example": "The attack happened at night."
+    }
+   },
+   "hint": {
+    "tr": "Birine ya da bir yere zarar vermek için yapılan hamle."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "girisim",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "girişim",
+     "alternatives": [
+      "deneme"
+     ],
+     "example": "Bu benim ilk girişimim."
+    },
+    "en": {
+     "text": "attempt",
+     "example": "This is my first attempt."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi yapmak için gösterilen çaba."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "yazar",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "yazar",
+     "example": "Bu kitabın yazarı kim?"
+    },
+    "en": {
+     "text": "author",
+     "example": "Who is the author of this book?"
+    }
+   },
+   "hint": {
+    "tr": "Kitap ya da başka eserler kaleme alan kişi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ortalama",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "ortalama",
+     "example": "Ortalama boyda."
+    },
+    "en": {
+     "text": "average",
+     "example": "He is of average height."
+    }
+   },
+   "hint": {
+    "tr": "Ne çok ne az, orta düzeyde olan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kacinmak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "kaçınmak",
+     "example": "Hazır yiyeceklerden kaçın."
+    },
+    "en": {
+     "text": "avoid",
+     "example": "Avoid fast food."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyden uzak durmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "temel",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "temel",
+     "example": "Bunlar temel kurallar."
+    },
+    "en": {
+     "text": "basic",
+     "example": "These are basic rules."
+    }
+   },
+   "hint": {
+    "tr": "En önemli, en başta gelen."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ayi",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "hayvanlar",
+   "terms": {
+    "tr": {
+     "text": "ayı",
+     "example": "Ormanda bir ayı yaşıyor."
+    },
+    "en": {
+     "text": "bear",
+     "example": "A bear lives in the forest."
+    }
+   },
+   "hint": {
+    "tr": "Kalın tüylü, iri, ormanda yaşayan hayvan."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "yenmek",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "yenmek",
+     "example": "Takımımız onları yenecek."
+    },
+    "en": {
+     "text": "beat",
+     "example": "Our team will beat them."
+    }
+   },
+   "hint": {
+    "tr": "Bir yarışmada rakibinden üstün gelmek."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "guzellik",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "güzellik",
+     "example": "Şehrin güzelliği beni şaşırttı."
+    },
+    "en": {
+     "text": "beauty",
+     "example": "The beauty of the city amazed me."
+    }
+   },
+   "hint": {
+    "tr": "Göze ve gönle hoş gelme hali."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "davranis",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "davranış",
+     "example": "Davranışı tuhaftı."
+    },
+    "en": {
+     "text": "behavior",
+     "alternatives": [
+      "behaviour"
+     ],
+     "example": "His behavior was strange."
+    }
+   },
+   "hint": {
+    "tr": "Birinin bir durumda nasıl hareket ettiği."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "fayda",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "fayda",
+     "alternatives": [
+      "yarar"
+     ],
+     "example": "Bunun faydası ne?"
+    },
+    "en": {
+     "text": "benefit",
+     "example": "What is the benefit of this?"
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyden elde edilen iyi sonuç."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "fatura",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "fatura",
+     "alternatives": [
+      "hesap"
+     ],
+     "example": "Elektrik faturasını ödedim."
+    },
+    "en": {
+     "text": "bill",
+     "example": "I paid the electricity bill."
+    }
+   },
+   "hint": {
+    "tr": "Kullanılan hizmet için ödenecek parayı gösteren belge."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "milyar",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "milyar",
+     "example": "Proje bir milyar dolara mal oldu."
+    },
+    "en": {
+     "text": "billion",
+     "example": "The project cost one billion dollars."
+    }
+   },
+   "hint": {
+    "tr": "Bin milyon."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kan",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "kan",
+     "example": "Çok kan kaybetti."
+    },
+    "en": {
+     "text": "blood",
+     "example": "He lost a lot of blood."
+    }
+   },
+   "hint": {
+    "tr": "Damarlarda dolaşan kırmızı sıvı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "tahta",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "tahta",
+     "example": "Tahtaya yaz."
+    },
+    "en": {
+     "text": "board",
+     "example": "Write it on the board."
+    }
+   },
+   "hint": {
+    "tr": "Sınıfta üzerine yazı yazılan düz yüzey."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kutu",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "kutu",
+     "example": "Oyuncakları kutuya koy."
+    },
+    "en": {
+     "text": "box",
+     "example": "Put the toys in the box."
+    }
+   },
+   "hint": {
+    "tr": "Eşya koymak için kapaklı kap."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kardes",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "kardeş",
+     "alternatives": [
+      "abi",
+      "ağabey"
+     ],
+     "example": "Kardeşim on yaşında."
+    },
+    "en": {
+     "text": "brother",
+     "example": "My brother is ten years old."
+    }
+   },
+   "hint": {
+    "tr": "Aynı anne babadan olan erkek."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "tasimak",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "taşımak",
+     "example": "Bu çantayı taşıyabilir misin?"
+    },
+    "en": {
+     "text": "carry",
+     "example": "Can you carry this bag?"
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi tutup bir yerden başka yere götürmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yakalamak",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "yakalamak",
+     "example": "Topu yakala!"
+    },
+    "en": {
+     "text": "catch",
+     "example": "Catch the ball!"
+    }
+   },
+   "hint": {
+    "tr": "Hareket eden bir şeyi tutmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "hucre",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "hücre",
+     "example": "Her hücre oksijene ihtiyaç duyar."
+    },
+    "en": {
+     "text": "cell",
+     "example": "Every cell needs oxygen."
+    }
+   },
+   "hint": {
+    "tr": "Canlıları oluşturan en küçük yapı birimi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "merkezi",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "şehir",
+   "terms": {
+    "tr": {
+     "text": "merkezi",
+     "alternatives": [
+      "orta"
+     ],
+     "example": "Otel merkezi bir yerde."
+    },
+    "en": {
+     "text": "central",
+     "example": "The hotel is in a central location."
+    }
+   },
+   "hint": {
+    "tr": "Ortada bulunan, her yere yakın."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yuzyil",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "yüzyıl",
+     "alternatives": [
+      "asır"
+     ],
+     "example": "Bu kilise onuncu yüzyıldan."
+    },
+    "en": {
+     "text": "century",
+     "example": "This church is from the tenth century."
+    }
+   },
+   "hint": {
+    "tr": "Yüz yıllık süre."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "sans",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "şans",
+     "alternatives": [
+      "fırsat"
+     ],
+     "example": "Bana bir şans daha ver."
+    },
+    "en": {
+     "text": "chance",
+     "example": "Give me one more chance."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi yapmak için ortaya çıkan olanak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "tercih",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "tercih",
+     "alternatives": [
+      "seçim"
+     ],
+     "example": "Zor bir tercihti."
+    },
+    "en": {
+     "text": "choice",
+     "example": "It was a difficult choice."
+    }
+   },
+   "hint": {
+    "tr": "Birkaç şey arasından birini alma."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kilise",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "şehir",
+   "terms": {
+    "tr": {
+     "text": "kilise",
+     "example": "Köyde eski bir kilise var."
+    },
+    "en": {
+     "text": "church",
+     "example": "There is an old church in the village."
+    }
+   },
+   "hint": {
+    "tr": "Hristiyanların ibadet ettiği yapı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "iddia",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "iddia",
+     "example": "Onun iddiası doğru değil."
+    },
+    "en": {
+     "text": "claim",
+     "example": "His claim is not true."
+    }
+   },
+   "hint": {
+    "tr": "Doğruluğu kanıtlanmadan ileri sürülen söz."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "temiz",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "temiz",
+     "example": "Odam temiz."
+    },
+    "en": {
+     "text": "clean",
+     "example": "My room is clean."
+    }
+   },
+   "hint": {
+    "tr": "Kiri, lekesi olmayan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "antrenor",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "antrenör",
+     "alternatives": [
+      "koç"
+     ],
+     "example": "Antrenör takımla gurur duyuyor."
+    },
+    "en": {
+     "text": "coach",
+     "example": "The coach is proud of the team."
+    }
+   },
+   "hint": {
+    "tr": "Sporcuları çalıştıran kişi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "karsilastirmak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "kıyaslamak",
+     "alternatives": [
+      "karşılaştırmak"
+     ],
+     "example": "İki resmi karşılaştır."
+    },
+    "en": {
+     "text": "compare",
+     "example": "Compare the two pictures."
+    }
+   },
+   "hint": {
+    "tr": "İki şey arasındaki benzerlik ve farkları bulmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "bilgisayar",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "bilgisayar",
+     "example": "Bilgisayarım çok eski."
+    },
+    "en": {
+     "text": "computer",
+     "example": "My computer is very old."
+    }
+   },
+   "hint": {
+    "tr": "Bilgi işleyen elektronik makine."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "iletisim",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "iletişim",
+     "example": "Okuldan sonra iletişimi kaybettik."
+    },
+    "en": {
+     "text": "contact",
+     "example": "We lost contact after school."
+    }
+   },
+   "hint": {
+    "tr": "Biriyle bağlantı kurma, haberleşme."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "serin",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "hava",
+   "terms": {
+    "tr": {
+     "text": "serin",
+     "example": "Akşam hava serin."
+    },
+    "en": {
+     "text": "cool",
+     "example": "It is cool in the evening."
+    }
+   },
+   "hint": {
+    "tr": "Hafif soğuk, ferah."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "meclis",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "meclis",
+     "alternatives": [
+      "konsey"
+     ],
+     "example": "Belediye meclisi pazartesi toplanıyor."
+    },
+    "en": {
+     "text": "council",
+     "example": "The city council meets on Monday."
+    }
+   },
+   "hint": {
+    "tr": "Bir yeri yönetmek için seçilmiş kişilerin kurulu."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "saymak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "saymak",
+     "example": "Ona kadar sayabilir misin?"
+    },
+    "en": {
+     "text": "count",
+     "example": "Can you count to ten?"
+    }
+   },
+   "hint": {
+    "tr": "Sayıları sırayla söylemek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "cift",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "çift",
+     "example": "Onlar mutlu bir çift."
+    },
+    "en": {
+     "text": "couple",
+     "example": "They are a happy couple."
+    }
+   },
+   "hint": {
+    "tr": "Birlikte olan iki kişi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "suc",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "suç",
+     "example": "Şehirde suç artıyor."
+    },
+    "en": {
+     "text": "crime",
+     "example": "Crime is rising in the city."
+    }
+   },
+   "hint": {
+    "tr": "Kanuna aykırı davranış."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "aglamak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "ağlamak",
+     "example": "Bebek ağlamaya başladı."
+    },
+    "en": {
+     "text": "cry",
+     "example": "The baby started to cry."
+    }
+   },
+   "hint": {
+    "tr": "Gözlerinden yaş akıtmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "fincan",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "fincan",
+     "alternatives": [
+      "bardak"
+     ],
+     "example": "Bir fincan kahve lütfen."
+    },
+    "en": {
+     "text": "cup",
+     "example": "A cup of coffee, please."
+    }
+   },
+   "hint": {
+    "tr": "Çay ya da kahve içilen kulplu küçük kap."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "guncel",
+   "pos": "adjective",
+   "level": "B2",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "güncel",
+     "example": "Bu güncel fiyat."
+    },
+    "en": {
+     "text": "current",
+     "example": "This is the current price."
+    }
+   },
+   "hint": {
+    "tr": "Şu anki, bugüne ait."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "karanlik",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "karanlık",
+     "example": "Dışarısı karanlık."
+    },
+    "en": {
+     "text": "dark",
+     "example": "It is dark outside."
+    }
+   },
+   "hint": {
+    "tr": "Işığı olmayan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "veri",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "veri",
+     "example": "Veri bilgisayarımda."
+    },
+    "en": {
+     "text": "data",
+     "example": "The data is on my computer."
+    }
+   },
+   "hint": {
+    "tr": "İncelenmek için toplanan bilgi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "olu",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "ölü",
+     "example": "Bitki ölü."
+    },
+    "en": {
+     "text": "dead",
+     "example": "The plant is dead."
+    }
+   },
+   "hint": {
+    "tr": "Hayatı sona ermiş."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "derin",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "derin",
+     "example": "Göl çok derin."
+    },
+    "en": {
+     "text": "deep",
+     "example": "The lake is very deep."
+    }
+   },
+   "hint": {
+    "tr": "Dibi yüzeyden çok aşağıda olan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "savunma",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "savunma",
+     "example": "Takımın güçlü bir savunması var."
+    },
+    "en": {
+     "text": "defense",
+     "alternatives": [
+      "defence"
+     ],
+     "example": "The team has a strong defense."
+    }
+   },
+   "hint": {
+    "tr": "Saldırıya karşı korunma."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "derece",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "hava",
+   "terms": {
+    "tr": {
+     "text": "derece",
+     "example": "Sıcaklık bir derece arttı."
+    },
+    "en": {
+     "text": "degree",
+     "example": "The temperature rose by one degree."
+    }
+   },
+   "hint": {
+    "tr": "Sıcaklığı ya da açıyı ölçen birim."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "talep",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "talep",
+     "example": "Hemşirelere yüksek talep var."
+    },
+    "en": {
+     "text": "demand",
+     "example": "There is a high demand for nurses."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin istenmesi, istek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "betimlemek",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "betimlemek",
+     "alternatives": [
+      "tanımlamak"
+     ],
+     "example": "Evini betimle."
+    },
+    "en": {
+     "text": "describe",
+     "example": "Describe your house."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin nasıl olduğunu sözle anlatmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "dogrudan",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "doğrudan",
+     "example": "Doğrudan bir uçuş var mı?"
+    },
+    "en": {
+     "text": "direct",
+     "example": "Is there a direct flight?"
+    }
+   },
+   "hint": {
+    "tr": "Arada başka bir şey olmadan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yonetmen",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "yönetmen",
+     "alternatives": [
+      "müdür"
+     ],
+     "example": "Filmin yönetmeni Fransız."
+    },
+    "en": {
+     "text": "director",
+     "example": "The director of the film is French."
+    }
+   },
+   "hint": {
+    "tr": "Film ya da oyunu yöneten kişi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "hastalik",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "hastalık",
+     "example": "Bu hastalık çok nadir."
+    },
+    "en": {
+     "text": "disease",
+     "example": "This disease is very rare."
+    }
+   },
+   "hint": {
+    "tr": "Vücudun sağlıklı işleyişini bozan durum."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ilce",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "şehir",
+   "terms": {
+    "tr": {
+     "text": "ilçe",
+     "alternatives": [
+      "semt"
+     ],
+     "example": "Sessiz bir ilçede yaşıyoruz."
+    },
+    "en": {
+     "text": "district",
+     "example": "We live in a quiet district."
+    }
+   },
+   "hint": {
+    "tr": "Bir şehrin ya da ilin bölümü."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "cizmek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "çizmek",
+     "example": "Bir ev çiz."
+    },
+    "en": {
+     "text": "draw",
+     "example": "Draw a house."
+    }
+   },
+   "hint": {
+    "tr": "Kalemle resim yapmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ruya",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "rüya",
+     "alternatives": [
+      "hayal"
+     ],
+     "example": "Garip bir rüya gördüm."
+    },
+    "en": {
+     "text": "dream",
+     "example": "I had a strange dream."
+    }
+   },
+   "hint": {
+    "tr": "Uyurken görülen görüntüler."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "elbise",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "elbise",
+     "example": "Kırmızı bir elbise giyiyor."
+    },
+    "en": {
+     "text": "dress",
+     "example": "She is wearing a red dress."
+    }
+   },
+   "hint": {
+    "tr": "Kadınların giydiği tek parça giysi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "dusurmek",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "düşürmek",
+     "example": "Bardağı düşürme."
+    },
+    "en": {
+     "text": "drop",
+     "example": "Don't drop the glass."
+    }
+   },
+   "hint": {
+    "tr": "Elindeki bir şeyi kazayla bırakmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "dogu",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "doğu",
+     "example": "Güneş doğudan doğar."
+    },
+    "en": {
+     "text": "east",
+     "example": "The sun rises in the east."
+    }
+   },
+   "hint": {
+    "tr": "Güneşin çıktığı yön."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "caba",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "çaba",
+     "example": "Öğrenmek çaba ister."
+    },
+    "en": {
+     "text": "effort",
+     "example": "Learning needs effort."
+    }
+   },
+   "hint": {
+    "tr": "Bir işi başarmak için harcanan emek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "sekiz",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "sekiz",
+     "example": "Sekiz saat uyurum."
+    },
+    "en": {
+     "text": "eight",
+     "example": "I sleep eight hours."
+    }
+   },
+   "hint": {
+    "tr": "Yediden sonra gelen sayı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "secim",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "seçim",
+     "example": "Seçim gelecek ay."
+    },
+    "en": {
+     "text": "election",
+     "example": "The election is next month."
+    }
+   },
+   "hint": {
+    "tr": "Halkın oy vererek yönetici belirlemesi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "hoslanmak",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "hoşlanmak",
+     "alternatives": [
+      "eğlenmek"
+     ],
+     "example": "Okumaktan hoşlanırım."
+    },
+    "en": {
+     "text": "enjoy",
+     "example": "I enjoy reading."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyden zevk almak."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "girmek",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "girmek",
+     "example": "Lütfen odaya gir."
+    },
+    "en": {
+     "text": "enter",
+     "example": "Please enter the room."
+    }
+   },
+   "hint": {
+    "tr": "Bir yerin içine geçmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "aksam",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "akşam",
+     "example": "Akşam kitap okurum."
+    },
+    "en": {
+     "text": "evening",
+     "example": "I read in the evening."
+    }
+   },
+   "hint": {
+    "tr": "Günün güneş battıktan sonraki bölümü."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "olay",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "olay",
+     "alternatives": [
+      "etkinlik"
+     ],
+     "example": "Büyük bir olaydı."
+    },
+    "en": {
+     "text": "event",
+     "example": "It was a big event."
+    }
+   },
+   "hint": {
+    "tr": "Önemli ya da dikkat çeken gelişme."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ornek",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "örnek",
+     "example": "Bana bir örnek ver."
+    },
+    "en": {
+     "text": "example",
+     "example": "Give me an example."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi açıklamak için gösterilen benzer durum."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "aciklamak",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "açıklamak",
+     "example": "Bu kelimeyi açıklayabilir misin?"
+    },
+    "en": {
+     "text": "explain",
+     "example": "Can you explain this word?"
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi anlaşılır hale getirmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "etken",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "etken",
+     "alternatives": [
+      "faktör"
+     ],
+     "example": "Fiyat önemli bir etken."
+    },
+    "en": {
+     "text": "factor",
+     "example": "Price is an important factor."
+    }
+   },
+   "hint": {
+    "tr": "Bir sonucu etkileyen neden."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "adil",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "adil",
+     "example": "Bu adil değil!"
+    },
+    "en": {
+     "text": "fair",
+     "example": "That is not fair!"
+    }
+   },
+   "hint": {
+    "tr": "Herkese eşit davranan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "korku",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "korku",
+     "example": "Köpeklerden korkusu var."
+    },
+    "en": {
+     "text": "fear",
+     "example": "She has a fear of dogs."
+    }
+   },
+   "hint": {
+    "tr": "Tehlike karşısında duyulan kaygılı his."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ozellik",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "özellik",
+     "example": "Bu telefonun yeni bir özelliği var."
+    },
+    "en": {
+     "text": "feature",
+     "example": "This phone has a new feature."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi başkalarından ayıran nitelik."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "disi",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "hayvanlar",
+   "terms": {
+    "tr": {
+     "text": "dişi",
+     "example": "Dişi kuş kahverengi."
+    },
+    "en": {
+     "text": "female",
+     "example": "The female bird is brown."
+    }
+   },
+   "hint": {
+    "tr": "Yumurta ya da yavru veren cinsten."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "tarla",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "tarla",
+     "alternatives": [
+      "alan"
+     ],
+     "example": "Çiftçi tarlada çalışıyor."
+    },
+    "en": {
+     "text": "field",
+     "example": "The farmer works in the field."
+    }
+   },
+   "hint": {
+    "tr": "Ekin ekilen geniş toprak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "doldurmak",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "doldurmak",
+     "example": "Bardağı suyla doldur."
+    },
+    "en": {
+     "text": "fill",
+     "example": "Fill the glass with water."
+    }
+   },
+   "hint": {
+    "tr": "İçini tamamen bir şeyle kaplamak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "bitirmek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "bitirmek",
+     "example": "Ödevimi bitireceğim."
+    },
+    "en": {
+     "text": "finish",
+     "example": "I will finish my homework."
+    }
+   },
+   "hint": {
+    "tr": "Bir işi sona erdirmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ates",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "ateş",
+     "alternatives": [
+      "yangın"
+     ],
+     "example": "Ateşin yanında oturduk."
+    },
+    "en": {
+     "text": "fire",
+     "example": "We sat by the fire."
+    }
+   },
+   "hint": {
+    "tr": "Yanan şeyin çıkardığı ışık ve sıcaklık."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "zemin",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "zemin",
+     "alternatives": [
+      "kat"
+     ],
+     "example": "Zemin ıslak."
+    },
+    "en": {
+     "text": "floor",
+     "example": "The floor is wet."
+    }
+   },
+   "hint": {
+    "tr": "Odanın üzerine basılan alt yüzeyi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ucmak",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "uçmak",
+     "example": "Kuşlar uçabilir."
+    },
+    "en": {
+     "text": "fly",
+     "example": "Birds can fly."
+    }
+   },
+   "hint": {
+    "tr": "Havada kanatla ya da uçakla gitmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "odaklanmak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "odaklanmak",
+     "example": "İşine odaklan."
+    },
+    "en": {
+     "text": "focus",
+     "example": "Focus on your work."
+    }
+   },
+   "hint": {
+    "tr": "Dikkatini tek bir şeye vermek."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "yabanci",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "yabancı",
+     "example": "Yabancı bir dil öğrenmek istiyorum."
+    },
+    "en": {
+     "text": "foreign",
+     "example": "I want to learn a foreign language."
+    }
+   },
+   "hint": {
+    "tr": "Başka bir ülkeden gelen."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ileri",
+   "pos": "adverb",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "ileri",
+     "example": "Bir adım ileri at."
+    },
+    "en": {
+     "text": "forward",
+     "example": "Take one step forward."
+    }
+   },
+   "hint": {
+    "tr": "Öne doğru."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "eglence",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "eğlence",
+     "alternatives": [
+      "keyif"
+     ],
+     "example": "Çok eğlendik."
+    },
+    "en": {
+     "text": "fun",
+     "example": "We had a lot of fun."
+    }
+   },
+   "hint": {
+    "tr": "Hoşça vakit geçirme."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "bardak",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "bardak",
+     "alternatives": [
+      "cam"
+     ],
+     "example": "Bir bardak su lütfen."
+    },
+    "en": {
+     "text": "glass",
+     "example": "A glass of water, please."
+    }
+   },
+   "hint": {
+    "tr": "Su içilen, içi görünen kap."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "buyume",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "büyüme",
+     "example": "Şirket hızlı bir büyüme gösteriyor."
+    },
+    "en": {
+     "text": "growth",
+     "example": "The company shows fast growth."
+    }
+   },
+   "hint": {
+    "tr": "Boyut ya da miktarın artması."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "silah",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "silah",
+     "example": "Polis memurunun silahı var."
+    },
+    "en": {
+     "text": "gun",
+     "example": "The police officer has a gun."
+    }
+   },
+   "hint": {
+    "tr": "Mermi atan araç."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "sac",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "vücut",
+   "terms": {
+    "tr": {
+     "text": "saç",
+     "example": "Uzun saçları var."
+    },
+    "en": {
+     "text": "hair",
+     "example": "She has long hair."
+    }
+   },
+   "hint": {
+    "tr": "Başta biten ince teller."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "asmak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "asmak",
+     "example": "Ceketini buraya as."
+    },
+    "en": {
+     "text": "hang",
+     "example": "Hang your coat here."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi yukarıdan bir yere takmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "sicaklik",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "hava",
+   "terms": {
+    "tr": {
+     "text": "sıcaklık",
+     "example": "Sıcağa dayanamıyorum."
+    },
+    "en": {
+     "text": "heat",
+     "example": "I can't stand the heat."
+    }
+   },
+   "hint": {
+    "tr": "Havanın ya da bir şeyin sıcak olma durumu."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "agir",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "ağır",
+     "example": "Bu çanta ağır."
+    },
+    "en": {
+     "text": "heavy",
+     "example": "This bag is heavy."
+    }
+   },
+   "hint": {
+    "tr": "Kaldırması zor, çok kilolu."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "gizlemek",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "gizlemek",
+     "alternatives": [
+      "saklamak"
+     ],
+     "example": "Parayı gizle."
+    },
+    "en": {
+     "text": "hide",
+     "example": "Hide the money."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi başkaları görmesin diye örtmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kocaman",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "kocaman",
+     "alternatives": [
+      "devasa"
+     ],
+     "example": "Kocaman bir evde yaşıyorlar."
+    },
+    "en": {
+     "text": "huge",
+     "example": "They live in a huge house."
+    }
+   },
+   "hint": {
+    "tr": "Çok çok büyük."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "incitmek",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "incitmek",
+     "example": "Kediyi incitme."
+    },
+    "en": {
+     "text": "hurt",
+     "example": "Don't hurt the cat."
+    }
+   },
+   "hint": {
+    "tr": "Birine acı vermek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "koca",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "koca",
+     "alternatives": [
+      "eş"
+     ],
+     "example": "Kocası öğretmen."
+    },
+    "en": {
+     "text": "husband",
+     "example": "Her husband is a teacher."
+    }
+   },
+   "hint": {
+    "tr": "Evli bir kadının hayat arkadaşı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "goruntu",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "görüntü",
+     "alternatives": [
+      "resim"
+     ],
+     "example": "Ekrandaki görüntü net."
+    },
+    "en": {
+     "text": "image",
+     "example": "The image on the screen is clear."
+    }
+   },
+   "hint": {
+    "tr": "Ekranda ya da aynada görülen şekil."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "sanayi",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "sanayi",
+     "alternatives": [
+      "endüstri"
+     ],
+     "example": "Burada otomobil sanayisi büyük."
+    },
+    "en": {
+     "text": "industry",
+     "example": "The car industry is big here."
+    }
+   },
+   "hint": {
+    "tr": "Fabrikalarda mal üretme işleri."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ada",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "ada",
+     "example": "Küçük bir adada kaldık."
+    },
+    "en": {
+     "text": "island",
+     "example": "We stayed on a small island."
+    }
+   },
+   "hint": {
+    "tr": "Her yanı suyla çevrili kara parçası."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "katilmak",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "katılmak",
+     "example": "Akşam yemeğine bize katıl."
+    },
+    "en": {
+     "text": "join",
+     "example": "Join us for dinner."
+    }
+   },
+   "hint": {
+    "tr": "Bir gruba ya da etkinliğe dahil olmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yargic",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "yargıç",
+     "alternatives": [
+      "hakim",
+      "hâkim"
+     ],
+     "example": "Yargıç bir karar verdi."
+    },
+    "en": {
+     "text": "judge",
+     "example": "The judge made a decision."
+    }
+   },
+   "hint": {
+    "tr": "Mahkemede karar veren kişi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "eksiklik",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "eksiklik",
+     "alternatives": [
+      "yokluk"
+     ],
+     "example": "Su eksikliği bir sorun."
+    },
+    "en": {
+     "text": "lack",
+     "example": "The lack of water is a problem."
+    }
+   },
+   "hint": {
+    "tr": "Gereken bir şeyin bulunmaması."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "hanim",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "hanım",
+     "example": "O hanıma sor."
+    },
+    "en": {
+     "text": "lady",
+     "example": "Ask that lady."
+    }
+   },
+   "hint": {
+    "tr": "Kibar biçimde söylenen kadın."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "toprak",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "toprak",
+     "alternatives": [
+      "kara",
+      "arazi"
+     ],
+     "example": "Biraz toprak aldılar."
+    },
+    "en": {
+     "text": "land",
+     "example": "They bought some land."
+    }
+   },
+   "hint": {
+    "tr": "Üzerinde yaşanan ya da ekin ekilen yer."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "dil",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "dil",
+     "example": "İngilizce küresel bir dil."
+    },
+    "en": {
+     "text": "language",
+     "example": "English is a global language."
+    }
+   },
+   "hint": {
+    "tr": "İnsanların konuşup anlaştığı sözcük sistemi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "gulmek",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "gülmek",
+     "example": "Şakalarıma gülüyorlar."
+    },
+    "en": {
+     "text": "laugh",
+     "example": "They laugh at my jokes."
+    }
+   },
+   "hint": {
+    "tr": "Komik bir şey karşısında sesli sevinç göstermek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "avukat",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "avukat",
+     "example": "Bir avukata ihtiyacım var."
+    },
+    "en": {
+     "text": "lawyer",
+     "example": "I need a lawyer."
+    }
+   },
+   "hint": {
+    "tr": "Mahkemede insanları savunan kişi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "bacak",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "vücut",
+   "terms": {
+    "tr": {
+     "text": "bacak",
+     "example": "Bacağım ağrıyor."
+    },
+    "en": {
+     "text": "leg",
+     "example": "My leg hurts."
+    }
+   },
+   "hint": {
+    "tr": "Kalçadan ayağa kadar uzanan uzuv."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yasal",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "yasal",
+     "example": "Bu yasal mı?"
+    },
+    "en": {
+     "text": "legal",
+     "example": "Is this legal?"
+    }
+   },
+   "hint": {
+    "tr": "Kanuna uygun olan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "mektup",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "mektup",
+     "alternatives": [
+      "harf"
+     ],
+     "example": "Teyzeme bir mektup yazdım."
+    },
+    "en": {
+     "text": "letter",
+     "example": "I wrote a letter to my aunt."
+    }
+   },
+   "hint": {
+    "tr": "Zarfa konup gönderilen yazı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "sinir",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "sınır",
+     "example": "Burada hız sınırı var."
+    },
+    "en": {
+     "text": "limit",
+     "example": "There is a speed limit here."
+    }
+   },
+   "hint": {
+    "tr": "Geçilmemesi gereken nokta."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kayip",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "kayıp",
+     "example": "Şirket büyük bir kayıp yaşadı."
+    },
+    "en": {
+     "text": "loss",
+     "example": "The company had a big loss."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi yitirme."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ana",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "ana",
+     "alternatives": [
+      "temel"
+     ],
+     "example": "Bu ana yol."
+    },
+    "en": {
+     "text": "main",
+     "example": "This is the main road."
+    }
+   },
+   "hint": {
+    "tr": "En önemli, başlıca."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "erkek",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "hayvanlar",
+   "terms": {
+    "tr": {
+     "text": "erkek",
+     "example": "Erkek kuş çok renkli."
+    },
+    "en": {
+     "text": "male",
+     "example": "The male bird is very colourful."
+    }
+   },
+   "hint": {
+    "tr": "Dişi olmayan cinsten."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yonetici",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "yönetici",
+     "alternatives": [
+      "müdür"
+     ],
+     "example": "Yöneticiyle konuşmak istiyorum."
+    },
+    "en": {
+     "text": "manager",
+     "example": "I want to speak to the manager."
+    }
+   },
+   "hint": {
+    "tr": "Bir işyerini ya da ekibi yöneten kişi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "evlilik",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "evlilik",
+     "example": "Evlilikleri çok mutlu."
+    },
+    "en": {
+     "text": "marriage",
+     "example": "Their marriage is very happy."
+    }
+   },
+   "hint": {
+    "tr": "İki kişinin resmî olarak birleşmesi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "evlenmek",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "evlenmek",
+     "example": "Benimle evlenir misin?"
+    },
+    "en": {
+     "text": "marry",
+     "example": "Will you marry me?"
+    }
+   },
+   "hint": {
+    "tr": "Biriyle hayatını resmî olarak birleştirmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "malzeme",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "malzeme",
+     "example": "Bu hangi malzeme?"
+    },
+    "en": {
+     "text": "material",
+     "example": "What material is this?"
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin yapıldığı madde."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "olcmek",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "ölçmek",
+     "example": "Masayı ölç."
+    },
+    "en": {
+     "text": "measure",
+     "example": "Measure the table."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin boyunu ya da miktarını bulmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "tibbi",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "tıbbi",
+     "alternatives": [
+      "tıbbî"
+     ],
+     "example": "Tıbbi yardıma ihtiyacı var."
+    },
+    "en": {
+     "text": "medical",
+     "example": "He needs medical help."
+    }
+   },
+   "hint": {
+    "tr": "Hastalık ve tedaviyle ilgili."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "bahsetmek",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "bahsetmek",
+     "example": "Bundan kimseye bahsetme."
+    },
+    "en": {
+     "text": "mention",
+     "example": "Don't mention it to anyone."
+    }
+   },
+   "hint": {
+    "tr": "Bir konuyu kısaca söylemek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yontem",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "yöntem",
+     "example": "Bu iyi bir yöntem."
+    },
+    "en": {
+     "text": "method",
+     "example": "This is a good method."
+    }
+   },
+   "hint": {
+    "tr": "Bir işi yapma yolu."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "orta",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "orta",
+     "example": "Ortada dur."
+    },
+    "en": {
+     "text": "middle",
+     "example": "Stand in the middle."
+    }
+   },
+   "hint": {
+    "tr": "Kenarlardan eşit uzaklıktaki yer."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "askeri",
+   "pos": "adjective",
+   "level": "B2",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "askeri",
+     "alternatives": [
+      "askerî"
+     ],
+     "example": "Askeri bir üssü ziyaret ettiler."
+    },
+    "en": {
+     "text": "military",
+     "example": "They visited a military base."
+    }
+   },
+   "hint": {
+    "tr": "Ordu ve askerlikle ilgili."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "bakan",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "bakan",
+     "example": "Bakan okulumuzu ziyaret etti."
+    },
+    "en": {
+     "text": "minister",
+     "example": "The minister visited our school."
+    }
+   },
+   "hint": {
+    "tr": "Hükûmette bir alanı yöneten kişi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ozlemek",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "özlemek",
+     "example": "Ailemi özlüyorum."
+    },
+    "en": {
+     "text": "miss",
+     "example": "I miss my family."
+    }
+   },
+   "hint": {
+    "tr": "Uzakta olan birini görmek istemek."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "hata",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "hata",
+     "example": "Bir hata yaptım."
+    },
+    "en": {
+     "text": "mistake",
+     "example": "I made a mistake."
+    }
+   },
+   "hint": {
+    "tr": "Yanlış yapılan şey."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "agiz",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "vücut",
+   "terms": {
+    "tr": {
+     "text": "ağız",
+     "example": "Ağzını aç."
+    },
+    "en": {
+     "text": "mouth",
+     "example": "Open your mouth."
+    }
+   },
+   "hint": {
+    "tr": "Yüzde yemek yenen ve konuşulan bölüm."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "hareket",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "hareket",
+     "example": "Karanlıkta bir hareket gördüm."
+    },
+    "en": {
+     "text": "movement",
+     "example": "I saw a movement in the dark."
+    }
+   },
+   "hint": {
+    "tr": "Yer ya da durum değiştirme."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "cinayet",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "cinayet",
+     "example": "Polis cinayeti araştırıyor."
+    },
+    "en": {
+     "text": "murder",
+     "example": "The police are investigating the murder."
+    }
+   },
+   "hint": {
+    "tr": "Birinin kasten öldürülmesi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "millet",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "millet",
+     "alternatives": [
+      "ulus"
+     ],
+     "example": "Bütün millet maçı izledi."
+    },
+    "en": {
+     "text": "nation",
+     "example": "The whole nation watched the game."
+    }
+   },
+   "hint": {
+    "tr": "Aynı ülkede yaşayan insan topluluğu."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "dogal",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "doğal",
+     "example": "Doğal yiyecekleri severim."
+    },
+    "en": {
+     "text": "natural",
+     "example": "I like natural food."
+    }
+   },
+   "hint": {
+    "tr": "İnsan eliyle yapılmamış."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "doga",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "doğa",
+     "example": "Doğada yürümeyi severim."
+    },
+    "en": {
+     "text": "nature",
+     "example": "I love walking in nature."
+    }
+   },
+   "hint": {
+    "tr": "Ağaçlar, dağlar gibi insan eliyle yapılmamış her şey."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ag",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "ağ",
+     "example": "Ağ bugün yavaş."
+    },
+    "en": {
+     "text": "network",
+     "example": "The network is slow today."
+    }
+   },
+   "hint": {
+    "tr": "Birbirine bağlı bilgisayarlar bütünü."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "guzel",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "güzel",
+     "example": "Ne güzel bir gün!"
+    },
+    "en": {
+     "text": "nice",
+     "example": "What a nice day!"
+    }
+   },
+   "hint": {
+    "tr": "Hoşa giden."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kuzey",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "kuzey",
+     "example": "Rüzgâr kuzeyden esiyor."
+    },
+    "en": {
+     "text": "north",
+     "example": "The wind comes from the north."
+    }
+   },
+   "hint": {
+    "tr": "Pusulanın gösterdiği yön."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "belli",
+   "pos": "adjective",
+   "level": "B2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "belli",
+     "alternatives": [
+      "açık"
+     ],
+     "example": "Cevap belli."
+    },
+    "en": {
+     "text": "obvious",
+     "example": "The answer is obvious."
+    }
+   },
+   "hint": {
+    "tr": "Kolayca görülen, anlaşılan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "memur",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "memur",
+     "alternatives": [
+      "subay"
+     ],
+     "example": "Memur pasaportumu kontrol etti."
+    },
+    "en": {
+     "text": "officer",
+     "example": "The officer checked my passport."
+    }
+   },
+   "hint": {
+    "tr": "Devlet işinde çalışan görevli."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yag",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "yağ",
+     "example": "Yağda kızart."
+    },
+    "en": {
+     "text": "oil",
+     "example": "Fry it in oil."
+    }
+   },
+   "hint": {
+    "tr": "Yemek pişirmede kullanılan kaygan sıvı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ozgun",
+   "pos": "adjective",
+   "level": "B2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "özgün",
+     "alternatives": [
+      "orijinal"
+     ],
+     "example": "Bu özgün bir fikir."
+    },
+    "en": {
+     "text": "original",
+     "example": "This is an original idea."
+    }
+   },
+   "hint": {
+    "tr": "Başkasından kopyalanmamış."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "sayfa",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "sayfa",
+     "example": "Kitabınızı onuncu sayfaya açın."
+    },
+    "en": {
+     "text": "page",
+     "example": "Open your book to page ten."
+    }
+   },
+   "hint": {
+    "tr": "Kitaptaki kâğıtların her bir yüzü."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "agri",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "ağrı",
+     "alternatives": [
+      "acı"
+     ],
+     "example": "Sırtımda ağrı var."
+    },
+    "en": {
+     "text": "pain",
+     "example": "I have a pain in my back."
+    }
+   },
+   "hint": {
+    "tr": "Vücutta hissedilen rahatsız edici his."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kagit",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "kâğıt",
+     "alternatives": [
+      "kağıt"
+     ],
+     "example": "Bir kâğıda ihtiyacım var."
+    },
+    "en": {
+     "text": "paper",
+     "example": "I need a sheet of paper."
+    }
+   },
+   "hint": {
+    "tr": "Üzerine yazı yazılan ince yaprak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "baris",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "barış",
+     "example": "Barış istiyoruz."
+    },
+    "en": {
+     "text": "peace",
+     "example": "We want peace."
+    }
+   },
+   "hint": {
+    "tr": "Savaşın olmadığı durum."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "mukemmel",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "mükemmel",
+     "example": "İngilizcen mükemmel."
+    },
+    "en": {
+     "text": "perfect",
+     "example": "Your English is perfect."
+    }
+   },
+   "hint": {
+    "tr": "Hiç eksiği olmayan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kisisel",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "kişisel",
+     "example": "Bu kişisel bir soru."
+    },
+    "en": {
+     "text": "personal",
+     "example": "This is a personal question."
+    }
+   },
+   "hint": {
+    "tr": "Yalnızca bir kişiyi ilgilendiren."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "resim",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "resim",
+     "example": "Bu resme bak."
+    },
+    "en": {
+     "text": "picture",
+     "example": "Look at this picture."
+    }
+   },
+   "hint": {
+    "tr": "Çizilmiş ya da çekilmiş görüntü."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "bitki",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "bitki",
+     "example": "Bitkiyi sula."
+    },
+    "en": {
+     "text": "plant",
+     "example": "Water the plant."
+    }
+   },
+   "hint": {
+    "tr": "Topraktan beslenerek büyüyen canlı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "oyuncu",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "oyuncu",
+     "example": "O iyi bir oyuncu."
+    },
+    "en": {
+     "text": "player",
+     "example": "He is a good player."
+    }
+   },
+   "hint": {
+    "tr": "Oyunda ya da maçta yer alan kişi."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "fakir",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "fakir",
+     "alternatives": [
+      "yoksul"
+     ],
+     "example": "Çok fakirler."
+    },
+    "en": {
+     "text": "poor",
+     "example": "They are very poor."
+    }
+   },
+   "hint": {
+    "tr": "Parası çok az olan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "konum",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "konum",
+     "alternatives": [
+      "pozisyon"
+     ],
+     "example": "Haritadaki konumumuz ne?"
+    },
+    "en": {
+     "text": "position",
+     "example": "What is our position on the map?"
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin bulunduğu yer."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "olumlu",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "olumlu",
+     "example": "Olumlu kal."
+    },
+    "en": {
+     "text": "positive",
+     "example": "Stay positive."
+    }
+   },
+   "hint": {
+    "tr": "İyi yönleri gören."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "alistirma",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "alıştırma",
+     "alternatives": [
+      "pratik"
+     ],
+     "example": "Daha fazla alıştırmaya ihtiyacım var."
+    },
+    "en": {
+     "text": "practice",
+     "example": "I need more practice."
+    }
+   },
+   "hint": {
+    "tr": "Bir beceriyi geliştirmek için tekrar tekrar yapma."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "hazirlamak",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "hazırlamak",
+     "example": "Akşam yemeğini hazırlayacağım."
+    },
+    "en": {
+     "text": "prepare",
+     "example": "I will prepare dinner."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi kullanıma uygun hale getirmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "basmak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "basmak",
+     "example": "Düğmeye bas."
+    },
+    "en": {
+     "text": "press",
+     "example": "Press the button."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin üstüne parmakla itmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "baski",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "baskı",
+     "alternatives": [
+      "basınç"
+     ],
+     "example": "Baskı altında iyi çalışırım."
+    },
+    "en": {
+     "text": "pressure",
+     "example": "I work well under pressure."
+    }
+   },
+   "hint": {
+    "tr": "Birini zorlayan etki."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "onceki",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "önceki",
+     "example": "Önceki kitabı daha çok beğendim."
+    },
+    "en": {
+     "text": "previous",
+     "example": "I liked the previous book better."
+    }
+   },
+   "hint": {
+    "tr": "Daha önce olan, bir öncekinden gelen."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ozel",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "özel",
+     "example": "Burası özel bir oda."
+    },
+    "en": {
+     "text": "private",
+     "example": "This is a private room."
+    }
+   },
+   "hint": {
+    "tr": "Herkese açık olmayan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "uretmek",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "üretmek",
+     "example": "Fabrika yeni arabalar üretecek."
+    },
+    "en": {
+     "text": "produce",
+     "example": "The factory will produce new cars."
+    }
+   },
+   "hint": {
+    "tr": "Bir malı ya da ürünü yapmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "urun",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "ürün",
+     "example": "Bu bizim yeni ürünümüz."
+    },
+    "en": {
+     "text": "product",
+     "example": "This is our new product."
+    }
+   },
+   "hint": {
+    "tr": "Satılmak için yapılan mal."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "soz",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "söz",
+     "alternatives": [
+      "vaat"
+     ],
+     "example": "Bir söz verdim."
+    },
+    "en": {
+     "text": "promise",
+     "example": "I made a promise."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi yapacağını kesin olarak bildirme."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "mulk",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "mülk",
+     "example": "Bu ev özel mülk."
+    },
+    "en": {
+     "text": "property",
+     "example": "This house is private property."
+    }
+   },
+   "hint": {
+    "tr": "Birine ait ev, arazi gibi şeyler."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "korumak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "korumak",
+     "example": "Gözlerini güneşten koru."
+    },
+    "en": {
+     "text": "protect",
+     "example": "Protect your eyes from the sun."
+    }
+   },
+   "hint": {
+    "tr": "Zarardan uzak tutmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kanitlamak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "kanıtlamak",
+     "example": "Bunu kanıtlayabilir misin?"
+    },
+    "en": {
+     "text": "prove",
+     "example": "Can you prove it?"
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin doğru olduğunu göstermek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "itmek",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "itmek",
+     "example": "Kapıyı it."
+    },
+    "en": {
+     "text": "push",
+     "example": "Push the door."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi kendinden uzağa hareket ettirmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yaris",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "yarış",
+     "example": "Yarışı kazandı."
+    },
+    "en": {
+     "text": "race",
+     "example": "He won the race."
+    }
+   },
+   "hint": {
+    "tr": "Kimin daha hızlı olduğunu görmek için yapılan yarışma."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "hazir",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "hazır",
+     "example": "Hazır mısın?"
+    },
+    "en": {
+     "text": "ready",
+     "example": "Are you ready?"
+    }
+   },
+   "hint": {
+    "tr": "Bir şeye başlamak için her şeyi tamam olan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "akraba",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "akraba",
+     "example": "O benim bir akrabam."
+    },
+    "en": {
+     "text": "relative",
+     "example": "She is a relative of mine."
+    }
+   },
+   "hint": {
+    "tr": "Aynı aileden olan kişi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kaynak",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "kaynak",
+     "example": "Su değerli bir kaynak."
+    },
+    "en": {
+     "text": "resource",
+     "example": "Water is a valuable resource."
+    }
+   },
+   "hint": {
+    "tr": "Kullanılabilecek değerli şey."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "saygi",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "saygı",
+     "example": "Öğretmenlerine saygı göster."
+    },
+    "en": {
+     "text": "respect",
+     "example": "Show respect to your teachers."
+    }
+   },
+   "hint": {
+    "tr": "Birine değer verip onu önemseme."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yanit",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "yanıt",
+     "alternatives": [
+      "tepki"
+     ],
+     "example": "Bir yanıt bekliyorum."
+    },
+    "en": {
+     "text": "response",
+     "example": "I am waiting for a response."
+    }
+   },
+   "hint": {
+    "tr": "Bir soruya ya da duruma verilen karşılık."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "binmek",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "binmek",
+     "example": "Bisiklete binebilir misin?"
+    },
+    "en": {
+     "text": "ride",
+     "example": "Can you ride a bike?"
+    }
+   },
+   "hint": {
+    "tr": "Bir taşıtın ya da hayvanın üstüne oturup gitmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yuzuk",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "yüzük",
+     "example": "Altın bir yüzüğü var."
+    },
+    "en": {
+     "text": "ring",
+     "example": "She has a gold ring."
+    }
+   },
+   "hint": {
+    "tr": "Parmağa takılan halka biçiminde süs."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yukselmek",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "yükselmek",
+     "example": "Fiyatlar her yıl yükselir."
+    },
+    "en": {
+     "text": "rise",
+     "example": "Prices rise every year."
+    }
+   },
+   "hint": {
+    "tr": "Daha yukarı çıkmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "nehir",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "nehir",
+     "alternatives": [
+      "ırmak"
+     ],
+     "example": "Nehir çok uzun."
+    },
+    "en": {
+     "text": "river",
+     "example": "The river is very long."
+    }
+   },
+   "hint": {
+    "tr": "Denize ya da göle akan büyük su."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kaya",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "kaya",
+     "example": "Büyük bir kayanın üstüne oturdu."
+    },
+    "en": {
+     "text": "rock",
+     "example": "He sat on a big rock."
+    }
+   },
+   "hint": {
+    "tr": "Çok büyük sert taş."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yuvarlamak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "yuvarlamak",
+     "example": "Topu bana yuvarla."
+    },
+    "en": {
+     "text": "roll",
+     "example": "Roll the ball to me."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi döndürerek ilerletmek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yuvarlak",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "yuvarlak",
+     "example": "Masa yuvarlak."
+    },
+    "en": {
+     "text": "round",
+     "example": "The table is round."
+    }
+   },
+   "hint": {
+    "tr": "Daire biçiminde olan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kural",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "kural",
+     "example": "Bu önemli bir kural."
+    },
+    "en": {
+     "text": "rule",
+     "example": "This is an important rule."
+    }
+   },
+   "hint": {
+    "tr": "Uyulması gereken ilke."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "guvenli",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "güvenli",
+     "example": "Bu sokak güvenli."
+    },
+    "en": {
+     "text": "safe",
+     "example": "This street is safe."
+    }
+   },
+   "hint": {
+    "tr": "Tehlikesi olmayan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "indirim",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "indirim",
+     "alternatives": [
+      "satış"
+     ],
+     "example": "Ayakkabılar indirimde."
+    },
+    "en": {
+     "text": "sale",
+     "example": "The shoes are on sale."
+    }
+   },
+   "hint": {
+    "tr": "Fiyatların düşürüldüğü dönem."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kurtarmak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "kurtarmak",
+     "alternatives": [
+      "biriktirmek"
+     ],
+     "example": "Doktor onu kurtarmaya çalıştı."
+    },
+    "en": {
+     "text": "save",
+     "example": "The doctor tried to save him."
+    }
+   },
+   "hint": {
+    "tr": "Birini tehlikeden çekip almak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "sahne",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "sahne",
+     "example": "Bu filmdeki en sevdiğim sahne."
+    },
+    "en": {
+     "text": "scene",
+     "example": "This is my favourite scene in the film."
+    }
+   },
+   "hint": {
+    "tr": "Film ya da oyunun bir bölümü."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "bilim",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "bilim",
+     "example": "Bilimi severim."
+    },
+    "en": {
+     "text": "science",
+     "example": "I love science."
+    }
+   },
+   "hint": {
+    "tr": "Doğayı ve evreni deneyle inceleyen bilgi alanı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "puan",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "puan",
+     "alternatives": [
+      "skor"
+     ],
+     "example": "Puan kaç?"
+    },
+    "en": {
+     "text": "score",
+     "example": "What is the score?"
+    }
+   },
+   "hint": {
+    "tr": "Bir oyunda ya da sınavda alınan sayı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "mevsim",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "hava",
+   "terms": {
+    "tr": {
+     "text": "mevsim",
+     "example": "Yaz en sevdiğim mevsim."
+    },
+    "en": {
+     "text": "season",
+     "example": "Summer is my favourite season."
+    }
+   },
+   "hint": {
+    "tr": "Yılın dört bölümünden biri."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "koltuk",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "koltuk",
+     "alternatives": [
+      "yer"
+     ],
+     "example": "Bu koltuk boş mu?"
+    },
+    "en": {
+     "text": "seat",
+     "example": "Is this seat free?"
+    }
+   },
+   "hint": {
+    "tr": "Otobüste ya da sinemada oturmak için yapılmış eşya."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "sir",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "sır",
+     "example": "Sır tutabilir misin?"
+    },
+    "en": {
+     "text": "secret",
+     "example": "Can you keep a secret?"
+    }
+   },
+   "hint": {
+    "tr": "Başkalarından gizlenen bilgi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "bolum",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "bölüm",
+     "example": "İlk bölümü oku."
+    },
+    "en": {
+     "text": "section",
+     "example": "Read the first section."
+    }
+   },
+   "hint": {
+    "tr": "Bir bütünün ayrılmış kısmı."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "guvenlik",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "güvenlik",
+     "example": "Havalimanlarında güvenlik önemlidir."
+    },
+    "en": {
+     "text": "security",
+     "example": "Security is important at airports."
+    }
+   },
+   "hint": {
+    "tr": "Tehlikeye karşı korunma durumu."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "ayri",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "ayrı",
+     "example": "Ayrı odalarımız var."
+    },
+    "en": {
+     "text": "separate",
+     "example": "We have separate rooms."
+    }
+   },
+   "hint": {
+    "tr": "Birbirinden bağımsız."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "dizi",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "dizi",
+     "example": "Yeni bir dizi izliyorum."
+    },
+    "en": {
+     "text": "series",
+     "example": "I am watching a new series."
+    }
+   },
+   "hint": {
+    "tr": "Bölümler halinde yayımlanan program."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "ciddi",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "ciddi",
+     "example": "Bu ciddi bir sorun."
+    },
+    "en": {
+     "text": "serious",
+     "example": "This is a serious problem."
+    }
+   },
+   "hint": {
+    "tr": "Önemli, şakası olmayan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yedi",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "yedi",
+     "example": "Bir haftada yedi gün var."
+    },
+    "en": {
+     "text": "seven",
+     "example": "There are seven days in a week."
+    }
+   },
+   "hint": {
+    "tr": "Altıdan sonra gelen sayı."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "sallamak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "sallamak",
+     "example": "Şişeyi salla."
+    },
+    "en": {
+     "text": "shake",
+     "example": "Shake the bottle."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi hızla ileri geri oynatmak."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "sekil",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "şekil",
+     "alternatives": [
+      "biçim"
+     ],
+     "example": "Bu ne şekil?"
+    },
+    "en": {
+     "text": "shape",
+     "example": "What shape is it?"
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin dış görünüşü."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "dukkan",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "şehir",
+   "terms": {
+    "tr": {
+     "text": "dükkân",
+     "alternatives": [
+      "mağaza",
+      "dükkan"
+     ],
+     "example": "Dükkân dokuzda açılıyor."
+    },
+    "en": {
+     "text": "shop",
+     "example": "The shop opens at nine."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeylerin satıldığı yer."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "kisa",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "kısa",
+     "example": "Saçım kısa."
+    },
+    "en": {
+     "text": "short",
+     "example": "My hair is short."
+    }
+   },
+   "hint": {
+    "tr": "Boyu ya da süresi az olan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "benzer",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "benzer",
+     "example": "Çantalarımız benzer."
+    },
+    "en": {
+     "text": "similar",
+     "example": "Our bags are similar."
+    }
+   },
+   "hint": {
+    "tr": "Birbirine yakın özellikler taşıyan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "bekar",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "bekâr",
+     "alternatives": [
+      "bekar",
+      "tek"
+     ],
+     "example": "Evli mi bekâr mı?"
+    },
+    "en": {
+     "text": "single",
+     "example": "Is he married or single?"
+    }
+   },
+   "hint": {
+    "tr": "Evli olmayan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "beden",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "beden",
+     "alternatives": [
+      "boyut"
+     ],
+     "example": "Hangi bedene ihtiyacın var?"
+    },
+    "en": {
+     "text": "size",
+     "example": "What size do you need?"
+    }
+   },
+   "hint": {
+    "tr": "Giysi ya da ayakkabının ölçüsü."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "beceri",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "beceri",
+     "example": "Yemek yapmak yararlı bir beceri."
+    },
+    "en": {
+     "text": "skill",
+     "example": "Cooking is a useful skill."
+    }
+   },
+   "hint": {
+    "tr": "Bir işi iyi yapabilme yeteneği."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "yavas",
+   "pos": "adjective",
+   "level": "A1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "yavaş",
+     "example": "Otobüs çok yavaş."
+    },
+    "en": {
+     "text": "slow",
+     "example": "The bus is very slow."
+    }
+   },
+   "hint": {
+    "tr": "Hızı az olan."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "gulumsemek",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "gülümsemek",
+     "example": "Kameraya gülümse."
+    },
+    "en": {
+     "text": "smile",
+     "example": "Smile for the camera."
+    }
+   },
+   "hint": {
+    "tr": "Dudaklarını hafifçe açarak sevincini göstermek."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "toplum",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "toplum",
+     "example": "Modern bir toplumda yaşıyoruz."
+    },
+    "en": {
+     "text": "society",
+     "example": "We live in a modern society."
+    }
+   },
+   "hint": {
+    "tr": "Bir arada yaşayan insanların bütünü."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "guney",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "güney",
+     "example": "Kuşlar kışın güneye uçar."
+    },
+    "en": {
+     "text": "south",
+     "example": "Birds fly south in winter."
+    }
+   },
+   "hint": {
+    "tr": "Kuzeyin tam karşısındaki yön."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
+  },
+  {
+   "id": "uzay",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "uzay",
+     "alternatives": [
+      "alan"
+     ],
+     "example": "Uzaya gitmek istiyorum."
+    },
+    "en": {
+     "text": "space",
+     "example": "I want to travel to space."
+    }
+   },
+   "hint": {
+    "tr": "Dünyanın dışındaki sonsuz boşluk."
+   },
+   "reviewed": false,
+   "check": "crosscheck"
   }
  ]
 }

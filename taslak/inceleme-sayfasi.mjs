@@ -12,6 +12,8 @@ const dir = dirname(fileURLToPath(import.meta.url));
 const out = process.argv[2];
 if (!out) throw new Error('Çıktı dosyası verilmedi');
 const { entries, skipped } = JSON.parse(readFileSync(join(dir, 'taslak.json'), 'utf8'));
+const pack = JSON.parse(readFileSync(join(dir, '../src/data/pack-tr-en.json'), 'utf8'));
+const inGame = new Map(pack.entries.filter((e) => e.check).map((e) => [e.id, e.check]));
 
 const data = entries.map((e) => ({
   id: e.id,
@@ -28,6 +30,7 @@ const data = entries.map((e) => ({
   flags: e.draft.flags,
   oneWay: !!e.draft.oneWay,
   cross: e.draft.cross ?? null,
+  game: inGame.get(e.id) ?? null,
 }));
 const groups = [...new Set(data.map((d) => d.g))];
 

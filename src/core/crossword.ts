@@ -258,6 +258,13 @@ export interface BuildOptions {
   cols?: number;
   maxWords?: number;
   attempts?: number;
+  /**
+   * Bir denemede bakılan en fazla aday (öncelik sırasıyla ilk N). Üretim
+   * süresi aday sayısıyla büyür: 550 kelimelik pakette sınırsız 24 deneme
+   * bulmaca başına ~200 ms (telefonda birkaç katı) sürüyordu. 300 aday ve
+   * 12 deneme ~20 ms'de ortalama 10–12 kelimelik ızgara veriyor.
+   */
+  poolLimit?: number;
   rng?: Rng;
 }
 
@@ -270,12 +277,15 @@ export function buildCrossword(groups: Candidate[][], opts: BuildOptions = {}): 
   const rows = opts.rows ?? GRID_ROWS;
   const cols = opts.cols ?? GRID_COLS;
   const maxWords = opts.maxWords ?? 12;
-  const attempts = opts.attempts ?? 24;
+  const poolLimit = opts.poolLimit ?? 300;
+  const total = groups.reduce((n, g) => n + g.length, 0);
+  // Az adayla (ör. konu modu) deneme ucuz; çok adayla her deneme pahalı.
+  const attempts = opts.attempts ?? (total > 150 ? 12 : 24);
   const rng = opts.rng ?? Math.random;
   let best: Grid | null = null;
   let bestScore = -1;
   for (let a = 0; a < attempts; a++) {
-    const ordered = groups.flatMap((g) => shuffle(g, rng));
+    const ordered = groups.flatMap((g) => shuffle(g, rng)).slice(0, poolLimit);
     const g = attempt(ordered, rows, cols, maxWords, rng);
     const s = gridScore(g);
     if (s > bestScore) {

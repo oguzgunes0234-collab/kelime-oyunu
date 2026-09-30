@@ -15,7 +15,9 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const dir = dirname(fileURLToPath(import.meta.url));
-const pack = JSON.parse(readFileSync(join(dir, '../src/data/pack-tr-en.json'), 'utf8'));
+const fullPack = JSON.parse(readFileSync(join(dir, '../src/data/pack-tr-en.json'), 'utf8'));
+// Taban: elle yazılmış girdiler. Taslaktan eklenenler (check alanı olanlar) sayılmaz.
+const pack = { ...fullPack, entries: fullPack.entries.filter((e) => !e.check) };
 
 const POS = ['noun', 'verb', 'adjective', 'adverb'];
 const LEVELS = ['A1', 'A2', 'B1', 'B2'];

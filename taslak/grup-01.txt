@@ -77,7 +77,7 @@ leave|ayrılmak||verb|A1|seyahat|We leave at six.|Saat altıda ayrılıyoruz.|Bi
 live|yaşamak||verb|A1|günlük|I live in Ankara.|Ankara'da yaşıyorum.|Bir yerde oturmak, hayatını sürdürmek.
 long|uzun||adjective|A1|günlük|She has long hair.|Uzun saçları var.|Boyu ya da süresi fazla olan.
 lot|-|miktar sözü ("a lot"); tek karşılığı yok
-love|aşk|sevgi|noun|A1|duygular|Love is all you need.|İhtiyacın olan tek şey aşk.|Birine duyulan güçlü sevgi.
+love|aşk|sevgi|noun|A1|duygular|Love is all you need.|İhtiyacın olan tek şey aşk.|Birine duyulan güçlü bağlılık ve tutku.
 maybe|belki||adverb|A1|günlük|Maybe it will rain.|Belki yağmur yağar.|Olabilir ama kesin değil.
 name|isim|ad|noun|A1|günlük|What is your name?|İsmin ne?|Bir kişiyi ya da şeyi tanıtan söz.
 never|asla|hiç|adverb|A1|zaman|I never drink coffee.|Asla kahve içmem.|Hiçbir zaman.
@@ -160,7 +160,7 @@ deal|anlaşma|pazarlık|noun|B1|iş|We made a deal.|Bir anlaşma yaptık.|Tarafl
 death|ölüm||noun|B1|sağlık|His death was a shock.|Onun ölümü bir şoktu.|Hayatın sona ermesi.
 decide|-|karar (decision) ile ilişkili; Türkçesi tek kelime değil
 design|tasarım||noun|B1|teknoloji|I like the design of this car.|Bu arabanın tasarımını beğeniyorum.|Bir şeyin biçimini önceden çizme.
-develop|geliştirmek||verb|B1|teknoloji|They develop new games.|Yeni oyunlar geliştiriyorlar.|Daha iyi ya da büyük hale getirmek.
+develop|-|Türkçesi 10 harften uzun (geliştirmek)
 die|ölmek||verb|A2|sağlık|Plants die without water.|Bitkiler susuz ölür.|Hayatı sona ermek.
 drive|sürmek||verb|A1|seyahat|Can you drive a car?|Araba sürebilir misin?|Bir aracı kullanmak.
 economic|ekonomik||adjective|B2|iş|The country has economic problems.|Ülkenin ekonomik sorunları var.|Para ve ticaretle ilgili.
@@ -232,7 +232,7 @@ national|ulusal|milli|adjective|B1|hukuk|Today is a national holiday.|Bugün ulu
 near|yakın||adjective|A1|şehir|The school is near.|Okul yakın.|Arada az mesafe olan.
 news|haber||noun|A1|günlük|I watch the news every evening.|Her akşam haberleri izlerim.|Yeni olaylarla ilgili bilgi.
 note|not||noun|A2|okul|I wrote a note.|Bir not yazdım.|Unutmamak için yazılan kısa yazı.
-offer|teklif|öneri|noun|B1|iş|I got a job offer.|Bir iş teklifi aldım.|Birine sunulan öneri.
+offer|teklif|öneri|noun|B1|iş|I got a job offer.|Bir iş teklifi aldım.|Birine bir şey yapmayı ya da vermeyi sunma.
 office|ofis|büro|noun|A1|iş|My office is on the third floor.|Ofisim üçüncü katta.|Masa başı işlerin yapıldığı yer.
 official|resmi|resmî|adjective|B1|hukuk|This is an official document.|Bu resmi bir belge.|Devlet ya da kurumla ilgili, onaylı.
 often|sık|sıklıkla|adverb|A1|zaman|I often go to the cinema.|Sık sık sinemaya giderim.|Çok kez, aralıklarla.
@@ -245,13 +245,13 @@ past|geçmiş||noun|A2|zaman|Forget the past.|Geçmişi unut.|Geride kalmış za
 pay|ödemek||verb|A1|iş|I will pay the bill.|Hesabı ben ödeyeceğim.|Bir şey için para vermek.
 percent|yüzde||noun|B1|iş|Ten percent of the students are absent.|Öğrencilerin yüzde onu yok.|Bir bütünün yüz parçasından kaçı olduğunu gösteren oran.
 perhaps|-|maybe (belki) ile çakışır
-person|kişi|insan|noun|A1|günlük|She is a kind person.|O nazik bir kişi.|Tek bir insan.
+person|kişi|insan|noun|A1|günlük|She is a kind person.|O nazik bir kişi.|Tek bir birey.
 pick|seçmek||verb|A2|günlük|Pick a card.|Bir kart seç.|Birçok şey arasından birini almak.
 please|lütfen||adverb|A1|günlük|Please sit down.|Lütfen oturun.|Kibar bir istek yaparken kullanılır.
 police|polis||noun|A1|hukuk|Call the police!|Polisi ara!|Düzeni ve güvenliği sağlayan kurum.
 policy|politika||noun|B2|hukuk|The company has a new policy.|Şirketin yeni bir politikası var.|Bir kurumun izlediği yol ve kurallar.
 possible|mümkün|olası|adjective|A2|soyut|Is it possible?|Bu mümkün mü?|Olabilecek, yapılabilecek.
-present|hediye|armağan|noun|A1|günlük|This present is for you.|Bu hediye senin için.|Birine verilen armağan.
+present|hediye|armağan|noun|A1|günlük|This present is for you.|Bu hediye senin için.|Doğum günü gibi özel günlerde birine verilen şey.
 probable|muhtemel|olası|adjective|B2|soyut|It is probable that he will come.|Gelmesi muhtemel.|Olma ihtimali yüksek.
 process|süreç|işlem|noun|B1|iş|Learning is a slow process.|Öğrenmek yavaş bir süreçtir.|Bir işin aşama aşama ilerleyişi.
 provide|sağlamak||verb|B1|iş|The hotel will provide towels.|Otel havlu sağlayacak.|Gerekeni vermek, temin etmek.
@@ -267,7 +267,7 @@ reason|sebep|neden|noun|A2|soyut|What is the reason?|Sebebi ne?|Bir şeyin olmas
 recent|-|yeni (new) ile çakışır
 record|kayıt|rekor|noun|B1|teknoloji|Keep a record of your spending.|Harcamalarının kaydını tut.|Bir bilginin yazılı ya da saklı hali.
 remain|-|kalmak (stay) ile çakışır
-require|gerektirmek||verb|B2|iş|This job will require patience.|Bu iş sabır gerektirecek.|Bir şeyin olması için zorunlu kılmak.
+require|-|Türkçesi 10 harften uzun (gerektirmek)
 research|araştırma||noun|B1|okul|She does research on cancer.|Kanser üzerine araştırma yapıyor.|Bilgi edinmek için yapılan inceleme.
 rest|dinlenmek||verb|A2|sağlık|You need to rest.|Dinlenmen gerek.|Yorgunluğu gidermek için çalışmayı bırakmak.
 result|sonuç||noun|A2|okul|The exam result is good.|Sınav sonucu iyi.|Bir işin sonunda ortaya çıkan durum.

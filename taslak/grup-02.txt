@@ -1,4 +1,4 @@
-worry|endişelenmek|kaygılanmak|verb|A2|duygular|Don't worry about me.|Benim için endişelenme.|İçini korku ve sıkıntı kaplamak.
+worry|endişe||noun|B1|duygular|Money is my biggest worry.|Para en büyük endişem.|Kötü bir şey olacak diye duyulan huzursuzluk.
 wrong|yanlış||adjective|A1|okul|That answer is wrong.|O cevap yanlış.|Doğru olmayan, hatalı.
 young|genç||adjective|A1|aile|My sister is very young.|Kız kardeşim çok genç.|Yaşı az olan.
 ability|-|yetenek (talent) ile çakışır
@@ -141,7 +141,7 @@ forward|ileri||adverb|A2|günlük|Take one step forward.|Bir adım ileri at.|Ön
 fun|eğlence|keyif|noun|A1|günlük|We had a lot of fun.|Çok eğlendik.|Hoşça vakit geçirme.
 fund|-|Türkçesi neredeyse aynı (fon)
 gain|-|kazanmak (win) ile çakışır
-glass|bardak|cam|noun|A1|ev|A glass of water, please.|Bir bardak su lütfen.|Su içilen cam kap.
+glass|bardak|cam|noun|A1|ev|A glass of water, please.|Bir bardak su lütfen.|Su içilen, içi görünen kap.
 growth|büyüme||noun|B2|iş|The company shows fast growth.|Şirket hızlı bir büyüme gösteriyor.|Boyut ya da miktarın artması.
 guess|-|Türkçesi iki kelime (tahmin etmek)
 gun|silah||noun|B1|hukuk|The police officer has a gun.|Polis memurunun silahı var.|Mermi atan araç.
@@ -290,7 +290,7 @@ science|bilim||noun|A1|okul|I love science.|Bilimi severim.|Doğayı ve evreni d
 score|puan|skor|noun|A2|günlük|What is the score?|Puan kaç?|Bir oyunda ya da sınavda alınan sayı.
 search|-|aramak (call) ile çakışır
 season|mevsim||noun|A1|hava|Summer is my favourite season.|Yaz en sevdiğim mevsim.|Yılın dört bölümünden biri.
-seat|koltuk|yer|noun|A2|seyahat|Is this seat free?|Bu koltuk boş mu?|Oturulacak yer.
+seat|koltuk|yer|noun|A2|seyahat|Is this seat free?|Bu koltuk boş mu?|Otobüste ya da sinemada oturmak için yapılmış eşya.
 secret|sır||noun|A2|duygular|Can you keep a secret?|Sır tutabilir misin?|Başkalarından gizlenen bilgi.
 section|bölüm||noun|B1|okul|Read the first section.|İlk bölümü oku.|Bir bütünün ayrılmış kısmı.
 security|güvenlik||noun|B1|hukuk|Security is important at airports.|Havalimanlarında güvenlik önemlidir.|Tehlikeye karşı korunma durumu.

@@ -106,12 +106,18 @@ describe('eski kaydın bölüm sistemine aktarımı', () => {
 });
 
 describe('konu modları', () => {
-  it('mevcut pakette hiçbir mod açık değil: gözden geçirilmiş kelime yok', () => {
+  it('mevcut pakette hiçbir mod açık değil: konu kelimelerini kimse gözden geçirmedi', () => {
     const st = topicStatuses(pack);
     expect(st.every((s) => !s.enabled)).toBe(true);
     expect(st.every((s) => s.reviewed === 0)).toBe(true);
-    const byId = Object.fromEntries(st.map((s) => [s.mode.id, s.total]));
-    expect(byId).toMatchObject({ saglik: 9, teknoloji: 0, hukuk: 0, seyahat: 10 });
+    for (const s of st) expect(s.total).toBe(pack.entries.filter((e) => s.mode.packTopics.includes(e.topic)).length);
+  });
+
+  it('yalnızca iki kaynağın uyuştuğu (kişinin okumadığı) kelime gözden geçirilmiş sayılmaz', () => {
+    const cross = pack.entries.filter((e) => e.check === 'crosscheck');
+    expect(cross.length).toBeGreaterThan(0);
+    expect(cross.every((e) => e.reviewed === false)).toBe(true);
+    expect(pack.entries.filter((e) => e.check === 'human').every((e) => e.reviewed === true)).toBe(true);
   });
 
   it('mod, eşik kadar gözden geçirilmiş kelimeyle açılır; gözden geçirilmemiş kelime kullanılmaz', () => {

@@ -168,9 +168,18 @@ kelime-oyunu/
 
 ## Kelime verisi
 
-`src/data/pack-tr-en.json` elle seçilmiş **138 kelimelik** bir başlangıç
-paketidir (A1: 58, A2: 33, B1: 27, B2: 20). Kapsamlı ya da doğrulanmış bir
-sözlük değildir; seviyeler yaklaşık CEFR tahminidir.
+`src/data/pack-tr-en.json` **609 kelimelik** pakettir. Kapsamlı ya da
+doğrulanmış bir sözlük değildir; seviyeler yaklaşık CEFR tahminidir.
+
+- İlk 138 kelime elle yazıldı (`check` alanı yok).
+- Kalanlar `taslak/` klasöründeki taslaklardan `taslak/pakete-ekle.mjs` ile
+  eklenir. Aday kelimeler telifsiz listelerden (SCOWL, 12dicts) seçildi;
+  kaynaklar ve lisans notu `taslak/README.md` içinde. Denetim işareti:
+  - `check: "human"`, `reviewed: true`: kişi inceleme sayfasında onayladı.
+  - `check: "crosscheck"`: Türkçe karşılığı ikinci bir kaynağınkiyle uyuştu;
+    örnek cümle ve tanımı kişi okumadı.
+  - `check: "bulk"`: oyun sahibi tek tek okumadan toplu onayladı.
+  - Konu modları yalnızca `reviewed: true` kelimeleri sayar.
 
 Paket **kavram tabanlıdır**: her girdi bir anlamdır ve her dildeki karşılığı
 `terms` altında durur. Aynı girdi iki yönde de soru üretir; kaynak dil, hedef
@@ -192,7 +201,9 @@ türetilir (`toQuestion`).
     },
     "en": { "text": "wind", "example": "The wind is blowing very hard." }
   },
-  "hint": { "tr": "Havanın hareket etmesiyle oluşan akım." }  // arayüz dilinde, cevabı içermez
+  "hint": { "tr": "Havanın hareket etmesiyle oluşan akım." }, // arayüz dilinde, cevabı içermez
+  "reviewed": true,            // (isteğe bağlı) kişi gözden geçirdi
+  "check": "human"             // (isteğe bağlı) taslaktan gelen girdi: human | crosscheck | bulk
 }
 ```
 

@@ -38,6 +38,15 @@ export interface Entry {
    * yalnızca işaretli kelimelerle açılır (bkz. core/topics.ts).
    */
   reviewed?: boolean;
+  /**
+   * Taslaktan gelen girdinin nasıl denetlendiği: "human" kişi onayladı
+   * (reviewed: true); "crosscheck" iki bağımsız kaynağın Türkçe karşılığı
+   * uyuştu, ama örnek cümle ve tanımı kişi okumadı; "bulk" oyun sahibi
+   * tek tek okumadan toplu onayladı (ikinci kaynakla uyuşmayan ya da ikinci
+   * kaynakta olmayan girdiler). Elle yazılmış eski girdilerde yoktur.
+   * Bkz. taslak/pakete-ekle.mjs.
+   */
+  check?: 'human' | 'crosscheck' | 'bulk';
 }
 
 export interface WordPack {
