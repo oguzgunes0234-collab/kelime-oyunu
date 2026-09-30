@@ -529,6 +529,31 @@
 .cw-cluebar .cw-arrow {
   color: var(--clue-arrow);
 }
+/* Cümle / tanım ipucu: üstte tür etiketi, altında tam metin (en çok 3 satır). */
+.cw-clue-kind {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.cw-clue-kind .chip {
+  background: var(--bg);
+  color: var(--clue-ink);
+}
+.cw-clue-long {
+  margin-top: 2px;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+/* Karede "Cümle" / "Tanım" etiketi: çeviri kelimesinden ayrılsın diye italik. */
+.cw-clue-text.is-kind {
+  font-style: italic;
+}
 .cw-len {
   font-size: 0.8rem;
   font-weight: 700;

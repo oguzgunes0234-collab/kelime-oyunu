@@ -2,6 +2,8 @@ import { buildCrossword, crosswordAnswer, GRID_COLS, GRID_ROWS, wordCells, type 
 import { directionKey, entriesFor, toQuestion } from './pack';
 import { average, recordPuzzle, roundQuality } from './adaptive';
 import { initialCampaign, recordCampaignPuzzle } from './campaign';
+import { pickClue } from './clues';
+import { isDue } from './srs';
 import { recordPuzzleDone } from './daily';
 import { DAILY_GOAL_REWARD } from './economy';
 import { applyWord, grantDailyReward, type Profile } from './profile';
@@ -50,9 +52,17 @@ export interface PuzzleState {
 export const cellKey = (r: number, c: number) => `${r},${c}`;
 
 /**
- * Bulmacada kullanılacak adaylar, öncelik sırasıyla gruplanmış. `only`
- * verilirse (konu modu) yalnızca o kelimeler kullanılır: seviye süzgeci ve
- * seviye dışı dolgu yoktur, çünkü oyuncu seçtiği konunun kelimelerini bekler.
+ * Bulmacada kullanılacak adaylar, öncelik sırasıyla gruplanmış:
+ *
+ *   0 tekrar listesi (yanlış / pas / yardımla bilinen)
+ *   1 aralıklı tekrarda zamanı gelen bilinen kelimeler
+ *   2 yeni kelimeler
+ *   3 zamanı gelmemiş bilinen kelimeler (ızgarayı doldurmak için)
+ *   4 seviye dışı kelimeler (yalnızca dolgu)
+ *
+ * Daha önce görülen kelime mümkünse cümle ya da tanım ipucuyla gelir (bkz.
+ * core/clues.ts). `only` verilirse (konu modu) yalnızca o kelimeler kullanılır:
+ * seviye süzgeci ve seviye dışı dolgu yoktur.
  */
 export function puzzleCandidates(
   pack: WordPack,
@@ -60,24 +70,64 @@ export function puzzleCandidates(
   direction: Direction,
   difficulty: Difficulty,
   only?: Set<string>,
+  now: Date = new Date(),
+  rng: Rng = Math.random,
 ): Candidate[][] {
   const dir = directionKey(direction);
   const learned = new Set(profile.learned[dir] ?? []);
   const review = new Set(profile.review.filter((r) => r.dir === dir).map((r) => r.entryId));
   const maxLen = Math.max(GRID_ROWS, GRID_COLS) - 1;
   const inLevel = only ?? new Set(entriesFor(pack, difficulty).map((e) => e.id));
-  const groups: Candidate[][] = [[], [], [], []];
+  const groups: Candidate[][] = [[], [], [], [], []];
   for (const entry of pack.entries) {
     if (only && !only.has(entry.id)) continue;
     const a = crosswordAnswer(entry, direction.target, maxLen);
     const src = entry.terms[direction.source];
     if (!a || !src) continue;
+    const known = learned.has(entry.id) || review.has(entry.id);
+    const g = !inLevel.has(entry.id)
+      ? 4
+      : review.has(entry.id)
+        ? 0
+        : learned.has(entry.id)
+          ? isDue(profile.srs, dir, entry.id, true, now)
+            ? 1
+            : 3
+          : 2;
+    const clue = pickClue(entry, direction, known, rng);
     const cand: Candidate = { entryId: entry.id, letters: a.letters, answer: a.answer, clue: src.text };
-    // Seviye dışı kelimeler yalnızca ızgarayı doldurmak için, en son denenir.
-    const g = !inLevel.has(entry.id) ? 3 : review.has(entry.id) ? 0 : learned.has(entry.id) ? 2 : 1;
+    if (clue.kind !== 'translation') {
+      cand.clueKind = clue.kind;
+      cand.clueText = clue.text;
+    }
     groups[g].push(cand);
   }
   return groups;
+}
+
+/**
+ * Bir bulmacada en fazla bu kadar cümle/tanım ipucu olur; kalanlar çeviriyle
+ * gelir. İpucu karesinde yalnızca "Cümle" / "Tanım" yazar ve metin üstteki
+ * çubukta okunur; hepsi böyle olursa ızgara bir bakışta okunamaz.
+ */
+export const MAX_CONTEXT_CLUES = 3;
+
+export function capContextClues(cw: Crossword, max: number, rng: Rng = Math.random): Crossword {
+  const ctx = cw.words.map((w, i) => (w.clueKind && w.clueKind !== 'translation' ? i : -1)).filter((i) => i >= 0);
+  if (ctx.length <= max) return cw;
+  for (let i = ctx.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [ctx[i], ctx[j]] = [ctx[j], ctx[i]];
+  }
+  const drop = new Set(ctx.slice(max));
+  return {
+    ...cw,
+    words: cw.words.map((w, i) => {
+      if (!drop.has(i)) return w;
+      const { clueKind: _k, clueText: _t, ...rest } = w;
+      return rest;
+    }),
+  };
 }
 
 export function newPuzzle(
@@ -89,7 +139,14 @@ export function newPuzzle(
   size?: { rows: number; cols: number },
   topic?: { id: string; entryIds: Set<string> },
 ): PuzzleState {
-  const cw = buildCrossword(puzzleCandidates(pack, profile, direction, difficulty, topic?.entryIds), { rng, ...size });
+  const cw = capContextClues(
+    buildCrossword(puzzleCandidates(pack, profile, direction, difficulty, topic?.entryIds, new Date(), rng), {
+      rng,
+      ...size,
+    }),
+    MAX_CONTEXT_CLUES,
+    rng,
+  );
   const s = puzzleFromCrossword(cw, direction, difficulty);
   return topic ? { ...s, topic: topic.id } : s;
 }

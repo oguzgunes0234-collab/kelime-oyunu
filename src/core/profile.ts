@@ -1,5 +1,6 @@
 import { initialAdaptive, recordRound, roundQuality, type AdaptiveState } from './adaptive';
 import { initialCampaign, type CampaignState } from './campaign';
+import { recordSrs, type SrsState } from './srs';
 import { initialDaily, recordCorrect, rollDay, type DailyState } from './daily';
 import { COINS_CLEAN_BONUS, COINS_PER_CHARGE, COINS_PER_CORRECT, DAILY_GOAL_REWARD, INITIAL_INVENTORY } from './economy';
 import { directionKey } from './pack';
@@ -49,6 +50,8 @@ export interface Profile {
   review: ReviewItem[];
   /** Yön anahtarı → en az bir kez doğru bilinen girdiler. */
   learned: Record<string, string[]>;
+  /** Aralıklı tekrar kutuları (bkz. core/srs.ts). Eski kayıtlarda yoktur; boş başlar. */
+  srs: SrsState;
   stats: { rounds: number; correct: number };
 }
 
@@ -66,6 +69,7 @@ export function defaultProfile(now: Date): Profile {
     daily: initialDaily(now, 10),
     review: [],
     learned: {},
+    srs: {},
     stats: { rounds: 0, correct: 0 },
   };
 }
@@ -173,6 +177,9 @@ export function applyWord(
     p.review = p.review.filter((_, i) => i !== idx);
     outcome.removedFromReview = true;
   }
+
+  // Aralıklı tekrar: hatasız bilinen kelime seyrekleşir, bilinmeyen yakında yine gelir.
+  p.srs = recordSrs(p.srs ?? {}, dir, id, clean ? 'clean' : correct ? 'correct' : 'miss', now);
 
   if (ctx.adaptive && ctx.mode === 'normal') {
     const res = recordRound(p.adaptive, roundQuality(correct ? 'correct' : word.status === 'failed' ? 'failed' : 'skipped', helped, word.wrongAttempts));

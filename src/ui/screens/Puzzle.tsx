@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { wordCells } from '../../core/crossword';
+import { clueFullText, clueLabel, wordCells } from '../../core/crossword';
+import { CLUE_KIND_LABEL } from '../../core/clues';
 import { PUZZLE_TOOL_INFO, PUZZLE_TOOL_ORDER, type PuzzleToolId } from '../../core/economy';
 import { languageInfo } from '../../core/languages';
 import { displayLetter, displayWord, keyToLetter } from '../../core/normalize';
@@ -204,7 +205,7 @@ export function Puzzle(props: Props) {
         say(`Doğru! ${w.clue} → ${displayWord(w.answer, tgt)}`, 'good');
         buzz(25);
       } else if (e.kind === 'wrong' && w) {
-        say(`${w.clue}: yanlış harf var`, 'bad');
+        say(`${clueLabel(w)}: yanlış harf var`, 'bad');
         buzz([40, 60, 40]);
       } else if (e.kind === 'reveal') say('Harf açıldı.');
       else if (e.kind === 'meaning') say('Anlam ipucu üstte.');
@@ -271,13 +272,17 @@ export function Puzzle(props: Props) {
       return;
     }
     const entry = pack.entries.find((e) => e.id === p.cw.words[p.sel.word].entryId);
-    const res = tool === 'hint' ? showMeaning(p, !!entry?.hint?.tr) : revealLetter(p);
+    // Tanım ipucunda anlam zaten ekranda: Anlam aracı yeni bir şey göstermez.
+    const hasMeaning = !!entry?.hint?.tr && p.cw.words[p.sel.word].clueKind !== 'definition';
+    const res = tool === 'hint' ? showMeaning(p, hasMeaning) : revealLetter(p);
     if (!res.applied) {
       const why =
         tool === 'hint'
           ? p.meaningShown[p.sel.word]
             ? 'Bu kelimenin anlam ipucu zaten açık.'
-            : 'Bu kelime için anlam ipucu yok.'
+            : p.cw.words[p.sel.word].clueKind === 'definition'
+              ? 'İpucu zaten kelimenin tanımı.'
+              : 'Bu kelime için anlam ipucu yok.'
           : 'Bu kelimede açılacak harf kalmadı.';
       say(tutorial ? why : `${why} Hak harcanmadı.`);
       return;
@@ -319,6 +324,7 @@ export function Puzzle(props: Props) {
   const tgt = languageInfo(puzzle.direction.target);
   const selWord = cw.words[puzzle.sel.word];
   const selEntry = pack.entries.find((e) => e.id === selWord?.entryId);
+  const selKind = selWord?.clueKind ?? 'translation';
   const [cr, cc] = selectedCell(puzzle);
 
   // Kare haritası: harf kareleri ve ipucu kareleri.
@@ -394,7 +400,7 @@ export function Puzzle(props: Props) {
             type="button"
             className={cls}
             onClick={() => onCell(r, c)}
-            aria-label={`${letter.words.map((w) => cw.words[w].clue).join(' / ')} kelimesinin karesi${typed ? `, yazılan ${displayLetter(typed, tgt.code)}` : ', boş'}${locked ? ', çözüldü' : ''}`}
+            aria-label={`${letter.words.map((w) => clueLabel(cw.words[w])).join(' / ')} kelimesinin karesi${typed ? `, yazılan ${displayLetter(typed, tgt.code)}` : ', boş'}${locked ? ', çözüldü' : ''}`}
           >
             {shown ? displayLetter(shown, tgt.code) : ''}
           </button>,
@@ -406,7 +412,7 @@ export function Puzzle(props: Props) {
             type="button"
             className={`cw-clue${clueWords.length > 1 ? ' two' : ''}`}
             onClick={() => commit(tapClue(live.current.puzzle, r, c))}
-            aria-label={clueWords.map((w) => `İpucu: ${cw.words[w].clue}`).join('; ')}
+            aria-label={clueWords.map((w) => `İpucu: ${clueFullText(cw.words[w])}`).join('; ')}
           >
             {clueWords.map((w) => (
               <span
@@ -414,7 +420,7 @@ export function Puzzle(props: Props) {
                 className={`cw-clue-part${w === puzzle.sel.word ? ' selected' : ''}${puzzle.solved[w] ? ' done' : ''}`}
                 lang={src.code}
               >
-                <span className="cw-clue-text">{cw.words[w].clue}</span>
+                <span className={`cw-clue-text${cw.words[w].clueKind && cw.words[w].clueKind !== 'translation' ? ' is-kind' : ''}`}>{clueLabel(cw.words[w])}</span>
                 <ClueArrow arrow={cw.words[w].arrow} className="cw-arrow" />
               </span>
             ))}
@@ -479,16 +485,36 @@ export function Puzzle(props: Props) {
           <ChevronLeftIcon width={20} height={20} />
         </button>
         <div className="cw-clue-main">
-          <p className="cw-clue-line">
-            <strong lang={src.code}>{selWord.clue}</strong>
-            <ClueArrow arrow={selWord.arrow} width={14} height={14} className="cw-arrow" />
-            <span className="cw-len">{selWord.letters.length} harf</span>
-          </p>
-          {selEntry?.terms[src.code]?.context && <p className="cw-clue-sub">({selEntry.terms[src.code].context})</p>}
-          {puzzle.meaningShown[puzzle.sel.word] && selEntry?.hint?.tr && <p className="cw-clue-hint">{selEntry.hint.tr}</p>}
+          {selKind === 'translation' ? (
+            <p className="cw-clue-line">
+              <strong lang={src.code}>{selWord.clue}</strong>
+              <ClueArrow arrow={selWord.arrow} width={14} height={14} className="cw-arrow" />
+              <span className="cw-len">{selWord.letters.length} harf</span>
+            </p>
+          ) : (
+            // Cümle ya da tanım ipucu: tür etiketi, tam metin, ok ve harf sayısı.
+            <>
+              <p className="cw-clue-kind">
+                <span className="chip">{CLUE_KIND_LABEL[selKind]}</span>
+                <ClueArrow arrow={selWord.arrow} width={14} height={14} className="cw-arrow" />
+                <span className="cw-len">{selWord.letters.length} harf</span>
+              </p>
+              <p className="cw-clue-long" lang={selKind === 'cloze' ? tgt.code : 'tr'}>
+                {clueFullText(selWord)}
+              </p>
+            </>
+          )}
+          {selKind === 'translation' && selEntry?.terms[src.code]?.context && <p className="cw-clue-sub">({selEntry.terms[src.code].context})</p>}
+          {puzzle.meaningShown[puzzle.sel.word] && selEntry?.hint?.tr && selKind !== 'definition' && <p className="cw-clue-hint">{selEntry.hint.tr}</p>}
           {puzzle.solved[puzzle.sel.word] && (
             <p className="cw-clue-sub good">
               Çözüldü: <span lang={tgt.code}>{displayWord(selWord.answer, tgt.code)}</span>
+              {selKind !== 'translation' && (
+                <>
+                  {' '}
+                  · <span lang={src.code}>{selWord.clue}</span>
+                </>
+              )}
             </p>
           )}
         </div>

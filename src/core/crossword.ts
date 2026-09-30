@@ -1,3 +1,4 @@
+import { CLUE_KIND_LABEL, type ClueKind } from './clues';
 import { languageInfo } from './languages';
 import { lettersOf } from './normalize';
 import { shuffle, type Rng } from './rng';
@@ -25,8 +26,12 @@ export interface CwWord {
   letters: string[];
   /** Cevabın yazılışı (ör. "rüzgar"). */
   answer: string;
-  /** İpucu: kaynak dildeki kelime. */
+  /** Kaynak dildeki kelime (çeviri ipucu; sonuç ekranında da gösterilir). */
   clue: string;
+  /** Bu karşılaşmadaki ipucu türü; yoksa çeviri (eski kayıtlar, eğitim). */
+  clueKind?: ClueKind;
+  /** Cümle ya da tanım ipucunun tam metni (ipucu çubuğunda). */
+  clueText?: string;
   dir: WordDir;
   row: number;
   col: number;
@@ -46,6 +51,18 @@ export interface Candidate {
   letters: string[];
   answer: string;
   clue: string;
+  clueKind?: ClueKind;
+  clueText?: string;
+}
+
+/** İpucu karesinde yazan kısa metin: çeviri ise kelime, değilse tür etiketi. */
+export function clueLabel(w: Pick<CwWord, 'clue' | 'clueKind'>): string {
+  return w.clueKind && w.clueKind !== 'translation' ? CLUE_KIND_LABEL[w.clueKind] : w.clue;
+}
+
+/** İpucu çubuğundaki tam ipucu. */
+export function clueFullText(w: Pick<CwWord, 'clue' | 'clueKind' | 'clueText'>): string {
+  return w.clueKind && w.clueKind !== 'translation' && w.clueText ? w.clueText : w.clue;
 }
 
 /**

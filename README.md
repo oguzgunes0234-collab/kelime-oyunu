@@ -21,8 +21,19 @@ zorluk ortaktır. Her kelimeden sonra (bulmacada bulmaca sonunda) anlam, tür,
   daha uzun her harf dizisi tam olarak bir cevaptır. Oklar: sağa, aşağı,
   alttan sağa (↳), yandan aşağı (↴). Karede tek ipucu olur; iki ipucu telefonda
   okunmayacak kadar küçülüyordu.
-- **Kelime seçimi:** önce tekrar listesindekiler, sonra henüz bilinmeyenler,
-  sonra bilinenler; ızgarayı doldurmak için en son seviye dışı kelimeler.
+- **Kelime seçimi:** önce tekrar listesindekiler, sonra aralıklı tekrarda
+  günü gelen bilinen kelimeler, sonra henüz bilinmeyenler, sonra günü gelmemiş
+  bilinenler; ızgarayı doldurmak için en son seviye dışı kelimeler.
+- **Aralıklı tekrar (`core/srs.ts`):** her kelime bir Leitner kutusundadır
+  (1, 3, 7, 21, 60 gün). Yardımsız ve hatasız bilinen kelime bir kutu yükselir,
+  yardımla bilinen kutusunda kalır, bilinemeyen 1. kutuya döner; ikisi de
+  ertesi gün yine gelir.
+- **İpucu türleri (`core/clues.ts`):** yeni kelime her zaman çeviriyle gelir.
+  Daha önce görülen kelime mümkünse *Cümle* (hedef dildeki örnek cümle, cevap
+  yerine `___`) ya da *Tanım* (Türkçe tanım; yalnızca Türkçe → İngilizce)
+  ipucuyla gelir. Karede yalnızca tür adı yazar, metin üstteki çubukta okunur;
+  ızgara bir bakışta okunabilsin diye bulmaca başına en fazla 3 böyle ipucu
+  olur (`MAX_CONTEXT_CLUES`).
 - **Oynanış (`core/puzzle.ts`, saf işlevler):** kareye ya da ipucuna dokun,
   ekran klavyesiyle yaz (Türkçe yönünde Türkçe Q düzeni). Kelime dolunca
   denetlenir: doğruysa yeşile döner ve kilitlenir, yanlışsa sarsılır (hata
@@ -132,6 +143,8 @@ kelime-oyunu/
 │   │   ├── pack.ts        paket doğrulama, soru üretimi, zorluk ↔ CEFR
 │   │   ├── tiles.ts       harf taşları ve şaşırtmaca harfler
 │   │   ├── crossword.ts   çengel bulmaca üretici ve kural denetimi
+│   │   ├── clues.ts       ipucu türleri (çeviri / cümle / tanım)
+│   │   ├── srs.ts         aralıklı tekrar kutuları
 │   │   ├── puzzle.ts      bulmacanın durumu, yazma/silme/araçlar, sonuçların profile işlenmesi
 │   │   ├── round.ts       hızlı turun durumu ve araçlar (saf reducer)
 │   │   ├── scoring.ts     puanlama
