@@ -260,3 +260,12 @@ Temel oyun satın alma olmadan tamamen oynanabilir.
 karşılığı hak, içeriği ve fiyatı açık paketler, isteğe bağlı görsel temalar.
 Gerçek dijital içerik satışı App Store / Google Play kurallarına uygun
 (platform içi satın alma) biçimde ele alınmalıdır.
+
+## Lisans
+
+Kod ve kelime paketi [MIT lisansı](LICENSE) ile açık kaynaktır.
+
+Aday kelime listesi (`taslak/adaylar.txt`) SCOWL ve 12dicts listelerinden
+türetildi; bu listelerin telif ve izin notları `taslak/README.md` içindedir
+ve kopyalarda korunmalıdır.
+
