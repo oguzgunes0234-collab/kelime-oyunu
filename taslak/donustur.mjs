@@ -10,7 +10,7 @@
 //
 // Çalıştırma: node taslak/donustur.mjs
 
-import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -34,6 +34,12 @@ const packTr = new Map(pack.entries.map((e) => [plain(e.terms.tr.text), e.terms.
 const packEn = new Set(pack.entries.map((e) => e.terms.en.text.toLowerCase()));
 const ids = new Set(pack.entries.map((e) => e.id));
 const draftTr = new Map();
+
+// İsteğe bağlı ikinci görüş: başka bir kaynağın aynı İngilizce kelimeye verdiği
+// Türkçe karşılık (yalnızca karşılaştırma için; repoya girmez, bkz. .gitignore).
+const secondPath = join(dir, 'ikinci-gorus.json');
+const second = existsSync(secondPath) ? JSON.parse(readFileSync(secondPath, 'utf8')) : {};
+const secondFor = (en) => second[en.toLowerCase()] ?? second[{ centre: 'center', behavior: 'behaviour' }[en] ?? ''];
 
 const entries = [];
 const skipped = [];
@@ -62,6 +68,10 @@ for (const file of files) {
     else if (draftTr.has(key)) flags.push(`"${tr}" taslakta da var (= ${draftTr.get(key)})`);
     draftTr.set(key, en);
 
+    const other = secondFor(en);
+    const mine = [tr, ...(alts ? alts.split(',') : [])].map((s) => plain(s.trim()));
+    const cross = other ? { tr: other, same: other.split(/[,;/]/).some((s) => mine.includes(plain(s.trim()))) } : undefined;
+
     let id = slug(tr);
     if (ids.has(id)) id = `${id}-${en}`;
     ids.add(id);
@@ -76,7 +86,7 @@ for (const file of files) {
       },
       hint: { tr: hint },
       reviewed: false,
-      draft: { group, by: 'claude', flags, ...(tr.length > MAX_ANSWER ? { oneWay: true } : {}) },
+      draft: { group, by: 'claude', flags, ...(tr.length > MAX_ANSWER ? { oneWay: true } : {}), ...(cross ? { cross } : {}) },
     });
   }
 }

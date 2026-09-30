@@ -69,6 +69,9 @@
   .row p { margin: 0; overflow-wrap: anywhere; }
   mark { background: var(--mark); color: inherit; border-radius: 3px; padding: 0 2px; }
   .flags { margin: 0; padding: 10px 12px 10px 28px; background: var(--warn-bg); color: var(--warn-ink); border-radius: 10px; font-size: .9rem; }
+  .cross { font-size: .9rem; padding: 8px 12px; border-radius: 10px; }
+  .cross.same { background: var(--good-bg); color: var(--good); }
+  .cross.diff { background: var(--warn-bg); color: var(--warn-ink); }
   .status { padding: 10px 16px; font-weight: 700; font-size: .95rem; border-top: 1px solid var(--line); }
   .status.ok { background: var(--good-bg); color: var(--good); }
   .status.edit { background: var(--clue-bg); color: var(--clue-ink); }
@@ -210,6 +213,7 @@ function renderCard() {
     body = `
     <div class="body">
       ${flags}
+      ${d.cross ? `<div class="cross ${d.cross.same ? 'same' : 'diff'}">${d.cross.same ? 'İkinci kaynak da aynı çeviriyi veriyor.' : `İkinci kaynağın çevirisi farklı: <b>${esc(d.cross.tr)}</b>`}</div>` : ''}
       <div class="row"><span class="label">İngilizce örnek · cümle ipucu</span><p lang="en">${highlight(d.exEn, d.en)}</p></div>
       <div class="row"><span class="label">Türkçe örnek</span><p>${esc(d.exTr)}</p></div>
       <div class="row"><span class="label">Tanım ipucu</span><p>${esc(d.hint)}</p></div>
@@ -297,18 +301,19 @@ async function decide(id, s, e) {
 
 function renderList() {
   const view = $('view-list');
-  const counts = { todo: 0, flag: 0, edit: 0, drop: 0, all: DRAFTS.length };
+  const counts = { todo: 0, diff: 0, flag: 0, edit: 0, drop: 0, all: DRAFTS.length };
   for (const d of DRAFTS) {
     const s = decisions[d.id]?.s;
     if (!s) counts.todo++;
     if (d.flags.length) counts.flag++;
+    if (d.cross && !d.cross.same && !s) counts.diff++;
     if (s === 'edit') counts.edit++;
     if (s === 'drop') counts.drop++;
   }
-  const f = { todo: 'Bekleyen', flag: 'Uyarılı', edit: 'Düzeltilen', drop: 'Çıkarılan', all: 'Tümü' };
+  const f = { todo: 'Bekleyen', diff: 'Çeviri farklı', flag: 'Uyarılı', edit: 'Düzeltilen', drop: 'Çıkarılan', all: 'Tümü' };
   const pick = (d) => {
     const s = decisions[d.id]?.s;
-    return listFilter === 'all' || (listFilter === 'todo' && !s) || (listFilter === 'flag' && d.flags.length) || s === listFilter;
+    return listFilter === 'all' || (listFilter === 'todo' && !s) || (listFilter === 'flag' && d.flags.length) || (listFilter === 'diff' && d.cross && !d.cross.same && !s) || s === listFilter;
   };
   const rows = DRAFTS.map((d, i) => [d, i]).filter(([d]) => pick(d));
   view.innerHTML = `
@@ -316,7 +321,7 @@ function renderList() {
     <div class="list">${rows.length ? rows.map(([raw, i]) => { const d = current(raw); const s = decisions[d.id]?.s ?? ''; return `
       <button class="item" data-i="${i}"><span class="dot ${s}" aria-label="${STATUS_TEXT[s] ?? 'Bekliyor'}"></span>
         <span class="w"><b lang="en">${esc(d.en)}</b> → ${esc(d.tr)} <small>${d.level}</small></span>
-        ${d.flags.length ? '<span class="warn">uyarı</span>' : '<span></span>'}</button>`; }).join('') : '<p class="empty">Bu listede kelime yok.</p>'}</div>`;
+        ${d.flags.length ? '<span class="warn">uyarı</span>' : d.cross && !d.cross.same ? `<span class="warn">${esc(d.cross.tr)}</span>` : '<span></span>'}</button>`; }).join('') : '<p class="empty">Bu listede kelime yok.</p>'}</div>`;
   view.querySelectorAll('[data-f]').forEach((b) => (b.onclick = () => { listFilter = b.dataset.f; renderList(); }));
   view.querySelectorAll('[data-i]').forEach((b) => (b.onclick = () => { index = Number(b.dataset.i); editing = false; showTab('card'); }));
 }

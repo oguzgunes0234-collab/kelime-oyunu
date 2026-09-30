@@ -27,6 +27,7 @@ const data = entries.map((e) => ({
   hint: e.hint?.tr ?? '',
   flags: e.draft.flags,
   oneWay: !!e.draft.oneWay,
+  cross: e.draft.cross ?? null,
 }));
 const groups = [...new Set(data.map((d) => d.g))];
 
