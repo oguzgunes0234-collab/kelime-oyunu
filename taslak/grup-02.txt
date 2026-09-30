@@ -1,0 +1,320 @@
+worry|endişelenmek|kaygılanmak|verb|A2|duygular|Don't worry about me.|Benim için endişelenme.|İçini korku ve sıkıntı kaplamak.
+wrong|yanlış||adjective|A1|okul|That answer is wrong.|O cevap yanlış.|Doğru olmayan, hatalı.
+young|genç||adjective|A1|aile|My sister is very young.|Kız kardeşim çok genç.|Yaşı az olan.
+ability|-|yetenek (talent) ile çakışır
+absolute|mutlak||adjective|B2|soyut|I have absolute trust in her.|Ona mutlak bir güvenim var.|Hiçbir sınırı ya da koşulu olmayan.
+accept|-|Türkçesi iki kelime (kabul etmek)
+account|hesap||noun|B1|iş|I opened a bank account.|Bir banka hesabı açtım.|Bankada paranın tutulduğu kayıt.
+action|eylem|hareket|noun|B1|soyut|We need action, not words.|Söz değil, eylem gerekiyor.|Bir şey yapma, harekete geçme.
+activity|etkinlik|faaliyet|noun|A2|okul|Swimming is my favourite activity.|Yüzme en sevdiğim etkinlik.|Belli bir amaçla yapılan uğraş.
+address|-|Türkçesi aynı yazılıyor (adres)
+admit|-|Türkçesi iki kelime (itiraf etmek, kabul etmek)
+agency|-|Türkçesi neredeyse aynı (ajans)
+agree|-|Türkçesi iki kelime (aynı fikirde olmak)
+ahead|-|ileri (forward) ile çakışır
+alone|yalnız||adjective|A2|duygular|She lives alone.|Yalnız yaşıyor.|Yanında kimse olmayan.
+amount|miktar||noun|B1|iş|Add a small amount of sugar.|Az miktarda şeker ekle.|Bir şeyin ne kadar olduğu.
+analysis|-|Türkçesi neredeyse aynı (analiz)
+animal|hayvan||noun|A1|hayvanlar|The cat is my favourite animal.|Kedi en sevdiğim hayvan.|İnsan dışındaki, hareket eden ve nefes alan canlı.
+anyway|-|zaten (already) ile çakışır
+apply|başvurmak||verb|B1|iş|I want to apply for the job.|O işe başvurmak istiyorum.|Bir iş ya da yer için resmî istekte bulunmak.
+approach|yaklaşım||noun|B2|soyut|We need a new approach.|Yeni bir yaklaşıma ihtiyacımız var.|Bir konuyu ele alma biçimi.
+argue|-|tartışmak (discuss) ile çakışır
+army|ordu||noun|B1|hukuk|He joined the army.|Orduya katıldı.|Bir ülkenin silahlı kara kuvvetleri.
+arrive|varmak||verb|A1|seyahat|We arrive in Paris at nine.|Paris'e dokuzda varıyoruz.|Gidilen yere ulaşmak.
+article|makale||noun|B1|okul|I read an article about bees.|Arılar hakkında bir makale okudum.|Gazete ya da dergide yayımlanan yazı.
+artist|sanatçı||noun|A2|okul|She is a famous artist.|O ünlü bir sanatçı.|Resim, müzik gibi sanat eserleri yaratan kişi.
+attack|saldırı||noun|B1|hukuk|The attack happened at night.|Saldırı gece oldu.|Birine ya da bir yere zarar vermek için yapılan hamle.
+attempt|girişim|deneme|noun|B2|soyut|This is my first attempt.|Bu benim ilk girişimim.|Bir şeyi yapmak için gösterilen çaba.
+author|yazar||noun|A2|okul|Who is the author of this book?|Bu kitabın yazarı kim?|Kitap ya da başka eserler kaleme alan kişi.
+average|ortalama||adjective|B1|okul|He is of average height.|Ortalama boyda.|Ne çok ne az, orta düzeyde olan.
+avoid|kaçınmak||verb|B1|günlük|Avoid fast food.|Hazır yiyeceklerden kaçın.|Bir şeyden uzak durmak.
+bank|-|Türkçesi neredeyse aynı (banka)
+bar|-|anlam çok
+basic|temel||adjective|B1|soyut|These are basic rules.|Bunlar temel kurallar.|En önemli, en başta gelen.
+bear|ayı||noun|A2|hayvanlar|A bear lives in the forest.|Ormanda bir ayı yaşıyor.|Kalın tüylü, iri, ormanda yaşayan hayvan.
+beat|yenmek||verb|B1|günlük|Our team will beat them.|Takımımız onları yenecek.|Bir yarışmada rakibinden üstün gelmek.
+beauty|güzellik||noun|B1|duygular|The beauty of the city amazed me.|Şehrin güzelliği beni şaşırttı.|Göze ve gönle hoş gelme hali.
+behavior|davranış||noun|B1|duygular|His behavior was strange.|Davranışı tuhaftı.|Birinin bir durumda nasıl hareket ettiği.|behaviour
+benefit|fayda|yarar|noun|B1|soyut|What is the benefit of this?|Bunun faydası ne?|Bir şeyden elde edilen iyi sonuç.
+bill|fatura|hesap|noun|A2|iş|I paid the electricity bill.|Elektrik faturasını ödedim.|Kullanılan hizmet için ödenecek parayı gösteren belge.
+billion|milyar||noun|B1|iş|The project cost one billion dollars.|Proje bir milyar dolara mal oldu.|Bin milyon.
+block|-|anlam çok
+blood|kan||noun|A2|sağlık|He lost a lot of blood.|Çok kan kaybetti.|Damarlarda dolaşan kırmızı sıvı.
+board|tahta||noun|A2|okul|Write it on the board.|Tahtaya yaz.|Sınıfta üzerine yazı yazılan düz yüzey.
+box|kutu||noun|A1|ev|Put the toys in the box.|Oyuncakları kutuya koy.|Eşya koymak için kapaklı kap.
+brother|kardeş|abi,ağabey|noun|A1|aile|My brother is ten years old.|Kardeşim on yaşında.|Aynı anne babadan olan erkek.
+build|-|Türkçesi iki kelime (inşa etmek); yapmak (make) ile çakışır
+campaign|-|Türkçesi neredeyse aynı (kampanya)
+card|-|Türkçesi neredeyse aynı (kart)
+career|-|Türkçesi neredeyse aynı (kariyer)
+carry|taşımak||verb|A2|günlük|Can you carry this bag?|Bu çantayı taşıyabilir misin?|Bir şeyi tutup bir yerden başka yere götürmek.
+catch|yakalamak||verb|A2|günlük|Catch the ball!|Topu yakala!|Hareket eden bir şeyi tutmak.
+cell|hücre||noun|B1|sağlık|Every cell needs oxygen.|Her hücre oksijene ihtiyaç duyar.|Canlıları oluşturan en küçük yapı birimi.
+central|merkezi|orta|adjective|B1|şehir|The hotel is in a central location.|Otel merkezi bir yerde.|Ortada bulunan, her yere yakın.
+century|yüzyıl|asır|noun|B1|zaman|This church is from the tenth century.|Bu kilise onuncu yüzyıldan.|Yüz yıllık süre.
+chance|şans|fırsat|noun|A2|günlük|Give me one more chance.|Bana bir şans daha ver.|Bir şeyi yapmak için ortaya çıkan olanak.
+charge|-|anlam çok
+check|-|Türkçesi iki kelime (kontrol etmek)
+chief|-|Türkçesi şef (aşçı ile karışır); anlam çok
+choice|tercih|seçim|noun|B1|günlük|It was a difficult choice.|Zor bir tercihti.|Birkaç şey arasından birini alma.
+choose|-|seçmek (pick) ile çakışır
+church|kilise||noun|A2|şehir|There is an old church in the village.|Köyde eski bir kilise var.|Hristiyanların ibadet ettiği yapı.
+claim|iddia||noun|B2|hukuk|His claim is not true.|Onun iddiası doğru değil.|Doğruluğu kanıtlanmadan ileri sürülen söz.
+clean|temiz||adjective|A1|ev|My room is clean.|Odam temiz.|Kiri, lekesi olmayan.
+club|-|Türkçesi neredeyse aynı (kulüp)
+coach|antrenör|koç|noun|B1|günlük|The coach is proud of the team.|Antrenör takımla gurur duyuyor.|Sporcuları çalıştıran kişi.
+compare|karşılaştırmak|kıyaslamak|verb|B1|okul|Compare the two pictures.|İki resmi karşılaştır.|İki şey arasındaki benzerlik ve farkları bulmak.
+computer|bilgisayar||noun|A1|teknoloji|My computer is very old.|Bilgisayarım çok eski.|Bilgi işleyen elektronik makine.
+congress|-|Türkçesi neredeyse aynı (kongre)
+contact|iletişim||noun|B1|iş|We lost contact after school.|Okuldan sonra iletişimi kaybettik.|Biriyle bağlantı kurma, haberleşme.
+contain|-|içermek (include) ile çakışır
+cool|serin||adjective|A2|hava|It is cool in the evening.|Akşam hava serin.|Hafif soğuk, ferah.
+council|meclis|konsey|noun|B2|hukuk|The city council meets on Monday.|Belediye meclisi pazartesi toplanıyor.|Bir yeri yönetmek için seçilmiş kişilerin kurulu.
+count|saymak||verb|A1|okul|Can you count to ten?|Ona kadar sayabilir misin?|Sayıları sırayla söylemek.
+county|-|ABD/İngiltere yönetim birimi; Türkçe karşılığı yok
+couple|çift||noun|A2|aile|They are a happy couple.|Onlar mutlu bir çift.|Birlikte olan iki kişi.
+crime|suç||noun|B1|hukuk|Crime is rising in the city.|Şehirde suç artıyor.|Kanuna aykırı davranış.
+cry|ağlamak||verb|A1|duygular|The baby started to cry.|Bebek ağlamaya başladı.|Gözlerinden yaş akıtmak.
+culture|-|Türkçesi neredeyse aynı (kültür)
+cup|fincan|bardak|noun|A1|yiyecek|A cup of coffee, please.|Bir fincan kahve lütfen.|Çay ya da kahve içilen kulplu küçük kap.
+current|güncel||adjective|B2|zaman|This is the current price.|Bu güncel fiyat.|Şu anki, bugüne ait.
+dad|-|baba (father) ile çakışır
+dance|-|Türkçesi neredeyse aynı (dans)
+dark|karanlık||adjective|A1|doğa|It is dark outside.|Dışarısı karanlık.|Işığı olmayan.
+data|veri||noun|B1|teknoloji|The data is on my computer.|Veri bilgisayarımda.|İncelenmek için toplanan bilgi.
+date|-|tarih (history) ile çakışır; anlam çok
+daughter|-|kız (girl) ile çakışır
+dead|ölü||adjective|B1|sağlık|The plant is dead.|Bitki ölü.|Hayatı sona ermiş.
+decade|-|Türkçesi iki kelime (on yıl)
+deep|derin||adjective|A2|doğa|The lake is very deep.|Göl çok derin.|Dibi yüzeyden çok aşağıda olan.
+defense|savunma||noun|B1|hukuk|The team has a strong defense.|Takımın güçlü bir savunması var.|Saldırıya karşı korunma.|defence
+degree|derece||noun|B1|hava|The temperature rose by one degree.|Sıcaklık bir derece arttı.|Sıcaklığı ya da açıyı ölçen birim.
+demand|talep||noun|B2|iş|There is a high demand for nurses.|Hemşirelere yüksek talep var.|Bir şeyin istenmesi, istek.
+describe|betimlemek|tanımlamak|verb|B1|okul|Describe your house.|Evini betimle.|Bir şeyin nasıl olduğunu sözle anlatmak.
+despite|-|edat
+direct|doğrudan||adjective|B1|seyahat|Is there a direct flight?|Doğrudan bir uçuş var mı?|Arada başka bir şey olmadan.
+director|yönetmen|müdür|noun|B1|iş|The director of the film is French.|Filmin yönetmeni Fransız.|Film ya da oyunu yöneten kişi.
+disease|hastalık||noun|B1|sağlık|This disease is very rare.|Bu hastalık çok nadir.|Vücudun sağlıklı işleyişini bozan durum.
+district|ilçe|semt|noun|B1|şehir|We live in a quiet district.|Sessiz bir ilçede yaşıyoruz.|Bir şehrin ya da ilin bölümü.
+draw|çizmek||verb|A1|okul|Draw a house.|Bir ev çiz.|Kalemle resim yapmak.
+dream|rüya|hayal|noun|A2|duygular|I had a strange dream.|Garip bir rüya gördüm.|Uyurken görülen görüntüler.
+dress|elbise||noun|A1|günlük|She is wearing a red dress.|Kırmızı bir elbise giyiyor.|Kadınların giydiği tek parça giysi.
+drop|düşürmek||verb|B1|günlük|Don't drop the glass.|Bardağı düşürme.|Elindeki bir şeyi kazayla bırakmak.
+drug|-|ilaç (medicine) ile çakışır; anlam çok
+earth|-|dünya (world) ile çakışır
+east|doğu||noun|A2|doğa|The sun rises in the east.|Güneş doğudan doğar.|Güneşin çıktığı yön.
+economy|-|Türkçesi neredeyse aynı (ekonomi)
+effort|çaba||noun|B1|soyut|Learning needs effort.|Öğrenmek çaba ister.|Bir işi başarmak için harcanan emek.
+eight|sekiz||noun|A1|günlük|I sleep eight hours.|Sekiz saat uyurum.|Yediden sonra gelen sayı.
+election|seçim||noun|B1|hukuk|The election is next month.|Seçim gelecek ay.|Halkın oy vererek yönetici belirlemesi.
+energy|-|Türkçesi neredeyse aynı (enerji)
+enjoy|hoşlanmak|eğlenmek|verb|A2|duygular|I enjoy reading.|Okumaktan hoşlanırım.|Bir şeyden zevk almak.
+enter|girmek||verb|A2|ev|Please enter the room.|Lütfen odaya gir.|Bir yerin içine geçmek.
+entire|-|bütün (whole) ile çakışır
+evening|akşam||noun|A1|zaman|I read in the evening.|Akşam kitap okurum.|Günün güneş battıktan sonraki bölümü.
+event|olay|etkinlik|noun|B1|günlük|It was a big event.|Büyük bir olaydı.|Önemli ya da dikkat çeken gelişme.
+example|örnek||noun|A1|okul|Give me an example.|Bana bir örnek ver.|Bir şeyi açıklamak için gösterilen benzer durum.
+exist|-|Türkçesi iki kelime (var olmak)
+explain|açıklamak||verb|A2|okul|Can you explain this word?|Bu kelimeyi açıklayabilir misin?|Bir şeyi anlaşılır hale getirmek.
+factor|etken|faktör|noun|B2|soyut|Price is an important factor.|Fiyat önemli bir etken.|Bir sonucu etkileyen neden.
+fail|-|Türkçesi iki kelime (başarısız olmak)
+fair|adil||adjective|B1|hukuk|That is not fair!|Bu adil değil!|Herkese eşit davranan.
+fast|-|hızlı (quick) ile çakışır
+fear|korku||noun|A2|duygular|She has a fear of dogs.|Köpeklerden korkusu var.|Tehlike karşısında duyulan kaygılı his.
+feature|özellik||noun|B1|teknoloji|This phone has a new feature.|Bu telefonun yeni bir özelliği var.|Bir şeyi başkalarından ayıran nitelik.
+federal|-|ABD'ye özgü; Türkçe karşılığı yaygın değil
+female|dişi||adjective|B1|hayvanlar|The female bird is brown.|Dişi kuş kahverengi.|Yumurta ya da yavru veren cinsten.
+field|tarla|alan|noun|A2|doğa|The farmer works in the field.|Çiftçi tarlada çalışıyor.|Ekin ekilen geniş toprak.
+fill|doldurmak||verb|A2|ev|Fill the glass with water.|Bardağı suyla doldur.|İçini tamamen bir şeyle kaplamak.
+film|-|Türkçesi aynı yazılıyor (film)
+finish|bitirmek||verb|A1|zaman|I will finish my homework.|Ödevimi bitireceğim.|Bir işi sona erdirmek.
+fire|ateş|yangın|noun|A1|doğa|We sat by the fire.|Ateşin yanında oturduk.|Yanan şeyin çıkardığı ışık ve sıcaklık.
+firm|-|Türkçesi neredeyse aynı (firma); company ile çakışır
+fit|-|anlam çok
+floor|zemin|kat|noun|A1|ev|The floor is wet.|Zemin ıslak.|Odanın üzerine basılan alt yüzeyi.
+fly|uçmak||verb|A1|seyahat|Birds can fly.|Kuşlar uçabilir.|Havada kanatla ya da uçakla gitmek.
+focus|odaklanmak||verb|B1|okul|Focus on your work.|İşine odaklan.|Dikkatini tek bir şeye vermek.
+foreign|yabancı||adjective|A2|seyahat|I want to learn a foreign language.|Yabancı bir dil öğrenmek istiyorum.|Başka bir ülkeden gelen.
+former|-|eski (old) ile çakışır
+forward|ileri||adverb|A2|günlük|Take one step forward.|Bir adım ileri at.|Öne doğru.
+fun|eğlence|keyif|noun|A1|günlük|We had a lot of fun.|Çok eğlendik.|Hoşça vakit geçirme.
+fund|-|Türkçesi neredeyse aynı (fon)
+gain|-|kazanmak (win) ile çakışır
+glass|bardak|cam|noun|A1|ev|A glass of water, please.|Bir bardak su lütfen.|Su içilen cam kap.
+growth|büyüme||noun|B2|iş|The company shows fast growth.|Şirket hızlı bir büyüme gösteriyor.|Boyut ya da miktarın artması.
+guess|-|Türkçesi iki kelime (tahmin etmek)
+gun|silah||noun|B1|hukuk|The police officer has a gun.|Polis memurunun silahı var.|Mermi atan araç.
+hair|saç||noun|A1|vücut|She has long hair.|Uzun saçları var.|Başta biten ince teller.
+handle|-|anlam çok
+hang|asmak||verb|B1|ev|Hang your coat here.|Ceketini buraya as.|Bir şeyi yukarıdan bir yere takmak.
+hate|-|Türkçesi iki kelime (nefret etmek)
+heat|sıcaklık||noun|B1|hava|I can't stand the heat.|Sıcağa dayanamıyorum.|Havanın ya da bir şeyin sıcak olma durumu.
+heavy|ağır||adjective|A1|günlük|This bag is heavy.|Bu çanta ağır.|Kaldırması zor, çok kilolu.
+hell|-|argo kullanımı çok
+hide|gizlemek|saklamak|verb|B1|günlük|Hide the money.|Parayı gizle.|Bir şeyi başkaları görmesin diye örtmek.
+hotel|-|Türkçesi neredeyse aynı (otel)
+huge|kocaman|devasa|adjective|B1|günlük|They live in a huge house.|Kocaman bir evde yaşıyorlar.|Çok çok büyük.
+hundred|-|yüz (face) ile çakışır
+hurt|incitmek||verb|B1|sağlık|Don't hurt the cat.|Kediyi incitme.|Birine acı vermek.
+husband|koca|eş|noun|A1|aile|Her husband is a teacher.|Kocası öğretmen.|Evli bir kadının hayat arkadaşı.
+identify|-|Türkçesi tek kelimeyle net değil
+image|görüntü|resim|noun|B1|teknoloji|The image on the screen is clear.|Ekrandaki görüntü net.|Ekranda ya da aynada görülen şekil.
+imagine|-|Türkçesi iki kelime (hayal etmek)
+improve|-|geliştirmek (develop) ile çakışır
+indeed|-|tek karşılığı yok
+indicate|-|göstermek (show) ile çakışır
+industry|sanayi|endüstri|noun|B2|iş|The car industry is big here.|Burada otomobil sanayisi büyük.|Fabrikalarda mal üretme işleri.
+instead|-|tek karşılığı yok
+island|ada||noun|A2|seyahat|We stayed on a small island.|Küçük bir adada kaldık.|Her yanı suyla çevrili kara parçası.
+join|katılmak||verb|A2|günlük|Join us for dinner.|Akşam yemeğine bize katıl.|Bir gruba ya da etkinliğe dahil olmak.
+judge|yargıç|hakim,hâkim|noun|B1|hukuk|The judge made a decision.|Yargıç bir karar verdi.|Mahkemede karar veren kişi.
+labor|-|Türkçesi bağlama göre değişir (emek, işçilik)
+lack|eksiklik|yokluk|noun|B2|soyut|The lack of water is a problem.|Su eksikliği bir sorun.|Gereken bir şeyin bulunmaması.
+lady|hanım||noun|A2|aile|Ask that lady.|O hanıma sor.|Kibar biçimde söylenen kadın.
+land|toprak|kara,arazi|noun|B1|doğa|They bought some land.|Biraz toprak aldılar.|Üzerinde yaşanan ya da ekin ekilen yer.
+language|dil||noun|A1|okul|English is a global language.|İngilizce küresel bir dil.|İnsanların konuşup anlaştığı sözcük sistemi.
+laugh|gülmek||verb|A1|duygular|They laugh at my jokes.|Şakalarıma gülüyorlar.|Komik bir şey karşısında sesli sevinç göstermek.
+lawyer|avukat||noun|B1|hukuk|I need a lawyer.|Bir avukata ihtiyacım var.|Mahkemede insanları savunan kişi.
+lay|-|anlam çok
+leader|-|Türkçesi neredeyse aynı (lider)
+leg|bacak||noun|A1|vücut|My leg hurts.|Bacağım ağrıyor.|Kalçadan ayağa kadar uzanan uzuv.
+legal|yasal||adjective|B1|hukuk|Is this legal?|Bu yasal mı?|Kanuna uygun olan.
+letter|mektup|harf|noun|A1|günlük|I wrote a letter to my aunt.|Teyzeme bir mektup yazdım.|Zarfa konup gönderilen yazı.
+likely|-|muhtemel (probable) ile çakışır
+limit|sınır||noun|B1|soyut|There is a speed limit here.|Burada hız sınırı var.|Geçilmemesi gereken nokta.
+list|-|Türkçesi neredeyse aynı (liste)
+loss|kayıp||noun|B1|iş|The company had a big loss.|Şirket büyük bir kayıp yaşadı.|Bir şeyi yitirme.
+main|ana|temel|adjective|A2|soyut|This is the main road.|Bu ana yol.|En önemli, başlıca.
+male|erkek||adjective|B1|hayvanlar|The male bird is very colourful.|Erkek kuş çok renkli.|Dişi olmayan cinsten.
+manage|-|yönetmek (lead) ile çakışır
+manager|yönetici|müdür|noun|A2|iş|I want to speak to the manager.|Yöneticiyle konuşmak istiyorum.|Bir işyerini ya da ekibi yöneten kişi.
+march|-|anlam çok (mart ayı / yürüyüş)
+marriage|evlilik||noun|B1|aile|Their marriage is very happy.|Evlilikleri çok mutlu.|İki kişinin resmî olarak birleşmesi.
+marry|evlenmek||verb|A2|aile|Will you marry me?|Benimle evlenir misin?|Biriyle hayatını resmî olarak birleştirmek.
+material|malzeme||noun|B1|iş|What material is this?|Bu hangi malzeme?|Bir şeyin yapıldığı madde.
+measure|ölçmek||verb|B1|okul|Measure the table.|Masayı ölç.|Bir şeyin boyunu ya da miktarını bulmak.
+media|-|Türkçesi neredeyse aynı (medya)
+medical|tıbbi|tıbbî|adjective|B1|sağlık|He needs medical help.|Tıbbi yardıma ihtiyacı var.|Hastalık ve tedaviyle ilgili.
+mention|bahsetmek||verb|B1|günlük|Don't mention it to anyone.|Bundan kimseye bahsetme.|Bir konuyu kısaca söylemek.
+message|-|Türkçesi neredeyse aynı (mesaj)
+method|yöntem||noun|B1|okul|This is a good method.|Bu iyi bir yöntem.|Bir işi yapma yolu.
+middle|orta||noun|A2|günlük|Stand in the middle.|Ortada dur.|Kenarlardan eşit uzaklıktaki yer.
+mile|-|Türkçesi neredeyse aynı (mil)
+military|askeri|askerî|adjective|B2|hukuk|They visited a military base.|Askeri bir üssü ziyaret ettiler.|Ordu ve askerlikle ilgili.
+minister|bakan||noun|B2|hukuk|The minister visited our school.|Bakan okulumuzu ziyaret etti.|Hükûmette bir alanı yöneten kişi.
+miss|özlemek||verb|A2|duygular|I miss my family.|Ailemi özlüyorum.|Uzakta olan birini görmek istemek.
+mistake|hata||noun|A1|okul|I made a mistake.|Bir hata yaptım.|Yanlış yapılan şey.
+mouth|ağız||noun|A1|vücut|Open your mouth.|Ağzını aç.|Yüzde yemek yenen ve konuşulan bölüm.
+movement|hareket||noun|B1|soyut|I saw a movement in the dark.|Karanlıkta bir hareket gördüm.|Yer ya da durum değiştirme.
+movie|-|Türkçesi film; aynı yazılıyor
+murder|cinayet||noun|B2|hukuk|The police are investigating the murder.|Polis cinayeti araştırıyor.|Birinin kasten öldürülmesi.
+nation|millet|ulus|noun|B1|hukuk|The whole nation watched the game.|Bütün millet maçı izledi.|Aynı ülkede yaşayan insan topluluğu.
+natural|doğal||adjective|B1|doğa|I like natural food.|Doğal yiyecekleri severim.|İnsan eliyle yapılmamış.
+nature|doğa||noun|A2|doğa|I love walking in nature.|Doğada yürümeyi severim.|Ağaçlar, dağlar gibi insan eliyle yapılmamış her şey.
+network|ağ||noun|B1|teknoloji|The network is slow today.|Ağ bugün yavaş.|Birbirine bağlı bilgisayarlar bütünü.
+nice|güzel||adjective|A1|günlük|What a nice day!|Ne güzel bir gün!|Hoşa giden.
+normal|-|Türkçesi aynı yazılıyor (normal)
+north|kuzey||noun|A2|doğa|The wind comes from the north.|Rüzgâr kuzeyden esiyor.|Pusulanın gösterdiği yön.
+notice|-|Türkçesi iki kelime (fark etmek)
+obvious|belli|açık|adjective|B2|soyut|The answer is obvious.|Cevap belli.|Kolayca görülen, anlaşılan.
+occur|-|olmak (become) ile çakışır
+officer|memur|subay|noun|B1|hukuk|The officer checked my passport.|Memur pasaportumu kontrol etti.|Devlet işinde çalışan görevli.
+oil|yağ||noun|A2|yiyecek|Fry it in oil.|Yağda kızart.|Yemek pişirmede kullanılan kaygan sıvı.
+original|özgün|orijinal|adjective|B2|soyut|This is an original idea.|Bu özgün bir fikir.|Başkasından kopyalanmamış.
+page|sayfa||noun|A1|okul|Open your book to page ten.|Kitabınızı onuncu sayfaya açın.|Kitaptaki kâğıtların her bir yüzü.
+pain|ağrı|acı|noun|A2|sağlık|I have a pain in my back.|Sırtımda ağrı var.|Vücutta hissedilen rahatsız edici his.
+paper|kâğıt|kağıt|noun|A1|okul|I need a sheet of paper.|Bir kâğıda ihtiyacım var.|Üzerine yazı yazılan ince yaprak.
+park|-|Türkçesi aynı yazılıyor (park)
+peace|barış||noun|B1|hukuk|We want peace.|Barış istiyoruz.|Savaşın olmadığı durum.
+perfect|mükemmel||adjective|A2|duygular|Your English is perfect.|İngilizcen mükemmel.|Hiç eksiği olmayan.
+period|-|dönem (term) ile çakışır
+personal|kişisel||adjective|B1|günlük|This is a personal question.|Bu kişisel bir soru.|Yalnızca bir kişiyi ilgilendiren.
+phone|-|Türkçesi neredeyse aynı (telefon)
+photo|-|Türkçesi neredeyse aynı (fotoğraf)
+physical|-|Türkçesi neredeyse aynı (fiziksel)
+picture|resim||noun|A1|okul|Look at this picture.|Bu resme bak.|Çizilmiş ya da çekilmiş görüntü.
+piece|-|parça (part) ile çakışır
+plant|bitki||noun|A1|doğa|Water the plant.|Bitkiyi sula.|Topraktan beslenerek büyüyen canlı.
+player|oyuncu||noun|A2|günlük|He is a good player.|O iyi bir oyuncu.|Oyunda ya da maçta yer alan kişi.
+poor|fakir|yoksul|adjective|A2|günlük|They are very poor.|Çok fakirler.|Parası çok az olan.
+position|konum|pozisyon|noun|B1|günlük|What is our position on the map?|Haritadaki konumumuz ne?|Bir şeyin bulunduğu yer.
+positive|olumlu||adjective|B1|duygular|Stay positive.|Olumlu kal.|İyi yönleri gören.
+practice|alıştırma|pratik|noun|B1|okul|I need more practice.|Daha fazla alıştırmaya ihtiyacım var.|Bir beceriyi geliştirmek için tekrar tekrar yapma.
+prepare|hazırlamak||verb|A2|günlük|I will prepare dinner.|Akşam yemeğini hazırlayacağım.|Bir şeyi kullanıma uygun hale getirmek.
+press|basmak||verb|B1|teknoloji|Press the button.|Düğmeye bas.|Bir şeyin üstüne parmakla itmek.
+pressure|baskı|basınç|noun|B1|soyut|I work well under pressure.|Baskı altında iyi çalışırım.|Birini zorlayan etki.
+pretty|-|güzel (nice) ile çakışır
+previous|önceki||adjective|B1|zaman|I liked the previous book better.|Önceki kitabı daha çok beğendim.|Daha önce olan, bir öncekinden gelen.
+primary|-|anlam çok
+private|özel||adjective|B1|günlük|This is a private room.|Burası özel bir oda.|Herkese açık olmayan.
+produce|üretmek||verb|B1|iş|The factory will produce new cars.|Fabrika yeni arabalar üretecek.|Bir malı ya da ürünü yapmak.
+product|ürün||noun|B1|iş|This is our new product.|Bu bizim yeni ürünümüz.|Satılmak için yapılan mal.
+project|-|Türkçesi neredeyse aynı (proje)
+promise|söz|vaat|noun|A2|günlük|I made a promise.|Bir söz verdim.|Bir şeyi yapacağını kesin olarak bildirme.
+property|mülk||noun|B2|hukuk|This house is private property.|Bu ev özel mülk.|Birine ait ev, arazi gibi şeyler.
+protect|korumak||verb|B1|günlük|Protect your eyes from the sun.|Gözlerini güneşten koru.|Zarardan uzak tutmak.
+prove|kanıtlamak||verb|B1|hukuk|Can you prove it?|Bunu kanıtlayabilir misin?|Bir şeyin doğru olduğunu göstermek.
+purpose|-|amaç (goal) ile çakışır
+push|itmek||verb|A2|günlük|Push the door.|Kapıyı it.|Bir şeyi kendinden uzağa hareket ettirmek.
+quality|-|Türkçesi neredeyse aynı (kalite)
+race|yarış||noun|A2|günlük|He won the race.|Yarışı kazandı.|Kimin daha hızlı olduğunu görmek için yapılan yarışma.
+range|-|anlam çok
+ready|hazır||adjective|A1|günlük|Are you ready?|Hazır mısın?|Bir şeye başlamak için her şeyi tamam olan.
+realize|-|Türkçesi iki kelime (fark etmek)
+receive|-|almak (take) ile çakışır
+regard|-|tek karşılığı yok
+region|-|bölge (area) ile çakışır
+relate|-|tek karşılığı yok
+relative|akraba||noun|B1|aile|She is a relative of mine.|O benim bir akrabam.|Aynı aileden olan kişi.
+release|-|anlam çok
+resource|kaynak||noun|B2|iş|Water is a valuable resource.|Su değerli bir kaynak.|Kullanılabilecek değerli şey.
+respect|saygı||noun|B1|duygular|Show respect to your teachers.|Öğretmenlerine saygı göster.|Birine değer verip onu önemseme.
+response|yanıt|tepki|noun|B2|günlük|I am waiting for a response.|Bir yanıt bekliyorum.|Bir soruya ya da duruma verilen karşılık.
+review|-|anlam çok
+ride|binmek||verb|A2|seyahat|Can you ride a bike?|Bisiklete binebilir misin?|Bir taşıtın ya da hayvanın üstüne oturup gitmek.
+ring|yüzük||noun|A2|günlük|She has a gold ring.|Altın bir yüzüğü var.|Parmağa takılan halka biçiminde süs.
+rise|yükselmek||verb|B1|doğa|Prices rise every year.|Fiyatlar her yıl yükselir.|Daha yukarı çıkmak.
+risk|-|Türkçesi aynı yazılıyor (risk)
+river|nehir|ırmak|noun|A1|doğa|The river is very long.|Nehir çok uzun.|Denize ya da göle akan büyük su.
+rock|kaya||noun|A2|doğa|He sat on a big rock.|Büyük bir kayanın üstüne oturdu.|Çok büyük sert taş.
+role|-|Türkçesi neredeyse aynı (rol)
+roll|yuvarlamak||verb|B1|günlük|Roll the ball to me.|Topu bana yuvarla.|Bir şeyi döndürerek ilerletmek.
+round|yuvarlak||adjective|A2|günlük|The table is round.|Masa yuvarlak.|Daire biçiminde olan.
+rule|kural||noun|A2|okul|This is an important rule.|Bu önemli bir kural.|Uyulması gereken ilke.
+safe|güvenli||adjective|A2|günlük|This street is safe.|Bu sokak güvenli.|Tehlikesi olmayan.
+sale|indirim|satış|noun|B1|iş|The shoes are on sale.|Ayakkabılar indirimde.|Fiyatların düşürüldüğü dönem.
+save|kurtarmak|biriktirmek|verb|B1|günlük|The doctor tried to save him.|Doktor onu kurtarmaya çalıştı.|Birini tehlikeden çekip almak.
+scene|sahne||noun|B1|günlük|This is my favourite scene in the film.|Bu filmdeki en sevdiğim sahne.|Film ya da oyunun bir bölümü.
+science|bilim||noun|A1|okul|I love science.|Bilimi severim.|Doğayı ve evreni deneyle inceleyen bilgi alanı.
+score|puan|skor|noun|A2|günlük|What is the score?|Puan kaç?|Bir oyunda ya da sınavda alınan sayı.
+search|-|aramak (call) ile çakışır
+season|mevsim||noun|A1|hava|Summer is my favourite season.|Yaz en sevdiğim mevsim.|Yılın dört bölümünden biri.
+seat|koltuk|yer|noun|A2|seyahat|Is this seat free?|Bu koltuk boş mu?|Oturulacak yer.
+secret|sır||noun|A2|duygular|Can you keep a secret?|Sır tutabilir misin?|Başkalarından gizlenen bilgi.
+section|bölüm||noun|B1|okul|Read the first section.|İlk bölümü oku.|Bir bütünün ayrılmış kısmı.
+security|güvenlik||noun|B1|hukuk|Security is important at airports.|Havalimanlarında güvenlik önemlidir.|Tehlikeye karşı korunma durumu.
+seek|-|aramak (call) ile çakışır
+separate|ayrı||adjective|B1|günlük|We have separate rooms.|Ayrı odalarımız var.|Birbirinden bağımsız.
+series|dizi||noun|B1|günlük|I am watching a new series.|Yeni bir dizi izliyorum.|Bölümler halinde yayımlanan program.
+serious|ciddi||adjective|B1|duygular|This is a serious problem.|Bu ciddi bir sorun.|Önemli, şakası olmayan.
+seven|yedi||noun|A1|günlük|There are seven days in a week.|Bir haftada yedi gün var.|Altıdan sonra gelen sayı.
+sex|-|oyun için uygun değil
+shake|sallamak||verb|B1|günlük|Shake the bottle.|Şişeyi salla.|Bir şeyi hızla ileri geri oynatmak.
+shape|şekil|biçim|noun|A2|okul|What shape is it?|Bu ne şekil?|Bir şeyin dış görünüşü.
+shoot|-|Türkçesi iki kelime (ateş etmek)
+shop|dükkân|mağaza,dükkan|noun|A1|şehir|The shop opens at nine.|Dükkân dokuzda açılıyor.|Bir şeylerin satıldığı yer.
+short|kısa||adjective|A1|günlük|My hair is short.|Saçım kısa.|Boyu ya da süresi az olan.
+similar|benzer||adjective|B1|soyut|Our bags are similar.|Çantalarımız benzer.|Birbirine yakın özellikler taşıyan.
+single|bekâr|bekar,tek|adjective|B1|aile|Is he married or single?|Evli mi bekâr mı?|Evli olmayan.
+sister|-|kardeş (brother) ile çakışır
+site|-|anlam çok
+size|beden|boyut|noun|A2|günlük|What size do you need?|Hangi bedene ihtiyacın var?|Giysi ya da ayakkabının ölçüsü.
+skill|beceri||noun|B1|iş|Cooking is a useful skill.|Yemek yapmak yararlı bir beceri.|Bir işi iyi yapabilme yeteneği.
+slow|yavaş||adjective|A1|günlük|The bus is very slow.|Otobüs çok yavaş.|Hızı az olan.
+smile|gülümsemek||verb|A2|duygular|Smile for the camera.|Kameraya gülümse.|Dudaklarını hafifçe açarak sevincini göstermek.
+society|toplum||noun|B1|soyut|We live in a modern society.|Modern bir toplumda yaşıyoruz.|Bir arada yaşayan insanların bütünü.
+sort|-|anlam çok
+source|-|kaynak (resource) ile çakışır
+south|güney||noun|A2|doğa|Birds fly south in winter.|Kuşlar kışın güneye uçar.|Kuzeyin tam karşısındaki yön.
+space|uzay|alan|noun|B1|teknoloji|I want to travel to space.|Uzaya gitmek istiyorum.|Dünyanın dışındaki sonsuz boşluk.
