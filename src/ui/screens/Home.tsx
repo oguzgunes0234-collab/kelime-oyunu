@@ -5,6 +5,7 @@ import { DIFFICULTY_LABEL } from '../../core/pack';
 import type { Profile } from '../../core/profile';
 import { topicStatuses } from '../../core/topics';
 import type { WordPack } from '../../core/types';
+import { ChapterPath } from '../components/ChapterPath';
 import { BagIcon, BookIcon, CheckIcon, CoinIcon, FlameIcon, GearIcon, GridIcon, LettersIcon, SwapIcon } from '../components/Icons';
 
 interface Props {
@@ -67,18 +68,14 @@ export function Home({ pack, profile, setProfile, onPuzzle, puzzleSaved, tutoria
         </div>
       </header>
 
-      <section className="campaign-card" aria-labelledby="chapter-title">
+      <section className="campaign-card paper" aria-labelledby="chapter-title">
         <div className="campaign-top">
-          <h2 id="chapter-title">Bölüm {chapter}</h2>
+          <h2 id="chapter-title" className="ink-title">Bölüm {chapter}</h2>
           <span className="campaign-count">
             {done}/{size} bulmaca
           </span>
         </div>
-        <div className="chapter-steps" role="progressbar" aria-label={`Bölüm ${chapter} ilerlemesi`} aria-valuemin={0} aria-valuemax={size} aria-valuenow={done}>
-          {Array.from({ length: size }, (_, i) => (
-            <span key={i} className={i < done ? 'on' : ''} />
-          ))}
-        </div>
+        <ChapterPath info={{ chapter, done, size }} />
         <p className="campaign-meta">
           <span className={`daily-chip${goalDone ? ' done' : ''}`}>
             {goalDone ? <CheckIcon width={14} height={14} /> : null}

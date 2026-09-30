@@ -12,8 +12,119 @@
     <link rel="apple-touch-icon" href="./icon-192.png" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="Kelime Köprüsü" />
+    <script>
+      // Kayıtlı temayı (Açık/Koyu) ilk çizimden önce uygula: açılış ekranı ve oyun yanlış renkte parlamasın.
+      try {
+        var t = JSON.parse(localStorage.getItem('kelime-oyunu:profil:v1') || '{}').settings.theme;
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    </script>
+    <style>
+      /* Açılış ekranı: oyun yüklenmeden görünür, yüklenince kısa sürede kaybolur (src/main.tsx). */
+      #splash {
+        --p-bg: #fff6e9;
+        --p-ink: #2b1d14;
+        --p-muted: #6b5443;
+        --p-cell: #ffffff;
+        --p-line: #d9bfa0;
+        --p-accent: #ff8a3d;
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        display: grid;
+        place-items: center;
+        background: var(--p-bg);
+        color: var(--p-ink);
+        transition: opacity 300ms ease;
+        font-family: ui-rounded, 'SF Pro Rounded', 'Nunito', 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme='light']) #splash {
+          --p-bg: #1d1a24;
+          --p-ink: #fbf3e8;
+          --p-muted: #cdbfae;
+          --p-cell: #3b3448;
+          --p-line: #5b5068;
+        }
+      }
+      :root[data-theme='dark'] #splash {
+        --p-bg: #1d1a24;
+        --p-ink: #fbf3e8;
+        --p-muted: #cdbfae;
+        --p-cell: #3b3448;
+        --p-line: #5b5068;
+      }
+      #splash.hide {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .splash-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        padding: 24px;
+        text-align: center;
+      }
+      .splash-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 34px);
+        grid-auto-rows: 34px;
+        gap: 3px;
+      }
+      .splash-grid b,
+      .splash-grid i {
+        display: grid;
+        place-items: center;
+        border-radius: 5px;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 19px;
+      }
+      .splash-grid b {
+        background: var(--p-cell);
+        border: 1.5px solid var(--p-line);
+        color: var(--p-ink);
+      }
+      .splash-grid b.k {
+        background: var(--p-accent);
+        border-color: var(--p-ink);
+        color: #2b1d14;
+      }
+      .splash-title {
+        margin: 6px 0 0;
+        font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, 'Noto Serif', serif;
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
+      .splash-sub {
+        margin: 0;
+        font-size: 15px;
+        color: var(--p-muted);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #splash {
+          transition: none;
+        }
+      }
+    </style>
   </head>
   <body>
+    <div id="splash" aria-hidden="true">
+      <div class="splash-inner">
+        <!-- Küçük çengel bulmaca: KELİME yatay, KÖPRÜ dikey; ortak harf K. -->
+        <div class="splash-grid">
+          <b class="k">K</b><b>E</b><b>L</b><b>İ</b><b>M</b><b>E</b>
+          <b>Ö</b><i></i><i></i><i></i><i></i><i></i>
+          <b>P</b><i></i><i></i><i></i><i></i><i></i>
+          <b>R</b><i></i><i></i><i></i><i></i><i></i>
+          <b>Ü</b><i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <p class="splash-title">Kelime Köprüsü</p>
+        <p class="splash-sub">Türkçe · İngilizce çengel bulmaca</p>
+      </div>
+    </div>
     <div id="root"></div>
     <noscript>Kelime Köprüsü'nü oynamak için JavaScript'i etkinleştir.</noscript>
     <script type="module" src="/src/main.tsx"></script>

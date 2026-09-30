@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { chapterInfo } from '../../core/campaign';
+import { ChapterPath } from '../components/ChapterPath';
 import { DAILY_PUZZLE_GOAL, currentStreak, goalDoneToday } from '../../core/daily';
 import { languageInfo } from '../../core/languages';
 import { displayWord } from '../../core/normalize';
@@ -20,7 +21,11 @@ interface Props {
 /** Bulmaca sonu: kelimelerin anlamları, örnek cümleler ve kazanılanlar. */
 export function PuzzleResult({ puzzle, outcome, profile, onAgain, onHome, onReview }: Props) {
   // Telefonda sonuç en üstten başlasın (bulmaca ekranı kaydırılmış olabilir).
-  useEffect(() => window.scrollTo(0, 0), []);
+  // Süslü parantez şart: scrollTo yeni Chrome'da Promise döndürüyor; React onu temizlik işlevi sanıp
+  // ekran kapanırken çöküyordu ("n is not a function").
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const chapter = chapterInfo(profile.campaign);
   const src = languageInfo(puzzle.direction.source);
   const tgt = languageInfo(puzzle.direction.target);
@@ -63,9 +68,12 @@ export function PuzzleResult({ puzzle, outcome, profile, onAgain, onHome, onRevi
           Bölüm {outcome.chapterCompleted} tamamlandı! Sırada Bölüm {outcome.chapterCompleted + 1}.
         </p>
       ) : outcome.campaignCounted ? (
-        <p className="info-line">
-          Bölüm {chapter.chapter}: {chapter.done}/{chapter.size} bulmaca
-        </p>
+        <div className="result-path paper">
+          <p>
+            <strong className="ink-title">Bölüm {chapter.chapter}</strong> · {chapter.done}/{chapter.size} bulmaca
+          </p>
+          <ChapterPath info={chapter} layout="row" />
+        </div>
       ) : (
         !puzzle.topic && <p className="info-line">Bölümde ilerlemek için bulmacanın tüm kelimelerini çöz (yardım serbest).</p>
       )}
@@ -146,7 +154,7 @@ export function PuzzleResult({ puzzle, outcome, profile, onAgain, onHome, onRevi
 
       <div className="stack">
         <button type="button" className="btn btn-primary btn-block" onClick={onAgain}>
-          {puzzle.topic ? 'Yeni konu bulmacası' : 'Sıradaki bulmaca'}
+          {puzzle.topic ? 'Yeni konu bulmacası' : outcome.chapterCompleted ? 'Devam' : 'Sıradaki bulmaca'}
         </button>
         {profile.review.length > 0 && (
           <button type="button" className="btn btn-secondary btn-block" onClick={onReview}>

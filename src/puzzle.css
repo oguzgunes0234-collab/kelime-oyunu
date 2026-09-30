@@ -32,6 +32,185 @@
   --cw-cell-bg: #3b3448;
 }
 
+/* ---------- Kâğıt / dergi dili (çizimsiz) ---------- */
+
+/* Başlıklar dergi başlığı gibi tırnaklı yazıyla; telefonun kendi yazı tipleri. */
+.ink-title {
+  font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, 'Noto Serif', ui-serif, serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+/* Kâğıt: çok hafif satır çizgileri ve ince kenar; gölge yerine çizgi. */
+.paper {
+  background-color: var(--surface);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 27px,
+    color-mix(in srgb, var(--line) 45%, transparent) 27px,
+    color-mix(in srgb, var(--line) 45%, transparent) 28px
+  );
+  border: 1px solid var(--line);
+  box-shadow: none;
+}
+
+/* ---------- Bölüm yolu ---------- */
+
+.chapter-path .path-nodes {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+  display: flex;
+  flex-direction: column-reverse; /* 1. bulmaca altta, sıradaki bölüm üstte */
+  align-items: center;
+  gap: 8px;
+}
+/* Düğümleri birleştiren kesik mürekkep çizgisi. */
+.chapter-path .path-nodes::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  bottom: 14px;
+  left: 50%;
+  border-left: 2px dashed var(--muted);
+  opacity: 0.45;
+}
+.path-node,
+.path-next {
+  position: relative;
+  z-index: 1;
+}
+.path-node span {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  font-size: 1.05rem;
+  background: var(--bg);
+  color: var(--muted);
+  border: 2px dashed color-mix(in srgb, var(--muted) 60%, transparent);
+}
+.path-node.is-done span {
+  background: var(--text);
+  color: var(--bg);
+  border: 2px solid var(--text);
+}
+.path-node.is-current span {
+  width: 48px;
+  height: 48px;
+  font-size: 1.25rem;
+  background: var(--accent);
+  color: #2b1d14;
+  border: 3px solid var(--text);
+  box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent) 28%, transparent);
+}
+.path-next span {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 2px dashed color-mix(in srgb, var(--muted) 60%, transparent);
+  background: var(--bg);
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--muted);
+}
+/* Yatay sıra: sonuç ve bölüm sonu ekranları, kısa telefonlarda ana sayfa. */
+.chapter-path.layout-row .path-nodes {
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.chapter-path.layout-row .path-nodes::before {
+  top: 50%;
+  bottom: auto;
+  left: 16px;
+  right: 16px;
+  border-left: none;
+  border-top: 2px dashed var(--muted);
+}
+.chapter-path.layout-row .path-node span {
+  width: 36px;
+  height: 36px;
+  font-size: 0.95rem;
+}
+.chapter-path.layout-row .path-node.is-current span {
+  width: 42px;
+  height: 42px;
+}
+@media (max-height: 800px) {
+  .chapter-path.layout-auto .path-nodes {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .chapter-path.layout-auto .path-nodes::before {
+    top: 50%;
+    bottom: auto;
+    left: 16px;
+    right: 16px;
+    border-left: none;
+    border-top: 2px dashed var(--muted);
+  }
+  .chapter-path.layout-auto .path-node span {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+  }
+  .chapter-path.layout-auto .path-node.is-current span {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* Çok dar ekranda yatay yolun sonundaki "Bölüm N" etiketi iki satıra kırılıyor. */
+@media (max-width: 359px) and (max-height: 800px) {
+  .chapter-path.layout-auto .path-next {
+    display: none;
+  }
+}
+
+/* Sonuç ekranındaki küçük bölüm yolu */
+.result-path {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 14px;
+}
+
+/* Bölüm sonu ekranı */
+.chapter-done {
+  gap: 16px;
+}
+.chapter-stamp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 20px 16px;
+  border-radius: var(--radius);
+  text-align: center;
+}
+.stamp-eyebrow,
+.stamp-label {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+.stamp-number {
+  font-size: 4rem;
+  line-height: 1;
+}
+.chapter-stamp .chapter-path {
+  margin-top: 12px;
+  width: 100%;
+}
+
 /* ---------- Ana sayfa: bölüm, ana eylem, modlar ---------- */
 
 .home {
@@ -53,8 +232,11 @@
   gap: 8px;
 }
 .campaign-top h2 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 1.1;
+}
+.campaign-card.paper {
+  box-shadow: none;
 }
 .campaign-count {
   font-weight: 800;

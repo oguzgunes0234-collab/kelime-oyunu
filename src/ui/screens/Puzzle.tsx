@@ -32,6 +32,7 @@ import type { Difficulty, Direction, WordPack } from '../../core/types';
 import { ChevronLeftIcon, ChevronRightIcon, ClueArrow, CloseIcon, CoinIcon, QuestionIcon, TOOL_ICONS } from '../components/Icons';
 import { Keyboard } from '../components/Keyboard';
 import { Sheet } from '../components/Sheet';
+import { ChapterComplete } from './ChapterComplete';
 import { PuzzleResult } from './PuzzleResult';
 import { ToolEmpty } from './ToolEmpty';
 
@@ -124,6 +125,7 @@ export function Puzzle(props: Props) {
   const [puzzle, setPuzzle] = useState<PuzzleState>(() => initialPuzzle(props));
   const [outcome, setOutcome] = useState<PuzzleOutcome | null>(null);
   const [showResult, setShowResult] = useState(false);
+  const [showChapter, setShowChapter] = useState(false);
   const [dialog, setDialog] = useState<Dialog>(null);
   const [note, setNote] = useState<Note>(null);
   const noteSeq = useRef(0);
@@ -344,13 +346,18 @@ export function Puzzle(props: Props) {
   const solved = solvedCount(puzzle);
   const total = cw.words.length;
 
+  if (showChapter && outcome?.chapterCompleted) {
+    return <ChapterComplete chapter={outcome.chapterCompleted} profile={profile} onNext={props.onNewPuzzle} onHome={props.onExit} />;
+  }
+
   if (showResult && outcome) {
     return (
       <PuzzleResult
         puzzle={puzzle}
         outcome={outcome}
         profile={profile}
-        onAgain={props.onNewPuzzle}
+        // Bölüm bittiyse önce kelime sonuçları, sonra bölüm sonu ekranı.
+        onAgain={outcome.chapterCompleted ? () => setShowChapter(true) : props.onNewPuzzle}
         onHome={props.onExit}
         onReview={props.onOpenReview}
       />

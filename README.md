@@ -97,6 +97,23 @@ ilk açılıştan sonra oyun çevrimdışı da açılır. PWA olarak ana ekrana 
   "?" → "Eğitimi baştan oynat" ya da Ayarlar'dan açılır.
 - **Hızlı tur örneği:** gerçek kontrollerle bir kelime çözdürür; hak
   harcanmaz, ilerleme kaydedilmez. Ayarlar'dan yeniden oynanabilir.
+- **Bölümler (`core/campaign.ts`):** 5 bulmaca = 1 bölüm; yalnızca tüm
+  kelimeleri çözülen ana oyun bulmacası sayılır. Bölüm yalnızca ızgara boyunu
+  belirler (Bölüm 1: 7×7, sonrası 9×8); kelime seviyesini uyarlamalı zorluk
+  belirler ve oyuncuya seçtirilmez. Ana sayfada bölüm yolu (biten ✓, sıradaki
+  vurgulu, kilitli kesik çizgi), sonuç ekranında küçük yol, bölüm bitince
+  "Bölüm N tamamlandı" ekranı (yeni ödül ya da para birimi yok). Eski kayıtlar
+  Bölüm 1'den başlar (tamamlanan bulmaca sayısı eskiden tutulmuyordu); diğer
+  veriler korunur, elle seçilmiş seviye uyarlamalı seviyeye aktarılır.
+- **Konu modları (`core/topics.ts`):** Sağlık, Teknoloji, Hukuk, Seyahat ve
+  şehir. Bir mod en az 60 gözden geçirilmiş (`reviewed: true`) kelimeyle
+  açılır; şu an hiçbiri açık değil ve "Hazırlanıyor" olarak görünür. Konu
+  bulmacası bölümü ve zorluğu değiştirmez, günlük hedefe sayılır.
+- **Açılış ekranı:** `index.html` içinde; KELİME/KÖPRÜ mini çengel bulmaca
+  logosu, yükleme çubuğu yok, ~0,7 sn sonra kaybolur.
+- **Hızlı turda harf geri alma:** cevaptaki bir harfe dokunmak onu taşlara
+  geri gönderir (ücretsiz); diğer harfler kaymaz, denetim yalnızca tüm kareler
+  dolunca yapılır.
 - **Kayıt:** hesap yok; tüm ilerleme `localStorage`'da
   (`kelime-oyunu:profil:v1`). Depolama kapalıysa oyun yine çalışır.
 - **Erişilebilirlik:** klavye (harf yaz, ⌫ Geri al, Esc Temizle, Enter

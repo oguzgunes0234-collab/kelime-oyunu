@@ -38,6 +38,16 @@ export function chapterInfo(c: CampaignState): ChapterInfo {
   return { chapter: Math.floor(n / CHAPTER_SIZE) + 1, done: n % CHAPTER_SIZE, size: CHAPTER_SIZE };
 }
 
+export type PathNodeState = 'done' | 'current' | 'locked';
+
+/**
+ * Bölüm yolundaki düğümler (1 … CHAPTER_SIZE): biten bulmacalar "done",
+ * sıradaki "current", sonrakiler "locked". Bölüm bitince (done = size) hepsi "done".
+ */
+export function pathNodes(info: Pick<ChapterInfo, 'done' | 'size'>): PathNodeState[] {
+  return Array.from({ length: info.size }, (_, i) => (i < info.done ? 'done' : i === info.done ? 'current' : 'locked'));
+}
+
 /** Bölümün ızgara boyu: Bölüm 1 eğitimden sonra yumuşak geçiş (7×7), sonrası 9×8. */
 export function chapterGrid(chapter: number): { rows: number; cols: number } {
   return chapter <= 1 ? { rows: 7, cols: 7 } : { rows: 9, cols: 8 };

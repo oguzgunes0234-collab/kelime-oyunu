@@ -1,11 +1,12 @@
 import { describe, expect, it } from 'vitest';
-import { CHAPTER_SIZE, chapterGrid, chapterInfo, recordCampaignPuzzle } from '../src/core/campaign';
+import { CHAPTER_SIZE, chapterGrid, chapterInfo, pathNodes, recordCampaignPuzzle } from '../src/core/campaign';
 import { defaultProfile, type Profile } from '../src/core/profile';
 import { applyPuzzle, cellsOf, finishPuzzle, isLocked, newPuzzle, typeLetter, type PuzzleState } from '../src/core/puzzle';
 import { seededRng } from '../src/core/rng';
 import { migrateToCampaign } from '../src/core/storage';
 import { MIN_TOPIC_WORDS, TOPIC_MODES, topicEntryIds, topicStatus, topicStatuses } from '../src/core/topics';
 import type { Direction, WordPack } from '../src/core/types';
+import { toCase } from '../src/ui/screens/ChapterComplete';
 import packJson from '../src/data/pack-tr-en.json';
 
 const pack = packJson as WordPack;
@@ -40,6 +41,12 @@ describe('bölümler', () => {
     expect(recordCampaignPuzzle({ puzzlesDone: 0 }).chapterCompleted).toBeNull();
   });
 
+  it('bölüm yolu: bitenler, sıradaki ve kilitliler', () => {
+    expect(pathNodes({ done: 0, size: 5 })).toEqual(['current', 'locked', 'locked', 'locked', 'locked']);
+    expect(pathNodes({ done: 3, size: 5 })).toEqual(['done', 'done', 'done', 'current', 'locked']);
+    expect(pathNodes({ done: 5, size: 5 })).toEqual(['done', 'done', 'done', 'done', 'done']);
+  });
+
   it('Bölüm 1 küçük ızgara, sonrası normal ızgara', () => {
     expect(chapterGrid(1)).toEqual({ rows: 7, cols: 7 });
     expect(chapterGrid(2)).toEqual({ rows: 9, cols: 8 });
@@ -68,6 +75,17 @@ describe('bölümler', () => {
     expect(completedChapters).toEqual([1, 2]);
     // Hatasız oyuncu için seviye yükseldi, ama bu bölüm sayısını değiştirmedi.
     expect(p.adaptive.difficulty).not.toBe('easy');
+  });
+});
+
+describe('bölüm numarasına gelen ek', () => {
+  it('sayının okunuşuna göre doğru ek', () => {
+    const cases: [number, string][] = [
+      [1, "1'e"], [2, "2'ye"], [3, "3'e"], [4, "4'e"], [5, "5'e"], [6, "6'ya"], [7, "7'ye"], [8, "8'e"], [9, "9'a"],
+      [10, "10'a"], [20, "20'ye"], [30, "30'a"], [40, "40'a"], [50, "50'ye"], [60, "60'a"], [70, "70'e"], [80, "80'e"],
+      [90, "90'a"], [100, "100'e"], [12, "12'ye"], [26, "26'ya"],
+    ];
+    for (const [n, want] of cases) expect(toCase(n)).toBe(want);
   });
 });
 
