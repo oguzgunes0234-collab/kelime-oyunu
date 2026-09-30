@@ -392,7 +392,7 @@ export function Puzzle(props: Props) {
   if (showResult && outcome) {
     return (
       <PuzzleResult
-        practiceCount={practiceDone ? 0 : practiceItems.length}
+        practiceWords={practiceItems.map((i) => i.answer)}
         practiceDone={practiceDone}
         onPractice={() => setPractice(practiceItems)}
         puzzle={puzzle}

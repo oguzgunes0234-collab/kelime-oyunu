@@ -1677,12 +1677,45 @@ div.note {
 .practice-offer {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 14px 16px;
+  gap: 10px;
+  padding: 16px;
   border-radius: var(--radius);
+  border: 2px solid var(--primary);
+  background: var(--info-bg);
+  box-shadow: var(--shadow);
+}
+.practice-offer h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--primary);
+  text-wrap: balance;
 }
 .practice-offer p {
   margin: 0;
+}
+.practice-chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.practice-chips li {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+.practice-reward {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--muted);
 }
 .practice-card {
   display: flex;

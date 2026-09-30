@@ -17,14 +17,14 @@ interface Props {
   onAgain: () => void;
   onHome: () => void;
   onReview: () => void;
-  /** Zorlanılan kelime sayısı (0: pekiştirme düğmesi yok). */
-  practiceCount: number;
+  /** Pekiştirilecek kelimeler (hedef dilde; boşsa pekiştirme kartı yok). */
+  practiceWords: string[];
   practiceDone: { coins: number; mastered: number; total: number } | null;
   onPractice: () => void;
 }
 
 /** Bulmaca sonu: kelimelerin anlamları, örnek cümleler ve kazanılanlar. */
-export function PuzzleResult({ puzzle, outcome, profile, onAgain, onHome, onReview, practiceCount, practiceDone, onPractice }: Props) {
+export function PuzzleResult({ puzzle, outcome, profile, onAgain, onHome, onReview, practiceWords, practiceDone, onPractice }: Props) {
   // Telefonda sonuç en üstten başlasın (bulmaca ekranı kaydırılmış olabilir).
   // Süslü parantez şart: scrollTo yeni Chrome'da Promise döndürüyor; React onu temizlik işlevi sanıp
   // ekran kapanırken çöküyordu ("n is not a function").
@@ -38,6 +38,7 @@ export function PuzzleResult({ puzzle, outcome, profile, onAgain, onHome, onRevi
   const correct = outcome.results.filter((r) => r.status === 'correct').length;
   const clean = outcome.results.filter((r) => r.status === 'correct' && !r.helped && r.wrongAttempts === 0).length;
   const streak = currentStreak(profile.daily, new Date());
+  const practicePending = !practiceDone && practiceWords.length > 0;
   const heading = correct === total ? (clean === total ? 'Kusursuz bulmaca!' : 'Bulmaca tamam!') : correct >= total / 2 ? 'Güzel iş!' : 'Her bulmaca bir adım';
 
   return (
@@ -48,6 +49,31 @@ export function PuzzleResult({ puzzle, outcome, profile, onAgain, onHome, onRevi
           {total} kelimeden {correct} tanesini çözdün{clean > 0 ? `, ${clean} tanesini hiç yardım almadan` : ''}.
         </p>
       </header>
+
+      {/* Pekiştirme oyunun asıl amacı: sonuçların en üstünde, öne çıkan kart. İsteğe bağlı. */}
+      {practicePending && (
+        <section className="practice-offer" aria-labelledby="practice-title">
+          <h2 id="practice-title">Öğrendiğini pekiştir</h2>
+          <p>Zorlandığın {practiceWords.length} kelimeyi şimdi cümle içinde bir kez daha çalış; kalıcı olsun.</p>
+          <ul className="practice-chips" lang={puzzle.direction.target}>
+            {practiceWords.map((w) => (
+              <li key={w}>{displayWord(w, puzzle.direction.target)}</li>
+            ))}
+          </ul>
+          <button type="button" className="btn btn-primary btn-block btn-big" onClick={onPractice}>
+            Pekiştir · {practiceWords.length} kelime
+          </button>
+          <p className="practice-reward">
+            <CoinIcon width={14} height={14} /> Cevaba bakmadan bildiğin her kelime +{PRACTICE_COINS_PER_WORD} jeton. Yanlış hiçbir şey eksiltmez.
+          </p>
+        </section>
+      )}
+      {practiceDone && (
+        <p className="info-line good">
+          Pekiştirme: {practiceDone.total} kelimeden {practiceDone.mastered} tanesini bildin
+          {practiceDone.coins > 0 ? ` · +${practiceDone.coins} jeton` : ''}.
+        </p>
+      )}
 
       <div className="summary-stats">
         <div className="big-stat">
@@ -157,29 +183,8 @@ export function PuzzleResult({ puzzle, outcome, profile, onAgain, onHome, onRevi
         <p className="info-line good">{outcome.removedFromReview} kelimeyi artık biliyorsun — tekrar listenden çıkarıldı.</p>
       )}
 
-      {practiceDone ? (
-        <p className="info-line good">
-          Pekiştirme: {practiceDone.total} kelimeden {practiceDone.mastered} tanesini bildin
-          {practiceDone.coins > 0 ? ` · +${practiceDone.coins} jeton` : ''}.
-        </p>
-      ) : (
-        practiceCount > 0 && (
-          <div className="practice-offer paper">
-            <p>
-              <strong className="ink-title">Pekiştir</strong> · zorlandığın {practiceCount} kelimeyi cümle içinde bir kez daha çalış.
-            </p>
-            <p className="muted small">
-              İsteğe bağlı. Cevaba bakmadan bildiğin her kelime +{PRACTICE_COINS_PER_WORD} jeton; yanlış hiçbir şey eksiltmez.
-            </p>
-            <button type="button" className="btn btn-secondary btn-block" onClick={onPractice}>
-              Pekiştir ({practiceCount} kelime)
-            </button>
-          </div>
-        )
-      )}
-
       <div className="stack">
-        <button type="button" className="btn btn-primary btn-block" onClick={onAgain}>
+        <button type="button" className={`btn ${practicePending ? 'btn-secondary' : 'btn-primary'} btn-block`} onClick={onAgain}>
           {puzzle.topic ? 'Yeni konu bulmacası' : outcome.chapterCompleted ? 'Devam' : 'Sıradaki bulmaca'}
         </button>
         {profile.review.length > 0 && (
