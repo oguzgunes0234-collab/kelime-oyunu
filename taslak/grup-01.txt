@@ -1,0 +1,319 @@
+know|bilmek||verb|A1|günlük|I know the answer.|Cevabı biliyorum.|Bir şey hakkında bilgi sahibi olmak.
+good|iyi||adjective|A1|günlük|This is a good book.|Bu iyi bir kitap.|Beğenilen, kalitesi yüksek olan.
+like|beğenmek|sevmek|verb|A1|duygular|I like this song.|Bu şarkıyı beğeniyorum.|Bir şeyi hoş bulmak.
+look|bakmak||verb|A1|günlük|Look at the sky.|Gökyüzüne bak.|Gözlerini bir şeye çevirmek.
+make|yapmak||verb|A1|günlük|I make tea every morning.|Her sabah çay yaparım.|Bir şeyi ortaya çıkarmak, üretmek.
+now|şimdi||adverb|A1|zaman|I am busy now.|Şimdi meşgulüm.|Şu anda, bu anda.
+right|-|anlam çok (doğru / sağ / hak)
+see|görmek||verb|A1|günlük|I can see the sea from here.|Buradan denizi görebiliyorum.|Gözle algılamak.
+take|almak||verb|A1|günlük|Take an umbrella with you.|Yanına bir şemsiye al.|Bir şeyi elle tutup kendine geçirmek.
+think|düşünmek||verb|A1|günlük|I think about you every day.|Her gün seni düşünüyorum.|Zihnini bir konuya vermek.
+want|istemek||verb|A1|günlük|I want a glass of water.|Bir bardak su istiyorum.|Bir şeye sahip olmayı dilemek.
+well|-|anlam çok (iyi / kuyu); "iyi" good ile çakışır
+year|yıl|sene|noun|A1|zaman|She is ten years old this year.|Bu yıl on yaşında.|On iki aydan oluşan süre.
+your|-|zamir; bulmacaya uygun değil
+back|-|anlam çok (sırt / geri)
+call|aramak||verb|A1|günlük|Please call me tonight.|Lütfen bu akşam beni ara.|Telefonla biriyle konuşmaya çalışmak.
+down|aşağı||adverb|A1|günlük|Go down the stairs.|Merdivenlerden aşağı in.|Daha alçak bir yere doğru.
+even|-|Türkçede tek karşılığı yok
+find|bulmak||verb|A1|günlük|I can't find my keys.|Anahtarlarımı bulamıyorum.|Aranan şeyle karşılaşmak.
+first|ilk|birinci|adjective|A1|zaman|This is my first visit.|Bu benim ilk ziyaretim.|Sıralamada en başta olan.
+give|vermek||verb|A1|günlük|Give me the book, please.|Kitabı bana ver lütfen.|Bir şeyi başkasına geçirmek.
+life|hayat|yaşam|noun|A1|günlük|Life is beautiful.|Hayat güzel.|Doğumdan ölüme kadar geçen süre.
+little|-|küçük (small) ile çakışır
+man|adam||noun|A1|aile|A man is waiting outside.|Dışarıda bir adam bekliyor.|Yetişkin erkek kişi.
+mean|-|anlam çok (anlamına gelmek / cimri)
+need|ihtiyaç|gereksinim|noun|A2|günlük|There is a need for more doctors.|Daha fazla doktora ihtiyaç var.|Bir şeyin gerekli olması durumu.
+new|yeni||adjective|A1|günlük|I bought a new phone.|Yeni bir telefon aldım.|Az önce yapılmış ya da alınmış.
+over|-|edat; tek karşılığı yok
+people|insanlar|halk|noun|A1|günlük|Many people live in this city.|Bu şehirde çok insan yaşıyor.|Kişilerin topluluğu.
+real|gerçek||adjective|A1|günlük|Is this a real diamond?|Bu gerçek bir elmas mı?|Hayal ya da sahte olmayan.
+still|hâlâ|hala|adverb|A2|zaman|It is still raining.|Hâlâ yağmur yağıyor.|O ana kadar değişmeden, henüz.
+talk|konuşmak||verb|A1|günlük|We talk every evening.|Her akşam konuşuruz.|Sözle düşüncelerini anlatmak.
+tell|anlatmak||verb|A1|günlük|Tell me a story.|Bana bir hikâye anlat.|Bir şeyi sözle birine aktarmak.
+thing|şey||noun|A1|günlük|What is that thing on the table?|Masadaki o şey ne?|Adı belirtilmeyen herhangi bir nesne.
+try|denemek||verb|A1|günlük|Try this cake.|Bu keki dene.|Bir şeyi yapmaya çalışmak ya da sınamak.
+two|iki||noun|A1|günlük|I have two brothers.|İki erkek kardeşim var.|Birden sonra gelen sayı.
+way|-|yol (road) ile çakışır
+why|neden|niçin,niye|adverb|A1|günlük|Why are you late?|Neden geç kaldın?|Bir şeyin sebebini sormak için kullanılır.
+work|çalışmak||verb|A1|iş|I work in a bank.|Bir bankada çalışıyorum.|Bir iş yapmak, emek harcamak.
+yeah|-|konuşma dili
+always|daima|hep|adverb|A1|zaman|She is always happy.|O daima mutludur.|Her zaman, istisnasız.
+away|-|tek karşılığı yok
+bad|kötü||adjective|A1|günlük|The weather is bad today.|Bugün hava kötü.|İyi olmayan.
+become|olmak||verb|A2|günlük|I want to become a doctor.|Doktor olmak istiyorum.|Bir durumdan başka bir duruma geçmek.
+begin|başlamak||verb|A1|zaman|The film will begin at eight.|Film sekizde başlayacak.|Bir işin ilk adımını atmak.
+believe|inanmak||verb|A2|duygular|I believe you.|Sana inanıyorum.|Bir şeyin doğru olduğunu kabul etmek.
+bring|getirmek||verb|A1|günlük|Please bring some bread.|Lütfen biraz ekmek getir.|Bir şeyi bulunulan yere taşımak.
+care|bakım|özen|noun|A2|sağlık|The baby needs care.|Bebeğin bakıma ihtiyacı var.|Birinin ya da bir şeyin ihtiyaçlarıyla ilgilenme.
+case|vaka|dava,durum|noun|B1|sağlık|The doctor saw a new case today.|Doktor bugün yeni bir vaka gördü.|Hastalık, suç gibi tek tek ele alınan olay.
+change|değişmek||verb|A1|günlük|The weather can change quickly.|Hava çabuk değişebilir.|Başka bir hale gelmek.
+child|çocuk||noun|A1|aile|The child is playing in the garden.|Çocuk bahçede oynuyor.|Henüz büyümemiş küçük insan.
+close|kapatmak||verb|A1|ev|Close the window, please.|Pencereyi kapat lütfen.|Açık olan bir şeyi kapalı hale getirmek.
+company|şirket|firma|noun|A2|iş|She works for a big company.|Büyük bir şirkette çalışıyor.|Ticaret yapan kuruluş.
+course|kurs||noun|A2|okul|I am taking an English course.|Bir İngilizce kursuna gidiyorum.|Belli bir konunun öğretildiği eğitim.
+early|erken||adverb|A1|zaman|I get up early.|Erken kalkarım.|Beklenen zamandan önce.
+end|son||noun|A1|zaman|This is the end of the story.|Bu hikâyenin sonu.|Bir şeyin bittiği yer ya da an.
+ever|-|tek karşılığı yok
+face|yüz|surat|noun|A1|vücut|Wash your face.|Yüzünü yıka.|Başın gözlerin ve ağzın bulunduğu ön kısmı.
+family|aile||noun|A1|aile|My family lives in Izmir.|Ailem İzmir'de yaşıyor.|Anne, baba ve çocuklardan oluşan topluluk.
+far|uzak||adjective|A1|seyahat|The station is not far.|İstasyon uzak değil.|Arada çok mesafe olan.
+feel|hissetmek||verb|A1|duygular|I feel tired today.|Bugün kendimi yorgun hissediyorum.|Bir duyguyu ya da durumu içinde yaşamak.
+few|az||adjective|A2|günlük|Few people came to the party.|Partiye az kişi geldi.|Sayıca çok olmayan.
+great|harika|muhteşem|adjective|A1|duygular|That is a great idea!|Bu harika bir fikir!|Çok iyi, çok beğenilen.
+group|grup|topluluk|noun|A1|günlük|A group of students is waiting.|Bir grup öğrenci bekliyor.|Bir araya gelmiş kişi ya da şeyler.
+happen|-|Türkçe karşılığı ("olmak") become ile çakışır
+hear|duymak|işitmek|verb|A1|günlük|I can hear music.|Müzik duyuyorum.|Sesleri kulakla algılamak.
+high|yüksek||adjective|A1|doğa|This mountain is very high.|Bu dağ çok yüksek.|Yerden çok yukarıda olan.
+hold|tutmak||verb|A1|günlük|Hold my hand.|Elimi tut.|Bir şeyi elde kavramak.
+home|-|ev (house) ile çakışır
+include|içermek|kapsamak|verb|B1|günlük|The price does not include breakfast.|Fiyat kahvaltıyı içermiyor.|Bir bütünün parçası olarak barındırmak.
+interest|ilgi||noun|A2|duygular|He has an interest in music.|Müziğe ilgisi var.|Bir şeyi merak edip ona yönelme.
+keep|saklamak|korumak|verb|A2|günlük|Keep this letter.|Bu mektubu sakla.|Bir şeyi elden çıkarmadan tutmak.
+large|-|büyük (big) ile çakışır
+last|-|son (end) ile çakışır
+late|geç||adverb|A1|zaman|The bus is late again.|Otobüs yine geç kaldı.|Beklenen zamandan sonra.
+leave|ayrılmak||verb|A1|seyahat|We leave at six.|Saat altıda ayrılıyoruz.|Bir yerden gitmek.
+live|yaşamak||verb|A1|günlük|I live in Ankara.|Ankara'da yaşıyorum.|Bir yerde oturmak, hayatını sürdürmek.
+long|uzun||adjective|A1|günlük|She has long hair.|Uzun saçları var.|Boyu ya da süresi fazla olan.
+lot|-|miktar sözü ("a lot"); tek karşılığı yok
+love|aşk|sevgi|noun|A1|duygular|Love is all you need.|İhtiyacın olan tek şey aşk.|Birine duyulan güçlü sevgi.
+maybe|belki||adverb|A1|günlük|Maybe it will rain.|Belki yağmur yağar.|Olabilir ama kesin değil.
+name|isim|ad|noun|A1|günlük|What is your name?|İsmin ne?|Bir kişiyi ya da şeyi tanıtan söz.
+never|asla|hiç|adverb|A1|zaman|I never drink coffee.|Asla kahve içmem.|Hiçbir zaman.
+next|sonraki|gelecek|adjective|A1|zaman|See you next week.|Gelecek hafta görüşürüz.|Sırada hemen ardından gelen.
+number|sayı|numara|noun|A1|okul|Seven is my lucky number.|Yedi benim şanslı sayım.|Miktarı gösteren işaret ya da değer.
+old|eski||adjective|A1|günlük|This is an old house.|Bu eski bir ev.|Uzun zaman önce yapılmış.
+open|açmak||verb|A1|ev|Open the door, please.|Kapıyı aç lütfen.|Kapalı olan bir şeyi açık hale getirmek.
+part|parça|kısım|noun|A1|günlük|This is only part of the story.|Bu hikâyenin sadece bir parçası.|Bir bütünü oluşturan bölüm.
+place|yer||noun|A1|şehir|This is a nice place.|Burası güzel bir yer.|Bir şeyin bulunduğu alan.
+plan|-|Türkçesi aynı yazılıyor; öğretici değil
+play|oynamak||verb|A1|günlük|The children play in the park.|Çocuklar parkta oynar.|Eğlenmek için oyuna katılmak.
+point|nokta||noun|A2|okul|Draw a point on the map.|Haritaya bir nokta çiz.|Çok küçük yuvarlak işaret.
+power|güç|kuvvet|noun|A2|soyut|Knowledge is power.|Bilgi güçtür.|Bir şeyi yapabilme yeteneği.
+program|-|Türkçesi aynı yazılıyor; öğretici değil
+put|koymak||verb|A1|ev|Put the cup on the table.|Fincanı masaya koy.|Bir şeyi bir yere bırakmak.
+question|soru||noun|A1|okul|Can I ask a question?|Bir soru sorabilir miyim?|Cevap almak için sorulan söz.
+room|oda||noun|A1|ev|My room is small.|Odam küçük.|Evin duvarlarla ayrılmış bölümü.
+run|koşmak||verb|A1|günlük|I run every morning.|Her sabah koşarım.|Hızlı adımlarla ilerlemek.
+same|aynı||adjective|A1|günlük|We live in the same street.|Aynı sokakta oturuyoruz.|Başkası değil, tıpkı o.
+second|saniye||noun|A2|zaman|Wait a second.|Bir saniye bekle.|Dakikanın altmışta biri.
+seem|görünmek||verb|A2|günlük|You seem tired.|Yorgun görünüyorsun.|Bir izlenim uyandırmak.
+set|-|anlam çok
+show|göstermek||verb|A1|günlük|Show me your photos.|Bana fotoğraflarını göster.|Bir şeyi başkasının görmesini sağlamak.
+start|-|başlamak (begin) ile çakışır
+state|devlet||noun|B1|hukuk|The state pays for the schools.|Okulların parasını devlet ödüyor.|Bir ülkeyi yöneten örgütlü yapı.
+stop|durmak||verb|A1|şehir|The bus will stop here.|Otobüs burada duracak.|Hareket etmeyi bırakmak.
+student|öğrenci||noun|A1|okul|She is a good student.|O iyi bir öğrenci.|Okulda ders alan kişi.
+study|-|çalışmak (work) ile çakışır
+sure|emin||adjective|A2|duygular|Are you sure?|Emin misin?|Bir şeyden hiç şüphesi olmayan.
+system|sistem|düzen|noun|B1|teknoloji|The computer system is down.|Bilgisayar sistemi çöktü.|Birlikte çalışan parçaların bütünü.
+thank|-|Türkçesi tek kelime değil (teşekkür etmek)
+three|üç||noun|A1|günlük|I have three cats.|Üç kedim var.|İkiden sonra gelen sayı.
+today|bugün||adverb|A1|zaman|Today is Monday.|Bugün pazartesi.|İçinde bulunulan gün.
+turn|dönmek||verb|A1|şehir|Turn left at the bank.|Bankadan sola dön.|Yönünü değiştirmek.
+wait|beklemek||verb|A1|günlük|Wait for me here.|Beni burada bekle.|Birinin gelmesi için bir yerde kalmak.
+week|hafta||noun|A1|zaman|I go swimming once a week.|Haftada bir yüzmeye giderim.|Yedi günlük süre.
+woman|kadın||noun|A1|aile|That woman is my aunt.|O kadın benim teyzem.|Yetişkin kız kişi.
+world|dünya||noun|A1|doğa|I want to travel around the world.|Dünyayı gezmek istiyorum.|Üzerinde yaşadığımız gezegen.
+able|-|Türkçesi tek kelime değil (-ebilmek)
+across|-|edat
+act|davranmak||verb|B1|günlük|You must act quickly.|Çabuk davranmalısın.|Bir durumda bir şey yapmak.
+actual|-|real ile aynı karşılık (gerçek)
+add|eklemek||verb|A1|yiyecek|Add some salt.|Biraz tuz ekle.|Bir şeyin üstüne başka bir şey koymak.
+age|yaş||noun|A1|aile|What is your age?|Yaşın kaç?|Birinin doğduğundan beri geçen yıl.
+ago|önce||adverb|A1|zaman|I saw him two days ago.|Onu iki gün önce gördüm.|Şu andan geride kalan zamanda.
+air|-|hava (weather) ile çakışır
+allow|-|Türkçesi iki kelime (izin vermek)
+almost|neredeyse|hemen hemen|adverb|A2|günlük|It is almost ten o'clock.|Saat neredeyse on.|Az kalsın, tam değil ama yakın.
+already|zaten|çoktan|adverb|A2|zaman|I have already eaten.|Zaten yemek yedim.|Beklenenden önce, o zamana kadar.
+appear|belirmek|görünmek|verb|B1|günlük|A face will appear at the window.|Pencerede bir yüz belirecek.|Birden görünür hale gelmek.
+area|bölge|alan|noun|A2|şehir|This is a quiet area.|Burası sessiz bir bölge.|Belli sınırları olan yer.
+arm|kol||noun|A1|vücut|My arm hurts.|Kolum ağrıyor.|Omuzdan ele kadar uzanan organ.
+art|sanat||noun|A1|okul|I love modern art.|Modern sanatı seviyorum.|Güzellik yaratma etkinliği; resim, müzik gibi.
+baby|bebek||noun|A1|aile|The baby is sleeping.|Bebek uyuyor.|Yeni doğmuş çok küçük çocuk.
+base|taban|temel|noun|B1|soyut|The lamp has a heavy base.|Lambanın ağır bir tabanı var.|Bir şeyin en alttaki destek kısmı.
+black|siyah|kara|adjective|A1|renkler|I have a black cat.|Siyah bir kedim var.|Kömürün rengi.
+body|vücut|beden|noun|A1|vücut|Sport is good for your body.|Spor vücudun için iyidir.|İnsanın ya da hayvanın bütün fiziksel yapısı.
+boy|oğlan||noun|A1|aile|The boy is reading a book.|Oğlan kitap okuyor.|Erkek çocuk.
+break|kırmak||verb|A1|ev|Don't break the glass.|Bardağı kırma.|Bir şeyi parçalara ayırmak.
+business|ticaret|iş|noun|B1|iş|He is in the car business.|Araba ticaretiyle uğraşıyor.|Alım satım işleri.
+buy|-|almak (take) ile çakışır; Türkçesi iki kelime (satın almak)
+cause|-|neden (why) ve sebep (reason) ile çakışır
+centre|merkez|orta|noun|A2|şehir|The hotel is in the city centre.|Otel şehir merkezinde.|Bir şeyin tam ortası.|center
+certain|kesin||adjective|B1|soyut|I am certain of it.|Bundan kesin eminim.|Hiç şüphe taşımayan.
+class|sınıf||noun|A1|okul|There are twenty students in my class.|Sınıfımda yirmi öğrenci var.|Birlikte ders gören öğrenci topluluğu.
+clear|açık|net|adjective|A2|soyut|The sky is clear today.|Bugün gökyüzü açık.|Bulanık ya da kapalı olmayan.
+college|üniversite|kolej|noun|A2|okul|My brother is at college.|Kardeşim üniversitede.|Lise sonrası eğitim veren okul.
+color|-|renk (colour) ile çakışır; paket İngiliz yazımı kullanıyor
+complete|tamamlamak|bitirmek|verb|B1|iş|Complete the form, please.|Lütfen formu tamamla.|Eksiksiz hale getirmek.
+concern|kaygı|endişe|noun|B1|duygular|There is concern about the prices.|Fiyatlar konusunda kaygı var.|Bir şeyin kötü gideceği düşüncesi.
+consider|-|Türkçesi tek kelime değil (göz önünde bulundurmak)
+continue|-|sürmek (drive) ile çakışır; Türkçesi iki kelime (devam etmek)
+control|denetim|kontrol|noun|B1|iş|The police have control of the area.|Bölgenin denetimi polisin elinde.|Bir şeyi yönetebilme gücü.
+cost|maliyet|bedel|noun|B1|iş|The cost of the trip is high.|Gezinin maliyeti yüksek.|Bir şey için ödenmesi gereken para.
+court|mahkeme||noun|B1|hukuk|The case is in court.|Dava mahkemede.|Davaların görüldüğü yer.
+cover|örtmek|kapamak|verb|B1|ev|Cover the food.|Yemeğin üstünü ört.|Bir şeyin üstüne bir şey koyup gizlemek.
+create|yaratmak|oluşturmak|verb|B1|soyut|Artists create new things.|Sanatçılar yeni şeyler yaratır.|Var olmayan bir şeyi ortaya koymak.
+cut|kesmek||verb|A1|yiyecek|Cut the bread.|Ekmeği kes.|Keskin bir şeyle parçalara ayırmak.
+deal|anlaşma|pazarlık|noun|B1|iş|We made a deal.|Bir anlaşma yaptık.|Tarafların uzlaştığı karar.
+death|ölüm||noun|B1|sağlık|His death was a shock.|Onun ölümü bir şoktu.|Hayatın sona ermesi.
+decide|-|karar (decision) ile ilişkili; Türkçesi tek kelime değil
+design|tasarım||noun|B1|teknoloji|I like the design of this car.|Bu arabanın tasarımını beğeniyorum.|Bir şeyin biçimini önceden çizme.
+develop|geliştirmek||verb|B1|teknoloji|They develop new games.|Yeni oyunlar geliştiriyorlar.|Daha iyi ya da büyük hale getirmek.
+die|ölmek||verb|A2|sağlık|Plants die without water.|Bitkiler susuz ölür.|Hayatı sona ermek.
+drive|sürmek||verb|A1|seyahat|Can you drive a car?|Araba sürebilir misin?|Bir aracı kullanmak.
+economic|ekonomik||adjective|B2|iş|The country has economic problems.|Ülkenin ekonomik sorunları var.|Para ve ticaretle ilgili.
+effect|etki||noun|B1|soyut|The medicine has a strong effect.|İlacın güçlü bir etkisi var.|Bir şeyin başka bir şeyde yarattığı değişiklik.
+else|-|tek karşılığı yok
+enough|yeterli|kâfi|adjective|A1|günlük|We have enough food.|Yeterli yiyeceğimiz var.|İhtiyacı karşılayan miktarda.
+exact|tam|kesin|adjective|B1|soyut|What is the exact time?|Tam saat kaç?|Hiç sapma olmadan doğru.
+expect|-|beklemek (wait) ile çakışır
+fact|-|gerçek (real) ile çakışır
+fall|düşmek||verb|A1|günlük|Be careful, don't fall.|Dikkat et, düşme.|Yukarıdan aşağıya inmek, yere yıkılmak.
+fight|kavga|dövüş|noun|A2|duygular|There was a fight in the street.|Sokakta bir kavga vardı.|Kişilerin birbirine saldırması.
+figure|rakam|şekil|noun|B1|iş|Write the figure in the box.|Rakamı kutuya yaz.|Sayıyı gösteren işaret.
+final|-|Türkçesi aynı yazılıyor; öğretici değil
+fine|-|anlam çok (iyi / para cezası)
+five|beş||noun|A1|günlük|I have five pens.|Beş kalemim var.|Dörtten sonra gelen sayı.
+follow|-|izlemek (watch) ile çakışır
+food|yiyecek|gıda|noun|A1|yiyecek|We need some food.|Biraz yiyeceğe ihtiyacımız var.|Yenen şeylerin genel adı.
+foot|ayak||noun|A1|vücut|My foot hurts.|Ayağım ağrıyor.|Bacağın yere basan en alt kısmı.
+force|kuvvet|zor|noun|B1|soyut|They used force to open the door.|Kapıyı açmak için kuvvet kullandılar.|Bir şeyi hareket ettiren ya da değiştiren güç.
+form|-|Türkçesi aynı yazılıyor; öğretici değil
+four|dört||noun|A1|günlük|The table has four legs.|Masanın dört ayağı var.|Üçten sonra gelen sayı.
+front|ön||noun|A2|günlük|Sit at the front.|Öne otur.|Bir şeyin yüzü dönük tarafı.
+full|dolu||adjective|A1|günlük|The bus is full.|Otobüs dolu.|İçinde boş yer kalmamış.
+future|gelecek||noun|A2|zaman|Nobody knows the future.|Geleceği kimse bilmez.|Henüz gelmemiş zaman.
+game|oyun||noun|A1|günlük|Let's play a game.|Bir oyun oynayalım.|Kurallarıyla eğlence için yapılan etkinlik.
+general|genel||adjective|B1|soyut|This is a general rule.|Bu genel bir kural.|Çoğu durumu kapsayan.
+girl|kız||noun|A1|aile|The girl is my sister.|Kız benim kardeşim.|Kadın cinsiyetindeki çocuk.
+grow|büyümek||verb|A1|doğa|Plants grow in the sun.|Bitkiler güneşte büyür.|Boyu ya da miktarı artmak.
+guy|-|konuşma dili
+half|yarım|yarı|noun|A1|günlük|I ate half of the cake.|Pastanın yarısını yedim.|Bir bütünün iki eşit parçasından biri.
+hard|sert||adjective|A2|günlük|This bed is too hard.|Bu yatak çok sert.|Kolay bükülmeyen, yumuşak olmayan.
+heart|kalp|yürek|noun|A1|vücut|Her heart is beating fast.|Kalbi hızlı atıyor.|Kanı vücuda pompalayan organ.
+hey|-|ünlem
+history|tarih||noun|A1|okul|I like history lessons.|Tarih derslerini severim.|Geçmişte olan olayları inceleyen bilim.
+hit|vurmak||verb|A2|günlük|Don't hit the dog.|Köpeğe vurma.|Bir şeye sertçe dokunmak.
+hope|umut||noun|A2|duygular|There is still hope.|Hâlâ umut var.|İyi bir şeyin olacağına güvenme.
+hour|saat||noun|A1|zaman|I will be back in an hour.|Bir saat içinde dönerim.|Altmış dakikalık süre.
+human|insan||noun|A2|günlük|Every human needs water.|Her insanın suya ihtiyacı var.|Düşünebilen, konuşabilen canlı.
+idea|fikir||noun|A1|soyut|I have a good idea.|İyi bir fikrim var.|Akla gelen düşünce.
+involve|-|Türkçesi tek kelime değil
+issue|konu|mesele|noun|B1|soyut|This is an important issue.|Bu önemli bir konu.|Tartışılan ya da çözülmesi gereken şey.
+kid|-|child (çocuk) ile çakışır
+kill|öldürmek||verb|B1|hukuk|The cat will kill the mouse.|Kedi fareyi öldürecek.|Bir canlının hayatına son vermek.
+kind|tür|çeşit|noun|A2|soyut|What kind of music do you like?|Ne tür müzik seversin?|Ortak özellikleri olan şeylerin grubu.
+law|kanun|yasa,hukuk|noun|B1|hukuk|Everyone must obey the law.|Herkes kanuna uymalı.|Devletin koyduğu, uyulması zorunlu kural.
+lead|yönetmek|önderlik|verb|B1|iş|She will lead the team.|Takımı o yönetecek.|Bir grubun başında olup yol göstermek.
+learn|öğrenmek||verb|A1|okul|I want to learn English.|İngilizce öğrenmek istiyorum.|Yeni bir bilgi ya da beceri edinmek.
+less|-|Türkçesi iki kelime (daha az)
+level|seviye|düzey|noun|A2|okul|What is your English level?|İngilizce seviyen ne?|Bir şeyin ulaştığı derece.
+lie|yalan||noun|A2|duygular|That is a lie!|Bu bir yalan!|Gerçek olmayan, bile bile söylenen söz.
+light|ışık||noun|A1|ev|Turn on the light.|Işığı aç.|Görmeyi sağlayan aydınlık.
+line|çizgi|sıra|noun|A1|okul|Draw a line.|Bir çizgi çiz.|Uzun ince iz.
+listen|dinlemek||verb|A1|günlük|Listen to me.|Beni dinle.|Duymak için dikkat vermek.
+local|yerel||adjective|B1|şehir|We shop at the local market.|Yerel pazardan alışveriş yaparız.|Bir yere ya da bölgeye ait.
+low|alçak|düşük|adjective|A2|günlük|The chair is too low.|Sandalye çok alçak.|Yerden az yukarıda olan.
+major|-|büyük (big) ile çakışır
+matter|-|anlam çok
+meet|tanışmak|buluşmak|verb|A1|günlük|Nice to meet you.|Tanıştığımıza memnun oldum.|Biriyle ilk kez karşılaşıp bilgi edinmek.
+member|üye||noun|A2|günlük|I am a member of the club.|Kulübün üyesiyim.|Bir topluluğa ait olan kişi.
+million|milyon||noun|A2|günlük|The city has a million people.|Şehirde bir milyon insan var.|Bin kere bin.
+mind|zihin|akıl|noun|B1|soyut|Keep your mind open.|Zihnini açık tut.|Düşünme ve anlama gücü.
+minute|dakika||noun|A1|zaman|Wait a minute.|Bir dakika bekle.|Altmış saniyelik süre.
+model|-|Türkçesi aynı yazılıyor; öğretici değil
+mom|-|mother (anne) ile çakışır
+moment|an||noun|A2|zaman|Wait a moment.|Bir an bekle.|Çok kısa süre.
+month|-|ay (moon) ile çakışır
+music|müzik||noun|A1|günlük|I listen to music every day.|Her gün müzik dinlerim.|Seslerden oluşan sanat.
+national|ulusal|milli|adjective|B1|hukuk|Today is a national holiday.|Bugün ulusal bayram.|Bütün ülkeyle ilgili.
+near|yakın||adjective|A1|şehir|The school is near.|Okul yakın.|Arada az mesafe olan.
+news|haber||noun|A1|günlük|I watch the news every evening.|Her akşam haberleri izlerim.|Yeni olaylarla ilgili bilgi.
+note|not||noun|A2|okul|I wrote a note.|Bir not yazdım.|Unutmamak için yazılan kısa yazı.
+offer|teklif|öneri|noun|B1|iş|I got a job offer.|Bir iş teklifi aldım.|Birine sunulan öneri.
+office|ofis|büro|noun|A1|iş|My office is on the third floor.|Ofisim üçüncü katta.|Masa başı işlerin yapıldığı yer.
+official|resmi|resmî|adjective|B1|hukuk|This is an official document.|Bu resmi bir belge.|Devlet ya da kurumla ilgili, onaylı.
+often|sık|sıklıkla|adverb|A1|zaman|I often go to the cinema.|Sık sık sinemaya giderim.|Çok kez, aralıklarla.
+once|-|anlam çok (bir kez / bir zamanlar)
+order|sipariş|düzen|noun|A2|yiyecek|The waiter took our order.|Garson siparişimizi aldı.|Satın almak için yapılan istek.
+parent|ebeveyn||noun|B1|aile|Every parent loves their child.|Her ebeveyn çocuğunu sever.|Anne ya da baba.
+party|parti||noun|A1|günlük|We are having a party tonight.|Bu akşam parti veriyoruz.|Eğlenmek için yapılan toplantı.
+pass|geçmek||verb|A2|okul|I hope I pass the exam.|Umarım sınavı geçerim.|Bir sınavda başarılı olmak.
+past|geçmiş||noun|A2|zaman|Forget the past.|Geçmişi unut.|Geride kalmış zaman.
+pay|ödemek||verb|A1|iş|I will pay the bill.|Hesabı ben ödeyeceğim.|Bir şey için para vermek.
+percent|yüzde||noun|B1|iş|Ten percent of the students are absent.|Öğrencilerin yüzde onu yok.|Bir bütünün yüz parçasından kaçı olduğunu gösteren oran.
+perhaps|-|maybe (belki) ile çakışır
+person|kişi|insan|noun|A1|günlük|She is a kind person.|O nazik bir kişi.|Tek bir insan.
+pick|seçmek||verb|A2|günlük|Pick a card.|Bir kart seç.|Birçok şey arasından birini almak.
+please|lütfen||adverb|A1|günlük|Please sit down.|Lütfen oturun.|Kibar bir istek yaparken kullanılır.
+police|polis||noun|A1|hukuk|Call the police!|Polisi ara!|Düzeni ve güvenliği sağlayan kurum.
+policy|politika||noun|B2|hukuk|The company has a new policy.|Şirketin yeni bir politikası var.|Bir kurumun izlediği yol ve kurallar.
+possible|mümkün|olası|adjective|A2|soyut|Is it possible?|Bu mümkün mü?|Olabilecek, yapılabilecek.
+present|hediye|armağan|noun|A1|günlük|This present is for you.|Bu hediye senin için.|Birine verilen armağan.
+probable|muhtemel|olası|adjective|B2|soyut|It is probable that he will come.|Gelmesi muhtemel.|Olma ihtimali yüksek.
+process|süreç|işlem|noun|B1|iş|Learning is a slow process.|Öğrenmek yavaş bir süreçtir.|Bir işin aşama aşama ilerleyişi.
+provide|sağlamak||verb|B1|iş|The hotel will provide towels.|Otel havlu sağlayacak.|Gerekeni vermek, temin etmek.
+public|halk|kamu|noun|B1|hukuk|The park is open to the public.|Park halka açık.|Bir ülkedeki insanların tümü.
+pull|çekmek||verb|A2|günlük|Pull the door.|Kapıyı çek.|Bir şeyi kendine doğru hareket ettirmek.
+quick|hızlı|çabuk|adjective|A1|günlük|That was a quick lunch.|Hızlı bir öğle yemeğiydi.|Az zamanda olan.
+quite|oldukça|epey|adverb|A2|günlük|It is quite cold today.|Bugün hava oldukça soğuk.|Epeyce, bir hayli.
+raise|yükseltmek|kaldırmak|verb|B1|günlük|Raise your hand.|Elini kaldır.|Bir şeyi yukarı doğru çıkarmak.
+rate|oran||noun|B1|iş|The rate is very high.|Oran çok yüksek.|İki miktar arasındaki ilişki.
+rather|-|tek karşılığı yok
+reach|ulaşmak||verb|B1|seyahat|We will reach the city at noon.|Şehre öğlen ulaşacağız.|Bir yere varmak.
+reason|sebep|neden|noun|A2|soyut|What is the reason?|Sebebi ne?|Bir şeyin olmasına yol açan durum.
+recent|-|yeni (new) ile çakışır
+record|kayıt|rekor|noun|B1|teknoloji|Keep a record of your spending.|Harcamalarının kaydını tut.|Bir bilginin yazılı ya da saklı hali.
+remain|-|kalmak (stay) ile çakışır
+require|gerektirmek||verb|B2|iş|This job will require patience.|Bu iş sabır gerektirecek.|Bir şeyin olması için zorunlu kılmak.
+research|araştırma||noun|B1|okul|She does research on cancer.|Kanser üzerine araştırma yapıyor.|Bilgi edinmek için yapılan inceleme.
+rest|dinlenmek||verb|A2|sağlık|You need to rest.|Dinlenmen gerek.|Yorgunluğu gidermek için çalışmayı bırakmak.
+result|sonuç||noun|A2|okul|The exam result is good.|Sınav sonucu iyi.|Bir işin sonunda ortaya çıkan durum.
+return|-|dönmek (turn) ile çakışır
+sell|satmak||verb|A1|iş|They sell fruit at the market.|Pazarda meyve satıyorlar.|Para karşılığında bir şeyi vermek.
+send|göndermek|yollamak|verb|A1|günlük|Send me a message.|Bana bir mesaj gönder.|Bir şeyi birine ulaştırmak.
+sense|duyu|his|noun|B1|vücut|Smell is one sense.|Koku alma bir duyudur.|Görme, işitme gibi algılama yeteneği.
+serve|-|anlam çok (servis etmek / hizmet etmek)
+service|hizmet|servis|noun|B1|iş|The service here is very good.|Buradaki hizmet çok iyi.|Başkası için yapılan iş.
+several|birkaç||adjective|A2|günlük|I have several friends here.|Burada birkaç arkadaşım var.|İkiden fazla ama çok olmayan.
+share|paylaşmak||verb|A2|günlük|Share your toys.|Oyuncaklarını paylaş.|Bir şeyi başkalarıyla birlikte kullanmak.
+side|yan|taraf|noun|A2|günlük|Walk on this side.|Bu yandan yürü.|Bir şeyin sağ ya da sol kısmı.
+sign|tabela|işaret|noun|A2|şehir|Read the sign.|Tabelayı oku.|Bilgi veren yazılı levha.
+simple|basit||adjective|A2|günlük|The rules are simple.|Kurallar basit.|Anlaması ya da yapması kolay.
+sit|oturmak||verb|A1|ev|Sit on the chair.|Sandalyeye otur.|Kalçasının üstünde durmak.
+six|altı||noun|A1|günlük|I get up at six.|Altıda kalkarım.|Beşten sonra gelen sayı.
+social|sosyal|toplumsal|adjective|B1|soyut|He is very social.|O çok sosyal.|Başkalarıyla birlikte olmayı seven.
+son|oğul||noun|A1|aile|Their son is five years old.|Oğulları beş yaşında.|Erkek evlat.
+sorry|-|üzgün (sad) ile çakışır
+sound|ses||noun|A1|günlük|I heard a strange sound.|Garip bir ses duydum.|Kulakla duyulan titreşim.
+speak|-|konuşmak (talk) ile çakışır
+spend|harcamak||verb|A2|iş|Don't spend all your money.|Bütün paranı harcama.|Parayı ya da zamanı kullanmak.
+stand|-|Türkçesi iki kelime (ayakta durmak)
+stay|kalmak||verb|A1|seyahat|We stay at a hotel.|Bir otelde kalıyoruz.|Bir yerde bir süre bulunmak.
+step|adım||noun|A2|günlük|Take one step forward.|Bir adım öne çık.|Yürürken ayağı bir kez ileri atma.
+story|hikâye|öykü,hikaye|noun|A1|okul|Tell me a story.|Bana bir hikâye anlat.|Anlatılan olay dizisi.
+street|sokak|cadde|noun|A1|şehir|I live on this street.|Bu sokakta yaşıyorum.|Şehirde evlerin arasındaki yol.
+strong|güçlü|kuvvetli|adjective|A1|günlük|He is very strong.|O çok güçlü.|Gücü fazla olan.
+suggest|önermek||verb|B1|günlük|I suggest a walk.|Bir yürüyüş öneririm.|Bir fikri dikkate sunmak.
+support|destek||noun|B1|soyut|Thank you for your support.|Desteğin için teşekkürler.|Birine yardım edip arkasında durma.
+teacher|öğretmen||noun|A1|okul|My teacher is very kind.|Öğretmenim çok nazik.|Okulda ders veren kişi.
+team|takım|ekip|noun|A1|günlük|Our team won the game.|Takımımız maçı kazandı.|Birlikte oynayan ya da çalışan grup.
+term|dönem|terim|noun|B1|okul|The new term starts in September.|Yeni dönem eylülde başlıyor.|Okul yılının bölümlerinden biri.
+test|-|Türkçesi aynı yazılıyor; öğretici değil
+together|birlikte|beraber|adverb|A1|günlük|We live together.|Birlikte yaşıyoruz.|Bir arada, ayrı olmadan.
+top|tepe|üst|noun|A2|doğa|We climbed to the top.|Tepeye tırmandık.|Bir şeyin en yüksek noktası.
+town|kasaba||noun|A1|şehir|I live in a small town.|Küçük bir kasabada yaşıyorum.|Şehirden küçük yerleşim yeri.
+train|tren||noun|A1|seyahat|The train is late.|Tren geç kaldı.|Raylar üzerinde giden taşıt.
+true|doğru|gerçek|adjective|A1|günlük|Is it true?|Bu doğru mu?|Gerçeğe uygun olan.
+view|manzara|görünüm|noun|B1|seyahat|The view from the hotel is great.|Otelden manzara harika.|Bir yerden görülen görüntü.
+voice|-|ses (sound) ile çakışır
+walk|yürümek||verb|A1|günlük|I walk to school.|Okula yürürüm.|Ayaklarla adım adım ilerlemek.
+war|savaş||noun|A2|hukuk|The war lasted four years.|Savaş dört yıl sürdü.|Ülkeler arasındaki silahlı çatışma.
+watch|izlemek|seyretmek|verb|A1|günlük|We watch films on Sunday.|Pazar günü film izleriz.|Bir şeye bir süre bakmak.
+white|beyaz|ak|adjective|A1|renkler|Snow is white.|Kar beyazdır.|Karın ya da sütün rengi.
+whole|bütün|tüm|adjective|A2|günlük|I ate the whole cake.|Bütün pastayı yedim.|Eksiksiz, tamamı.
+wife|eş|karı|noun|A1|aile|This is my wife.|Bu benim eşim.|Evli bir erkeğin hayat arkadaşı.
+wonder|-|Türkçesi iki kelime (merak etmek)
+word|kelime|sözcük|noun|A1|okul|What does this word mean?|Bu kelime ne anlama geliyor?|Anlamı olan ses ya da harf dizisi.
