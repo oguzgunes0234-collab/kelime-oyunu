@@ -10,9 +10,17 @@
   --word-bg: #fff1c9;
   --cursor-bg: #ffd27a;
   --cw-cell-bg: #ffffff;
+  /* Ana sayfanın üstündeki köprü sahnesi. Gökyüzü ve zemin renkleri görselin
+     üst ve alt kenarından alındı; çentik şeridi ve görselin altı bunlarla dolar. */
+  --home-scene: url('./assets/ana-sayfa-acik.webp');
+  --home-scene-sky: #f9dfc8;
+  --home-scene-floor: #fbf4e5;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
+    --home-scene: url('./assets/ana-sayfa-koyu.webp');
+    --home-scene-sky: #211d2a;
+    --home-scene-floor: #231d29;
     --clue-bg: #4a2a36;
     --clue-ink: #ffd9e0;
     --clue-arrow: #ff8fa6;
@@ -23,6 +31,9 @@
   }
 }
 :root[data-theme='dark'] {
+  --home-scene: url('./assets/ana-sayfa-koyu.webp');
+  --home-scene-sky: #211d2a;
+  --home-scene-floor: #231d29;
   --clue-bg: #4a2a36;
   --clue-ink: #ffd9e0;
   --clue-arrow: #ff8fa6;
@@ -188,9 +199,19 @@
      kutusuna gider, o kutu kendi içinde kayar. */
   height: 100dvh;
   min-height: 0;
+  /* Sahne sayfa genişliğine oturur (768x1376 görsel); çentik altındaki şerit
+     gökyüzü rengiyle dolar. */
+  --home-w: min(100vw, 480px);
+  background:
+    var(--home-scene) center env(safe-area-inset-top, 0px) / 100% auto no-repeat,
+    linear-gradient(var(--home-scene-sky), var(--home-scene-sky)) top / 100% env(safe-area-inset-top, 0px) no-repeat,
+    var(--home-scene-floor);
 }
 .home .campaign-card {
   flex: 0 0 auto;
+  /* Kart sahnenin ufkundan başlar; köprü başlığın altında açıkta kalır.
+     Kısa ekranda konu kutusuna yer kalsın diye boşluk küçülür. */
+  margin-top: max(0px, min(var(--home-w) * 0.46 - 72px, 100dvh - 650px));
 }
 /*
  * Bölüm kutuları: bulmacadaki harf kareleri gibi kare, yan yana; her telefonda
