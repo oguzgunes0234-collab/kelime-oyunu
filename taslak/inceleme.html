@@ -70,6 +70,8 @@
   .row p { margin: 0; overflow-wrap: anywhere; }
   mark { background: var(--mark); color: inherit; border-radius: 3px; padding: 0 2px; }
   .flags { margin: 0; padding: 10px 12px 10px 28px; background: var(--warn-bg); color: var(--warn-ink); border-radius: 10px; font-size: .9rem; }
+  .suspect { font-size: .9rem; padding: 8px 12px; border-radius: 10px; background: var(--bad-bg); color: var(--bad); }
+  .suspect ul { margin: 4px 0 0; padding-left: 18px; }
   .cross { font-size: .9rem; padding: 8px 12px; border-radius: 10px; }
   .cross.same { background: var(--good-bg); color: var(--good); }
   .cross.diff { background: var(--warn-bg); color: var(--warn-ink); }
@@ -149,7 +151,7 @@ let db = null;
 let decisions = {};      // id → {s, e?, t}
 let index = 0;           // kart görünümündeki kelime
 let editing = false;
-let listFilter = 'todo';
+let listFilter = 'suspect';
 let saving = false;
 
 const $ = (id) => document.getElementById(id);
@@ -215,6 +217,7 @@ function renderCard() {
     body = `
     <div class="body">
       ${flags}
+      ${raw.suspect.length && !dec ? `<div class="suspect"><strong>Önce bunlara bak:</strong><ul>${raw.suspect.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
       ${d.cross ? `<div class="cross ${d.cross.same ? 'same' : 'diff'}">${d.cross.same ? 'İkinci kaynak da aynı çeviriyi veriyor.' : `İkinci kaynağın çevirisi farklı: <b>${esc(d.cross.tr)}</b>`}</div>` : ''}
       <div class="row"><span class="label">İngilizce örnek · cümle ipucu</span><p lang="en">${highlight(d.exEn, d.en)}</p></div>
       <div class="row"><span class="label">Türkçe örnek</span><p>${esc(d.exTr)}</p></div>
@@ -294,7 +297,8 @@ async function decide(id, s, e) {
     return;
   }
   saving = false;
-  const n = nextTodo(index + 1);
+  const sus = DRAFTS.findIndex((d) => d.suspect.length && !decisions[d.id]);
+  const n = sus >= 0 ? sus : nextTodo(index + 1);
   if (n >= 0) index = n;
   renderAll();
   window.scrollTo({ top: 0 });
@@ -303,21 +307,23 @@ async function decide(id, s, e) {
 
 function renderList() {
   const view = $('view-list');
-  const counts = { todo: 0, diff: 0, flag: 0, edit: 0, drop: 0, all: DRAFTS.length };
+  const counts = { suspect: 0, todo: 0, diff: 0, flag: 0, edit: 0, drop: 0, all: DRAFTS.length };
   for (const d of DRAFTS) {
     const s = decisions[d.id]?.s;
     if (!s) counts.todo++;
     if (d.flags.length) counts.flag++;
+    if (d.suspect.length && !s) counts.suspect++;
     if (d.cross && !d.cross.same && !s) counts.diff++;
     if (s === 'edit') counts.edit++;
     if (s === 'drop') counts.drop++;
   }
-  const f = { todo: 'Bekleyen', diff: 'Çeviri farklı', flag: 'Uyarılı', edit: 'Düzeltilen', drop: 'Çıkarılan', all: 'Tümü' };
+  const f = { suspect: 'Önce bunlara bak', todo: 'Bekleyen', diff: 'Çeviri farklı', flag: 'Uyarılı', edit: 'Düzeltilen', drop: 'Çıkarılan', all: 'Tümü' };
   const pick = (d) => {
     const s = decisions[d.id]?.s;
-    return listFilter === 'all' || (listFilter === 'todo' && !s) || (listFilter === 'flag' && d.flags.length) || (listFilter === 'diff' && d.cross && !d.cross.same && !s) || s === listFilter;
+    return listFilter === 'all' || (listFilter === 'todo' && !s) || (listFilter === 'flag' && d.flags.length) || (listFilter === 'suspect' && d.suspect.length && !s) || (listFilter === 'diff' && d.cross && !d.cross.same && !s) || s === listFilter;
   };
   const rows = DRAFTS.map((d, i) => [d, i]).filter(([d]) => pick(d));
+  if (listFilter === 'suspect') rows.sort((a, b) => b[0].suspect.length - a[0].suspect.length);
   view.innerHTML = `
     <div class="filters">${Object.keys(f).map((k) => `<button data-f="${k}" aria-pressed="${listFilter === k}">${f[k]} ${counts[k]}</button>`).join('')}</div>
     <div class="list">${rows.length ? rows.map(([raw, i]) => { const d = current(raw); const s = decisions[d.id]?.s ?? ''; return `
@@ -375,7 +381,9 @@ $('dbBanner').textContent = 'Kayıtlı kararlar yükleniyor…';
     if (first) {
       first = false;
       $('dbBanner').hidden = true;
-      const n = nextTodo(0);
+      // Önce şüpheli (önce bunlara bak) kelimeler; kalmadıysa sıradaki bekleyen.
+      const sus = DRAFTS.findIndex((d) => d.suspect.length && !decisions[d.id]);
+      const n = sus >= 0 ? sus : nextTodo(0);
       if (n >= 0) index = n;
     }
     if (!saving) renderAll(); else renderProgress();
