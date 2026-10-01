@@ -80,7 +80,7 @@ export function App() {
             puzzleSaved={puzzleSaved}
             tutorialPending={tutorialPending}
             onPlay={playQuick}
-            onTopics={() => setScreen({ name: 'topics' })}
+            onPlayTopic={(id) => openPuzzle(null, id)}
             onReview={() => setScreen({ name: 'review' })}
             onSettings={() => setScreen({ name: 'settings' })}
             onStore={() => setStoreOpen(true)}

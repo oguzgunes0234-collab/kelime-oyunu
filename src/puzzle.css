@@ -184,9 +184,10 @@
 
 .home {
   gap: 12px;
-  /* Ana sayfa her zaman ekranı doldurur: artan yükseklik bölüm yoluna gider,
-     alt kısımda boşluk kalmaz; modlar ve bağlantılar ekranın altına oturur. */
-  min-height: 100dvh;
+  /* Ana sayfa tam ekran boyundadır ve kaymaz: kalan yükseklik konu modları
+     kutusuna gider, o kutu kendi içinde kayar. */
+  height: 100dvh;
+  min-height: 0;
 }
 .home .campaign-card {
   flex: 0 0 auto;
@@ -232,22 +233,76 @@
   border-color: var(--clue-arrow);
   color: var(--text);
 }
-/* Uzun ekranda kalan yükseklik mod kutularına: boşluk kalmaz. */
-.home .mode-row {
-  flex: 1 1 auto;
+/*
+ * Konu modları ana sayfada: ekranda kalan yüksekliği alır, kendi içinde kayar;
+ * sayfanın kendisi kaymaz. Konuya dokununca bulmaca başlar.
+ */
+.home .topic-panel {
+  flex: 1 1 0;
+  min-height: 112px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 12px 12px;
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
 }
-.home .mode-row .mode-card {
+.home .topic-panel h2 {
+  margin: 0;
+  font-size: 1rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+.home .topic-panel h2 small {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+.home .topic-scroll {
+  flex: 1 1 0;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  align-content: start;
+}
+.home .topic-tile {
+  width: 100%;
+  min-height: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 6px;
+  gap: 2px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 2px solid var(--line);
+  background: var(--bg);
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
 }
-.home .mode-row .mode-card svg {
-  width: 40px;
-  height: 40px;
+.home .topic-tile strong {
+  font-size: 0.92rem;
+  line-height: 1.2;
 }
-.home .mode-row .mode-card strong {
-  font-size: 1.15rem;
+.home .topic-tile small {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.home .topic-tile:disabled {
+  border-style: dashed;
+  opacity: 0.6;
+  cursor: default;
 }
 .campaign-card {
   display: flex;
@@ -365,8 +420,15 @@
 
 .home-links {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+.home-links .link-btn {
+  padding: 8px 4px;
+  gap: 4px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  min-width: 0;
 }
 .link-btn {
   display: inline-flex;

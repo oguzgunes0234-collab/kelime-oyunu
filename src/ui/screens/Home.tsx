@@ -2,7 +2,7 @@ import { chapterInfo } from '../../core/campaign';
 import { DAILY_PUZZLE_GOAL, currentStreak, goalDoneToday } from '../../core/daily';
 import { languageInfo } from '../../core/languages';
 import type { Profile } from '../../core/profile';
-import { topicStatuses } from '../../core/topics';
+import { MIN_TOPIC_WORDS, topicStatuses } from '../../core/topics';
 import type { WordPack } from '../../core/types';
 import { ChapterPath } from '../components/ChapterPath';
 import { BagIcon, BookIcon, CheckIcon, CoinIcon, FlameIcon, GearIcon, GridIcon, LettersIcon, SwapIcon } from '../components/Icons';
@@ -19,18 +19,20 @@ interface Props {
   tutorialPending: boolean;
   /** Hızlı tur: harf taşlarıyla 10 kelime. */
   onPlay: () => void;
-  onTopics: () => void;
+  /** Konu bulmacasını doğrudan başlatır (konu kimliği). */
+  onPlayTopic: (topicId: string) => void;
   onReview: () => void;
   onSettings: () => void;
   onStore: () => void;
 }
 
 /**
- * Ana sayfa. Öncelik sırası: bölüm ve ilerleme → tek ana eylem → hızlı tur ve
- * konu modları → yön → tekrar listesi / haklar. Zorluk seçimi yok: kelime
+ * Ana sayfa. Öncelik sırası: bölüm ve ilerleme → tek ana eylem → konu modları
+ * (ana sayfada, kendi içinde kayan liste; dokununca bulmaca başlar) → yön →
+ * hızlı tur / tekrar / haklar. Sayfanın kendisi kaymaz. Zorluk seçimi yok: kelime
  * seviyesini uyarlamalı zorluk, bulmaca boyunu bölüm belirler.
  */
-export function Home({ pack, profile, setProfile, onPuzzle, puzzleSaved, tutorialPending, onPlay, onTopics, onReview, onSettings, onStore }: Props) {
+export function Home({ pack, profile, setProfile, onPuzzle, puzzleSaved, tutorialPending, onPlay, onPlayTopic, onReview, onSettings, onStore }: Props) {
   const { direction } = profile.settings;
   const src = languageInfo(direction.source);
   const tgt = languageInfo(direction.target);
@@ -38,7 +40,8 @@ export function Home({ pack, profile, setProfile, onPuzzle, puzzleSaved, tutoria
   const { chapter, done, size } = chapterInfo(profile.campaign);
   const goalDone = goalDoneToday(profile.daily, now);
   const streak = currentStreak(profile.daily, now);
-  const topics = topicStatuses(pack);
+  // Hiç kelimesi olmayan mod gösterilmez (bkz. TopicModes).
+  const topics = topicStatuses(pack).filter((t) => t.total > 0);
   const openTopics = topics.filter((t) => t.enabled).length;
 
   const action = tutorialPending
@@ -91,18 +94,21 @@ export function Home({ pack, profile, setProfile, onPuzzle, puzzleSaved, tutoria
         <p className="muted small center">{action.sub}</p>
       </section>
 
-      <div className="mode-row">
-        <button type="button" className="mode-card" onClick={onPlay}>
-          <LettersIcon width={24} height={24} />
-          <strong>Hızlı tur</strong>
-          <small>10 kelime, harf taşlarıyla</small>
-        </button>
-        <button type="button" className="mode-card" onClick={onTopics}>
-          <BookIcon width={24} height={24} />
-          <strong>Konu modları</strong>
-          <small>{openTopics > 0 ? `${openTopics} mod açık` : 'Hazırlanıyor'}</small>
-        </button>
-      </div>
+      <section className="topic-panel" aria-labelledby="topics-title">
+        <h2 id="topics-title">
+          Konu modları <small>{openTopics} açık · konuya dokun</small>
+        </h2>
+        <ul className="topic-scroll">
+          {topics.map((t) => (
+            <li key={t.mode.id}>
+              <button type="button" className="topic-tile" disabled={!t.enabled} onClick={() => onPlayTopic(t.mode.id)}>
+                <strong>{t.mode.name}</strong>
+                <small>{t.enabled ? `${t.total} kelime` : `Hazırlanıyor · ${t.total}/${MIN_TOPIC_WORDS}`}</small>
+              </button>
+            </li>
+          ))}
+        </ul>
+      </section>
 
       <section className="direction-row" aria-label="Oyun yönü">
         <span className="dir-lang">{src.name}</span>
@@ -118,14 +124,18 @@ export function Home({ pack, profile, setProfile, onPuzzle, puzzleSaved, tutoria
       </section>
 
       <nav className="home-links" aria-label="Diğer bölümler">
-        <button type="button" className="link-btn" onClick={onReview}>
+        <button type="button" className="link-btn" onClick={onPlay} aria-label="Hızlı tur: 10 kelime, harf taşlarıyla">
+          <LettersIcon width={18} height={18} />
+          Hızlı tur
+        </button>
+        <button type="button" className="link-btn" onClick={onReview} aria-label="Tekrar listesi">
           <BookIcon width={18} height={18} />
-          Tekrar listesi
+          Tekrar
           {profile.review.length > 0 && <span className="count">{profile.review.length}</span>}
         </button>
         <button type="button" className="link-btn" onClick={onStore}>
           <BagIcon width={18} height={18} />
-          Hak ve paketler
+          Paketler
         </button>
       </nav>
     </div>
