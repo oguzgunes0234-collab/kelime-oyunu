@@ -20,13 +20,31 @@ incelenen yalnızca 17 kelime (`check: "human"`); geri kalanı `crosscheck` ya d
 `bulk`. İnceleme sayfası hâlâ şüpheli A1–A2 kelimelerini işaretliyor; oradaki
 düzeltme/çıkarma kararları bir sonraki birleştirmede uygulanır.
 
-## DİKKAT: kelime paketi betikleri
-`taslak/ikinci-gorus.json` bilerek repoda YOK (lisansı doğrulanmamış bir
-listeden türedi; yalnızca karşılaştırma için yerelde tutuluyor). Bu dosya
-olmadan `node taslak/donustur.mjs` + `node taslak/pakete-ekle.mjs` çalıştırılırsa
-"iki kaynak uyuştu" (crosscheck) kelimeleri paketten düşer (~650 kelime).
-Dosya yoksa `src/data/pack-tr-en.json`'ı yeniden üretmeyin; doğrudan düzenleyin
-ya da yalnızca yeni taslakları ekleyin.
+## Kelime paketi betikleri (bulutta dikkat)
+- `taslak/ikinci-gorus.json` bilerek repoda YOK (lisansı doğrulanmamış bir
+  listeden türedi; yalnızca karşılaştırma için oyun sahibinin bilgisayarında).
+  Bütün taslaklar toplu onaylandığı için, birleştirme her zaman
+  `node taslak/donustur.mjs && node taslak/pakete-ekle.mjs <karar klasörü> --toplu=1,2,3,4,5,6,7,8`
+  ile çalıştırılırsa bu dosya olmadan da hiçbir kelime düşmez; yalnızca
+  "crosscheck" etiketleri "bulk" olur. `--toplu` vermeden ÇALIŞTIRMAYIN.
+- İnceleme sayfası (oyun sahibine özel artifact):
+  https://claude.ai/artifact/JEsQpKBTKDwv65jXYHHaHL — sayfa
+  `node taslak/inceleme-sayfasi.mjs <çıktı.html>` ile üretilir ve aynı adrese
+  yeniden yayınlanır. Oyun sahibinin kararları sayfanın veritabanında,
+  `kararlar` koleksiyonunda (belge kimliği = kelime id; `{s: ok|edit|drop, e?}`).
+  Kararları bir klasöre `<id>.json` olarak indirip `pakete-ekle.mjs`'e verin.
+- Aday kelime listeleri: `taslak/adaylar.txt` yalnızca ilk 3.051 aday. Daha
+  fazlası için SCOWL 2020.12.07 ve 12dicts 6.0.2 yeniden indirilmeli
+  (wordlist.aspell.net / SourceForge; indirmeden önce oyun sahibinden izin
+  alın); seçim kuralı `taslak/README.md` içinde.
+
+## Yayın nasıl yapılır (oyun sahibi onay verince)
+1. `main`'e gönder (GitHub).
+2. Herkese açık test sürümü: `npx vite build --base ./ --outDir <klasör>`,
+   çıktıyı `oguzgunes0234-collab/kelime-oyunu-test` reposunun köküne kopyala
+   (`.nojekyll` ve README kalsın), gönder; GitHub Pages bir iki dakikada yayınlar.
+3. Telefondaki Tailscale adresi oyun sahibinin bilgisayarında `main`'den
+   derlenir (`TELEFONDA-AC.bat`); bulutta güncellenemez.
 
 ## Sıradaki işler (oyun sahibiyle kararlaştırılan sıra, 2026-10-01)
 1. [YAPILDI] Yardım türlerini ayır: anlamı daraltan jokerler (Eş anlamlı, Cümle) puandan
