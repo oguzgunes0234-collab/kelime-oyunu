@@ -15,12 +15,15 @@
   --home-scene: url('./assets/ana-sayfa-acik.webp');
   --home-scene-sky: #f9dfc8;
   --home-scene-floor: #fbf4e5;
+  /* Bulmaca ekranı: kenarlarda dağınık boş taşlar, ortası sade. */
+  --cw-page-bg: url('./assets/bulmaca-acik.webp');
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
     --home-scene: url('./assets/ana-sayfa-koyu.webp');
     --home-scene-sky: #211d2a;
     --home-scene-floor: #231d29;
+    --cw-page-bg: url('./assets/bulmaca-koyu.webp');
     --clue-bg: #4a2a36;
     --clue-ink: #ffd9e0;
     --clue-arrow: #ff8fa6;
@@ -34,6 +37,7 @@
   --home-scene: url('./assets/ana-sayfa-koyu.webp');
   --home-scene-sky: #211d2a;
   --home-scene-floor: #231d29;
+  --cw-page-bg: url('./assets/bulmaca-koyu.webp');
   --clue-bg: #4a2a36;
   --clue-ink: #ffd9e0;
   --clue-arrow: #ff8fa6;
@@ -536,6 +540,7 @@
 .cw-page {
   height: 100dvh;
   overflow: hidden;
+  background: var(--cw-page-bg) center / cover no-repeat, var(--bg);
   display: flex;
   flex-direction: column;
   gap: 6px;
