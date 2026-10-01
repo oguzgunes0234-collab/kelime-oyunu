@@ -105,7 +105,7 @@ fountain|çeşme||noun|B2|şehir|We drank water from the fountain.|Çeşmeden su
 fraction|kesir||noun|B2|okul|One half is a fraction.|Yarım bir kesirdir.|Bir bütünün parçasını gösteren sayı.
 amnesty|af||noun|C1|hukuk|The prisoners hoped for an amnesty.|Mahkumlar af bekliyordu.|Suçluların cezasının devlet tarafından bağışlanması.
 anthem|marş||noun|B2|hukuk|We sang the national anthem.|İstiklal Marşı'nı söyledik.|Bir ülkeyi temsil eden resmî şarkı.
-asylum|iltica|sığınma|noun|C1|hukuk|He asked for asylum.|İltica talebinde bulundu.|Başka bir ülkeye sığınma hakkı.
+asylum|iltica|sığınma|noun|C1|hukuk|He asked for asylum.|İltica talebinde bulundu.|Zulümden kaçan birine başka bir ülkenin verdiği koruma.
 bandage|sargı||noun|B2|sağlık|The nurse put a bandage on my arm.|Hemşire koluma sargı sardı.|Yarayı örten bez şerit.
 barefoot|yalınayak||adverb|B2|günlük|The kids ran barefoot on the grass.|Çocuklar çimlerde yalınayak koştu.|Ayakkabısız, çıplak ayakla.
 bathtub|küvet||noun|B2|ev|She is in the bathtub.|Küvette.|İçinde yıkanılan büyük kap.

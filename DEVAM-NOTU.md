@@ -13,6 +13,13 @@ oyun sahibine sorulur.
 - Ses (Web Audio, dosyasız) ve bulmaca sonrası pekiştirme.
 - Jokerler: Cümle, Eş anlamlı; cümle ipucu ≥ 5 kelime + çeviri satırı.
 
+## Kelime paketi durumu (2026-10-01)
+Oyun sahibi bekleyen bütün taslakları toplu onayladı: paket 1.196 kelime
+(`pakete-ekle.mjs ... --toplu=1,2,3,4,5,6,7,8`). İnsan tarafından tek tek
+incelenen yalnızca 17 kelime (`check: "human"`); geri kalanı `crosscheck` ya da
+`bulk`. İnceleme sayfası hâlâ şüpheli A1–A2 kelimelerini işaretliyor; oradaki
+düzeltme/çıkarma kararları bir sonraki birleştirmede uygulanır.
+
 ## DİKKAT: kelime paketi betikleri
 `taslak/ikinci-gorus.json` bilerek repoda YOK (lisansı doğrulanmamış bir
 listeden türedi; yalnızca karşılaştırma için yerelde tutuluyor). Bu dosya

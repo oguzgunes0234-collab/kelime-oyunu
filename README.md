@@ -199,7 +199,7 @@ kelime-oyunu/
 
 ## Kelime verisi
 
-`src/data/pack-tr-en.json` **863 kelimelik** pakettir. Kapsamlı ya da
+`src/data/pack-tr-en.json` **1.196 kelimelik** pakettir. Kapsamlı ya da
 doğrulanmış bir sözlük değildir; seviyeler yaklaşık CEFR tahminidir.
 
 - İlk 138 kelime elle yazıldı (`check` alanı yok).

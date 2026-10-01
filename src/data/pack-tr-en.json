@@ -13701,6 +13701,27 @@
    "check": "crosscheck"
   },
   {
+   "id": "muz",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "muz",
+     "example": "Bir muz yedim."
+    },
+    "en": {
+     "text": "banana",
+     "example": "I ate a banana."
+    }
+   },
+   "hint": {
+    "tr": "Sarı kabuklu, uzun, tatlı meyve."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "portakal",
    "pos": "noun",
    "level": "A1",
@@ -13720,6 +13741,90 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "uzum",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "üzüm",
+     "example": "Bu üzüm çok tatlı."
+    },
+    "en": {
+     "text": "grape",
+     "example": "This grape is very sweet."
+    }
+   },
+   "hint": {
+    "tr": "Salkım halinde yetişen küçük meyve; şarabı da yapılır."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kiraz",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "kiraz",
+     "example": "Kiraz mevsimini severim."
+    },
+    "en": {
+     "text": "cherry",
+     "example": "I love cherry season."
+    }
+   },
+   "hint": {
+    "tr": "Yazın yetişen küçük, kırmızı meyve."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "seftali",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "şeftali",
+     "example": "Bu şeftali yumuşak ve tatlı."
+    },
+    "en": {
+     "text": "peach",
+     "example": "This peach is soft and sweet."
+    }
+   },
+   "hint": {
+    "tr": "Tüylü kabuklu, sulu yaz meyvesi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "armut",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "armut",
+     "example": "Bir armut yedim."
+    },
+    "en": {
+     "text": "pear",
+     "example": "I ate a pear."
+    }
+   },
+   "hint": {
+    "tr": "Alt kısmı geniş, üstü dar sulu meyve."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "patates",
@@ -13743,6 +13848,27 @@
    "check": "crosscheck"
   },
   {
+   "id": "domates",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "domates",
+     "example": "Salata için domatesi kes."
+    },
+    "en": {
+     "text": "tomato",
+     "example": "Cut the tomato for the salad."
+    }
+   },
+   "hint": {
+    "tr": "Kırmızı, sulu sebze; salçası yapılır."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "sogan",
    "pos": "noun",
    "level": "A1",
@@ -13762,6 +13888,90 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "sarimsak",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "sarımsak",
+     "example": "Bu sosta sarımsak var."
+    },
+    "en": {
+     "text": "garlic",
+     "example": "This sauce has garlic in it."
+    }
+   },
+   "hint": {
+    "tr": "Kokusu keskin, dişler halinde sebze."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "havuc",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "havuç",
+     "example": "Havucu tavşana ver."
+    },
+    "en": {
+     "text": "carrot",
+     "example": "Give the carrot to the rabbit."
+    }
+   },
+   "hint": {
+    "tr": "Turuncu renkli, uzun kök sebze."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "fasulye",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "fasulye",
+     "example": "Fasulye çorbası pişirdim."
+    },
+    "en": {
+     "text": "bean",
+     "example": "I cooked bean soup."
+    }
+   },
+   "hint": {
+    "tr": "Kuru ya da taze yenen baklagil."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "misir",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "mısır",
+     "example": "Plajda mısır yedik."
+    },
+    "en": {
+     "text": "corn",
+     "example": "We ate corn at the beach."
+    }
+   },
+   "hint": {
+    "tr": "Sarı taneli, koçan halinde yetişen bitki."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "pasta",
@@ -13786,6 +13996,48 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "kurabiye",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "kurabiye",
+     "example": "Bir kurabiye alabilir miyim?"
+    },
+    "en": {
+     "text": "cookie",
+     "example": "Can I have a cookie?"
+    }
+   },
+   "hint": {
+    "tr": "Fırında pişen küçük, tatlı hamur işi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "bal",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "bal",
+     "example": "Çayıma bal koydum."
+    },
+    "en": {
+     "text": "honey",
+     "example": "I put honey in my tea."
+    }
+   },
+   "hint": {
+    "tr": "Arıların yaptığı tatlı, koyu sıvı."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "recel",
@@ -13894,6 +14146,27 @@
    "check": "crosscheck"
   },
   {
+   "id": "eksi",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "ekşi",
+     "example": "Bu elma ekşi."
+    },
+    "en": {
+     "text": "sour",
+     "example": "This apple is sour."
+    }
+   },
+   "hint": {
+    "tr": "Limon gibi tadı olan."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "aci",
    "pos": "adjective",
    "level": "B1",
@@ -13913,6 +14186,48 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "tuzlu",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "tuzlu",
+     "example": "Çorba çok tuzlu."
+    },
+    "en": {
+     "text": "salty",
+     "example": "The soup is too salty."
+    }
+   },
+   "hint": {
+    "tr": "İçinde fazla tuz olan."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "baharatli",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "baharatlı",
+     "example": "Hint yemekleri baharatlı."
+    },
+    "en": {
+     "text": "spicy",
+     "example": "Indian food is spicy."
+    }
+   },
+   "hint": {
+    "tr": "İçinde bol çeşni ve acı olan."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "taze",
@@ -13955,6 +14270,48 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "kizartmak",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "kızartmak",
+     "example": "Yumurtaları tereyağında kızart."
+    },
+    "en": {
+     "text": "fry",
+     "example": "Fry the eggs in butter."
+    }
+   },
+   "hint": {
+    "tr": "Kızgın yağda pişirmek."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kaynatmak",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "kaynatmak",
+     "example": "Önce suyu kaynat."
+    },
+    "en": {
+     "text": "boil",
+     "example": "Boil the water first."
+    }
+   },
+   "hint": {
+    "tr": "Bir sıvıyı fokurdayana kadar ısıtmak."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "pisirmek",
@@ -14023,6 +14380,27 @@
    "check": "crosscheck"
   },
   {
+   "id": "bahsis",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "bahşiş",
+     "example": "Garsona bahşiş bıraktık."
+    },
+    "en": {
+     "text": "tip",
+     "example": "We left a tip for the waiter."
+    }
+   },
+   "hint": {
+    "tr": "Hizmet için verilen fazladan para."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "tarif",
    "pos": "noun",
    "level": "B1",
@@ -14044,6 +14422,27 @@
    "check": "crosscheck"
   },
   {
+   "id": "firin",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "fırın",
+     "example": "Ekmeği fırına koy."
+    },
+    "en": {
+     "text": "oven",
+     "example": "Put the bread in the oven."
+    }
+   },
+   "hint": {
+    "tr": "İçinde yemek pişirilen kapalı ocak."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "tava",
    "pos": "noun",
    "level": "A2",
@@ -14063,6 +14462,48 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "tencere",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "tencere",
+     "example": "Çorba tencerede."
+    },
+    "en": {
+     "text": "pot",
+     "example": "The soup is in the pot."
+    }
+   },
+   "hint": {
+    "tr": "Yemek pişirilen derin kap."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "buzdolabi",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "buzdolabı",
+     "example": "Süt buzdolabında."
+    },
+    "en": {
+     "text": "fridge",
+     "example": "The milk is in the fridge."
+    }
+   },
+   "hint": {
+    "tr": "Yiyecekleri soğuk tutan dolap."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "findik",
@@ -14110,6 +14551,90 @@
    "check": "crosscheck"
   },
   {
+   "id": "biftek",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "biftek",
+     "example": "Bir biftek sipariş etti."
+    },
+    "en": {
+     "text": "steak",
+     "example": "He ordered a steak."
+    }
+   },
+   "hint": {
+    "tr": "Kalın dilim halinde pişirilen sığır eti."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kuzu",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "kuzu",
+     "example": "Akşam yemeğinde kuzu yedik."
+    },
+    "en": {
+     "text": "lamb",
+     "example": "We had lamb for dinner."
+    }
+   },
+   "hint": {
+    "tr": "Koyunun yavrusu; eti."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "tepsi",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "tepsi",
+     "example": "Fincanları tepside taşıdı."
+    },
+    "en": {
+     "text": "tray",
+     "example": "She carried the cups on a tray."
+    }
+   },
+   "hint": {
+    "tr": "Yemek ya da bardak taşımaya yarayan düz kap."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "pecete",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "peçete",
+     "example": "Bir peçete alabilir miyim?"
+    },
+    "en": {
+     "text": "napkin",
+     "example": "Can I have a napkin?"
+    }
+   },
+   "hint": {
+    "tr": "Yemekte ağız ve el silmeye yarayan kâğıt."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "beslemek",
    "pos": "verb",
    "level": "A2",
@@ -14150,6 +14675,27 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "cignemek",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "çiğnemek",
+     "example": "Yemeğini yavaş çiğne."
+    },
+    "en": {
+     "text": "chew",
+     "example": "Chew your food slowly."
+    }
+   },
+   "hint": {
+    "tr": "Yiyeceği dişlerle ezmek."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "yutmak",
@@ -14278,6 +14824,30 @@
    "check": "crosscheck"
   },
   {
+   "id": "fis",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "fiş",
+     "alternatives": [
+      "makbuz"
+     ],
+     "example": "Fişi sakla."
+    },
+    "en": {
+     "text": "receipt",
+     "example": "Keep the receipt."
+    }
+   },
+   "hint": {
+    "tr": "Alışverişte ödenen parayı gösteren kâğıt."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "musteri",
    "pos": "noun",
    "level": "A2",
@@ -14341,6 +14911,30 @@
    "check": "crosscheck"
   },
   {
+   "id": "palto",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "palto",
+     "alternatives": [
+      "mont"
+     ],
+     "example": "Paltonu giy, hava soğuk."
+    },
+    "en": {
+     "text": "coat",
+     "example": "Wear your coat, it is cold."
+    }
+   },
+   "hint": {
+    "tr": "Kışın giyilen kalın dış giysi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "ceket",
    "pos": "noun",
    "level": "A1",
@@ -14381,6 +14975,27 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "corap",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "çorap",
+     "example": "Diğer çorabımı bulamıyorum."
+    },
+    "en": {
+     "text": "sock",
+     "example": "I can't find my other sock."
+    }
+   },
+   "hint": {
+    "tr": "Ayakkabının içine giyilen ince giysi."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "sapka",
@@ -14425,6 +15040,27 @@
    "check": "crosscheck"
   },
   {
+   "id": "atki",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "atkı",
+     "example": "Annem bana bir atkı ördü."
+    },
+    "en": {
+     "text": "scarf",
+     "example": "My mother made me a scarf."
+    }
+   },
+   "hint": {
+    "tr": "Boyna sarılan uzun, yumuşak giysi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "kemer",
    "pos": "noun",
    "level": "A2",
@@ -14444,6 +15080,69 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "kazak",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "kazak",
+     "example": "Sıcak bir kazak giy."
+    },
+    "en": {
+     "text": "sweater",
+     "example": "Put on a warm sweater."
+    }
+   },
+   "hint": {
+    "tr": "Yünden örülmüş, kollu üst giysi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kot",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "kot",
+     "example": "Hep kot giyerim."
+    },
+    "en": {
+     "text": "jeans",
+     "example": "I always wear jeans."
+    }
+   },
+   "hint": {
+    "tr": "Kalın mavi kumaştan pantolon."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kravat",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "kravat",
+     "example": "İşe kravat takıyor."
+    },
+    "en": {
+     "text": "tie",
+     "example": "He wears a tie to work."
+    }
+   },
+   "hint": {
+    "tr": "Gömlek yakasına bağlanan uzun şerit."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "altin",
@@ -14617,6 +15316,48 @@
    "check": "crosscheck"
   },
   {
+   "id": "satici",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "satıcı",
+     "example": "Satıcı çok güler yüzlüydü."
+    },
+    "en": {
+     "text": "seller",
+     "example": "The seller was very friendly."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi satan kişi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "sepet",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "sepet",
+     "example": "Elmaları sepete koy."
+    },
+    "en": {
+     "text": "basket",
+     "example": "Put the apples in the basket."
+    }
+   },
+   "hint": {
+    "tr": "Örgülü, kulplu taşıma kabı."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "toplam",
    "pos": "noun",
    "level": "B1",
@@ -14659,6 +15400,27 @@
    "check": "crosscheck"
   },
   {
+   "id": "kelepir",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "kelepir",
+     "example": "Herkes kelepiri sever."
+    },
+    "en": {
+     "text": "bargain",
+     "example": "Everyone loves a bargain."
+    }
+   },
+   "hint": {
+    "tr": "Değerinden çok ucuza alınan şey."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "oyuncak",
    "pos": "noun",
    "level": "A1",
@@ -14678,6 +15440,72 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "mucevher",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "mücevher",
+     "example": "Mücevherlerini bir kutuda saklıyor."
+    },
+    "en": {
+     "text": "jewelry",
+     "alternatives": [
+      "jewellery"
+     ],
+     "example": "She keeps her jewelry in a box."
+    }
+   },
+   "hint": {
+    "tr": "Takı olarak kullanılan değerli taşlar ve süsler."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kolye",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "kolye",
+     "example": "Ona bir kolye aldı."
+    },
+    "en": {
+     "text": "necklace",
+     "example": "He bought her a necklace."
+    }
+   },
+   "hint": {
+    "tr": "Boyna takılan süs."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kupe",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "küpe",
+     "example": "Bir küpesini kaybetti."
+    },
+    "en": {
+     "text": "earring",
+     "example": "She lost an earring."
+    }
+   },
+   "hint": {
+    "tr": "Kulağa takılan süs."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "cizme",
@@ -14809,6 +15637,27 @@
    "check": "crosscheck"
   },
   {
+   "id": "iade",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "iade",
+     "example": "İade istiyorum."
+    },
+    "en": {
+     "text": "refund",
+     "example": "I want a refund."
+    }
+   },
+   "hint": {
+    "tr": "Geri verilen ürünün parasının ödenmesi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "servet",
    "pos": "noun",
    "level": "B2",
@@ -14830,6 +15679,90 @@
    "check": "crosscheck"
   },
   {
+   "id": "yoksulluk",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "yoksulluk",
+     "example": "Birçok insan yoksulluk içinde yaşıyor."
+    },
+    "en": {
+     "text": "poverty",
+     "example": "Many people live in poverty."
+    }
+   },
+   "hint": {
+    "tr": "Çok az parayla yaşama durumu."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kasap",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "kasap",
+     "example": "Kasaptan et aldım."
+    },
+    "en": {
+     "text": "butcher",
+     "example": "I bought meat from the butcher."
+    }
+   },
+   "hint": {
+    "tr": "Et satan kişi ya da dükkân."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "firinci",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "fırıncı",
+     "example": "Fırıncı erken kalkar."
+    },
+    "en": {
+     "text": "baker",
+     "example": "The baker gets up early."
+    }
+   },
+   "hint": {
+    "tr": "Ekmek yapıp satan kişi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "bakkal",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "bakkal",
+     "example": "Bakkal meyve ve süt satar."
+    },
+    "en": {
+     "text": "grocer",
+     "example": "The grocer sells fruit and milk."
+    }
+   },
+   "hint": {
+    "tr": "Mahallede gıda ve gündelik ihtiyaç satan kişi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "vergi",
    "pos": "noun",
    "level": "B1",
@@ -14849,6 +15782,27 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "butce",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "bütçe",
+     "example": "Bütçemiz kısıtlı."
+    },
+    "en": {
+     "text": "budget",
+     "example": "We are on a tight budget."
+    }
+   },
+   "hint": {
+    "tr": "Harcanacak paranın planı."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "kar-profit",
@@ -14874,6 +15828,27 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "banyo",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "banyo",
+     "example": "Banyo üst katta."
+    },
+    "en": {
+     "text": "bathroom",
+     "example": "The bathroom is upstairs."
+    }
+   },
+   "hint": {
+    "tr": "Evde yıkanılan oda."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "bahce",
@@ -14937,6 +15912,27 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "kanepe",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "kanepe",
+     "example": "Kanepeye otur."
+    },
+    "en": {
+     "text": "sofa",
+     "example": "Sit on the sofa."
+    }
+   },
+   "hint": {
+    "tr": "Birkaç kişinin oturabileceği yumuşak oturak."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "ayna",
@@ -15044,6 +16040,48 @@
    "check": "crosscheck"
   },
   {
+   "id": "yastik",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "yastık",
+     "example": "Yumuşak bir yastığa ihtiyacım var."
+    },
+    "en": {
+     "text": "pillow",
+     "example": "I need a soft pillow."
+    }
+   },
+   "hint": {
+    "tr": "Uyurken başın altına konan şey."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "battaniye",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "battaniye",
+     "example": "Hava soğuk, bir battaniye al."
+    },
+    "en": {
+     "text": "blanket",
+     "example": "It's cold, take a blanket."
+    }
+   },
+   "hint": {
+    "tr": "Üşümemek için örtünülen kalın örtü."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "havlu",
    "pos": "noun",
    "level": "A2",
@@ -15107,6 +16145,27 @@
    "check": "crosscheck"
   },
   {
+   "id": "tarak",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "tarak",
+     "example": "Saçın için tarak kullan."
+    },
+    "en": {
+     "text": "comb",
+     "example": "Use a comb for your hair."
+    }
+   },
+   "hint": {
+    "tr": "Saçı düzeltmeye yarayan dişli araç."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "cit",
    "pos": "noun",
    "level": "B1",
@@ -15126,6 +16185,48 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "avlu",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "avlu",
+     "example": "Çocuklar avluda oynuyor."
+    },
+    "en": {
+     "text": "yard",
+     "example": "The children play in the yard."
+    }
+   },
+   "hint": {
+    "tr": "Evin önündeki ya da arkasındaki açık alan."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "bodrum",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "bodrum",
+     "example": "Eski eşyaları bodrumda tutuyoruz."
+    },
+    "en": {
+     "text": "basement",
+     "example": "We keep old things in the basement."
+    }
+   },
+   "hint": {
+    "tr": "Evin toprak altındaki katı."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "tavan",
@@ -15168,6 +16269,69 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "kova",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "kova",
+     "example": "Kovayı suyla doldur."
+    },
+    "en": {
+     "text": "bucket",
+     "example": "Fill the bucket with water."
+    }
+   },
+   "hint": {
+    "tr": "Kulplu, su taşımaya yarayan kap."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "supurge",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "süpürge",
+     "example": "Süpürge nerede?"
+    },
+    "en": {
+     "text": "broom",
+     "example": "Where is the broom?"
+    }
+   },
+   "hint": {
+    "tr": "Yer süpürmeye yarayan uzun saplı fırça."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "mum",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "mum",
+     "example": "Bir mum yak."
+    },
+    "en": {
+     "text": "candle",
+     "example": "Light a candle."
+    }
+   },
+   "hint": {
+    "tr": "Fitili yakılarak ışık veren nesne."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "dolap",
@@ -15342,6 +16506,98 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "yegen",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "yeğen",
+     "example": "Yeğenim beş yaşında."
+    },
+    "en": {
+     "text": "nephew",
+     "example": "My nephew is five years old."
+    }
+   },
+   "hint": {
+    "tr": "Kardeşin oğlu."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "torun",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "torun",
+     "example": "Torunu her pazar ziyarete gelir."
+    },
+    "en": {
+     "text": "grandson",
+     "example": "Her grandson visits every Sunday."
+    }
+   },
+   "hint": {
+    "tr": "Çocuğun çocuğu."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "buyukanne",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "büyükanne",
+     "alternatives": [
+      "nine",
+      "anneanne",
+      "babaanne"
+     ],
+     "example": "Büyükannem harika kurabiyeler yapar."
+    },
+    "en": {
+     "text": "grandma",
+     "example": "My grandma makes great cookies."
+    }
+   },
+   "hint": {
+    "tr": "Annenin ya da babanın annesi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "buyukbaba",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "büyükbaba",
+     "alternatives": [
+      "dede"
+     ],
+     "example": "Dedem güzel hikâyeler anlatır."
+    },
+    "en": {
+     "text": "grandpa",
+     "example": "My grandpa tells good stories."
+    }
+   },
+   "hint": {
+    "tr": "Annenin ya da babanın babası."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "ikiz",
@@ -15534,6 +16790,27 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "ucak",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "uçak",
+     "example": "Uçak rötarlı."
+    },
+    "en": {
+     "text": "plane",
+     "example": "The plane is late."
+    }
+   },
+   "hint": {
+    "tr": "Havada giden kanatlı taşıt."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "gemi",
@@ -15734,6 +17011,48 @@
    "check": "crosscheck"
   },
   {
+   "id": "saray",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "saray",
+     "example": "Saray ziyaretçilere açık."
+    },
+    "en": {
+     "text": "palace",
+     "example": "The palace is open to visitors."
+    }
+   },
+   "hint": {
+    "tr": "Kralların ya da padişahların yaşadığı büyük yapı."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "meydan",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "şehir",
+   "terms": {
+    "tr": {
+     "text": "meydan",
+     "example": "Benimle ana meydanda buluş."
+    },
+    "en": {
+     "text": "square",
+     "example": "Meet me in the main square."
+    }
+   },
+   "hint": {
+    "tr": "Şehirde çevresi yapılarla çevrili açık alan."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "kose",
    "pos": "noun",
    "level": "A2",
@@ -15753,6 +17072,30 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "rotar",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "rötar",
+     "alternatives": [
+      "gecikme"
+     ],
+     "example": "Bir saatlik rötar var."
+    },
+    "en": {
+     "text": "delay",
+     "example": "There is a delay of one hour."
+    }
+   },
+   "hint": {
+    "tr": "Planlanan zamandan sonra olma."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "bati",
@@ -15884,6 +17227,27 @@
    "check": "crosscheck"
   },
   {
+   "id": "col",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "çöl",
+     "example": "Çölde hava çok sıcak."
+    },
+    "en": {
+     "text": "desert",
+     "example": "It is very hot in the desert."
+    }
+   },
+   "hint": {
+    "tr": "Kumlu, çok kurak geniş alan."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "orman",
    "pos": "noun",
    "level": "A1",
@@ -15989,6 +17353,51 @@
    "check": "crosscheck"
   },
   {
+   "id": "hatira",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "hatıra",
+     "alternatives": [
+      "hediyelik"
+     ],
+     "example": "Anneme bir hatıra aldım."
+    },
+    "en": {
+     "text": "souvenir",
+     "example": "I bought a souvenir for my mother."
+    }
+   },
+   "hint": {
+    "tr": "Gezilen yerden anı olarak alınan eşya."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "bisiklet",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "bisiklet",
+     "example": "Okula bisikletle giderim."
+    },
+    "en": {
+     "text": "bike",
+     "example": "I ride my bike to school."
+    }
+   },
+   "hint": {
+    "tr": "İki tekerlekli, pedallı taşıt."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "yakit",
    "pos": "noun",
    "level": "B1",
@@ -16050,6 +17459,27 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "yurtdisi",
+   "pos": "adverb",
+   "level": "B1",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "yurtdışı",
+     "example": "Yurtdışında yaşıyor."
+    },
+    "en": {
+     "text": "abroad",
+     "example": "She lives abroad."
+    }
+   },
+   "hint": {
+    "tr": "Başka bir ülkede."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "patron",
@@ -16241,6 +17671,27 @@
    "check": "crosscheck"
   },
   {
+   "id": "grev",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "grev",
+     "example": "İşçiler grevde."
+    },
+    "en": {
+     "text": "strike",
+     "example": "The workers are on strike."
+    }
+   },
+   "hint": {
+    "tr": "İşçilerin hak için işi bırakması."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "tembel",
    "pos": "adjective",
    "level": "A2",
@@ -16281,6 +17732,27 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "vardiya",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "vardiya",
+     "example": "Gece vardiyasında çalışıyorum."
+    },
+    "en": {
+     "text": "shift",
+     "example": "I work the night shift."
+    }
+   },
+   "hint": {
+    "tr": "İşyerinde sırayla çalışılan zaman dilimi."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "sendika",
@@ -16368,6 +17840,27 @@
    "check": "crosscheck"
   },
   {
+   "id": "takvim",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "takvim",
+     "example": "Takvime bak."
+    },
+    "en": {
+     "text": "calendar",
+     "example": "Check the calendar."
+    }
+   },
+   "hint": {
+    "tr": "Günleri ve ayları gösteren çizelge."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "cizelge",
    "pos": "noun",
    "level": "B1",
@@ -16390,6 +17883,30 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "mal",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "mal",
+     "alternatives": [
+      "ürünler"
+     ],
+     "example": "Mallar gemiyle geliyor."
+    },
+    "en": {
+     "text": "goods",
+     "example": "The goods arrive by ship."
+    }
+   },
+   "hint": {
+    "tr": "Alınıp satılan eşyalar."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "hemsire",
@@ -16432,6 +17949,48 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "grip",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "grip",
+     "example": "Gribim."
+    },
+    "en": {
+     "text": "flu",
+     "example": "I have the flu."
+    }
+   },
+   "hint": {
+    "tr": "Ateş ve öksürük yapan bulaşıcı hastalık."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "oksuruk",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "öksürük",
+     "example": "Kötü bir öksürüğüm var."
+    },
+    "en": {
+     "text": "cough",
+     "example": "I have a bad cough."
+    }
+   },
+   "hint": {
+    "tr": "Boğazdan sesle hava çıkarma."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "kemik",
@@ -16500,6 +18059,48 @@
    "check": "crosscheck"
   },
   {
+   "id": "disci",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "dişçi",
+     "example": "Yılda iki kez dişçiye giderim."
+    },
+    "en": {
+     "text": "dentist",
+     "example": "I go to the dentist twice a year."
+    }
+   },
+   "hint": {
+    "tr": "Diş hekimi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "hap",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "hap",
+     "example": "Akşam yemeğinden sonra bir hap al."
+    },
+    "en": {
+     "text": "pill",
+     "example": "Take one pill after dinner."
+    }
+   },
+   "hint": {
+    "tr": "Yutulan küçük ilaç."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "saglikli",
    "pos": "adjective",
    "level": "A1",
@@ -16519,6 +18120,69 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "iyilesmek",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "iyileşmek",
+     "example": "Yara yakında iyileşir."
+    },
+    "en": {
+     "text": "heal",
+     "example": "The wound will heal soon."
+    }
+   },
+   "hint": {
+    "tr": "Hastalıktan ya da yaradan kurtulmak."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "sisman",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "şişman",
+     "example": "Kedi çok şişman."
+    },
+    "en": {
+     "text": "fat",
+     "example": "The cat is very fat."
+    }
+   },
+   "hint": {
+    "tr": "Kilosu fazla olan."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "zayif",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "zayıf",
+     "example": "O çok zayıf."
+    },
+    "en": {
+     "text": "thin",
+     "example": "He is very thin."
+    }
+   },
+   "hint": {
+    "tr": "Kilosu az olan."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "boyun",
@@ -16797,6 +18461,48 @@
    "check": "crosscheck"
   },
   {
+   "id": "mikrop",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "mikrop",
+     "example": "Mikropları öldürmek için ellerini yıka."
+    },
+    "en": {
+     "text": "germ",
+     "example": "Wash your hands to kill every germ."
+    }
+   },
+   "hint": {
+    "tr": "Hastalık yapan çok küçük canlı."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "ameliyat",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "ameliyat",
+     "example": "Ameliyat olması gerekiyor."
+    },
+    "en": {
+     "text": "surgery",
+     "example": "He needs surgery."
+    }
+   },
+   "hint": {
+    "tr": "Doktorun vücudu açarak yaptığı tedavi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "care",
    "pos": "noun",
    "level": "B2",
@@ -16819,6 +18525,48 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "kanamak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "kanamak",
+     "example": "Parmağın kanayacak."
+    },
+    "en": {
+     "text": "bleed",
+     "example": "Your finger will bleed."
+    }
+   },
+   "hint": {
+    "tr": "Vücuttan kan akmak."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "bayilmak",
+   "pos": "verb",
+   "level": "B2",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "bayılmak",
+     "example": "Bayılacak gibi oldu."
+    },
+    "en": {
+     "text": "faint",
+     "example": "She felt she would faint."
+    }
+   },
+   "hint": {
+    "tr": "Bir süre bilincini kaybetmek."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "kor",
@@ -16926,6 +18674,27 @@
    "check": "crosscheck"
   },
   {
+   "id": "basparmak",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "vücut",
+   "terms": {
+    "tr": {
+     "text": "başparmak",
+     "example": "Başparmağımı kestim."
+    },
+    "en": {
+     "text": "thumb",
+     "example": "I cut my thumb."
+    }
+   },
+   "hint": {
+    "tr": "Elin en kalın, kısa parmağı."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "topuk",
    "pos": "noun",
    "level": "B1",
@@ -16966,6 +18735,48 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "karaciger",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "vücut",
+   "terms": {
+    "tr": {
+     "text": "karaciğer",
+     "example": "Karaciğer kanı temizler."
+    },
+    "en": {
+     "text": "liver",
+     "example": "The liver cleans the blood."
+    }
+   },
+   "hint": {
+    "tr": "Kanı temizleyen büyük iç organ."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "bobrek",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "vücut",
+   "terms": {
+    "tr": {
+     "text": "böbrek",
+     "example": "Böbrek sorunu var."
+    },
+    "en": {
+     "text": "kidney",
+     "example": "He has a kidney problem."
+    }
+   },
+   "hint": {
+    "tr": "Kandan idrar süzen iç organ."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "kas",
@@ -17010,6 +18821,27 @@
    "check": "crosscheck"
   },
   {
+   "id": "ter",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "vücut",
+   "terms": {
+    "tr": {
+     "text": "ter",
+     "example": "Ter içindeydi."
+    },
+    "en": {
+     "text": "sweat",
+     "example": "He was covered in sweat."
+    }
+   },
+   "hint": {
+    "tr": "Sıcakta deriden çıkan tuzlu su."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "uyanik",
    "pos": "adjective",
    "level": "B1",
@@ -17029,6 +18861,27 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "esnemek",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "esnemek",
+     "example": "Derste esneme."
+    },
+    "en": {
+     "text": "yawn",
+     "example": "Don't yawn in class."
+    }
+   },
+   "hint": {
+    "tr": "Yorgunlukla ağzı açıp derin nefes almak."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "ekran",
@@ -17052,6 +18905,27 @@
    "check": "crosscheck"
   },
   {
+   "id": "klavye",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "klavye",
+     "example": "Klavyem bozuk."
+    },
+    "en": {
+     "text": "keyboard",
+     "example": "My keyboard is broken."
+    }
+   },
+   "hint": {
+    "tr": "Harflere basarak yazı yazılan tuş takımı."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "fare",
    "pos": "noun",
    "level": "A2",
@@ -17071,6 +18945,27 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "silmek",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "silmek",
+     "example": "Bu fotoğrafı sil."
+    },
+    "en": {
+     "text": "delete",
+     "example": "Delete this photo."
+    }
+   },
+   "hint": {
+    "tr": "Bir yazıyı ya da kaydı ortadan kaldırmak."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "pil",
@@ -17097,6 +18992,30 @@
    "check": "crosscheck"
   },
   {
+   "id": "tel",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "tel",
+     "alternatives": [
+      "kablo"
+     ],
+     "example": "O tele dokunma."
+    },
+    "en": {
+     "text": "wire",
+     "example": "Don't touch that wire."
+    }
+   },
+   "hint": {
+    "tr": "İnce, uzun metal iplik."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "cihaz",
    "pos": "noun",
    "level": "B1",
@@ -17118,6 +19037,48 @@
    "check": "crosscheck"
   },
   {
+   "id": "guncelleme",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "güncelleme",
+     "example": "Telefonun için yeni bir güncelleme var."
+    },
+    "en": {
+     "text": "update",
+     "example": "There is a new update for your phone."
+    }
+   },
+   "hint": {
+    "tr": "Bir programın yeni ve düzeltilmiş sürümü."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "indirmek",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "indirmek",
+     "example": "Uygulamayı indir."
+    },
+    "en": {
+     "text": "download",
+     "example": "Download the app."
+    }
+   },
+   "hint": {
+    "tr": "İnternetten cihaza dosya almak."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "yazici",
    "pos": "noun",
    "level": "A2",
@@ -17137,6 +19098,51 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "kullanici",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "kullanıcı",
+     "example": "Her kullanıcının bir şifresi var."
+    },
+    "en": {
+     "text": "user",
+     "example": "Every user has a password."
+    }
+   },
+   "hint": {
+    "tr": "Bir programı ya da cihazı kullanan kişi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "sifre",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "şifre",
+     "alternatives": [
+      "parola"
+     ],
+     "example": "Şifreni paylaşma."
+    },
+    "en": {
+     "text": "password",
+     "example": "Don't share your password."
+    }
+   },
+   "hint": {
+    "tr": "Hesaba girmek için gereken gizli söz."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "alet",
@@ -17184,6 +19190,27 @@
    "check": "crosscheck"
   },
   {
+   "id": "onarmak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "onarmak",
+     "example": "Telefonumu onarabilir misin?"
+    },
+    "en": {
+     "text": "repair",
+     "example": "Can you repair my phone?"
+    }
+   },
+   "hint": {
+    "tr": "Bozuk bir şeyi yeniden çalışır hale getirmek."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "dokunmak",
    "pos": "verb",
    "level": "A2",
@@ -17203,6 +19230,48 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "kumanda",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "kumanda",
+     "example": "Televizyonun kumandası nerede?"
+    },
+    "en": {
+     "text": "remote",
+     "example": "Where is the TV remote?"
+    }
+   },
+   "hint": {
+    "tr": "Bir cihazı uzaktan yöneten alet."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "akilli",
+   "pos": "adjective",
+   "level": "A2",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "akıllı",
+     "example": "O çok akıllı."
+    },
+    "en": {
+     "text": "smart",
+     "example": "She is very smart."
+    }
+   },
+   "hint": {
+    "tr": "Zekâsı yüksek."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "muhendis",
@@ -17268,6 +19337,90 @@
    "check": "crosscheck"
   },
   {
+   "id": "yorunge",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "yörünge",
+     "example": "Ay, Dünya'nın çevresinde yörüngede."
+    },
+    "en": {
+     "text": "orbit",
+     "example": "The moon is in orbit around the earth."
+    }
+   },
+   "hint": {
+    "tr": "Bir gök cisminin çevresinde izlenen yol."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "yercekimi",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "yerçekimi",
+     "example": "Yerçekimi bizi yerde tutar."
+    },
+    "en": {
+     "text": "gravity",
+     "example": "Gravity keeps us on the ground."
+    }
+   },
+   "hint": {
+    "tr": "Cisimleri yere doğru çeken kuvvet."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "miknatis",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "mıknatıs",
+     "example": "Mıknatıs demiri çeker."
+    },
+    "en": {
+     "text": "magnet",
+     "example": "A magnet pulls iron."
+    }
+   },
+   "hint": {
+    "tr": "Demiri kendine çeken taş ya da metal."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "mucit",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "mucit",
+     "example": "Edison ünlü bir mucitti."
+    },
+    "en": {
+     "text": "inventor",
+     "example": "Edison was a famous inventor."
+    }
+   },
+   "hint": {
+    "tr": "Yeni bir şey bulan kişi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "kesfetmek",
    "pos": "verb",
    "level": "B1",
@@ -17289,6 +19442,69 @@
    "check": "crosscheck"
   },
   {
+   "id": "depolama",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "depolama",
+     "example": "Telefonumun depolaması az."
+    },
+    "en": {
+     "text": "storage",
+     "example": "My phone has little storage."
+    }
+   },
+   "hint": {
+    "tr": "Bilgi ya da eşya saklama alanı."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "sunucu",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "sunucu",
+     "example": "Sunucu çöktü."
+    },
+    "en": {
+     "text": "server",
+     "example": "The server is down."
+    }
+   },
+   "hint": {
+    "tr": "Diğer bilgisayarlara hizmet veren bilgisayar."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "sohbet",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "sohbet",
+     "example": "Güzel bir sohbet ettik."
+    },
+    "en": {
+     "text": "chat",
+     "example": "We had a nice chat."
+    }
+   },
+   "hint": {
+    "tr": "Karşılıklı rahat konuşma."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "baglamak",
    "pos": "verb",
    "level": "B1",
@@ -17308,6 +19524,48 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "kurmak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "kurmak",
+     "example": "Programı kur."
+    },
+    "en": {
+     "text": "install",
+     "example": "Install the program."
+    }
+   },
+   "hint": {
+    "tr": "Bir yazılımı cihaza yüklemek."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kaydirmak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "kaydırmak",
+     "example": "Sayfayı aşağı kaydır."
+    },
+    "en": {
+     "text": "scroll",
+     "example": "Scroll down the page."
+    }
+   },
+   "hint": {
+    "tr": "Ekrandaki içeriği yukarı ya da aşağı hareket ettirmek."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "metin",
@@ -17481,6 +19739,27 @@
    "check": "crosscheck"
   },
   {
+   "id": "ceza",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "ceza",
+     "example": "Ceza çok yüksek."
+    },
+    "en": {
+     "text": "penalty",
+     "example": "The penalty is very high."
+    }
+   },
+   "hint": {
+    "tr": "Kurala uymayana verilen yaptırım."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "oy",
    "pos": "noun",
    "level": "B1",
@@ -17544,6 +19823,30 @@
    "check": "crosscheck"
   },
   {
+   "id": "izin",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "izin",
+     "alternatives": [
+      "ruhsat"
+     ],
+     "example": "Burada inşaat için izin gerekir."
+    },
+    "en": {
+     "text": "permit",
+     "example": "You need a permit to build here."
+    }
+   },
+   "hint": {
+    "tr": "Resmî kurumun verdiği yazılı onay."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "kurban",
    "pos": "noun",
    "level": "B2",
@@ -17566,6 +19869,93 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "supheli",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "şüpheli",
+     "example": "Polis şüpheliyi yakaladı."
+    },
+    "en": {
+     "text": "suspect",
+     "example": "The police caught the suspect."
+    }
+   },
+   "hint": {
+    "tr": "Suç işlediği düşünülen kişi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "cete",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "çete",
+     "example": "Çete bir banka soydu."
+    },
+    "en": {
+     "text": "gang",
+     "example": "The gang robbed a bank."
+    }
+   },
+   "hint": {
+    "tr": "Birlikte suç işleyen grup."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "casus",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "casus",
+     "example": "O bir casustu."
+    },
+    "en": {
+     "text": "spy",
+     "example": "He was a spy."
+    }
+   },
+   "hint": {
+    "tr": "Gizli bilgi toplayan kişi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "aldatmak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "aldatmak",
+     "alternatives": [
+      "kopya"
+     ],
+     "example": "Sınavda kopya çekme."
+    },
+    "en": {
+     "text": "cheat",
+     "example": "Don't cheat in the exam."
+    }
+   },
+   "hint": {
+    "tr": "Hileyle kandırmak."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "kral",
@@ -17629,6 +20019,27 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "kole",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "köle",
+     "example": "Köle gibi yaşadı."
+    },
+    "en": {
+     "text": "slave",
+     "example": "He lived like a slave."
+    }
+   },
+   "hint": {
+    "tr": "Özgürlüğü olmayan, başkasına ait kişi."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "dusman",
@@ -17788,6 +20199,51 @@
    "check": "crosscheck"
   },
   {
+   "id": "bekci",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "bekçi",
+     "alternatives": [
+      "gardiyan"
+     ],
+     "example": "Bekçi kapıda."
+    },
+    "en": {
+     "text": "guard",
+     "example": "The guard is at the gate."
+    }
+   },
+   "hint": {
+    "tr": "Bir yeri koruyan kişi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "yemin",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "yemin",
+     "example": "Yemin etti."
+    },
+    "en": {
+     "text": "oath",
+     "example": "He took an oath."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi yapacağına dair kutsal söz."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "tartisma",
    "pos": "noun",
    "level": "B1",
@@ -17828,6 +20284,27 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "rusvet",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "rüşvet",
+     "example": "Rüşvet aldı."
+    },
+    "en": {
+     "text": "bribe",
+     "example": "He took a bribe."
+    }
+   },
+   "hint": {
+    "tr": "Birini kendi lehine çevirmek için verilen gizli para."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "bayrak",
@@ -17872,6 +20349,48 @@
    "check": "crosscheck"
   },
   {
+   "id": "taht",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "taht",
+     "example": "Kral tahtına oturdu."
+    },
+    "en": {
+     "text": "throne",
+     "example": "The king sat on his throne."
+    }
+   },
+   "hint": {
+    "tr": "Hükümdarın oturduğu süslü koltuk."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "antlasma",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "antlaşma",
+     "example": "İki ülke bir antlaşma imzaladı."
+    },
+    "en": {
+     "text": "treaty",
+     "example": "The two countries signed a treaty."
+    }
+   },
+   "hint": {
+    "tr": "Devletler arasında yapılan resmî anlaşma."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "yasadisi",
    "pos": "adjective",
    "level": "B1",
@@ -17893,6 +20412,27 @@
    "check": "crosscheck"
   },
   {
+   "id": "kacirmak",
+   "pos": "verb",
+   "level": "B2",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "kaçırmak",
+     "example": "Çocuğu kaçırmaya çalıştılar."
+    },
+    "en": {
+     "text": "kidnap",
+     "example": "They tried to kidnap the child."
+    }
+   },
+   "hint": {
+    "tr": "Birini zorla alıp götürmek."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "sivi",
    "pos": "noun",
    "level": "B1",
@@ -17912,6 +20452,69 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "kati",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "katı",
+     "example": "Buz katıdır."
+    },
+    "en": {
+     "text": "solid",
+     "example": "Ice is solid."
+    }
+   },
+   "hint": {
+    "tr": "Şekli değişmeyen, akmayan."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "dalga",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "dalga",
+     "example": "Ses dalga halinde yayılır."
+    },
+    "en": {
+     "text": "wave",
+     "example": "Sound travels as a wave."
+    }
+   },
+   "hint": {
+    "tr": "Suda ya da havada kabarıp ilerleyen hareket."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "isin",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "ışın",
+     "example": "Pencereden bir ışık ışını girdi."
+    },
+    "en": {
+     "text": "ray",
+     "example": "A ray of light came through the window."
+    }
+   },
+   "hint": {
+    "tr": "Bir kaynaktan çıkan ince ışık çizgisi."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "agirlik",
@@ -17954,6 +20557,27 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "hacim",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "hacim",
+     "example": "Bu şişenin hacmi ne?"
+    },
+    "en": {
+     "text": "volume",
+     "example": "What is the volume of this bottle?"
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin kapladığı yer miktarı."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "evren",
@@ -18022,6 +20646,27 @@
    "check": "crosscheck"
   },
   {
+   "id": "denklem",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "denklem",
+     "example": "Bu denklemi çöz."
+    },
+    "en": {
+     "text": "equation",
+     "example": "Solve this equation."
+    }
+   },
+   "hint": {
+    "tr": "İki tarafı eşit olan matematik ifadesi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "aci-angle",
    "pos": "noun",
    "level": "B1",
@@ -18088,6 +20733,69 @@
    "check": "crosscheck"
   },
   {
+   "id": "priz",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "priz",
+     "example": "Fişi prize tak."
+    },
+    "en": {
+     "text": "socket",
+     "example": "Put the plug in the socket."
+    }
+   },
+   "hint": {
+    "tr": "Duvardaki elektrik girişi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "ampul",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "ampul",
+     "example": "Ampul bozuk."
+    },
+    "en": {
+     "text": "bulb",
+     "example": "The light bulb is broken."
+    }
+   },
+   "hint": {
+    "tr": "Işık veren cam lamba."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "isitici",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "ısıtıcı",
+     "example": "Isıtıcıyı aç."
+    },
+    "en": {
+     "text": "heater",
+     "example": "Turn on the heater."
+    }
+   },
+   "hint": {
+    "tr": "Odayı ısıtan alet."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "tiklamak",
    "pos": "verb",
    "level": "A2",
@@ -18107,6 +20815,90 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "tarayici",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "tarayıcı",
+     "example": "İnternet tarayıcını aç."
+    },
+    "en": {
+     "text": "browser",
+     "example": "Open your web browser."
+    }
+   },
+   "hint": {
+    "tr": "İnternet sayfalarını açan program."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "klasor",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "klasör",
+     "example": "Dosyayı bu klasöre kaydet."
+    },
+    "en": {
+     "text": "folder",
+     "example": "Save the file in this folder."
+    }
+   },
+   "hint": {
+    "tr": "Dosyaların toplandığı bölme."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "yedek",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "yedek",
+     "example": "Dosyalarının yedeğini al."
+    },
+    "en": {
+     "text": "backup",
+     "example": "Make a backup of your files."
+    }
+   },
+   "hint": {
+    "tr": "Kaybolmasın diye saklanan kopya."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "taramak",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "taramak",
+     "example": "Belgeyi tara."
+    },
+    "en": {
+     "text": "scan",
+     "example": "Scan the document."
+    }
+   },
+   "hint": {
+    "tr": "Bir kâğıdı makineyle bilgisayara aktarmak."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "sarmak",
@@ -18131,6 +20923,90 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "terlik",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "terlik",
+     "example": "Diğer terliğim nerede?"
+    },
+    "en": {
+     "text": "slipper",
+     "example": "Where is my other slipper?"
+    }
+   },
+   "hint": {
+    "tr": "Evde giyilen hafif ayakkabı."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "yelek",
+   "pos": "noun",
+   "level": "B1",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "yelek",
+     "example": "Ceketinin altına yelek giydi."
+    },
+    "en": {
+     "text": "vest",
+     "example": "He wore a vest under his jacket."
+    }
+   },
+   "hint": {
+    "tr": "Kolsuz üst giysi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "dar",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "dar",
+     "example": "Bu ayakkabılar çok dar."
+    },
+    "en": {
+     "text": "tight",
+     "example": "These shoes are too tight."
+    }
+   },
+   "hint": {
+    "tr": "Bedene göre küçük gelen."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "bol",
+   "pos": "adjective",
+   "level": "B1",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "bol",
+     "example": "Bu gömlek bol."
+    },
+    "en": {
+     "text": "loose",
+     "example": "This shirt is loose."
+    }
+   },
+   "hint": {
+    "tr": "Bedene göre geniş gelen."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "deger",
@@ -18384,6 +21260,28 @@
    "check": "crosscheck"
   },
   {
+   "id": "izlemek-follow",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "izlemek",
+     "context": "arkasından gitmek",
+     "example": "Beni izle."
+    },
+    "en": {
+     "text": "follow",
+     "example": "Follow me."
+    }
+   },
+   "hint": {
+    "tr": "Birinin arkasından gitmek."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "donmek-return",
    "pos": "verb",
    "level": "A2",
@@ -18472,6 +21370,75 @@
    "check": "crosscheck"
   },
   {
+   "id": "kiz-daughter",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "kız",
+     "context": "evlat",
+     "example": "Kızları doktor."
+    },
+    "en": {
+     "text": "daughter",
+     "example": "Their daughter is a doctor."
+    }
+   },
+   "hint": {
+    "tr": "Anne ve babaya göre evlat; oğul değil."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kardes-sister",
+   "pos": "noun",
+   "level": "A1",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "kardeş",
+     "alternatives": [
+      "abla"
+     ],
+     "context": "kız",
+     "example": "Kardeşim benden büyük."
+    },
+    "en": {
+     "text": "sister",
+     "example": "My sister is older than me."
+    }
+   },
+   "hint": {
+    "tr": "Aynı anne babadan olan kadın."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "aramak-search",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "aramak",
+     "context": "bulmak için",
+     "example": "Kelimeyi internette ara."
+    },
+    "en": {
+     "text": "search",
+     "example": "Search for the word online."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi bulmak için bakmak."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "almak-receive",
    "pos": "verb",
    "level": "B1",
@@ -18492,6 +21459,28 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "almak-buy",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "almak",
+     "context": "para vererek",
+     "example": "Yeni bir telefon almak istiyorum."
+    },
+    "en": {
+     "text": "buy",
+     "example": "I want to buy a new phone."
+    }
+   },
+   "hint": {
+    "tr": "Para vererek bir şeye sahip olmak."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "olmak-happen",
@@ -18582,6 +21571,28 @@
    "check": "crosscheck"
   },
   {
+   "id": "tatli-dessert",
+   "pos": "noun",
+   "level": "A2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "tatlı",
+     "context": "yemek sonu",
+     "example": "Tatlı olarak ne var?"
+    },
+    "en": {
+     "text": "dessert",
+     "example": "What is for dessert?"
+    }
+   },
+   "hint": {
+    "tr": "Yemekten sonra yenen şekerli yiyecek."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "seker-candy",
    "pos": "noun",
    "level": "A2",
@@ -18607,6 +21618,2200 @@
    "check": "crosscheck"
   },
   {
+   "id": "gitti",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "gitti",
+     "context": "geçmiş zaman · gitmek",
+     "example": "Dün okula gitti."
+    },
+    "en": {
+     "text": "went",
+     "context": "geçmiş zaman · go",
+     "example": "She went to school yesterday."
+    }
+   },
+   "hint": {
+    "tr": "Gitmek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "go",
+     "tr": "gitmek"
+    },
+    "note": "Düzensiz fiil: go → went"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "geldi",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "geldi",
+     "context": "geçmiş zaman · gelmek",
+     "example": "Eve geç geldi."
+    },
+    "en": {
+     "text": "came",
+     "context": "geçmiş zaman · come",
+     "example": "He came home late."
+    }
+   },
+   "hint": {
+    "tr": "Gelmek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "come",
+     "tr": "gelmek"
+    },
+    "note": "Düzensiz fiil: come → came"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "gordu",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "gördü",
+     "context": "geçmiş zaman · görmek",
+     "example": "Bahçede bir kuş gördü."
+    },
+    "en": {
+     "text": "saw",
+     "context": "geçmiş zaman · see",
+     "example": "She saw a bird in the garden."
+    }
+   },
+   "hint": {
+    "tr": "Görmek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "see",
+     "tr": "görmek"
+    },
+    "note": "Düzensiz fiil: see → saw"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "yedi-ate",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "yedi",
+     "context": "geçmiş zaman · yemek",
+     "example": "Bir elma yedi."
+    },
+    "en": {
+     "text": "ate",
+     "context": "geçmiş zaman · eat",
+     "example": "He ate an apple."
+    }
+   },
+   "hint": {
+    "tr": "Yemek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "eat",
+     "tr": "yemek"
+    },
+    "note": "Düzensiz fiil: eat → ate"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "icti",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "içti",
+     "context": "geçmiş zaman · içmek",
+     "example": "Bir bardak süt içti."
+    },
+    "en": {
+     "text": "drank",
+     "context": "geçmiş zaman · drink",
+     "example": "She drank a glass of milk."
+    }
+   },
+   "hint": {
+    "tr": "Içmek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "drink",
+     "tr": "içmek"
+    },
+    "note": "Düzensiz fiil: drink → drank"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "aldi",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "aldı",
+     "context": "geçmiş zaman · almak",
+     "example": "Kalemimi aldı."
+    },
+    "en": {
+     "text": "took",
+     "context": "geçmiş zaman · take",
+     "example": "He took my pen."
+    }
+   },
+   "hint": {
+    "tr": "Almak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "take",
+     "tr": "almak"
+    },
+    "note": "Düzensiz fiil: take → took"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "aldi-bought",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "aldı",
+     "context": "geçmiş zaman · satın almak",
+     "example": "Yeni bir telefon aldı."
+    },
+    "en": {
+     "text": "bought",
+     "context": "geçmiş zaman · buy",
+     "example": "She bought a new phone."
+    }
+   },
+   "hint": {
+    "tr": "Satın almak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "buy",
+     "tr": "satın almak"
+    },
+    "note": "Düzensiz fiil: buy → bought"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "verdi",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "verdi",
+     "context": "geçmiş zaman · vermek",
+     "example": "Bana bir kitap verdi."
+    },
+    "en": {
+     "text": "gave",
+     "context": "geçmiş zaman · give",
+     "example": "She gave me a book."
+    }
+   },
+   "hint": {
+    "tr": "Vermek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "give",
+     "tr": "vermek"
+    },
+    "note": "Düzensiz fiil: give → gave"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "yapti",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "yaptı",
+     "context": "geçmiş zaman · yapmak",
+     "example": "Bir pasta yaptı."
+    },
+    "en": {
+     "text": "made",
+     "context": "geçmiş zaman · make",
+     "example": "He made a cake."
+    }
+   },
+   "hint": {
+    "tr": "Yapmak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "make",
+     "tr": "yapmak"
+    },
+    "note": "Düzensiz fiil: make → made"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "bildi",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "bildi",
+     "context": "geçmiş zaman · bilmek",
+     "example": "Cevabı bildi."
+    },
+    "en": {
+     "text": "knew",
+     "context": "geçmiş zaman · know",
+     "example": "She knew the answer."
+    }
+   },
+   "hint": {
+    "tr": "Bilmek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "know",
+     "tr": "bilmek"
+    },
+    "note": "Düzensiz fiil: know → knew"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "dusundu",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "düşündü",
+     "context": "geçmiş zaman · düşünmek",
+     "example": "Ailesini düşündü."
+    },
+    "en": {
+     "text": "thought",
+     "context": "geçmiş zaman · think",
+     "example": "He thought about his family."
+    }
+   },
+   "hint": {
+    "tr": "Düşünmek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "think",
+     "tr": "düşünmek"
+    },
+    "note": "Düzensiz fiil: think → thought"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "buldu",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "buldu",
+     "context": "geçmiş zaman · bulmak",
+     "example": "Anahtarlarını buldu."
+    },
+    "en": {
+     "text": "found",
+     "context": "geçmiş zaman · find",
+     "example": "She found her keys."
+    }
+   },
+   "hint": {
+    "tr": "Bulmak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "find",
+     "tr": "bulmak"
+    },
+    "note": "Düzensiz fiil: find → found"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "anlatti",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "anlattı",
+     "context": "geçmiş zaman · anlatmak",
+     "example": "Bize bir hikâye anlattı."
+    },
+    "en": {
+     "text": "told",
+     "context": "geçmiş zaman · tell",
+     "example": "He told us a story."
+    }
+   },
+   "hint": {
+    "tr": "Anlatmak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "tell",
+     "tr": "anlatmak"
+    },
+    "note": "Düzensiz fiil: tell → told"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "dedi",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "dedi",
+     "context": "geçmiş zaman · demek",
+     "example": "Evet dedi."
+    },
+    "en": {
+     "text": "said",
+     "context": "geçmiş zaman · say",
+     "example": "She said yes."
+    }
+   },
+   "hint": {
+    "tr": "Demek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "say",
+     "tr": "demek"
+    },
+    "note": "Düzensiz fiil: say → said"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "soyledi",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "söyledi",
+     "context": "geçmiş zaman · şarkı söylemek",
+     "example": "Bize bir şarkı söyledi."
+    },
+    "en": {
+     "text": "sang",
+     "context": "geçmiş zaman · sing",
+     "example": "She sang a song for us."
+    }
+   },
+   "hint": {
+    "tr": "Şarkı söylemek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "sing",
+     "tr": "şarkı söylemek"
+    },
+    "note": "Düzensiz fiil: sing → sang"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "getirdi",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "getirdi",
+     "context": "geçmiş zaman · getirmek",
+     "example": "Biraz ekmek getirdi."
+    },
+    "en": {
+     "text": "brought",
+     "context": "geçmiş zaman · bring",
+     "example": "He brought some bread."
+    }
+   },
+   "hint": {
+    "tr": "Getirmek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "bring",
+     "tr": "getirmek"
+    },
+    "note": "Düzensiz fiil: bring → brought"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "yazdi",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "yazdı",
+     "context": "geçmiş zaman · yazmak",
+     "example": "Bir mektup yazdı."
+    },
+    "en": {
+     "text": "wrote",
+     "context": "geçmiş zaman · write",
+     "example": "She wrote a letter."
+    }
+   },
+   "hint": {
+    "tr": "Yazmak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "write",
+     "tr": "yazmak"
+    },
+    "note": "Düzensiz fiil: write → wrote"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "konustu",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "konuştu",
+     "context": "geçmiş zaman · konuşmak",
+     "example": "Öğretmenle konuştu."
+    },
+    "en": {
+     "text": "spoke",
+     "context": "geçmiş zaman · speak",
+     "example": "He spoke to the teacher."
+    }
+   },
+   "hint": {
+    "tr": "Konuşmak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "speak",
+     "tr": "konuşmak"
+    },
+    "note": "Düzensiz fiil: speak → spoke"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kostu",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "koştu",
+     "context": "geçmiş zaman · koşmak",
+     "example": "Otobüse koştu."
+    },
+    "en": {
+     "text": "ran",
+     "context": "geçmiş zaman · run",
+     "example": "She ran to the bus."
+    }
+   },
+   "hint": {
+    "tr": "Koşmak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "run",
+     "tr": "koşmak"
+    },
+    "note": "Düzensiz fiil: run → ran"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "yuzdu",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "yüzdü",
+     "context": "geçmiş zaman · yüzmek",
+     "example": "Denizde yüzdü."
+    },
+    "en": {
+     "text": "swam",
+     "context": "geçmiş zaman · swim",
+     "example": "He swam in the sea."
+    }
+   },
+   "hint": {
+    "tr": "Yüzmek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "swim",
+     "tr": "yüzmek"
+    },
+    "note": "Düzensiz fiil: swim → swam"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "oturdu",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "oturdu",
+     "context": "geçmiş zaman · oturmak",
+     "example": "Kanepeye oturdu."
+    },
+    "en": {
+     "text": "sat",
+     "context": "geçmiş zaman · sit",
+     "example": "She sat on the sofa."
+    }
+   },
+   "hint": {
+    "tr": "Oturmak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "sit",
+     "tr": "oturmak"
+    },
+    "note": "Düzensiz fiil: sit → sat"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "uyudu",
+   "pos": "verb",
+   "level": "A1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "uyudu",
+     "context": "geçmiş zaman · uyumak",
+     "example": "On saat uyudu."
+    },
+    "en": {
+     "text": "slept",
+     "context": "geçmiş zaman · sleep",
+     "example": "He slept for ten hours."
+    }
+   },
+   "hint": {
+    "tr": "Uyumak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "sleep",
+     "tr": "uyumak"
+    },
+    "note": "Düzensiz fiil: sleep → slept"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "uyandi",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "uyandı",
+     "context": "geçmiş zaman · uyanmak",
+     "example": "Erken uyandı."
+    },
+    "en": {
+     "text": "woke",
+     "context": "geçmiş zaman · wake",
+     "example": "She woke up early."
+    }
+   },
+   "hint": {
+    "tr": "Uyanmak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "wake",
+     "tr": "uyanmak"
+    },
+    "note": "Düzensiz fiil: wake → woke"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "surdu",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "sürdü",
+     "context": "geçmiş zaman · sürmek",
+     "example": "İzmir'e araba sürdü."
+    },
+    "en": {
+     "text": "drove",
+     "context": "geçmiş zaman · drive",
+     "example": "He drove to Izmir."
+    }
+   },
+   "hint": {
+    "tr": "Sürmek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "drive",
+     "tr": "sürmek"
+    },
+    "note": "Düzensiz fiil: drive → drove"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "uctu",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "uçtu",
+     "context": "geçmiş zaman · uçmak",
+     "example": "Kuş evin üstünden uçtu."
+    },
+    "en": {
+     "text": "flew",
+     "context": "geçmiş zaman · fly",
+     "example": "The bird flew over the house."
+    }
+   },
+   "hint": {
+    "tr": "Uçmak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "fly",
+     "tr": "uçmak"
+    },
+    "note": "Düzensiz fiil: fly → flew"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "dustu",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "düştü",
+     "context": "geçmiş zaman · düşmek",
+     "example": "Bisikletten düştü."
+    },
+    "en": {
+     "text": "fell",
+     "context": "geçmiş zaman · fall",
+     "example": "She fell off her bike."
+    }
+   },
+   "hint": {
+    "tr": "Düşmek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "fall",
+     "tr": "düşmek"
+    },
+    "note": "Düzensiz fiil: fall → fell"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "hissetti",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "hissetti",
+     "context": "geçmiş zaman · hissetmek",
+     "example": "Yorgun hissetti."
+    },
+    "en": {
+     "text": "felt",
+     "context": "geçmiş zaman · feel",
+     "example": "He felt tired."
+    }
+   },
+   "hint": {
+    "tr": "Hissetmek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "feel",
+     "tr": "hissetmek"
+    },
+    "note": "Düzensiz fiil: feel → felt"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "unuttu",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "unuttu",
+     "context": "geçmiş zaman · unutmak",
+     "example": "Adımı unuttu."
+    },
+    "en": {
+     "text": "forgot",
+     "context": "geçmiş zaman · forget",
+     "example": "She forgot my name."
+    }
+   },
+   "hint": {
+    "tr": "Unutmak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "forget",
+     "tr": "unutmak"
+    },
+    "note": "Düzensiz fiil: forget → forgot"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kaybetti",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "kaybetti",
+     "context": "geçmiş zaman · kaybetmek",
+     "example": "Cüzdanını kaybetti."
+    },
+    "en": {
+     "text": "lost",
+     "context": "geçmiş zaman · lose",
+     "example": "He lost his wallet."
+    }
+   },
+   "hint": {
+    "tr": "Kaybetmek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "lose",
+     "tr": "kaybetmek"
+    },
+    "note": "Düzensiz fiil: lose → lost"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kazandi",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "kazandı",
+     "context": "geçmiş zaman · kazanmak",
+     "example": "Takımımız maçı kazandı."
+    },
+    "en": {
+     "text": "won",
+     "context": "geçmiş zaman · win",
+     "example": "Our team won the game."
+    }
+   },
+   "hint": {
+    "tr": "Kazanmak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "win",
+     "tr": "kazanmak"
+    },
+    "note": "Düzensiz fiil: win → won"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "tanisti",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "tanıştı",
+     "alternatives": [
+      "buluştu"
+     ],
+     "context": "geçmiş zaman · tanışmak",
+     "example": "Yeni bir arkadaşla tanıştı."
+    },
+    "en": {
+     "text": "met",
+     "context": "geçmiş zaman · meet",
+     "example": "She met a new friend."
+    }
+   },
+   "hint": {
+    "tr": "Tanışmak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "meet",
+     "tr": "tanışmak"
+    },
+    "note": "Düzensiz fiil: meet → met"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "odedi",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "ödedi",
+     "context": "geçmiş zaman · ödemek",
+     "example": "Hesabı ödedi."
+    },
+    "en": {
+     "text": "paid",
+     "context": "geçmiş zaman · pay",
+     "example": "He paid the bill."
+    }
+   },
+   "hint": {
+    "tr": "Ödemek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "pay",
+     "tr": "ödemek"
+    },
+    "note": "Düzensiz fiil: pay → paid"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "gonderdi",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "gönderdi",
+     "alternatives": [
+      "yolladı"
+     ],
+     "context": "geçmiş zaman · göndermek",
+     "example": "Bana bir mesaj gönderdi."
+    },
+    "en": {
+     "text": "sent",
+     "context": "geçmiş zaman · send",
+     "example": "She sent me a message."
+    }
+   },
+   "hint": {
+    "tr": "Göndermek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "send",
+     "tr": "göndermek"
+    },
+    "note": "Düzensiz fiil: send → sent"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "satti",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "sattı",
+     "context": "geçmiş zaman · satmak",
+     "example": "Arabasını sattı."
+    },
+    "en": {
+     "text": "sold",
+     "context": "geçmiş zaman · sell",
+     "example": "He sold his car."
+    }
+   },
+   "hint": {
+    "tr": "Satmak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "sell",
+     "tr": "satmak"
+    },
+    "note": "Düzensiz fiil: sell → sold"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "ogretti",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "öğretti",
+     "context": "geçmiş zaman · öğretmek",
+     "example": "Yıllarca İngilizce öğretti."
+    },
+    "en": {
+     "text": "taught",
+     "context": "geçmiş zaman · teach",
+     "example": "She taught English for years."
+    }
+   },
+   "hint": {
+    "tr": "Öğretmek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "teach",
+     "tr": "öğretmek"
+    },
+    "note": "Düzensiz fiil: teach → taught"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "yakaladi",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "yakaladı",
+     "context": "geçmiş zaman · yakalamak",
+     "example": "Topu yakaladı."
+    },
+    "en": {
+     "text": "caught",
+     "context": "geçmiş zaman · catch",
+     "example": "He caught the ball."
+    }
+   },
+   "hint": {
+    "tr": "Yakalamak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "catch",
+     "tr": "yakalamak"
+    },
+    "note": "Düzensiz fiil: catch → caught"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kirdi",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "kırdı",
+     "context": "geçmiş zaman · kırmak",
+     "example": "Bir bardak kırdı."
+    },
+    "en": {
+     "text": "broke",
+     "context": "geçmiş zaman · break",
+     "example": "She broke a glass."
+    }
+   },
+   "hint": {
+    "tr": "Kırmak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "break",
+     "tr": "kırmak"
+    },
+    "note": "Düzensiz fiil: break → broke"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "basladi",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "başladı",
+     "context": "geçmiş zaman · başlamak",
+     "example": "Film sekizde başladı."
+    },
+    "en": {
+     "text": "began",
+     "context": "geçmiş zaman · begin",
+     "example": "The film began at eight."
+    }
+   },
+   "hint": {
+    "tr": "Başlamak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "begin",
+     "tr": "başlamak"
+    },
+    "note": "Düzensiz fiil: begin → began"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "ayrildi",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "ayrıldı",
+     "context": "geçmiş zaman · ayrılmak",
+     "example": "Saat altıda ayrıldı."
+    },
+    "en": {
+     "text": "left",
+     "context": "geçmiş zaman · leave",
+     "example": "He left at six."
+    }
+   },
+   "hint": {
+    "tr": "Ayrılmak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "leave",
+     "tr": "ayrılmak"
+    },
+    "note": "Düzensiz fiil: leave → left"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "sakladi",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "sakladı",
+     "context": "geçmiş zaman · saklamak",
+     "example": "Mektubu sakladı."
+    },
+    "en": {
+     "text": "kept",
+     "context": "geçmiş zaman · keep",
+     "example": "She kept the letter."
+    }
+   },
+   "hint": {
+    "tr": "Saklamak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "keep",
+     "tr": "saklamak"
+    },
+    "note": "Düzensiz fiil: keep → kept"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "tuttu",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "tuttu",
+     "context": "geçmiş zaman · tutmak",
+     "example": "Elimi tuttu."
+    },
+    "en": {
+     "text": "held",
+     "context": "geçmiş zaman · hold",
+     "example": "He held my hand."
+    }
+   },
+   "hint": {
+    "tr": "Tutmak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "hold",
+     "tr": "tutmak"
+    },
+    "note": "Düzensiz fiil: hold → held"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "duydu",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "duydu",
+     "context": "geçmiş zaman · duymak",
+     "example": "Bir ses duydu."
+    },
+    "en": {
+     "text": "heard",
+     "context": "geçmiş zaman · hear",
+     "example": "She heard a noise."
+    }
+   },
+   "hint": {
+    "tr": "Duymak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "hear",
+     "tr": "duymak"
+    },
+    "note": "Düzensiz fiil: hear → heard"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "anladi",
+   "pos": "verb",
+   "level": "A2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "anladı",
+     "context": "geçmiş zaman · anlamak",
+     "example": "Soruyu anladı."
+    },
+    "en": {
+     "text": "understood",
+     "context": "geçmiş zaman · understand",
+     "example": "He understood the question."
+    }
+   },
+   "hint": {
+    "tr": "Anlamak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "understand",
+     "tr": "anlamak"
+    },
+    "note": "Düzensiz fiil: understand → understood"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "secti",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "seçti",
+     "context": "geçmiş zaman · seçmek",
+     "example": "Kırmızı elbiseyi seçti."
+    },
+    "en": {
+     "text": "chose",
+     "context": "geçmiş zaman · choose",
+     "example": "She chose the red dress."
+    }
+   },
+   "hint": {
+    "tr": "Seçmek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "choose",
+     "tr": "seçmek"
+    },
+    "note": "Düzensiz fiil: choose → chose"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "buyudu",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "büyüdü",
+     "context": "geçmiş zaman · büyümek",
+     "example": "Bursa'da büyüdü."
+    },
+    "en": {
+     "text": "grew",
+     "context": "geçmiş zaman · grow",
+     "example": "He grew up in Bursa."
+    }
+   },
+   "hint": {
+    "tr": "Büyümek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "grow",
+     "tr": "büyümek"
+    },
+    "note": "Düzensiz fiil: grow → grew"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "cizdi",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "çizdi",
+     "context": "geçmiş zaman · çizmek",
+     "example": "Bir kedi çizdi."
+    },
+    "en": {
+     "text": "drew",
+     "context": "geçmiş zaman · draw",
+     "example": "She drew a cat."
+    }
+   },
+   "hint": {
+    "tr": "Çizmek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "draw",
+     "tr": "çizmek"
+    },
+    "note": "Düzensiz fiil: draw → drew"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "atti",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "attı",
+     "alternatives": [
+      "fırlattı"
+     ],
+     "context": "geçmiş zaman · atmak",
+     "example": "Topu attı."
+    },
+    "en": {
+     "text": "threw",
+     "context": "geçmiş zaman · throw",
+     "example": "He threw the ball."
+    }
+   },
+   "hint": {
+    "tr": "Atmak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "throw",
+     "tr": "atmak"
+    },
+    "note": "Düzensiz fiil: throw → threw"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "bindi",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "bindi",
+     "context": "geçmiş zaman · binmek",
+     "example": "Ata bindi."
+    },
+    "en": {
+     "text": "rode",
+     "context": "geçmiş zaman · ride",
+     "example": "She rode a horse."
+    }
+   },
+   "hint": {
+    "tr": "Binmek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "ride",
+     "tr": "binmek"
+    },
+    "note": "Düzensiz fiil: ride → rode"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "gizledi",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "gizledi",
+     "context": "geçmiş zaman · gizlemek",
+     "example": "Parayı gizledi."
+    },
+    "en": {
+     "text": "hid",
+     "context": "geçmiş zaman · hide",
+     "example": "He hid the money."
+    }
+   },
+   "hint": {
+    "tr": "Gizlemek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "hide",
+     "tr": "gizlemek"
+    },
+    "note": "Düzensiz fiil: hide → hid"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "isirdi",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "ısırdı",
+     "context": "geçmiş zaman · ısırmak",
+     "example": "Köpek onu ısırdı."
+    },
+    "en": {
+     "text": "bit",
+     "context": "geçmiş zaman · bite",
+     "example": "The dog bit him."
+    }
+   },
+   "hint": {
+    "tr": "Isırmak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "bite",
+     "tr": "ısırmak"
+    },
+    "note": "Düzensiz fiil: bite → bit"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "harcadi",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "harcadı",
+     "context": "geçmiş zaman · harcamak",
+     "example": "Bütün parasını harcadı."
+    },
+    "en": {
+     "text": "spent",
+     "context": "geçmiş zaman · spend",
+     "example": "She spent all her money."
+    }
+   },
+   "hint": {
+    "tr": "Harcamak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "spend",
+     "tr": "harcamak"
+    },
+    "note": "Düzensiz fiil: spend → spent"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "caldi",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "çaldı",
+     "context": "geçmiş zaman · çalmak",
+     "example": "Biri bisikletimi çaldı."
+    },
+    "en": {
+     "text": "stole",
+     "context": "geçmiş zaman · steal",
+     "example": "Someone stole my bike."
+    }
+   },
+   "hint": {
+    "tr": "Çalmak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "steal",
+     "tr": "çalmak"
+    },
+    "note": "Düzensiz fiil: steal → stole"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "salladi",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "salladı",
+     "context": "geçmiş zaman · sallamak",
+     "example": "Şişeyi salladı."
+    },
+    "en": {
+     "text": "shook",
+     "context": "geçmiş zaman · shake",
+     "example": "He shook the bottle."
+    }
+   },
+   "hint": {
+    "tr": "Sallamak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "shake",
+     "tr": "sallamak"
+    },
+    "note": "Düzensiz fiil: shake → shook"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "giydi",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "giydi",
+     "context": "geçmiş zaman · giymek",
+     "example": "Mavi bir elbise giydi."
+    },
+    "en": {
+     "text": "wore",
+     "context": "geçmiş zaman · wear",
+     "example": "She wore a blue dress."
+    }
+   },
+   "hint": {
+    "tr": "Giymek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "wear",
+     "tr": "giymek"
+    },
+    "note": "Düzensiz fiil: wear → wore"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "besledi",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "besledi",
+     "context": "geçmiş zaman · beslemek",
+     "example": "Kediyi besledi."
+    },
+    "en": {
+     "text": "fed",
+     "context": "geçmiş zaman · feed",
+     "example": "He fed the cat."
+    }
+   },
+   "hint": {
+    "tr": "Beslemek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "feed",
+     "tr": "beslemek"
+    },
+    "note": "Düzensiz fiil: feed → fed"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "supurdu",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "süpürdü",
+     "context": "geçmiş zaman · süpürmek",
+     "example": "Yeri süpürdü."
+    },
+    "en": {
+     "text": "swept",
+     "context": "geçmiş zaman · sweep",
+     "example": "She swept the floor."
+    }
+   },
+   "hint": {
+    "tr": "Süpürmek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "sweep",
+     "tr": "süpürmek"
+    },
+    "note": "Düzensiz fiil: sweep → swept"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "dondu",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "dondu",
+     "context": "geçmiş zaman · donmak",
+     "example": "Göl geçen kış dondu."
+    },
+    "en": {
+     "text": "froze",
+     "context": "geçmiş zaman · freeze",
+     "example": "The lake froze last winter."
+    }
+   },
+   "hint": {
+    "tr": "Donmak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "freeze",
+     "tr": "donmak"
+    },
+    "note": "Düzensiz fiil: freeze → froze"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "esti",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "esti",
+     "context": "geçmiş zaman · esmek",
+     "example": "Rüzgâr sert esti."
+    },
+    "en": {
+     "text": "blew",
+     "context": "geçmiş zaman · blow",
+     "example": "The wind blew hard."
+    }
+   },
+   "hint": {
+    "tr": "Esmek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "blow",
+     "tr": "esmek"
+    },
+    "note": "Düzensiz fiil: blow → blew"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kazdi",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "kazdı",
+     "context": "geçmiş zaman · kazmak",
+     "example": "Köpek bir çukur kazdı."
+    },
+    "en": {
+     "text": "dug",
+     "context": "geçmiş zaman · dig",
+     "example": "The dog dug a hole."
+    }
+   },
+   "hint": {
+    "tr": "Kazmak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "dig",
+     "tr": "kazmak"
+    },
+    "note": "Düzensiz fiil: dig → dug"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "dovustu",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "dövüştü",
+     "context": "geçmiş zaman · dövüşmek",
+     "example": "İki kedi dövüştü."
+    },
+    "en": {
+     "text": "fought",
+     "context": "geçmiş zaman · fight",
+     "example": "The two cats fought."
+    }
+   },
+   "hint": {
+    "tr": "Dövüşmek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "fight",
+     "tr": "dövüşmek"
+    },
+    "note": "Düzensiz fiil: fight → fought"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "asti",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "astı",
+     "context": "geçmiş zaman · asmak",
+     "example": "Resmi duvara astı."
+    },
+    "en": {
+     "text": "hung",
+     "context": "geçmiş zaman · hang",
+     "example": "She hung the picture on the wall."
+    }
+   },
+   "hint": {
+    "tr": "Asmak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "hang",
+     "tr": "asmak"
+    },
+    "note": "Düzensiz fiil: hang → hung"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "yirtti",
+   "pos": "verb",
+   "level": "B2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "yırttı",
+     "context": "geçmiş zaman · yırtmak",
+     "example": "Kâğıdı yırttı."
+    },
+    "en": {
+     "text": "tore",
+     "context": "geçmiş zaman · tear",
+     "example": "He tore the paper."
+    }
+   },
+   "hint": {
+    "tr": "Yırtmak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "tear",
+     "tr": "yırtmak"
+    },
+    "note": "Düzensiz fiil: tear → tore"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "batti",
+   "pos": "verb",
+   "level": "B2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "battı",
+     "context": "geçmiş zaman · batmak",
+     "example": "Gemi fırtınada battı."
+    },
+    "en": {
+     "text": "sank",
+     "context": "geçmiş zaman · sink",
+     "example": "The ship sank in the storm."
+    }
+   },
+   "hint": {
+    "tr": "Batmak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "sink",
+     "tr": "batmak"
+    },
+    "note": "Düzensiz fiil: sink → sank"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "yonetti",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "yönetti",
+     "context": "geçmiş zaman · yönetmek",
+     "example": "Takımı yönetti."
+    },
+    "en": {
+     "text": "led",
+     "context": "geçmiş zaman · lead",
+     "example": "She led the team."
+    }
+   },
+   "hint": {
+    "tr": "Yönetmek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "lead",
+     "tr": "yönetmek"
+    },
+    "note": "Düzensiz fiil: lead → led"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "affetti",
+   "pos": "verb",
+   "level": "B1",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "affetti",
+     "context": "geçmiş zaman · affetmek",
+     "example": "Arkadaşını affetti."
+    },
+    "en": {
+     "text": "forgave",
+     "context": "geçmiş zaman · forgive",
+     "example": "He forgave his friend."
+    }
+   },
+   "hint": {
+    "tr": "Affetmek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "forgive",
+     "tr": "affetmek"
+    },
+    "note": "Düzensiz fiil: forgive → forgave"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "egdi",
+   "pos": "verb",
+   "level": "B2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "eğdi",
+     "context": "geçmiş zaman · eğmek",
+     "example": "Teli eğdi."
+    },
+    "en": {
+     "text": "bent",
+     "context": "geçmiş zaman · bend",
+     "example": "She bent the wire."
+    }
+   },
+   "hint": {
+    "tr": "Eğmek fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "bend",
+     "tr": "eğmek"
+    },
+    "note": "Düzensiz fiil: bend → bent"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kacti",
+   "pos": "verb",
+   "level": "B2",
+   "topic": "dilbilgisi",
+   "terms": {
+    "tr": {
+     "text": "kaçtı",
+     "context": "geçmiş zaman · kaçmak",
+     "example": "Hırsız kaçtı."
+    },
+    "en": {
+     "text": "fled",
+     "context": "geçmiş zaman · flee",
+     "example": "The thief fled."
+    }
+   },
+   "hint": {
+    "tr": "Kaçmak fiilinin geçmiş zaman hâli."
+   },
+   "grammar": {
+    "form": "past",
+    "base": {
+     "en": "flee",
+     "tr": "kaçmak"
+    },
+    "note": "Düzensiz fiil: flee → fled"
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "sacma",
+   "pos": "adjective",
+   "level": "C1",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "saçma",
+     "example": "Bu saçma bir fikir."
+    },
+    "en": {
+     "text": "absurd",
+     "example": "That is an absurd idea."
+    }
+   },
+   "hint": {
+    "tr": "Mantığa hiç uymayan, gülünç."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "sizi",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "sızı",
+     "example": "Sırtımda bir sızı var."
+    },
+    "en": {
+     "text": "ache",
+     "example": "I have an ache in my back."
+    }
+   },
+   "hint": {
+    "tr": "Sürekli, hafif ve yayılan acı."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "bitisik",
+   "pos": "adjective",
+   "level": "C1",
+   "topic": "şehir",
+   "terms": {
+    "tr": {
+     "text": "bitişik",
+     "example": "Dükkân bankanın bitişiğinde."
+    },
+    "en": {
+     "text": "adjacent",
+     "example": "The shop is adjacent to the bank."
+    }
+   },
+   "hint": {
+    "tr": "Hemen yanında olan, yan yana."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "olumsuz",
+   "pos": "adjective",
+   "level": "C1",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "olumsuz",
+     "example": "İlacın olumsuz bir etkisi oldu."
+    },
+    "en": {
+     "text": "adverse",
+     "example": "The drug had an adverse effect."
+    }
+   },
+   "hint": {
+    "tr": "İstenmeyen, zararlı sonuç doğuran."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "istirap",
+   "pos": "noun",
+   "level": "C1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "ıstırap",
+     "alternatives": [
+      "ızdırap"
+     ],
+     "example": "Düşüşten sonra ıstırap içindeydi."
+    },
+    "en": {
+     "text": "agony",
+     "example": "He was in agony after the fall."
+    }
+   },
+   "hint": {
+    "tr": "Çok şiddetli acı."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "sesli",
    "pos": "adverb",
    "level": "B2",
@@ -18626,6 +23831,111 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "rakim",
+   "pos": "noun",
+   "level": "C1",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "rakım",
+     "example": "Uçak yüksek bir rakımda uçtu."
+    },
+    "en": {
+     "text": "altitude",
+     "example": "The plane flew at a high altitude."
+    }
+   },
+   "hint": {
+    "tr": "Deniz seviyesine göre yükseklik."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "benzetme",
+   "pos": "noun",
+   "level": "C1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "benzetme",
+     "example": "Bunu açıklamak için bir benzetme kullandı."
+    },
+    "en": {
+     "text": "analogy",
+     "example": "He used an analogy to explain it."
+    }
+   },
+   "hint": {
+    "tr": "İki şey arasındaki benzerliğe dayanan açıklama."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "istah",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "iştah",
+     "example": "Bugün hiç iştahım yok."
+    },
+    "en": {
+     "text": "appetite",
+     "example": "I have no appetite today."
+    }
+   },
+   "hint": {
+    "tr": "Yemek yeme isteği."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "alkis",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "alkış",
+     "example": "Şarkıcı büyük bir alkış aldı."
+    },
+    "en": {
+     "text": "applause",
+     "example": "The singer got loud applause."
+    }
+   },
+   "hint": {
+    "tr": "Beğeniyi göstermek için el çırpma."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kibirli",
+   "pos": "adjective",
+   "level": "B2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "kibirli",
+     "example": "Zengin ama kibirli."
+    },
+    "en": {
+     "text": "arrogant",
+     "example": "He is rich but arrogant."
+    }
+   },
+   "hint": {
+    "tr": "Kendini başkalarından üstün gören."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "ok",
@@ -18649,6 +23959,264 @@
    "check": "crosscheck"
   },
   {
+   "id": "atardamar",
+   "pos": "noun",
+   "level": "C1",
+   "topic": "vücut",
+   "terms": {
+    "tr": {
+     "text": "atardamar",
+     "example": "Kalp kanı atardamara pompalar."
+    },
+    "en": {
+     "text": "artery",
+     "example": "The heart pumps blood into the artery."
+    }
+   },
+   "hint": {
+    "tr": "Kanı kalpten vücuda taşıyan damar."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "mahcup",
+   "pos": "adjective",
+   "level": "B2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "mahcup",
+     "example": "Sözlerimden dolayı mahcup oldum."
+    },
+    "en": {
+     "text": "ashamed",
+     "example": "I felt ashamed of my words."
+    }
+   },
+   "hint": {
+    "tr": "Yaptığı bir şeyden dolayı utanan."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "ozerklik",
+   "pos": "noun",
+   "level": "C1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "özerklik",
+     "example": "Bölge daha fazla özerklik istiyor."
+    },
+    "en": {
+     "text": "autonomy",
+     "example": "The region wants more autonomy."
+    }
+   },
+   "hint": {
+    "tr": "Kendi kendini yönetme hakkı."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "eksen",
+   "pos": "noun",
+   "level": "C1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "eksen",
+     "example": "Dünya kendi ekseni etrafında döner."
+    },
+    "en": {
+     "text": "axis",
+     "example": "The earth turns on its axis."
+    }
+   },
+   "hint": {
+    "tr": "Bir cismin çevresinde döndüğü hayali çizgi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kel",
+   "pos": "adjective",
+   "level": "B2",
+   "topic": "vücut",
+   "terms": {
+    "tr": {
+     "text": "kel",
+     "example": "Amcam kel."
+    },
+    "en": {
+     "text": "bald",
+     "example": "My uncle is bald."
+    }
+   },
+   "hint": {
+    "tr": "Başında saç olmayan."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "pankart",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "şehir",
+   "terms": {
+    "tr": {
+     "text": "pankart",
+     "alternatives": [
+      "afiş"
+     ],
+     "example": "Büyük bir pankart taşıdılar."
+    },
+    "en": {
+     "text": "banner",
+     "example": "They carried a big banner."
+    }
+   },
+   "hint": {
+    "tr": "Üzerinde yazı olan uzun kumaş."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "ihanet",
+   "pos": "noun",
+   "level": "C1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "ihanet",
+     "example": "Onun ihaneti beni yaraladı."
+    },
+    "en": {
+     "text": "betrayal",
+     "example": "His betrayal hurt me."
+    }
+   },
+   "hint": {
+    "tr": "Güveni kötüye kullanma."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "tuhaf",
+   "pos": "adjective",
+   "level": "C1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "tuhaf",
+     "example": "Tuhaf bir rüyaydı."
+    },
+    "en": {
+     "text": "bizarre",
+     "example": "That was a bizarre dream."
+    }
+   },
+   "hint": {
+    "tr": "Çok garip, alışılmadık."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kasvetli",
+   "pos": "adjective",
+   "level": "C1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "kasvetli",
+     "example": "Gelecek kasvetli görünüyor."
+    },
+    "en": {
+     "text": "bleak",
+     "example": "The future looks bleak."
+    }
+   },
+   "hint": {
+    "tr": "Umut vermeyen, iç karartıcı."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kizarmak",
+   "pos": "verb",
+   "level": "B2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "kızarmak",
+     "example": "Bunu söylersen kızarır."
+    },
+    "en": {
+     "text": "blush",
+     "example": "She will blush if you say that."
+    }
+   },
+   "hint": {
+    "tr": "Utanınca yüzü kırmızı olmak."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kas-brow",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "vücut",
+   "terms": {
+    "tr": {
+     "text": "kaş",
+     "example": "Kaşını kaldırdı."
+    },
+    "en": {
+     "text": "brow",
+     "example": "He raised his brow."
+    }
+   },
+   "hint": {
+    "tr": "Gözün üstündeki kıllı kavis."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "deste",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "deste",
+     "alternatives": [
+      "demet"
+     ],
+     "example": "Elinde bir deste mektup vardı."
+    },
+    "en": {
+     "text": "bundle",
+     "example": "She held a bundle of letters."
+    }
+   },
+   "hint": {
+    "tr": "Birbirine bağlanmış şeylerin topu."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "cali",
    "pos": "noun",
    "level": "B2",
@@ -18668,6 +24236,111 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "buzagi",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "hayvanlar",
+   "terms": {
+    "tr": {
+     "text": "buzağı",
+     "example": "Buzağı annesinin yanında."
+    },
+    "en": {
+     "text": "calf",
+     "example": "The calf is next to its mother."
+    }
+   },
+   "hint": {
+    "tr": "İneğin yavrusu."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "mahzen",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "mahzen",
+     "example": "Şarabı mahzende tutuyoruz."
+    },
+    "en": {
+     "text": "cellar",
+     "example": "We keep wine in the cellar."
+    }
+   },
+   "hint": {
+    "tr": "Evin altındaki serin depo."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "mezarlik",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "şehir",
+   "terms": {
+    "tr": {
+     "text": "mezarlık",
+     "example": "Eski mezarlık sessiz."
+    },
+    "en": {
+     "text": "cemetery",
+     "example": "The old cemetery is quiet."
+    }
+   },
+   "hint": {
+    "tr": "Ölülerin gömüldüğü yer."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "tahil",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "tahıl",
+     "example": "Buğday bir tahıldır."
+    },
+    "en": {
+     "text": "cereal",
+     "example": "Wheat is a cereal."
+    }
+   },
+   "hint": {
+    "tr": "Buğday, arpa gibi taneli bitki."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "civciv",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "hayvanlar",
+   "terms": {
+    "tr": {
+     "text": "civciv",
+     "example": "Civciv tavuğu takip ediyor."
+    },
+    "en": {
+     "text": "chick",
+     "example": "The chick follows the hen."
+    }
+   },
+   "hint": {
+    "tr": "Tavuğun yeni çıkmış yavrusu."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "alkislamak",
@@ -18691,6 +24364,792 @@
    "check": "crosscheck"
   },
   {
+   "id": "netlik",
+   "pos": "noun",
+   "level": "C1",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "netlik",
+     "example": "Yazısının netliğini seviyorum."
+    },
+    "en": {
+     "text": "clarity",
+     "example": "I like the clarity of his writing."
+    }
+   },
+   "hint": {
+    "tr": "Açık ve kolay anlaşılır olma."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "pence",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "hayvanlar",
+   "terms": {
+    "tr": {
+     "text": "pençe",
+     "example": "Kedi beni bir pençesiyle yaraladı."
+    },
+    "en": {
+     "text": "claw",
+     "example": "The cat hurt me with a claw."
+    }
+   },
+   "hint": {
+    "tr": "Hayvanların ayağındaki sivri tırnak."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "palyaco",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "palyaço",
+     "example": "Palyaço çocukları güldürdü."
+    },
+    "en": {
+     "text": "clown",
+     "example": "The clown made the kids laugh."
+    }
+   },
+   "hint": {
+    "tr": "Sirkte insanları güldüren kişi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kaba",
+   "pos": "adjective",
+   "level": "C1",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "kaba",
+     "example": "Bu kumaş kaba."
+    },
+    "en": {
+     "text": "coarse",
+     "example": "This fabric is coarse."
+    }
+   },
+   "hint": {
+    "tr": "Pürüzlü, ince olmayan."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "tabut",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "tabut",
+     "example": "Tabutu taşıdılar."
+    },
+    "en": {
+     "text": "coffin",
+     "example": "They carried the coffin."
+    }
+   },
+   "hint": {
+    "tr": "Ölünün konduğu uzun sandık."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "zorlamak",
+   "pos": "verb",
+   "level": "C1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "zorlamak",
+     "example": "Kimse seni imzalamaya zorlayamaz."
+    },
+    "en": {
+     "text": "compel",
+     "example": "No one can compel you to sign."
+    }
+   },
+   "hint": {
+    "tr": "Birini istemediği bir şeyi yapmak zorunda bırakmak."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "besteci",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "besteci",
+     "example": "Mozart büyük bir besteciydi."
+    },
+    "en": {
+     "text": "composer",
+     "example": "Mozart was a great composer."
+    }
+   },
+   "hint": {
+    "tr": "Müzik eseri yazan kişi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "fethetmek",
+   "pos": "verb",
+   "level": "C1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "fethetmek",
+     "example": "Şehri fethetmek istediler."
+    },
+    "en": {
+     "text": "conquer",
+     "example": "They wanted to conquer the city."
+    }
+   },
+   "hint": {
+    "tr": "Bir yeri savaşla ele geçirmek."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kucumseme",
+   "pos": "noun",
+   "level": "C1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "küçümseme",
+     "example": "Ona küçümsemeyle baktı."
+    },
+    "en": {
+     "text": "contempt",
+     "example": "She looked at him with contempt."
+    }
+   },
+   "hint": {
+    "tr": "Birini değersiz görme duygusu."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "bakir",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "bakır",
+     "example": "Tel bakırdan yapılmış."
+    },
+    "en": {
+     "text": "copper",
+     "example": "The wire is made of copper."
+    }
+   },
+   "hint": {
+    "tr": "Kızıl renkli, elektriği iyi ileten metal."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "mercan",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "mercan",
+     "example": "Mercan denizin altında."
+    },
+    "en": {
+     "text": "coral",
+     "example": "The coral is under the sea."
+    }
+   },
+   "hint": {
+    "tr": "Sıcak denizlerde yaşayan renkli, sert canlı."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "ceset",
+   "pos": "noun",
+   "level": "C1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "ceset",
+     "example": "Polis bir ceset buldu."
+    },
+    "en": {
+     "text": "corpse",
+     "example": "The police found a corpse."
+    }
+   },
+   "hint": {
+    "tr": "Ölmüş bir insanın bedeni."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "yozlasmis",
+   "pos": "adjective",
+   "level": "C1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "yozlaşmış",
+     "alternatives": [
+      "rüşvetçi"
+     ],
+     "example": "Yozlaşmış memur para aldı."
+    },
+    "en": {
+     "text": "corrupt",
+     "example": "The corrupt officer took money."
+    }
+   },
+   "hint": {
+    "tr": "Çıkarı için dürüstlüğünü kaybetmiş."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "sicacik",
+   "pos": "adjective",
+   "level": "B2",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "sıcacık",
+     "example": "Oda sıcak ve sıcacık."
+    },
+    "en": {
+     "text": "cozy",
+     "alternatives": [
+      "cosy"
+     ],
+     "example": "The room is warm and cozy."
+    }
+   },
+   "hint": {
+    "tr": "Rahat, huzur veren ve ılık."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "yengec",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "yengeç",
+     "example": "Plajda yengeç yedik."
+    },
+    "en": {
+     "text": "crab",
+     "example": "We ate crab at the beach."
+    }
+   },
+   "hint": {
+    "tr": "Yan yan yürüyen, kıskaçlı deniz hayvanı."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "besik",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "aile",
+   "terms": {
+    "tr": {
+     "text": "beşik",
+     "example": "Bebek beşikte uyuyor."
+    },
+    "en": {
+     "text": "cradle",
+     "example": "The baby sleeps in a cradle."
+    }
+   },
+   "hint": {
+    "tr": "Bebeklerin sallanarak uyutulduğu yatak."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "vinc",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "vinç",
+     "example": "Bir vinç taşları kaldırdı."
+    },
+    "en": {
+     "text": "crane",
+     "example": "A crane lifted the stones."
+    }
+   },
+   "hint": {
+    "tr": "Ağır yükleri kaldıran büyük makine."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "yaratici",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "yaratıcı",
+     "example": "Bu oyunun yaratıcısı kim?"
+    },
+    "en": {
+     "text": "creator",
+     "example": "Who is the creator of this game?"
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi ortaya koyan kişi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "ham",
+   "pos": "adjective",
+   "level": "C1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "ham",
+     "example": "Ham petrolün fiyatı arttı."
+    },
+    "en": {
+     "text": "crude",
+     "example": "The price of crude oil went up."
+    }
+   },
+   "hint": {
+    "tr": "İşlenmemiş, doğal halinde olan."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kabuk",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "kabuk",
+     "example": "Ekmeğin kabuğunu yemem."
+    },
+    "en": {
+     "text": "crust",
+     "example": "I don't eat the crust of the bread."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin sert dış katmanı."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "minder",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "minder",
+     "example": "Sandalyeye bir minder koy."
+    },
+    "en": {
+     "text": "cushion",
+     "example": "Put a cushion on the chair."
+    }
+   },
+   "hint": {
+    "tr": "Oturmak için yumuşak yastık."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "alayci",
+   "pos": "adjective",
+   "level": "C1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "alaycı",
+     "example": "Siyaset konusunda alaycı."
+    },
+    "en": {
+     "text": "cynical",
+     "example": "He is cynical about politics."
+    }
+   },
+   "hint": {
+    "tr": "İnsanların iyi niyetine inanmayan."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kararmak",
+   "pos": "verb",
+   "level": "B2",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "kararmak",
+     "example": "Gökyüzü kararmaya başladı."
+    },
+    "en": {
+     "text": "darken",
+     "example": "The sky began to darken."
+    }
+   },
+   "hint": {
+    "tr": "Işığı azalıp koyulaşmak."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "enkaz",
+   "pos": "noun",
+   "level": "C1",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "enkaz",
+     "example": "Sokak enkazla doluydu."
+    },
+    "en": {
+     "text": "debris",
+     "example": "The street was full of debris."
+    }
+   },
+   "hint": {
+    "tr": "Yıkılan bir şeyden kalan parçalar."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "curumek",
+   "pos": "verb",
+   "level": "B2",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "çürümek",
+     "example": "Şeker dişlerini çürütür."
+    },
+    "en": {
+     "text": "decay",
+     "example": "Sugar makes your teeth decay."
+    }
+   },
+   "hint": {
+    "tr": "Bozulup dağılmak."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kararli",
+   "pos": "adjective",
+   "level": "B2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "kararlı",
+     "example": "O kararlı bir lider."
+    },
+    "en": {
+     "text": "decisive",
+     "example": "She is a decisive leader."
+    }
+   },
+   "hint": {
+    "tr": "Çabuk ve net karar veren."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kararname",
+   "pos": "noun",
+   "level": "C1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "kararname",
+     "example": "Cumhurbaşkanı bir kararname imzaladı."
+    },
+    "en": {
+     "text": "decree",
+     "example": "The president signed a decree."
+    }
+   },
+   "hint": {
+    "tr": "Yetkili makamın yayımladığı resmî emir."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kusur",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "kusur",
+     "example": "Arabanın bir kusuru var."
+    },
+    "en": {
+     "text": "defect",
+     "example": "The car has a defect."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeydeki eksik ya da bozuk yer."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "inkar",
+   "pos": "noun",
+   "level": "C1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "inkâr",
+     "alternatives": [
+      "inkar"
+     ],
+     "example": "İnkâr ediyor."
+    },
+    "en": {
+     "text": "denial",
+     "example": "He is in denial."
+    }
+   },
+   "hint": {
+    "tr": "Bir gerçeği kabul etmeme."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "inis",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "iniş",
+     "example": "Uçak inişe başladı."
+    },
+    "en": {
+     "text": "descent",
+     "example": "The plane began its descent."
+    }
+   },
+   "hint": {
+    "tr": "Yukarıdan aşağıya doğru hareket."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "umutsuzluk",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "umutsuzluk",
+     "example": "Umutsuzluk içinde ağladı."
+    },
+    "en": {
+     "text": "despair",
+     "example": "She cried in despair."
+    }
+   },
+   "hint": {
+    "tr": "Hiç umudu kalmama durumu."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kader",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "kader",
+     "example": "Kadere inanıyor."
+    },
+    "en": {
+     "text": "destiny",
+     "example": "He believes in destiny."
+    }
+   },
+   "hint": {
+    "tr": "Olacakların önceden belirlendiğine inanılan yazgı."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "caydirmak",
+   "pos": "verb",
+   "level": "C1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "caydırmak",
+     "example": "Yüksek cezalar suçu caydırır."
+    },
+    "en": {
+     "text": "deter",
+     "example": "High fines deter crime."
+    }
+   },
+   "hint": {
+    "tr": "Birini bir şeyi yapmaktan vazgeçirmek."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "baglilik",
+   "pos": "noun",
+   "level": "C1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "bağlılık",
+     "example": "Ailesine bağlılığı güçlü."
+    },
+    "en": {
+     "text": "devotion",
+     "example": "Her devotion to her family is strong."
+    }
+   },
+   "hint": {
+    "tr": "Birine ya da bir şeye derin sevgiyle bağlı olma."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "cap",
+   "pos": "noun",
+   "level": "C1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "çap",
+     "example": "Dairenin çapı on santimetre."
+    },
+    "en": {
+     "text": "diameter",
+     "example": "The circle has a diameter of ten centimetres."
+    }
+   },
+   "hint": {
+    "tr": "Bir dairenin merkezinden geçen en uzun çizgi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "zar",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "zar",
+     "example": "Zarı at."
+    },
+    "en": {
+     "text": "dice",
+     "example": "Roll the dice."
+    }
+   },
+   "hint": {
+    "tr": "Üzerinde nokta olan, oyunda atılan küp."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "sindirmek",
+   "pos": "verb",
+   "level": "B2",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "sindirmek",
+     "example": "Geceleri eti sindirmek zordur."
+    },
+    "en": {
+     "text": "digest",
+     "example": "It is hard to digest meat at night."
+    }
+   },
+   "hint": {
+    "tr": "Yiyeceği midede işlemek."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "sevmemek",
    "pos": "verb",
    "level": "B2",
@@ -18710,6 +25169,582 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "aksatmak",
+   "pos": "verb",
+   "level": "C1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "aksatmak",
+     "example": "Grev uçuşları aksatacak."
+    },
+    "en": {
+     "text": "disrupt",
+     "example": "The strike will disrupt flights."
+    }
+   },
+   "hint": {
+    "tr": "Bir işin düzenli gitmesini bozmak."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "carpitmak",
+   "pos": "verb",
+   "level": "C1",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "çarpıtmak",
+     "example": "Sözlerimi çarpıtma."
+    },
+    "en": {
+     "text": "distort",
+     "example": "Don't distort my words."
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi gerçeğe aykırı biçimde göstermek."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "hendek",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "hendek",
+     "example": "Araba bir hendeğe düştü."
+    },
+    "en": {
+     "text": "ditch",
+     "example": "The car fell into a ditch."
+    }
+   },
+   "hint": {
+    "tr": "Yol kenarında kazılmış uzun çukur."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "yunus",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "hayvanlar",
+   "terms": {
+    "tr": {
+     "text": "yunus",
+     "example": "Teknemizin yanında bir yunus yüzdü."
+    },
+    "en": {
+     "text": "dolphin",
+     "example": "A dolphin swam next to our boat."
+    }
+   },
+   "hint": {
+    "tr": "Denizde yaşayan, zeki memeli hayvan."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kubbe",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "şehir",
+   "terms": {
+    "tr": {
+     "text": "kubbe",
+     "example": "Caminin büyük bir kubbesi var."
+    },
+    "en": {
+     "text": "dome",
+     "example": "The mosque has a big dome."
+    }
+   },
+   "hint": {
+    "tr": "Binanın yarım küre biçimindeki çatısı."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "ejderha",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "ejderha",
+     "example": "Hikâyede bir ejderha var."
+    },
+    "en": {
+     "text": "dragon",
+     "example": "The story has a dragon."
+    }
+   },
+   "hint": {
+    "tr": "Masallarda ateş püsküren dev yaratık."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "damlamak",
+   "pos": "verb",
+   "level": "B2",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "damlamak",
+     "example": "Çatıdan su damlayacak."
+    },
+    "en": {
+     "text": "drip",
+     "example": "Water will drip from the roof."
+    }
+   },
+   "hint": {
+    "tr": "Bir sıvının damla damla düşmesi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kuraklik",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "kuraklık",
+     "example": "Kuraklık ekinleri öldürdü."
+    },
+    "en": {
+     "text": "drought",
+     "example": "The drought killed the crops."
+    }
+   },
+   "hint": {
+    "tr": "Uzun süre yağmur yağmaması."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "dayanikli",
+   "pos": "adjective",
+   "level": "B2",
+   "topic": "alışveriş",
+   "terms": {
+    "tr": {
+     "text": "dayanıklı",
+     "example": "Bu ayakkabılar çok dayanıklı."
+    },
+    "en": {
+     "text": "durable",
+     "example": "These shoes are very durable."
+    }
+   },
+   "hint": {
+    "tr": "Kolay bozulmayan, uzun süre kullanılabilen."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "sure",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "zaman",
+   "terms": {
+    "tr": {
+     "text": "süre",
+     "example": "Kursun süresi ne?"
+    },
+    "en": {
+     "text": "duration",
+     "example": "What is the duration of the course?"
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyin başından sonuna kadar geçen zaman."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "cuce",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "cüce",
+     "example": "Cüce ormanda yaşıyordu."
+    },
+    "en": {
+     "text": "dwarf",
+     "example": "The dwarf lived in the forest."
+    }
+   },
+   "hint": {
+    "tr": "Boyu çok kısa kalmış kişi; masal yaratığı."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "konut",
+   "pos": "noun",
+   "level": "C1",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "konut",
+     "example": "Bu konutun üç odası var."
+    },
+    "en": {
+     "text": "dwelling",
+     "example": "This dwelling has three rooms."
+    }
+   },
+   "hint": {
+    "tr": "İnsanların içinde yaşadığı yapı."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "tutulma",
+   "pos": "noun",
+   "level": "C1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "tutulma",
+     "example": "Güneş tutulmasını izledik."
+    },
+    "en": {
+     "text": "eclipse",
+     "example": "We watched the eclipse of the sun."
+    }
+   },
+   "hint": {
+    "tr": "Ay ya da güneşin bir süre görünmez olması."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "yaymak",
+   "pos": "verb",
+   "level": "C1",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "yaymak",
+     "example": "Arabalar gaz yayar."
+    },
+    "en": {
+     "text": "emit",
+     "example": "Cars emit gas."
+    }
+   },
+   "hint": {
+    "tr": "Işık, ısı ya da gaz salmak."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "imparator",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "imparator",
+     "example": "İmparator bir sarayda yaşardı."
+    },
+    "en": {
+     "text": "emperor",
+     "example": "The emperor lived in a palace."
+    }
+   },
+   "hint": {
+    "tr": "İmparatorluğu yöneten hükümdar."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "buyutmek",
+   "pos": "verb",
+   "level": "B2",
+   "topic": "teknoloji",
+   "terms": {
+    "tr": {
+     "text": "büyütmek",
+     "example": "Bu fotoğrafı büyütebilir misin?"
+    },
+    "en": {
+     "text": "enlarge",
+     "example": "Can you enlarge this photo?"
+    }
+   },
+   "hint": {
+    "tr": "Bir şeyi daha büyük hale getirmek."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kiskanclik",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "kıskançlık",
+     "alternatives": [
+      "haset"
+     ],
+     "example": "Arabasını görünce kıskançlık duydu."
+    },
+    "en": {
+     "text": "envy",
+     "example": "She felt envy when she saw his car."
+    }
+   },
+   "hint": {
+    "tr": "Başkasının sahip olduğunu isteme duygusu."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "destan",
+   "pos": "noun",
+   "level": "C1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "destan",
+     "example": "Derste eski bir destan okuduk."
+    },
+    "en": {
+     "text": "epic",
+     "example": "We read an old epic in class."
+    }
+   },
+   "hint": {
+    "tr": "Kahramanlık olaylarını anlatan uzun şiir."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "salgin",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "salgın",
+     "example": "Salgın hızla yayıldı."
+    },
+    "en": {
+     "text": "epidemic",
+     "example": "The epidemic spread quickly."
+    }
+   },
+   "hint": {
+    "tr": "Kısa sürede çok kişiye bulaşan hastalık."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "esitlik",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "eşitlik",
+     "example": "Eşitlik için mücadele ediyorlar."
+    },
+    "en": {
+     "text": "equality",
+     "example": "They fight for equality."
+    }
+   },
+   "hint": {
+    "tr": "Herkesin aynı haklara sahip olması."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "asinma",
+   "pos": "noun",
+   "level": "C1",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "aşınma",
+     "example": "Rüzgâr aşınmaya yol açar."
+    },
+    "en": {
+     "text": "erosion",
+     "example": "Wind causes erosion."
+    }
+   },
+   "hint": {
+    "tr": "Toprağın ya da kayanın zamanla yıpranması."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "patlamak",
+   "pos": "verb",
+   "level": "C1",
+   "topic": "doğa",
+   "terms": {
+    "tr": {
+     "text": "patlamak",
+     "example": "Yanardağ yeniden patlayabilir."
+    },
+    "en": {
+     "text": "erupt",
+     "example": "The volcano may erupt again."
+    }
+   },
+   "hint": {
+    "tr": "Bir yanardağın ateş ve lav püskürtmesi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "sonsuz",
+   "pos": "adjective",
+   "level": "B2",
+   "topic": "soyut",
+   "terms": {
+    "tr": {
+     "text": "sonsuz",
+     "alternatives": [
+      "ebedi"
+     ],
+     "example": "Sonsuz aşk sözü verdiler."
+    },
+    "en": {
+     "text": "eternal",
+     "example": "They promised eternal love."
+    }
+   },
+   "hint": {
+    "tr": "Hiç bitmeyen."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "bosaltmak",
+   "pos": "verb",
+   "level": "C1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "boşaltmak",
+     "example": "Binayı boşaltmak zorunda kaldılar."
+    },
+    "en": {
+     "text": "evacuate",
+     "example": "They had to evacuate the building."
+    }
+   },
+   "hint": {
+    "tr": "Tehlike yüzünden insanları bir yerden çıkarmak."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "surgun",
+   "pos": "noun",
+   "level": "C1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "sürgün",
+     "example": "Şair sürgünde yaşadı."
+    },
+    "en": {
+     "text": "exile",
+     "example": "The poet lived in exile."
+    }
+   },
+   "hint": {
+    "tr": "Ülkesinden zorla uzaklaştırılma."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kovmak",
+   "pos": "verb",
+   "level": "C1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "kovmak",
+     "example": "Okul onu kovabilir."
+    },
+    "en": {
+     "text": "expel",
+     "example": "The school may expel him."
+    }
+   },
+   "hint": {
+    "tr": "Birini bir yerden zorla çıkarmak."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kasif",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "kâşif",
+     "alternatives": [
+      "kaşif"
+     ],
+     "example": "Kâşif yeni bir ada buldu."
+    },
+    "en": {
+     "text": "explorer",
+     "example": "The explorer found a new island."
+    }
+   },
+   "hint": {
+    "tr": "Bilinmeyen yerleri araştıran gezgin."
+   },
+   "reviewed": false,
+   "check": "bulk"
   },
   {
    "id": "sadik",
@@ -18733,6 +25768,663 @@
    "check": "crosscheck"
   },
   {
+   "id": "yorgunluk",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "yorgunluk",
+     "example": "Yorgunluktan halsizdi."
+    },
+    "en": {
+     "text": "fatigue",
+     "example": "He was weak from fatigue."
+    }
+   },
+   "hint": {
+    "tr": "Çok çalışmaktan gelen bitkinlik."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "ziyafet",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "ziyafet",
+     "example": "Düğün için ziyafet verdiler."
+    },
+    "en": {
+     "text": "feast",
+     "example": "They had a feast for the wedding."
+    }
+   },
+   "hint": {
+    "tr": "Bol yemekli büyük sofra."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "vapur",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "vapur",
+     "alternatives": [
+      "feribot"
+     ],
+     "example": "Adaya vapurla gittik."
+    },
+    "en": {
+     "text": "ferry",
+     "example": "We took the ferry to the island."
+    }
+   },
+   "hint": {
+    "tr": "Yolcuları karşı kıyıya taşıyan gemi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "suru",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "hayvanlar",
+   "terms": {
+    "tr": {
+     "text": "sürü",
+     "example": "Üstümüzden bir kuş sürüsü uçtu."
+    },
+    "en": {
+     "text": "flock",
+     "example": "A flock of birds flew over us."
+    }
+   },
+   "hint": {
+    "tr": "Bir arada dolaşan hayvan topluluğu."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "gelismek",
+   "pos": "verb",
+   "level": "C1",
+   "topic": "iş",
+   "terms": {
+    "tr": {
+     "text": "gelişmek",
+     "example": "İşler gelişmeye başladı."
+    },
+    "en": {
+     "text": "flourish",
+     "example": "The business began to flourish."
+    }
+   },
+   "hint": {
+    "tr": "Hızla büyüyüp başarılı olmak."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kopuk",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "köpük",
+     "example": "Lavaboda çok fazla köpük var."
+    },
+    "en": {
+     "text": "foam",
+     "example": "There is too much foam in the sink."
+    }
+   },
+   "hint": {
+    "tr": "Sıvının yüzeyindeki küçük hava kabarcıkları."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "cesme",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "şehir",
+   "terms": {
+    "tr": {
+     "text": "çeşme",
+     "example": "Çeşmeden su içtik."
+    },
+    "en": {
+     "text": "fountain",
+     "example": "We drank water from the fountain."
+    }
+   },
+   "hint": {
+    "tr": "Suyun aktığı yapı."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kesir",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "kesir",
+     "example": "Yarım bir kesirdir."
+    },
+    "en": {
+     "text": "fraction",
+     "example": "One half is a fraction."
+    }
+   },
+   "hint": {
+    "tr": "Bir bütünün parçasını gösteren sayı."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "af",
+   "pos": "noun",
+   "level": "C1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "af",
+     "example": "Mahkumlar af bekliyordu."
+    },
+    "en": {
+     "text": "amnesty",
+     "example": "The prisoners hoped for an amnesty."
+    }
+   },
+   "hint": {
+    "tr": "Suçluların cezasının devlet tarafından bağışlanması."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "mars",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "marş",
+     "example": "İstiklal Marşı'nı söyledik."
+    },
+    "en": {
+     "text": "anthem",
+     "example": "We sang the national anthem."
+    }
+   },
+   "hint": {
+    "tr": "Bir ülkeyi temsil eden resmî şarkı."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "iltica",
+   "pos": "noun",
+   "level": "C1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "iltica",
+     "alternatives": [
+      "sığınma"
+     ],
+     "example": "İltica talebinde bulundu."
+    },
+    "en": {
+     "text": "asylum",
+     "example": "He asked for asylum."
+    }
+   },
+   "hint": {
+    "tr": "Zulümden kaçan birine başka bir ülkenin verdiği koruma."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "sargi",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "sağlık",
+   "terms": {
+    "tr": {
+     "text": "sargı",
+     "example": "Hemşire koluma sargı sardı."
+    },
+    "en": {
+     "text": "bandage",
+     "example": "The nurse put a bandage on my arm."
+    }
+   },
+   "hint": {
+    "tr": "Yarayı örten bez şerit."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "yalinayak",
+   "pos": "adverb",
+   "level": "B2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "yalınayak",
+     "example": "Çocuklar çimlerde yalınayak koştu."
+    },
+    "en": {
+     "text": "barefoot",
+     "example": "The kids ran barefoot on the grass."
+    }
+   },
+   "hint": {
+    "tr": "Ayakkabısız, çıplak ayakla."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kuvet",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "küvet",
+     "example": "Küvette."
+    },
+    "en": {
+     "text": "bathtub",
+     "example": "She is in the bathtub."
+    }
+   },
+   "hint": {
+    "tr": "İçinde yıkanılan büyük kap."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "bocek",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "hayvanlar",
+   "terms": {
+    "tr": {
+     "text": "böcek",
+     "example": "Yaprağın üstünde siyah bir böcek var."
+    },
+    "en": {
+     "text": "beetle",
+     "example": "A black beetle is on the leaf."
+    }
+   },
+   "hint": {
+    "tr": "Sert kanatlı küçük hayvan."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "icecek",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "içecek",
+     "example": "Çay sevilen bir içecektir."
+    },
+    "en": {
+     "text": "beverage",
+     "example": "Tea is a popular beverage."
+    }
+   },
+   "hint": {
+    "tr": "İçilen sıvı."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "tipi",
+   "pos": "noun",
+   "level": "C1",
+   "topic": "hava",
+   "terms": {
+    "tr": {
+     "text": "tipi",
+     "example": "Tipiye yakalandık."
+    },
+    "en": {
+     "text": "blizzard",
+     "example": "We were caught in a blizzard."
+    }
+   },
+   "hint": {
+    "tr": "Rüzgârlı, yoğun kar fırtınası."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "orgu",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "vücut",
+   "terms": {
+    "tr": {
+     "text": "örgü",
+     "example": "Uzun bir örgüsü var."
+    },
+    "en": {
+     "text": "braid",
+     "example": "She has a long braid."
+    }
+   },
+   "hint": {
+    "tr": "Saçın üç tutamla örülmüş hali."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "ovunmek",
+   "pos": "verb",
+   "level": "C1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "övünmek",
+     "example": "Arabasıyla övünmeyi sever."
+    },
+    "en": {
+     "text": "brag",
+     "example": "He likes to brag about his car."
+    }
+   },
+   "hint": {
+    "tr": "Kendi başarısını abartarak anlatmak."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "lahana",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "lahana",
+     "example": "Büyükannem lahana çorbası pişirir."
+    },
+    "en": {
+     "text": "cabbage",
+     "example": "My grandma cooks cabbage soup."
+    }
+   },
+   "hint": {
+    "tr": "Yaprakları iç içe büyük sebze."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "deve",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "hayvanlar",
+   "terms": {
+    "tr": {
+     "text": "deve",
+     "example": "Çölde deveye bindik."
+    },
+    "en": {
+     "text": "camel",
+     "example": "We rode a camel in the desert."
+    }
+   },
+   "hint": {
+    "tr": "Hörgüçlü, çölde yaşayan hayvan."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kereviz",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "kereviz",
+     "example": "Çorbaya kereviz ekle."
+    },
+    "en": {
+     "text": "celery",
+     "example": "Add celery to the soup."
+    }
+   },
+   "hint": {
+    "tr": "Kökü ya da sapı yenen sebze."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "tebesir",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "tebeşir",
+     "example": "Öğretmen tebeşirle yazdı."
+    },
+    "en": {
+     "text": "chalk",
+     "example": "The teacher wrote with chalk."
+    }
+   },
+   "hint": {
+    "tr": "Kara tahtaya yazmaya yarayan beyaz çubuk."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "satranc",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "günlük",
+   "terms": {
+    "tr": {
+     "text": "satranç",
+     "example": "Satranç oynar mısın?"
+    },
+    "en": {
+     "text": "chess",
+     "example": "Do you play chess?"
+    }
+   },
+   "hint": {
+    "tr": "Şah ve vezirle oynanan strateji oyunu."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kestane",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "kestane",
+     "example": "Satıcıdan bir kestane aldım."
+    },
+    "en": {
+     "text": "chestnut",
+     "example": "I bought a chestnut from the seller."
+    }
+   },
+   "hint": {
+    "tr": "Kabuğu kahverengi, kışın közlenen meyve."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "baca",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "ev",
+   "terms": {
+    "tr": {
+     "text": "baca",
+     "example": "Bacadan duman çıktı."
+    },
+    "en": {
+     "text": "chimney",
+     "example": "Smoke came out of the chimney."
+    }
+   },
+   "hint": {
+    "tr": "Evin dumanını dışarı veren boru."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "sakar",
+   "pos": "adjective",
+   "level": "B2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "sakar",
+     "example": "Bugün çok sakarım."
+    },
+    "en": {
+     "text": "clumsy",
+     "example": "I am so clumsy today."
+    }
+   },
+   "hint": {
+    "tr": "Sık sık bir şeyleri düşüren ya da kıran."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "pusula",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "seyahat",
+   "terms": {
+    "tr": {
+     "text": "pusula",
+     "example": "Kuzeyi bulmak için pusulayı kullan."
+    },
+    "en": {
+     "text": "compass",
+     "example": "Use the compass to find north."
+    }
+   },
+   "hint": {
+    "tr": "Yönü gösteren alet."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "korkak",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "korkak",
+     "example": "Korkak olma."
+    },
+    "en": {
+     "text": "coward",
+     "example": "Don't be a coward."
+    }
+   },
+   "hint": {
+    "tr": "Cesareti olmayan kişi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "kirinti",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "kırıntı",
+     "example": "Gömleğinde bir kırıntı var."
+    },
+    "en": {
+     "text": "crumb",
+     "example": "There is a crumb on your shirt."
+    }
+   },
+   "hint": {
+    "tr": "Ekmekten dökülen küçük parça."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "salatalik",
+   "pos": "noun",
+   "level": "B2",
+   "topic": "yiyecek",
+   "terms": {
+    "tr": {
+     "text": "salatalık",
+     "example": "Salatalığı kes."
+    },
+    "en": {
+     "text": "cucumber",
+     "example": "Cut the cucumber."
+    }
+   },
+   "hint": {
+    "tr": "Yeşil kabuklu, sulu sebze."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
    "id": "kivircik",
    "pos": "adjective",
    "level": "B2",
@@ -18752,6 +26444,72 @@
    },
    "reviewed": false,
    "check": "crosscheck"
+  },
+  {
+   "id": "hancer",
+   "pos": "noun",
+   "level": "C1",
+   "topic": "hukuk",
+   "terms": {
+    "tr": {
+     "text": "hançer",
+     "example": "Paltosunda bir hançer sakladı."
+    },
+    "en": {
+     "text": "dagger",
+     "example": "He hid a dagger in his coat."
+    }
+   },
+   "hint": {
+    "tr": "Kısa, iki yüzü keskin bıçak."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "lehce",
+   "pos": "noun",
+   "level": "C1",
+   "topic": "okul",
+   "terms": {
+    "tr": {
+     "text": "lehçe",
+     "alternatives": [
+      "ağız"
+     ],
+     "example": "Yerel bir lehçe konuşuyorlar."
+    },
+    "en": {
+     "text": "dialect",
+     "example": "They speak a local dialect."
+    }
+   },
+   "hint": {
+    "tr": "Bir dilin bölgesel söyleyiş biçimi."
+   },
+   "reviewed": false,
+   "check": "bulk"
+  },
+  {
+   "id": "rezalet",
+   "pos": "noun",
+   "level": "C1",
+   "topic": "duygular",
+   "terms": {
+    "tr": {
+     "text": "rezalet",
+     "example": "Bu bir rezalet!"
+    },
+    "en": {
+     "text": "disgrace",
+     "example": "This is a disgrace!"
+    }
+   },
+   "hint": {
+    "tr": "Utanç verici durum."
+   },
+   "reviewed": false,
+   "check": "bulk"
   }
  ]
 }
