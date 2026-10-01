@@ -189,35 +189,20 @@
   min-height: 100dvh;
 }
 .home .campaign-card {
-  flex: 1 0 auto;
+  flex: 0 0 auto;
 }
 /*
- * Bölüm yolu, kartta kalan alanın TAMAMINI alır ve düzenine bu alana göre
- * karar verir (ekran yüksekliğine göre değil): Safari'nin çubukları ekranı
- * kısalttığında da kartta boşluk kalmaz. Düğümler dokunulan düğme değil,
- * yalnızca gösterge.
+ * Bölüm kutuları: bulmacadaki harf kareleri gibi kare, yan yana; her telefonda
+ * aynı. Kareler uzamaz; ekranda kalan yer alttaki mod kutularına gider
+ * (.home .mode-row). Kutular dokunulan düğme değil, yalnızca gösterge.
  */
 .home .campaign-card .chapter-path {
-  flex: 1 1 0;
-  min-height: 56px;
-  container-type: size;
-  display: flex;
-  flex-direction: column;
+  display: block;
 }
-.home .chapter-path.layout-auto .path-nodes {
-  flex: 1 1 auto;
-  /* Uçlara yaslı: kesik çizgi tam ilk ve son düğüm arasında kalır. */
-  justify-content: space-between;
-  gap: 4px;
-}
-/*
- * Ana sayfada her ekranda aynı düzen: her bulmaca bir kart, kartlar yan yana ve
- * kutunun yüksekliği kadar uzar (boş yer kalmaz). Eskiden yüksek ekranda dikey
- * yola geçiyordu; telefondan telefona farklı göründüğü için kaldırıldı.
- */
 .home .chapter-path.layout-auto .path-nodes {
   flex-direction: row;
-  align-items: stretch;
+  justify-content: center;
+  align-items: center;
   gap: 6px;
   padding: 0;
 }
@@ -227,18 +212,42 @@
 }
 .home .chapter-path.layout-auto .path-node {
   flex: 1 1 0;
+  max-width: 64px;
   display: flex;
 }
 .home .chapter-path.layout-auto .path-node span,
 .home .chapter-path.layout-auto .path-node.is-current span {
   width: 100%;
   height: auto;
-  min-height: 44px;
-  border-radius: 12px;
-  font-size: 1.1rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 6px;
+  border-width: 2px;
+  font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, 'Noto Serif', serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  box-shadow: none;
 }
 .home .chapter-path.layout-auto .path-node.is-current span {
-  box-shadow: none;
+  background: var(--cursor-bg);
+  border-color: var(--clue-arrow);
+  color: var(--text);
+}
+/* Uzun ekranda kalan yükseklik mod kutularına: boşluk kalmaz. */
+.home .mode-row {
+  flex: 1 1 auto;
+}
+.home .mode-row .mode-card {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+}
+.home .mode-row .mode-card svg {
+  width: 40px;
+  height: 40px;
+}
+.home .mode-row .mode-card strong {
+  font-size: 1.15rem;
 }
 .campaign-card {
   display: flex;
