@@ -10,11 +10,12 @@ interface Props {
 
 /**
  * Konu modları. Yeterli kelimesi olan mod oynanabilir; eksik olan kaç kelime
- * kaldığıyla birlikte "Hazırlanıyor" diye görünür.
+ * kaldığıyla birlikte "Hazırlanıyor" diye görünür; hiç kelimesi olmayan görünmez.
  * Konu bulmacaları bölüm ilerlemesini değiştirmez.
  */
 export function TopicModes({ pack, onBack, onPlay }: Props) {
-  const statuses = topicStatuses(pack);
+  // Hiç kelimesi olmayan mod gösterilmez (ör. içeriği henüz onay bekleyen Geçmiş zaman).
+  const statuses = topicStatuses(pack).filter((s) => s.total > 0);
   return (
     <div className="page topics">
       <header className="page-bar">

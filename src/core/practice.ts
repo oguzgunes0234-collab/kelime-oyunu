@@ -42,7 +42,7 @@ export interface PracticeItem {
 
 /** Zorlanılan kelimeler: çözülemeyen, yardımla çözülen ya da yanlış denemesi olan. */
 export function practiceCandidates(results: WordResult[]): WordResult[] {
-  return results.filter((r) => r.status !== 'correct' || r.helped || r.wrongAttempts > 0).slice(0, MAX_PRACTICE_WORDS);
+  return results.filter((r) => r.status !== 'correct' || r.helped || r.assisted || r.wrongAttempts > 0).slice(0, MAX_PRACTICE_WORDS);
 }
 
 function shuffle<T>(items: T[], rng: Rng): T[] {
@@ -54,12 +54,26 @@ function shuffle<T>(items: T[], rng: Rng): T[] {
   return a;
 }
 
-/** Çeldiriciler: aynı sözcük türü, farklı anlam; önce aynı seviyeden. */
+/** Bir kaydın bütün karşılıkları (ana + kabul edilen), her iki dilde, küçük harf. */
+function forms(e: Entry): Set<string> {
+  const out = new Set<string>();
+  for (const t of Object.values(e.terms)) for (const w of [t.text, ...(t.alternatives ?? [])]) out.add(w.toLocaleLowerCase('tr'));
+  return out;
+}
+
+/**
+ * Çeldiriciler: aynı sözcük türü, kesin farklı anlam; önce aynı seviyeden.
+ * Doğru kelimeyle HERHANGİ bir karşılığı paylaşan kayıt çeldirici olmaz: ör.
+ * true sorulurken "gerçek" (real) seçenek olursa iki doğru cevap olur. Aynı
+ * Türkçe kelimeyi açıklamayla paylaşanlar ("ay": month/moon) da dışarıda kalır.
+ */
 function distractors(entry: Entry, pack: WordPack, lang: string, rng: Rng): string[] {
-  const own = entry.terms[lang].text.toLocaleLowerCase('tr');
-  const pool = pack.entries.filter(
-    (e) => e.id !== entry.id && e.pos === entry.pos && e.terms[lang] && e.terms[lang].text.toLocaleLowerCase('tr') !== own && !e.grammar,
-  );
+  const own = forms(entry);
+  const pool = pack.entries.filter((e) => {
+    if (e.id === entry.id || e.pos !== entry.pos || !e.terms[lang] || e.grammar) return false;
+    for (const f of forms(e)) if (own.has(f)) return false;
+    return true;
+  });
   const same = shuffle(pool.filter((e) => e.level === entry.level), rng);
   const other = shuffle(pool.filter((e) => e.level !== entry.level), rng);
   const out: string[] = [];

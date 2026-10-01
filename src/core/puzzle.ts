@@ -516,7 +516,10 @@ export interface WordResult {
   /** Bulmacadaki yazılışı (ana cevaptan farklı olabilir). */
   answer: string;
   status: 'correct' | 'failed';
+  /** Cevabı açan yardım: Harf aç ya da Anlam. */
   helped: boolean;
+  /** Anlamı daraltan joker: Eş anlamlı ya da Cümle (bkz. WordOutcomeInput.assisted). */
+  assisted: boolean;
   wrongAttempts: number;
   score: ScoreBreakdown;
 }
@@ -533,7 +536,8 @@ export function wordResults(state: PuzzleState, pack: WordPack): WordResult[] {
       question,
       answer: w.answer,
       status: solved ? 'correct' : 'failed',
-      helped: state.lettersRevealed[i] > 0 || state.meaningShown[i] || extraShown(state, 'synonym', i) || extraShown(state, 'sentence', i),
+      helped: state.lettersRevealed[i] > 0 || state.meaningShown[i],
+      assisted: extraShown(state, 'synonym', i) || extraShown(state, 'sentence', i),
       wrongAttempts: state.wrong[i],
       score: scoreWord(question.level, w.letters.length, {
         solved,

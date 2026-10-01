@@ -1,7 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { CLOZE_BLANK, sentenceFor, synonymsFor } from '../src/core/clues';
 import { DAILY_GOAL_REWARD, INITIAL_INVENTORY, PUZZLE_TOOL_ORDER, TOOL_POINT_COST } from '../src/core/economy';
-import { defaultProfile } from '../src/core/profile';
+import { applyWord, defaultProfile } from '../src/core/profile';
+import { toQuestion } from '../src/core/pack';
 import { extraShown, finishPuzzle, newPuzzle, showExtra, wordResults } from '../src/core/puzzle';
 import { seededRng } from '../src/core/rng';
 import { scoreWord } from '../src/core/scoring';
@@ -65,7 +66,9 @@ describe('jokerlerin oyun kuralları', () => {
     expect(showExtra(a.state, 'synonym', true).applied).toBe(false);
     const b = showExtra(a.state, 'sentence', true).state;
     const r = wordResults(finishPuzzle(b), pack).find((x) => x.word === s0.sel.word)!;
-    expect(r.helped).toBe(true);
+    // Anlamı daraltan jokerler "bilmedi" sayılmaz; yalnızca "jokerle" işaretlenir.
+    expect(r.helped).toBe(false);
+    expect(r.assisted).toBe(true);
 
     const clean = scoreWord('A1', 5, { solved: true, wrong: 0, lettersRevealed: 0, meaning: false });
     const used = scoreWord('A1', 5, { solved: true, wrong: 0, lettersRevealed: 0, meaning: false, synonym: true, sentence: true });
@@ -77,5 +80,22 @@ describe('jokerlerin oyun kuralları', () => {
     const old = { ...s0, synonymShown: undefined, sentenceShown: undefined };
     expect(extraShown(old, 'sentence', 0)).toBe(false);
     expect(showExtra(old, 'sentence', true).applied).toBe(true);
+  });
+});
+
+describe('yardım türleri: joker "bilmedi" sayılmaz', () => {
+  const q = toQuestion(byEn('goal'), EN_TR);
+  const base = { question: q, status: 'correct' as const, wrongAttempts: 0, score: { lines: [], total: 10 } };
+  it('Eş anlamlı/Cümle ile çözülen kelime tekrar listesine girmez, kutu atlamaz', () => {
+    const p = defaultProfile(new Date(2026, 9, 1));
+    const { profile, outcome } = applyWord(p, { ...base, helped: false, assisted: true }, { mode: 'normal', adaptive: false }, new Date(2026, 9, 1));
+    expect(outcome.addedToReview).toBeNull();
+    expect(profile.review).toHaveLength(0);
+    expect(profile.srs['en>tr'][q.entryId].box).toBe(1); // "correct": kutu yükselmez
+  });
+  it('Harf aç/Anlam ile çözülen kelime tekrar listesine girer', () => {
+    const p = defaultProfile(new Date(2026, 9, 1));
+    const { outcome } = applyWord(p, { ...base, helped: true }, { mode: 'normal', adaptive: false }, new Date(2026, 9, 1));
+    expect(outcome.addedToReview).toBe('helped');
   });
 });

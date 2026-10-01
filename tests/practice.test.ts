@@ -74,4 +74,18 @@ describe('pekiştirme', () => {
     expect(res.profile.srs).toEqual(p.srs);
     expect(applyPractice(p, []).profile).toBe(p);
   });
+
+  it('çeldirici, doğru kelimeyle hiçbir karşılığı paylaşmaz (tek doğru cevap)', () => {
+    const forms = (e: (typeof pack.entries)[number]) =>
+      new Set(Object.values(e.terms).flatMap((t) => [t.text, ...(t.alternatives ?? [])].map((w) => w.toLocaleLowerCase('tr'))));
+    for (const e of pack.entries.filter((x) => !x.grammar).slice(0, 400)) {
+      const [item] = buildPractice(pack, TR_EN, [result(e.id, { status: 'failed' })], seededRng(7));
+      const own = forms(e);
+      for (const [i, c] of item.choices.entries()) {
+        if (i === item.correctChoice) continue;
+        const other = pack.entries.find((x) => x.terms.tr.text === c && x.pos === e.pos)!;
+        expect([...forms(other)].some((f) => own.has(f)), `${e.terms.en.text}: ${c}`).toBe(false);
+      }
+    }
+  });
 });

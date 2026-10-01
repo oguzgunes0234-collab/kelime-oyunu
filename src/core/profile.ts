@@ -101,7 +101,14 @@ function reviewIndex(profile: Profile, dir: string, entryId: string): number {
 export interface WordOutcomeInput {
   question: Question;
   status: RoundState['status'];
+  /** Cevabı açan yardım (Harf aç, Anlam, Mıknatıs, İpucu): kelime tekrar listesine girer. */
   helped: boolean;
+  /**
+   * Anlamı daraltan joker (Eş anlamlı, Cümle): oyuncu kelimeyi biliyor ama
+   * hangi karşılığın istendiğinden emin değildi. "Bilmedi" sayılmaz (tekrar
+   * listesi ve zorluk değişmez), yalnızca aralıklı tekrarda kutu atlamaz.
+   */
+  assisted?: boolean;
   wrongAttempts: number;
   score: ScoreBreakdown;
 }
@@ -150,7 +157,7 @@ export function applyWord(
   const id = word.question.entryId;
   let p: Profile = { ...profile, daily: rollDay(profile.daily, now) };
   const correct = word.status === 'correct';
-  const clean = correct && !helped && word.wrongAttempts === 0;
+  const clean = correct && !helped && !word.assisted && word.wrongAttempts === 0;
 
   p.stats = { rounds: p.stats.rounds + 1, correct: p.stats.correct + (correct ? 1 : 0) };
   p.totalScore += score.total;

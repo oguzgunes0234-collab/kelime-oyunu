@@ -21,17 +21,21 @@ olmadan `node taslak/donustur.mjs` + `node taslak/pakete-ekle.mjs` çalıştır�
 Dosya yoksa `src/data/pack-tr-en.json`'ı yeniden üretmeyin; doğrudan düzenleyin
 ya da yalnızca yeni taslakları ekleyin.
 
-## Sıradaki işler (öncelik sırasıyla)
-1. Eş anlamlı jokeri "bilmedi" sayılmasın: puandan düşsün ama tekrar
-   listesine ekleme ve uyarlamalı zorluğu düşürme (bkz. `core/puzzle.ts`
-   `wordResults` → `helped`, `core/profile.ts` `applyWord`).
-2. Pekiştirmede eş anlamlı çeldirici çıkmasın: bir kaydın Türkçe karşılığı
-   başka kaydın alternatifiyse (ör. "gerçek": real/true) çeldirici olmasın
-   (`core/practice.ts` `distractors`). 33 kayıt etkileniyor.
-3. iPhone'da 7 gün kullanılmayan sitelerin verisi silinebilir: "Ana ekrana
-   ekle" önerisi.
-4. İçerik incelemesi (örnek cümleler, tanımlar); başlangıçta seviye testi;
-   ekonomi dengesi (jeton çok cömert).
+## Sıradaki işler (oyun sahibiyle kararlaştırılan sıra, 2026-10-01)
+1. [YAPILDI] Yardım türlerini ayır: anlamı daraltan jokerler (Eş anlamlı, Cümle) puandan
+   düşer ama "bilmedi" sayılmaz (tekrar listesine eklemez, zorluğu düşürmez);
+   cevabı açan yardımlar (Harf aç, Anlam) tekrar gerektirir.
+2. [YAPILDI] Pekiştirmede tek doğru cevap: çeldirici, doğru cevabın eş anlamlısı ya da
+   aynı karşılığı paylaşan bir kelime olmasın (ör. "gerçek": real/true).
+3. [YAPILDI] Hiç kelimesi olmayan konu modları menüde görünmesin; kelimesi olup eşiğe
+   ulaşmayanlar "Hazırlanıyor" kalsın.
+4. Erken bölüm (A1–A2) kelimelerinin insan incelemesi: şüphelileri işaretle
+   (kısa örnek, farklı çeviri), oyun sahibi baksın.
+5. Tekrar sistemlerini tek "Öğrendiklerim" alanında birleştir (tekrar et /
+   çalışılıyor / öğrenildi); atlanabilir kısa seviye belirleme (öneri olarak).
+6. Ekonomi ayarı: önce gerçek oyun verisi (yardım kullanımı, jeton) topla.
+7. iPhone'da ilerleme kaybı: kısa vadede "Ana ekrana ekle" önerisi; kalıcı
+   çözüm bulut yedeği.
 
 ## Kontroller
-`npx tsc --noEmit` ve `npx vitest run` (şu an 120 test geçiyor).
+`npx tsc --noEmit` ve `npx vitest run` (şu an 123 test geçiyor).
