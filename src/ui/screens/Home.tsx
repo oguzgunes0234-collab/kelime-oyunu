@@ -2,7 +2,7 @@ import { chapterInfo } from '../../core/campaign';
 import { DAILY_PUZZLE_GOAL, currentStreak, goalDoneToday } from '../../core/daily';
 import { languageInfo } from '../../core/languages';
 import type { Profile } from '../../core/profile';
-import { MIN_TOPIC_WORDS, topicStatuses } from '../../core/topics';
+import { topicStatuses } from '../../core/topics';
 import type { WordPack } from '../../core/types';
 import { ChapterPath } from '../components/ChapterPath';
 import { BagIcon, BookIcon, CheckIcon, CoinIcon, FlameIcon, GearIcon, GridIcon, LettersIcon, SwapIcon } from '../components/Icons';
@@ -103,7 +103,7 @@ export function Home({ pack, profile, setProfile, onPuzzle, puzzleSaved, tutoria
             <li key={t.mode.id}>
               <button type="button" className="topic-tile" disabled={!t.enabled} onClick={() => onPlayTopic(t.mode.id)}>
                 <strong>{t.mode.name}</strong>
-                <small>{t.enabled ? `${t.total} kelime` : `Hazırlanıyor · ${t.total}/${MIN_TOPIC_WORDS}`}</small>
+                {!t.enabled && <small>Hazırlanıyor</small>}
               </button>
             </li>
           ))}
