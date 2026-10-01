@@ -194,8 +194,7 @@
 /*
  * Bölüm yolu, kartta kalan alanın TAMAMINI alır ve düzenine bu alana göre
  * karar verir (ekran yüksekliğine göre değil): Safari'nin çubukları ekranı
- * kısalttığında da kartta boşluk kalmaz. Alan yeterliyse dikey yol (düğümler
- * alana göre büyür), çok darsa yatay sıra. Düğümler dokunulan düğme değil,
+ * kısalttığında da kartta boşluk kalmaz. Düğümler dokunulan düğme değil,
  * yalnızca gösterge.
  */
 .home .campaign-card .chapter-path {
@@ -211,50 +210,35 @@
   justify-content: space-between;
   gap: 4px;
 }
-/* Dikey yol: 5 düğüm + "Bölüm N" etiketi + boşluklar = 5·düğüm + ~52 px sığmalı. */
-.home .chapter-path.layout-auto .path-node span {
-  --node: clamp(24px, calc((100cqh - 58px) / 5), 44px);
-  width: var(--node);
-  height: var(--node);
-  font-size: 0.95rem;
+/*
+ * Ana sayfada her ekranda aynı düzen: her bulmaca bir kart, kartlar yan yana ve
+ * kutunun yüksekliği kadar uzar (boş yer kalmaz). Eskiden yüksek ekranda dikey
+ * yola geçiyordu; telefondan telefona farklı göründüğü için kaldırıldı.
+ */
+.home .chapter-path.layout-auto .path-nodes {
+  flex-direction: row;
+  align-items: stretch;
+  gap: 6px;
+  padding: 0;
 }
+.home .chapter-path.layout-auto .path-nodes::before,
+.home .chapter-path.layout-auto .path-next {
+  display: none;
+}
+.home .chapter-path.layout-auto .path-node {
+  flex: 1 1 0;
+  display: flex;
+}
+.home .chapter-path.layout-auto .path-node span,
 .home .chapter-path.layout-auto .path-node.is-current span {
-  width: calc(var(--node) + 6px);
-  height: calc(var(--node) + 6px);
+  width: 100%;
+  height: auto;
+  min-height: 44px;
+  border-radius: 12px;
   font-size: 1.1rem;
 }
-/*
- * Dikey yolun sığmadığı kısa alan: her bulmaca bir sütun olur ve sütunlar
- * kutunun yüksekliği kadar uzar. Alan ne kadarsa o kadar dolar; boş yer kalmaz.
- */
-@container (max-height: 179px) {
-  .home .chapter-path.layout-auto .path-nodes {
-    flex: 1 1 auto;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 6px;
-    padding: 0;
-  }
-  .home .chapter-path.layout-auto .path-nodes::before,
-  .home .chapter-path.layout-auto .path-next {
-    display: none;
-  }
-  .home .chapter-path.layout-auto .path-node {
-    flex: 1 1 0;
-    display: flex;
-  }
-  .home .chapter-path.layout-auto .path-node span,
-  .home .chapter-path.layout-auto .path-node.is-current span {
-    width: 100%;
-    height: auto;
-    min-height: 44px;
-    border-radius: 12px;
-    font-size: 1.1rem;
-  }
-  .home .chapter-path.layout-auto .path-node.is-current span {
-    box-shadow: none;
-  }
+.home .chapter-path.layout-auto .path-node.is-current span {
+  box-shadow: none;
 }
 .campaign-card {
   display: flex;
