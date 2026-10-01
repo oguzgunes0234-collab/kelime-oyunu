@@ -1,10 +1,11 @@
 # Devam notu (geliştirme oturumları arası)
 
-Bu dal (`uzman-ve-icerik`) henüz `main`'e birleştirilmedi ve yayına alınmadı.
-Oyun sahibi önce sonucu inceleyecek; birleştirme ve yayın onunla konuşulmadan
-yapılmaz.
+Aşağıdaki işler `main`'e birleştirildi ve yayında (oyun sahibinin onayıyla,
+2026-10-01): herkese açık test linki ve telefondaki Tailscale adresi güncel.
+Yeni işler için `main`'den çalışın. `main`'e birleştirme ve yayın her seferinde
+oyun sahibine sorulur.
 
-## Bu dalda olanlar (main'e göre)
+## Son birleştirilen işler
 - Uzman zorluğu (B2–C1), bölüm tavanı (1–2 Orta, 3–5 Zor, 6+ Uzman).
 - Çakışan Türkçe karşılıklar için ayırt edici açıklama (`terms.tr.context`).
 - Geçmiş zaman konu modu (`Entry.grammar`), 67 düzensiz fiil taslağı.
