@@ -52,6 +52,18 @@ Deneme pencereleri (gerçek ödeme yok) ile denemek istersen:
 - **Info.plist:** `ITSAppUsesNonExemptEncryption` = NO.
 - **PrivacyInfo.xcprivacy:** `docs/app-privacy-envanteri.md` bölüm D'ye göre.
 
+## 4b. iCloud yedeği (jetonlar dahil)
+
+1. `docs/ios/ICloudKVPlugin.swift` dosyasını Xcode'da `App/App/` altına ekle (Copy items if needed).
+2. Aynı klasörde `MainViewController.swift` oluştur (içeriği eklenti dosyasının sonunda yazıyor) ve
+   `Main.storyboard`'daki Bridge View Controller'ın Custom Class'ını `MainViewController` yap.
+3. Signing & Capabilities → **+ Capability → iCloud** → **Key-value storage** kutusunu işaretle.
+4. Dene: oyna → uygulamayı sil → yeniden kur (aynı Apple Kimliği) → ilerleme ve jetonlar gelmeli.
+   iCloud verisi ilk açılışta geç inebilir; gelmezse uygulamayı kapatıp yeniden aç ya da
+   Ayarlar → iCloud yedeği → "Yedekten geri yükle".
+5. JS tarafı eklentiye `Capacitor.Plugins.ICloudKV` (yoksa `registerPlugin`) ile ulaşır; çalışmazsa
+   `src/platform/persist.ts` → `capacitorPlugin` içinde `@capacitor/core`'un `registerPlugin`'i kullanılmalı.
+
 ## 5. Simülatör ve gerçek cihazda kontrol listesi
 
 Her maddeyi işaretle; çalışmayanı bana yaz (ekran görüntüsüyle):
@@ -65,6 +77,8 @@ Her maddeyi işaretle; çalışmayanı bana yaz (ekran görüntüsüyle):
 - [ ] Ayarlar → Yasal → her belge açılıyor, "Kapat" dönüyor.
 - [ ] Telaffuz düğmesi ses veriyor (sessiz mod kapalıyken).
 - [ ] Eski kayıt taşıma: Safari'deki web sürümünün kaydı uygulamaya **otomatik geçmez** (ayrı depolar); bu beklenen bir durum.
+- [ ] iCloud: Ayarlar'da "iCloud yedeği" bölümü görünüyor; "En ileri yedek" satırı birkaç saniye oynadıktan sonra doluyor.
+- [ ] iCloud: sil-yeniden kur sonrası ilerleme ve jetonlar geri geliyor.
 
 ## 6. Satın alma denemesi (StoreKit) — gerçek sağlayıcı eklendikten sonra
 

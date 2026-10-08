@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { DIFFICULTY_LABEL } from '../../core/pack';
 import type { Profile } from '../../core/profile';
 import type { WordPack } from '../../core/types';
@@ -6,6 +6,9 @@ import { BackIcon } from '../components/Icons';
 import { Sheet } from '../components/Sheet';
 import { useMonetization } from '../monetization';
 import { LEGAL_LINKS } from '../../monetization/legal';
+import { applyCloudBackup, bestBackup, cloudAvailable, deviceId, readCloudBackups, type CloudBackup } from '../../platform/cloud';
+import { STORAGE_KEY } from '../../core/storage';
+import { chapterInfo } from '../../core/campaign';
 
 interface Props {
   pack: WordPack;
@@ -24,6 +27,23 @@ export function Settings({ pack, profile, setProfile, onBack, onReplayTutorial, 
   const [legal, setLegal] = useState<{ label: string; href: string } | null>(null);
   const m = useMonetization();
   const s = profile.settings;
+  // iCloud yedeği (yalnızca iPhone uygulamasında, iCloud açıkken).
+  const icloud = cloudAvailable();
+  const [backup, setBackup] = useState<CloudBackup | null>(null);
+  const [restoreAsk, setRestoreAsk] = useState(false);
+  useEffect(() => {
+    // Geri yükleme için en ileri yedek (bu cihazınki dahil; bilgi için en son kendi yedeği de görünür).
+    if (icloud) readCloudBackups().then((list) => setBackup(bestBackup(list)));
+  }, [icloud]);
+  const backupSummary = (() => {
+    if (!backup) return null;
+    try {
+      const p = JSON.parse(backup.profile) as Profile;
+      return { chapter: chapterInfo(p.campaign ?? { puzzlesDone: 0 }).chapter, coins: p.coins ?? 0, when: new Date(backup.savedAt) };
+    } catch {
+      return null;
+    }
+  })();
 
   return (
     <div className="page settings">
@@ -111,6 +131,26 @@ export function Settings({ pack, profile, setProfile, onBack, onReplayTutorial, 
         </p>
       </section>
 
+      {icloud && (
+        <section className="setting">
+          <h2>iCloud yedeği</h2>
+          <p className="small">
+            İlerlemen ve jetonların (satın aldıkların dahil) kendi iCloud hesabına yedeklenir; aynı Apple Kimliğiyle yeni telefonda geri
+            gelir. Bizim sunucumuza gitmez.
+          </p>
+          <p className="muted small">
+            {backupSummary
+              ? `En ileri yedek: ${backupSummary.when.toLocaleString('tr-TR')} · Bölüm ${backupSummary.chapter} · ${backupSummary.coins} jeton${backup?.device === deviceId() ? ' (bu telefon)' : ''}`
+              : 'Henüz yedek yok ya da iCloud kapalı (Ayarlar → Apple Kimliği → iCloud).'}
+          </p>
+          {backupSummary && backup?.device !== deviceId() && (
+            <button type="button" className="btn btn-ghost" onClick={() => setRestoreAsk(true)}>
+              Yedekten geri yükle
+            </button>
+          )}
+        </section>
+      )}
+
       <section className="setting">
         <h2>Yasal</h2>
         <ul className="legal-links">
@@ -146,6 +186,29 @@ export function Settings({ pack, profile, setProfile, onBack, onReplayTutorial, 
           <button type="button" className="btn btn-secondary btn-block" onClick={() => setLegal(null)}>
             Kapat
           </button>
+        </Sheet>
+      )}
+
+      {restoreAsk && backup && backupSummary && (
+        <Sheet title="iCloud yedeği yüklensin mi?" onClose={() => setRestoreAsk(false)}>
+          <p>
+            Bu telefondaki ilerleme (Bölüm {chapterInfo(profile.campaign).chapter} · {profile.coins} jeton) yedektekiyle değiştirilir: Bölüm{' '}
+            {backupSummary.chapter} · {backupSummary.coins} jeton ({backupSummary.when.toLocaleString('tr-TR')}). Bu işlem geri alınamaz.
+          </p>
+          <div className="btn-row">
+            <button type="button" className="btn btn-secondary" onClick={() => setRestoreAsk(false)}>
+              Vazgeç
+            </button>
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={() => {
+                if (applyCloudBackup(STORAGE_KEY, backup)) window.location.reload();
+              }}
+            >
+              Yedeği yükle
+            </button>
+          </div>
         </Sheet>
       )}
 

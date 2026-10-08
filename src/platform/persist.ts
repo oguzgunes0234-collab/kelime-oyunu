@@ -22,7 +22,8 @@ interface PreferencesPlugin {
 
 interface CapacitorGlobal {
   isNativePlatform?: () => boolean;
-  Plugins?: { Preferences?: PreferencesPlugin };
+  Plugins?: Record<string, unknown>;
+  registerPlugin?: (name: string) => unknown;
 }
 
 function capacitor(): CapacitorGlobal | undefined {
@@ -38,8 +39,24 @@ export function isNativeApp(): boolean {
   }
 }
 
+/**
+ * Yerel eklentiye erişim: önce Capacitor.Plugins, yoksa çalışma anının
+ * registerPlugin'i. (@capacitor/core kurulunca Mac'te doğrulanacak; bkz.
+ * docs/ios/MAC-YONERGESI.md.)
+ */
+export function capacitorPlugin<T>(name: string): T | null {
+  const cap = capacitor();
+  if (!cap) return null;
+  try {
+    const p = cap.Plugins?.[name] ?? cap.registerPlugin?.(name);
+    return (p as T) ?? null;
+  } catch {
+    return null;
+  }
+}
+
 function nativePrefs(): PreferencesPlugin | null {
-  return isNativeApp() ? (capacitor()?.Plugins?.Preferences ?? null) : null;
+  return isNativeApp() ? capacitorPlugin<PreferencesPlugin>('Preferences') : null;
 }
 
 /** Ham metni yazar (localStorage + yerel yedek). Başarısızsa false. */

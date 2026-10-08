@@ -74,7 +74,13 @@ da telefon değişirse satın alınan jeton geri gelmez; Apple tüketilebilir ü
 "geri yükle"mez. **Bu risk için bir çözüm seçilmeden gerçek jeton satışı
 açılmayacak.** Seçenekler:
 
-1. **iCloud anahtar-değer yedeği (öneri):** Profil (jeton dahil) kullanıcının
+**SEÇİLDİ (2026-10-09): iCloud anahtar-değer yedeği** — `src/platform/cloud.ts`,
+`docs/ios/ICloudKVPlugin.swift`. Her cihaz kendi anahtarına yazar (birbirini ezmez);
+telefonda profil yoksa ya da hiç oynanmamışsa en ileri yedek kendiliğinden yüklenir;
+oynanmış profilin üzerine yalnızca oyuncunun onayıyla yazılır; "İlerlemeyi sıfırla"
+sonrası kendiliğinden geri gelmez. Mac'te denenmeden gerçek jeton satışı açılmamalı.
+
+1. **iCloud anahtar-değer yedeği (seçildi):** Profil (jeton dahil) kullanıcının
    kendi iCloud'una (NSUbiquitousKeyValueStore) yedeklenir; aynı Apple Kimliğiyle
    yeni telefonda döner. Bizim sunucumuz yok, yeni üçüncü taraf yok. Bir Capacitor
    eklentisi ve Xcode'da iCloud yeteneği gerekir.

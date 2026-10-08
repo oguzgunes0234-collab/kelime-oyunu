@@ -14,9 +14,13 @@ analiz, çökme raporu **yok**. Sunucu **yok**.
 | Jeton, joker hakları, ayarlar | Cihaz | Hayır |
 | Reklamsız hakkı, günlük ödül sayacı | Cihaz | Hayır |
 | Telaffuz metni | Cihazın konuşma motoru (iOS'ta cihaz üzerinde) | iOS'ta hayır |
+| Profil yedeği (ilerleme, jetonlar) | Kullanıcının kendi iCloud'u (NSUbiquitousKeyValueStore) | Apple'a, kullanıcının hesabına; geliştirici erişemez |
 
 **Apple'ın tanımına göre (yalnızca cihazda kalan veri "toplanmış" sayılmaz):**
-reklam eklenmezse cevap **"Data Not Collected"** olur.
+reklam eklenmezse cevap **"Data Not Collected"** olur. iCloud anahtar-değer yedeği
+yalnızca kullanıcının kendi hesabında durur ve geliştiriciye/üçüncü tarafa
+erişilebilir değildir; bu yüzden "toplanmış" sayılmadığı değerlendirilir —
+**App Store Connect'teki güncel tanımla doğrulanmalı.**
 
 ## B. StoreKit (uygulama içi satın alma)
 

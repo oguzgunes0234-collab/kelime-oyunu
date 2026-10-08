@@ -3,6 +3,7 @@ import { INITIAL_INVENTORY } from './economy';
 import { defaultProfile, GAME_DIRECTION, type Profile, type ReviewItem } from './profile';
 import type { PuzzleState } from './puzzle';
 import { persistRaw } from '../platform/persist';
+import { AUTO_RESTORE_OFF_KEY, DEVICE_KEY, scheduleCloudBackup } from '../platform/cloud';
 
 /**
  * Tarayıcıda saklama. Özel pencere, kapalı depolama ya da kota hatasında oyun
@@ -84,7 +85,10 @@ export function migrateToCampaign(p: Profile): Profile {
 }
 
 export function saveProfile(profile: Profile): boolean {
-  return persistRaw(STORAGE_KEY, JSON.stringify(profile));
+  const raw = JSON.stringify(profile);
+  // iPhone uygulamasında iCloud'a da yedeklenir (jetonlar dahil); web'de hiçbir şey yapmaz.
+  scheduleCloudBackup(raw);
+  return persistRaw(STORAGE_KEY, raw);
 }
 
 /** Yarım kalan bulmaca; sayfa kapansa da kaldığı yerden devam eder. */
@@ -115,11 +119,16 @@ export function savePuzzle(state: PuzzleState | null): void {
   persistRaw(PUZZLE_KEY, state && state.status === 'playing' ? JSON.stringify({ ...state, event: null }) : null);
 }
 
-/** İlerlemeyi sıfırlar (oyuncunun açık isteğiyle). Satın alma kaydına dokunmaz. */
+/**
+ * İlerlemeyi sıfırlar (oyuncunun açık isteğiyle). Satın alma kaydına dokunmaz.
+ * Bu cihazda iCloud yedeğinin kendiliğinden geri gelmesi kapanır (oyuncu baştan
+ * başlamak istedi); Ayarlar'dan elle geri yükleme yine mümkündür.
+ */
 export function clearProfile(): void {
   persistRaw(STORAGE_KEY, null);
   persistRaw(PUZZLE_KEY, null);
+  persistRaw(AUTO_RESTORE_OFF_KEY, '1');
 }
 
 /** Uygulama açılışında yerel yedekten geri yüklenecek anahtarlar. */
-export const PERSISTED_KEYS = [STORAGE_KEY, PUZZLE_KEY];
+export const PERSISTED_KEYS = [STORAGE_KEY, PUZZLE_KEY, DEVICE_KEY, AUTO_RESTORE_OFF_KEY];

@@ -16,7 +16,7 @@ yapılmayacak. Şifre ya da doğrulama kodu kimseyle paylaşılmamalı.
 ## Kararlar
 
 - [x] Jeton keseleri: 100 / 250 / 600 jeton, taslak 1,99 / 3,99 / 7,99 $ (`docs/gelir-modeli.md` §2)
-- [ ] Jeton kaybı riski için çözüm (öneri: iCloud yedeği) — **çözülmeden gerçek jeton satışı açılmayacak**
+- [x] Jeton kaybı riski: iCloud anahtar-değer yedeği (2026-10-09). Mac'te Xcode'a eklenip denenmeli (`docs/ios/MAC-YONERGESI.md` §4b); denenmeden gerçek jeton satışı açılmamalı.
 - [x] Geçiş reklamı: AÇIK, bölüm sonunda en sık 3 bulmacada bir (2026-10-09)
 - [x] Reklamsız sürüm: geçiş reklamını kaldırır, ödüllü reklam açık kalır; taslak fiyat 9,99 $
 - [ ] SDK seçimi onayı ve paket kurulumuna izin (Capacitor, Preferences, native-purchases, AdMob)

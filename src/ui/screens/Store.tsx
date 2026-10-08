@@ -114,7 +114,8 @@ export function Store({ profile, setProfile, onClose }: Props) {
           ))}
         </ul>
         <p className="muted small">
-          Jetonlar bu cihazda saklanır: uygulamayı silersen ya da telefon değiştirirsen geri gelmez. 1 joker hakkı {COINS_PER_CHARGE} jeton.
+          Jetonlar ilerlemenle birlikte saklanır. iPhone uygulamasında iCloud açıksa yedeklenir ve aynı Apple Kimliğiyle yeni telefonda
+          geri gelir; iCloud kapalıysa uygulamayı silince kaybolur. 1 joker hakkı {COINS_PER_CHARGE} jeton.
         </p>
       </section>
 

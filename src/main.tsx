@@ -1,21 +1,26 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { App } from './ui/App';
-import { PERSISTED_KEYS } from './core/storage';
+import { PERSISTED_KEYS, STORAGE_KEY } from './core/storage';
 import { ADS_KEY, ENTITLEMENT_KEY } from './monetization/state';
 import { isNativeApp, restoreNativeBackup } from './platform/persist';
+import { restoreCloudIfEmpty } from './platform/cloud';
 import './styles.css';
 import './puzzle.css';
 
-// iPhone uygulamasında: iOS web deposunu sildiyse kaydı yerel yedekten geri al,
+// iPhone uygulamasında: iOS web deposunu sildiyse kaydı yerel yedekten geri al;
+// telefonda hiç profil yoksa (yeni kurulum / yeni telefon) iCloud yedeğini yükle;
 // sonra oyunu çiz. Web'de hemen çizer (yedek yok).
-restoreNativeBackup([...PERSISTED_KEYS, ENTITLEMENT_KEY, ADS_KEY]).finally(() => {
-  createRoot(document.getElementById('root')!).render(
-    <StrictMode>
-      <App />
-    </StrictMode>,
-  );
-});
+restoreNativeBackup([...PERSISTED_KEYS, ENTITLEMENT_KEY, ADS_KEY])
+  .then(() => restoreCloudIfEmpty(STORAGE_KEY))
+  .catch(() => false)
+  .finally(() => {
+    createRoot(document.getElementById('root')!).render(
+      <StrictMode>
+        <App />
+      </StrictMode>,
+    );
+  });
 
 // Açılış ekranı (index.html): oyun hazır olunca kısa bir süre sonra kaybolur.
 // Yükleme çubuğu yok; beklenecek bir şey yokken sahte bekleme yapılmaz. En az
