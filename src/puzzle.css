@@ -562,13 +562,17 @@
   height: 36px;
 }
 
+/* Panel yüksekliği sabit: Anlam / Cümle açılıp kapanınca ızgara zıplamasın.
+   Sığmayan içerik panelin içinde kayar. */
 .cw-cluebar {
+  --cluebar-h: 92px;
   margin: 0 12px;
   display: flex;
   align-items: center;
   gap: 4px;
   padding: 6px 4px;
-  min-height: 60px;
+  height: var(--cluebar-h);
+  box-sizing: border-box;
   border-radius: 14px;
   background: var(--clue-bg);
   color: var(--clue-ink);
@@ -593,7 +597,19 @@
 .cw-clue-main {
   flex: 1;
   min-width: 0;
+  max-height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   text-align: center;
+  /* İçerik kısaysa ortada, uzunsa üstten başlayıp kayar. */
+  display: flex;
+  flex-direction: column;
+}
+.cw-clue-main > :first-child {
+  margin-top: auto;
+}
+.cw-clue-main > :last-child {
+  margin-bottom: auto;
 }
 .cw-clue-line {
   display: flex;
@@ -805,8 +821,16 @@
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
 }
+.cw-cell.is-wrong {
+  border-color: var(--bad);
+  box-shadow: inset 0 0 0 1.5px var(--bad);
+  color: var(--bad);
+}
+.cw-cell.is-wrong.cursor {
+  box-shadow: inset 0 0 0 2.5px var(--bad);
+}
 .cw-cell.flash-wrong {
-  animation: cw-wrong 600ms ease;
+  animation: cw-wrong 300ms ease;
 }
 .cw-cell.flash-solved {
   animation: bounce 380ms ease-out both;
@@ -843,13 +867,19 @@
 .cw-clue.two .cw-clue-part + .cw-clue-part {
   border-top: 1px solid color-mix(in srgb, var(--clue-ink) 25%, transparent);
 }
+/* Sözcük harf ortasından bölünmez: dar yazı tipi ve en uzun sözcüğün harf
+   sayısına (--len) göre küçülen yazı. Kare genişliğinin ~%92'si / harf başına
+   ~0,55 em dar kalın harf ≈ 1,65 × kare / harf sayısı. */
 .cw-clue-text {
-  font-size: max(8.5px, calc(var(--cell) * 0.235));
+  font-family: 'Roboto Condensed', 'Arial Narrow', 'Avenir Next Condensed', 'Helvetica Neue Condensed', sans-serif-condensed, var(--font);
+  font-stretch: condensed;
+  font-size: max(6px, min(calc(var(--cell) * 0.235), calc(var(--cell) * 1.65 / var(--len, 5))));
   font-weight: 800;
   line-height: 1.05;
   text-align: center;
-  overflow-wrap: anywhere;
-  hyphens: auto;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  hyphens: none;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -857,7 +887,7 @@
 }
 .cw-clue.two .cw-clue-text {
   -webkit-line-clamp: 2;
-  font-size: max(6.5px, calc(var(--cell) * 0.17));
+  font-size: max(6px, min(calc(var(--cell) * 0.17), calc(var(--cell) * 1.65 / var(--len, 5))));
 }
 .cw-clue .cw-arrow {
   color: var(--clue-arrow);
@@ -995,7 +1025,7 @@
     height: 40px;
   }
   .cw-cluebar {
-    min-height: 50px;
+    --cluebar-h: 78px;
     padding: 4px;
   }
   .cw-clue-line {
@@ -1025,7 +1055,7 @@
     font-size: 1.05rem;
   }
   .cw-cluebar {
-    min-height: 44px;
+    --cluebar-h: 66px;
   }
   .cw-page {
     gap: 4px;
@@ -1050,7 +1080,7 @@
   }
   .cw-clue-text {
     /* Küçük karede en az 7,5 px; eğitimdeki büyük karelerde kareyle büyür. */
-    font-size: max(7.5px, calc(var(--cell) * 0.22));
+    font-size: max(6px, min(calc(var(--cell) * 0.22), calc(var(--cell) * 1.65 / var(--len, 5))));
   }
 }
 
@@ -1125,17 +1155,18 @@
   100% {
     transform: translateX(0);
   }
-  20% {
+  25% {
     transform: translateX(-4px);
-    background: var(--bad-bg);
-    border-color: var(--bad);
   }
   50% {
-    transform: translateX(3px);
-    background: var(--bad-bg);
-    border-color: var(--bad);
+    transform: translateX(4px);
   }
-  80% {
+  75% {
     transform: translateX(-2px);
   }
+}
+/* Bulmaca bitince çözülen kareler sol üstten sağ alta dalga gibi zıplar. */
+.cw-grid.is-done .cw-cell.solved {
+  animation: bounce 420ms ease-out both;
+  animation-delay: calc(var(--wave, 0) * 45ms);
 }

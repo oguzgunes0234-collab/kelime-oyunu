@@ -254,13 +254,32 @@ export function tapClue(state: PuzzleState, r: number, c: number): PuzzleState {
   return selectWord(state, word);
 }
 
-function nextUnsolved(state: PuzzleState, after: number): number {
-  const n = state.cw.words.length;
+/**
+ * Kelimelerin okuma sırası: gazete bulmacasındaki gibi ipucu karesine göre
+ * yukarıdan aşağı, soldan sağa; aynı karedeki iki ipucunda önce yatay.
+ * Üreticinin kelime dizisi yerleşim sırasıdır, ekranda gelişigüzel görünür.
+ */
+export function readingOrder(cw: Crossword): number[] {
+  return cw.words
+    .map((w, i) => ({ w, i }))
+    .sort((a, b) => a.w.clueRow - b.w.clueRow || a.w.clueCol - b.w.clueCol || (a.w.dir === b.w.dir ? 0 : a.w.dir === 'across' ? -1 : 1) || a.i - b.i)
+    .map((x) => x.i);
+}
+
+/** Okuma sırasında `from`dan sonraki (delta = -1 ise önceki) çözülmemiş kelime; liste bitince başa sarar. */
+export function stepWord(state: PuzzleState, from: number, delta: 1 | -1 = 1): number {
+  const order = readingOrder(state.cw);
+  const n = order.length;
+  const at = order.indexOf(from);
   for (let k = 1; k <= n; k++) {
-    const w = (after + k) % n;
+    const w = order[(((at + delta * k) % n) + n) % n];
     if (!state.solved[w]) return w;
   }
-  return after;
+  return from;
+}
+
+function nextUnsolved(state: PuzzleState, after: number): number {
+  return stepWord(state, after, 1);
 }
 
 /** Değişen karenin kelimelerini kontrol eder: dolu ve doğru → çözüldü, dolu ve yanlış → hata. */

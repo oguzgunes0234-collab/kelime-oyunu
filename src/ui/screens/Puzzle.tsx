@@ -21,6 +21,7 @@ import {
   showExtra,
   extraShown,
   solvedCount,
+  stepWord,
   tapCell,
   tapClue,
   typeLetter,
@@ -81,8 +82,11 @@ const TIPS: Record<TipId, string> = {
   switch: 'Parlayan kare iki kelimenin başı. Ona bir kez daha dokun: yazma yönü değişir.',
   bent: 'Kırık ok: ↳ cevap ipucunun altından başlar, sağa gider. ↴ yanından başlar, aşağı iner.',
   tools: 'Takılırsan: Anlam kelimenin anlamını, Harf aç bir harfi gösterir. Eğitimde ücretsiz, bir dene.',
-  wrong: 'Bir harf yanlış. Kareye dokunup düzelt; hiçbir şey kaybetmezsin.',
+  wrong: 'Bu kelimede yanlış harf var. Kareye dokunup düzelt.',
 };
+
+/** Bulmaca bitince tamamlanan ızgaranın sonuç ekranından önce görünme süresi. */
+const CELEBRATE_MS = 1500;
 
 const reducedMotion = () => typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -119,6 +123,11 @@ function initialPuzzle(props: Props): PuzzleState {
   const saved = loadPuzzle();
   if (saved && !saved.topic && saved.direction.source === props.direction.source && saved.direction.target === props.direction.target) return saved;
   return newPuzzle(props.pack, props.profile, props.direction, props.difficulty, undefined, gridSizeParam() ?? props.gridSize);
+}
+
+/** İpucu karesindeki en uzun sözcüğün harf sayısı; kare yazısı buna göre küçülür, sözcük bölünmez. */
+function longestWord(text: string): number {
+  return Math.max(4, ...text.split(/\s+/).map((t) => Array.from(t).length));
 }
 
 export function hasSavedPuzzle(direction: Direction): boolean {
@@ -169,6 +178,25 @@ export function Puzzle(props: Props) {
     const starts = puzzle.cw.words.map((w) => cellKey(w.row, w.col));
     return starts.find((k, i) => starts.indexOf(k) !== i) ?? null;
   }, [step, puzzle.cw]);
+  // T3'te dikey kelime yalnızca ortak kareye ikinci kez dokunarak seçilir; oyun
+  // oraya kendiliğinden geçmez, yoksa adım hiçbir şey öğretmez.
+  const switchWord = useMemo(
+    () => (switchCell ? puzzle.cw.words.findIndex((w) => w.dir === 'down' && cellKey(w.row, w.col) === switchCell) : -1),
+    [switchCell, puzzle.cw],
+  );
+  const switched = useRef(false);
+
+  /** T3, yön henüz değiştirilmediyse: dikey kelimeye başka yoldan geçişi engeller. */
+  function guardSwitch(prev: PuzzleState, next: PuzzleState): PuzzleState {
+    if (switchWord < 0 || switched.current) return next;
+    if (next.event?.kind === 'solved' && next.seq !== prev.seq && next.status === 'playing') {
+      // Kelime çözülünce imleç başka kelimeye atlamaz, çözülen kelimenin ilk karesinde kalır.
+      return { ...next, sel: { word: next.event.word, index: 0 } };
+    }
+    if (next.sel.word !== switchWord || prev.sel.word === switchWord) return next;
+    say('Önce parlayan kareye iki kez dokun.');
+    return prev;
+  }
 
   function say(text: string | null, tone: 'good' | 'bad' | 'info' = 'info') {
     noteSeq.current += 1;
@@ -198,8 +226,8 @@ export function Puzzle(props: Props) {
     // Seçenekler bir kez karıştırılır: sonuç ekranı yeniden çizilince değişmesin.
     setPracticeItems(buildPractice(pack, done.direction, res.outcome.results));
     window.clearTimeout(timer.current);
-    // Son kelimenin kutlaması kısa bir an görünsün.
-    const wait = done.event?.kind === 'complete' && !reducedMotion() ? 900 : 0;
+    // Tamamlanan ızgara kutlamayla 1,5 sn görünür; dokunan beklemeden geçer.
+    const wait = done.event?.kind === 'complete' ? CELEBRATE_MS : 0;
     timer.current = window.setTimeout(() => setShowResult(true), wait);
   }
 
@@ -226,7 +254,7 @@ export function Puzzle(props: Props) {
       else if (e.kind === 'sentence') say('Örnek cümle üstte.');
       else if (e.kind === 'synonym') say('Eş anlamlılar üstte.');
       else if (e.kind === 'complete') {
-        say(tutorial ? 'Tamam!' : 'Bulmaca tamam!', 'good');
+        say(tutorial ? 'Tamam!' : 'Bulmaca tamam! Devam için dokun.', 'good');
         buzz([30, 50, 30, 50, 60]);
         sfx.complete();
       }
@@ -254,7 +282,8 @@ export function Puzzle(props: Props) {
 
   function onLetter(letter: string) {
     closeTip('basics');
-    commit(typeLetter(live.current.puzzle, letter));
+    const prev = live.current.puzzle;
+    commit(guardSwitch(prev, typeLetter(prev, letter)));
   }
 
   /** Kareye dokunma; T3'te ortak karede yön değişince açıklama kapanır. */
@@ -263,22 +292,17 @@ export function Puzzle(props: Props) {
     const next = tapCell(prev, r, c);
     if (switchCell === cellKey(r, c) && next.sel.word !== prev.sel.word && selectedCell(prev).join() === [r, c].join()) {
       if (live.current.tip === 'switch') say('Yön değişti!', 'good');
+      switched.current = true;
       closeTip('switch');
     }
-    commit(next);
+    commit(guardSwitch(prev, next));
   }
   function onBackspace() {
     commit(backspace(live.current.puzzle));
   }
-  function moveWord(delta: number) {
+  function moveWord(delta: 1 | -1) {
     const p = live.current.puzzle;
-    const n = p.cw.words.length;
-    let w = p.sel.word;
-    for (let k = 0; k < n; k++) {
-      w = (w + delta + n) % n;
-      if (!p.solved[w]) break;
-    }
-    commit(selectWord(p, w));
+    commit(guardSwitch(p, selectWord(p, stepWord(p, p.sel.word, delta))));
   }
 
   function onTool(tool: PuzzleToolId) {
@@ -383,6 +407,15 @@ export function Puzzle(props: Props) {
   }, [cw]);
 
   const selCells = new Set(wordCells(selWord).map(([r, c]) => cellKey(r, c)));
+  // Tamamen dolu ama çözülmemiş kelime yanlıştır (dolu ve doğru kelime hemen çözülür).
+  // Kırmızı işaret, kelimedeki bir kare değişene kadar kalır.
+  const wrongMarked = new Set<string>();
+  if (puzzle.status === 'playing') {
+    cw.words.forEach((w, i) => {
+      const cs = wordCells(w).map(([r, c]) => cellKey(r, c));
+      if (!puzzle.solved[i] && cs.every((k) => puzzle.fill[k])) cs.forEach((k) => wrongMarked.add(k));
+    });
+  }
   const flashWrong = puzzle.event?.kind === 'wrong' ? puzzle.event.word : -1;
   const flashSolved = puzzle.event?.kind === 'solved' ? puzzle.event.word : -1;
   const wrongCells = flashWrong >= 0 ? new Set(wordCells(cw.words[flashWrong]).map(([r, c]) => cellKey(r, c))) : null;
@@ -447,6 +480,7 @@ export function Puzzle(props: Props) {
           locked ? 'solved' : '',
           puzzle.revealed.includes(key) ? 'revealed' : '',
           wrongCells?.has(key) ? 'flash-wrong' : '',
+          wrongMarked.has(key) && !locked ? 'is-wrong' : '',
           solvedCells?.has(key) ? 'flash-solved' : '',
           puzzle.status === 'done' && !locked ? 'missed' : '',
           tip === 'switch' && switchCell === key ? 'coach-pulse' : '',
@@ -460,8 +494,9 @@ export function Puzzle(props: Props) {
             key={key + (wrongCells?.has(key) || solvedCells?.has(key) ? `-${puzzle.seq}` : '')}
             type="button"
             className={cls}
+            style={puzzle.status === 'done' ? { ['--wave' as string]: r + c } : undefined}
             onClick={() => onCell(r, c)}
-            aria-label={`${letter.words.map((w) => clueLabel(cw.words[w])).join(' / ')} kelimesinin karesi${typed ? `, yazılan ${displayLetter(typed, tgt.code)}` : ', boş'}${locked ? ', çözüldü' : ''}`}
+            aria-label={`${letter.words.map((w) => clueLabel(cw.words[w])).join(' / ')} kelimesinin karesi${typed ? `, yazılan ${displayLetter(typed, tgt.code)}` : ', boş'}${locked ? ', çözüldü' : wrongMarked.has(key) ? ', kelimede yanlış harf var' : ''}`}
           >
             {shown ? displayLetter(shown, tgt.code) : ''}
           </button>,
@@ -472,7 +507,7 @@ export function Puzzle(props: Props) {
             key={key}
             type="button"
             className={`cw-clue${clueWords.length > 1 ? ' two' : ''}`}
-            onClick={() => commit(tapClue(live.current.puzzle, r, c))}
+            onClick={() => commit(guardSwitch(live.current.puzzle, tapClue(live.current.puzzle, r, c)))}
             aria-label={clueWords.map((w) => `İpucu: ${clueFullText(cw.words[w])}`).join('; ')}
           >
             {clueWords.map((w) => (
@@ -481,7 +516,12 @@ export function Puzzle(props: Props) {
                 className={`cw-clue-part${w === puzzle.sel.word ? ' selected' : ''}${puzzle.solved[w] ? ' done' : ''}`}
                 lang={src.code}
               >
-                <span className={`cw-clue-text${cw.words[w].clueKind && cw.words[w].clueKind !== 'translation' ? ' is-kind' : ''}`}>{clueLabel(cw.words[w])}</span>
+                <span
+                  className={`cw-clue-text${cw.words[w].clueKind && cw.words[w].clueKind !== 'translation' ? ' is-kind' : ''}`}
+                  style={{ ['--len' as string]: longestWord(clueLabel(cw.words[w])) }}
+                >
+                  {clueLabel(cw.words[w])}
+                </span>
                 <ClueArrow arrow={cw.words[w].arrow} className="cw-arrow" />
               </span>
             ))}
@@ -494,7 +534,16 @@ export function Puzzle(props: Props) {
   }
 
   return (
-    <div className="cw-page">
+    <div
+      className="cw-page"
+      // Kutlama sırasında herhangi bir yere dokunmak sonuç ekranına geçirir.
+      onClickCapture={(e) => {
+        if (tutorial || !outcome || showResult || puzzle.event?.kind !== 'complete') return;
+        e.stopPropagation();
+        window.clearTimeout(timer.current);
+        setShowResult(true);
+      }}
+    >
       <header className="game-top">
         <button
           type="button"
@@ -679,7 +728,7 @@ export function Puzzle(props: Props) {
               Sıradaki: <strong>{TUTORIAL_STEPS[props.tutorialStep! + 1].title}</strong> ({props.tutorialStep! + 2}/{TUTORIAL_LENGTH})
             </p>
           ) : (
-            <p>Artık gerçek bulmacalara hazırsın. Yanlış yazmak hiçbir şey eksiltmez.</p>
+            <p>Artık gerçek bulmacalara hazırsın. Yanlışlar puanı biraz düşürür, ama hakkın bitmez.</p>
           )}
           <div className="stack">
             <button type="button" className="btn btn-primary btn-block" onClick={() => props.onTutorialAdvance(props.tutorialStep! + 1)}>
@@ -717,8 +766,8 @@ export function Puzzle(props: Props) {
             <li>Bir kareye ya da ipucuna dokun, sonra alttaki klavyeyle yaz. Kesişen kareye tekrar dokunursan yön değişir.</li>
             <li>Kelimeler birbirini keser: bildiğin kelimenin harfleri diğerlerine ipucu olur.</li>
             <li>
-              Takılırsan <strong>Anlam</strong> ya da <strong>Harf aç</strong> kullan. Yanlış yazmak hiçbir şey eksiltmez; çözemediğin kelimeler
-              tekrar listene eklenir.
+              Takılırsan <strong>Anlam</strong> ya da <strong>Harf aç</strong> kullan. Yanlışlar puanı biraz düşürür, ama hakkın bitmez; çözemediğin
+              kelimeler tekrar listene eklenir.
             </li>
           </ul>
           <div className="stack">
