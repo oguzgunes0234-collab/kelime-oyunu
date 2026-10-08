@@ -1,5 +1,5 @@
 import { dayKey } from '../core/daily';
-import { AD_REWARDS_PER_DAY, AD_REWARD_COINS, INTERSTITIAL } from './config';
+import { AD_REWARD_COINS, INTERSTITIAL } from './config';
 import { persist, readPersisted } from '../platform/persist';
 
 /**
@@ -18,7 +18,7 @@ export interface Entitlements {
 }
 
 export interface AdState {
-  /** Ödüllü reklam sayacının günü (yerel tarih). */
+  /** Ödüllü reklam sayacının günü (yerel tarih). Sınır yok; yalnızca bilgi için. */
   day: string;
   rewardsToday: number;
   /** Son geçiş reklamından bu yana tamamlanan bulmaca. */
@@ -48,14 +48,8 @@ export function saveAdState(s: AdState): void {
   persist(ADS_KEY, s);
 }
 
-/** Bugün kalan ödül hakkı (reklamlı ya da reklamsız kullanıcı için aynı sınır). */
-export function rewardsLeft(s: AdState, now: Date): number {
-  return s.day === dayKey(now) ? Math.max(0, AD_REWARDS_PER_DAY - s.rewardsToday) : AD_REWARDS_PER_DAY;
-}
-
-/** Bir ödül sayılır (reklam tamamlandı ya da reklamsız kullanıcı ödülü aldı). Hak yoksa null. */
-export function countReward(s: AdState, now: Date): AdState | null {
-  if (rewardsLeft(s, now) <= 0) return null;
+/** Tamamlanan bir ödüllü reklamı sayar (günlük sınır yok; sayaç yalnızca bilgi için). */
+export function countReward(s: AdState, now: Date): AdState {
   const today = dayKey(now);
   return { ...s, day: today, rewardsToday: (s.day === today ? s.rewardsToday : 0) + 1 };
 }

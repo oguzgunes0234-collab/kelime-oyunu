@@ -37,23 +37,29 @@ export interface CoinPack {
   draftUsd: number;
 }
 
+export type CoinPackSize = 'small' | 'medium' | 'large';
+
 /**
  * Jeton paketleri (TASLAK). Büyük bakiye bırakmasın diye en büyüğü 600 jeton
  * (bkz. docs/gelir-modeli.md: kazanma/harcama hesabı). "Bonus" iddiası yok.
  */
-export const COIN_PACKS: CoinPack[] = [
-  { productId: PRODUCT_IDS.coinsSmall, name: 'Küçük kese', coins: 100, draftUsd: 0.99 },
-  { productId: PRODUCT_IDS.coinsMedium, name: 'Kese', coins: 250, draftUsd: 1.99 },
-  { productId: PRODUCT_IDS.coinsLarge, name: 'Büyük kese', coins: 600, draftUsd: 3.99 },
+export const COIN_PACKS: (CoinPack & { size: CoinPackSize })[] = [
+  { productId: PRODUCT_IDS.coinsSmall, name: 'Küçük kese', size: 'small', coins: 100, draftUsd: 1.99 },
+  { productId: PRODUCT_IDS.coinsMedium, name: 'Orta kese', size: 'medium', coins: 250, draftUsd: 3.99 },
+  { productId: PRODUCT_IDS.coinsLarge, name: 'Büyük kese', size: 'large', coins: 600, draftUsd: 7.99 },
 ];
 
-/** Ödüllü reklam: önceden söylenen ödül ve günlük sınır. */
+/**
+ * Ödüllü reklam: önceden söylenen ödül. Günlük sınır YOK: oyuncu istediği
+ * kadar izleyebilir (oyun sahibinin kararı). Reklamsız sürüm ödüllü reklamı
+ * kapatmaz; ödüllü reklam her zaman isteğe bağlıdır.
+ */
 export const AD_REWARD_COINS = 10;
-export const AD_REWARDS_PER_DAY = 3;
 
 /**
  * Geçiş reklamı (oturum sonu): ilk sürümde KAPALI. Açılırsa yalnızca sonuç
  * ekranından "Sıradaki bölüm"e geçerken, en erken 3 tamamlanan bulmacada bir
- * ve en az 5 dakika arayla gösterilir.
+ * ve en az 5 dakika arayla gösterilir. Reklamsız sürüm YALNIZCA bunu (ve ileride
+ * olabilecek diğer zorunlu reklamları) kaldırır.
  */
 export const INTERSTITIAL = { enabled: false, everyPuzzles: 3, minGapMs: 5 * 60 * 1000 };

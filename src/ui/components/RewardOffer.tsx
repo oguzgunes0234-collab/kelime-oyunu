@@ -4,9 +4,9 @@ import { CoinIcon } from './Icons';
 
 /**
  * İsteğe bağlı ödül teklifi: oyuncu açıkça dokunursa ödüllü reklam izler ve
- * önceden yazan jetonu alır. Reklamsız kullanıcı aynı ödülü reklamsız alır.
- * Yalnızca bulmaca bittikten sonra ve mağazada görünür; kelime çözerken asla.
- * Günlük hak bittiyse ya da ortamda reklam yoksa hiç çizilmez.
+ * önceden yazan jetonu alır; istediği kadar tekrarlayabilir. Reklamsız sürüm
+ * bunu kapatmaz. Yalnızca bulmaca bittikten sonra ve mağazada görünür; kelime
+ * çözerken asla. Ortamda reklam yoksa hiç çizilmez.
  */
 export function RewardOffer({ compact = false }: { compact?: boolean }) {
   const m = useMonetization();
@@ -14,15 +14,8 @@ export function RewardOffer({ compact = false }: { compact?: boolean }) {
   const [note, setNote] = useState<string | null>(null);
 
   if (!m.rewardOffered) return null;
-  if (m.rewardsLeftToday <= 0) {
-    return note ? (
-      <p className="reward-note" role="status">
-        {note}
-      </p>
-    ) : null;
-  }
 
-  const label = m.entitlements.noAds ? `Reklamsız bonus: +${m.rewardCoins} jeton al` : `Reklam izle: +${m.rewardCoins} jeton`;
+  const label = `Reklam izle: +${m.rewardCoins} jeton`;
   return (
     <div className={`reward-offer${compact ? ' compact' : ''}`}>
       <button
@@ -38,9 +31,11 @@ export function RewardOffer({ compact = false }: { compact?: boolean }) {
       >
         <CoinIcon width={14} height={14} /> {label}
       </button>
-      <span className="muted small">
-        bugün {m.rewardsLeftToday} hak{note ? ` · ${note}` : ''}
-      </span>
+      {note && (
+        <span className="muted small" role="status">
+          {note}
+        </span>
+      )}
     </div>
   );
 }

@@ -32,7 +32,7 @@ Kaynak: `src/core/economy.ts`, `profile.ts`, `practice.ts`; bulmaca boyu
 | Zorlanan (%30) | ~23 | 10 | ~8 | **~41** |
 
 Günde 3 bulmaca oynayan için günlük hedef bir kez sayılır: ~+90–100/gün.
-İsteğe bağlı ödüllü reklam günde en çok 3 × 10 = **+30**.
+İsteğe bağlı ödüllü reklam: izlenen her reklam **+10**, **günlük sınır yok** (oyun sahibinin kararı, 2026-10-09). Bu, ekonomiyi daha da gevşetir: reklam izleyen oyuncu istediği kadar jeton toplayabilir, jeton paketlerine talep daha da düşer.
 
 ### Harcama ve net bakiye (günde 1 bulmaca; günlük 4 joker bedava)
 
@@ -56,13 +56,15 @@ uygulamada indirim yüzdesi yazılmaz.
 
 | Paket | Jeton | Joker hakkı karşılığı | Yoğun kullanıcı (−9/gün) için | Taslak fiyat (ABD tabanı) | Jeton başı |
 |---|---|---|---|---|---|
-| Küçük kese | 100 | 20 | ~11 gün | 0,99 $ | 0,99 ¢ |
-| Kese | 250 | 50 | ~28 gün | 1,99 $ | 0,80 ¢ |
-| Büyük kese | 600 | 120 | ~67 gün | 3,99 $ | 0,67 ¢ |
+| Küçük kese | 100 | 20 | ~11 gün | 1,99 $ | 1,99 ¢ |
+| Orta kese | 250 | 50 | ~28 gün | 3,99 $ | 1,60 ¢ |
+| Büyük kese | 600 | 120 | ~67 gün | 7,99 $ | 1,33 ¢ |
+
+Fiyatlar oyun sahibinin isteğiyle yükseltildi (ilk kese 1,99 $). Mağazada üç kese
+yan yana, özgün kese çizimleriyle (`src/ui/components/CoinPouch.tsx`) gösterilir.
 
 - Taslak fiyatlar yalnızca bu belgededir. Uygulamada sabit fiyat yazılmaz: gerçek
   sürümde StoreKit'in yerelleştirilmiş fiyatı (ör. "₺…") gösterilir; denemede "Deneme".
-- Alternatif (birim fiyat sabit): 100 / 200 / 400 jeton → 0,99 / 1,99 / 3,99 $.
 
 ### Tüketilebilir ürün riski (jetonlar)
 
@@ -85,7 +87,8 @@ açılmayacak.** Seçenekler:
 - Nerede: **bulmaca sonuç ekranı** (bulmaca bittikten sonra) ve **Hak ve paketler**.
 - Nerede ASLA: kelime çözerken, yanlış cevapta, cevap açıklanmadan önce, eğitimde.
   (Joker hakkı bitince açılan pencerede reklam teklifi YOK: o an aktif çözümdür.)
-- Günde en çok 3 ödül. Yarıda kapatılırsa ödül verilmez (deneme penceresi bunu gösterir).
+- **Günlük sınır yok:** oyuncu istediği kadar izleyebilir. Yarıda kapatılırsa ödül verilmez.
+- **Reklamsız sürüm ödüllü reklamı kapatmaz:** isteyen herkes izleyebilir.
 - Hiçbir şey reklama bağlı değil: ana oyun, konular, tekrar, pekiştirme, telaffuz.
 
 **Geçiş reklamı (oturum sonu): değerlendirildi, ilk sürümde KAPALI.**
@@ -98,11 +101,15 @@ ve geliri küçük olduğu için ilk sürümde kapalı kalsın.
 
 ## 4. Reklamsız sürüm (non-consumable)
 
-- Tek seferlik, kalıcı. Satın alınınca **tüm reklamlar kapanır** (ödüllü dahil).
-- Reklamla verilen günlük ödül, reklamsız kullanıcıya **reklamsız** verilir
-  ("Reklamsız bonus: +10 jeton al", aynı günlük sınır) — normal oyunla erişilebilir.
+- Tek seferlik, kalıcı. Satın alınınca **araya giren (kullanıcının başlatmadığı) reklamlar** kapanır.
+- **Ödüllü reklam kapanmaz** (oyun sahibinin kararı): her zaman isteğe bağlıdır, reklamsız kullanıcı da izleyip ödül alabilir.
 - Ayarlar → **Satın alımları geri yükle** bu ürünü App Store'dan geri yükler.
 - İlerlemeden ayrı saklanır (`kelime-oyunu:satinalma:v1`): "İlerlemeyi sıfırla" silmez.
+- **AÇIK KARAR:** İlk sürümde geçiş reklamı kapalı ve banner yok; yani bu ürün şu an
+  hiçbir reklamı kaldırmıyor. İşlevi olmayan bir ürün Apple incelemesinde sorun
+  çıkarabilir ve alan kişiyi yanıltır. Seçenekler: (a) oturum sonu geçiş reklamını
+  sınırlı açmak (ürün onu kaldırır), (b) ürünü ilk sürümde çıkarmak, (c) ürünü
+  "destekçi paketi" gibi başka bir avantajla yeniden tanımlamak.
 
 ## 5. SDK seçimi (kurulmadı; onay bekliyor)
 

@@ -13,6 +13,7 @@ import { buyChargeWithCoins, buyPackWithCoins, type Profile } from '../../core/p
 import type { ToolId } from '../../core/types';
 import { BackIcon, CoinIcon, TOOL_ICONS } from '../components/Icons';
 import { RewardOffer } from '../components/RewardOffer';
+import { CoinPouch } from '../components/CoinPouch';
 import { useMonetization } from '../monetization';
 import { COIN_PACKS, PRODUCT_IDS } from '../../monetization/config';
 import { purchases, type StoreProduct } from '../../platform/purchases';
@@ -66,13 +67,13 @@ export function Store({ profile, setProfile, onClose }: Props) {
         <h2>Reklamsız sürüm</h2>
         {m.entitlements.noAds ? (
           <p className="small">
-            <strong>Etkin.</strong> Hiç reklam gösterilmez; ödüller sana reklamsız verilir.
+            <strong>Etkin.</strong> Araya giren reklam gösterilmez. Ödüllü reklamı istersen izleyebilirsin.
           </p>
         ) : (
           <div className="offer-card">
             <p className="small">
-              Tek seferlik satın alma, süresiz. Tüm reklamlar kapanır (ödüllü reklamlar dahil); reklamla verilen günlük ödülleri
-              reklam izlemeden alırsın. Oyunun kendisi zaten ücretsiz; bu, oyunu destekleme seçeneğidir.
+              Tek seferlik satın alma, süresiz. Araya giren reklamlar gösterilmez. Ödüllü reklamlar her zaman isteğe bağlıdır: istersen
+              izleyip jeton kazanmaya devam edersin. Oyunun kendisi zaten ücretsiz; bu, oyunu destekleme seçeneğidir.
             </p>
             <button
               type="button"
@@ -88,32 +89,33 @@ export function Store({ profile, setProfile, onClose }: Props) {
       </section>
 
       <section className="store-section">
-        <h2>Jeton paketleri</h2>
-        <p className="muted small">
-          Jetonlar bu cihazda saklanır: uygulamayı silersen ya da telefon değiştirirsen geri gelmez. 1 joker hakkı {COINS_PER_CHARGE} jeton.
-        </p>
-        <ul className="pack-list">
+        <h2>Jeton keseleri</h2>
+        <ul className="pouch-grid">
           {COIN_PACKS.map((p) => (
-            <li key={p.productId}>
-              <div>
-                <strong>
-                  {p.coins} <CoinIcon width={14} height={14} />
-                </strong>
-                <p className="small">
-                  {p.name} · {Math.floor(p.coins / COINS_PER_CHARGE)} joker hakkı kadar
-                </p>
-              </div>
+            <li key={p.productId} className={`pouch-card pouch-${p.size}`}>
+              <span className="pouch-art-box">
+                <CoinPouch size={p.size} className="pouch-art" />
+              </span>
+              <strong>{p.name}</strong>
+              <span className="pouch-coins">
+                {p.coins} <CoinIcon width={14} height={14} />
+              </span>
+              <span className="muted small">{Math.floor(p.coins / COINS_PER_CHARGE)} joker hakkı</span>
               <button
                 type="button"
                 className="btn btn-secondary btn-small"
                 disabled={!m.purchasesAvailable || !price(p.productId)}
                 onClick={async () => setFlash(resultNote(await m.buyCoins(p.productId), `+${p.coins} jeton eklendi.`))}
+                aria-label={`${p.name}: ${p.coins} jeton${price(p.productId) ? `, ${price(p.productId)}` : ''}`}
               >
-                {m.purchasesAvailable ? (price(p.productId) ?? '…') : 'App Store sürümünde'}
+                {m.purchasesAvailable ? (price(p.productId) ?? '…') : 'App Store’da'}
               </button>
             </li>
           ))}
         </ul>
+        <p className="muted small">
+          Jetonlar bu cihazda saklanır: uygulamayı silersen ya da telefon değiştirirsen geri gelmez. 1 joker hakkı {COINS_PER_CHARGE} jeton.
+        </p>
       </section>
 
       <section className="store-section">

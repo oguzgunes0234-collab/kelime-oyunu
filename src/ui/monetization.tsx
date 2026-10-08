@@ -7,7 +7,6 @@ import {
   noteInterstitialShown,
   notePuzzleDone,
   REWARD_COINS,
-  rewardsLeft,
   saveAdState,
   saveEntitlements,
   shouldShowInterstitial,
@@ -25,15 +24,10 @@ import type { Profile } from '../core/profile';
  */
 interface Monetization {
   entitlements: Entitlements;
-  /** Bugün kalan ödül hakkı. */
-  rewardsLeftToday: number;
-  /** Ödül teklifi bu ortamda gösterilsin mi (reklam var ya da kullanıcı reklamsız)? */
+  /** Ödüllü reklam bu ortamda var mı (reklamsız kullanıcı dahil herkese açık)? */
   rewardOffered: boolean;
   rewardCoins: number;
-  /**
-   * Oyuncunun açıkça başlattığı ödül: reklamlı kullanıcıda ödüllü reklam,
-   * reklamsız kullanıcıda doğrudan ödül. Verilen jeton (0 = verilmedi).
-   */
+  /** Oyuncunun açıkça başlattığı ödüllü reklam; sınırsız. Verilen jeton (0 = verilmedi). */
   claimReward: () => Promise<number>;
   purchasesAvailable: boolean;
   buyNoAds: () => Promise<PurchaseResult>;
@@ -66,22 +60,15 @@ export function MonetizationProvider({ profile, setProfile, children }: { profil
   }, []);
 
   const value = useMemo<Monetization>(() => {
-    const now = new Date();
-    const offered = entitlements.noAds || ads.rewardedAvailable();
     return {
       entitlements,
-      rewardsLeftToday: rewardsLeft(adState, now),
-      rewardOffered: offered,
+      // Reklamsız sürüm ödüllü reklamı kapatmaz: isteyen herkes izleyip ödül alabilir.
+      rewardOffered: ads.rewardedAvailable(),
       rewardCoins: REWARD_COINS,
       claimReward: async () => {
-        const counted = countReward(adState, new Date());
-        if (!counted) return 0;
-        // Reklamsız kullanıcıya reklam asla gösterilmez; ödül normal oyunla verilir.
-        if (!entitlements.noAds) {
-          const r = await ads.showRewarded();
-          if (r !== 'rewarded') return 0;
-        }
-        updateAds(counted);
+        const r = await ads.showRewarded();
+        if (r !== 'rewarded') return 0;
+        updateAds(countReward(adState, new Date()));
         addCoins(REWARD_COINS);
         return REWARD_COINS;
       },

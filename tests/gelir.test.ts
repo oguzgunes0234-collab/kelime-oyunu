@@ -1,12 +1,11 @@
 import { afterEach, describe, expect, it } from 'vitest';
-import { AD_REWARDS_PER_DAY, COIN_PACKS, IAP_MODE, ADS_MODE, INTERSTITIAL } from '../src/monetization/config';
+import { COIN_PACKS, IAP_MODE, ADS_MODE, INTERSTITIAL } from '../src/monetization/config';
 import {
   countReward,
   initialAdState,
   loadEntitlements,
   notePuzzleDone,
   noteInterstitialShown,
-  rewardsLeft,
   saveEntitlements,
   shouldShowInterstitial,
 } from '../src/monetization/state';
@@ -50,26 +49,26 @@ describe('gelir modeli: varsayılanlar', () => {
     expect(INTERSTITIAL.enabled).toBe(false);
   });
 
-  it('jeton paketleri küçük: en büyüğü 600 jeton, büyük bakiye bırakmaz', () => {
+  it('jeton paketleri: küçük, orta, büyük kese; en büyüğü 600 jeton; taslak fiyat 1,99 $ ile başlar', () => {
+    expect(COIN_PACKS.map((p) => p.size)).toEqual(['small', 'medium', 'large']);
     expect(Math.max(...COIN_PACKS.map((p) => p.coins))).toBeLessThanOrEqual(600);
+    expect(COIN_PACKS[0].draftUsd).toBe(1.99);
     expect(COIN_PACKS.every((p) => p.productId.startsWith('YER_TUTUCU'))).toBe(true);
   });
 });
 
-describe('ödül (ödüllü reklam ya da reklamsız bonus)', () => {
-  it('günde en çok AD_REWARDS_PER_DAY kez; ertesi gün sıfırlanır', () => {
+describe('ödüllü reklam', () => {
+  it('günlük sınır yok: istenen kadar sayılır; sayaç ertesi gün sıfırdan başlar (yalnızca bilgi)', () => {
     let s = initialAdState(day(1));
-    for (let i = 0; i < AD_REWARDS_PER_DAY; i++) s = countReward(s, day(1))!;
-    expect(rewardsLeft(s, day(1))).toBe(0);
-    expect(countReward(s, day(1))).toBeNull();
-    expect(rewardsLeft(s, day(2))).toBe(AD_REWARDS_PER_DAY);
-    expect(countReward(s, day(2))!.rewardsToday).toBe(1);
+    for (let i = 0; i < 25; i++) s = countReward(s, day(1));
+    expect(s.rewardsToday).toBe(25);
+    expect(countReward(s, day(2)).rewardsToday).toBe(1);
   });
 });
 
 describe('geçiş reklamı', () => {
   const on = { ...INTERSTITIAL, enabled: true };
-  it('kapalıyken ve reklamsız kullanıcıya asla', () => {
+  it('kapalıyken ve reklamsız kullanıcıya asla (reklamsız sürüm yalnızca zorunlu reklamları kaldırır)', () => {
     const s = { ...initialAdState(day(1)), puzzlesSinceInterstitial: 99 };
     expect(shouldShowInterstitial(s, { noAds: false }, day(1))).toBe(false);
     expect(shouldShowInterstitial(s, { noAds: true }, day(1), on)).toBe(false);
