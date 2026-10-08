@@ -727,13 +727,13 @@ export function Puzzle(props: Props) {
                 tutorial ? 'Eğitimde ücretsiz.' : count === 0 ? 'Hakkın kalmadı; dokununca seçenekler açılır.' : `Kalan hak: ${count}. Bedel: ${info.cost}.`
               }`}
             >
-              <Icon width={22} height={22} className="cw-tool-icon" aria-hidden="true" />
-              <span className="cw-tool-name">
-                {info.name}
+              <span className="cw-tool-top">
+                <Icon width={22} height={22} className="cw-tool-icon" aria-hidden="true" />
                 <span className="cw-tool-count" aria-hidden="true">
                   {tutorial ? '∞' : count === 0 ? '+' : count}
                 </span>
               </span>
+              <span className="cw-tool-name">{info.name}</span>
             </button>
           );
         })}

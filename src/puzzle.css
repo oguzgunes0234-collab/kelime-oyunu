@@ -989,7 +989,12 @@
   cursor: pointer;
   white-space: nowrap;
 }
-/* Sade araç düğmesi: tek renk ikon, altında ad ve yanında küçük kalan hak. */
+/* Sade araç düğmesi: tek renk ikon, sağında küçük kalan hak, altında ad. */
+.cw-tool-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 2px;
+}
 .cw-tool-icon {
   color: var(--text);
   flex: none;
@@ -1001,8 +1006,8 @@
   text-overflow: ellipsis;
 }
 .cw-tool-count {
-  margin-left: 3px;
-  font-size: 0.68rem;
+  min-width: 0.7em;
+  font-size: 0.72rem;
   font-weight: 800;
   color: var(--muted);
   font-variant-numeric: tabular-nums;
