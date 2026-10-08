@@ -1,7 +1,7 @@
 # Devam notu (geliştirme oturumları arası)
 
 Aşağıdaki işler `main`'e birleştirildi ve yayında (oyun sahibinin onayıyla,
-2026-10-01): herkese açık test linki ve telefondaki Tailscale adresi güncel (2b37939: tek yön, her bulmaca bir bölüm, kaymayan sonuç ekranı).
+2026-10-01): herkese açık test linki ve telefondaki Tailscale adresi güncel (ccc4c52: gelir modeli taslağı, iCloud yedeği, yasal taslaklar).
 Yeni işler için `main`'den çalışın. `main`'e birleştirme ve yayın her seferinde
 oyun sahibine sorulur.
 
@@ -46,7 +46,7 @@ düzeltme/çıkarma kararları bir sonraki birleştirmede uygulanır.
 3. Telefondaki Tailscale adresi oyun sahibinin bilgisayarında `main`'den
    derlenir (`TELEFONDA-AC.bat`); bulutta güncellenemez.
 
-## App Store hazırlığı (2026-10-09, yerel; yayınlanmadı)
+## App Store hazırlığı (2026-10-09; web'de etkisiz, gerçek reklam/ödeme yok)
 Gelir modeli: ana oyun ücretsiz + isteğe bağlı ödüllü reklam + tek seferlik
 Reklamsız + küçük jeton paketleri. Gerçek reklam/ödeme YOK; `off` (varsayılan)
 ve `mock` (`VITE_ADS=mock VITE_IAP=mock`) modları. Belgeler: `docs/gelir-modeli.md`,
