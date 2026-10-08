@@ -1750,3 +1750,132 @@ div.note {
   outline: 2px solid var(--focus);
   outline-offset: 1px;
 }
+
+/* ---------- Bulmaca sonucu: ekran boyunda, sayfa kaymaz ---------- */
+.result-screen {
+  height: 100dvh;
+  min-height: 0;
+  gap: 10px;
+  /* Çok kısa ekranda kutular en küçük boylarına inince sayfa yine de kayabilir. */
+  overflow-y: auto;
+}
+.result-screen > * {
+  flex: none;
+}
+.result-head {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.result-head h1 {
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+.result-head p {
+  font-size: 0.9rem;
+}
+.result-screen .practice-offer {
+  gap: 8px;
+  padding: 12px 14px;
+}
+.result-screen .practice-offer h2 {
+  font-size: 1.2rem;
+}
+.result-screen .practice-offer .btn-big {
+  min-height: 48px;
+  font-size: 1.05rem;
+}
+.result-screen .practice-chips li {
+  padding: 2px 8px;
+  font-size: 0.85rem;
+}
+.result-screen .practice-reward {
+  font-size: 0.78rem;
+}
+.result-screen .big-stat {
+  padding: 8px 4px;
+}
+.result-screen .big-stat strong {
+  font-size: 1.2rem;
+}
+.result-screen .big-stat span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.result-notes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.result-notes li {
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: var(--info-bg);
+  font-size: 0.86rem;
+}
+.result-notes li.good {
+  background: var(--good-bg);
+}
+/* Kelimeler: kalan yüksekliği alır, kendi içinde kayar. */
+.result-screen .result-words {
+  flex: 1 1 0;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px;
+  border-radius: 14px;
+  background: var(--surface);
+}
+.result-words h2 {
+  margin: 0 4px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+.result-words h2 small {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+.result-words .cw-results {
+  flex: 1 1 0;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  gap: 6px;
+}
+.result-words .cw-results li {
+  background: var(--bg);
+  box-shadow: none;
+}
+.result-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.result-actions-row {
+  display: flex;
+  gap: 8px;
+}
+.result-actions-row .btn {
+  flex: 1 1 0;
+  min-width: 0;
+}
+/* Kısa ekran: ikincil satırlar gizlenir, kelimelere ve düğmelere yer kalsın. */
+@media (max-height: 760px) {
+  .result-head p,
+  .result-screen .practice-reward {
+    display: none;
+  }
+  .result-screen .result-words {
+    min-height: 120px;
+  }
+}

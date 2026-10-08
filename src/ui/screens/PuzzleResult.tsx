@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
-import { chapterInfo } from '../../core/campaign';
-import { ChapterPath } from '../components/ChapterPath';
+import { toCase } from '../../core/campaign';
 import { DAILY_PUZZLE_GOAL, currentStreak, goalDoneToday } from '../../core/daily';
 import { languageInfo } from '../../core/languages';
 import { displayWord } from '../../core/normalize';
@@ -32,7 +31,6 @@ export function PuzzleResult({ puzzle, outcome, profile, onAgain, onHome, onRevi
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const chapter = chapterInfo(profile.campaign);
   const src = languageInfo(puzzle.direction.source);
   const tgt = languageInfo(puzzle.direction.target);
   const total = outcome.results.length;
@@ -42,9 +40,35 @@ export function PuzzleResult({ puzzle, outcome, profile, onAgain, onHome, onRevi
   const practicePending = !practiceDone && practiceWords.length > 0;
   const heading = correct === total ? (clean === total ? 'Kusursuz bulmaca!' : 'Bulmaca tamam!') : correct >= total / 2 ? 'Güzel iş!' : 'Her bulmaca bir adım';
 
+  // Bölüm satırı: biten bölüm ya da bölümün neden ilerlemediği (konu bulmacasında yok).
+  const notes: { text: string; good?: boolean }[] = [];
+  if (outcome.chapterCompleted !== null) {
+    notes.push({ text: `Bölüm ${outcome.chapterCompleted} tamamlandı! Sırada Bölüm ${outcome.chapterCompleted + 1}.`, good: true });
+  } else if (!puzzle.topic) {
+    notes.push({ text: 'Bölümü geçmek için bulmacanın tüm kelimelerini çöz (yardım serbest).' });
+  }
+  if (outcome.goalReached) notes.push({ text: 'Günlük hedef tamam: jeton ve hediye haklar kazandın.', good: true });
+  if (outcome.usedRestDay) notes.push({ text: 'Dün ara verdin; haftalık dinlenme günün kullanıldı, serin sürüyor.' });
+  if (outcome.levelChange === 'up' && outcome.difficultyAfter) {
+    notes.push({ text: `Çok iyi gidiyorsun — sıradaki bulmaca ${DIFFICULTY_LABEL[outcome.difficultyAfter]} seviyesinde.`, good: true });
+  }
+  if (outcome.levelChange === 'down' && outcome.difficultyAfter) {
+    notes.push({ text: `Sıradaki bulmacayı biraz hafiflettik (${DIFFICULTY_LABEL[outcome.difficultyAfter]}).` });
+  }
+  if (outcome.addedToReview > 0) notes.push({ text: `${outcome.addedToReview} kelime tekrar listene eklendi.` });
+  if (outcome.removedFromReview > 0) notes.push({ text: `${outcome.removedFromReview} kelimeyi artık biliyorsun; tekrar listenden çıktı.`, good: true });
+
+  const nextLabel = puzzle.topic
+    ? 'Yeni konu bulmacası'
+    : outcome.chapterCompleted !== null
+      ? `Bölüm ${toCase(outcome.chapterCompleted + 1)} geç`
+      : 'Yeni bulmaca';
+
+  // Ekran telefon boyunda sabit (ana sayfa gibi): sayfa kaymaz, kelime listesi
+  // kendi kutusunda kayar, sıradaki bulmaca düğmesi her zaman görünür.
   return (
-    <div className="page summary">
-      <header className="page-head">
+    <div className="page summary result-screen">
+      <header className="page-head result-head">
         <h1>{heading}</h1>
         <p className="muted">
           {total} kelimeden {correct} tanesini çözdün{clean > 0 ? `, ${clean} tanesini hiç yardım almadan` : ''}.
@@ -55,7 +79,7 @@ export function PuzzleResult({ puzzle, outcome, profile, onAgain, onHome, onRevi
       {practicePending && (
         <section className="practice-offer" aria-labelledby="practice-title">
           <h2 id="practice-title">Öğrendiğini pekiştir</h2>
-          <p>Zorlandığın {practiceWords.length} kelimeyi şimdi cümle içinde bir kez daha çalış; kalıcı olsun.</p>
+          <p className="sr-only">Zorlandığın {practiceWords.length} kelimeyi cümle içinde bir kez daha çalış.</p>
           <ul className="practice-chips" lang={puzzle.direction.target}>
             {practiceWords.map((w) => (
               <li key={w}>{displayWord(w, puzzle.direction.target)}</li>
@@ -91,115 +115,101 @@ export function PuzzleResult({ puzzle, outcome, profile, onAgain, onHome, onRevi
           <strong>
             <FlameIcon width={20} height={20} /> {streak.streak}
           </strong>
-          <span>günlük seri · {goalDoneToday(profile.daily, new Date()) ? 'bugün tamam' : `0/${DAILY_PUZZLE_GOAL} bulmaca`}</span>
+          <span>{goalDoneToday(profile.daily, new Date()) ? 'seri · bugün ✓' : `seri · 0/${DAILY_PUZZLE_GOAL}`}</span>
         </div>
       </div>
 
-      {outcome.chapterCompleted !== null ? (
-        <p className="info-line good">
-          Bölüm {outcome.chapterCompleted} tamamlandı! Sırada Bölüm {outcome.chapterCompleted + 1}.
-        </p>
-      ) : outcome.campaignCounted ? (
-        <div className="result-path paper">
-          <p>
-            <strong className="ink-title">Bölüm {chapter.chapter}</strong> · {chapter.done}/{chapter.size} bulmaca
-          </p>
-          <ChapterPath info={chapter} layout="row" />
-        </div>
-      ) : (
-        !puzzle.topic && <p className="info-line">Bölümde ilerlemek için bulmacanın tüm kelimelerini çöz (yardım serbest).</p>
-      )}
-      {outcome.goalReached && <p className="info-line good">Günlük hedef tamam! Jeton ve her araçtan hediye hak kazandın.</p>}
-      {outcome.usedRestDay && <p className="info-line">Dün ara verdin; haftalık dinlenme günün kullanıldı, serin sürüyor.</p>}
-      {outcome.levelChange === 'up' && outcome.difficultyAfter && (
-        <p className="info-line good">Çok iyi gidiyorsun — sıradaki bulmaca {DIFFICULTY_LABEL[outcome.difficultyAfter]} seviyesinde.</p>
-      )}
-      {outcome.levelChange === 'down' && outcome.difficultyAfter && (
-        <p className="info-line">Sıradaki bulmacayı biraz hafiflettik ({DIFFICULTY_LABEL[outcome.difficultyAfter]}).</p>
-      )}
-
-      <ul className="cw-results" aria-label="Bulmacadaki kelimeler">
-        {outcome.results.map((r) => {
-          const q = r.question;
-          const ok = r.status === 'correct';
-          return (
-            <li key={r.word} className={ok ? 's-correct' : 's-failed'}>
-              <details>
-                <summary>
-                  <span className="s-icon" aria-hidden="true">
-                    {ok ? <CheckIcon width={18} height={18} /> : <CrossIcon width={18} height={18} />}
-                  </span>
-                  <span className="sr-only">{ok ? 'Çözüldü' : 'Çözülmedi'}:</span>
-                  <span lang={q.source}>{q.prompt}</span>
-                  {q.source === 'en' && <SpeakButton text={q.prompt} lang="en" />}
-                  <span aria-hidden="true" className="arrow">
-                    →
-                  </span>
-                  <strong lang={q.target}>{displayWord(r.answer, q.target)}</strong>
-                  {q.target === 'en' && <SpeakButton text={r.answer} lang="en" />}
-                  {ok && r.helped && <span className="chip reason-helped">yardımla</span>}
-                  <span className="s-points">{r.score.total > 0 ? `+${r.score.total}` : ''}</span>
-                </summary>
-                <div className="cw-result-body">
-                  <p className="q-meta">
-                    <span className="chip">{POS_LABEL[q.pos]}</span>
-                    <span className="chip">Seviye ≈ {q.level}</span>
-                    <span className="chip chip-soft">{q.topic}</span>
-                  </p>
-                  {q.meaningHint && (
-                    <p className="meaning">
-                      <strong>Anlamı:</strong> {q.meaningHint}
-                    </p>
-                  )}
-                  {q.accepted.length > 1 && (
-                    <p className="alts">
-                      <strong>Diğer karşılıklar:</strong>{' '}
-                      <span lang={q.target}>{q.accepted.filter((a) => a !== r.answer).join(', ')}</span>
-                    </p>
-                  )}
-                  {(q.targetExample || q.sourceExample) && (
-                    <div className="examples">
-                      {q.targetExample && (
-                        <p>
-                          <span className="ex-lang">{tgt.name}</span> <span lang={q.target}>{q.targetExample}</span>
-                          {q.target === 'en' && <SpeakButton text={q.targetExample} lang="en" label="Örnek cümleyi sesli dinle" />}
-                        </p>
-                      )}
-                      {q.sourceExample && (
-                        <p>
-                          <span className="ex-lang">{src.name}</span> <span lang={q.source}>{q.sourceExample}</span>
-                          {q.source === 'en' && <SpeakButton text={q.sourceExample} lang="en" label="Örnek cümleyi sesli dinle" />}
-                        </p>
-                      )}
-                    </div>
-                  )}
-                </div>
-              </details>
+      {notes.length > 0 && (
+        <ul className="result-notes">
+          {notes.map((n) => (
+            <li key={n.text} className={n.good ? 'good' : ''}>
+              {n.text}
             </li>
-          );
-        })}
-      </ul>
-      <p className="muted small center">Bir kelimeye dokun: anlamı ve örnek cümleler açılır.</p>
-
-      {outcome.addedToReview > 0 && (
-        <p className="info-line">{outcome.addedToReview} kelime tekrar listene eklendi. İstediğin zaman çalışabilirsin; acelesi yok.</p>
-      )}
-      {outcome.removedFromReview > 0 && (
-        <p className="info-line good">{outcome.removedFromReview} kelimeyi artık biliyorsun — tekrar listenden çıkarıldı.</p>
+          ))}
+        </ul>
       )}
 
-      <div className="stack">
+      <section className="result-words" aria-labelledby="result-words-title">
+        <h2 id="result-words-title">
+          Kelimeler <small>dokun: anlamı ve örnek cümleler</small>
+        </h2>
+        <ul className="cw-results" aria-label="Bulmacadaki kelimeler">
+          {outcome.results.map((r) => {
+            const q = r.question;
+            const ok = r.status === 'correct';
+            return (
+              <li key={r.word} className={ok ? 's-correct' : 's-failed'}>
+                <details>
+                  <summary>
+                    <span className="s-icon" aria-hidden="true">
+                      {ok ? <CheckIcon width={18} height={18} /> : <CrossIcon width={18} height={18} />}
+                    </span>
+                    <span className="sr-only">{ok ? 'Çözüldü' : 'Çözülmedi'}:</span>
+                    <span lang={q.source}>{q.prompt}</span>
+                    {q.source === 'en' && <SpeakButton text={q.prompt} lang="en" />}
+                    <span aria-hidden="true" className="arrow">
+                      →
+                    </span>
+                    <strong lang={q.target}>{displayWord(r.answer, q.target)}</strong>
+                    {q.target === 'en' && <SpeakButton text={r.answer} lang="en" />}
+                    {ok && r.helped && <span className="chip reason-helped">yardımla</span>}
+                    <span className="s-points">{r.score.total > 0 ? `+${r.score.total}` : ''}</span>
+                  </summary>
+                  <div className="cw-result-body">
+                    <p className="q-meta">
+                      <span className="chip">{POS_LABEL[q.pos]}</span>
+                      <span className="chip">Seviye ≈ {q.level}</span>
+                      <span className="chip chip-soft">{q.topic}</span>
+                    </p>
+                    {q.meaningHint && (
+                      <p className="meaning">
+                        <strong>Anlamı:</strong> {q.meaningHint}
+                      </p>
+                    )}
+                    {q.accepted.length > 1 && (
+                      <p className="alts">
+                        <strong>Diğer karşılıklar:</strong>{' '}
+                        <span lang={q.target}>{q.accepted.filter((a) => a !== r.answer).join(', ')}</span>
+                      </p>
+                    )}
+                    {(q.targetExample || q.sourceExample) && (
+                      <div className="examples">
+                        {q.targetExample && (
+                          <p>
+                            <span className="ex-lang">{tgt.name}</span> <span lang={q.target}>{q.targetExample}</span>
+                            {q.target === 'en' && <SpeakButton text={q.targetExample} lang="en" label="Örnek cümleyi sesli dinle" />}
+                          </p>
+                        )}
+                        {q.sourceExample && (
+                          <p>
+                            <span className="ex-lang">{src.name}</span> <span lang={q.source}>{q.sourceExample}</span>
+                            {q.source === 'en' && <SpeakButton text={q.sourceExample} lang="en" label="Örnek cümleyi sesli dinle" />}
+                          </p>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                </details>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+
+      <div className="result-actions">
         <button type="button" className={`btn ${practicePending ? 'btn-secondary' : 'btn-primary'} btn-block`} onClick={onAgain}>
-          {puzzle.topic ? 'Yeni konu bulmacası' : outcome.chapterCompleted ? 'Devam' : 'Sıradaki bulmaca'}
+          {nextLabel}
         </button>
-        {profile.review.length > 0 && (
-          <button type="button" className="btn btn-secondary btn-block" onClick={onReview}>
-            Tekrar listesi ({profile.review.length})
+        <div className="result-actions-row">
+          {profile.review.length > 0 && (
+            <button type="button" className="btn btn-secondary btn-small" onClick={onReview}>
+              Tekrar listesi ({profile.review.length})
+            </button>
+          )}
+          <button type="button" className="btn btn-ghost btn-small" onClick={onHome}>
+            Ana sayfa
           </button>
-        )}
-        <button type="button" className="btn btn-ghost btn-block" onClick={onHome}>
-          Ana sayfa
-        </button>
+        </div>
       </div>
     </div>
   );

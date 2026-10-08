@@ -117,12 +117,13 @@ ilk açılıştan sonra oyun çevrimdışı da açılır. PWA olarak ana ekrana 
   "?" → "Eğitimi baştan oynat" ya da Ayarlar'dan açılır.
 - **Hızlı tur örneği:** gerçek kontrollerle bir kelime çözdürür; hak
   harcanmaz, ilerleme kaydedilmez. Ayarlar'dan yeniden oynanabilir.
-- **Bölümler (`core/campaign.ts`):** 5 bulmaca = 1 bölüm; yalnızca tüm
-  kelimeleri çözülen ana oyun bulmacası sayılır. Bölüm ızgara boyunu (Bölüm 1:
-  7×7, sonrası 9×8) ve zorluğun çıkabileceği tavanı belirler; kelime seviyesini
-  tavanın altında uyarlamalı zorluk belirler ve oyuncuya seçtirilmez. Ana sayfada bölüm yolu (biten ✓, sıradaki
-  vurgulu, kilitli kesik çizgi), sonuç ekranında küçük yol, bölüm bitince
-  "Bölüm N tamamlandı" ekranı (yeni ödül ya da para birimi yok). Eski kayıtlar
+- **Bölümler (`core/campaign.ts`):** her bulmaca bir bölüm (Bölüm 3 bitince
+  Bölüm 4); yalnızca tüm kelimeleri çözülen ana oyun bulmacası sayılır. Bölüm
+  ızgara boyunu (Bölüm 1–5: 7×7, sonrası 9×8) ve zorluğun çıkabileceği tavanı
+  (1–10 Orta, 11–25 Zor, 26+ Uzman) belirler; kelime seviyesini tavanın altında
+  uyarlamalı zorluk belirler ve oyuncuya seçtirilmez. Ana sayfada bölüm yolu
+  (biten bölümler ✓, oynanacak vurgulu, sıradakiler kesik çizgi); sonuç ekranı
+  "Bölüm N tamamlandı" der ve "Bölüm N+1'e geç" düğmesini gösterir. Eski kayıtlar
   Bölüm 1'den başlar (tamamlanan bulmaca sayısı eskiden tutulmuyordu); diğer
   veriler korunur, elle seçilmiş seviye uyarlamalı seviyeye aktarılır.
 - **Konular (`core/topics.ts`):** Seyahat ve şehir, Yemek ve restoran,

@@ -37,7 +37,6 @@ import { ChevronLeftIcon, ChevronRightIcon, ClueArrow, CloseIcon, CoinIcon, Ques
 import { Keyboard } from '../components/Keyboard';
 import { SpeakButton } from '../components/SpeakButton';
 import { Sheet } from '../components/Sheet';
-import { ChapterComplete } from './ChapterComplete';
 import { PuzzleResult } from './PuzzleResult';
 import { Practice } from './Practice';
 import { applyPractice, buildPractice, type PracticeItem } from '../../core/practice';
@@ -141,7 +140,6 @@ export function Puzzle(props: Props) {
   const [puzzle, setPuzzle] = useState<PuzzleState>(() => initialPuzzle(props));
   const [outcome, setOutcome] = useState<PuzzleOutcome | null>(null);
   const [showResult, setShowResult] = useState(false);
-  const [showChapter, setShowChapter] = useState(false);
   // Pekiştirme: bulmaca sonrası isteğe bağlı tur; bir kez oynanır.
   const [practiceItems, setPracticeItems] = useState<PracticeItem[]>([]);
   const [practice, setPractice] = useState<PracticeItem[] | null>(null);
@@ -431,10 +429,6 @@ export function Puzzle(props: Props) {
   const solved = solvedCount(puzzle);
   const total = cw.words.length;
 
-  if (showChapter && outcome?.chapterCompleted) {
-    return <ChapterComplete chapter={outcome.chapterCompleted} profile={profile} onNext={props.onNewPuzzle} onHome={props.onExit} />;
-  }
-
   if (showResult && outcome && practice) {
     return (
       <Practice
@@ -464,8 +458,7 @@ export function Puzzle(props: Props) {
         puzzle={puzzle}
         outcome={outcome}
         profile={profile}
-        // Bölüm bittiyse önce kelime sonuçları, sonra bölüm sonu ekranı.
-        onAgain={outcome.chapterCompleted ? () => setShowChapter(true) : props.onNewPuzzle}
+        onAgain={props.onNewPuzzle}
         onHome={props.onExit}
         onReview={props.onOpenReview}
       />

@@ -25,8 +25,8 @@ describe('uzman zorluğu ve bölüm tavanı', () => {
     expect(DIFFICULTY_LEVELS.expert).toEqual(['B2', 'C1']);
   });
 
-  it('bölüm tavanı: 1–2 Orta, 3–5 Zor, 6+ Uzman', () => {
-    expect([1, 2, 3, 5, 6, 20].map(chapterMaxDifficulty)).toEqual(['medium', 'medium', 'hard', 'hard', 'expert', 'expert']);
+  it('bölüm tavanı (her bulmaca bir bölüm): 1–10 Orta, 11–25 Zor, 26+ Uzman', () => {
+    expect([1, 10, 11, 25, 26, 100].map(chapterMaxDifficulty)).toEqual(['medium', 'medium', 'hard', 'hard', 'expert', 'expert']);
   });
 
   it('iyi oynayan tavana kadar birer basamak yükselir, tavanı aşmaz', () => {

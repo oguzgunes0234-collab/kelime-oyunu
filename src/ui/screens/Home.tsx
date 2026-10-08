@@ -37,7 +37,7 @@ export function Home({ pack, profile, onPuzzle, puzzleSaved, tutorialPending, on
   const src = languageInfo(direction.source);
   const tgt = languageInfo(direction.target);
   const now = new Date();
-  const { chapter, done, size } = chapterInfo(profile.campaign);
+  const { chapter } = chapterInfo(profile.campaign);
   const goalDone = goalDoneToday(profile.daily, now);
   const streak = currentStreak(profile.daily, now);
   // Hiç kelimesi olmayan mod gösterilmez (bkz. TopicModes).
@@ -73,11 +73,8 @@ export function Home({ pack, profile, onPuzzle, puzzleSaved, tutorialPending, on
       <section className="campaign-card paper" aria-labelledby="chapter-title">
         <div className="campaign-top">
           <h2 id="chapter-title" className="ink-title">Bölüm {chapter}</h2>
-          <span className="campaign-count">
-            {done}/{size} bulmaca
-          </span>
         </div>
-        <ChapterPath info={{ chapter, done, size }} />
+        <ChapterPath chapter={chapter} />
         <p className="campaign-meta">
           <span className={`daily-chip${goalDone ? ' done' : ''}`}>
             {goalDone ? <CheckIcon width={14} height={14} /> : null}
