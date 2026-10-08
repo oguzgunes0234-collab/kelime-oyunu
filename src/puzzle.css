@@ -687,6 +687,7 @@
 }
 
 .cw-grid {
+  position: relative;
   --cell: min(
     calc((100cqw - (var(--cols) - 1) * 2px) / var(--cols)),
     calc((100cqh - (var(--rows) - 1) * 2px) / var(--rows)),
@@ -835,6 +836,53 @@
 .cw-cell.flash-solved {
   animation: bounce 380ms ease-out both;
 }
+/* Harf yazılan kare kâğıda basılır gibi bir an küçülür. */
+.cw-cell.press:not(.flash-solved):not(.flash-wrong) {
+  animation: cw-press 110ms ease-out;
+}
+@keyframes cw-press {
+  50% {
+    transform: scale(0.9);
+  }
+}
+/* Yeni çözülen kelimenin çevresine kalemle çizilmiş gibi çerçeve; sonra söner. */
+.cw-pen {
+  position: absolute;
+  left: calc(var(--c) * (var(--cell) + 2px) - 3px);
+  top: calc(var(--r) * (var(--cell) + 2px) - 3px);
+  width: calc(var(--w) * (var(--cell) + 2px) + 4px);
+  height: calc(var(--h) * (var(--cell) + 2px) + 4px);
+  pointer-events: none;
+  z-index: 1;
+  animation: cw-pen-fade 1100ms ease forwards;
+}
+.cw-pen svg {
+  display: block;
+  overflow: visible;
+}
+.cw-pen rect {
+  fill: none;
+  stroke: var(--good);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: cw-pen-draw 400ms ease-out forwards;
+}
+@keyframes cw-pen-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes cw-pen-fade {
+  0%,
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .cw-cell.missed {
   color: var(--bad);
   background: var(--bad-bg);
@@ -941,35 +989,34 @@
   cursor: pointer;
   white-space: nowrap;
 }
-.cw-tool > span:nth-child(2) {
+/* Sade araç düğmesi: tek renk ikon, altında ad ve yanında küçük kalan hak. */
+.cw-tool-icon {
+  color: var(--text);
+  flex: none;
+}
+.cw-tool-name {
   max-width: 100%;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.cw-tool .tool-circle.small {
-  width: 34px;
-  height: 34px;
-}
 .cw-tool-count {
-  position: absolute;
-  top: 0;
-  right: calc(50% - 26px);
-  min-width: 20px;
-  height: 20px;
-  padding: 0 5px;
-  border-radius: 999px;
-  background: var(--text);
-  color: var(--bg);
-  font-size: 0.72rem;
-  display: grid;
-  place-items: center;
+  margin-left: 3px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
 }
-.cw-tool.is-empty .tool-circle {
-  filter: grayscale(0.85);
-  opacity: 0.7;
+.cw-tool:active .cw-tool-icon {
+  transform: scale(0.92);
+}
+.cw-tool.is-empty .cw-tool-icon,
+.cw-tool.is-empty .cw-tool-name {
+  opacity: 0.55;
 }
 .cw-tool.is-empty .cw-tool-count {
-  background: var(--muted);
+  color: var(--primary);
+  opacity: 1;
 }
 .cw-finish {
   margin-left: auto;

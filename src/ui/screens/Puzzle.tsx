@@ -155,6 +155,8 @@ export function Puzzle(props: Props) {
   // Eğitimde açık açıklama: adımın becerisiyle başlar; ilk yanlışta "wrong" araya girer.
   const [tip, setTip] = useState<TipId | null>(step?.skill ?? null);
   const wrongTipShown = useRef(false);
+  // Son yazılan kare: kâğıda basılıyormuş gibi kısa bir ölçek animasyonu alır.
+  const [pressed, setPressed] = useState<{ key: string; n: number } | null>(null);
 
   // Anlık değerler: art arda gelen tuşlar React yeniden çizmeden işlense de harf kaybolmasın.
   const live = useRef({ puzzle, profile, tip });
@@ -283,7 +285,12 @@ export function Puzzle(props: Props) {
   function onLetter(letter: string) {
     closeTip('basics');
     const prev = live.current.puzzle;
-    commit(guardSwitch(prev, typeLetter(prev, letter)));
+    const next = guardSwitch(prev, typeLetter(prev, letter));
+    if (next !== prev && prev.status === 'playing') {
+      const [r, c] = selectedCell(prev);
+      setPressed((p) => ({ key: cellKey(r, c), n: (p?.n ?? 0) + 1 }));
+    }
+    commit(next);
   }
 
   /** Kareye dokunma; T3'te ortak karede yön değişince açıklama kapanır. */
@@ -484,6 +491,7 @@ export function Puzzle(props: Props) {
           solvedCells?.has(key) ? 'flash-solved' : '',
           puzzle.status === 'done' && !locked ? 'missed' : '',
           tip === 'switch' && switchCell === key ? 'coach-pulse' : '',
+          pressed?.key === key && typed ? 'press' : '',
         ]
           .filter(Boolean)
           .join(' ');
@@ -491,7 +499,7 @@ export function Puzzle(props: Props) {
         const shown = puzzle.status === 'done' && !locked ? letter.letter : typed;
         cells.push(
           <button
-            key={key + (wrongCells?.has(key) || solvedCells?.has(key) ? `-${puzzle.seq}` : '')}
+            key={key + (wrongCells?.has(key) || solvedCells?.has(key) ? `-${puzzle.seq}` : '') + (pressed?.key === key ? `-t${pressed.n}` : '')}
             type="button"
             className={cls}
             style={puzzle.status === 'done' ? { ['--wave' as string]: r + c } : undefined}
@@ -667,6 +675,23 @@ export function Puzzle(props: Props) {
           aria-label={`${src.name} ipuçlu, ${tgt.name} cevaplı çengel bulmaca`}
         >
           {cells}
+          {flashSolved >= 0 && (
+            <span
+              className="cw-pen"
+              key={`pen-${puzzle.seq}`}
+              aria-hidden="true"
+              style={{
+                ['--r' as string]: cw.words[flashSolved].row,
+                ['--c' as string]: cw.words[flashSolved].col,
+                ['--h' as string]: cw.words[flashSolved].dir === 'down' ? cw.words[flashSolved].letters.length : 1,
+                ['--w' as string]: cw.words[flashSolved].dir === 'across' ? cw.words[flashSolved].letters.length : 1,
+              }}
+            >
+              <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <rect x="0" y="0" width="100" height="100" pathLength={1} vectorEffect="non-scaling-stroke" />
+              </svg>
+            </span>
+          )}
         </div>
         {note && (
           <p className={`cw-toast note-${note.tone}`} key={note.seq} aria-hidden="true">
@@ -702,12 +727,12 @@ export function Puzzle(props: Props) {
                 tutorial ? 'Eğitimde ücretsiz.' : count === 0 ? 'Hakkın kalmadı; dokununca seçenekler açılır.' : `Kalan hak: ${count}. Bedel: ${info.cost}.`
               }`}
             >
-              <span className="tool-circle small">
-                <Icon width={20} height={20} />
-              </span>
-              <span>{info.name}</span>
-              <span className="cw-tool-count" aria-hidden="true">
-                {tutorial ? '∞' : count === 0 ? '+' : count}
+              <Icon width={22} height={22} className="cw-tool-icon" aria-hidden="true" />
+              <span className="cw-tool-name">
+                {info.name}
+                <span className="cw-tool-count" aria-hidden="true">
+                  {tutorial ? '∞' : count === 0 ? '+' : count}
+                </span>
               </span>
             </button>
           );
