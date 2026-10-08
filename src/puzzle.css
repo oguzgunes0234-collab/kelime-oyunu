@@ -3,41 +3,6 @@
    küçük telefonda da ızgara ve klavye aynı anda sığar. */
 
 :root {
-  --clue-bg: #fbdde2;
-  --clue-ink: #5b1a28;
-  --clue-arrow: #c0263a;
-  --cell-line: #d9bfa0;
-  --word-bg: #fff1c9;
-  --cursor-bg: #ffd27a;
-  --cw-cell-bg: #ffffff;
-  /* Ana sayfanın üstündeki köprü sahnesi. Gökyüzü ve zemin renkleri görselin
-     üst ve alt kenarından alındı; çentik şeridi ve görselin altı bunlarla dolar. */
-  --home-scene: url('./assets/ana-sayfa-acik.webp');
-  --home-scene-sky: #f9dfc8;
-  --home-scene-floor: #fbf4e5;
-  /* Bulmaca ekranı: kenarlarda dağınık boş taşlar, ortası sade. */
-  --cw-page-bg: url('./assets/bulmaca-acik.webp');
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) {
-    --home-scene: url('./assets/ana-sayfa-koyu.webp');
-    --home-scene-sky: #211d2a;
-    --home-scene-floor: #231d29;
-    --cw-page-bg: url('./assets/bulmaca-koyu.webp');
-    --clue-bg: #4a2a36;
-    --clue-ink: #ffd9e0;
-    --clue-arrow: #ff8fa6;
-    --cell-line: #5b5068;
-    --word-bg: #4a4128;
-    --cursor-bg: #7a5a1c;
-    --cw-cell-bg: #3b3448;
-  }
-}
-:root[data-theme='dark'] {
-  --home-scene: url('./assets/ana-sayfa-koyu.webp');
-  --home-scene-sky: #211d2a;
-  --home-scene-floor: #231d29;
-  --cw-page-bg: url('./assets/bulmaca-koyu.webp');
   --clue-bg: #4a2a36;
   --clue-ink: #ffd9e0;
   --clue-arrow: #ff8fa6;
@@ -45,6 +10,13 @@
   --word-bg: #4a4128;
   --cursor-bg: #7a5a1c;
   --cw-cell-bg: #3b3448;
+  /* Ana sayfanın üstündeki köprü sahnesi (gece). Gökyüzü ve zemin renkleri
+     görselin üst ve alt kenarından alındı; çentik şeridi ve görselin altı bunlarla dolar. */
+  --home-scene: url('./assets/ana-sayfa-koyu.webp');
+  --home-scene-sky: #211d2a;
+  --home-scene-floor: #231d29;
+  /* Bulmaca ekranı: kenarlarda dağınık boş taşlar, ortası sade. */
+  --cw-page-bg: url('./assets/bulmaca-koyu.webp');
 }
 
 /* ---------- Kâğıt / dergi dili (çizimsiz) ---------- */
@@ -300,13 +272,17 @@
   gap: 8px;
   align-content: start;
 }
+/* Konu kartı: sol üstte ad, sağ alt köşede soluk özgün çizim (CategoryArt).
+   Çizim kenardan taşıp kırpılır; ad kartın %64'ünü geçmez, çizgiye pek değmez. */
 .home .topic-tile {
+  position: relative;
+  overflow: hidden;
   width: 100%;
-  min-height: 56px;
+  min-height: 72px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 2px;
   padding: 8px 10px;
   border-radius: 10px;
@@ -316,9 +292,30 @@
   text-align: left;
   cursor: pointer;
 }
+.home .topic-tile strong,
+.home .topic-tile small {
+  position: relative;
+  z-index: 1;
+  max-width: 64%;
+}
 .home .topic-tile strong {
   font-size: 0.92rem;
   line-height: 1.2;
+}
+.home .topic-art {
+  position: absolute;
+  right: -6px;
+  bottom: -8px;
+  width: 64px;
+  height: 64px;
+  opacity: 0.22;
+  transform: rotate(-8deg);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
 }
 .home .topic-tile small {
   font-size: 0.75rem;

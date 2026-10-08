@@ -5,28 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>Kelime Köprüsü</title>
     <meta name="description" content="Türkçe ve İngilizce kelime öğreten çengel bulmaca oyunu." />
-    <meta name="theme-color" content="#fff6e9" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#1d1a24" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#1d1a24" />
+    <meta name="color-scheme" content="dark" />
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="./icon-192.png" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="Kelime Köprüsü" />
-    <script>
-      // Kayıtlı temayı (Açık/Koyu) ilk çizimden önce uygula: açılış ekranı ve oyun yanlış renkte parlamasın.
-      try {
-        var t = JSON.parse(localStorage.getItem('kelime-oyunu:profil:v1') || '{}').settings.theme;
-        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
-      } catch (e) {}
-    </script>
     <style>
       /* Açılış ekranı: oyun yüklenmeden görünür, yüklenince kısa sürede kaybolur (src/main.tsx). */
       #splash {
-        --p-bg: #fff6e9;
-        --p-ink: #2b1d14;
-        --p-muted: #6b5443;
-        --p-cell: #ffffff;
-        --p-line: #d9bfa0;
+        --p-bg: #1d1a24;
+        --p-ink: #fbf3e8;
+        --p-muted: #cdbfae;
+        --p-cell: #3b3448;
+        --p-line: #5b5068;
         --p-accent: #ff8a3d;
         position: fixed;
         inset: 0;
@@ -37,22 +30,6 @@
         color: var(--p-ink);
         transition: opacity 300ms ease;
         font-family: ui-rounded, 'SF Pro Rounded', 'Nunito', 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
-      }
-      @media (prefers-color-scheme: dark) {
-        :root:not([data-theme='light']) #splash {
-          --p-bg: #1d1a24;
-          --p-ink: #fbf3e8;
-          --p-muted: #cdbfae;
-          --p-cell: #3b3448;
-          --p-line: #5b5068;
-        }
-      }
-      :root[data-theme='dark'] #splash {
-        --p-bg: #1d1a24;
-        --p-ink: #fbf3e8;
-        --p-muted: #cdbfae;
-        --p-cell: #3b3448;
-        --p-line: #5b5068;
       }
       #splash.hide {
         opacity: 0;

@@ -4,6 +4,7 @@ import { languageInfo } from '../../core/languages';
 import type { Profile } from '../../core/profile';
 import { topicStatuses } from '../../core/topics';
 import type { WordPack } from '../../core/types';
+import { CategoryArt } from '../components/CategoryArt';
 import { ChapterPath } from '../components/ChapterPath';
 import { BagIcon, BookIcon, CheckIcon, CoinIcon, FlameIcon, GearIcon, GridIcon, LettersIcon, SwapIcon } from '../components/Icons';
 
@@ -102,6 +103,7 @@ export function Home({ pack, profile, setProfile, onPuzzle, puzzleSaved, tutoria
           {topics.map((t) => (
             <li key={t.mode.id}>
               <button type="button" className="topic-tile" disabled={!t.enabled} onClick={() => onPlayTopic(t.mode.id)}>
+                <CategoryArt id={t.mode.id} />
                 <strong>{t.mode.name}</strong>
                 {!t.enabled && <small>Hazırlanıyor</small>}
               </button>

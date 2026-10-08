@@ -10,13 +10,10 @@ import type { Difficulty, DifficultyMode, Direction, Inventory, Question, ToolId
 
 /** Oyuncunun tarayıcıda saklanan tüm verisi. Hesap yok; yalnızca bu cihaz. */
 
-export type ThemeSetting = 'auto' | 'light' | 'dark';
-
 export interface Settings {
   direction: Direction;
   difficultyMode: DifficultyMode;
   dailyGoal: number;
-  theme: ThemeSetting;
   /** Kısa ses efektleri (doğru, yanlış, bulmaca bitti). Varsayılan açık. */
   sound: boolean;
   /** Arka plan müziği. Varsayılan kapalı: çoğu kişi sessiz ortamda oynar. */
@@ -62,7 +59,7 @@ export interface Profile {
 export function defaultProfile(now: Date): Profile {
   return {
     version: 1,
-    settings: { direction: { source: 'tr', target: 'en' }, difficultyMode: 'adaptive', dailyGoal: 10, theme: 'auto', sound: true, music: false },
+    settings: { direction: { source: 'tr', target: 'en' }, difficultyMode: 'adaptive', dailyGoal: 10, sound: true, music: false },
     tutorialDone: false,
     puzzleTutorialStep: 0,
     campaign: initialCampaign(),

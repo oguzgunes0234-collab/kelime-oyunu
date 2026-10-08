@@ -1,83 +1,7 @@
 /* Kelime Köprüsü — sıcak, neşeli, güven veren bir öğrenme oyunu görünümü.
-   Renkler token olarak tanımlı; koyu tema aynı tokenları yeniden tanımlar. */
+   Yalnızca koyu tema var; renkler token olarak tek yerde tanımlı. */
 
 :root {
-  color-scheme: light;
-  --bg: #fff6e9;
-  --surface: #ffffff;
-  --surface-2: #fff0dc;
-  --line: #efd9bb;
-  --text: #2b1d14;
-  --muted: #6b5443;
-  --primary: #c2410c;
-  --primary-hover: #a8380a;
-  --primary-ink: #ffffff;
-  --accent: #ff8a3d;
-  --teal: #1f6f6b;
-  --good: #16703a;
-  --good-bg: #e2f5e6;
-  --bad: #b42318;
-  --bad-bg: #fde8e5;
-  --info-bg: #fff3dc;
-  --tile-bg: #ffe0b3;
-  --tile-top: #fff0d6;
-  --tile-edge: #d98b43;
-  --tile-ink: #3b2412;
-  --slot-bg: #ffffff;
-  --slot-line: #e2c49c;
-  --focus: #1d4ed8;
-  --shadow: 0 1px 2px rgb(89 50 10 / 0.08), 0 6px 18px rgb(89 50 10 / 0.08);
-  --t-shuffle: #1f6f6b;
-  --t-shuffle-bg: #dff3f1;
-  --t-magnet: #be123c;
-  --t-magnet-bg: #ffe4ea;
-  --t-hint: #a16207;
-  --t-hint-bg: #fff3c4;
-  --t-undo: #6d28d9;
-  --t-undo-bg: #efe7ff;
-  --radius: 16px;
-  --font: ui-rounded, 'SF Pro Rounded', 'Nunito', 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) {
-    color-scheme: dark;
-    --bg: #1d1a24;
-    --surface: #2a2533;
-    --surface-2: #332c3e;
-    --line: #463d52;
-    --text: #fbf3e8;
-    --muted: #cdbfae;
-    --primary: #ff9a52;
-    --primary-hover: #ffb07a;
-    --primary-ink: #231a12;
-    --accent: #ff9a52;
-    --teal: #6fd3c9;
-    --good: #7ee29d;
-    --good-bg: #1f3a29;
-    --bad: #ff9d8f;
-    --bad-bg: #472524;
-    --info-bg: #3a3140;
-    --tile-bg: #f6d4a2;
-    --tile-top: #fde7c6;
-    --tile-edge: #b8773a;
-    --tile-ink: #2b1d14;
-    --slot-bg: #2f2939;
-    --slot-line: #5b5068;
-    --focus: #93c5fd;
-    --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 6px 18px rgb(0 0 0 / 0.25);
-    --t-shuffle: #6fd3c9;
-    --t-shuffle-bg: #1f3b3a;
-    --t-magnet: #ff8fa6;
-    --t-magnet-bg: #47212c;
-    --t-hint: #f5c451;
-    --t-hint-bg: #43391a;
-    --t-undo: #c4a7ff;
-    --t-undo-bg: #342a4d;
-  }
-}
-
-:root[data-theme='dark'] {
   color-scheme: dark;
   --bg: #1d1a24;
   --surface: #2a2533;
@@ -111,6 +35,8 @@
   --t-hint-bg: #43391a;
   --t-undo: #c4a7ff;
   --t-undo-bg: #342a4d;
+  --radius: 16px;
+  --font: ui-rounded, 'SF Pro Rounded', 'Nunito', 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
 }
 
 *,

@@ -33,12 +33,6 @@ export function App() {
   const [storeOpen, setStoreOpen] = useState(false);
 
   useEffect(() => {
-    const root = document.documentElement;
-    if (profile.settings.theme === 'auto') root.removeAttribute('data-theme');
-    else root.setAttribute('data-theme', profile.settings.theme);
-  }, [profile.settings.theme]);
-
-  useEffect(() => {
     window.scrollTo(0, 0);
   }, [screen]);
 

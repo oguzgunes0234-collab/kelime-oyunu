@@ -37,6 +37,10 @@ export const TOPIC_MODES: TopicMode[] = [
   { id: 'hukuk', name: 'Hukuk', packTopics: ['hukuk'] },
   // Dilbilgisi: düzensiz fiillerin geçmiş zamanı ("gitti" ↔ went). Bkz. Entry.grammar.
   { id: 'gecmis', name: 'Geçmiş zaman', packTopics: ['dilbilgisi'] },
+  // Paketteki mevcut etiketlerden açılan konular (yeni kelime eklenmedi).
+  { id: 'okul', name: 'Okul ve eğitim', packTopics: ['okul'] },
+  { id: 'duygular', name: 'Duygular', packTopics: ['duygular'] },
+  { id: 'doga', name: 'Doğa ve hava', packTopics: ['doğa', 'hayvanlar', 'hava'] },
 ];
 
 export interface TopicStatus {

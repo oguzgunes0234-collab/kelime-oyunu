@@ -169,7 +169,7 @@ describe('eski kayıtlarla uyum', () => {
     // f1d5a4d sürümünün yazdığı biçim: puzzleTutorialStep, adaptive.puzzle*, daily.todayPuzzles yok.
     const old = {
       version: 1,
-      settings: { direction: { source: 'tr', target: 'en' }, difficultyMode: 'adaptive', dailyGoal: 10, theme: 'auto' },
+      settings: { direction: { source: 'tr', target: 'en' }, difficultyMode: 'adaptive', dailyGoal: 10 },
       tutorialDone: true,
       puzzleIntroDone: true,
       inventory: { shuffle: 5, magnet: 2, hint: 1, undo: 8 },

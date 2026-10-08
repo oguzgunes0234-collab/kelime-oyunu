@@ -10,6 +10,12 @@ import type { PuzzleState } from './puzzle';
 
 export const STORAGE_KEY = 'kelime-oyunu:profil:v1';
 
+/** Eski kayıtlarda kalan tema seçimi (açık/koyu) artık yok: yalnızca koyu tema var. */
+function settingsWithoutTheme<T extends object>(s: T): T {
+  const { theme: _theme, ...rest } = s as T & { theme?: unknown };
+  return rest as T;
+}
+
 export function loadProfile(now: Date = new Date()): Profile {
   const fresh = defaultProfile(now);
   try {
@@ -21,7 +27,7 @@ export function loadProfile(now: Date = new Date()): Profile {
     const merged = {
       ...fresh,
       ...data,
-      settings: { ...fresh.settings, ...data.settings },
+      settings: settingsWithoutTheme({ ...fresh.settings, ...data.settings }),
       inventory: { ...INITIAL_INVENTORY, ...data.inventory },
       daily: { ...fresh.daily, ...data.daily, day: data.daily?.day ?? dayKey(now) },
       adaptive: { ...fresh.adaptive, ...data.adaptive },

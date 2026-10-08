@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { DIFFICULTY_LABEL } from '../../core/pack';
-import type { Profile, ThemeSetting } from '../../core/profile';
+import type { Profile } from '../../core/profile';
 import type { WordPack } from '../../core/types';
 import { BackIcon } from '../components/Icons';
 import { Sheet } from '../components/Sheet';
@@ -14,12 +14,6 @@ interface Props {
   onReplayPuzzleTutorial: () => void;
   onReset: () => void;
 }
-
-const THEMES: { id: ThemeSetting; label: string }[] = [
-  { id: 'auto', label: 'Cihaza göre' },
-  { id: 'light', label: 'Açık' },
-  { id: 'dark', label: 'Koyu' },
-];
 
 export function Settings({ pack, profile, setProfile, onBack, onReplayTutorial, onReplayPuzzleTutorial, onReset }: Props) {
   const [confirm, setConfirm] = useState(false);
@@ -46,24 +40,6 @@ export function Settings({ pack, profile, setProfile, onBack, onReplayTutorial, 
         <h2>Günlük hedef</h2>
         <p className="small">Günde bir bulmacayı tamamla: tüm kelimelerini çöz (Anlam ve Harf aç serbest).</p>
         <p className="muted small">Hedefi kaçırmanın cezası yok; haftada bir boş gün seriyi bozmaz.</p>
-      </section>
-
-      <section className="setting">
-        <h2 id="theme-label">Görünüm</h2>
-        <div className="seg" role="radiogroup" aria-labelledby="theme-label">
-          {THEMES.map((t) => (
-            <button
-              key={t.id}
-              type="button"
-              role="radio"
-              aria-checked={s.theme === t.id}
-              className={s.theme === t.id ? 'selected' : ''}
-              onClick={() => setProfile({ ...profile, settings: { ...s, theme: t.id } })}
-            >
-              {t.label}
-            </button>
-          ))}
-        </div>
       </section>
 
       <section className="setting">
