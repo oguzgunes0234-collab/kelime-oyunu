@@ -1,7 +1,7 @@
 # Devam notu (geliştirme oturumları arası)
 
 Aşağıdaki işler `main`'e birleştirildi ve yayında (oyun sahibinin onayıyla,
-2026-10-01): herkese açık test linki ve telefondaki Tailscale adresi güncel (0b526bb: konu çizimleri, üç yeni konu, yalnızca koyu tema).
+2026-10-01): herkese açık test linki ve telefondaki Tailscale adresi güncel (2b37939: tek yön, her bulmaca bir bölüm, kaymayan sonuç ekranı).
 Yeni işler için `main`'den çalışın. `main`'e birleştirme ve yayın her seferinde
 oyun sahibine sorulur.
 
