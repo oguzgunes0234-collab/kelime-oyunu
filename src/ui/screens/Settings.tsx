@@ -45,7 +45,7 @@ export function Settings({ pack, profile, setProfile, onBack, onReplayTutorial, 
       <section className="setting">
         <h2>Günlük hedef</h2>
         <p className="small">Günde bir bulmacayı tamamla: tüm kelimelerini çöz (Anlam ve Harf aç serbest).</p>
-        <p className="muted small">Hedefi kaçırmak hiçbir şey eksiltmez; haftada bir kaçırılan gün seriyi bozmaz.</p>
+        <p className="muted small">Hedefi kaçırmanın cezası yok; haftada bir boş gün seriyi bozmaz.</p>
       </section>
 
       <section className="setting">
@@ -112,7 +112,7 @@ export function Settings({ pack, profile, setProfile, onBack, onReplayTutorial, 
       <section className="setting">
         <h2>Verilerin</h2>
         <p className="muted small">
-          İlerleme, ayarlar, jetonlar ve tekrar listesi yalnızca bu tarayıcıda saklanır. Tarayıcı verilerini silersen bunlar da silinir.
+          İlerlemen yalnızca bu tarayıcıda saklanır. Tarayıcı verilerini silersen o da silinir.
         </p>
         <button type="button" className="btn btn-danger" onClick={() => setConfirm(true)}>
           İlerlemeyi sıfırla

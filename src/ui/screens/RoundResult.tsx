@@ -91,7 +91,7 @@ export function RoundResult({ question: q, outcome, isLast, tutorial, onNext }: 
       {!correct && (
         <p className="teach">
           “{q.prompt}” {tgt.inName} <strong lang={q.target}>“{q.answer}”</strong> demektir.
-          {!tutorial && ' Bu kelimeyi tekrar listene ekledik; birazdan ya da sonra yeniden çalışabilirsin.'}
+          {!tutorial && ' Bu kelimeyi tekrar listene ekledik; sonra yeniden çalışırsın.'}
         </p>
       )}
       {correct && outcome.addedToReview && !tutorial && (
@@ -99,7 +99,7 @@ export function RoundResult({ question: q, outcome, isLast, tutorial, onNext }: 
       )}
       {outcome.removedFromReview && <p className="info-line good">Bu kelimeyi artık biliyorsun — tekrar listenden çıkarıldı.</p>}
       {outcome.goalReached && (
-        <p className="info-line good">Günlük hedef tamamlandı! Jeton ve her araçtan hediye hak kazandın.</p>
+        <p className="info-line good">Günlük hedef tamam! Jeton ve her araçtan hediye hak kazandın.</p>
       )}
       {outcome.usedRestDay && <p className="info-line">Dün ara verdin; haftalık dinlenme günün kullanıldı, serin sürüyor.</p>}
       {outcome.levelChange === 'up' && outcome.difficultyAfter && (

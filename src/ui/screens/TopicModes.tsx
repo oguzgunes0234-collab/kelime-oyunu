@@ -22,7 +22,7 @@ export function TopicModes({ pack, onBack, onPlay }: Props) {
         <button type="button" className="icon-btn" onClick={onBack} aria-label="Geri">
           <BackIcon />
         </button>
-        <h1>Konu modları</h1>
+        <h1>Konular</h1>
       </header>
       <p className="muted">
         Tek bir kelime grubuyla bulmaca çöz. Konu bulmacaları bölüm ilerlemeni değiştirmez; tamamladığın bulmaca günlük hedefe sayılır.

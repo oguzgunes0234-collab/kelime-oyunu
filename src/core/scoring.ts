@@ -44,7 +44,7 @@ export function scoreRound(state: RoundState): ScoreBreakdown {
   if (extraLetters > 0) lines.push({ label: 'Uzun kelime', points: extraLetters });
   if (state.wrongAttempts === 0) lines.push({ label: 'İlk denemede', points: FIRST_TRY_BONUS });
   else lines.push({ label: `${state.wrongAttempts} yanlış deneme`, points: -WRONG_ATTEMPT_COST * state.wrongAttempts });
-  if (state.used.magnet > 0) lines.push({ label: `Mıknatıs ×${state.used.magnet}`, points: -TOOL_POINT_COST.magnet * state.used.magnet });
+  if (state.used.magnet > 0) lines.push({ label: `Harf aç ×${state.used.magnet}`, points: -TOOL_POINT_COST.magnet * state.used.magnet });
   if (state.meaningHintShown) lines.push({ label: 'Anlam ipucu', points: -MEANING_HINT_COST });
   if (state.letterHints > 0) lines.push({ label: `Harf ipucu ×${state.letterHints}`, points: -TOOL_POINT_COST.hint * state.letterHints });
   const raw = lines.reduce((sum, l) => sum + l.points, 0);

@@ -108,7 +108,7 @@ export function PuzzleResult({ puzzle, outcome, profile, onAgain, onHome, onRevi
       ) : (
         !puzzle.topic && <p className="info-line">Bölümde ilerlemek için bulmacanın tüm kelimelerini çöz (yardım serbest).</p>
       )}
-      {outcome.goalReached && <p className="info-line good">Günlük hedef tamamlandı! Jeton ve her araçtan hediye hak kazandın.</p>}
+      {outcome.goalReached && <p className="info-line good">Günlük hedef tamam! Jeton ve her araçtan hediye hak kazandın.</p>}
       {outcome.usedRestDay && <p className="info-line">Dün ara verdin; haftalık dinlenme günün kullanıldı, serin sürüyor.</p>}
       {outcome.levelChange === 'up' && outcome.difficultyAfter && (
         <p className="info-line good">Çok iyi gidiyorsun — sıradaki bulmaca {DIFFICULTY_LABEL[outcome.difficultyAfter]} seviyesinde.</p>

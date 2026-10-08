@@ -50,7 +50,7 @@ export const TOOL_PACKS: ToolPack[] = [
 
 /**
  * Bulmaca jokerleri. Anlam ve Harf aç, harf taşı oyunuyla aynı hakları kullanır
- * (Anlam → İpucu hakkı, Harf aç → Mıknatıs hakkı). Cümle ve Eş anlamlı yalnız
+ * (Anlam ve Harf aç; hızlı turda da bu adlarla görünür). Cümle ve Eş anlamlı yalnız
  * bulmacada vardır ve kendi hakları vardır. Hepsi kelime başına bir kez
  * gösterilir; kullanılan kelime "yardımla çözüldü" sayılır.
  */
@@ -59,23 +59,23 @@ export const PUZZLE_TOOL_ORDER: PuzzleToolId[] = ['hint', 'sentence', 'synonym',
 export const PUZZLE_TOOL_INFO: Record<PuzzleToolId, { name: string; does: string; cost: string }> = {
   hint: {
     name: 'Anlam',
-    does: 'Seçili kelimenin anlam ipucunu gösterir (kelime başına bir kez).',
-    cost: `1 İpucu hakkı · −${MEANING_HINT_COST} puan`,
+    does: 'Seçili kelimenin anlamını gösterir. Kelime başına bir kez.',
+    cost: `1 Anlam hakkı · −${MEANING_HINT_COST} puan`,
   },
   sentence: {
     name: 'Cümle',
-    does: 'Seçili kelimeyi örnek cümle içinde, yeri boş bırakılarak gösterir; altında cümlenin çevirisi olur.',
+    does: 'Kelimeyi örnek cümlede, yeri boş olarak gösterir; altında çevirisi olur.',
     cost: `1 Cümle hakkı · −${TOOL_POINT_COST.sentence} puan`,
   },
   synonym: {
     name: 'Eş anlamlı',
-    does: 'Aranan kelimeyle aynı anlama gelen, kabul edilen diğer karşılıkları gösterir (ör. amaç için: hedef, gaye).',
+    does: 'Aynı anlama gelen, kabul edilen diğer karşılıkları gösterir (ör. amaç: hedef, gaye).',
     cost: `1 Eş anlamlı hakkı · −${TOOL_POINT_COST.synonym} puan`,
   },
   magnet: {
     name: 'Harf aç',
-    does: 'Seçili kareye doğru harfi yazar; kare doğruysa kelimedeki ilk boş ya da yanlış kareyi açar.',
-    cost: `1 Mıknatıs hakkı · −${TOOL_POINT_COST.magnet} puan`,
+    does: 'Seçili kareye doğru harfi yazar. Kare zaten doğruysa ilk boş ya da yanlış kareyi açar.',
+    cost: `1 Harf aç hakkı · −${TOOL_POINT_COST.magnet} puan`,
   },
 };
 
@@ -86,13 +86,13 @@ export const TOOL_INFO: Record<ToolId, { name: string; does: string; cost: strin
     cost: '1 hak · puan kesmez',
   },
   magnet: {
-    name: 'Mıknatıs',
-    does: 'Sıradaki doğru harfi cevap alanına yerleştirir; hatalı harfleri de geri alır.',
+    name: 'Harf aç',
+    does: 'Sıradaki doğru harfi yerleştirir, hatalı harfleri geri alır.',
     cost: `1 hak · −${TOOL_POINT_COST.magnet} puan`,
   },
   hint: {
-    name: 'İpucu',
-    does: 'İlk kullanımda anlam ipucu verir, sonra sıradaki harfi gösterir.',
+    name: 'Anlam',
+    does: 'Önce kelimenin anlamını, sonra sıradaki harfi gösterir.',
     cost: `1 hak · anlam −${MEANING_HINT_COST}, harf −${TOOL_POINT_COST.hint} puan`,
   },
   undo: {

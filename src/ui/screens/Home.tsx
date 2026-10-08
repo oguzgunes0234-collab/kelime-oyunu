@@ -45,9 +45,9 @@ export function Home({ pack, profile, setProfile, onPuzzle, puzzleSaved, tutoria
   const openTopics = topics.filter((t) => t.enabled).length;
 
   const action = tutorialPending
-    ? { label: 'Başla', sub: '5 kısa eğitim bulmacasıyla başlar; istediğin an atlayabilirsin.' }
+    ? { label: 'Başla', sub: '5 kısa eğitim bulmacası. İstersen atla.' }
     : puzzleSaved
-      ? { label: 'Devam et', sub: 'Yarım kalan bulmacan kaldığı yerde bekliyor.' }
+      ? { label: 'Devam et', sub: 'Yarım kalan bulmacan seni bekliyor.' }
       : { label: profile.campaign.puzzlesDone > 0 ? 'Sıradaki bulmaca' : 'Başla', sub: `${src.name} ipucu, ${tgt.name} cevap` };
 
   return (
@@ -96,7 +96,7 @@ export function Home({ pack, profile, setProfile, onPuzzle, puzzleSaved, tutoria
 
       <section className="topic-panel" aria-labelledby="topics-title">
         <h2 id="topics-title">
-          Konu modları <small>{openTopics} açık · konuya dokun</small>
+          Konular <small>{openTopics} açık · konuya dokun</small>
         </h2>
         <ul className="topic-scroll">
           {topics.map((t) => (

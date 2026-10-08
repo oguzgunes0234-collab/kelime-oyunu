@@ -9,7 +9,7 @@ interface Props {
   setProfile: (p: Profile) => void;
   onClose: () => void;
   onOpenStore: () => void;
-  /** Bulmacada aracın adı farklıdır (ör. Mıknatıs hakkı → "Harf aç"). */
+  /** Bulmacada gösterilecek ad (araç adları her yerde aynı: Anlam, Harf aç). */
   name?: string;
   /** Hangi eylemlerin her zaman ücretsiz olduğunu anlatan cümle. */
   freeNote?: string;
@@ -58,7 +58,7 @@ export function ToolEmpty({ tool, profile, setProfile, onClose, onOpenStore, nam
 
   return (
     <Sheet title={`${info.name} hakkın kalmadı`} onClose={onClose}>
-      <p>Oyuna araçsız devam edebilirsin; hiçbir bulmaca buna bağlı değil. {freeNote ?? 'Harfe dokunup geri almak ve Pas geç her zaman ücretsiz.'}</p>
+      <p>Oyuna araçsız devam edebilirsin; hiçbir bulmaca buna bağlı değil. {freeNote ?? 'Harfe dokunup geri almak ve “Pas geç” her zaman ücretsiz.'}</p>
       <div className="note">
         <p>
           <strong>Oynayarak kazan:</strong> doğru cevap +{COINS_PER_CORRECT} jeton, yardımsız ilk denemede +{COINS_CLEAN_BONUS}. Günlük

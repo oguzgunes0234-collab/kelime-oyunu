@@ -763,8 +763,8 @@ export function Puzzle(props: Props) {
                 <ClueArrow arrow="right-down" /> yandan aşağı
               </span>
             </li>
-            <li>Bir kareye ya da ipucuna dokun, sonra alttaki klavyeyle yaz. Kesişen kareye tekrar dokunursan yön değişir.</li>
-            <li>Kelimeler birbirini keser: bildiğin kelimenin harfleri diğerlerine ipucu olur.</li>
+            <li>Bir kareye ya da ipucuna dokun, klavyeyle yaz. Kesişen kareye tekrar dokunursan yön değişir.</li>
+            <li>Kelimeler kesişir: bildiğin kelimenin harfleri diğerlerine ipucu olur.</li>
             <li>
               Takılırsan <strong>Anlam</strong> ya da <strong>Harf aç</strong> kullan. Yanlışlar puanı biraz düşürür, ama hakkın bitmez; çözemediğin
               kelimeler tekrar listene eklenir.
@@ -800,10 +800,10 @@ export function Puzzle(props: Props) {
       {dialog?.kind === 'quit' && (
         <Sheet title="Bulmacayı bitir?" onClose={() => setDialog(null)}>
           <p>
-            {total} kelimeden {solved} tanesini çözdün. Bitirirsen çözemediklerin cevaplarıyla gösterilir ve tekrar listene eklenir; kazandığın
-            puan ve jetonlar korunur.
+            {total} kelimeden {solved} tanesini çözdün. Bitirirsen kalanların cevabı gösterilir ve tekrar listene eklenir. Puanın ve
+            jetonların korunur.
           </p>
-          <p className="muted small">Sonra devam etmek istersen “Ana sayfaya dön” de; bulmaca kaldığı yerde bekler.</p>
+          <p className="muted small">“Ana sayfaya dön” dersen bulmaca kaldığı yerde bekler.</p>
           <div className="stack">
             <button type="button" className="btn btn-primary btn-block" onClick={() => setDialog(null)}>
               Çözmeye devam et

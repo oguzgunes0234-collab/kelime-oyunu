@@ -86,7 +86,7 @@ function describe(event: RoundEvent | null): Omit<NonNullable<Note>, 'seq'> | nu
         text:
           event.removedWrong > 0
             ? `${event.removedWrong} hatalı harf geri alındı, sıradaki harf yerleştirildi.`
-            : 'Mıknatıs sıradaki harfi yerleştirdi.',
+            : 'Sıradaki harf yerleştirildi.',
       };
     case 'hint-meaning':
       return { tone: 'info', text: 'Anlam ipucu soru kartında. Tekrar dokunursan sıradaki harfi gösterir.' };

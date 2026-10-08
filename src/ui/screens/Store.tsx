@@ -19,7 +19,7 @@ interface Props {
   onClose: () => void;
 }
 
-/** "5 Mıknatıs · 5 İpucu" gibi okunur içerik. */
+/** "5 Anlam · 5 Harf aç" gibi okunur içerik. */
 function packContents(p: ToolPack): string {
   return (STORE_TOOL_ORDER.filter((t) => p.tools[t]) as ToolId[]).map((t) => `${p.tools[t]} ${TOOL_INFO[t].name}`).join(' · ');
 }
@@ -52,7 +52,7 @@ export function Store({ profile, setProfile, onClose }: Props) {
           <li>Yardımsız, ilk denemede doğru: +{COINS_CLEAN_BONUS} jeton daha</li>
           <li>Günlük hedef: +{DAILY_GOAL_REWARD.coins} jeton ve her araçtan hediye hak</li>
         </ul>
-        <p className="muted small">Oyunun tamamı satın alma yapmadan oynanabilir. Araçlar isteğe bağlıdır.</p>
+        <p className="muted small">Oyunun tamamı ücretsiz oynanır; araçlar isteğe bağlı.</p>
         <ul className="charge-list">
           {STORE_TOOL_ORDER.map((tool) => {
             const Icon = TOOL_ICONS[tool];

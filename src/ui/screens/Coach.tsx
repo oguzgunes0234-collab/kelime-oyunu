@@ -22,7 +22,7 @@ export function Coach({ step, question, onNext, onSkip }: Props) {
   const content: Record<typeof step, { title: string; body: string; action?: { label: string; next: CoachStep } }> = {
     intro: {
       title: 'Hoş geldin!',
-      body: 'Sana bir kelime göstereceğiz; karşılığını karışık harf taşlarından kuracaksın. Bir örnekle deneyelim — bu turda hiçbir şey harcanmaz.',
+      body: 'Sana bir kelime göstereceğiz; karşılığını karışık harf taşlarından kuracaksın. Önce bir örnek: bu turda hak harcanmaz.',
       action: { label: 'Başlayalım', next: 'question' },
     },
     question: {
@@ -36,7 +36,7 @@ export function Coach({ step, question, onNext, onSkip }: Props) {
     },
     tools: {
       title: 'Yardım araçları',
-      body: 'Alttaki dört araç: Karıştır, Mıknatıs, İpucu, Geri al. Rozetteki sayı kalan hakkı gösterir. Şimdi Mıknatıs’a dokun: sıradaki doğru harfi senin yerine koyar.',
+      body: 'Alttaki dört araç: Karıştır, Harf aç, Anlam, Geri al. Rozetteki sayı kalan hakkı gösterir. Şimdi Harf aç’a dokun: sıradaki doğru harfi senin yerine koyar.',
     },
     finish: {
       title: 'Kelimeyi tamamla',

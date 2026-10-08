@@ -36,7 +36,7 @@ export function Review({ pack, profile, setProfile, onBack, onStudy }: Props) {
             <BookIcon width={40} height={40} />
           </span>
           <h2>Tekrar listen boş</h2>
-          <p>Yanlış cevapladığın, pas geçtiğin ya da yardımla çözdüğün kelimeler buraya gelir. Yardımsız doğru bildiğinde listeden çıkarlar.</p>
+          <p>Yanlış yaptığın, pas geçtiğin ya da yardımla çözdüğün kelimeler buraya gelir. Yardımsız bilince listeden çıkar.</p>
           <button type="button" className="btn btn-primary" onClick={onBack}>
             Oynamaya dön
           </button>
