@@ -145,6 +145,13 @@ export const CheckIcon = (p: P) => (
 
 export const CrossIcon = CloseIcon;
 
+export const SpeakerIcon = (p: P) => (
+  <svg {...base(p)}>
+    <path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" />
+    <path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11" />
+  </svg>
+);
+
 export const BackspaceIcon = (p: P) => (
   <svg {...base(p)}>
     <path d="M9 5h11v14H9l-6-7 6-7Z" />

@@ -4,6 +4,7 @@ import { removeReview, type Profile, type ReviewReason } from '../../core/profil
 import { reviewQuestion } from '../../core/select';
 import type { WordPack } from '../../core/types';
 import { BackIcon, BookIcon } from '../components/Icons';
+import { SpeakButton } from '../components/SpeakButton';
 
 interface Props {
   pack: WordPack;
@@ -55,10 +56,12 @@ export function Review({ pack, profile, setProfile, onBack, onStudy }: Props) {
                 <div className="rv-main">
                   <p className="rv-pair">
                     <span lang={q!.source}>{q!.prompt}</span>
+                    {q!.source === 'en' && <SpeakButton text={q!.prompt} lang="en" />}
                     <span aria-hidden="true" className="arrow">
                       →
                     </span>
                     <strong lang={q!.target}>{q!.answer}</strong>
+                    {q!.target === 'en' && <SpeakButton text={q!.answer} lang="en" />}
                   </p>
                   <p className="rv-meta">
                     <span className={`chip reason-${item.reason}`}>{REASON[item.reason]}</span>

@@ -3,6 +3,7 @@ import { DIFFICULTY_LABEL, POS_LABEL } from '../../core/pack';
 import type { RoundOutcome } from '../../core/profile';
 import type { Question } from '../../core/types';
 import { BookIcon, CheckIcon, CoinIcon } from '../components/Icons';
+import { SpeakButton } from '../components/SpeakButton';
 import { Sheet } from '../components/Sheet';
 
 interface Props {
@@ -49,6 +50,7 @@ export function RoundResult({ question: q, outcome, isLast, tutorial, onNext }: 
           <span lang={q.source} className="word-src">
             {q.prompt}
           </span>
+          {q.source === 'en' && <SpeakButton text={q.prompt} lang="en" />}
           <span aria-hidden="true" className="arrow">
             →
           </span>
@@ -56,6 +58,7 @@ export function RoundResult({ question: q, outcome, isLast, tutorial, onNext }: 
           <span lang={q.target} className="word-tgt">
             {q.answer}
           </span>
+          {q.target === 'en' && <SpeakButton text={q.answer} lang="en" />}
         </p>
         <p className="q-meta">
           <span className="chip">{POS_LABEL[q.pos]}</span>
@@ -77,11 +80,13 @@ export function RoundResult({ question: q, outcome, isLast, tutorial, onNext }: 
             {q.targetExample && (
               <p>
                 <span className="ex-lang">{tgt.name}</span> <span lang={q.target}>{q.targetExample}</span>
+                {q.target === 'en' && <SpeakButton text={q.targetExample} lang="en" label="Örnek cümleyi sesli dinle" />}
               </p>
             )}
             {q.sourceExample && (
               <p>
                 <span className="ex-lang">{src.name}</span> <span lang={q.source}>{q.sourceExample}</span>
+                {q.source === 'en' && <SpeakButton text={q.sourceExample} lang="en" label="Örnek cümleyi sesli dinle" />}
               </p>
             )}
           </div>

@@ -5,6 +5,7 @@ import { PRACTICE_COINS_PER_WORD } from '../../core/economy';
 import { practiceMastered, type PracticeItem, type PracticeResult } from '../../core/practice';
 import type { Direction } from '../../core/types';
 import { CheckIcon, CloseIcon, CoinIcon, CrossIcon } from '../components/Icons';
+import { SpeakButton } from '../components/SpeakButton';
 import { Keyboard } from '../components/Keyboard';
 import { sfx } from '../sound';
 
@@ -118,7 +119,9 @@ export function Practice({ items, direction, onDone }: Props) {
             <li key={r.entryId} className={practiceMastered(r) ? 'ok' : ''}>
               {practiceMastered(r) ? <CheckIcon width={16} height={16} /> : <CrossIcon width={16} height={16} />}
               <strong lang={direction.target}>{displayWord(items[i].answer, direction.target)}</strong>
+              {direction.target === 'en' && <SpeakButton text={items[i].answer} lang="en" />}
               <span lang={direction.source}>{items[i].prompt}</span>
+              {direction.source === 'en' && <SpeakButton text={items[i].prompt} lang="en" />}
             </li>
           ))}
         </ul>
@@ -148,6 +151,7 @@ export function Practice({ items, direction, onDone }: Props) {
           <p className="muted small">Bu kelimenin {src.name} anlamı ne?</p>
           <p className="practice-word" lang={direction.target}>
             {displayWord(item.answer, direction.target)}
+            {direction.target === 'en' && <SpeakButton text={item.answer} lang="en" size={22} />}
           </p>
           <div className="practice-choices">
             {item.choices.map((c, i) => {
@@ -190,6 +194,7 @@ export function Practice({ items, direction, onDone }: Props) {
                 <p className="muted small">Bu kelimenin {tgt.name} karşılığını yaz.</p>
                 <p className="practice-word" lang={direction.source}>
                   {item.prompt}
+                  {direction.source === 'en' && <SpeakButton text={item.prompt} lang="en" size={22} />}
                 </p>
               </>
             )}
@@ -201,8 +206,18 @@ export function Practice({ items, direction, onDone }: Props) {
               ))}
             </div>
             {clozeState === 'wrong' && <p className="info-line">Olmadı; harfleri silip yeniden dene. Hiçbir şey eksilmez.</p>}
-            {clozeState === 'right' && <p className="info-line good">Doğru!</p>}
-            {clozeState === 'revealed' && <p className="info-line">Cevap: {displayWord(item.answer, direction.target)}</p>}
+            {clozeState === 'right' && (
+              <p className="info-line good">
+                Doğru!
+                {direction.target === 'en' && <SpeakButton text={item.answer} lang="en" />}
+              </p>
+            )}
+            {clozeState === 'revealed' && (
+              <p className="info-line">
+                Cevap: {displayWord(item.answer, direction.target)}
+                {direction.target === 'en' && <SpeakButton text={item.answer} lang="en" />}
+              </p>
+            )}
             {clozeState === 'right' || clozeState === 'revealed' ? (
               <button type="button" className="btn btn-primary btn-block" onClick={nextWord}>
                 {index + 1 < items.length ? 'Sıradaki kelime' : 'Bitir'}

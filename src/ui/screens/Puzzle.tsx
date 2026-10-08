@@ -35,6 +35,7 @@ import { chapterInfo } from '../../core/campaign';
 import type { Difficulty, Direction, WordPack } from '../../core/types';
 import { ChevronLeftIcon, ChevronRightIcon, ClueArrow, CloseIcon, CoinIcon, QuestionIcon, TOOL_ICONS } from '../components/Icons';
 import { Keyboard } from '../components/Keyboard';
+import { SpeakButton } from '../components/SpeakButton';
 import { Sheet } from '../components/Sheet';
 import { ChapterComplete } from './ChapterComplete';
 import { PuzzleResult } from './PuzzleResult';
@@ -606,6 +607,7 @@ export function Puzzle(props: Props) {
           {selKind === 'translation' ? (
             <p className="cw-clue-line">
               <strong lang={src.code}>{selWord.clue}</strong>
+              {src.code === 'en' && <SpeakButton text={selWord.clue} lang="en" />}
               <ClueArrow arrow={selWord.arrow} width={14} height={14} className="cw-arrow" />
               <span className="cw-len">{selWord.letters.length} harf</span>
             </p>
@@ -651,6 +653,7 @@ export function Puzzle(props: Props) {
           {puzzle.solved[puzzle.sel.word] && (
             <p className="cw-clue-sub good">
               Çözüldü: <span lang={tgt.code}>{displayWord(selWord.answer, tgt.code)}</span>
+              {tgt.code === 'en' && <SpeakButton text={selWord.answer} lang="en" />}
               {selKind !== 'translation' && (
                 <>
                   {' '}

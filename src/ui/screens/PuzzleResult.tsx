@@ -8,6 +8,7 @@ import { DIFFICULTY_LABEL, POS_LABEL } from '../../core/pack';
 import { PRACTICE_COINS_PER_WORD } from '../../core/economy';
 import type { Profile } from '../../core/profile';
 import type { PuzzleOutcome, PuzzleState } from '../../core/puzzle';
+import { SpeakButton } from '../components/SpeakButton';
 import { CheckIcon, CoinIcon, CrossIcon, FlameIcon } from '../components/Icons';
 
 interface Props {
@@ -130,10 +131,12 @@ export function PuzzleResult({ puzzle, outcome, profile, onAgain, onHome, onRevi
                   </span>
                   <span className="sr-only">{ok ? 'Çözüldü' : 'Çözülmedi'}:</span>
                   <span lang={q.source}>{q.prompt}</span>
+                  {q.source === 'en' && <SpeakButton text={q.prompt} lang="en" />}
                   <span aria-hidden="true" className="arrow">
                     →
                   </span>
                   <strong lang={q.target}>{displayWord(r.answer, q.target)}</strong>
+                  {q.target === 'en' && <SpeakButton text={r.answer} lang="en" />}
                   {ok && r.helped && <span className="chip reason-helped">yardımla</span>}
                   <span className="s-points">{r.score.total > 0 ? `+${r.score.total}` : ''}</span>
                 </summary>
@@ -159,11 +162,13 @@ export function PuzzleResult({ puzzle, outcome, profile, onAgain, onHome, onRevi
                       {q.targetExample && (
                         <p>
                           <span className="ex-lang">{tgt.name}</span> <span lang={q.target}>{q.targetExample}</span>
+                          {q.target === 'en' && <SpeakButton text={q.targetExample} lang="en" label="Örnek cümleyi sesli dinle" />}
                         </p>
                       )}
                       {q.sourceExample && (
                         <p>
                           <span className="ex-lang">{src.name}</span> <span lang={q.source}>{q.sourceExample}</span>
+                          {q.source === 'en' && <SpeakButton text={q.sourceExample} lang="en" label="Örnek cümleyi sesli dinle" />}
                         </p>
                       )}
                     </div>

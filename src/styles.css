@@ -1824,3 +1824,29 @@ div.note {
     animation: none;
   }
 }
+
+/* ---------- Telaffuz düğmesi ---------- */
+.speak-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin: -6px 0;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--teal);
+  cursor: pointer;
+  flex: none;
+  vertical-align: middle;
+  touch-action: manipulation;
+}
+.speak-btn:active {
+  background: color-mix(in srgb, var(--teal) 15%, transparent);
+  transform: scale(0.92);
+}
+.speak-btn:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 1px;
+}
