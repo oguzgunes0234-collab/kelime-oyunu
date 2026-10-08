@@ -15,9 +15,10 @@ yapılmayacak. Şifre ya da doğrulama kodu kimseyle paylaşılmamalı.
 
 ## Kararlar
 
-- [ ] Jeton paketi miktarları ve taslak fiyatlar (`docs/gelir-modeli.md` §2)
+- [x] Jeton keseleri: 100 / 250 / 600 jeton, taslak 1,99 / 3,99 / 7,99 $ (`docs/gelir-modeli.md` §2)
 - [ ] Jeton kaybı riski için çözüm (öneri: iCloud yedeği) — **çözülmeden gerçek jeton satışı açılmayacak**
-- [ ] Geçiş reklamı ilk sürümde kapalı kalsın mı (öneri: evet)
+- [x] Geçiş reklamı: AÇIK, bölüm sonunda en sık 3 bulmacada bir (2026-10-09)
+- [x] Reklamsız sürüm: geçiş reklamını kaldırır, ödüllü reklam açık kalır; taslak fiyat 9,99 $
 - [ ] SDK seçimi onayı ve paket kurulumuna izin (Capacitor, Preferences, native-purchases, AdMob)
 - [ ] Uygulama adı çakışma kontrolü (App Store araması, TÜRKPATENT)
 - [ ] Birincil kategori (Eğitim / Oyunlar)

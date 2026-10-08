@@ -32,7 +32,12 @@ export function MockHost() {
           <p className="mock-count" aria-live="polite">
             {left > 0 ? `${left} sn` : 'Bitti'}
           </p>
-          {left > 0 ? (
+          {!req.rewarded ? (
+            // Geçiş reklamı: ödül yok; süre dolunca kapatılır.
+            <button type="button" className="btn btn-secondary btn-block" disabled={left > 0} onClick={() => req.resolve(true)}>
+              {left > 0 ? 'Bekle…' : 'Kapat'}
+            </button>
+          ) : left > 0 ? (
             <button type="button" className="btn btn-ghost btn-block" onClick={() => req.resolve(false)}>
               Kapat (ödül verilmez)
             </button>

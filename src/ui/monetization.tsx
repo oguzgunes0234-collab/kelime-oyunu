@@ -94,7 +94,7 @@ export function MonetizationProvider({ profile, setProfile, children }: { profil
       },
       notePuzzleDone: () => updateAds(notePuzzleDone(adState)),
       beforeNextPuzzle: async () => {
-        if (!shouldShowInterstitial(adState, entitlements, new Date())) return;
+        if (ads.mode === 'off' || !shouldShowInterstitial(adState, entitlements, new Date())) return;
         await ads.showInterstitial();
         updateAds(noteInterstitialShown(adState, new Date()));
       },

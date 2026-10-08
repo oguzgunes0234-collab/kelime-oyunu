@@ -35,6 +35,7 @@ const mock: AdProvider = {
         kind: 'ad',
         label: 'Deneme ödüllü reklamı',
         seconds: 5,
+        rewarded: true,
         resolve: (completed) => {
           closeMock();
           resolve(completed ? 'rewarded' : 'dismissed');
@@ -47,6 +48,7 @@ const mock: AdProvider = {
         kind: 'ad',
         label: 'Deneme geçiş reklamı',
         seconds: 3,
+        rewarded: false,
         resolve: () => {
           closeMock();
           resolve();

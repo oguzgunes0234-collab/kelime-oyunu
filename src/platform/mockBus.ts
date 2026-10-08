@@ -5,7 +5,7 @@
  */
 
 export type MockRequest =
-  | { kind: 'ad'; label: string; seconds: number; resolve: (completed: boolean) => void }
+  | { kind: 'ad'; label: string; seconds: number; rewarded: boolean; resolve: (completed: boolean) => void }
   | { kind: 'purchase'; title: string; detail: string; resolve: (approved: boolean) => void };
 
 type Listener = (req: MockRequest | null) => void;

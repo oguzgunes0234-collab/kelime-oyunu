@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it } from 'vitest';
-import { COIN_PACKS, IAP_MODE, ADS_MODE, INTERSTITIAL } from '../src/monetization/config';
+import { COIN_PACKS, IAP_MODE, ADS_MODE, INTERSTITIAL, NO_ADS_DRAFT_USD } from '../src/monetization/config';
 import {
   countReward,
   initialAdState,
@@ -46,7 +46,11 @@ describe('gelir modeli: varsayılanlar', () => {
   it('derlemede açıkça istenmedikçe reklam ve satın alma kapalı (gerçek ya da deneme)', () => {
     expect(ADS_MODE).toBe('off');
     expect(IAP_MODE).toBe('off');
-    expect(INTERSTITIAL.enabled).toBe(false);
+  });
+
+  it('geçiş reklamı açık ama sınırlı: en sık 3 bulmacada bir, en az 5 dakika arayla; Reklamsız taslak fiyatı 9,99 $', () => {
+    expect(INTERSTITIAL).toEqual({ enabled: true, everyPuzzles: 3, minGapMs: 5 * 60 * 1000 });
+    expect(NO_ADS_DRAFT_USD).toBe(9.99);
   });
 
   it('jeton paketleri: küçük, orta, büyük kese; en büyüğü 600 jeton; taslak fiyat 1,99 $ ile başlar', () => {
@@ -70,7 +74,7 @@ describe('geçiş reklamı', () => {
   const on = { ...INTERSTITIAL, enabled: true };
   it('kapalıyken ve reklamsız kullanıcıya asla (reklamsız sürüm yalnızca zorunlu reklamları kaldırır)', () => {
     const s = { ...initialAdState(day(1)), puzzlesSinceInterstitial: 99 };
-    expect(shouldShowInterstitial(s, { noAds: false }, day(1))).toBe(false);
+    expect(shouldShowInterstitial(s, { noAds: false }, day(1), { ...INTERSTITIAL, enabled: false })).toBe(false);
     expect(shouldShowInterstitial(s, { noAds: true }, day(1), on)).toBe(false);
   });
   it('açıkken: yeterli bulmaca ve süre geçmeden gösterilmez', () => {

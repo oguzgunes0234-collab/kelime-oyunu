@@ -2,7 +2,8 @@
 
 Ana oyun ve temel öğrenme özellikleri (bölümler, konular, tekrar, pekiştirme,
 telaffuz) **ücretsizdir** ve reklama ya da satın almaya bağlı değildir. Gelir:
-isteğe bağlı ödüllü reklam + tek seferlik "Reklamsız" sürüm + küçük jeton paketleri.
+reklamlar (bölüm sonu geçiş reklamı + isteğe bağlı ödüllü reklam) + tek seferlik
+"Reklamsız" sürüm + küçük jeton paketleri.
 
 **Bu sürümde gerçek reklam ve gerçek ödeme yok.** Kod `off` (web; varsayılan)
 ve `mock` (yerel deneme: `VITE_ADS=mock VITE_IAP=mock`) modlarıyla çalışır.
@@ -91,11 +92,11 @@ açılmayacak.** Seçenekler:
 - **Reklamsız sürüm ödüllü reklamı kapatmaz:** isteyen herkes izleyebilir.
 - Hiçbir şey reklama bağlı değil: ana oyun, konular, tekrar, pekiştirme, telaffuz.
 
-**Geçiş reklamı (oturum sonu): değerlendirildi, ilk sürümde KAPALI.**
-Kod hazır (`INTERSTITIAL.enabled = false`). Açılırsa: yalnızca sonuç ekranından
-"Sıradaki bölüm"e geçerken; en erken 3 tamamlanan bulmacada bir ve en az 5 dakika
-arayla; eğitimde ve reklamsız kullanıcıda asla. Öneri: öğrenme akışını böldüğü
-ve geliri küçük olduğu için ilk sürümde kapalı kalsın.
+**Geçiş reklamı (bölüm sonu): AÇIK** (oyun sahibinin kararı, 2026-10-09;
+`INTERSTITIAL.enabled = true`). Yalnızca sonuç ekranından sonraki bölüme
+geçerken; en sık 3 tamamlanan bulmacada bir ve en az 5 dakika arayla; kelime
+çözerken, eğitimde, pekiştirmede ve Reklamsız kullanıcıda asla. Web sürümünde
+(reklam sağlayıcısı yok) hiç çalışmaz.
 
 **Banner: yok** (oyun ekranında kullanılmaz).
 
@@ -105,11 +106,10 @@ ve geliri küçük olduğu için ilk sürümde kapalı kalsın.
 - **Ödüllü reklam kapanmaz** (oyun sahibinin kararı): her zaman isteğe bağlıdır, reklamsız kullanıcı da izleyip ödül alabilir.
 - Ayarlar → **Satın alımları geri yükle** bu ürünü App Store'dan geri yükler.
 - İlerlemeden ayrı saklanır (`kelime-oyunu:satinalma:v1`): "İlerlemeyi sıfırla" silmez.
-- **AÇIK KARAR:** İlk sürümde geçiş reklamı kapalı ve banner yok; yani bu ürün şu an
-  hiçbir reklamı kaldırmıyor. İşlevi olmayan bir ürün Apple incelemesinde sorun
-  çıkarabilir ve alan kişiyi yanıltır. Seçenekler: (a) oturum sonu geçiş reklamını
-  sınırlı açmak (ürün onu kaldırır), (b) ürünü ilk sürümde çıkarmak, (c) ürünü
-  "destekçi paketi" gibi başka bir avantajla yeniden tanımlamak.
+- **Taslak fiyat: 9,99 $** (oyun sahibinin kararı). Not: benzer oyunlarda reklam
+  kaldırma genelde 2,99–4,99 $; satış verisi gelince yeniden değerlendirilebilir.
+  Uygulamada sabit fiyat yazılmaz; StoreKit'in yerel fiyatı gösterilir.
+- Ürün anlamlı: bölüm sonu geçiş reklamını kaldırır.
 
 ## 5. SDK seçimi (kurulmadı; onay bekliyor)
 

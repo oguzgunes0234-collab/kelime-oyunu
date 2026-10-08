@@ -57,9 +57,12 @@ export const COIN_PACKS: (CoinPack & { size: CoinPackSize })[] = [
 export const AD_REWARD_COINS = 10;
 
 /**
- * Geçiş reklamı (oturum sonu): ilk sürümde KAPALI. Açılırsa yalnızca sonuç
- * ekranından "Sıradaki bölüm"e geçerken, en erken 3 tamamlanan bulmacada bir
- * ve en az 5 dakika arayla gösterilir. Reklamsız sürüm YALNIZCA bunu (ve ileride
- * olabilecek diğer zorunlu reklamları) kaldırır.
+ * Geçiş reklamı (bölüm sonu): AÇIK (oyun sahibinin kararı, 2026-10-09).
+ * Yalnızca sonuç ekranından sonraki bölüme geçerken; en sık 3 tamamlanan
+ * bulmacada bir ve en az 5 dakika arayla. Kelime çözerken, eğitimde ve
+ * pekiştirmede asla. Reklamsız sürüm bunu kaldırır (ödüllü reklamı kaldırmaz).
  */
-export const INTERSTITIAL = { enabled: false, everyPuzzles: 3, minGapMs: 5 * 60 * 1000 };
+export const INTERSTITIAL = { enabled: true, everyPuzzles: 3, minGapMs: 5 * 60 * 1000 };
+
+/** Reklamsız sürümün taslak fiyatı (yalnızca belge/deneme; uygulamada StoreKit fiyatı gösterilir). */
+export const NO_ADS_DRAFT_USD = 9.99;

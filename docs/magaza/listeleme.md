@@ -22,7 +22,7 @@ App Store Connect'te tekrar kontrol edilmeli.
   • Telaffuz: kelimeyi ve örnek cümleyi dinle.
   • Hesap yok; ilerlemen yalnızca telefonunda kalır. İnternetsiz oynanır.
 
-  Ana oyun ve öğrenme özellikleri ücretsizdir. İsteğe bağlı: ödüllü reklam izleyerek jeton kazanma, tek seferlik Reklamsız sürüm ve küçük jeton paketleri.
+  Ana oyun ve öğrenme özellikleri ücretsizdir. Uygulama reklam içerir; tek seferlik Reklamsız sürüm bölüm sonu reklamlarını kaldırır. İsteğe bağlı: ödüllü reklam izleyerek jeton kazanma ve küçük jeton paketleri.
 
 ## English
 
@@ -70,5 +70,5 @@ Gereken boyut App Store Connect'te kontrol edilmeli (şu an genelde 6,9" iPhone,
 
 - Hesap/giriş yok; uygulama açılınca doğrudan oynanır. İlk açılışta 5 kısa eğitim bulmacası var ("Eğitimi atla" ile geçilebilir).
 - Uygulama içi satın almalar: Hak ve paketler ekranı (ana sayfa → Paketler). Reklamsız sürüm Ayarlar → "Satın alımları geri yükle" ile geri yüklenir.
-- Reklamlar yalnızca oyuncu "Reklam izle"ye dokununca gösterilen ödüllü reklamlardır; oyunun hiçbir bölümü reklama bağlı değildir. Kişiselleştirilmemiş reklam istenir, ATT kullanılmaz.
+- Reklamlar: (1) bölüm sonunda, en sık 3 bulmacada bir geçiş reklamı (Reklamsız sürümle kalkar); (2) oyuncu "Reklam izle"ye dokununca gösterilen ödüllü reklam. Oyunun hiçbir bölümü reklam izlemeye bağlı değildir. Kişiselleştirilmemiş reklam istenir, ATT kullanılmaz.
 - Uygulama çevrimdışı çalışır; sunucu ve hesap yoktur.
