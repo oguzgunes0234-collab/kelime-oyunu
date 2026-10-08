@@ -1,7 +1,7 @@
 # Devam notu (geliştirme oturumları arası)
 
 Aşağıdaki işler `main`'e birleştirildi ve yayında (oyun sahibinin onayıyla,
-2026-10-01): herkese açık test linki ve telefondaki Tailscale adresi güncel (08867c7: ana sayfa ve bulmaca arka plan görselleri).
+2026-10-01): herkese açık test linki ve telefondaki Tailscale adresi güncel (c4fc223: bulmaca hataları, metinler, sade araçlar).
 Yeni işler için `main`'den çalışın. `main`'e birleştirme ve yayın her seferinde
 oyun sahibine sorulur.
 
