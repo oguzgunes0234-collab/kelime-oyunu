@@ -1,7 +1,7 @@
 # Kelime Köprüsü
 
-Türkçe ↔ İngilizce kelime öğreten, **yalnızca telefon için** tasarlanmış bir
-çengel bulmaca oyunu.
+Türkçe ipucuyla İngilizce kelime öğreten, **yalnızca telefon için** tasarlanmış
+bir çengel bulmaca oyunu.
 
 - **Ana oyun — çengel bulmaca:** Izgaranın içindeki pembe kutular ipucudur
   (kaynak dilde bir kelime); oku, cevabın hangi kareden başlayıp hangi yöne
@@ -73,7 +73,10 @@ ilk açılıştan sonra oyun çevrimdışı da açılır. PWA olarak ana ekrana 
 
 ## Özellikler
 
-- **İki yön:** Türkçe → İngilizce ve İngilizce → Türkçe.
+- **Tek yön:** Türkçe ipucu, İngilizce cevap (`GAME_DIRECTION`). İngilizce →
+  Türkçe yönü kaldırıldı; paket ve çekirdek işlevler yönü parametre olarak almaya
+  devam eder. Eski kayıtlardaki o yönün tekrar kelimeleri oyunun yönüne taşınır.
+- **Yalnızca koyu tema:** Görünüm ayarı yok.
 - **Seviyeler:** Kolay (≈ A1–A2), Orta (≈ A2–B1), Zor (≈ B1–B2), Uzman
   (≈ B2–C1). Zorlaştıkça taşlara şaşırtmaca harfler eklenir.
 - **Uyarlamalı mod:** Ortalama ≥ 0,8 ise seviye bir kademe yükselir, ≤ 0,4
@@ -122,10 +125,11 @@ ilk açılıştan sonra oyun çevrimdışı da açılır. PWA olarak ana ekrana 
   "Bölüm N tamamlandı" ekranı (yeni ödül ya da para birimi yok). Eski kayıtlar
   Bölüm 1'den başlar (tamamlanan bulmaca sayısı eskiden tutulmuyordu); diğer
   veriler korunur, elle seçilmiş seviye uyarlamalı seviyeye aktarılır.
-- **Konu modları (`core/topics.ts`):** Seyahat ve şehir, Yemek ve restoran,
+- **Konular (`core/topics.ts`):** Seyahat ve şehir, Yemek ve restoran,
   Alışveriş ve para, Ev ve aile, İş ve ofis, Sağlık, Bilim ve teknoloji,
   Hukuk, Geçmiş zaman (düzensiz fiiller: "gitti" ↔ went; çözülünce
-  "Düzensiz fiil: go → went" notu görünür). Bir mod, pakette o konudan en az 60 kelime olunca açılır; eksik mod
+  "Düzensiz fiil: go → went" notu görünür), Okul ve eğitim, Duygular, Doğa ve
+  hava. Her kartta özgün, soluk bir SVG çizim var (`ui/components/CategoryArt.tsx`). Bir mod, pakette o konudan en az 60 kelime olunca açılır; eksik mod
   kaç kelime kaldığıyla "Hazırlanıyor" görünür. Konu bulmacası 7×7 ızgarada
   oynanır, bölümü ve zorluğu değiştirmez, günlük hedefe sayılır.
 - **Bulmaca jokerleri:** Anlam (tanım), Cümle (kelimeyi boşluklu örnek
@@ -212,9 +216,9 @@ doğrulanmış bir sözlük değildir; seviyeler yaklaşık CEFR tahminidir.
   - `check: "bulk"`: oyun sahibi tek tek okumadan toplu onayladı.
 
 Paket **kavram tabanlıdır**: her girdi bir anlamdır ve her dildeki karşılığı
-`terms` altında durur. Aynı girdi iki yönde de soru üretir; kaynak dil, hedef
-dil, ana cevap ve kabul edilen alternatifler oyun sırasında seçilen yöne göre
-türetilir (`toQuestion`).
+`terms` altında durur. Kaynak dil, hedef dil, ana cevap ve kabul edilen
+alternatifler yöne göre türetilir (`toQuestion`); oyun yalnızca Türkçe →
+İngilizce yönünü kullanır.
 
 ```jsonc
 {
