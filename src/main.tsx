@@ -1,14 +1,21 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { App } from './ui/App';
+import { PERSISTED_KEYS } from './core/storage';
+import { ADS_KEY, ENTITLEMENT_KEY } from './monetization/state';
+import { isNativeApp, restoreNativeBackup } from './platform/persist';
 import './styles.css';
 import './puzzle.css';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-);
+// iPhone uygulamasında: iOS web deposunu sildiyse kaydı yerel yedekten geri al,
+// sonra oyunu çiz. Web'de hemen çizer (yedek yok).
+restoreNativeBackup([...PERSISTED_KEYS, ENTITLEMENT_KEY, ADS_KEY]).finally(() => {
+  createRoot(document.getElementById('root')!).render(
+    <StrictMode>
+      <App />
+    </StrictMode>,
+  );
+});
 
 // Açılış ekranı (index.html): oyun hazır olunca kısa bir süre sonra kaybolur.
 // Yükleme çubuğu yok; beklenecek bir şey yokken sahte bekleme yapılmaz. En az
@@ -22,8 +29,9 @@ if (splash) {
   }, wait);
 }
 
-// Çevrimdışı açılış için service worker (yalnızca derlenmiş sürümde üretilir).
-if (import.meta.env.PROD && 'serviceWorker' in navigator) {
+// Çevrimdışı açılış için service worker (yalnızca derlenmiş web sürümünde).
+// iPhone uygulamasında dosyalar zaten uygulamanın içinde: service worker gerekmez.
+if (import.meta.env.PROD && 'serviceWorker' in navigator && !isNativeApp()) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('./sw.js').catch(() => {
       /* SW olmadan da oyun çalışır; yalnızca çevrimdışı açılış olmaz. */

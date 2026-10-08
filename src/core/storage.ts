@@ -2,6 +2,7 @@ import { dayKey } from './daily';
 import { INITIAL_INVENTORY } from './economy';
 import { defaultProfile, GAME_DIRECTION, type Profile, type ReviewItem } from './profile';
 import type { PuzzleState } from './puzzle';
+import { persistRaw } from '../platform/persist';
 
 /**
  * Tarayıcıda saklama. Özel pencere, kapalı depolama ya da kota hatasında oyun
@@ -83,12 +84,7 @@ export function migrateToCampaign(p: Profile): Profile {
 }
 
 export function saveProfile(profile: Profile): boolean {
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(profile));
-    return true;
-  } catch {
-    return false;
-  }
+  return persistRaw(STORAGE_KEY, JSON.stringify(profile));
 }
 
 /** Yarım kalan bulmaca; sayfa kapansa da kaldığı yerden devam eder. */
@@ -115,19 +111,15 @@ export function loadPuzzle(): PuzzleState | null {
 }
 
 export function savePuzzle(state: PuzzleState | null): void {
-  try {
-    if (state && state.status === 'playing') localStorage.setItem(PUZZLE_KEY, JSON.stringify({ ...state, event: null }));
-    else localStorage.removeItem(PUZZLE_KEY);
-  } catch {
-    /* depolama kapalıysa bulmaca yalnızca bu oturumda yaşar */
-  }
+  // Depolama kapalıysa bulmaca yalnızca bu oturumda yaşar.
+  persistRaw(PUZZLE_KEY, state && state.status === 'playing' ? JSON.stringify({ ...state, event: null }) : null);
 }
 
+/** İlerlemeyi sıfırlar (oyuncunun açık isteğiyle). Satın alma kaydına dokunmaz. */
 export function clearProfile(): void {
-  try {
-    localStorage.removeItem(STORAGE_KEY);
-    localStorage.removeItem(PUZZLE_KEY);
-  } catch {
-    /* depolama kapalıysa silinecek bir şey de yok */
-  }
+  persistRaw(STORAGE_KEY, null);
+  persistRaw(PUZZLE_KEY, null);
 }
+
+/** Uygulama açılışında yerel yedekten geri yüklenecek anahtarlar. */
+export const PERSISTED_KEYS = [STORAGE_KEY, PUZZLE_KEY];

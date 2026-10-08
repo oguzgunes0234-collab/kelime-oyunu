@@ -41,7 +41,8 @@ export function Home({ pack, profile, onPuzzle, puzzleSaved, tutorialPending, on
   const goalDone = goalDoneToday(profile.daily, now);
   const streak = currentStreak(profile.daily, now);
   // Hiç kelimesi olmayan mod gösterilmez (bkz. TopicModes).
-  const topics = topicStatuses(pack).filter((t) => t.total > 0);
+  // Henüz açılmayan konu (ör. Doğa ve hava) gösterilmez; verisi pakette durur.
+  const topics = topicStatuses(pack).filter((t) => t.enabled);
   const openTopics = topics.filter((t) => t.enabled).length;
 
   const action = tutorialPending

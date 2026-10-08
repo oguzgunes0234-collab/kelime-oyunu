@@ -4,6 +4,8 @@ import type { Profile } from '../../core/profile';
 import type { WordPack } from '../../core/types';
 import { BackIcon } from '../components/Icons';
 import { Sheet } from '../components/Sheet';
+import { useMonetization } from '../monetization';
+import { LEGAL_LINKS } from '../../monetization/legal';
 
 interface Props {
   pack: WordPack;
@@ -17,6 +19,10 @@ interface Props {
 
 export function Settings({ pack, profile, setProfile, onBack, onReplayTutorial, onReplayPuzzleTutorial, onReset }: Props) {
   const [confirm, setConfirm] = useState(false);
+  const [restoreNote, setRestoreNote] = useState<string | null>(null);
+  // Yasal metin uygulamanın içinde açılır (iPhone uygulamasında yeni sekme yok).
+  const [legal, setLegal] = useState<{ label: string; href: string } | null>(null);
+  const m = useMonetization();
   const s = profile.settings;
 
   return (
@@ -86,18 +92,66 @@ export function Settings({ pack, profile, setProfile, onBack, onReplayTutorial, 
       </section>
 
       <section className="setting">
+        <h2>Satın alımlar</h2>
+        <p className="small">Reklamsız sürüm: {m.entitlements.noAds ? <strong>etkin</strong> : 'yok'}</p>
+        <button
+          type="button"
+          className="btn btn-secondary"
+          disabled={!m.purchasesAvailable}
+          onClick={async () => {
+            setRestoreNote('Geri yükleniyor…');
+            const found = await m.restore();
+            setRestoreNote(found ? 'Reklamsız sürüm geri yüklendi.' : 'Geri yüklenecek kalıcı satın alma bulunamadı.');
+          }}
+        >
+          Satın alımları geri yükle
+        </button>
+        <p className="muted small" role="status" aria-live="polite">
+          {restoreNote ?? (m.purchasesAvailable ? 'Reklamsız sürüm geri yüklenir. Jetonlar tüketilir; geri yüklenmez.' : 'Satın almalar App Store sürümünde.')}
+        </p>
+      </section>
+
+      <section className="setting">
+        <h2>Yasal</h2>
+        <ul className="legal-links">
+          {LEGAL_LINKS.map((l) => (
+            <li key={l.href}>
+              <a
+                href={l.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setLegal(l);
+                }}
+              >
+                {l.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="setting">
         <h2>Verilerin</h2>
         <p className="muted small">
-          İlerlemen yalnızca bu tarayıcıda saklanır. Tarayıcı verilerini silersen o da silinir.
+          İlerlemen yalnızca bu cihazda saklanır; hiçbir sunucuya gönderilmez. Uygulamayı ya da tarayıcı verilerini silersen o da silinir.
         </p>
         <button type="button" className="btn btn-danger" onClick={() => setConfirm(true)}>
           İlerlemeyi sıfırla
         </button>
       </section>
 
+      {legal && (
+        <Sheet title={legal.label} onClose={() => setLegal(null)} variant="page" className="legal-sheet">
+          <iframe className="legal-frame" src={legal.href} title={legal.label} />
+          <button type="button" className="btn btn-secondary btn-block" onClick={() => setLegal(null)}>
+            Kapat
+          </button>
+        </Sheet>
+      )}
+
       {confirm && (
         <Sheet title="İlerleme sıfırlansın mı?" onClose={() => setConfirm(false)}>
-          <p>Puanlar, jetonlar, haklar, seri ve tekrar listesi silinir. Bu işlem geri alınamaz.</p>
+          <p>Puanlar, jetonlar (satın aldıkların dahil), haklar, seri ve tekrar listesi silinir. Bu işlem geri alınamaz. Reklamsız sürüm silinmez.</p>
           <div className="btn-row">
             <button type="button" className="btn btn-secondary" onClick={() => setConfirm(false)}>
               Vazgeç

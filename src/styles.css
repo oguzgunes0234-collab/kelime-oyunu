@@ -1876,6 +1876,107 @@ div.note {
     display: none;
   }
   .result-screen .result-words {
-    min-height: 120px;
+    min-height: 96px;
   }
+  .result-screen {
+    gap: 8px;
+  }
+  .result-screen .practice-offer {
+    gap: 6px;
+    padding: 10px 12px;
+  }
+  .result-screen .practice-offer h2 {
+    font-size: 1.1rem;
+  }
+  .result-notes li {
+    padding: 4px 10px;
+  }
+}
+
+/* ---------- Gelir modeli: Reklamsız teklifi, ödül, deneme pencereleri ---------- */
+.offer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+}
+.reward-offer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  margin-top: 8px;
+}
+.reward-offer.compact {
+  margin-top: 0;
+}
+.reward-offer .btn svg {
+  color: var(--primary);
+}
+.reward-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.mock-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgb(0 0 0 / 0.72);
+}
+.mock-box {
+  width: min(360px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 2px dashed var(--muted);
+  background: var(--surface);
+  text-align: center;
+}
+.mock-tag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--bad);
+}
+.mock-count {
+  font-size: 2.4rem;
+  font-weight: 900;
+}
+.legal-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.legal-links a {
+  color: var(--teal);
+  font-weight: 700;
+}
+.legal-frame {
+  width: 100%;
+  flex: 1 1 auto;
+  min-height: 60dvh;
+  border: 0;
+  border-radius: 12px;
+  background: var(--bg);
+}
+/* Yasal metin tam ekran: üstte başlık, ortada metin (kendi içinde kayar), altta Kapat. */
+.sheet.legal-sheet {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  max-height: 100dvh;
+  border-radius: 0;
+  padding-top: max(16px, env(safe-area-inset-top));
 }

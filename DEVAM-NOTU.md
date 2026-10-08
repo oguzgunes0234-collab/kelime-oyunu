@@ -46,6 +46,15 @@ düzeltme/çıkarma kararları bir sonraki birleştirmede uygulanır.
 3. Telefondaki Tailscale adresi oyun sahibinin bilgisayarında `main`'den
    derlenir (`TELEFONDA-AC.bat`); bulutta güncellenemez.
 
+## App Store hazırlığı (2026-10-09, yerel; yayınlanmadı)
+Gelir modeli: ana oyun ücretsiz + isteğe bağlı ödüllü reklam + tek seferlik
+Reklamsız + küçük jeton paketleri. Gerçek reklam/ödeme YOK; `off` (varsayılan)
+ve `mock` (`VITE_ADS=mock VITE_IAP=mock`) modları. Belgeler: `docs/gelir-modeli.md`,
+`docs/app-privacy-envanteri.md`, `docs/magaza/listeleme.md`, `docs/ios/MAC-YONERGESI.md`,
+`docs/BENDEN-BEKLENENLER.md`; yasal taslaklar `public/yasal/`. Capacitor/AdMob/StoreKit
+paketleri KURULMADI (oyun sahibinin onayı bekleniyor). Uyarı: `npm run build`
+`dist/`'e yazar ve Tailscale linki onu sunar; kontrol için scratch klasöre derle.
+
 ## Sıradaki işler (oyun sahibiyle kararlaştırılan sıra, 2026-10-01)
 1. [YAPILDI] Yardım türlerini ayır: anlamı daraltan jokerler (Eş anlamlı, Cümle) puandan
    düşer ama "bilmedi" sayılmaz (tekrar listesine eklemez, zorluğu düşürmez);

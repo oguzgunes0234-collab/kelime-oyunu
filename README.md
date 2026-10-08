@@ -77,6 +77,10 @@ ilk açılıştan sonra oyun çevrimdışı da açılır. PWA olarak ana ekrana 
   Türkçe yönü kaldırıldı; paket ve çekirdek işlevler yönü parametre olarak almaya
   devam eder. Eski kayıtlardaki o yönün tekrar kelimeleri oyunun yönüne taşınır.
 - **Yalnızca koyu tema:** Görünüm ayarı yok.
+- **Gelir modeli (taslak, `src/monetization/`):** ana oyun ücretsiz; isteğe bağlı
+  ödüllü reklam, tek seferlik Reklamsız sürüm, küçük jeton paketleri. Bu sürümde
+  gerçek reklam/ödeme yok (`off`; yerel deneme için `VITE_ADS=mock VITE_IAP=mock`).
+  Ayrıntı ve App Store hazırlığı: `docs/`.
 - **Seviyeler:** Kolay (≈ A1–A2), Orta (≈ A2–B1), Zor (≈ B1–B2), Uzman
   (≈ B2–C1). Zorlaştıkça taşlara şaşırtmaca harfler eklenir.
 - **Uyarlamalı mod:** Ortalama ≥ 0,8 ise seviye bir kademe yükselir, ≤ 0,4

@@ -8,6 +8,7 @@ import { PRACTICE_COINS_PER_WORD } from '../../core/economy';
 import type { Profile } from '../../core/profile';
 import type { PuzzleOutcome, PuzzleState } from '../../core/puzzle';
 import { SpeakButton } from '../components/SpeakButton';
+import { RewardOffer } from '../components/RewardOffer';
 import { CheckIcon, CoinIcon, CrossIcon, FlameIcon } from '../components/Icons';
 
 interface Props {
@@ -118,6 +119,9 @@ export function PuzzleResult({ puzzle, outcome, profile, onAgain, onHome, onRevi
           <span>{goalDoneToday(profile.daily, new Date()) ? 'seri · bugün ✓' : `seri · 0/${DAILY_PUZZLE_GOAL}`}</span>
         </div>
       </div>
+
+      {/* İsteğe bağlı ödül: bulmaca bittikten sonra, oyuncu dokunursa. */}
+      <RewardOffer compact />
 
       {notes.length > 0 && (
         <ul className="result-notes">

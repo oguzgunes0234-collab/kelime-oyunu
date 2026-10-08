@@ -42,6 +42,7 @@ import { Practice } from './Practice';
 import { applyPractice, buildPractice, type PracticeItem } from '../../core/practice';
 import { sfx } from '../sound';
 import { ToolEmpty } from './ToolEmpty';
+import { useMonetization } from '../monetization';
 
 interface Props {
   pack: WordPack;
@@ -150,6 +151,7 @@ export function Puzzle(props: Props) {
   const timer = useRef<number>();
 
   const tutorial = props.tutorialStep !== null;
+  const monetization = useMonetization();
   const step = tutorial ? TUTORIAL_STEPS[props.tutorialStep!] : null;
   // Eğitimde açık açıklama: adımın becerisiyle başlar; ilk yanlışta "wrong" araya girer.
   const [tip, setTip] = useState<TipId | null>(step?.skill ?? null);
@@ -221,6 +223,7 @@ export function Puzzle(props: Props) {
       return;
     }
     if (!done.topic) savePuzzle(null);
+    if (done.solved.every(Boolean)) monetization.notePuzzleDone();
     const res = applyPuzzle(base, done, pack, props.adaptive, new Date());
     saveProfile(res.profile);
     setOutcome(res.outcome);
@@ -458,7 +461,8 @@ export function Puzzle(props: Props) {
         puzzle={puzzle}
         outcome={outcome}
         profile={profile}
-        onAgain={props.onNewPuzzle}
+        // Geçiş reklamı ilk sürümde kapalı; açılırsa yalnızca burada, sonuçtan sonra.
+        onAgain={() => monetization.beforeNextPuzzle().then(props.onNewPuzzle)}
         onHome={props.onExit}
         onReview={props.onOpenReview}
       />

@@ -1,5 +1,6 @@
 /// <reference types="vitest/config" />
-import { readdirSync } from 'node:fs';
+import { readdirSync, statSync } from 'node:fs';
+import { join } from 'node:path';
 import { defineConfig, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
 
@@ -16,7 +17,10 @@ function serviceWorker(): Plugin {
     generateBundle(_options, bundle) {
       const files = Object.keys(bundle).filter((f) => !f.endsWith('.map'));
       // public/ klasörü pakete girmez, doğrudan kopyalanır — ayrıca ekle.
-      const publicFiles = readdirSync('public').filter((f) => !f.startsWith('.'));
+      // Alt klasörler dahil (ör. public/yasal/): klasörün kendisi önbelleğe eklenirse kurulum bozulur.
+      const publicFiles = (readdirSync('public', { recursive: true }) as string[])
+        .map((f) => f.replace(/\\/g, '/'))
+        .filter((f) => !f.split('/').some((part) => part.startsWith('.')) && statSync(join('public', f)).isFile());
       files.push(...publicFiles);
       const assets = ['./', ...files.map((f) => `./${f}`)];
       const version = Date.now().toString(36);

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   COINS_CLEAN_BONUS,
   COINS_PER_CHARGE,
@@ -12,6 +12,10 @@ import {
 import { buyChargeWithCoins, buyPackWithCoins, type Profile } from '../../core/profile';
 import type { ToolId } from '../../core/types';
 import { BackIcon, CoinIcon, TOOL_ICONS } from '../components/Icons';
+import { RewardOffer } from '../components/RewardOffer';
+import { useMonetization } from '../monetization';
+import { COIN_PACKS, PRODUCT_IDS } from '../../monetization/config';
+import { purchases, type StoreProduct } from '../../platform/purchases';
 
 interface Props {
   profile: Profile;
@@ -26,6 +30,19 @@ function packContents(p: ToolPack): string {
 
 export function Store({ profile, setProfile, onClose }: Props) {
   const [flash, setFlash] = useState<string | null>(null);
+  const m = useMonetization();
+  // Fiyatlar yalnızca mağazadan (StoreKit) gelir; uygulamada sabit fiyat yazılmaz.
+  const [products, setProducts] = useState<StoreProduct[]>([]);
+  useEffect(() => {
+    let alive = true;
+    purchases.products().then((p) => alive && setProducts(p));
+    return () => {
+      alive = false;
+    };
+  }, []);
+  const price = (id: string) => products.find((p) => p.id === id)?.priceLabel ?? null;
+  const resultNote = (r: string, ok: string) =>
+    r === 'purchased' ? ok : r === 'cancelled' ? 'Satın alma iptal edildi.' : r === 'unavailable' ? 'Satın alma bu sürümde yok.' : 'Satın alma tamamlanamadı.';
 
   return (
     <div
@@ -44,6 +61,60 @@ export function Store({ profile, setProfile, onClose }: Props) {
           <CoinIcon width={16} height={16} /> {profile.coins}
         </span>
       </header>
+
+      <section className="store-section">
+        <h2>Reklamsız sürüm</h2>
+        {m.entitlements.noAds ? (
+          <p className="small">
+            <strong>Etkin.</strong> Hiç reklam gösterilmez; ödüller sana reklamsız verilir.
+          </p>
+        ) : (
+          <div className="offer-card">
+            <p className="small">
+              Tek seferlik satın alma, süresiz. Tüm reklamlar kapanır (ödüllü reklamlar dahil); reklamla verilen günlük ödülleri
+              reklam izlemeden alırsın. Oyunun kendisi zaten ücretsiz; bu, oyunu destekleme seçeneğidir.
+            </p>
+            <button
+              type="button"
+              className="btn btn-primary btn-small"
+              disabled={!m.purchasesAvailable || !price(PRODUCT_IDS.noAds)}
+              onClick={async () => setFlash(resultNote(await m.buyNoAds(), 'Reklamsız sürüm etkin. Teşekkürler!'))}
+            >
+              {m.purchasesAvailable ? `Reklamsız sürüm · ${price(PRODUCT_IDS.noAds) ?? '…'}` : 'App Store sürümünde'}
+            </button>
+          </div>
+        )}
+        <RewardOffer />
+      </section>
+
+      <section className="store-section">
+        <h2>Jeton paketleri</h2>
+        <p className="muted small">
+          Jetonlar bu cihazda saklanır: uygulamayı silersen ya da telefon değiştirirsen geri gelmez. 1 joker hakkı {COINS_PER_CHARGE} jeton.
+        </p>
+        <ul className="pack-list">
+          {COIN_PACKS.map((p) => (
+            <li key={p.productId}>
+              <div>
+                <strong>
+                  {p.coins} <CoinIcon width={14} height={14} />
+                </strong>
+                <p className="small">
+                  {p.name} · {Math.floor(p.coins / COINS_PER_CHARGE)} joker hakkı kadar
+                </p>
+              </div>
+              <button
+                type="button"
+                className="btn btn-secondary btn-small"
+                disabled={!m.purchasesAvailable || !price(p.productId)}
+                onClick={async () => setFlash(resultNote(await m.buyCoins(p.productId), `+${p.coins} jeton eklendi.`))}
+              >
+                {m.purchasesAvailable ? (price(p.productId) ?? '…') : 'App Store sürümünde'}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </section>
 
       <section className="store-section">
         <h2>Oynayarak kazan</h2>

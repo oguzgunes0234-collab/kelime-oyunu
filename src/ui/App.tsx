@@ -12,6 +12,8 @@ import { Review } from './screens/Review';
 import { Settings } from './screens/Settings';
 import { Store } from './screens/Store';
 import { useProfile } from './useProfile';
+import { MonetizationProvider } from './monetization';
+import { MockHost } from './components/MockHost';
 import { configureSound, installSoundUnlock } from './sound';
 
 type Screen =
@@ -63,6 +65,7 @@ export function App() {
   const setTutorialStep = (step: number) => setProfile({ ...profile, puzzleTutorialStep: step });
 
   return (
+    <MonetizationProvider profile={profile} setProfile={setProfile}>
     <div className="app">
       {/* Mağaza açıkken alttaki ekran erişilebilirlik ağacından ve odaktan çıkar. */}
       <div className="app-inner" aria-hidden={storeOpen || undefined} {...(storeOpen ? { inert: '' } : {})}>
@@ -155,6 +158,8 @@ export function App() {
         )}
       </div>
       {storeOpen && <Store profile={profile} setProfile={setProfile} onClose={() => setStoreOpen(false)} />}
+      <MockHost />
     </div>
+    </MonetizationProvider>
   );
 }
