@@ -291,9 +291,6 @@ export function Game(props: Props) {
         difficulty={difficulty}
         played={played}
         onRepeat={allowRepeats}
-        onSwitchDirection={() =>
-          props.onRestart({ ...config, direction: { source: config.direction.target, target: config.direction.source } })
-        }
         onHome={props.onExit}
         onReview={props.onOpenReview}
         reviewCount={profile.review.length}

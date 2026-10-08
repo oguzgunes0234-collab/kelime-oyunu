@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { CHAPTER_SIZE } from '../../core/campaign';
 import { currentStreak } from '../../core/daily';
 import { directionKey } from '../../core/pack';
-import type { Profile } from '../../core/profile';
+import { GAME_DIRECTION, type Profile } from '../../core/profile';
 import { ChapterPath } from '../components/ChapterPath';
 import { FlameIcon } from '../components/Icons';
 
@@ -32,7 +32,7 @@ export function ChapterComplete({ chapter, profile, onNext, onHome }: Props) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const learned = profile.learned[directionKey(profile.settings.direction)]?.length ?? 0;
+  const learned = profile.learned[directionKey(GAME_DIRECTION)]?.length ?? 0;
   const streak = currentStreak(profile.daily, new Date()).streak;
 
   return (

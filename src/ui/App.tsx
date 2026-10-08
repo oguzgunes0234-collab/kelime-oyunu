@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { GAME_DIRECTION } from '../core/profile';
 import type { SessionConfig } from '../core/session';
 import { PACK } from '../data/packs';
 import { Game } from './screens/Game';
@@ -46,12 +47,12 @@ export function App() {
 
   const play = (config: SessionConfig) => setScreen({ name: 'game', config, key: Date.now() });
   // Zorluk oyuncuya seçtirilmez: kelime seviyesini hep uyarlamalı zorluk belirler.
-  const playNormal = () => play({ mode: 'normal', direction: profile.settings.direction, difficultyMode: 'adaptive' });
+  const playNormal = () => play({ mode: 'normal', direction: GAME_DIRECTION, difficultyMode: 'adaptive' });
   const home = () => setScreen({ name: 'home' });
-  const tutorial = () => play({ mode: 'tutorial', direction: profile.settings.direction, difficultyMode: 'easy' });
+  const tutorial = () => play({ mode: 'tutorial', direction: GAME_DIRECTION, difficultyMode: 'easy' });
   // Harf taşı turunu ilk kez açan oyuncu önce örnek turu görür.
   const playQuick = () => (profile.tutorialDone ? playNormal() : tutorial());
-  const { direction } = profile.settings;
+  const direction = GAME_DIRECTION;
   const puzzleSaved = hasSavedPuzzle(direction);
   // Eğitim bitmediyse ana düğme eğitimi açar. Yarım kalmış bir bulmaca varsa
   // önce o sürer (eğitim "?" → "Eğitimi baştan oynat" ile her zaman açılabilir).
@@ -69,7 +70,6 @@ export function App() {
           <Home
             pack={PACK}
             profile={profile}
-            setProfile={setProfile}
             onPuzzle={playPuzzle}
             puzzleSaved={puzzleSaved}
             tutorialPending={tutorialPending}
@@ -87,7 +87,7 @@ export function App() {
             pack={PACK}
             profile={profile}
             setProfile={setProfile}
-            direction={profile.settings.direction}
+            direction={GAME_DIRECTION}
             difficulty={profile.adaptive.difficulty}
             adaptive
             gridSize={chapterGrid(chapterInfo(profile.campaign).chapter)}
@@ -120,9 +120,6 @@ export function App() {
             paused={storeOpen}
             onRestart={(config) => {
               if (config.mode === 'review' && profile.review.length === 0) return playNormal();
-              if (config.direction !== screen.config.direction) {
-                setProfile({ ...profile, settings: { ...profile.settings, direction: config.direction } });
-              }
               play(config);
             }}
             onOpenStore={() => setStoreOpen(true)}
@@ -139,7 +136,7 @@ export function App() {
             profile={profile}
             setProfile={setProfile}
             onBack={home}
-            onStudy={() => play({ mode: 'review', direction: profile.settings.direction, difficultyMode: 'easy' })}
+            onStudy={() => play({ mode: 'review', direction: GAME_DIRECTION, difficultyMode: 'easy' })}
           />
         )}
         {screen.name === 'settings' && (

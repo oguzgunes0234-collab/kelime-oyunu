@@ -10,8 +10,13 @@ import type { Difficulty, DifficultyMode, Direction, Inventory, Question, ToolId
 
 /** Oyuncunun tarayıcıda saklanan tüm verisi. Hesap yok; yalnızca bu cihaz. */
 
+/**
+ * Oyunun tek yönü: Türkçe ipucu, İngilizce cevap. İngilizce→Türkçe yönü
+ * oyundan kaldırıldı; çekirdek işlevler yönü parametre olarak almaya devam eder.
+ */
+export const GAME_DIRECTION: Direction = { source: 'tr', target: 'en' };
+
 export interface Settings {
-  direction: Direction;
   difficultyMode: DifficultyMode;
   dailyGoal: number;
   /** Kısa ses efektleri (doğru, yanlış, bulmaca bitti). Varsayılan açık. */
@@ -59,7 +64,7 @@ export interface Profile {
 export function defaultProfile(now: Date): Profile {
   return {
     version: 1,
-    settings: { direction: { source: 'tr', target: 'en' }, difficultyMode: 'adaptive', dailyGoal: 10, sound: true, music: false },
+    settings: { difficultyMode: 'adaptive', dailyGoal: 10, sound: true, music: false },
     tutorialDone: false,
     puzzleTutorialStep: 0,
     campaign: initialCampaign(),

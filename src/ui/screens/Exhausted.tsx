@@ -9,13 +9,12 @@ interface Props {
   played: number;
   reviewCount: number;
   onRepeat: () => void;
-  onSwitchDirection: () => void;
   onReview: () => void;
   onHome: () => void;
 }
 
 /** Seçili seviyede henüz doğru bilinmemiş kelime kalmadı. */
-export function Exhausted({ config, difficulty, played, reviewCount, onRepeat, onSwitchDirection, onReview, onHome }: Props) {
+export function Exhausted({ config, difficulty, played, reviewCount, onRepeat, onReview, onHome }: Props) {
   const src = languageInfo(config.direction.source).name;
   const tgt = languageInfo(config.direction.target).name;
   return (
@@ -33,9 +32,6 @@ export function Exhausted({ config, difficulty, played, reviewCount, onRepeat, o
       <div className="stack">
         <button type="button" className="btn btn-primary btn-block" onClick={onRepeat} autoFocus>
           Bildiklerimi karışık tekrar et
-        </button>
-        <button type="button" className="btn btn-secondary btn-block" onClick={onSwitchDirection}>
-          Yönü çevir: {tgt} → {src}
         </button>
         {reviewCount > 0 && (
           <button type="button" className="btn btn-secondary btn-block" onClick={onReview}>

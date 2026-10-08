@@ -1,17 +1,16 @@
 import { chapterInfo } from '../../core/campaign';
 import { DAILY_PUZZLE_GOAL, currentStreak, goalDoneToday } from '../../core/daily';
 import { languageInfo } from '../../core/languages';
-import type { Profile } from '../../core/profile';
+import { GAME_DIRECTION, type Profile } from '../../core/profile';
 import { topicStatuses } from '../../core/topics';
 import type { WordPack } from '../../core/types';
 import { CategoryArt } from '../components/CategoryArt';
 import { ChapterPath } from '../components/ChapterPath';
-import { BagIcon, BookIcon, CheckIcon, CoinIcon, FlameIcon, GearIcon, GridIcon, LettersIcon, SwapIcon } from '../components/Icons';
+import { BagIcon, BookIcon, CheckIcon, CoinIcon, FlameIcon, GearIcon, GridIcon, LettersIcon } from '../components/Icons';
 
 interface Props {
   pack: WordPack;
   profile: Profile;
-  setProfile: (p: Profile) => void;
   /** Ana oyun: bölümlü çengel bulmaca. */
   onPuzzle: () => void;
   /** Bu yön için yarım kalmış bir ana oyun bulmacası var mı. */
@@ -33,8 +32,8 @@ interface Props {
  * hızlı tur / tekrar / haklar. Sayfanın kendisi kaymaz. Zorluk seçimi yok: kelime
  * seviyesini uyarlamalı zorluk, bulmaca boyunu bölüm belirler.
  */
-export function Home({ pack, profile, setProfile, onPuzzle, puzzleSaved, tutorialPending, onPlay, onPlayTopic, onReview, onSettings, onStore }: Props) {
-  const { direction } = profile.settings;
+export function Home({ pack, profile, onPuzzle, puzzleSaved, tutorialPending, onPlay, onPlayTopic, onReview, onSettings, onStore }: Props) {
+  const direction = GAME_DIRECTION;
   const src = languageInfo(direction.source);
   const tgt = languageInfo(direction.target);
   const now = new Date();
@@ -110,19 +109,6 @@ export function Home({ pack, profile, setProfile, onPuzzle, puzzleSaved, tutoria
             </li>
           ))}
         </ul>
-      </section>
-
-      <section className="direction-row" aria-label="Oyun yönü">
-        <span className="dir-lang">{src.name}</span>
-        <button
-          type="button"
-          className="swap-btn"
-          onClick={() => setProfile({ ...profile, settings: { ...profile.settings, direction: { source: direction.target, target: direction.source } } })}
-          aria-label={`Yönü çevir (şu an ${src.name} → ${tgt.name})`}
-        >
-          <SwapIcon />
-        </button>
-        <span className="dir-lang">{tgt.name}</span>
       </section>
 
       <nav className="home-links" aria-label="Diğer bölümler">

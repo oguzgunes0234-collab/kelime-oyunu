@@ -1,6 +1,6 @@
 import { dayKey } from './daily';
 import { INITIAL_INVENTORY } from './economy';
-import { defaultProfile, type Profile } from './profile';
+import { defaultProfile, GAME_DIRECTION, type Profile, type ReviewItem } from './profile';
 import type { PuzzleState } from './puzzle';
 
 /**
@@ -10,10 +10,30 @@ import type { PuzzleState } from './puzzle';
 
 export const STORAGE_KEY = 'kelime-oyunu:profil:v1';
 
-/** Eski kayıtlarda kalan tema seçimi (açık/koyu) artık yok: yalnızca koyu tema var. */
-function settingsWithoutTheme<T extends object>(s: T): T {
-  const { theme: _theme, ...rest } = s as T & { theme?: unknown };
+/**
+ * Eski kayıtlarda kalan ve artık olmayan ayarlar: tema seçimi (yalnızca koyu
+ * tema var) ve oyun yönü (yalnızca Türkçe → İngilizce).
+ */
+function cleanSettings<T extends object>(s: T): T {
+  const { theme: _theme, direction: _direction, ...rest } = s as T & { theme?: unknown; direction?: unknown };
   return rest as T;
+}
+
+const GAME_DIR_KEY = `${GAME_DIRECTION.source}>${GAME_DIRECTION.target}`;
+
+/**
+ * Kaldırılan yönde (İngilizce → Türkçe) tekrar listesine girmiş kelimeler
+ * silinmez, oyunun yönüne taşınır; aynı kelime iki kez yer almaz (hata sayıları toplanır).
+ */
+export function migrateReview(review: ReviewItem[]): ReviewItem[] {
+  const out: ReviewItem[] = [];
+  for (const r of review) {
+    const item = r.dir === GAME_DIR_KEY ? r : { ...r, dir: GAME_DIR_KEY };
+    const i = out.findIndex((o) => o.entryId === item.entryId);
+    if (i < 0) out.push(item);
+    else out[i] = { ...out[i], misses: out[i].misses + item.misses, addedAt: Math.min(out[i].addedAt, item.addedAt) };
+  }
+  return out;
 }
 
 export function loadProfile(now: Date = new Date()): Profile {
@@ -27,12 +47,12 @@ export function loadProfile(now: Date = new Date()): Profile {
     const merged = {
       ...fresh,
       ...data,
-      settings: settingsWithoutTheme({ ...fresh.settings, ...data.settings }),
+      settings: cleanSettings({ ...fresh.settings, ...data.settings }),
       inventory: { ...INITIAL_INVENTORY, ...data.inventory },
       daily: { ...fresh.daily, ...data.daily, day: data.daily?.day ?? dayKey(now) },
       adaptive: { ...fresh.adaptive, ...data.adaptive },
       stats: { ...fresh.stats, ...data.stats },
-      review: Array.isArray(data.review) ? data.review : [],
+      review: Array.isArray(data.review) ? migrateReview(data.review) : [],
       learned: data.learned ?? {},
       campaign: { ...fresh.campaign, ...data.campaign },
     } as Profile;
@@ -84,7 +104,10 @@ export function loadPuzzle(): PuzzleState | null {
       s.status === 'playing' &&
       n > 0 &&
       [s.solved, s.wrong, s.lettersRevealed, s.meaningShown].every((a) => Array.isArray(a) && a.length === n) &&
-      s.sel.word < n;
+      s.sel.word < n &&
+      // Kaldırılan yönde (İngilizce → Türkçe) yarım kalmış bulmaca açılmaz.
+      s.direction?.source === GAME_DIRECTION.source &&
+      s.direction?.target === GAME_DIRECTION.target;
     return ok ? { ...s, event: null } : null;
   } catch {
     return null;

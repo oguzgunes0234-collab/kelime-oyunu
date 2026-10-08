@@ -187,7 +187,7 @@
   flex: 0 0 auto;
   /* Kart sahnenin ufkundan başlar; köprü başlığın altında açıkta kalır.
      Kısa ekranda konu kutusuna yer kalsın diye boşluk küçülür. */
-  margin-top: max(0px, min(var(--home-w) * 0.46 - 72px, 100dvh - 650px));
+  margin-top: max(0px, min(var(--home-w) * 0.46 - 72px, 100dvh - 600px));
 }
 /*
  * Bölüm kutuları: bulmacadaki harf kareleri gibi kare, yan yana; her telefonda
@@ -423,21 +423,6 @@
   color: var(--muted);
   font-size: 0.85rem;
   line-height: 1.25;
-}
-
-.direction-row {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  gap: 8px;
-  padding: 4px 8px;
-  border-radius: var(--radius);
-  background: var(--surface);
-  box-shadow: var(--shadow);
-}
-.direction-row .swap-btn {
-  width: 44px;
-  height: 44px;
 }
 
 .home-links {
